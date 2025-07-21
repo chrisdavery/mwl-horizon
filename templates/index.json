@@ -42,10 +42,10 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Shop all",
-            "link": "shopify://collections/all",
+            "label": "SHOP NOW",
+            "link": "shopify://collections/new-releases",
             "open_in_new_tab": false,
-            "style_class": "button-secondary",
+            "style_class": "link",
             "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fit-content",
