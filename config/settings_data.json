@@ -40,6 +40,7 @@
     "type_font_h5": "subheading",
     "type_size_h5": "14",
     "type_line_height_h5": "display-loose",
+    "type_letter_spacing_h5": "heading-loose",
     "type_font_h6": "subheading",
     "type_size_h6": "12",
     "type_line_height_h6": "display-loose",
