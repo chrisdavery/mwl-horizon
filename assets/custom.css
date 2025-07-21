@@ -1,6 +1,8 @@
-.link,
-.menu-list__link {
+.link {
   font-family: var(--font-accent--family);
+}
+.menu-list__link {
+  font-family: var(--font-accent--family) !;
 }
 a.link {
   position: relative;
