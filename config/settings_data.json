@@ -637,5 +637,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".link {font-family: var(--font-accent--family);}"
+    ]
   }
 }
