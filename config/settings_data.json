@@ -640,8 +640,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      ".link,.menu-list__link {font-family: var(--font-accent--family);}"
-    ]
+    "custom_css": []
   }
 }
