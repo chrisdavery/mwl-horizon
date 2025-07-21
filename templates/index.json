@@ -16,7 +16,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>New arrivals</p>",
+            "text": "<p>NEW ARRIVALS</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
