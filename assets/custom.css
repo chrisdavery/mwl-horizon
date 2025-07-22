@@ -1,5 +1,6 @@
 .link {
   font-family: var(--font-accent--family);
+  letter-spacing: 1px;
 }
 
 a.link {
@@ -13,4 +14,8 @@ a.link:after {
   display: block;
   position: absolute;
   bottom: -0.2rem;
+}
+
+.menu-list__link {
+    letter-spacing: 1px;
 }
