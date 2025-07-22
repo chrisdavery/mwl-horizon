@@ -20,7 +20,10 @@
   --size-style-height: 100%;
 {%- elsif settings.height == 'square' -%}
   --size-aspect-ratio: 1 / 1;
-  --size-style-height: auto;
+  --size-style-height: 100%;
+{% elsif settings.height == 'tall' %}
+  --size-aspect-ratio: .765 / 1;
+  --size-style-height: 100%;
 {%- else -%}
   --size-style-height: {{ settings.height }};
 {%- endif -%}

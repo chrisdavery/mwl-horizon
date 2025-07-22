@@ -109,4 +109,7 @@ a.link:after {
   .section--mobile-full-width {
     --page-margin: 0px !important;
   }
+  .size-style[style*="--size-aspect-ratio"] {
+    aspect-ratio: 1 / 1;
+  }
 }
