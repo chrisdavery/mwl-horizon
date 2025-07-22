@@ -1,6 +1,7 @@
 :root {
   --letter-spacing--display-loose: 1.4px;
   --letter-spacing--heading-loose: 1.4px;
+  --opacity-subdued-text: 1 !important;
 }
 
 .link {
@@ -23,5 +24,63 @@ a.link:after {
 
 .menu-list__link {
   letter-spacing: 1px;
-  font-size: var(--font-size--2xs);
+}
+
+.mega-menu__link {
+  letter-spacing: 1px;
+  font-size: var(--font-size--2xs) !important;
+}
+
+.mega-menu__link--parent:after {
+  width: 100%;
+  height: .03rem;
+  background: var(--menu-parent-font-color);
+  content: '';
+  position: absolute;
+  bottom: 0;
+}
+
+.mega-menu__link--parent {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--margin-lg);
+  padding-bottom: var(--margin-2xs) !important;
+}
+
+.menu-list__submenu {
+  --menu-parent-active-font-color: var(--color-primary-hover) !important;
+}
+
+.mega-menu__link:not(.mega-menu__link--parent):hover {
+  text-decoration: underline;
+}
+
+.menu-list__link {
+  position: relative;
+}
+
+.menu-list__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: .05rem;
+  background-color: transparent;
+  transition: width 0.4s ease;
+}
+
+.menu-list__link:hover::after,
+.menu-list__link.active::after {
+  width: 100%;
+  background-color: var(--menu-top-level-font-color); /* example: accent color */
+}
+
+
+@media (min-width: 750px) {
+  .menu-list__link {
+    min-height: unset !important;
+    padding-bottom: var(--padding-2xs);
+  }
 }

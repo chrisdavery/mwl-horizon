@@ -424,7 +424,11 @@
     color: var(--menu-parent-font-color);
 
     &:hover {
-      color: var(--menu-parent-active-font-color);
+      color: var(--color-primary-hover);
+
+      &:after {
+        background: var(--color-primary-hover);
+      }
     }
   }
 
