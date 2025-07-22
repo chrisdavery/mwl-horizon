@@ -1,3 +1,8 @@
+:root {
+  --letter-spacing--display-loose: 1.4px;
+  --letter-spacing--heading-loose: 1.4px;
+}
+
 .link {
   font-family: var(--font-accent--family);
   letter-spacing: 1px;
@@ -17,5 +22,6 @@ a.link:after {
 }
 
 .menu-list__link {
-    letter-spacing: 1px;
+  letter-spacing: 1px;
+  font-size: var(--font-size--2xs);
 }
