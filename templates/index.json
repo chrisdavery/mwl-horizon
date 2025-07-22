@@ -24,7 +24,7 @@
             "font": "var(--font-body--family)",
             "font_size": "1rem",
             "line_height": "normal",
-            "letter_spacing": "normal",
+            "letter_spacing": "loose",
             "case": "none",
             "wrap": "pretty",
             "color": "var(--color-foreground)",
