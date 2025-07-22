@@ -1,13 +1,11 @@
 .link {
   font-family: var(--font-accent--family);
 }
-.menu-list__link {
-  font-family: var(--font-accent--family) !;
-}
+
 a.link {
   position: relative;
 }
-a.link:after {
+.link:after {
   content: "";
   width: 100%;
   height: 0.1rem;

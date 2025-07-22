@@ -5,9 +5,15 @@
   @param {string} children - The children of the section
 {%- enddoc -%}
 
+{% capture additional_classes %}
+    {% if section.settings.mobile_video != blank or section.settings.mobile_background_image != blank %}
+      mobile-min-height
+    {% endif %}
+{% endcapture %}
+
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <div
-  class="section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  class="section {{ additional_classes | strip }} section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
 
   {% if request.visual_preview_mode %}
     data-shopify-visual-preview
@@ -16,6 +22,12 @@
   style="
     {% if section.settings.section_height == 'custom' %}
       --section-min-height: {{ section.settings.section_height_custom }}svh;
+    {% elsif section.settings.section_height == 'adapt_media_height' and section.settings.background_media != 'none' %}
+      {% if section.settings.background_media == 'image' %}
+        --section-min-height: calc(100svw / {{ section.settings.background_image.aspect_ratio }});
+      {% elsif section.settings.background_media == 'video' %}
+        --section-min-height: calc(100svw / {{ section.settings.video.preview_image.aspect_ratio }});
+      {% endif %}
     {% elsif section.settings.section_height == 'full-screen' %}
       --section-min-height: 100svh;
     {% elsif section.settings.section_height != '' %}
@@ -24,7 +36,14 @@
 
     {% if section.settings.section_height != '' %}
      --section-preview-height: 600px;
-     {% endif %}
+    {% endif %}
+
+    {% if section.settings.mobile_background_image != blank %}
+      --section-mobile-min-height: calc(100svw / {{ section.settings.mobile_background_image.aspect_ratio }});
+    {% endif %}
+    {% if section.settings.mobile_video != blank %}
+      --section-mobile-min-height: calc(100svw / {{ section.settings.mobile_video.aspect_ratio }});
+    {% endif %}
   "
 >
   <div class="custom-section-background">
@@ -33,7 +52,9 @@
       background_video: section.settings.video,
       background_video_position: section.settings.video_position,
       background_image: section.settings.background_image,
-      background_image_position: section.settings.background_image_position
+      background_image_position: section.settings.background_image_position,
+      mobile_background_image: section.settings.mobile_background_image,
+      mobile_background_video: section.settings.mobile_video,
     %}
   </div>
 
@@ -92,5 +113,11 @@
 
   .custom-section-content {
     z-index: var(--layer-flat);
+  }
+
+  .mobile-min-height {
+    @media screen and (max-width: 749px) {
+      min-height: var(--section-mobile-min-height);
+    }
   }
 {% endstylesheet %}
