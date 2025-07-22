@@ -1,0 +1,92 @@
+{% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-testimonial-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: {{ section.settings.alignment }};
+  }
+
+  .ai-testimonial-stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 2px;
+    {% if section.settings.alignment == 'center' %}
+      justify-content: center;
+    {% elsif section.settings.alignment == 'right' %}
+      justify-content: flex-end;
+    {% else %}
+      justify-content: flex-start;
+    {% endif %}
+  }
+
+  .ai-testimonial-stars-{{ ai_gen_id }} svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  .ai-testimonial-content-{{ ai_gen_id }} {
+    margin: 0;
+  }
+
+  .ai-testimonial-name-{{ ai_gen_id }} {
+    margin: 0;
+  }
+{% endstyle %}
+
+<div class="ai-testimonial-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-testimonial-stars-{{ ai_gen_id }}">
+    {% for i in (1..block.settings.star_rating) %}
+      {{ 'icon-star.svg' | inline_asset_content }}
+    {% endfor %}
+  </div>
+
+  {% if block.settings.testimonial_content != blank %}
+    <div class="ai-testimonial-content-{{ ai_gen_id }}">
+      {{ block.settings.testimonial_content }}
+    </div>
+  {% endif %}
+
+  {% if block.settings.customer_name != blank %}
+    <div class="ai-testimonial-name-{{ ai_gen_id }}">
+      {{ block.settings.customer_name }}
+    </div>
+  {% endif %}
+</div>
+<!--@list/split-->
+ 
+{% schema %}
+{
+  "name": "Testimonial Card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "range",
+      "id": "star_rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Star rating",
+      "default": 5
+    },
+    {
+      "type": "richtext",
+      "id": "testimonial_content",
+      "label": "Testimonial content",
+      "default": "<p>This product exceeded my expectations. The quality is outstanding and delivery was fast.</p>"
+    },
+    {
+      "type": "text",
+      "id": "customer_name",
+      "label": "Customer name",
+      "default": "Sarah Johnson"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Card"
+    }
+  ]
+}
+{% endschema %}

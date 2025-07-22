@@ -29,7 +29,7 @@
     "type_letter_spacing_h2": "heading-loose",
     "type_case_h2": "uppercase",
     "type_font_h3": "heading",
-    "type_size_h3": "32",
+    "type_size_h3": "20",
     "type_line_height_h3": "display-normal",
     "type_letter_spacing_h3": "heading-loose",
     "type_case_h3": "uppercase",
@@ -131,7 +131,7 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#f5f5f5",
+          "background": "#ece6e1",
           "foreground_heading": "#000000",
           "foreground": "#000000cf",
           "primary": "#000000cf",
