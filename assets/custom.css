@@ -1,3 +1,7 @@
+.link {
+  font-family: var(--font-accent--family);
+}
+
 a.link {
   position: relative;
 }
