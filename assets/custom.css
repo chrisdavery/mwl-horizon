@@ -8,7 +8,7 @@
 
 .link {
   font-family: var(--font-accent--family);
-  letter-spacing: 1px;
+  letter-spacing: .2px;
 }
 
 a.link {
@@ -109,6 +109,14 @@ a.link:after {
 
 .cart-bubble__background {
   background-color: #B7998E !important;
+}
+
+.group-block .background-image-container img {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group-block:hover .background-image-container img {
+  transform: scale(1.03);
 }
 
 @media (min-width: 750px) {

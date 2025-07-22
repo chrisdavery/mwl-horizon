@@ -97,7 +97,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "BOOK NOW",
-                "link": "shopify://collections/all",
+                "link": "shopify://pages/appointments",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
@@ -695,7 +695,7 @@
         "group_czLF37"
       ],
       "custom_css": [
-        ".size-style {--size-style-width: 840px !important;}"
+        ".size-style {max-width: 840px !important;}"
       ],
       "name": "t:names.custom_section",
       "settings": {
