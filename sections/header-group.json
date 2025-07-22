@@ -40,7 +40,7 @@
             "product_title_case": "uppercase",
             "collection_title_case": "default",
             "color_scheme": "",
-            "menu_font_style": "inverse",
+            "menu_font_style": "regular",
             "type_font_primary_link": "subheading",
             "type_font_primary_size": "0.75rem",
             "type_case_primary_link": "uppercase",
