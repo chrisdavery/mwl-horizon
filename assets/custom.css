@@ -1,7 +1,9 @@
 :root {
-  --letter-spacing--display-loose: 1.4px;
-  --letter-spacing--heading-loose: 1.4px;
+  --letter-spacing--display-loose: 1.4px !important;
+  --letter-spacing--heading-loose: 1.4px !important;
+  --letter-spacing--body-loose: .2px !important;
   --opacity-subdued-text: 1 !important;
+  --wide-page-width: 100% !important;
 }
 
 .link {
@@ -15,7 +17,7 @@ a.link {
 a.link:after {
   content: "";
   width: 100%;
-  height: 0.1rem;
+  height: 0.05rem;
   background: var(--color-foreground);
   display: block;
   position: absolute;
@@ -77,10 +79,34 @@ a.link:after {
   background-color: var(--menu-top-level-font-color); /* example: accent color */
 }
 
+.predictive-search-results__title {
+  font-family: var(--font-accent--family);
+}
+
+.resource-card__title {
+  font-family: var(--font-accent--family) !important;
+}
+
+.resource-card__content .price {
+  font-family: var(--font-accent--family);
+}
+
+.size-style[style*="--size-aspect-ratio"] {
+  aspect-ratio: var(--size-aspect-ratio);
+}
 
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
     padding-bottom: var(--padding-2xs);
+  }
+  .page-width-wide, .page-width-normal, .page-width-narrow, .page-width-content {
+    --page-margin: 24px;
+  }
+}
+
+@media (max-width: 749px) {
+  .section--mobile-full-width {
+    --page-margin: 0px !important;
   }
 }

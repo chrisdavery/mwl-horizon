@@ -23,6 +23,7 @@
 
     if mobile_background_image != blank
       assign classes = ' hidden--mobile'
+      assign sizes = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: mobile_media_width_desktop
     endif
   %}
 

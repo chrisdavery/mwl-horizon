@@ -182,6 +182,13 @@
       "default": "page-width"
     },
     {
+      "type": "checkbox",
+      "id": "full_width_mobile",
+      "label": "Full width on mobile",
+      "default": false,
+      "visible_if": "{{ section.settings.section_width == 'page-width' }}"
+    },
+    {
       "type": "select",
       "id": "section_height",
       "label": "t:settings.height",
@@ -1169,7 +1176,7 @@
             "inherit_color_scheme": false,
             "color_scheme": "scheme-5",
             "background_media": "image",
-            "height": "fill",
+            "height": "square",
             "padding-block-start": 40,
             "padding-block-end": 40,
             "padding-inline-start": 40,
@@ -1212,7 +1219,7 @@
             "inherit_color_scheme": false,
             "color_scheme": "scheme-5",
             "background_media": "image",
-            "height": "fill",
+            "height": "square",
             "padding-block-start": 40,
             "padding-block-end": 40,
             "padding-inline-start": 40,

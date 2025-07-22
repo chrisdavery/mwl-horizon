@@ -249,6 +249,10 @@
           "label": "t:options.fill"
         },
         {
+          "value": "square",
+          "label": "Square"
+        },
+        {
           "value": "custom",
           "label": "t:options.custom"
         }
@@ -310,6 +314,13 @@
       "visible_if": "{{ block.settings.background_media == 'video' }}"
     },
     {
+      "type": "video",
+      "id": "mobile_video",
+      "label": "t:settings.video",
+      "info": "(optional) section will adapt its height on mobile",
+      "visible_if": "{{ block.settings.background_media == 'video' }}"
+    },
+    {
       "type": "select",
       "id": "video_position",
       "label": "t:settings.video_position",
@@ -330,6 +341,13 @@
       "type": "image_picker",
       "id": "background_image",
       "label": "t:settings.image",
+      "visible_if": "{{ block.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background_image",
+      "label": "Mobile Image",
+      "info": "(optional) section will adapt its height on mobile",
       "visible_if": "{{ block.settings.background_media == 'image' }}"
     },
     {

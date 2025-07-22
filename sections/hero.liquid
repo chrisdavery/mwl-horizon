@@ -7,9 +7,13 @@
   else
     assign media_width_desktop = '100vw'
   endif
+
   assign media_width_mobile = '100vw'
-  assign sizes = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
   assign widths = '832, 1200, 1600, 1920, 2560, 3840'
+
+  assign mobile_media_width_desktop = '1px'
+  
+  assign mobile_sizes = '(min-width: 750px) ' | append: mobile_media_width_desktop | append: ', ' | append: media_width_mobile
 
   assign has_image_1 = false
   assign has_image_2 = false
@@ -56,6 +60,13 @@
     assign has_media = true
   endif
 
+  if has_mobile_image_1 or has_mobile_video_1
+    assign media_width_mobile = '1px'
+    assign widths = '300, 832, 1200, 1600, 1920, 2560, 3840'
+  endif
+
+  assign sizes = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
+
   assign alpha = section.settings.overlay_color.alpha
   assign is_transparent = true
   if alpha == 1 and section.settings.toggle_overlay
@@ -100,7 +111,7 @@
         height: section.settings.mobile_image_1.height,
         alt: section.settings.mobile_image_1.alt,
         class: 'hero__image hidden--desktop',
-        sizes: sizes,
+        sizes: mobile_sizes,
         fetchpriority: fetch_priority
     }}
   {% endif %}
@@ -164,7 +175,7 @@
           height: section.settings.mobile_video_1.preview_image.height,
           alt: section.settings.mobile_video_1.alt,
           class: 'hero__video-poster hidden--desktop',
-          sizes: sizes,
+          sizes: mobile_sizes,
           fetchpriority: fetch_priority_poster
       }}
     {%- endif -%}
