@@ -530,7 +530,7 @@
                   "type": "custom-liquid",
                   "name": "t:names.custom_liquid",
                   "settings": {
-                    "custom_liquid": ""
+                    "custom_liquid": "<div class=\"klaviyo-form-RCTwBX\"></div>"
                   },
                   "blocks": {}
                 }
