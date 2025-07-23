@@ -11,6 +11,7 @@
   </div>
 
   <div class="footer-utilities__group footer-utilities__group--right">
+    {% content_for 'block', type: '_footer-payment-icons', id: 'payment_icons' %}
     {% content_for 'block', type: '_footer-social-icons', id: 'social_icons' %}
   </div>
 </div>

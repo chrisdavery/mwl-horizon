@@ -1,0 +1,50 @@
+<div
+  class="payment-icons__wrapper"
+  {{ block.shopify_attributes }}
+>
+    <ul class="list-unstyled flex list-payment" style="--icon-size: {{ block.settings.width }}px;" role="list">
+        {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
+
+        {%- for type in shop.enabled_payment_types -%}
+            <li class="list-payment__item">
+                {{ type | payment_type_svg_tag: class: icon_block_class }}
+            </li>
+        {%- endfor -%}
+    </ul>
+</div>
+
+{% stylesheet %}
+  .list-payment {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-xs);
+
+    @media screen and (min-width: 750px) {
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+    }
+
+    svg {
+        width: var(--icon-size);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Payment Icons",
+  "tag": null,
+  "settings": [
+    {
+      "type": "range",
+      "id": "width",
+      "label": "t:settings.width",
+      "min": 12,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    }
+  ]
+}
+{% endschema %}
