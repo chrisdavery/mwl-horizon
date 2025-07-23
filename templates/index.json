@@ -1578,6 +1578,9 @@
         "testimonial_card_byCGEi",
         "testimonial_card_77T3kx"
       ],
+      "custom_css": [
+        "@media (min-width: 750px) {.resource-list__carousel {max-width: 1240px; margin: auto; } .resource-list__slide {width: calc(25% - var(--gap) * 3 / 4); } .slideshow-control {opacity: 1; } .slideshow-control--previous {margin-left: -3rem; } .slideshow-control--next {margin-right: -3rem; }}"
+      ],
       "name": "Testimonials",
       "settings": {
         "alignment": "center",
@@ -1699,13 +1702,13 @@
                 "link": "shopify://pages/store-locator",
                 "open_in_new_tab": true,
                 "content_direction": "row",
-                "vertical_on_mobile": true,
+                "vertical_on_mobile": false,
                 "horizontal_alignment": "center",
                 "vertical_alignment": "center",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 10,
                 "width": "fit-content",
                 "custom_width": 100,
                 "width_mobile": "fit-content",
