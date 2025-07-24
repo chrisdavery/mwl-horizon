@@ -5,9 +5,9 @@
   --opacity-subdued-text: 1 !important;
   --wide-page-width: 100% !important;
   --font-subheading--family: 'Cormorant Garamond', Times, serif !important;
-  --font-subheading--weight: 500;
+  --font-subheading--weight: 500 !important;
   --font-heading--family: 'Cormorant Garamond', Times, serif !important;
-  --font-heading--weight: 500;
+  --font-heading--weight: 500 !important;
 }
 
 .link {
