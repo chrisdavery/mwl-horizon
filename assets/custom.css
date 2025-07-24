@@ -4,6 +4,12 @@
   --letter-spacing--body-loose: .2px !important;
   --opacity-subdued-text: 1 !important;
   --wide-page-width: 100% !important;
+  --font-subheading--family: 'Cormorant Garamond', Times, serif;
+  --font-subheading--weight: 500;
+  --font-heading--family: 'Cormorant Garamond', Times, serif;
+  --font-heading--weight: 500;
+  --font-accent--family: 'Cormorant Garamond', Times, serif;
+  --font-accent--weight: 500;
 }
 
 .link {
@@ -53,7 +59,7 @@ a.link:after {
   --menu-parent-active-font-color: var(--color-primary-hover) !important;
 }
 
-.mega-menu__link:not(.mega-menu__link--parent):hover {
+.mega-menu__link:not(.mega-menu__link--parent):hover, .menu__item:hover {
   text-decoration: underline;
 }
 
