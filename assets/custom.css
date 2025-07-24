@@ -48,7 +48,7 @@ a.link:after {
 
 .mega-menu__link--parent:after {
   width: 100%;
-  height: .03rem;
+  height: .05rem;
   background: var(--menu-parent-font-color);
   content: '';
   position: absolute;
