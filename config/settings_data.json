@@ -109,7 +109,7 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#f6f3ed",
+          "background": "#fefefe",
           "foreground_heading": "#2f2e2e",
           "foreground": "#2f2e2e",
           "primary": "#221e20",
@@ -187,7 +187,7 @@
       },
       "scheme-3": {
         "settings": {
-          "background": "#f6f3ed",
+          "background": "#f8f6ef",
           "foreground_heading": "#2f2e2e",
           "foreground": "#2f2e2e",
           "primary": "#2f2e2e",
@@ -382,7 +382,7 @@
       },
       "scheme-26ed3e62-7da9-457a-940d-928952646049": {
         "settings": {
-          "background": "#f6f3ed",
+          "background": "#fefefe",
           "foreground_heading": "#2f2e2e",
           "foreground": "#605e5c",
           "primary": "#2f2e2e",

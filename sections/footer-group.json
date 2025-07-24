@@ -104,7 +104,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "group_hGqUaK": {
@@ -143,7 +144,8 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "css_class": ""
               },
               "blocks": {
                 "icon_C36EzX": {
@@ -213,7 +215,7 @@
         "full_width_mobile": false,
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -317,7 +319,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "group_RXAaDU": {
@@ -356,7 +359,8 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "css_class": ""
               },
               "blocks": {
                 "custom_liquid_6eNpUt": {
@@ -408,7 +412,8 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "css_class": ""
               },
               "blocks": {
                 "group_yjUjUV": {
@@ -447,7 +452,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "css_class": ""
                   },
                   "blocks": {
                     "menu_yXi4zQ": {
@@ -512,7 +518,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "css_class": ""
                   },
                   "blocks": {
                     "menu_DCDqkg": {
@@ -577,7 +584,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "css_class": ""
                   },
                   "blocks": {
                     "menu_KENgqN": {
@@ -642,7 +650,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "css_class": ""
                   },
                   "blocks": {
                     "menu_UkdLpT": {
@@ -786,7 +795,7 @@
       "custom_css": [
         "@media (max-width: 1200px) and (min-width: 750px) {.footer-col-1 {--size-style-width: 36% !important; } .footer-col-2 {--size-style-width: 69% !important; }}",
         "@media (max-width: 989px) and (min-width: 750px) {.footer-row > .layout-panel-flex {--flex-direction: column !important; } .footer-col {--size-style-width: 100% !important; }}",
-        "@media (max-width: 749px) {.footer-row > .layout-panel-flex {flex-direction: column-reverse !important; } .footer-col-2 .group-block-content {--gap: 0px !important; } summary {padding-block: var(--padding-lg);}}"
+        "@media (max-width: 749px) {.footer-row > .layout-panel-flex {flex-direction: column-reverse !important; } .footer-col-2 .group-block-content {--gap: 0px !important; } summary {padding-block: var(--padding-lg); }}"
       ],
       "name": "Footer",
       "settings": {
@@ -800,7 +809,7 @@
         "gap": 48,
         "section_width": "page-width",
         "section_height": "",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
