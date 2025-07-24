@@ -6,6 +6,8 @@
   --wide-page-width: 100% !important;
   --font-body--family: 'Cormorant Garamond', Times, serif !important;
   --font-body--weight: 500 !important;
+  --font-accent--family: 'Cormorant Garamond', Times, serif !important;
+  --font-accent--weight: 500 !important;
 }
 
 .link {
