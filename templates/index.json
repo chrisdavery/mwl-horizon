@@ -74,7 +74,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "button_gr6eHq": {
@@ -188,7 +189,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "group_EdeDmD": {
@@ -227,7 +229,8 @@
                 "padding-block-start": 24,
                 "padding-block-end": 24,
                 "padding-inline-start": 24,
-                "padding-inline-end": 24
+                "padding-inline-end": 24,
+                "css_class": ""
               },
               "blocks": {
                 "spacer_YWKVWY": {
@@ -330,7 +333,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "group_xEJ3rg": {
@@ -369,7 +373,8 @@
                 "padding-block-start": 24,
                 "padding-block-end": 24,
                 "padding-inline-start": 24,
-                "padding-inline-end": 24
+                "padding-inline-end": 24,
+                "css_class": ""
               },
               "blocks": {
                 "spacer_WhtnDY": {
@@ -472,7 +477,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "group_cBYNyQ": {
@@ -511,7 +517,8 @@
                 "padding-block-start": 24,
                 "padding-block-end": 24,
                 "padding-inline-start": 24,
-                "padding-inline-end": 24
+                "padding-inline-end": 24,
+                "css_class": ""
               },
               "blocks": {
                 "spacer_dczGNR": {
@@ -656,7 +663,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "text_U9tBYq": {
@@ -800,7 +808,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "group_PMeBKP": {
@@ -839,7 +848,8 @@
                 "padding-block-start": 24,
                 "padding-block-end": 24,
                 "padding-inline-start": 24,
-                "padding-inline-end": 24
+                "padding-inline-end": 24,
+                "css_class": ""
               },
               "blocks": {
                 "spacer_fqRee6": {
@@ -942,7 +952,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "group_wNCeBR": {
@@ -981,7 +992,8 @@
                 "padding-block-start": 24,
                 "padding-block-end": 24,
                 "padding-inline-start": 24,
-                "padding-inline-end": 24
+                "padding-inline-end": 24,
+                "css_class": ""
               },
               "blocks": {
                 "spacer_zkQewh": {
@@ -1125,7 +1137,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "group_Ax46Kz": {
@@ -1164,7 +1177,8 @@
                 "padding-block-start": 24,
                 "padding-block-end": 24,
                 "padding-inline-start": 24,
-                "padding-inline-end": 24
+                "padding-inline-end": 24,
+                "css_class": ""
               },
               "blocks": {
                 "spacer_ptMfhY": {
@@ -1267,7 +1281,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "group_NKLcYH": {
@@ -1306,7 +1321,8 @@
                 "padding-block-start": 24,
                 "padding-block-end": 24,
                 "padding-inline-start": 24,
-                "padding-inline-end": 24
+                "padding-inline-end": 24,
+                "css_class": ""
               },
               "blocks": {
                 "spacer_EH39Ai": {
@@ -1534,7 +1550,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "css_class": ""
           },
           "blocks": {
             "text_RnJFUU": {
