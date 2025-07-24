@@ -104,8 +104,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "css_class": ""
+            "padding-inline-end": 0
           },
           "blocks": {
             "group_hGqUaK": {
@@ -144,8 +143,7 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "css_class": ""
+                "padding-inline-end": 0
               },
               "blocks": {
                 "icon_C36EzX": {
@@ -319,8 +317,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "css_class": "footer-row"
+            "padding-inline-end": 0
           },
           "blocks": {
             "group_RXAaDU": {
@@ -359,8 +356,7 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "css_class": "footer-col-1 footer-col"
+                "padding-inline-end": 0
               },
               "blocks": {
                 "custom_liquid_6eNpUt": {
@@ -412,8 +408,7 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "css_class": "footer-col-2 footer-col"
+                "padding-inline-end": 0
               },
               "blocks": {
                 "group_yjUjUV": {
@@ -452,8 +447,7 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "css_class": ""
+                    "padding-inline-end": 0
                   },
                   "blocks": {
                     "menu_yXi4zQ": {
@@ -518,8 +512,7 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "css_class": ""
+                    "padding-inline-end": 0
                   },
                   "blocks": {
                     "menu_DCDqkg": {
@@ -584,8 +577,7 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "css_class": ""
+                    "padding-inline-end": 0
                   },
                   "blocks": {
                     "menu_KENgqN": {
@@ -650,8 +642,7 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "css_class": ""
+                    "padding-inline-end": 0
                   },
                   "blocks": {
                     "menu_UkdLpT": {
