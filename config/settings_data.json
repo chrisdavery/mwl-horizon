@@ -305,9 +305,9 @@
       "scheme-6": {
         "settings": {
           "background": "rgba(0,0,0,0)",
-          "foreground_heading": "#ffffff",
-          "foreground": "#ffffff",
-          "primary": "#ffffff",
+          "foreground_heading": "#fefefe",
+          "foreground": "#fefefe",
+          "primary": "#fefefe",
           "primary_hover": "#ffffffb0",
           "border": "#e6e6e6",
           "shadow": "#000000",
