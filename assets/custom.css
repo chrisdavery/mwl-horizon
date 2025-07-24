@@ -28,6 +28,11 @@ a.link:after {
   bottom: -0.2rem;
 }
 
+
+.header .cart-bubble__text-count {
+  color: rgb(255,255,255);
+}
+
 .menu-list__link {
   letter-spacing: 1px;
 }
