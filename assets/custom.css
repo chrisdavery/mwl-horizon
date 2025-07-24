@@ -4,12 +4,10 @@
   --letter-spacing--body-loose: .2px !important;
   --opacity-subdued-text: 1 !important;
   --wide-page-width: 100% !important;
-  --font-subheading--family: 'Cormorant Garamond', Times, serif;
+  --font-subheading--family: 'Cormorant Garamond', Times, serif !important;
   --font-subheading--weight: 500;
-  --font-heading--family: 'Cormorant Garamond', Times, serif;
+  --font-heading--family: 'Cormorant Garamond', Times, serif !important;
   --font-heading--weight: 500;
-  --font-accent--family: 'Cormorant Garamond', Times, serif;
-  --font-accent--weight: 500;
 }
 
 .link {
