@@ -360,7 +360,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "footer-col-1 footer-col"
               },
               "blocks": {
                 "custom_liquid_6eNpUt": {
@@ -413,7 +413,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "footer-col-2 footer-col"
               },
               "blocks": {
                 "group_yjUjUV": {
