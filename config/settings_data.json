@@ -266,14 +266,14 @@
       "scheme-5": {
         "settings": {
           "background": "#333333",
-          "foreground_heading": "#ffffff",
-          "foreground": "#f6f3ed",
+          "foreground_heading": "#fefefe",
+          "foreground": "#fefefe",
           "primary": "#ffffff",
           "primary_hover": "#ffffffb0",
           "border": "#ffffffb0",
           "shadow": "#000000",
-          "primary_button_background": "#ffffff",
-          "primary_button_text": "#000000",
+          "primary_button_background": "#fefefe",
+          "primary_button_text": "#2f2e2e",
           "primary_button_border": "#ffffff",
           "primary_button_hover_background": "#000000",
           "primary_button_hover_text": "#ffffff",
