@@ -13,7 +13,7 @@
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <div
-  class="section {{ additional_classes | strip }} {% if section.settings.full_width_mobile %}section--mobile-full-width{% endif %} section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  class="section {{ additional_classes | strip }} {% if section.settings.full_width_on_mobile %}section--mobile-full-width{% endif %} section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
 
   {% if request.visual_preview_mode %}
     data-shopify-visual-preview
@@ -118,6 +118,12 @@
   .mobile-min-height {
     @media screen and (max-width: 749px) {
       min-height: var(--section-mobile-min-height);
+    }
+  }
+
+  :is(.section--mobile-full-width) > * {
+    @media screen and (max-width: 749px) {
+      grid-column: 1 / -1;
     }
   }
 {% endstylesheet %}

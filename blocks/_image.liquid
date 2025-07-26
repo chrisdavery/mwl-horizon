@@ -82,6 +82,10 @@
       --image-height: var(--image-height-large);
     }
 
+    &[height='standard'] {
+      --ratio: 4 / 3;
+    }
+
     &[ratio='portrait'] {
       --ratio: 4 / 5;
     }
@@ -145,6 +149,10 @@
         {
           "value": "portrait",
           "label": "t:options.portrait"
+        },
+        {
+          "value": "standard",
+          "label": "Standard"
         },
         {
           "value": "square",

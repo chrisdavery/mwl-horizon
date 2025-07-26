@@ -33,6 +33,7 @@
 <div
   class="
     section
+    {% if section.settings.full_width_on_mobile %}multicolumn--mobile-full-width{% endif %}
     section--{{ section.settings.section_width }}
     color-{{ section.settings.color_scheme }}
     section-resource-list
@@ -119,11 +120,11 @@
 
 {% schema %}
 {
-  "name": "Testimonials",
+  "name": "Multicolumn",
   "class": "ui-test-collection-list",
   "blocks": [
     {
-      "type": "_testimonial-card"
+      "type": "_multicolumn-card"
     }
   ],
   "disabled_on": {
@@ -209,6 +210,10 @@
       "id": "mobile_card_size",
       "label": "t:settings.mobile_columns",
       "options": [
+        {
+          "value": "100cqw",
+          "label": "Full"
+        },
         {
           "value": "60cqw",
           "label": "t:options.one_number"
@@ -319,6 +324,13 @@
       "default": "page-width"
     },
     {
+      "type": "checkbox",
+      "id": "full_width_on_mobile",
+      "label": "t:settings.full_width_on_mobile",
+      "default": false,
+      "visible_if": "{{ section.settings.section_width == 'page-width' }}"
+    },
+    {
       "type": "range",
       "id": "gap",
       "label": "t:settings.gap",
@@ -361,7 +373,7 @@
   ],
   "presets": [
     {
-      "name": "Testimonials",
+      "name": "Multicolumn",
       "category": "t:categories.layout",
       "settings": {
         "layout_type": "carousel",
@@ -417,7 +429,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>Hear From Our #MWLGIRLS</h3>",
+                "text": "<h3>{{ closest.collection.title }}</h3>",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
                 "font_size": "",
@@ -425,19 +437,33 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "width": "fill",
+                "width": "fit-content",
                 "max_width": "normal",
-                "alignment": "center",
+                "alignment": "left",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               }
+            },
+            "button": {
+              "type": "button",
+              "name": "t:names.product_list_button",
+              "settings": {
+                "label": "View all",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              }
             }
           },
-          "block_order": ["product_list_text"]
+          "block_order": ["product_list_text", "button"]
         }
       },
+      "block_order": []
     }
   ]
 }

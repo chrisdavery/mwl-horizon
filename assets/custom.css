@@ -42,6 +42,10 @@ a.link:after {
   font-size: var(--font-size--2xs) !important;
 }
 
+.mega-menu__link--parent {
+  font-weight: 600 !important;
+}
+
 .mega-menu__link--parent:after {
   width: 100%;
   height: .03rem;
@@ -139,8 +143,12 @@ a.link:after {
 }
 
 @media (max-width: 749px) {
-  .section--mobile-full-width {
-    --page-margin: 0px !important;
+  :is(.multicolumn--mobile-full-width) > .resource-list__carousel {
+    grid-column: 1 / -1;
+  }
+
+  .multicolumn--mobile-full-width .resource-list__carousel[style*="--mobile-card-size: 100cqw;"] slideshow-slides {
+    padding-inline: 0 !important;
   }
   .size-style[style*="--size-aspect-ratio"] {
     aspect-ratio: 1 / 1;
