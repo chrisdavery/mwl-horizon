@@ -33,6 +33,10 @@ a.link:after {
   color: rgb(255,255,255);
 }
 
+.cart-bubble__text {
+  font-size: var(--font-size--xs);
+}
+
 .menu-list__link {
   letter-spacing: 1px;
 }
