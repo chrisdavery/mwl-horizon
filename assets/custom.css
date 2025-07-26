@@ -163,9 +163,6 @@ a.link:after {
   .size-style[style*="--size-aspect-ratio"] {
     aspect-ratio: 1 / 1;
   }
-  .resource-list__carousel slideshow-arrows {
-    padding-inline: 0;
-  }
   .resource-list__carousel slideshow-arrows .slideshow-control {
     opacity: 1;
   }
