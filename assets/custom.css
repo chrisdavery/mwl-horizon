@@ -33,8 +33,9 @@ a.link:after {
   color: rgb(255,255,255);
 }
 
-.cart-bubble__text {
-  font-size: var(--font-size--xs);
+.header-actions__cart-icon .cart-bubble__text, .cart-drawer__heading .cart-bubble__text {
+  font-family: var(--font-heading--family);
+  font-weight: var(--font-heading--weight);
 }
 
 .menu-list__link {
