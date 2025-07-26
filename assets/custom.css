@@ -129,11 +129,11 @@ a.link:after {
   background-color: #B7998E !important;
 }
 
-.group-block .background-image-container img {
+.group-block .background-image-container img,.group-block-content .image-block img {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.group-block:hover .background-image-container img {
+.group-block:hover .background-image-container img, .group-block-content:hover .image-block img {
   transform: scale(1.03);
 }
 
