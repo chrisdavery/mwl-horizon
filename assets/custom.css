@@ -34,8 +34,8 @@ a.link:after {
 }
 
 .header-actions__cart-icon .cart-bubble__text, .cart-drawer__heading .cart-bubble__text {
-  font-family: var(--font-heading--family);
-  font-weight: var(--font-heading--weight);
+  font-family: var(--font-heading--family) !important;
+  font-weight: var(--font-heading--weight) !important;
 }
 
 .menu-list__link {
