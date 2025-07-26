@@ -8,7 +8,6 @@
   --font-body--weight: 500 !important;
   --font-accent--family: 'Cormorant Garamond', Times, serif !important;
   --font-accent--weight: 500 !important;
-  --max-width--display-tight: 0ch;
 }
 
 .link {
@@ -180,5 +179,8 @@ a.link:after {
 
   .spacing-style[style*="--mobile-margin-block-start"] {
     margin-inline: var(--mobile-margin-block-start) var(--mobile-margin-block-end) !important;
+  }
+  .layout-panel-flex--row:not(.mobile-column) .text-block {
+    --max-width--display-tight: 0ch;
   }
 }
