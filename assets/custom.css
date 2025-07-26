@@ -8,7 +8,7 @@
   --font-body--weight: 500 !important;
   --font-accent--family: 'Cormorant Garamond', Times, serif !important;
   --font-accent--weight: 500 !important;
-  --max-width--display-tight: 0;
+  --max-width--display-tight: 0ch;
 }
 
 .link {
