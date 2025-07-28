@@ -15,6 +15,8 @@
     assign item_column = settings[column_key] | default: 'left'
 
     case item
+      when 'right_menu':
+        assign item_column = 'right'
       when 'actions':
         assign item_column = 'right'
     endcase
@@ -64,6 +66,8 @@
               {{ menu }}
             {% when 'localization' %}
               {{ localization }}
+            {% when 'right_menu' %}
+              {{ right_menu }}
             {% when 'search' %}
               {{ search }}
             {% when 'mobile_search' %}

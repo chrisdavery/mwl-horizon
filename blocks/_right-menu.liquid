@@ -1,0 +1,30 @@
+<div class="right-menu hidden--mobile">
+    <div class="flex right-menu-row">
+        <div>
+            {% content_for 'block', type: '_header-menu', id: 'right-menu' %}
+        </div>
+        <div>
+            {% content_for 'blocks' %}
+        </div>
+    </div>
+</div>
+
+{% stylesheet %}
+    .right-menu-row .button-secondary {
+        --color-secondary-button-text: var(--color-foreground);
+        --color-secondary-button-border: var(--color-foreground);
+        font-size: 0.75rem;
+    }
+{% endstylesheet %}
+
+{% schema %}
+    {
+        "name": "Right Menu",
+        "tag": null,
+        "blocks": [
+            {
+                "type": "button"
+            }
+        ]
+    }
+{% endschema %}

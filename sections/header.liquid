@@ -1,10 +1,10 @@
 
 
 {% liquid
-  assign order = 'logo,menu,localization,search,mobile_search,actions'
+  assign order = 'logo,menu,localization,right_menu,search,mobile_search,actions'
 
   if shop.customer_accounts_enabled
-    assign order = 'mobile_search,logo,menu,localization,search,actions'
+    assign order = 'mobile_search,logo,menu,localization,right_menu,search,actions'
   endif
 
   assign rows = 'top,bottom' | split: ','
@@ -61,6 +61,10 @@
 
   capture actions
     render 'header-actions'
+  endcapture
+
+  capture right_menu
+    content_for 'block', type: '_right-menu', id: 'right-menu'
   endcapture
 
   if shop.customer_accounts_enabled
@@ -222,6 +226,7 @@
         menu: menu,
         actions: actions,
         localization: localization_markup,
+        right_menu: right_menu,
         search: search,
         mobile_search: mobile_search
       %}

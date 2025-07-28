@@ -55,6 +55,59 @@
             "drawer_dividers": false
           },
           "blocks": {}
+        },
+        "right-menu": {
+          "type": "_right-menu",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "button_X6tTMR": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Book an Appointment",
+                "link": "shopify://pages/appointments",
+                "open_in_new_tab": false,
+                "style_class": "button-secondary",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            },
+            "right-menu": {
+              "type": "_header-menu",
+              "static": true,
+              "settings": {
+                "menu": "horizon-right-menu",
+                "menu_style": "text",
+                "featured_products_aspect_ratio": "4 / 5",
+                "featured_collections_aspect_ratio": "16 / 9",
+                "image_border_radius": 0,
+                "product_title_case": "default",
+                "collection_title_case": "default",
+                "color_scheme": "",
+                "menu_font_style": "regular",
+                "type_font_primary_link": "subheading",
+                "type_font_primary_size": "0.75rem",
+                "type_case_primary_link": "uppercase",
+                "type_font_secondary_link": "subheading",
+                "type_case_secondary_link": "uppercase",
+                "type_font_tertiary_link": "subheading",
+                "type_case_tertiary_link": "uppercase",
+                "navigation_bar": false,
+                "color_scheme_navigation_bar": "",
+                "drawer_accordion": false,
+                "drawer_accordion_expand_first": false,
+                "drawer_dividers": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_X6tTMR"
+          ]
         }
       },
       "custom_css": [],
