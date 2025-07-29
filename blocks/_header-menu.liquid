@@ -141,13 +141,29 @@
 
   .menu-drawer__featured-content-list {
     display: flex;
-    gap: var(--margin-xs);
+    gap: var(--margin-3xs);
     overflow-x: auto;
     padding-block-end: var(--padding-lg);
+  }
+  .menu-drawer__featured-content-list {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .menu-drawer__featured-content-list::-webkit-scrollbar {
+    display: none;
   }
 
   .menu-drawer__featured-content-list-item {
     flex: 0 0 auto;
+  }
+  
+  .menu-drawer__menu:not(.menu-drawer__menu--grandchildlist) > .menu-drawer__list-item:not(:last-child) {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .menu-drawer__menu--childlist {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .menu-drawer__featured-content-list-item--product {
@@ -155,7 +171,7 @@
   }
 
   .menu-drawer__featured-content-list-item--card {
-    width: calc(50% - var(--margin-xs) / 2);
+    width: 55cqi;
   }
 
   .menu-drawer__featured-content-list-item--collection img.resource-card__image {
