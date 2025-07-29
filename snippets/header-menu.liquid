@@ -24,6 +24,18 @@
 
 {% capture children %}
   {% for link in block.settings.menu.links %}
+    {% assign link_text = '<!--@' | append: link.title | handleize | strip | handleize | append: '/split-->' %}
+    {% liquid
+      assign filtered_megamenu_cards = ''
+      for item in megamenu_cards
+        if item contains link_text
+          assign filtered_megamenu_cards = filtered_megamenu_cards | append: item
+        endif
+      endfor
+      assign megamenu_cards = filtered_megamenu_cards
+    %}
+    {% assign megamenu_cards = megamenu_cards | strip | split: '<!--@list/split-->' %}
+
     <li
       role="presentation"
       class="menu-list__list-item"
@@ -51,7 +63,7 @@
             class="menu-list__submenu-inner"
             style="{% render 'submenu-font-styles', settings: block.settings %}"
           >
-            {% assign list_id = 'MegaMenuList-' | append: forloop.index %}
+            {% assign list_id = 'MegaMenuList-' | append: block_id | append: forloop.index %}
             {% render 'mega-menu',
               parent_link: link,
               id: list_id,
