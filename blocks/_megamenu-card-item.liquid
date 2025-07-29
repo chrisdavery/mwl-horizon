@@ -1,0 +1,105 @@
+{% liquid
+  if block.settings.aspect_ratio == blank or image_aspect_ratio == 'adapt'
+    assign ratio = block.settings.image.aspect_ratio
+  else
+    assign ratio = block.settings.aspect_ratio
+  endif
+  assign image_width = image_width | default: 1200
+  assign widths = '300, 450, 600, 750, 900, 1050, 1200'
+
+  if block.settings.overlay == true
+    assign style = 'overlay'
+  endif
+%}
+
+<div
+  class="megamenu-card{% if style == 'overlay' %} megamenu-card--overlay{% endif %}"
+  href="{{ block.settings.link }}"
+>
+  <a
+    class="megamenu-card__link"
+    href="{{ block.settings.link }}"
+  >
+    <span class="visually-hidden">
+      {{ block.settings.title }}
+    </span>
+  </a>
+  <div
+    class="megamenu-card__media"
+    style="--megamenu-card-aspect-ratio: {{ ratio }};"
+  >
+    {{
+      block.settings.image
+      | image_url: width: image_width
+      | image_tag: loading: 'lazy', class: 'megamenu-card__image', sizes: 'auto', widths: widths
+    }}
+  </div>
+
+  <div class="megamenu-card__content">
+    <p class="megamenu-card__title{% if style == 'overlay' %} h5{%else %} paragraph{% endif %}">
+      {{- block.settings.title -}}
+    </p>
+  </div>
+</div>
+<!--@{{ block.settings.assigned_to | strip | handleize }}/split-->
+<!--@list/split-->
+
+{% schema %}
+    {
+        "name": "Megamenu Card Item",
+        "tag": null,
+        "settings": [
+            {
+              "type": "text",
+              "id": "assigned_to",
+              "label": "Assigned to"
+            },
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+                "type": "select",
+                "id": "aspect_ratio",
+                "label": "t:settings.image_ratio",
+                "options": [
+                    {
+                    "value": "adapt",
+                    "label": "t:options.auto"
+                    },
+                    {
+                    "value": "4 / 5",
+                    "label": "t:options.portrait"
+                    },
+                    {
+                    "value": "1 / 1",
+                    "label": "t:options.square"
+                    }
+                ],
+                "default": "4 / 5"
+            },
+            {
+              "type": "checkbox",
+              "id": "overlay",
+              "label": "Overlay",
+              "default": false
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Title"
+            },
+            {
+              "type": "url",
+              "id": "link",
+              "label": "Link"
+            }
+        ],
+        "presets": [
+          {
+            "name": "Megamenu Card Item"
+          }
+        ]
+    }
+{% endschema %}

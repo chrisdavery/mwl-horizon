@@ -34,7 +34,7 @@
           "settings": {
             "menu": "horizon-header-menu",
             "mobile_additional_menu": "horizon-right-menu",
-            "menu_style": "text",
+            "menu_style": "megamenu_cards",
             "featured_products_aspect_ratio": "4 / 5",
             "featured_collections_aspect_ratio": "16 / 9",
             "image_border_radius": 0,
@@ -55,7 +55,38 @@
             "drawer_accordion_expand_first": true,
             "drawer_dividers": false
           },
-          "blocks": {}
+          "blocks": {
+            "megamenu_card_item_hBn799": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Shop",
+                "image": "shopify://shop_images/avery-made-with-love-bridal.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Shop Avery",
+                "link": "shopify://products/avery"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_9PWxUg": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Shop",
+                "image": "shopify://shop_images/isla-made-with-love-bridal.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Shop Isla",
+                "link": "shopify://products/isla"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "megamenu_card_item_hBn799",
+            "megamenu_card_item_9PWxUg"
+          ]
         },
         "right-menu": {
           "type": "_right-menu",
