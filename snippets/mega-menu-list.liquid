@@ -213,7 +213,6 @@
       --menu-columns-desktop: {{ grid_columns_count_collection_images }};
       --menu-columns-tablet: {{ grid_columns_count_tablet }};
     {% elsif megamenu_cards.size > 0 %}
-      --sdsd: 1;
       --menu-columns-desktop: 8;
       --menu-columns-tablet: {{ grid_columns_count_tablet }};
     {% else %}
@@ -227,9 +226,8 @@
       --menu-columns-desktop: {{ grid_columns_count_collection_images }};
       --menu-columns-tablet: {{ max_menu_columns_tablet }};
     {% elsif megamenu_cards.size > 0 %}
-      --ada: 1;
       --menu-columns-desktop: 4;
-      --menu-columns-tablet: {{ grid_columns_count_tablet }};
+      --menu-columns-tablet: 2;
     {% else %}
       --menu-columns-desktop: {{ max_menu_columns }};
       --menu-columns-tablet: {{ max_menu_columns_tablet }};

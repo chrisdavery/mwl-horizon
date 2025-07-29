@@ -612,9 +612,19 @@
                             assign collection_linklist = link.links | where: 'type', 'collection_link' | first
                             assign featured_products = collection_linklist.object.products
                           endif
+                          
+                          assign link_text = '<!--@' | append: link.title | handleize | strip | handleize | append: '/split-->'
+                          assign filtered_megamenu_cards = ''
+
+                          for item in megamenu_cards
+                            if item contains link_text
+                              assign filtered_megamenu_cards = filtered_megamenu_cards | append: item
+                            endif
+                          endfor
+                          assign megamenu_cards = filtered_megamenu_cards | strip | split: '<!--@list/split-->'
                         -%}
 
-                        {% if featured_collections.size > 0 or featured_products.size > 0 %}
+                        {% if featured_collections.size > 0 or featured_products.size > 0 or megamenu_cards.size > 0 %}
                           <div
                             class="menu-drawer__featured-content menu-drawer__featured-content--childlist"
                             style="--menu-drawer-animation-index: {{ linklist.links.size | plus: 1 }};"
@@ -631,6 +641,12 @@
                                     %}
                                   </li>
                                 {%- endfor -%}
+                              {% elsif megamenu_cards.size > 0 %}
+                                  {% for item in megamenu_cards %}
+                                    <li class="menu-drawer__featured-content-list-item menu-drawer__featured-content-list-item--card">
+                                      {{ item }}
+                                    </li>
+                                  {% endfor %}
                               {% else %}
                                 {%- for product in featured_products limit: max_featured_items -%}
                                   <li class="menu-drawer__featured-content-list-item menu-drawer__featured-content-list-item--product">
@@ -911,7 +927,7 @@
                           endif
                         -%}
 
-                        {% if featured_collections.size > 0 or featured_products.size > 0 %}
+                        {% if featured_collections.size > 0 or featured_products.size > 0 or megamenu_cards.size > 0 %}
                           <div
                             class="menu-drawer__featured-content menu-drawer__featured-content--childlist"
                             style="--menu-drawer-animation-index: {{ linklist.links.size | plus: 1 }};"
