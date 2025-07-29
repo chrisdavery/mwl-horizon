@@ -6,6 +6,8 @@
   --wide-page-width: 100% !important;
   --font-body--family: 'Cormorant Garamond', serif !important;
   --font-body--weight: 500 !important;
+  --drawer-width: 20rem !important;
+  --sidebar-width: 25rem;
 }
 
 .link {

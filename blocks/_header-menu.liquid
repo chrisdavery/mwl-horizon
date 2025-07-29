@@ -29,6 +29,7 @@
       {% render 'header-drawer',
         class: 'header__drawer--mobile',
         linklist: block.settings.menu,
+        linklist_add_mobile: block.settings.mobile_additional_menu,
         data_header_drawer_type: 'mobile-drawer'
       %}
     </div>
@@ -591,6 +592,13 @@
       "id": "menu",
       "label": "t:settings.menu",
       "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "mobile_additional_menu",
+      "label": "Mobile additional menu",
+      "info": "this setting is for appending right menu on mobile",
+      "visible_if": "{{ block.settings.menu != blank }}"
     },
     {
       "type": "select",

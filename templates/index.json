@@ -717,7 +717,7 @@
                 "alignment": "center",
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "0.875rem",
+                "font_size": "1rem",
                 "line_height": "loose",
                 "letter_spacing": "loose",
                 "case": "none",
@@ -743,7 +743,7 @@
         "group_czLF37"
       ],
       "custom_css": [
-        ".size-style {max-width: 840px !important;}"
+        ".size-style {/* max-width: 840px !important; */ max-width: 850px !important;}"
       ],
       "name": "t:names.custom_section",
       "settings": {

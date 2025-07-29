@@ -1,21 +1,13 @@
-<div class="right-menu hidden--mobile">
-    <div class="flex right-menu-row">
-        <div>
-            {% content_for 'block', type: '_header-menu', id: 'right-menu' %}
-        </div>
-        <div>
-            {% content_for 'blocks' %}
-        </div>
+{% capture children %}
+    <div>
+        {% content_for 'block', type: '_header-menu', id: 'right-menu' %}
     </div>
-</div>
+    <div>
+        {% content_for 'blocks' %}
+    </div>
+{% endcapture %}
 
-{% stylesheet %}
-    .right-menu-row .button-secondary {
-        --color-secondary-button-text: var(--color-foreground);
-        --color-secondary-button-border: var(--color-foreground);
-        font-size: 0.75rem;
-    }
-{% endstylesheet %}
+{% render 'right-menu', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
 
 {% schema %}
     {
