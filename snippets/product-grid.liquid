@@ -47,7 +47,6 @@
         }
     {% endcase %}
 
-    {% comment %}
     /* This logic helps prevent displaying one column for an large or extra-large product card size on a small screen. We want it to display at least two columns. */
     {% case section.settings.product_card_size %}
       {% when 'extra-large' or 'large' %}
@@ -58,11 +57,9 @@
         }
     {% endcase %}
 
-    /* When zoomed out, fit as many 100px-wide columns as possible */
     .product-grid--{{ section.id }}:is([product-grid-view='zoom-out']) {
       --product-grid-columns-desktop: repeat(auto-fill, minmax(6.25rem, 1fr));
     }
-    {% endcomment %}
 
     .product-grid--{{ section.id }}:is([product-grid-view='zoom-out']) .product-grid-view-zoom-out--details {
       display: block;
