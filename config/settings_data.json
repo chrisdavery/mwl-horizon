@@ -63,7 +63,7 @@
     "secondary_button_border_width": 1,
     "button_border_radius_secondary": 4,
     "type_font_button_secondary": "accent",
-    "button_font_weight_secondary": "default",
+    "button_font_weight_secondary": "500",
     "button_text_case_secondary": "uppercase",
     "cart_type": "drawer",
     "cart_price_font": "secondary",
@@ -106,6 +106,20 @@
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": true,
+        "settings": {
+          "button_color": "#000000",
+          "secondary_color": "#FFFFFF",
+          "ternary_color": "#6A6A6A",
+          "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": ""
+        }
       }
     },
     "color_schemes": {
@@ -127,9 +141,9 @@
           "secondary_button_background": "rgba(0,0,0,0)",
           "secondary_button_text": "#2f2e2e",
           "secondary_button_border": "#2f2e2e",
-          "secondary_button_hover_background": "#fafafa",
+          "secondary_button_hover_background": "#fefefe",
           "secondary_button_hover_text": "#2f2e2e",
-          "secondary_button_hover_border": "#2f2e2e",
+          "secondary_button_hover_border": "#fefefe",
           "input_background": "#ffffffc7",
           "input_text_color": "#2f2e2e",
           "input_border_color": "#dfdfdf",

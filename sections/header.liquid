@@ -64,7 +64,7 @@
   endcapture
 
   capture right_menu
-    content_for 'block', type: '_right-menu', id: 'right-menu'
+    content_for 'block', type: '_right-menu', id: 'right-menu', variant: 'desktop'
   endcapture
 
   if shop.customer_accounts_enabled
@@ -559,14 +559,14 @@
   }
 
   /* Extend hover area through padding to prevent flickering on actual menu items */
-  .menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__link[aria-haspopup],
+  /* .menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__link[aria-haspopup],
   .menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__link,
   .menu-list__list-item:where(:not([slot='overflow'])) > button.menu-list__link {
     margin-block: calc(-2 * var(--header-padding));
     padding-block: calc(2 * var(--header-padding));
     margin-inline: calc(-1 * var(--gap-xl) / 2);
     padding-inline: calc(var(--gap-xl) / 2);
-  }
+  } */
 
   /* Set header paddings based on height setting */
   .header {

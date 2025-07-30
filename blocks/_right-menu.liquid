@@ -1,13 +1,39 @@
+{%- doc -%}
+  Renders a right menu block.
+
+  @param {string} [variant] - What version of the menu to render.
+{%- enddoc -%}
+
 {% capture children %}
-    <div>
-        {% content_for 'block', type: '_header-menu', id: 'right-menu' %}
-    </div>
-    <div>
-        {% content_for 'blocks' %}
-    </div>
+    {% content_for 'blocks' %}
 {% endcapture %}
 
-{% render 'right-menu', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
+{% case variant %}
+    {% when 'desktop' %}
+        <div class="right-menu hidden--mobile">
+            <div class="flex right-menu-row">
+                <div>
+                    {% content_for 'block', type: '_header-menu', id: 'right-menu' %}
+                </div>
+                <div>
+                    {{ children }}
+                </div>
+            </div>
+        </div>
+    {% when 'mobile' %}
+        {{ children }}
+{% endcase %}
+
+{% stylesheet %}
+    .right-menu-row .button-secondary {
+        --color-secondary-button-text: var(--color-foreground);
+        --color-secondary-button-border: var(--color-foreground);
+        font-size: 0.75rem;
+    }
+    .right-menu-row .button-secondary:hover {
+        --button-border-color: var(--color-foreground);
+    }
+{% endstylesheet %}
 
 {% schema %}
     {
