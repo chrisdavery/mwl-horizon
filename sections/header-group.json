@@ -188,7 +188,9 @@
           ]
         }
       },
-      "custom_css": [],
+      "custom_css": [
+        ".menu-drawer__utility-links {background-color: rgb(248 246 239 / 1.0);}"
+      ],
       "settings": {
         "logo_position": "center",
         "menu_position": "left",

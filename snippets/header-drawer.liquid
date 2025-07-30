@@ -1240,7 +1240,7 @@
 
   .menu-drawer__menu.has-submenu,
   .menu-drawer__menu--childlist:not(:has(.menu-drawer__animated-element)) {
-    margin-block-end: var(--margin-xl);
+    margin-block-end: var(--margin-xs);
 
     @media screen and (min-width: 750px) {
       margin-block-end: 2.5rem;
@@ -1533,8 +1533,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 0;
-    margin-block: auto var(--padding-sm);
-    margin-inline-start: var(--padding-xl);
+    /* margin-block: auto var(--padding-sm);
+    margin-inline-start: var(--padding-xl); */
+    padding-block: var(--padding-lg);
+    padding-inline-start: var(--padding-xl);
     background-color: rgb(var(--color-foreground) 0.03);
   }
 

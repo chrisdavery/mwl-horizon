@@ -7,13 +7,19 @@
   else
     assign media_width_desktop = '100vw'
   endif
+
   assign media_width_mobile = '100vw'
-  assign sizes = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
   assign widths = '832, 1200, 1600, 1920, 2560, 3840'
+
+  assign mobile_media_width_desktop = '1px'
+  
+  assign mobile_sizes = '(min-width: 750px) ' | append: mobile_media_width_desktop | append: ', ' | append: media_width_mobile
 
   assign has_image_1 = false
   assign has_image_2 = false
+  assign has_mobile_image_1 = false
   assign has_video_1 = false
+  assign has_mobile_video_1 = false
   assign has_video_2 = false
   assign has_image = false
   assign has_video = false
@@ -24,11 +30,17 @@
   if section.settings.image_1 != blank and media_type_1 == 'image'
     assign has_image_1 = true
   endif
+  if section.settings.mobile_image_1 != blank and media_type_1 == 'image'
+    assign has_mobile_image_1 = true
+  endif
   if section.settings.image_2 != blank and media_type_2 == 'image'
     assign has_image_2 = true
   endif
   if section.settings.video_1 != blank and media_type_1 == 'video'
     assign has_video_1 = true
+  endif
+  if section.settings.mobile_video_1 != blank and media_type_1 == 'video'
+    assign has_mobile_video_1 = true
   endif
   if section.settings.video_2 != blank and media_type_2 == 'video'
     assign has_video_2 = true
@@ -37,6 +49,7 @@
   if has_image_1 or has_image_2
     assign has_image = true
   endif
+
   if has_video_1 or has_video_2
     assign has_video = true
   endif
@@ -46,6 +59,13 @@
   if has_image or has_video
     assign has_media = true
   endif
+
+  if has_mobile_image_1 or has_mobile_video_1
+    assign media_width_mobile = '1px'
+    assign widths = '300, 832, 1200, 1600, 1920, 2560, 3840'
+  endif
+
+  assign sizes = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
 
   assign alpha = section.settings.overlay_color.alpha
   assign is_transparent = true
@@ -61,6 +81,10 @@
 %}
 
 {% capture media %}
+  {% assign classes = 'hero__image' %}
+  {% if has_mobile_image_1 %}
+    {% assign classes = classes | append: ' hidden--mobile' %}
+  {% endif %}
   {%- if has_image_1 -%}
     {% assign media_count = media_count | plus: 1 %}
     {{
@@ -71,14 +95,37 @@
         widths: widths,
         height: section.settings.image_1.height,
         alt: section.settings.image_1.alt,
-        class: 'hero__image',
+        class: classes,
         sizes: sizes,
         fetchpriority: fetch_priority
     }}
   {%- endif -%}
 
+  {% if has_mobile_image_1 %}
+    {{
+      section.settings.mobile_image_1
+      | image_url: width: 3840
+      | image_tag:
+        width: section.settings.mobile_image_1.width,
+        widths: widths,
+        height: section.settings.mobile_image_1.height,
+        alt: section.settings.mobile_image_1.alt,
+        class: 'hero__image hidden--desktop',
+        sizes: mobile_sizes,
+        fetchpriority: fetch_priority
+    }}
+  {% endif %}
+
   {%- if has_video_1 -%}
     {% assign media_count = media_count | plus: 1 %}
+    {% assign video_1_poster_classes = 'hero__video-poster' %}
+    {% assign video_1_classes = 'hero__video' %}
+
+    {% if has_mobile_video_1 %}
+      {% assign video_1_poster_classes = video_1_poster_classes | append: ' hidden--mobile' %}
+      {% assign video_1_classes = video_1_classes | append: ' hidden--mobile' %}
+    {% endif %}
+
     {%- if section.settings.video_1.preview_image -%}
       {% liquid
         assign fetch_priority_poster = false
@@ -94,7 +141,7 @@
           widths: widths,
           height: section.settings.video_1.preview_image.height,
           alt: section.settings.video_1.alt,
-          class: 'hero__video-poster',
+          class: video_1_poster_classes,
           sizes: sizes,
           fetchpriority: fetch_priority_poster
       }}
@@ -107,9 +154,42 @@
         loop: true,
         controls: false,
         muted: true,
-        class: 'hero__video'
+        class: video_1_classes
     }}
   {%- endif -%}
+
+  {% if has_mobile_video_1 %}
+    {%- if section.settings.mobile_video_1.preview_image -%}
+      {% liquid
+        assign fetch_priority_poster = false
+        if section.index == 1
+          assign fetch_priority_poster = 'high'
+        endif
+      %}
+      {{
+        section.settings.mobile_video_1.preview_image
+        | image_url: width: 3840
+        | image_tag:
+          width: section.settings.mobile_video_1.preview_image.width,
+          widths: widths,
+          height: section.settings.mobile_video_1.preview_image.height,
+          alt: section.settings.mobile_video_1.alt,
+          class: 'hero__video-poster hidden--desktop',
+          sizes: mobile_sizes,
+          fetchpriority: fetch_priority_poster
+      }}
+    {%- endif -%}
+    {{
+      section.settings.mobile_video_1
+      | video_tag:
+        poster: nil,
+        autoplay: true,
+        loop: true,
+        controls: false,
+        muted: true,
+        class: 'hero__video hidden--desktop'
+    }}
+  {% endif %}
 
   {%- if has_image_2 -%}
     {% assign media_count = media_count | plus: 1 %}
@@ -191,9 +271,15 @@
   {% endif %}
 {% endcapture %}
 
+{% capture additional_classes %}
+  {% if has_mobile_image_1 != blank or has_mobile_video_1 != blank %}
+    hero-mobile-min-height
+  {% endif %}
+{% endcapture %}
+
 <div
   id="Hero-{{ section.id }}"
-  class="hero color-{{ section.settings.color_scheme }}{% if section.blocks.size == 0 and section.settings.section_height == 'auto' %} hero--no-blocks-auto-height{% endif %}"
+  class="hero {{ additional_classes | strip }} color-{{ section.settings.color_scheme }}{% if section.blocks.size == 0 and section.settings.section_height == 'auto' %} hero--no-blocks-auto-height{% endif %}"
   style="
     --hero-border-style: {{ section.settings.border }};
     --hero-border-width: {{ section.settings.border_width }}px;
@@ -201,10 +287,22 @@
     --blur-opacity: {{ section.settings.reflection_opacity | divided_by: 100.0 }};
     {% if section.settings.section_height == 'custom' %}
       --hero-min-height: {{ section.settings.section_height_custom }}svh;
+    {% elsif section.settings.section_height == 'adapt_media_height' and has_media %}
+      {% if media_type_1 == 'image' %}
+        --hero-min-height: calc(100svw / {{ section.settings.image_1.aspect_ratio }});
+      {% elsif media_type_1 == 'video' %}
+        --hero-min-height: calc(100svw / {{ section.settings.video_1.aspect_ratio }});
+      {% endif %}   
     {% elsif section.settings.section_height == "full-screen" %}
        --hero-min-height: 100svh;
     {% else %}
       --hero-min-height: var(--section-height-{{ section.settings.section_height }});
+    {% endif %}
+
+    {% if has_mobile_image_1 != blank %}
+      --hero-mobile-min-height: calc(100svw / {{ section.settings.mobile_image_1.aspect_ratio }});
+    {% elsif has_mobile_video_1 != blank %}
+      --hero-mobile-min-height: calc(100svw / {{ section.settings.mobile_video_1.aspect_ratio }});
     {% endif %}
   "
   {% if request.visual_preview_mode %}
@@ -285,6 +383,13 @@
   .hero {
     position: relative;
     min-height: calc(var(--hero-min-height) - var(--hero-height-offset));
+
+    
+    &.hero-mobile-min-height {
+      @media screen and (max-width: 749px) {
+        min-height: var(--hero-mobile-min-height) !important;
+      }
+    }
   }
 
   .hero[data-shopify-visual-preview] {
@@ -501,10 +606,24 @@
       "visible_if": "{{ section.settings.media_type_1 == 'image' }}"
     },
     {
+      "type": "image_picker",
+      "id": "mobile_image_1",
+      "label": "Mobile Image",
+      "info": "(optional) section will adapt its height on mobile",
+      "visible_if": "{{ section.settings.media_type_1 == 'image' and section.settings.image_1 != blank }}"
+    },
+    {
       "type": "video",
       "id": "video_1",
       "label": "t:settings.video",
       "visible_if": "{{ section.settings.media_type_1 == 'video' }}"
+    },
+    {
+      "type": "video",
+      "id": "mobile_video_1",
+      "label": "Mobile Video",
+      "info": "(optional) section will adapt its height on mobile",
+      "visible_if": "{{ section.settings.media_type_1 == 'video' and section.settings.video_1 != blank }}"
     },
     {
       "type": "header",
@@ -710,6 +829,10 @@
       "id": "section_height",
       "label": "t:settings.height",
       "options": [
+        {
+          "value": "adapt_media_height",
+          "label": "Adapt to first media"
+        },
         {
           "value": "auto",
           "label": "t:options.auto"
