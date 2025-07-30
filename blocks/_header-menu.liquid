@@ -17,6 +17,9 @@
     assign title_case_style = ' --title-case: uppercase;'
   endif
 %}
+{% capture social_icons %}
+  {% content_for 'block', type: '_block-social-icons', id: 'header-social_icons' %}
+{% endcapture %}
 
 {% capture list_items %}
   {% content_for 'blocks' %}
@@ -35,7 +38,8 @@
         linklist: block.settings.menu,
         linklist_add_mobile: block.settings.mobile_additional_menu,
         data_header_drawer_type: 'mobile-drawer',
-        megamenu_cards: list_items
+        megamenu_cards: list_items,
+        social_icons: social_icons
       %}
     </div>
 
@@ -143,7 +147,7 @@
     display: flex;
     gap: var(--margin-3xs);
     overflow-x: auto;
-    padding-block-end: var(--padding-lg);
+    padding-block-end: var(--padding-xl);
   }
   .menu-drawer__featured-content-list {
     scrollbar-width: none;
@@ -179,11 +183,11 @@
   }
 
   .menu-drawer__featured-content-list-item:first-child {
-    margin-inline-start: var(--margin-xs);
+    margin-inline-start: var(--margin-sm);
   }
 
   .menu-drawer__featured-content-list-item:last-child {
-    margin-inline-end: var(--margin-xs);
+    margin-inline-end: var(--margin-sm);
   }
 
   /* Apply title case to drawer menu featured content */

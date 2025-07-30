@@ -81,6 +81,42 @@
                 "link": "shopify://products/isla"
               },
               "blocks": {}
+            },
+            "header-social_icons": {
+              "type": "_block-social-icons",
+              "static": true,
+              "settings": {},
+              "blocks": {
+                "social_link_ikjdMN": {
+                  "type": "_social-link",
+                  "name": "TikTok",
+                  "settings": {
+                    "link": "https://www.tiktok.com/@madewithlovebridal"
+                  },
+                  "blocks": {}
+                },
+                "social_link_8qExFq": {
+                  "type": "_social-link",
+                  "name": "Instagram ",
+                  "settings": {
+                    "link": "https://www.instagram.com/madewithlovebridal/"
+                  },
+                  "blocks": {}
+                },
+                "social_link_AgKNY6": {
+                  "type": "_social-link",
+                  "name": "Facebook",
+                  "settings": {
+                    "link": "https://www.facebook.com/madewithloveuniquebridalcollection"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "social_link_ikjdMN",
+                "social_link_8qExFq",
+                "social_link_AgKNY6"
+              ]
             }
           },
           "block_order": [
@@ -93,6 +129,21 @@
           "static": true,
           "settings": {},
           "blocks": {
+            "button_3tcyPf": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Book an Appointment",
+                "link": "shopify://pages/appointments",
+                "open_in_new_tab": false,
+                "style_class": "button-secondary",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            },
             "right-menu": {
               "type": "_header-menu",
               "static": true,
@@ -120,10 +171,21 @@
                 "drawer_accordion_expand_first": false,
                 "drawer_dividers": false
               },
-              "blocks": {}
+              "blocks": {
+                "header-social_icons": {
+                  "type": "_block-social-icons",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
             }
           },
-          "block_order": []
+          "block_order": [
+            "button_3tcyPf"
+          ]
         }
       },
       "custom_css": [],
@@ -134,9 +196,9 @@
         "show_search": true,
         "search_position": "right",
         "search_row": "top",
-        "show_country": true,
+        "show_country": false,
         "country_selector_style": true,
-        "show_language": true,
+        "show_language": false,
         "localization_font": "accent",
         "localization_font_size": "0.875rem",
         "localization_position": "right",

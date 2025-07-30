@@ -8,6 +8,7 @@
   @param {object} [section] - The section that can be used to provide settings
   @param {object} [linklist_add_mobile] - The right menu to render
   @param {object} megamenu_cards - The DOM content of the megamenu items.
+  @param {string} social_icons - The DOM content of the social icons.
 
   @example
   {% render 'header-drawer', linklist: section.settings.menu, class: 'header-drawer--mobile' %}
@@ -984,6 +985,7 @@
         class="menu-drawer__utility-links menu-drawer__animated-element"
         style="--menu-drawer-animation-index: {{ linklist.links.size }};"
       >
+        {{ social_icons }}
         {% liquid
           assign show_language = section.settings.show_language
           if localization.available_languages.size <= 1
@@ -1362,6 +1364,10 @@
     }
   }
 
+  .menu-drawer__menu-item--parent, .menu-drawer__menu-item--child {
+    padding: var(--padding-xs) 0 !important;
+  }
+
   .menu-drawer__menu--childlist summary.menu-drawer__menu-item {
     display: flex;
     width: 100%;
@@ -1387,7 +1393,7 @@
 
   .menu-drawer__menu-item {
     display: flex;
-    padding: var(--padding-xs) 0;
+    padding: var(--padding-xl) 0;
     position: relative;
     text-decoration: none;
     justify-content: space-between;
@@ -1481,7 +1487,8 @@
     width: fit-content;
     height: fit-content;
     margin: 0;
-    padding-block: var(--padding-lg);
+    /* padding-block: var(--padding-lg); */
+    padding-block: 0;
     padding-inline-start: var(--padding-xl);
     flex-shrink: 0;
   }
@@ -1493,6 +1500,11 @@
   .menu-drawer svg {
     width: var(--icon-size-xs);
     height: var(--icon-size-xs);
+  }
+
+  .menu-drawer .social-icons__icon {
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
   }
 
   .menu-drawer__submenu {
@@ -1517,7 +1529,9 @@
 
   .menu-drawer__utility-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding: 0;
     margin-block: auto var(--padding-sm);
     margin-inline-start: var(--padding-xl);

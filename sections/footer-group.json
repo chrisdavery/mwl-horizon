@@ -97,6 +97,7 @@
             "border_width": 1,
             "border_opacity": 100,
             "border_radius": 0,
+            "placeholder": "",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
@@ -142,6 +143,7 @@
                 "border_width": 1,
                 "border_opacity": 100,
                 "border_radius": 0,
+                "placeholder": "",
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
@@ -322,6 +324,7 @@
             "border_width": 1,
             "border_opacity": 100,
             "border_radius": 0,
+            "placeholder": "",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
@@ -367,6 +370,7 @@
                 "border_width": 1,
                 "border_opacity": 100,
                 "border_radius": 0,
+                "placeholder": "",
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
@@ -425,6 +429,7 @@
                 "border_width": 1,
                 "border_opacity": 100,
                 "border_radius": 0,
+                "placeholder": "",
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
@@ -470,6 +475,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -541,6 +547,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -612,6 +619,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -683,6 +691,7 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
+                    "placeholder": "",
                     "toggle_overlay": false,
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
@@ -784,7 +793,7 @@
                   "type": "_social-link",
                   "name": "Facebook",
                   "settings": {
-                    "link": "https://www.facebook.com/"
+                    "link": "https://www.facebook.com/madewithloveuniquebridalcollection"
                   },
                   "blocks": {}
                 },
@@ -792,7 +801,7 @@
                   "type": "_social-link",
                   "name": "Instagram ",
                   "settings": {
-                    "link": "https://www.instagram.com/"
+                    "link": "https://www.instagram.com/madewithlovebridal/"
                   },
                   "blocks": {}
                 },
@@ -800,23 +809,7 @@
                   "type": "_social-link",
                   "name": "TikTok",
                   "settings": {
-                    "link": "https://www.tiktok.com/"
-                  },
-                  "blocks": {}
-                },
-                "social_link_Qw9AXL": {
-                  "type": "_social-link",
-                  "name": "X / Twitter",
-                  "settings": {
-                    "link": "https://x.com/"
-                  },
-                  "blocks": {}
-                },
-                "social_link_aAH768": {
-                  "type": "_social-link",
-                  "name": "YouTube",
-                  "settings": {
-                    "link": "https://www.youtube.com/"
+                    "link": "https://www.tiktok.com/@madewithlovebridal"
                   },
                   "blocks": {}
                 }
@@ -824,9 +817,7 @@
               "block_order": [
                 "social_link_JnLXB6",
                 "social_link_9i9EqD",
-                "social_link_kd8UUt",
-                "social_link_Qw9AXL",
-                "social_link_aAH768"
+                "social_link_kd8UUt"
               ]
             }
           },
