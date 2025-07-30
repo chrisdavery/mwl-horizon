@@ -179,4 +179,7 @@ a.link:after {
   .layout-panel-flex--row:not(.mobile-column) .text-block {
     --max-width--display-tight: 0ch;
   }
+  .pills__pill {
+    padding: var(--padding-3xs) var(--padding-md);
+  }
 }
