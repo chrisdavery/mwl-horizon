@@ -10,6 +10,10 @@
   --sidebar-width: 25rem;
 }
 
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .link {
   letter-spacing: .2px;
 }
