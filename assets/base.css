@@ -725,6 +725,16 @@ body,
   color: var(--color, var(--color-foreground));
 }
 
+/* Ensure inputs with type presets maintain minimum 16px on mobile to prevent iOS zoom */
+@media screen and (max-width: 1200px) {
+  input.paragraph.paragraph,
+  input.paragraph.paragraph:not([type]),
+  textarea.paragraph.paragraph,
+  select.paragraph.paragraph {
+    font-size: max(1rem, var(--font-paragraph--size));
+  }
+}
+
 .paragraph > small {
   font-size: smaller;
 }
@@ -742,6 +752,14 @@ h1,
   letter-spacing: var(--font-h1--letter-spacing);
   text-transform: var(--font-h1--case);
   color: var(--color, var(--font-h1-color));
+}
+
+@media screen and (max-width: 1200px) {
+  input.h1.h1,
+  textarea.h1.h1,
+  select.h1.h1 {
+    font-size: max(1rem, var(--font-h1--size));
+  }
 }
 
 h2,

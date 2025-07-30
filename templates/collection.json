@@ -17,10 +17,10 @@
           "name": "Collection title",
           "settings": {
             "text": "<p>{{ closest.collection.title }}</p>",
-            "width": "100%",
+            "width": "fit-content",
             "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h4",
+            "alignment": "left",
+            "type_preset": "h2",
             "font": "var(--font-primary--family)",
             "font_size": "",
             "line_height": "normal",
@@ -96,20 +96,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 48,
         "padding-block-end": 48
-      }
-    },
-    "divider_PwRjPb": {
-      "type": "divider",
-      "name": "t:names.divider_section",
-      "settings": {
-        "color_scheme": "",
-        "section_width": "full-width",
-        "thickness": 1,
-        "corner_radius": "square",
-        "width_percent": 100,
-        "alignment_horizontal": "center",
-        "padding-block-start": 0,
-        "padding-block-end": 0
       }
     },
     "main": {
@@ -243,7 +229,6 @@
   },
   "order": [
     "section",
-    "divider_PwRjPb",
     "main"
   ]
 }
