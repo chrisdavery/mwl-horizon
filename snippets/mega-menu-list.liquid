@@ -81,6 +81,11 @@
             assign span_class = span_class | append: ' mega-menu__column--collection-image'
           endif
         endif
+
+        if megamenu_cards.size > 0
+          assign span_class = 'mega-menu__column mega-menu__column--span-' | append: 2
+        endif
+
         echo '<li class="' | append: span_class | append: '">'
       endif
     %}
@@ -211,7 +216,7 @@
       --menu-columns-desktop: {{ grid_columns_count_collection_images }};
       --menu-columns-tablet: {{ grid_columns_count_tablet }};
     {% elsif megamenu_cards.size > 0 %}
-      --menu-columns-desktop: 8;
+      --menu-columns-desktop: 12;
       --menu-columns-tablet: {{ grid_columns_count_tablet }};
     {% else %}
       --menu-columns-desktop: {{ grid_columns_count }};
@@ -224,7 +229,7 @@
       --menu-columns-desktop: {{ grid_columns_count_collection_images }};
       --menu-columns-tablet: {{ max_menu_columns_tablet }};
     {% elsif megamenu_cards.size > 0 %}
-      --menu-columns-desktop: 4;
+      --menu-columns-desktop: 7;
       --menu-columns-tablet: 2;
     {% else %}
       --menu-columns-desktop: {{ max_menu_columns }};
@@ -291,7 +296,7 @@
   {% when 'megamenu_cards' %}
         <span
       class="mega-menu__content"
-      style="--menu-content-columns-desktop: {{ 2 | times: megamenu_cards.size }}; --menu-content-columns-tablet: 2; --resource-card-corner-radius: {{ image_border_radius }}px;"
+      style="--menu-content-columns-desktop: 5; --menu-content-columns-tablet: 2; --resource-card-corner-radius: {{ image_border_radius }}px;"
     >
       <ul
         class="mega-menu__content-list mega-menu__content-list--collections list-unstyled"
