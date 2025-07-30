@@ -33,7 +33,7 @@
           "static": true,
           "settings": {
             "menu": "horizon-header-menu",
-            "mobile_additional_menu": "horizon-right-menu",
+            "right_menu": "horizon-right-menu",
             "menu_style": "megamenu_cards",
             "featured_products_aspect_ratio": "4 / 5",
             "featured_collections_aspect_ratio": "16 / 9",
@@ -117,21 +117,10 @@
                 "social_link_8qExFq",
                 "social_link_AgKNY6"
               ]
-            }
-          },
-          "block_order": [
-            "megamenu_card_item_hBn799",
-            "megamenu_card_item_9PWxUg"
-          ]
-        },
-        "right-menu": {
-          "type": "_right-menu",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "button_3tcyPf": {
-              "type": "button",
-              "name": "t:names.button",
+            },
+            "menu-button": {
+              "type": "_menu-button",
+              "static": true,
               "settings": {
                 "label": "Book an Appointment",
                 "link": "shopify://pages/appointments",
@@ -143,53 +132,16 @@
                 "custom_width_mobile": 100
               },
               "blocks": {}
-            },
-            "right-menu": {
-              "type": "_header-menu",
-              "static": true,
-              "settings": {
-                "menu": "horizon-right-menu",
-                "mobile_additional_menu": "",
-                "menu_style": "text",
-                "featured_products_aspect_ratio": "4 / 5",
-                "featured_collections_aspect_ratio": "16 / 9",
-                "image_border_radius": 0,
-                "product_title_case": "default",
-                "collection_title_case": "default",
-                "color_scheme": "",
-                "menu_font_style": "regular",
-                "type_font_primary_link": "subheading",
-                "type_font_primary_size": "0.75rem",
-                "type_case_primary_link": "uppercase",
-                "type_font_secondary_link": "subheading",
-                "type_case_secondary_link": "uppercase",
-                "type_font_tertiary_link": "subheading",
-                "type_case_tertiary_link": "uppercase",
-                "navigation_bar": false,
-                "color_scheme_navigation_bar": "",
-                "drawer_accordion": false,
-                "drawer_accordion_expand_first": false,
-                "drawer_dividers": false
-              },
-              "blocks": {
-                "header-social_icons": {
-                  "type": "_block-social-icons",
-                  "disabled": true,
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
-                }
-              },
-              "block_order": []
             }
           },
           "block_order": [
-            "button_3tcyPf"
+            "megamenu_card_item_hBn799",
+            "megamenu_card_item_9PWxUg"
           ]
         }
       },
       "custom_css": [
-        ".menu-drawer__utility-links {background-color: rgb(248 246 239 / 1.0);}"
+        ".menu-drawer__utility-links {background-color: rgb(248 246 239 / 1);}"
       ],
       "settings": {
         "logo_position": "center",

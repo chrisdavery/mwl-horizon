@@ -21,6 +21,14 @@
   {% content_for 'block', type: '_block-social-icons', id: 'header-social_icons' %}
 {% endcapture %}
 
+{% capture menu_button_right_menu %}
+  {% content_for 'block', type: '_menu-button', id: 'menu-button', variant: 'right_menu' %}
+{% endcapture %}
+
+{% capture menu_button_drawer %}
+  {% content_for 'block', type: '_menu-button', id: 'menu-button', variant: 'drawer' %}
+{% endcapture %}
+
 {% capture list_items %}
   {% content_for 'blocks' %}
 {% endcapture %}
@@ -36,7 +44,8 @@
       {% render 'header-drawer',
         class: 'header__drawer--mobile',
         linklist: block.settings.menu,
-        linklist_add_mobile: block.settings.mobile_additional_menu,
+        linklist_add_mobile: block.settings.right_menu,
+        menu_button: menu_button_drawer,
         data_header_drawer_type: 'mobile-drawer',
         megamenu_cards: list_items,
         social_icons: social_icons
@@ -72,6 +81,30 @@
         </div>
       </div>
     {% endif %}
+  {% when 'right_menu' %}
+    <div class="right-menu hidden--mobile">
+        <div class="flex right-menu-row">
+            <div>
+              <header-menu
+                ref="headerMenu"
+                class="header-menu mobile:hidden"
+                data-animation-delay="{{ animation_speed }}"
+                {{ block.shopify_attributes }}
+                style="--submenu-animation-speed: {{ animation_speed }}ms;{{ title_case_style }}"
+              >
+                <div class="header-menu__inner">
+                  {%- render 'header-menu',
+                    linklist: block.settings.right_menu,
+                    megamenu_cards: list_items, block_id: block.id %}
+                </div>
+              </header-menu>
+            </div>
+            <div>
+              {{ menu_button_right_menu }}
+            </div>
+        </div>
+    </div>
+
   {% else %}
     <header-menu
       ref="headerMenu"
@@ -81,7 +114,9 @@
       style="--submenu-animation-speed: {{ animation_speed }}ms;{{ title_case_style }}"
     >
       <div class="header-menu__inner">
-        {%- render 'header-menu', megamenu_cards: list_items, block_id: block.id %}
+        {%- render 'header-menu',
+          linklist: block.settings.menu,
+          megamenu_cards: list_items, block_id: block.id %}
       </div>
 
       <script
@@ -318,6 +353,25 @@
     transition: height var(--submenu-animation-speed) var(--ease-out-cubic),
       opacity var(--animation-speed-slow) var(--ease-out-cubic) var(--animation-speed-fast);
     z-index: calc(var(--layer-header-menu) - 1);
+  }
+
+  /* right menu */
+  .right-menu-row {
+    gap: 0 var(--gap-xl);
+    align-items: center;
+  }
+  .right-menu a.size-style {
+    --button-padding-inline: 16px;
+    --button-padding-block: 12px;
+  }
+
+  .right-menu-row .button-secondary {
+    --color-secondary-button-text: var(--color-foreground);
+    --color-secondary-button-border: var(--color-foreground);
+    font-size: 0.75rem;
+  }
+  .right-menu-row .button-secondary:hover {
+    --button-border-color: var(--color-foreground);
   }
 
   /** mega menu **/
@@ -819,9 +873,8 @@
     },
     {
       "type": "link_list",
-      "id": "mobile_additional_menu",
-      "label": "Mobile additional menu",
-      "info": "this setting is for appending right menu on mobile",
+      "id": "right_menu",
+      "label": "Right menu",
       "visible_if": "{{ block.settings.menu != blank }}"
     },
     {

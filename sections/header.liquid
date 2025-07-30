@@ -52,7 +52,7 @@
   endcapture
 
   capture mobile_menu
-    content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'mobile', right_menu: right_menu
+    content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'mobile'
   endcapture
 
   capture navigation_bar
@@ -64,7 +64,7 @@
   endcapture
 
   capture right_menu
-    content_for 'block', type: '_right-menu', id: 'right-menu', variant: 'desktop'
+    content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'right_menu'
   endcapture
 
   if shop.customer_accounts_enabled

@@ -14,11 +14,6 @@
   letter-spacing: .2px;
 }
 
-.right-menu a.size-style {
-  --button-padding-inline: 16px;
-  --button-padding-block: 12px;
-}
-
 a.link {
   position: relative;
 }
@@ -143,11 +138,6 @@ a.link:after {
 
 .group-block:hover .background-image-container img, .group-block-content:hover .image-block img, .megamenu-card:hover .megamenu-card__media img {
   transform: scale(1.03); 
-}
-
-.right-menu-row {
-  gap: 0 var(--gap-xl);
-  align-items: center;
 }
 
 @media (min-width: 750px) {

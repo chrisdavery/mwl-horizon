@@ -23,7 +23,7 @@
 %}
 
 {% capture children %}
-  {% for link in block.settings.menu.links %}
+  {% for link in linklist.links %}
     {% assign link_text = '<!--@' | append: link.title | handleize | strip | handleize | append: '/split-->' %}
     {% liquid
       assign filtered_megamenu_cards = ''

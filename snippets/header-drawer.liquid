@@ -9,6 +9,7 @@
   @param {object} [linklist_add_mobile] - The right menu to render
   @param {object} megamenu_cards - The DOM content of the megamenu items.
   @param {string} social_icons - The DOM content of the social icons.
+  @param {string} menu_button - The DOM content of the button.
 
   @example
   {% render 'header-drawer', linklist: section.settings.menu, class: 'header-drawer--mobile' %}
@@ -980,6 +981,7 @@
             {%- endfor -%}
           {% endif %}
         </ul>
+        {{ menu_button }}
       </nav>
       <div
         class="menu-drawer__utility-links menu-drawer__animated-element"
