@@ -126,9 +126,10 @@
                 "link": "shopify://pages/appointments",
                 "open_in_new_tab": false,
                 "style_class": "button-secondary",
+                "drawer_style_class": "button",
                 "width": "fit-content",
                 "custom_width": 100,
-                "width_mobile": "fit-content",
+                "width_mobile": "custom",
                 "custom_width_mobile": 100
               },
               "blocks": {}

@@ -27,11 +27,6 @@ a.link:after {
   bottom: -0.2rem;
 }
 
-
-.header .cart-bubble__text-count {
-  color: rgb(255,255,255);
-}
-
 .header-actions__cart-icon .cart-bubble__text, .cart-drawer__heading .cart-bubble__text {
   font-family: var(--font-heading--family) !important;
   font-weight: var(--font-heading--weight) !important;
@@ -124,9 +119,6 @@ a.link:after {
   mask: unset !important;
 }
 
-.cart-bubble__background {
-  background-color: #B7998E !important;
-}
 
 .image-block,.megamenu-card__media {
   overflow: hidden;

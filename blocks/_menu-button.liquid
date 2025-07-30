@@ -14,6 +14,7 @@
             href="{{ block.settings.link }}"
         {% endif %}
         class="
+            menu-button
             size-style
             {{ block.settings.style_class }}
             {{ block.settings.style_class }}--{{ block.id }}
@@ -28,30 +29,57 @@
         {{ block.settings.label }}
         </a>
     {% when 'drawer' %}
-        <a
-        {% if block.settings.link == blank %}
-            role="link"
-            aria-disabled="true"
-        {% else %}
-            href="{{ block.settings.link }}"
-        {% endif %}
-        class="
-            size-style
-            {{ block.settings.drawer_style_class }}
-            {{ block.settings.drawer_style_class }}--{{ block.id }}
-        "
-        style="{% render 'size-style', settings: block.settings %}"
-        {%- if block.settings.open_in_new_tab -%}
-            target="_blank"
-            rel="noopener noreferrer"
-        {%- endif -%}
-        {{ block.shopify_attributes }}
-        >
-        {{ block.settings.label }}
-        </a>
+        <div class="menu-drawer__button">
+            <a
+            {% if block.settings.link == blank %}
+                role="link"
+                aria-disabled="true"
+            {% else %}
+                href="{{ block.settings.link }}"
+            {% endif %}
+            class="
+                menu-button
+                size-style
+                {{ block.settings.drawer_style_class }}
+                {{ block.settings.drawer_style_class }}--{{ block.id }}
+            "
+            style="{% render 'size-style', settings: block.settings %}"
+            {%- if block.settings.open_in_new_tab -%}
+                target="_blank"
+                rel="noopener noreferrer"
+            {%- endif -%}
+            {{ block.shopify_attributes }}
+            >
+            {{ block.settings.label }}
+            </a>
+        </div>
 {% endcase %}
 
 {% stylesheet %}
+    .menu-button {
+        --button-padding-inline: 16px;
+        --button-padding-block: 12px;
+    }
+    .menu-button {
+        &:not(.button-secondary) {
+            color: var(--button-background-color);
+            background-color: #e5e5e5;
+        }
+    }
+    .menu-button {
+        --color-secondary-button-text: var(--color-foreground);
+        --color-secondary-button-border: var(--color-foreground);
+        font-size: 0.75rem;
+    }
+  
+    .menu-button.button-secondary:hover {
+        --button-border-color: var(--color-foreground);
+    }
+
+    .menu-drawer__button {
+        padding: var(--padding-xs) var(--drawer-padding) var(--padding-xl);
+    }
+
   .link {
     text-decoration: none;
     text-decoration-color: currentcolor;
