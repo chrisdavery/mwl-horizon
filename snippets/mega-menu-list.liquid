@@ -81,6 +81,11 @@
             assign span_class = span_class | append: ' mega-menu__column--collection-image'
           endif
         endif
+
+        if parent_link.links.size == 1 and megamenu_cards.size > 0
+          assign span_class = 'mega-menu__column mega-menu__column--span-' | append: 2
+        endif
+        
         echo '<li class="' | append: span_class | append: '">'
       endif
     %}
@@ -203,6 +208,19 @@
     assign max_featured_collections_tablet = 1
     assign max_menu_columns_tablet = max_menu_columns_tablet | minus: max_collection_columns_tablet
   endif
+
+  if megamenu_cards.size > 0
+    assign grid_columns_count = 8
+    assign max_featured_cards = 4
+    assign max_featured_cards_tablet = 2
+    assign grid_columns_count_links = 4
+
+    if parent_link.links.size == 1
+      assign grid_columns_count = 12
+      assign max_featured_cards = 5
+      assign grid_columns_count_links = 7
+    endif
+  endif
 %}
 
 {% style %}
@@ -211,7 +229,7 @@
       --menu-columns-desktop: {{ grid_columns_count_collection_images }};
       --menu-columns-tablet: {{ grid_columns_count_tablet }};
     {% elsif megamenu_cards.size > 0 %}
-      --menu-columns-desktop: 8;
+      --menu-columns-desktop: {{ grid_columns_count }};
       --menu-columns-tablet: {{ grid_columns_count_tablet }};
     {% else %}
       --menu-columns-desktop: {{ grid_columns_count }};
@@ -224,8 +242,8 @@
       --menu-columns-desktop: {{ grid_columns_count_collection_images }};
       --menu-columns-tablet: {{ max_menu_columns_tablet }};
     {% elsif megamenu_cards.size > 0 %}
-      --menu-columns-desktop: 4;
-      --menu-columns-tablet: 2;
+      --menu-columns-desktop: {{ grid_columns_count_links }};
+      --menu-columns-tablet: {{ max_featured_cards_tablet }};
     {% else %}
       --menu-columns-desktop: {{ max_menu_columns }};
       --menu-columns-tablet: {{ max_menu_columns_tablet }};
@@ -289,13 +307,13 @@
       </ul>
     </span>
   {% when 'megamenu_cards' %}
-        <span
+    <span
       class="mega-menu__content"
-      style="--menu-content-columns-desktop: {{ 2 | times: megamenu_cards.size }}; --menu-content-columns-tablet: 2; --resource-card-corner-radius: {{ image_border_radius }}px;"
+      style="--menu-content-columns-desktop: {{ max_featured_cards }}; --menu-content-columns-tablet:  2; --resource-card-corner-radius: {{ image_border_radius }}px;"
     >
       <ul
         class="mega-menu__content-list mega-menu__content-list--collections list-unstyled"
-        style="--menu-content-columns-desktop: {{ megamenu_cards.size }}; --menu-content-columns-tablet: 2;"
+        style="--menu-content-columns-desktop: 2; --menu-content-columns-tablet: {{ max_featured_cards_tablet }};"
       >
         {% for item in megamenu_cards %}
           <li class="mega-menu__content-list-item {% if forloop.index > 2 %} mega-menu__content-list-item--hidden-tablet{% endif %}">
