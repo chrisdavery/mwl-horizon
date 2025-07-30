@@ -20,25 +20,25 @@
     # Hardcoded values for product card size when width set to 'centered'
     case section.settings.product_card_size
       when 'small'
-        assign product_card_size = '165px'
+        assign product_card_size = '5'
       when 'medium'
-        assign product_card_size = '250px'
+        assign product_card_size = '4'
       when 'large'
-        assign product_card_size = '340px'
+        assign product_card_size = '3'
       when 'extra-large'
-        assign product_card_size = '480px'
+        assign product_card_size = '2'
     endcase
   else
     # Hardcoded values for product card size when width set to 'full-width'
     case section.settings.product_card_size
       when 'small'
-        assign product_card_size = '180px'
+        assign product_card_size = '5'
       when 'medium'
-        assign product_card_size = '260px'
+        assign product_card_size = '4'
       when 'large'
-        assign product_card_size = '365px'
+        assign product_card_size = '3'
       when 'extra-large'
-        assign product_card_size = '530px'
+        assign product_card_size = '2'
     endcase
   endif
   echo product_card_size
