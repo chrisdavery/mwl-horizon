@@ -108,6 +108,136 @@
               },
               "blocks": {}
             },
+            "megamenu_card_item_RAQUW7": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Accessories",
+                "image": "shopify://shop_images/Untitled_design_3739612b-517c-40be-99bf-13dd17c61e06.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Explore New Releases",
+                "link": "shopify://collections/new-releases"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_bNFBht": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Accessories",
+                "image": "shopify://shop_images/MWL_Boutique_Nav.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Visit A Boutique",
+                "link": "shopify://pages/appointments"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_tbFFLc": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Find Us",
+                "image": "shopify://shop_images/Visit_A_Boutique_MWL_Bridal.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Visit A Boutique",
+                "link": "shopify://pages/appointments"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_nrEncG": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Find Us",
+                "image": "shopify://shop_images/MWL_Find_A_Retailer.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Visit A Boutique",
+                "link": "shopify://pages/store-locator"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_RkcaAP": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Appointments",
+                "image": "shopify://shop_images/MWL_New_Releases.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Explore New Releases",
+                "link": "shopify://collections/new-releases"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_mL4XMD": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Appointments",
+                "image": "shopify://shop_images/our_process.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Our Process",
+                "link": "shopify://pages/our-process"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_fpU9XU": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Cleaning Service",
+                "image": "shopify://shop_images/about_us.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Our Story",
+                "link": "shopify://pages/about-us"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_97Hybm": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Cleaning Service",
+                "image": "shopify://shop_images/New_About_Us.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Contact Us",
+                "link": "shopify://pages/contact"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_Vn7rLy": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Our World",
+                "image": "shopify://shop_images/meet_our_designer.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Meet Our Designer",
+                "link": "shopify://blogs/all/in-conversation-with-carla-jenkins"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_aKHbfH": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Our World",
+                "image": "shopify://shop_images/New_About_Us.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Contact Us",
+                "link": "shopify://pages/contact"
+              },
+              "blocks": {}
+            },
             "header-social_icons": {
               "type": "_block-social-icons",
               "static": true,
@@ -165,7 +295,17 @@
             "megamenu_card_item_hBn799",
             "megamenu_card_item_9PWxUg",
             "megamenu_card_item_rdNF3W",
-            "megamenu_card_item_wV3yAw"
+            "megamenu_card_item_wV3yAw",
+            "megamenu_card_item_RAQUW7",
+            "megamenu_card_item_bNFBht",
+            "megamenu_card_item_tbFFLc",
+            "megamenu_card_item_nrEncG",
+            "megamenu_card_item_RkcaAP",
+            "megamenu_card_item_mL4XMD",
+            "megamenu_card_item_fpU9XU",
+            "megamenu_card_item_97Hybm",
+            "megamenu_card_item_Vn7rLy",
+            "megamenu_card_item_aKHbfH"
           ]
         }
       },
