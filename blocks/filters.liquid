@@ -945,13 +945,19 @@
     color: var(--color-foreground);
     cursor: pointer;
     font-family: var(--font-heading--family);
-    font-size: var(--font-size--sm);
+    font-size: var(--font-size--xs);
     font-weight: var(--font-heading--weight);
     text-transform: uppercase;
-    
+
     @media screen and (min-width: 750px) {
       margin-inline-end: var(--margin-2xs);
     }
+  }
+
+  .facets__clear-all,
+  .clear-filter {
+    font-size: var(--font-size--xs);
+    text-transform: uppercase;
   }
 
   /* Products count */
