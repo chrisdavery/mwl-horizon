@@ -132,6 +132,11 @@ a.link:after {
   transform: scale(1.03); 
 }
 
+.checkbox {
+  --checkbox-size: 16px;
+  --checkbox-border-radius: 0px;
+}
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
