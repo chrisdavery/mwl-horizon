@@ -82,6 +82,32 @@
               },
               "blocks": {}
             },
+            "megamenu_card_item_rdNF3W": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Dresses",
+                "image": "shopify://shop_images/MWL_Appointment_Booking.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Book An Appointment",
+                "link": "shopify://pages/appointments"
+              },
+              "blocks": {}
+            },
+            "megamenu_card_item_wV3yAw": {
+              "type": "_megamenu-card-item",
+              "name": "Megamenu Card Item",
+              "settings": {
+                "assigned_to": "Dresses",
+                "image": "shopify://shop_images/our_process_baafdd7b-ab02-476e-b705-90f26355a19b.png",
+                "aspect_ratio": "1 / 1",
+                "overlay": false,
+                "title": "Our Process",
+                "link": "shopify://pages/our-process"
+              },
+              "blocks": {}
+            },
             "header-social_icons": {
               "type": "_block-social-icons",
               "static": true,
@@ -137,7 +163,9 @@
           },
           "block_order": [
             "megamenu_card_item_hBn799",
-            "megamenu_card_item_9PWxUg"
+            "megamenu_card_item_9PWxUg",
+            "megamenu_card_item_rdNF3W",
+            "megamenu_card_item_wV3yAw"
           ]
         }
       },

@@ -10,6 +10,8 @@
   @param {object} megamenu_cards - The DOM content of the megamenu items.
   @param {string} social_icons - The DOM content of the social icons.
   @param {string} menu_button - The DOM content of the button.
+  @param {object} filtered_megamenu_cards - The DOM content of the filtered megamenu items.
+  @param {object} megamenu_cards_array - The DOM content of the megamenu array.
 
   @example
   {% render 'header-drawer', linklist: section.settings.menu, class: 'header-drawer--mobile' %}
@@ -613,19 +615,20 @@
                             assign collection_linklist = link.links | where: 'type', 'collection_link' | first
                             assign featured_products = collection_linklist.object.products
                           endif
-                          
-                          assign link_text = '<!--@' | append: link.title | handleize | strip | handleize | append: '/split-->'
-                          assign filtered_megamenu_cards = ''
-
-                          for item in megamenu_cards
-                            if item contains link_text
-                              assign filtered_megamenu_cards = filtered_megamenu_cards | append: item
-                            endif
-                          endfor
-                          assign megamenu_cards = filtered_megamenu_cards | strip | split: '<!--@list/split-->'
                         -%}
+                        {% capture link_text %}<!--@{{ link.title | handleize | strip | handleize }}/split-->{% endcapture %}
+                        {% assign link_text = link_text | strip %}
+                        {% assign megamenu_cards_array = megamenu_cards | strip | remove_last: '<!--@list/split-->' | split: '<!--@list/split-->' %}
+                        {% assign filtered_megamenu_cards = '' %}
 
-                        {% if featured_collections.size > 0 or featured_products.size > 0 or megamenu_cards.size > 0 %}
+                        {% for item in megamenu_cards_array %}
+                          {% if item contains link_text %}
+                            {% assign filtered_megamenu_cards = filtered_megamenu_cards | append: item %}
+                          {% endif %}
+                        {% endfor %}
+                        {% assign filtered_megamenu_cards = filtered_megamenu_cards | remove_last: link_text | split: link_text %}
+
+                        {% if featured_collections.size > 0 or featured_products.size > 0 or filtered_megamenu_cards.size > 0 %}
                           <div
                             class="menu-drawer__featured-content menu-drawer__featured-content--childlist"
                             style="--menu-drawer-animation-index: {{ linklist.links.size | plus: 1 }};"
@@ -642,8 +645,8 @@
                                     %}
                                   </li>
                                 {%- endfor -%}
-                              {% elsif megamenu_cards.size > 0 %}
-                                  {% for item in megamenu_cards %}
+                              {% elsif filtered_megamenu_cards.size > 0 %}
+                                  {% for item in filtered_megamenu_cards %}
                                     <li class="menu-drawer__featured-content-list-item menu-drawer__featured-content-list-item--card">
                                       {{ item }}
                                     </li>
@@ -928,7 +931,7 @@
                           endif
                         -%}
 
-                        {% if featured_collections.size > 0 or featured_products.size > 0 or megamenu_cards.size > 0 %}
+                        {% if featured_collections.size > 0 or featured_products.size > 0 or filtered_megamenu_cards.size > 0 %}
                           <div
                             class="menu-drawer__featured-content menu-drawer__featured-content--childlist"
                             style="--menu-drawer-animation-index: {{ linklist.links.size | plus: 1 }};"

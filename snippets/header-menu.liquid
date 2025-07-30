@@ -24,17 +24,17 @@
 
 {% capture children %}
   {% for link in linklist.links %}
-    {% assign link_text = '<!--@' | append: link.title | handleize | strip | handleize | append: '/split-->' %}
-    {% liquid
-      assign filtered_megamenu_cards = ''
-      for item in megamenu_cards
-        if item contains link_text
-          assign filtered_megamenu_cards = filtered_megamenu_cards | append: item
-        endif
-      endfor
-      assign megamenu_cards = filtered_megamenu_cards
-    %}
-    {% assign megamenu_cards = megamenu_cards | strip | split: '<!--@list/split-->' %}
+    {% capture link_text %}<!--@{{ link.title | handleize | strip | handleize }}/split-->{% endcapture %}
+    {% assign link_text = link_text | strip %}
+    {% assign megamenu_cards_array = megamenu_cards | strip | remove_last: '<!--@list/split-->' | split: '<!--@list/split-->' %}
+    {% assign filtered_megamenu_cards = '' %}
+
+    {% for item in megamenu_cards_array %}
+      {% if item contains link_text %}
+        {% assign filtered_megamenu_cards = filtered_megamenu_cards | append: item %}
+      {% endif %}
+    {% endfor %}
+    {% assign filtered_megamenu_cards = filtered_megamenu_cards | remove_last: link_text | split: link_text %}
 
     <li
       role="presentation"
@@ -70,7 +70,7 @@
               menu_content_type: menu_content_type,
               content_aspect_ratio: ratio,
               image_border_radius: image_border_radius,
-              megamenu_cards: megamenu_cards
+              megamenu_cards: filtered_megamenu_cards
             %}
           </div>
         </div>
