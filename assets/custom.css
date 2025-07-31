@@ -182,6 +182,12 @@ a.link:after {
   background-color: rgb(255 255 255 / 1.0);
 }
 
+.facets .breadcrumbs {
+  margin: 0 1rem 0 0;
+  flex: 1 auto;
+  white-space: nowrap;
+}
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
@@ -200,6 +206,10 @@ a.link:after {
 
   slideshow-component.mobile-enabled slideshow-arrows {
     display: none;
+  }
+
+  .facets--horizontal .facets__inputs-wrapper {
+    padding: var(--padding-lg) !important;
   }
 }
 

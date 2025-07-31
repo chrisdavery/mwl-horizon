@@ -133,6 +133,7 @@
       style="{% render 'spacing-style', settings: block.settings %}{% if block.settings.text_label_case == 'uppercase' %} --facet-label-transform: uppercase;{% endif %}"
       aria-label="{{ 'accessibility.filters' | t }}"
     >
+      {% render 'breadcrumbs' %}
       <facets-form-component
         class="facets__form-wrapper"
         section-id="{{ section.id }}"

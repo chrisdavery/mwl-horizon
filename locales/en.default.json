@@ -11,6 +11,7 @@
   "accessibility": {
     "all_rights": " All Rights Reserved.",
     "account": "Open account menu",
+    "home": "Home",
     "cart": "Cart",
     "cart_count": "Total items in cart",
     "close_dialog": "Close dialog",
