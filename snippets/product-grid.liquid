@@ -18,11 +18,8 @@
     {% case section.settings.layout_type %}
       {% when 'grid' %}
         .product-grid--{{ section.id }}:is(.product-grid--grid) {
-          {% if section.settings.product_grid_width == 'centered' %}
-            --product-grid-columns-desktop: repeat(auto-fill, minmax({{ product_card_size }}, 1fr));
-          {% else %}
+            /* --product-grid-columns-desktop: repeat(auto-fill, minmax({{ product_card_size }}, 1fr)); */
             --product-grid-columns-desktop: repeat({{ product_card_size }}, 1fr);
-          {% endif %}
         }
       {% when 'organic' %}
         {% assign large_span = 2 %}
@@ -58,7 +55,8 @@
     {% endcase %}
 
     .product-grid--{{ section.id }}:is([product-grid-view='zoom-out']) {
-      --product-grid-columns-desktop: repeat(auto-fill, minmax(6.25rem, 1fr));
+      /* --product-grid-columns-desktop: repeat(auto-fill, minmax(6.25rem, 1fr)); */
+      --product-grid-columns-desktop: repeat(2, 1fr);
     }
 
     .product-grid--{{ section.id }}:is([product-grid-view='zoom-out']) .product-grid-view-zoom-out--details {

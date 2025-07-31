@@ -1408,6 +1408,10 @@
         "id": "badge_position",
         "options": [
           {
+            "value": "bottom-right",
+            "label": "Bottom right"
+          },
+          {
             "value": "bottom-left",
             "label": "t:options.bottom_left"
           },
@@ -2132,6 +2136,12 @@
         "id": "product_card_carousel",
         "label": "t:settings.product_card_carousel",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile_card_carousel",
+        "label": "Show carousel on mobile",
+        "default": false
       }
     ]
   },

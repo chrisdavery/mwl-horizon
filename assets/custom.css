@@ -8,6 +8,7 @@
   --font-body--weight: 500 !important;
   --drawer-width: 20rem !important;
   --sidebar-width: 25rem;
+  --badge-rectangle-padding-block: 0 !important;
 }
 
 summary {
