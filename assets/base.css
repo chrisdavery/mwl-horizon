@@ -1000,7 +1000,7 @@ ul[product-grid-view='zoom-out'] .card-gallery > img {
 .product-grid-view-zoom-out--details {
   display: none;
 }
-
+/* 
 .product-grid-view-zoom-out--details .h4,
 .product-grid-view-zoom-out--details span,
 .product-grid-view-zoom-out--details s {
@@ -1027,7 +1027,7 @@ ul[product-grid-view='zoom-out'] .card-gallery > img {
 .product-grid-view-zoom-out--details > span.h6 > *,
 .product-grid-view-zoom-out--details > div.h6 > * > * {
   line-height: 1.2;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   :root:active-view-transition-type(product-grid) {
