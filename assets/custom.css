@@ -102,10 +102,25 @@ a.link:after {
 
 .resource-card__title {
   font-family: var(--font-accent--family) !important;
+  font-size: var(--font-size--h5);
+}
+
+.resource-card__title.paragraph {
+  font-size: var(--font-size--h6);
 }
 
 .resource-card__content .price {
   font-family: var(--font-accent--family);
+  font-size: var(--font-size--h6);
+}
+
+.predictive-search-results__clear {
+  font-size: var(--font-size--h5);
+}
+
+.predictive-search__search-button {
+  padding: var(--padding-2xs) var(--padding-sm);
+  font-size: var(--font-size--h5);
 }
 
 .size-style[style*="--size-aspect-ratio"] {
