@@ -22,7 +22,8 @@
   {% capture card_size %}
     {% render 'util-product-grid-card-size' section: section %}
   {% endcapture %}
-  {% assign card_size = card_size | strip | replace: 'px', '' | plus: 0 %}
+  {% comment %} {% assign card_size = card_size | strip | replace: 'px', '' | plus: 0 %} {% endcomment %}
+  {% assign card_size = 365 %}
   {% capture sizes_attribute %}
     {% render 'util-autofill-img-size-attr' card_size: card_size, card_gap: section.settings.columns_gap_horizontal %}
   {% endcapture %}
