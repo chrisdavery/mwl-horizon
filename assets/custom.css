@@ -164,6 +164,18 @@ a.link:after {
   .page-width-wide, .page-width-normal, .page-width-narrow, .page-width-content {
     --page-margin: 24px;
   }
+  slideshow-component.mobile-enabled {
+    --cursor: pointer !important;
+    pointer-events: none;
+  }
+
+  slideshow-component.mobile-enabled slideshow-slides {
+    overflow: hidden !important;
+  }
+
+  slideshow-component.mobile-enabled slideshow-arrows {
+    display: none;
+  }
 }
 
 @media (max-width: 749px) {

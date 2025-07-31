@@ -194,17 +194,45 @@
     {% assign slideshow_attributes = 'data-generic-media-size="[generic_media_size]"'
       | replace: '[generic_media_size]', generic_media_size
     %}
-    {% if hover_behavior == 'none' or settings.product_card_carousel == false %}
+    {% liquid
+      assign carousel_settings = settings.product_card_carousel 
+      if settings.mobile_card_carousel == true
+        assign carousel_settings = settings.mobile_card_carousel 
+      endif
+    %}
+
+    {% if hover_behavior == 'none' or carousel_settings == false %}
       {% assign slideshow_attributes = slideshow_attributes | append: ' disabled="true"' %}
     {% endif %}
+
+    {% assign media_size = all_media.size | at_most: 4 %}
+
+    {% if settings.mobile_card_carousel == true %}
+      {% capture controls %}
+        {%- render 'slideshow-controls',
+          style: 'dots',
+          autoplay: false,
+          item_count: media_size,
+          show_arrows: false,
+          arrows_on_media: false,
+          controls_on_media: true,
+          pagination_position: 'center',
+          class: 'hidden--desktop'
+        -%}
+      {% endcapture %}
+    {% endif %}
+
     {% render 'slideshow',
       ref: 'slideshow',
       initial_slide: 0,
       slides: slides,
-      slide_count: all_media.size,
+      slide_count: media_size,
       show_arrows: show_arrows,
-      attributes: slideshow_attributes
+      mobile_carousel: settings.mobile_card_carousel,
+      attributes: slideshow_attributes,
+      controls: controls
     %}
+
   {% elsif product != blank and product.media.size == 0 %}
     <product-title class="product-card-gallery__title-placeholder">
       <span class="title-text">{{- product.title -}}</span>

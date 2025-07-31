@@ -81,6 +81,7 @@
     "currency_code_enabled_cart_items": false,
     "quick_add": false,
     "product_card_carousel": false,
+    "mobile_card_carousel": true,
     "product_corner_radius": 0,
     "card_corner_radius": 4,
     "card_title_case": "uppercase",

@@ -21,6 +21,7 @@
   @param {string} [arrows_position] - The position of the arrows, defaults to 'bottom'
   @param {string} [attributes] - Additional attributes to add to the slideshow component
   @param {boolean} [header] - The title of the slideshow
+  @param {boolean} [mobile_carousel] - Mobile carousel
 
   @example
   {% render 'slideshow', slides: slides, slide_count: collection.products.size, ref: 'mobileSlideshow' %}
@@ -28,6 +29,10 @@
 
 {% assign class = class | strip %}
 {% assign style = style | strip %}
+
+{% if mobile_carousel == true %}
+  {% assign class = class | append: ' mobile-enabled' %}
+{% endif %}
 
 <slideshow-component
   {% if ref != blank %}
