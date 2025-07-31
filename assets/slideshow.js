@@ -93,6 +93,8 @@ export class Slideshow extends Component {
 
     this.current = this.initialSlideIndex;
 
+    window.addEventListener('resize', this.#handleResize.bind(this));
+
     // Batch reads and writes to the DOM
     scheduler.schedule(() => {
       let visibleSlidesAmount = 0;
@@ -752,6 +754,19 @@ export class Slideshow extends Component {
     });
 
     return visibleSlides.length;
+  }
+
+  #handleResize() {
+    if (!this.classList.contains('mobile-enabled')) return;
+
+    if (window.innerWidth >= 750) {
+      const index = this.initialSlideIndex;
+      const slide = this.refs.slides?.[index];
+
+      if (slide) {
+        this.select(index, undefined, { animate: false });
+      }
+    }
   }
 }
 
