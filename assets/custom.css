@@ -157,6 +157,31 @@ a.link:after {
   --checkbox-border-radius: 0px;
 }
 
+.card-slider-controls {
+  min-height: unset !important;
+  mix-blend-mode: unset !important;
+}
+
+.card-slider-controls .slideshow-controls__dots {
+  margin-inline-start: 0;
+  padding: var(--padding-xs);
+  gap: var(--gap-2xs);
+}
+
+.card-slider-controls .slideshow-controls__dots button {
+  --size: 4px;
+}
+
+.card-slider-controls .slideshow-controls__dots button:after {
+  background-color: transparent;
+  border: .01rem solid rgb(255 255 255 / 1.0);
+  box-sizing: border-box;
+}
+
+.card-slider-controls .slideshow-controls__dots button[aria-selected=true]:after {
+  background-color: rgb(255 255 255 / 1.0);
+}
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
@@ -213,5 +238,8 @@ a.link:after {
   }
   .pills__pill {
     padding: var(--padding-3xs) var(--padding-md);
+  }
+  [style*="--gallery-aspect-ratio: 2 / 3;"] {
+    --gallery-aspect-ratio: 187 / 282 !important;
   }
 }

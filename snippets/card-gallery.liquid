@@ -217,7 +217,7 @@
           arrows_on_media: false,
           controls_on_media: true,
           pagination_position: 'center',
-          class: 'hidden--desktop'
+          class: 'hidden--desktop card-slider-controls'
         -%}
       {% endcapture %}
     {% endif %}
@@ -230,7 +230,8 @@
       show_arrows: show_arrows,
       mobile_carousel: settings.mobile_card_carousel,
       attributes: slideshow_attributes,
-      controls: controls
+      controls: controls,
+      infinite: true,
     %}
 
   {% elsif product != blank and product.media.size == 0 %}
