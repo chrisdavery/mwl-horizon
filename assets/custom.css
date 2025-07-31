@@ -65,7 +65,13 @@ a.link:after {
   margin-bottom: var(--margin-lg);
   padding-bottom: var(--margin-2xs) !important;
 }
-
+ .mega-menu__link--parent:hover {
+   color: var(--color-primary-hover) !important;
+ }
+ .mega-menu__link--parent:hover:after {
+  background: var(--color-primary-hover);
+ }
+ 
 .menu-list__submenu {
   --menu-parent-active-font-color: var(--color-primary-hover) !important;
 }
