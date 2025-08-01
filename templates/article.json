@@ -6,8 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
+ */{
   "sections": {
     "section": {
       "type": "main-blog-post",
@@ -31,6 +30,7 @@
             "color": "",
             "background": false,
             "background_color": "#00000026",
+            "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -40,7 +40,7 @@
         },
         "blog-post-details": {
           "type": "_blog-post-info-text",
-          "name": "Blog post details",
+          "name": "Details",
           "static": true,
           "settings": {
             "show_date": true,

@@ -57,9 +57,9 @@ export class AnchoredPopoverComponent extends Component {
     super.connectedCallback();
     const popover = /** @type {HTMLElement} */ (this.refs.popover);
     popover?.addEventListener('beforetoggle', (event) => {
+      const evt = /** @type {ToggleEvent} */ (event);
       this.#updatePosition();
-      // @ts-ignore - newState is part of ToggleEvent interface for popover events
-      window[event.newState === 'open' ? 'addEventListener' : 'removeEventListener']('resize', this.#resizeListener);
+      window[evt.newState === 'open' ? 'addEventListener' : 'removeEventListener']('resize', this.#resizeListener);
     });
     requestIdleCallback(() => {
       this.#updatePosition();

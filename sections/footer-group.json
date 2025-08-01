@@ -213,6 +213,9 @@
       "block_order": [
         "group_wbie3J"
       ],
+      "custom_css": [
+        "p > span {text-decoration-thickness: 1px;}"
+      ],
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",

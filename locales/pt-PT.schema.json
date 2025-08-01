@@ -171,7 +171,8 @@
     "large_logo": "Logótipo grande",
     "product_list_button": "Botão Ver tudo",
     "product_inventory": "Inventário de produtos",
-    "description": "Descrição"
+    "description": "Descrição",
+    "featured_image": "Imagem em destaque"
   },
   "settings": {
     "alignment": "Alinhamento",
@@ -500,7 +501,8 @@
     "media": "Conteúdo multimédia",
     "product_card_carousel": "Mostrar carrossel",
     "media_fit": "Ajuste do conteúdo multimédia",
-    "scroll_speed": "Deslocar para o próximo anúncio"
+    "scroll_speed": "Deslocar para o próximo anúncio",
+    "show_powered_by_shopify": "Mostrar \"Powered by Shopify\""
   },
   "options": {
     "adapt_to_image": "Adaptar à imagem",

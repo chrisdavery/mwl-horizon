@@ -511,6 +511,10 @@ p:empty {
   }
 }
 
+.contents {
+  display: contents;
+}
+
 .flex {
   display: flex;
   gap: var(--gap-md);
@@ -604,6 +608,10 @@ p:empty {
 
 .text-inherit {
   color: inherit;
+}
+
+.user-select-text {
+  user-select: text;
 }
 
 .justify-left {
@@ -775,6 +783,14 @@ h2,
   color: var(--color, var(--font-h2-color));
 }
 
+@media screen and (max-width: 1200px) {
+  input.h2.h2,
+  textarea.h2.h2,
+  select.h2.h2 {
+    font-size: max(1rem, var(--font-h2--size));
+  }
+}
+
 h3,
 .h3,
 .h3.h3,
@@ -787,6 +803,14 @@ h3,
   letter-spacing: var(--font-h3--letter-spacing);
   text-transform: var(--font-h3--case);
   color: var(--color, var(--font-h3-color));
+}
+
+@media screen and (max-width: 1200px) {
+  input.h3,
+  textarea.h3,
+  select.h3 {
+    font-size: max(1rem, var(--font-h3--size));
+  }
 }
 
 h4,
@@ -802,6 +826,14 @@ h4,
   color: var(--color, var(--font-h4-color));
 }
 
+@media screen and (max-width: 1200px) {
+  input.h4.h4,
+  textarea.h4.h4,
+  select.h4.h4 {
+    font-size: max(1rem, var(--font-h4--size));
+  }
+}
+
 h5,
 .h5.h5,
 .text-block.h5 > * {
@@ -815,6 +847,14 @@ h5,
   color: var(--color, var(--font-h5-color));
 }
 
+@media screen and (max-width: 1200px) {
+  input.h5.h5,
+  textarea.h5.h5,
+  select.h5.h5 {
+    font-size: max(1rem, var(--font-h5--size));
+  }
+}
+
 h6,
 .h6.h6,
 .text-block.h6 > * {
@@ -826,6 +866,14 @@ h6,
   letter-spacing: var(--font-h6--letter-spacing);
   text-transform: var(--font-h6--case);
   color: var(--color, var(--font-h6-color));
+}
+
+@media screen and (max-width: 1200px) {
+  input.h6.h6,
+  textarea.h6.h6,
+  select.h6.h6 {
+    font-size: max(1rem, var(--font-h6--size));
+  }
 }
 
 :first-child:is(.h1, .h2, .h3, .h4, .h5, .h6) {
@@ -1000,7 +1048,7 @@ ul[product-grid-view='zoom-out'] .card-gallery > img {
 .product-grid-view-zoom-out--details {
   display: none;
 }
-/* 
+
 .product-grid-view-zoom-out--details .h4,
 .product-grid-view-zoom-out--details span,
 .product-grid-view-zoom-out--details s {
@@ -1027,7 +1075,7 @@ ul[product-grid-view='zoom-out'] .card-gallery > img {
 .product-grid-view-zoom-out--details > span.h6 > *,
 .product-grid-view-zoom-out--details > div.h6 > * > * {
   line-height: 1.2;
-} */
+}
 
 @media (prefers-reduced-motion: no-preference) {
   :root:active-view-transition-type(product-grid) {
@@ -1488,8 +1536,24 @@ media-gallery {
   }
 }
 
+@media screen and (min-width: 750px) {
+  /* The desktop layout doesn't stretch vertically as it should in Safari */
+  :not(.dialog-zoomed-gallery) > .product-media-container {
+    height: var(--constrained-height, auto);
+  }
+
+  .quick-add-modal__content .product-media-container {
+    --constrained-height: auto;
+  }
+}
+
 media-gallery:where(.media-gallery--grid) .media-gallery__grid {
   display: none;
+}
+
+media-gallery.media-gallery--grid .media-gallery__grid .product-media-container {
+  /* Needed for safari to stretch to full grid height */
+  height: 100%;
 }
 
 .product-media :is(deferred-media, product-model) {
@@ -3503,6 +3567,25 @@ slideshow-component[autoplay] slideshow-controls {
   }
 }
 
+/* Slideshow control shape styles */
+.button-unstyled.slideshow-control.slideshow-control--shape-square,
+.button-unstyled.slideshow-control.slideshow-control--shape-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-primary-button-background);
+  color: var(--color-primary-button-text);
+}
+
+.button-unstyled.slideshow-control.slideshow-control--shape-circle {
+  border-radius: 50%;
+}
+
+.button-unstyled.slideshow-control.slideshow-control--shape-square {
+  border-radius: 0;
+}
+
 .slideshow-control .icon-caret {
   rotate: -90deg;
 }
@@ -3623,6 +3706,11 @@ slideshow-arrows {
     justify-content: space-between;
     align-items: center;
   }
+}
+
+slideshow-arrows:has(.slideshow-control--shape-square),
+slideshow-arrows:has(.slideshow-control--shape-circle) {
+  mix-blend-mode: normal;
 }
 
 slideshow-component[disabled='true'] slideshow-arrows {
@@ -4107,12 +4195,6 @@ text-component {
   }
 }
 
-/* These are sections with placeholders that we don't want to have appear on the storefront when empty */
-.shopify-section:has(.in-onboarding-state) {
-  /* stylelint-disable-next-line declaration-no-important */
-  display: none !important;
-}
-
 .product-card:hover,
 .collection-card:hover,
 .resource-card:hover,
@@ -4133,4 +4215,35 @@ text-component {
   z-index: auto;
   transform: none;
   box-shadow: none;
+}
+
+/* Prevent iOS zoom on input focus by ensuring minimum 16px font size on mobile */
+@media screen and (max-width: 1200px) {
+  input,
+  textarea,
+  select,
+  /* Higher specificity to override type preset classes like .paragraph, .h1, etc. */
+  .paragraph.paragraph input,
+  .paragraph.paragraph textarea,
+  .paragraph.paragraph select,
+  .h1.h1 input,
+  .h1.h1 textarea,
+  .h1.h1 select,
+  .h2.h2 input,
+  .h2.h2 textarea,
+  .h2.h2 select,
+  .h3.h3 input,
+  .h3.h3 textarea,
+  .h3.h3 select,
+  .h4.h4 input,
+  .h4.h4 textarea,
+  .h4.h4 select,
+  .h5.h5 input,
+  .h5.h5 textarea,
+  .h5.h5 select,
+  .h6.h6 input,
+  .h6.h6 textarea,
+  .h6.h6 select {
+    font-size: max(1rem, 100%);
+  }
 }
