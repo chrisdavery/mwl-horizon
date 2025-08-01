@@ -8,7 +8,25 @@
   endif
 %}
 
-{% render 'text', fallback_text: text, block: block %}
+{% if block.settings.enable_read_more == true %}
+  <script
+    src="{{ 'read-more.js' | asset_url }}"
+    type="module"
+    fetchpriority="low"
+  ></script>
+   <read-more class="product-short-description hidden" data-label="{{ 'content.read_more_description' | t }}" data-limit="200">
+      {% render 'text', fallback_text: text, block: block %}
+  </read-more>
+{% else %}
+  {% render 'text', fallback_text: text, block: block %}
+{% endif %}
+
+{% stylesheet %}
+  .read-more-desc {
+    text-decoration: underline;
+    text-decoration-thickness: .5px;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -20,6 +38,12 @@
       "id": "text",
       "label": "t:settings.text",
       "default": "t:html_defaults.share_information_about_your"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_read_more",
+      "label": "Enable read more",
+      "default": false
     },
     {
       "type": "header",
