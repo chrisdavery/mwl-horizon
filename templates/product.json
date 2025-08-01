@@ -301,7 +301,7 @@
         }
       },
       "custom_css": [
-        "@media screen and (min-width: 1200px) {.product-information--media-left {grid-template-columns: auto minmax(440px, 1fr) !important; } .product-information__media {width: 100%; }}"
+        "@media screen and (min-width: 1200px) {.product-information--media-left {grid-template-columns: auto 440px !important; } .product-information__media {width: 100%; }}"
       ],
       "settings": {
         "content_width": "content-center-aligned",
