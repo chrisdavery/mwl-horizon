@@ -1,0 +1,387 @@
+
+
+{%- doc -%}
+  Renders product recommendations.
+  {section.id} - identifies the parent section for the Section Rendering API
+
+  https://shopify.dev/docs/api/section-rendering-api
+{%- enddoc -%}
+
+{% liquid
+  assign block_items = block.settings.items_list
+
+  case block.settings.layout_type
+    when 'grid'
+      assign classes = 'resource-list--grid'
+      capture styles
+        echo '--resource-list-column-gap-desktop: ' | append: block.settings.columns_gap | append: 'px;'
+        echo '--resource-list-row-gap-desktop: ' | append: block.settings.rows_gap | append: 'px;'
+        echo '--resource-list-columns: repeat(' | append: block.settings.columns | append: ', 1fr);'
+        echo '--resource-list-columns-mobile: repeat(' | append: block.settings.mobile_columns | append: ', 1fr);'
+        echo '--column-count-mobile: ' | append: block.settings.mobile_columns | append: ';'
+      endcapture
+    when 'carousel'
+      assign classes = 'resource-list__carousel'
+      capture styles
+        echo '--resource-list-column-gap-desktop: ' | append: block.settings.columns_gap | append: 'px;'
+        echo '--column-count: ' | append: block.settings.columns | append: ';'
+        echo '--column-count-mobile: 1;'
+        echo '--mobile-card-size: ' | append: block.settings.mobile_card_size | append: ';'
+      endcapture
+  endcase
+%}
+
+{% comment %}
+  [data-section-id] {section.id} - used to fetch the product recommendations from the Section Rendering API
+{% endcomment %}
+
+<div
+  class="product-features-block"
+  data-section-id="{{ section.id }}"
+  data-testid="product-features-block"
+  {{ block.shopify_attributes }}
+>
+  <div
+    class="
+      color-{{ block.settings.color_scheme }}
+      block-resource-list
+      spacing-style
+      gap-style
+    "
+    style="
+      {%  render 'spacing-style', settings: block.settings %}
+      {%  render 'gap-style', value: block.settings.gap %}
+      {{ styles }}
+    "
+  >
+    <div class="section-resource-list__content">
+      {% content_for 'blocks' %}
+    </div>
+
+    {% capture list_items %}
+    {% for item in block_items %}
+        <div class="resource-list__item">
+            {% content_for 'block',
+              type: '_feature-card',
+              item: item,
+              id: 'static-feature-card'
+            %}
+        </div>
+        {% if block.settings.layout_type == 'carousel' or block.settings.carousel_on_mobile %}
+        {% unless forloop.last %}
+            <!--@list/split-->
+        {% endunless %}
+        {% endif %}
+    {% endfor %}
+    {% endcapture %}
+
+    {% liquid
+    # Create an array from the list items to be used in the carousel
+    assign slide_content = list_items | strip
+    assign slides = slide_content | split: '<!--@list/split-->'
+    %}
+
+    <div
+    class="
+        resource-list
+        {% if block.settings.carousel_on_mobile and block.settings.layout_type != 'carousel' %}
+        hidden--mobile
+        {% endif %}
+        {{ classes }}
+    "
+    {% if block.settings.layout_type == 'grid' %}
+        data-testid="resource-list-grid"
+    {% endif %}
+    >
+    {% case block.settings.layout_type %}
+        {% when 'grid' %}
+            {{ list_items }}
+        {% when 'carousel' %}
+        {% render 'resource-list-carousel',
+            ref: 'resourceListCarousel',
+            slides: slides,
+            slide_count: slides.size,
+            settings: block.settings
+        %}
+    {% endcase %}
+    </div>
+
+    {% if block.settings.carousel_on_mobile and block.settings.layout_type != 'carousel' %}
+    {% liquid
+        assign mobile_carousel_gap = block.settings.columns_gap
+    %}
+    <div
+        class="
+        resource-list
+        hidden--desktop
+        force-full-width
+        "
+        style="
+            --resource-list-column-gap-desktop: {{ mobile_carousel_gap }}px;
+            --column-count: {{ block.settings.columns }};
+            --column-count-mobile: 1;
+            --mobile-card-size: {{ block.settings.mobile_card_size }};
+        "
+    >
+        {% render 'resource-list-carousel',
+        ref: 'resourceListCarouselMobile',
+        slides: slides,
+        slide_count: slides.size,
+        settings: block.settings
+        %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% stylesheet %}
+    .product-features-block .resource-list--grid {
+        @media screen and (min-width: 750px) {
+            grid-template-columns: var(--resource-list-columns) !important;
+        }
+    }
+    .block-resource-list {
+        @media screen and (max-width: 749px) {
+            margin-inline-end: calc(-1 * var(--page-margin));
+        }
+    }
+    .resource-list__carousel slideshow-slides {
+        @media screen and (max-width: 749px) {
+            gap: 1px;
+        }
+    }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product Features",
+  "class": "product-features-wrapper",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+        "type": "metaobject_list",
+        "id": "items_list",
+        "label": "Features List",
+        "metaobject_type": "special_features",
+    },
+    {
+      "type": "header",
+      "content": "t:content.cards_layout"
+    },
+    {
+      "type": "select",
+      "id": "layout_type",
+      "label": "t:settings.layout_style",
+      "options": [
+        {
+          "value": "grid",
+          "label": "t:options.grid"
+        },
+        {
+          "value": "carousel",
+          "label": "t:options.carousel"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "checkbox",
+      "id": "carousel_on_mobile",
+      "label": "t:settings.carousel_on_mobile",
+      "default": false,
+      "visible_if": "{{ block.settings.layout_type != 'carousel' }}"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:settings.columns",
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "default": 4,
+      "visible_if": "{{ block.settings.layout_type == 'grid' or block.settings.layout_type == 'carousel' }}"
+    },
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "t:settings.mobile_columns",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:options.one_number"
+        },
+        {
+          "value": "2",
+          "label": "t:options.two_number"
+        }
+      ],
+      "default": "2",
+      "visible_if": "{{ block.settings.layout_type == 'grid' and block.settings.carousel_on_mobile == false }}"
+    },
+    {
+      "type": "select",
+      "id": "mobile_card_size",
+      "label": "t:settings.mobile_columns",
+      "options": [
+        {
+          "value": "60cqw",
+          "label": "t:options.one_number"
+        },
+        {
+          "value": "44cqw",
+          "label": "t:options.two_number"
+        }
+      ],
+      "default": "60cqw",
+      "visible_if": "{{ block.settings.layout_type == 'carousel' or block.settings.carousel_on_mobile == true }}"
+    },
+    {
+      "type": "range",
+      "id": "columns_gap",
+      "label": "t:settings.horizontal_gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16,
+      "visible_if": "{{ block.settings.layout_type == 'grid' or block.settings.layout_type == 'carousel' }}"
+    },
+    {
+      "type": "range",
+      "id": "rows_gap",
+      "label": "t:settings.vertical_gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16,
+      "visible_if": "{{ block.settings.layout_type == 'grid' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.carousel_navigation",
+      "visible_if": "{{ block.settings.layout_type == 'carousel' or block.settings.carousel_on_mobile == true }}"
+    },
+    {
+      "type": "select",
+      "id": "icons_style",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "arrow",
+          "label": "t:options.arrows"
+        },
+        {
+          "value": "chevron",
+          "label": "t:options.chevrons"
+        },
+        {
+          "value": "arrows_large",
+          "label": "t:options.arrows_large"
+        },
+        {
+          "value": "chevron_large",
+          "label": "t:options.chevron_large"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "arrow",
+      "visible_if": "{{ block.settings.layout_type == 'carousel' or block.settings.carousel_on_mobile == true }}"
+    },
+    {
+      "type": "select",
+      "id": "icons_shape",
+      "label": "t:settings.icon_background",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "circle",
+          "label": "t:options.circle"
+        },
+        {
+          "value": "square",
+          "label": "t:options.square"
+        }
+      ],
+      "default": "none",
+      "visible_if": "{{ block.settings.icons_style != 'none' and block.settings.layout_type == 'carousel' or block.settings.carousel_on_mobile == true }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Features",
+      "category": "t:categories.product",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Special Features</h5>"
+          }
+        },
+        "static-feature-card": {
+            "type": "_feature-card",
+            "static": true,
+        }
+      },
+      "block_order": ["heading"]
+    }
+  ]
+}
+{% endschema %}

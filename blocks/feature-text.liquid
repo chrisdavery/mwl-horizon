@@ -1,49 +1,16 @@
 
 
-{% liquid
-  assign product = block.settings.product
-  if request.visual_preview_mode and product == blank
-    assign product = collections.all.products.first
-    assign text = product.description
-  endif
-%}
-
-{% if block.settings.enable_read_more == true %}
-  <script
-    src="{{ 'read-more.js' | asset_url }}"
-    type="module"
-    fetchpriority="low"
-  ></script>
-   <read-more class="product-short-description hidden" data-more-label="{{ 'content.read_more_description' | t }}" data-less-label="{{ 'content.read_less_description' | t }}" data-limit="200">
-      {% render 'text', fallback_text: text, block: block %}
-  </read-more>
-{% else %}
-  {% render 'text', fallback_text: text, block: block %}
-{% endif %}
-
-{% stylesheet %}
-  .read-more-desc {
-    text-decoration: underline;
-    text-decoration-thickness: .5px;
-  }
-{% endstylesheet %}
+{% assign product_title = '<p>' | append: text | append: '</p>' %}
+{% render 'text', fallback_text: product_title, block: block %}
 
 {% schema %}
 {
-  "name": "t:names.text",
+  "name": "Feature title",
   "tag": null,
   "settings": [
     {
-      "type": "richtext",
-      "id": "text",
-      "label": "t:settings.text",
-      "default": "t:html_defaults.share_information_about_your"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_read_more",
-      "label": "Enable read more",
-      "default": false
+      "type": "paragraph",
+      "content": "t:content.resource_reference_product_title"
     },
     {
       "type": "header",
@@ -418,11 +385,8 @@
   ],
   "presets": [
     {
-      "name": "t:names.product_description",
-      "category": "t:categories.product",
-      "settings": {
-        "text": "{{ closest.product.description }}"
-      }
+      "name": "Feature title",
+      "category": "t:categories.product"
     }
   ]
 }

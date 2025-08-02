@@ -1,0 +1,164 @@
+{%- doc -%}
+  Display an image of a collection inside a collection card.
+  Intended for collection-card.liquid block.
+  @param {object} item_image - The object of the item image
+{%- enddoc -%}
+
+{% if block.settings.image_ratio == 'custom' %}
+  {% assign image_width = block.settings.feature_image_width | at_most: 100 %}
+  {% assign image_height = block.settings.feature_image_height %}
+{% endif %}
+
+{% liquid
+  assign ratio = 1
+  assign block_ratio = block.settings.image_ratio
+
+  if item_image and block_ratio == 'portrait'
+    assign ratio = 0.8
+  elsif item_image and block_ratio == 'adapt'
+    assign ratio = item_image.aspect_ratio
+  endif
+
+  if ratio == 0 or ratio == null
+    assign ratio = 1
+  endif
+
+  if block.settings.image_ratio == 'custom'
+    assign ratio = image_width | append: ' / ' | append: image_height
+  endif
+%}
+
+{% if item_image %}
+  <div
+    class="feature-image spacing-style feature-image-{{ block.id }}"
+    style="--ratio: {{ ratio }}; --image-width: {{ image_width }}%; {% render 'spacing-style', settings: block.settings %}"
+  >
+    {% liquid
+      assign media_width_desktop = 100 | divided_by: 2 | append: 'vw'
+      assign media_width_mobile = '100vw'
+      assign sizes = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
+      assign widths = '300, 450, 600, 750, 900, 1050, 1200, 1350, 1500, 1650, 1800, 1950, 2000, 2500, 3000, 3500, 4000, 5000'
+    %}
+
+    {{
+      item_image
+      | image_url: width: 1000
+      | image_tag: preload: true, class: 'feature-image__featured-image', widths: widths, sizes: sizes
+    }}
+  </div>
+{% endif %}
+
+{% stylesheet %}
+  .feature-image {
+    width: var(--image-width);
+  }
+
+  .feature-image .feature-image__featured-image {
+    aspect-ratio: var(--ratio);
+    object-fit: cover;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Feature Image",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:options.auto"
+        },
+        {
+          "value": "portrait",
+          "label": "t:options.portrait"
+        },
+        {
+          "value": "square",
+          "label": "t:options.square"
+        },
+        {
+          "value": "custom",
+          "label": "t:options.custom"
+        }
+      ],
+      "default": "square",
+      "label": "t:settings.aspect_ratio"
+    },
+    {
+      "type": "range",
+      "id": "feature_image_width",
+      "label": "t:settings.width",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100,
+      "visible_if": "{{ block.settings.image_ratio == 'custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "feature_image_height",
+      "label": "t:settings.height",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100,
+      "visible_if": "{{ block.settings.image_ratio == 'custom' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Image"
+    }
+  ]
+}
+{% endschema %}

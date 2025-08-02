@@ -1,0 +1,40 @@
+{%- doc -%}
+  This snippet is used to render a collection card.
+  To be used inside a block to inherit the block object settings.
+
+  @param {string} card_image - The image to display in the collection card
+  @param {string} children - The content to render inside the collection card
+  @param {object} block - The block object
+  @param {object} section - The section object
+
+  @example
+    {% render 'feature-card',
+    card_image: card_image,
+    children: children,
+    block: block,
+    section: section
+    %}
+{%- enddoc -%}
+
+<div
+    class="
+        feature-card
+        layout-panel-flex
+        layout-panel-flex--column
+        spacing-style
+        border-style
+        gap-style
+        {% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}
+    "
+    style="
+        {% render 'border-override', settings: block.settings %}
+        {% render 'spacing-style', settings: block.settings %}
+        {% render 'size-style', settings: block.settings %}
+    "
+  {{- block.shopify_attributes -}}
+>
+    {{ card_image }}
+    <div class="feature-card-content">
+        {{ children }}
+    </div>
+</div>
