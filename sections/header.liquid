@@ -325,6 +325,11 @@
     }
   }
 
+  .header[transparent] .header__row {
+    --border-bottom-width: 0px !important;
+    --border-bottom-width-mobile: 0px !important;
+  }
+
   :is(.header[transparent]:not([data-sticky-state='active']), .header[transparent='always'][data-sticky-state='active'])
     .header__row:not(
       :has(

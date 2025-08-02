@@ -11,6 +11,10 @@
   --badge-rectangle-padding-block: 0 !important;
 }
 
+a {
+  text-decoration-thickness: .05em;
+}
+
 summary {
   -webkit-tap-highlight-color: transparent;
 }
