@@ -6,6 +6,7 @@
   @param {number} slide_count - The number of slides to display in the carousel
   @param {object} settings - The block or sections settings from the parent block/section.
   @param {string} [slide_width_max] - The maximum width of the slides in the carousel.
+  @param {string} [slideshow_gutters] - the gutter positions to render. Set width with CSS variables --gutter-slide-width
 
   @example
   {% render 'resource-list-carousel', slides: slides, slide_count: slide_count, settings: block.settings %}
@@ -13,7 +14,9 @@
 
 {% liquid
   assign slideshow_ref = ref | default: 'resourceListCarousel'
-  if settings.section_width == 'page-width'
+  if slideshow_gutters != blank
+    assign slideshow_gutters = slideshow_gutters
+  elsif settings.section_width == 'page-width'
     assign slideshow_gutters = 'start end'
   else
     assign slideshow_gutters = null

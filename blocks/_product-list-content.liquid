@@ -4,7 +4,21 @@
   {%- content_for 'blocks' -%}
 {%- endcapture -%}
 
-{%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
+{% if section.settings.carousel_on_mobile and section.settings.layout_type != 'carousel' %}
+  <div class="flex hidden--desktop justify-between">
+    <div>
+      {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
+    </div>
+    <div>
+      {% render 'header-slideshow-arrows', section_id: section.id %}
+    </div>
+  </div>
+  <div class="hidden--mobile">
+    {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
+  </div>
+{% else %}
+  {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
+{% endif %}
 
 {% schema %}
 {

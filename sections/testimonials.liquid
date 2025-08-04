@@ -84,7 +84,8 @@
           slides: list_items_array,
           slide_count: max_items,
           settings: section.settings,
-          slide_width_max: '450px'
+          slide_width_max: '450px',
+          slideshow_gutters: 'center'
         %}
     {% endcase %}
   </div>
@@ -111,6 +112,7 @@
         ref: 'TestimonialCarouselMobile',
         slides: list_items_array,
         slide_count: max_items,
+        slideshow_gutters: 'center'
         settings: section.settings,
         slide_width_max: '100%'
       %}
@@ -123,6 +125,10 @@
   .section-testimonials .resource-list__carousel slideshow-arrows {
     padding-inline: 0;
   }
+  .section-testimonials button.slideshow-control.button-unstyled--transparent {
+    color: rgb(var(--color-foreground));
+  }
+
   @media screen and (max-width: 749px) {
     .section-testimonials .resource-list__carousel slideshow-slides {
       gap: 25px;

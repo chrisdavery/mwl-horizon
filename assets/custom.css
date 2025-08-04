@@ -15,17 +15,25 @@ a {
   text-decoration-thickness: .05em;
 }
 
+[style*="text-decoration:underline"] {
+  text-decoration-thickness: .05em !important;
+}
+
 summary {
   -webkit-tap-highlight-color: transparent;
 }
 
 .link {
   letter-spacing: .2px;
+  font-family: var(--font-heading--family);
+  font-weight: var(--font-heading--weight);
+  font-size: 0.875rem;
 }
 
 a.link {
   position: relative;
 }
+
 a.link:after {
   content: "";
   width: 100%;
@@ -34,6 +42,10 @@ a.link:after {
   display: block;
   position: absolute;
   bottom: -0.2rem;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .header-actions__cart-icon .cart-bubble__text, .cart-drawer__heading .cart-bubble__text {
@@ -233,6 +245,7 @@ slideshow-arrows {
 
 button.slideshow-control.button-unstyled--transparent {
   color: rgb(var(--color-foreground));
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (min-width: 750px) {
