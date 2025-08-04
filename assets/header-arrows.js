@@ -16,31 +16,33 @@ class HeaderArrows extends HTMLElement {
     this.slideshow = parentSection.querySelector('slideshow-component');
     if (!this.slideshow) return;
 
-    // Permanently disable built-in slideshow controls
+    // Permanently disable built-in controls
     this.disableBuiltInControls();
 
     // Initialize button states
     this.updateButtonStates();
 
     // Add click handlers
-    if (this.prevBtn) {
-      this.prevBtn.addEventListener('click', (e) => this.handlePrevClick(e));
-    }
-    if (this.nextBtn) {
-      this.nextBtn.addEventListener('click', (e) => this.handleNextClick(e));
-    }
+    this.prevBtn?.addEventListener('click', (e) => this.handlePrevClick(e));
+    this.nextBtn?.addEventListener('click', (e) => this.handleNextClick(e));
 
-    // Update buttons when slideshow changes
-    this.slideshow.addEventListener('slideshow-select', () => this.updateButtonStates());
+    // Listen to slideshow events
+    this.slideshow.addEventListener('slideshow-select', (e) => {
+      this.updateButtonStates();
+    });
+
+    // Also listen to scroll events in case slides change via dragging
+    this.slideshow.refs.scroller.addEventListener('scroll', () => {
+      this.updateButtonStates();
+    }, { passive: true });
   }
 
   disableBuiltInControls() {
-    // Disable and hide built-in controls permanently
     const builtInControls = this.slideshow.querySelectorAll('slideshow-arrows .slideshow-control');
     builtInControls.forEach(control => {
       control.setAttribute('disabled', '');
-      control.style.display = 'none'; // Hide them completely
-      control.style.pointerEvents = 'none'; // Make sure they can't be clicked
+      control.style.display = 'none';
+      control.style.pointerEvents = 'none';
     });
   }
 
@@ -51,7 +53,6 @@ class HeaderArrows extends HTMLElement {
     } else {
       this.slideshow.dispatchEvent(new CustomEvent('previous', { bubbles: true }));
     }
-    this.updateButtonStates();
   }
 
   handleNextClick(e) {
@@ -61,20 +62,23 @@ class HeaderArrows extends HTMLElement {
     } else {
       this.slideshow.dispatchEvent(new CustomEvent('next', { bubbles: true }));
     }
-    this.updateButtonStates();
   }
 
   updateButtonStates() {
     if (!this.slideshow) return;
 
-    // Disable "Previous" if on first slide (and not infinite)
+    // Use the slideshow's own properties to determine state
+    const isPrevDisabled = !this.slideshow.infinite && this.slideshow.atStart;
+    const isNextDisabled = !this.slideshow.infinite && this.slideshow.atEnd;
+
     if (this.prevBtn) {
-      this.prevBtn.disabled = !this.slideshow.infinite && this.slideshow.atStart;
+      this.prevBtn.disabled = isPrevDisabled;
+      this.prevBtn.toggleAttribute('aria-disabled', isPrevDisabled);
     }
 
-    // Disable "Next" if on last slide (and not infinite)
     if (this.nextBtn) {
-      this.nextBtn.disabled = !this.slideshow.infinite && this.slideshow.atEnd;
+      this.nextBtn.disabled = isNextDisabled;
+      this.nextBtn.toggleAttribute('aria-disabled', isNextDisabled);
     }
   }
 }
