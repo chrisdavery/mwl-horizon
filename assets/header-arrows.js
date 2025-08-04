@@ -41,8 +41,6 @@ class HeaderArrows extends HTMLElement {
     const builtInControls = this.slideshow.querySelectorAll('slideshow-arrows .slideshow-control');
     builtInControls.forEach(control => {
       control.setAttribute('disabled', '');
-      control.style.display = 'none';
-      control.style.pointerEvents = 'none';
     });
   }
 
