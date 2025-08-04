@@ -2183,12 +2183,12 @@
           "settings": {
             "content_direction": "row",
             "vertical_on_mobile": true,
-            "horizontal_alignment": "space-between",
+            "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": true,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 8,
+            "gap": 16,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -2325,6 +2325,9 @@
         "multicolumn_card_yQ9znL",
         "multicolumn_card_T94hfF",
         "multicolumn_card_JLxhXJ"
+      ],
+      "custom_css": [
+        "@media (max-width: 749px) {.section-resource-list__header .group-block-content {--gap: 8px !important; }}"
       ],
       "name": "Multicolumn",
       "settings": {

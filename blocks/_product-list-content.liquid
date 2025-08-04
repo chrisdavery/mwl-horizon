@@ -16,6 +16,15 @@
   <div class="hidden--mobile">
     {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
   </div>
+{% elsif section.settings.layout_type == 'carousel' %}
+  <div class="flex justify-between">
+    <div>
+      {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
+    </div>
+    <div>
+      {% render 'header-slideshow-arrows', section_id: section.id %}
+    </div>
+  </div>
 {% else %}
   {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
 {% endif %}
