@@ -1,0 +1,199 @@
+{% if block.settings.items_list.size == 0 %}
+  {% break %}
+{% endif %}
+
+<accordion-custom
+  {% if block.settings.open_by_default %}
+    open-by-default-on-desktop
+    open-by-default-on-mobile
+  {% endif %}
+>
+  <details
+    class="details details-reviews"
+    data-testid="accordion-details"
+    {{ block.shopify_attributes }}
+  >
+    <summary class="details__header">
+      <div class="title--aligned-center">
+        <div>
+          {{ block.settings.heading }}
+        </div>
+        <div>
+          <div class="stars-tab-title flex">
+            {% for item in (1..5) %}
+              <div>
+                {{ 'icon-star.svg' | inline_asset_content }}
+              </div>
+            {% endfor %}
+            <div>
+              {% liquid
+                assign map_star = block.settings.items_list | map: 'star'
+                assign total = map_star | sum
+                assign count = map_star | size
+                assign average = total | divided_by: count | times: 1.0
+              %}
+              <span class="average-stars">{{ average }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="svg-wrapper icon-caret icon-animated">
+        {{- 'icon-caret.svg' | inline_asset_content -}}
+      </span>
+      <span class="svg-wrapper icon-plus">
+        {{- 'icon-plus.svg' | inline_asset_content -}}
+      </span>
+    </summary>
+
+    <div class="details-content">
+      {% for item in block.settings.items_list %}
+        <div class="review-box-item layout-panel-flex layout-panel-flex--column" style="--gap: var(--gap-lg);">
+          <div class="stars-tab-title flex">
+            {% for item in (1..5) %}
+              <div>
+                {{ 'icon-star.svg' | inline_asset_content }}
+              </div>
+            {% endfor %}
+          </div>
+          <rte-formatter
+            class="spacing-style text-block review-title-item custom custom-typography custom-font-size custom-color"
+            style="
+              --padding-block-start: 0px; --padding-block-end:0px;
+              --padding-inline-start:0px; --padding-inline-end:0px;
+              --width: fit-content;
+              --max-width: var(--max-width--body-normal);
+              --font-size: 1rem;
+              --font-weight: var(--font-body--weight);
+              --font-family: var(--font-body--family);
+              --line-height: 1;
+              --color: rgb(0, 0, 0);
+            "
+          >
+            <p>{{ item.title }}</p>
+          </rte-formatter>
+
+          <rte-formatter
+            class="spacing-style text-block custom custom-typography custom-font-size"
+            style="
+              --padding-block-start: 0px; --padding-block-end:0px;
+              --padding-inline-start:0px; --padding-inline-end:0px;
+              --width: fit-content;
+              --max-width: var(--max-width--body-normal);
+              --font-size: 1rem;
+              --font-weight: var(--font-body--weight);
+              --font-family: var(--font-body--family);
+              --line-height: 1;
+            "
+          >
+            <p>{{ item.content }}</p>
+          </rte-formatter>
+
+          <rte-formatter
+            class="spacing-style text-block review-author custom custom-typography custom-font-size custom-color"
+            style="
+              --padding-block-start: 0px; --padding-block-end:0px;
+              --padding-inline-start:0px; --padding-inline-end:0px;
+              --width: fit-content;
+              --max-width: var(--max-width--body-normal);
+              --font-size: 0.75rem;
+              --font-weight: var(--font-heading--weight);
+              --font-family: var(--font-heading--family);
+              --text-transform: uppercase;
+              --line-height: 1;
+              --color: rgb(0, 0, 0);
+            "
+          >
+            <p>{{ item.author }}</p>
+          </rte-formatter>
+        </div>
+      {% endfor %}
+    </div>
+  </details>
+</accordion-custom>
+
+{% stylesheet %}
+  .details__icon {
+    margin-inline-start: var(--margin-xs);
+    height: auto;
+  }
+
+  .stars-tab-title {
+    gap: var(--gap-3xs);
+    align-items: center;
+  }
+
+  .review-box-item {
+    gap: var(--gap);
+    padding-block-end: var(--padding-xl);
+    margin-block-end: var(--margin-xl);
+    box-sizing: border-box;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    &:last-child {
+      padding-block-end: 0;
+      margin-block-end: 0;
+    }
+  }
+  .review-author {
+    text-transform: uppercase;
+  }
+  .stars-tab-title svg {
+    height: 0.875rem;
+    width: auto;
+  }
+
+  .average-stars {
+    font-size: var(--font-size--xs);
+    margin-inline-start: var(--margin-2xs);
+  }
+
+  .accordion--dividers accordion-custom:last-child .details-reviews {
+    border-block-end: 0;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Accordion row (reviews)",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "metaobject_list",
+      "id": "items_list",
+      "label": "Reviews List",
+      "metaobject_type": "review_content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:text_defaults.accordion_heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_by_default",
+      "label": "t:settings.open_row_by_default",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion row (reviews)",
+      "settings": {
+        "heading": "REVIEWS"
+      }
+    }
+  ]
+}
+{% endschema %}

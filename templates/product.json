@@ -944,19 +944,19 @@
                     "text_Ap97gT"
                   ]
                 },
-                "accordion_row_MwXWC9": {
-                  "type": "_accordion-row",
+                "accordion_row_reviews_MzGGgp": {
+                  "type": "_accordion-row-reviews",
+                  "name": "Accordion row (reviews)",
                   "settings": {
-                    "heading": "STYLING & FIT",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
+                    "items_list": "{{ closest.product.metafields.product_content.product_reviews.value }}",
+                    "heading": "REVIEWS",
+                    "open_by_default": false
                   },
                   "blocks": {
-                    "text_A48Kxi": {
+                    "text_QNeeXA": {
                       "type": "text",
                       "settings": {
-                        "text": "{{ closest.product.metafields.accordion.style_fit | metafield_tag }}",
+                        "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -980,14 +980,14 @@
                     }
                   },
                   "block_order": [
-                    "text_A48Kxi"
+                    "text_QNeeXA"
                   ]
                 }
               },
               "block_order": [
                 "accordion_row_yqrQjC",
                 "accordion_row_Hj4G73",
-                "accordion_row_MwXWC9"
+                "accordion_row_reviews_MzGGgp"
               ]
             }
           },
@@ -1006,7 +1006,8 @@
       },
       "custom_css": [
         ".details__header {--summary-font-size: var(--font-h5--size); padding-block: var(--padding-xl);}",
-        "@media screen and (min-width: 1200px) {.product-information--media-left {grid-template-columns: auto 440px !important; } .product-information__media {width: 100%; }}"
+        "@media screen and (min-width: 1200px) {.product-information--media-left {grid-template-columns: auto 440px !important; } .product-information__media {width: 100%; }}",
+        "@media (max-width: 749px) {.product-information__grid {row-gap: calc(var(--gap) / 2); }}"
       ],
       "settings": {
         "content_width": "content-center-aligned",

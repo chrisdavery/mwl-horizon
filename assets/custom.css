@@ -215,6 +215,22 @@ a.link:after {
   margin-top: var(--margin-4xl);
 }
 
+.slideshow-control.slideshow-control--shape-rectangle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 0.6;
+  padding: 0 var(--padding-2xs);
+  background-color: var(--color-primary-button-background);
+  color: var(--color-primary-button-text);
+  --color-primary-button-background: rgb(47 46 46 / 0.3);
+  --icon-stroke-width: .65px;
+}
+
+slideshow-arrows {
+  mix-blend-mode: unset;
+}
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
