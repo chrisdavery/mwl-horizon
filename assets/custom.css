@@ -231,6 +231,10 @@ slideshow-arrows {
   mix-blend-mode: unset;
 }
 
+button.slideshow-control.button-unstyled--transparent {
+  color: rgb(var(--color-foreground));
+}
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
@@ -294,5 +298,8 @@ slideshow-arrows {
   }
   [style*="--gallery-aspect-ratio: 2 / 3;"] {
     --gallery-aspect-ratio: 187 / 282 !important;
+  }
+  .footer-col-1 > .mobile-column {
+    --horizontal-alignment: center !important;
   }
 }

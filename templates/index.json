@@ -2182,13 +2182,13 @@
           "static": true,
           "settings": {
             "content_direction": "row",
-            "vertical_on_mobile": false,
+            "vertical_on_mobile": true,
             "horizontal_alignment": "space-between",
             "vertical_alignment": "center",
             "align_baseline": true,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 0,
+            "gap": 12,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -2336,7 +2336,7 @@
         "mobile_card_size": "100cqw",
         "columns_gap": 8,
         "rows_gap": 8,
-        "icons_style": "chevron",
+        "icons_style": "none",
         "icons_shape": "rectangle",
         "section_width": "page-width",
         "full_width_on_mobile": true,
@@ -2349,6 +2349,16 @@
     "testimonials_VrNktw": {
       "type": "testimonials",
       "blocks": {
+        "testimonial_card_xqA6rD": {
+          "type": "_testimonial-card",
+          "name": "Testimonial Card",
+          "settings": {
+            "star_rating": 5,
+            "testimonial_content": "<p>Had the most amazing experience at Made With Love. The dresses are stunning and I knew I’d found the one for me instantly. Highly recommend for any future brides.</p>",
+            "customer_name": "KYLIE"
+          },
+          "blocks": {}
+        },
         "testimonial_card_h6tkmL": {
           "type": "_testimonial-card",
           "name": "Testimonial Card",
@@ -2359,6 +2369,16 @@
           },
           "blocks": {}
         },
+        "testimonial_card_byCGEi": {
+          "type": "_testimonial-card",
+          "name": "Testimonial Card",
+          "settings": {
+            "star_rating": 5,
+            "testimonial_content": "<p>I was so excited to hear that a boutique opened up on Brisbane. The whole experience was so great, I had the most magical wedding day in the dress of my dreams.</p>",
+            "customer_name": "SUSIE"
+          },
+          "blocks": {}
+        },
         "testimonial_card_nYmW3f": {
           "type": "_testimonial-card",
           "name": "Testimonial Card",
@@ -2366,16 +2386,6 @@
             "star_rating": 5,
             "testimonial_content": "<p>It’s such a great experience working with the mwl team, and everyone has been so lovely to deal with!</p>",
             "customer_name": "SHIRALEE"
-          },
-          "blocks": {}
-        },
-        "testimonial_card_xqA6rD": {
-          "type": "_testimonial-card",
-          "name": "Testimonial Card",
-          "settings": {
-            "star_rating": 5,
-            "testimonial_content": "<p>Had the most amazing experience at Made With Love. The dresses are stunning and I knew I’d found the one for me instantly. Highly recommend for any future brides.</p>",
-            "customer_name": "KYLIE"
           },
           "blocks": {}
         },
@@ -2396,16 +2406,6 @@
             "star_rating": 5,
             "testimonial_content": "<p>The whole experience was excellent. Beautiful store, lovely dresses and helpful/friendly staff. Definitely recommend MWL.</p>",
             "customer_name": "EMILY"
-          },
-          "blocks": {}
-        },
-        "testimonial_card_byCGEi": {
-          "type": "_testimonial-card",
-          "name": "Testimonial Card",
-          "settings": {
-            "star_rating": 5,
-            "testimonial_content": "<p>I was so excited to hear that a boutique opened up on Brisbane. The whole experience was so great, I had the most magical wedding day in the dress of my dreams.</p>",
-            "customer_name": "SUSIE"
           },
           "blocks": {}
         },
@@ -2485,12 +2485,12 @@
         }
       },
       "block_order": [
-        "testimonial_card_h6tkmL",
-        "testimonial_card_nYmW3f",
         "testimonial_card_xqA6rD",
+        "testimonial_card_h6tkmL",
+        "testimonial_card_byCGEi",
+        "testimonial_card_nYmW3f",
         "testimonial_card_W3icVU",
         "testimonial_card_AAGRAf",
-        "testimonial_card_byCGEi",
         "testimonial_card_77T3kx"
       ],
       "custom_css": [
@@ -2503,11 +2503,10 @@
         "carousel_on_mobile": false,
         "columns": 4,
         "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
         "columns_gap": 20,
         "rows_gap": 8,
         "icons_style": "chevron",
-        "icons_shape": "circle",
+        "icons_shape": "none",
         "section_width": "page-width",
         "gap": 20,
         "color_scheme": "scheme-2",

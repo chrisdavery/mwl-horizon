@@ -14,8 +14,8 @@
         echo '--resource-list-column-gap-desktop: ' | append: section.settings.columns_gap | append: 'px;'
         echo '--resource-list-row-gap-desktop: ' | append: section.settings.rows_gap | append: 'px;'
         echo '--resource-list-columns: repeat(' | append: section.settings.columns | append: ', 1fr);'
-        echo '--resource-list-columns-mobile: repeat(' | append: section.settings.mobile_columns | append: ', 1fr);'
-        echo '--column-count-mobile: ' | append: section.settings.mobile_columns | append: ';'
+        echo '--resource-list-columns-mobile: repeat(' | append: '100%' | append: ', 1fr);'
+        echo '--column-count-mobile: ' | append: 1 | append: ';'
       endcapture
     when 'carousel'
       assign classes = 'resource-list__carousel'
@@ -23,7 +23,7 @@
         echo '--resource-list-column-gap-desktop: ' | append: section.settings.columns_gap | append: 'px;'
         echo '--column-count: ' | append: section.settings.columns | append: ';'
         echo '--column-count-mobile: 1;'
-        echo '--mobile-card-size: ' | append: section.settings.mobile_card_size | append: ';'
+        echo '--mobile-card-size: ' | append: '100%' | append: ';'
       endcapture
   endcase
 %}
@@ -36,6 +36,7 @@
     section--{{ section.settings.section_width }}
     color-{{ section.settings.color_scheme }}
     section-resource-list
+    section-testimonials
     spacing-style
     gap-style
   "
@@ -103,7 +104,7 @@
         --resource-list-column-gap-desktop: {{ mobile_carousel_gap }}px;
         --column-count: {{ section.settings.columns }};
         --column-count-mobile: 1;
-        --mobile-card-size: {{ section.settings.mobile_card_size }};
+        --mobile-card-size: 100%;
       "
     >
       {% render 'resource-list-carousel',
@@ -111,11 +112,26 @@
         slides: list_items_array,
         slide_count: max_items,
         settings: section.settings,
-        slide_width_max: '450px'
+        slide_width_max: '100%'
       %}
     </div>
   {% endif %}
 </div>
+
+
+{% stylesheet %}
+  .section-testimonials .resource-list__carousel slideshow-arrows {
+    padding-inline: 0;
+  }
+  @media screen and (max-width: 749px) {
+    .section-testimonials .resource-list__carousel slideshow-slides {
+      gap: 25px;
+    }
+    .section-testimonials .resource-list__carousel .resource-list__slide {
+      scroll-snap-align: center;
+    }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -203,23 +219,6 @@
       ],
       "default": "2",
       "visible_if": "{{ section.settings.layout_type == 'grid' and section.settings.carousel_on_mobile == false }}"
-    },
-    {
-      "type": "select",
-      "id": "mobile_card_size",
-      "label": "t:settings.mobile_columns",
-      "options": [
-        {
-          "value": "60cqw",
-          "label": "t:options.one_number"
-        },
-        {
-          "value": "44cqw",
-          "label": "t:options.two_number"
-        }
-      ],
-      "default": "60cqw",
-      "visible_if": "{{ section.settings.layout_type == 'carousel' or section.settings.carousel_on_mobile == true }}"
     },
     {
       "type": "range",

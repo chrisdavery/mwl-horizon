@@ -394,7 +394,7 @@
                   "type": "custom-liquid",
                   "name": "t:names.custom_liquid",
                   "settings": {
-                    "custom_liquid": "<div class=\"klv-footer-wrap\">\n    <div class=\"klaviyo-form-RCTwBX\"></div>\n</div>"
+                    "custom_liquid": "<style>\n.klv-footer-wrap:after {\n    content: \"\";\n    display: block;\n    clear: both;\n}\n</style>\n<div class=\"klv-footer-wrap\">\n    <div class=\"klaviyo-form-RCTwBX\"></div>\n</div>"
                   },
                   "blocks": {}
                 }

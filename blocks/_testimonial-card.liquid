@@ -33,6 +33,14 @@
   .ai-testimonial-name-{{ ai_gen_id }} {
     margin: 0;
   }
+
+  @media (max-width: 749px) {
+    .ai-testimonial-{{ ai_gen_id }} {
+      max-width: 320px;
+      margin: auto;
+      width: 100%;
+    }
+  }
 {% endstyle %}
 
 <div class="ai-testimonial-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
