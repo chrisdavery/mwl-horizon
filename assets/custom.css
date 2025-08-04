@@ -9,10 +9,16 @@
   --drawer-width: 20rem !important;
   --sidebar-width: 25rem;
   --badge-rectangle-padding-block: 0 !important;
+  --height-buy-buttons: calc(var(--padding-md) * 2 + var(--icon-size-sm)) !important;
+  --modal-max-height: fit-content !important;
 }
 
 a {
   text-decoration-thickness: .05em;
+}
+
+.button, .button-secondary {
+  font-size: var(--font-size--sm);
 }
 
 [style*="text-decoration:underline"] {
@@ -248,6 +254,23 @@ button.slideshow-control.button-unstyled--transparent {
   -webkit-tap-highlight-color: transparent;
 }
 
+.add-to-cart-text {
+  gap: var(--gap-sm) !important;
+}
+
+.variant-option__select {
+  padding-block-start: var(--padding-lg) !important;
+  padding-block-end: var(--padding-2xs) !important;
+}
+
+.variant-option__select-wrapper label {
+  position: absolute;
+  top: calc(var(--padding-2xs));
+  left: calc(var(--padding-lg));
+  line-height: 1em;
+  font-size: var(--font-size--sm);
+}
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
@@ -274,6 +297,10 @@ button.slideshow-control.button-unstyled--transparent {
 }
 
 @media (max-width: 749px) {
+  :root {
+    --normal-content-width: 22rem !important;
+  }
+
   :is(.multicolumn--mobile-full-width) > .resource-list__carousel {
     grid-column: 1 / -1;
   }

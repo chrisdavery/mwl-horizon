@@ -15,7 +15,7 @@
     style="{% render 'spacing-style', settings: block.settings %}"
   >
     {{- block.settings.heading }}
-    {{- 'icon-external.svg' | inline_asset_content -}}
+    {% comment %} {{- 'icon-external.svg' | inline_asset_content -}} {% endcomment %}
   </button>
 
   <dialog
@@ -42,6 +42,15 @@
     display: inline-block;
     position: relative;
     top: var(--margin-2xs);
+  }
+  .popup-link__button {
+    text-transform: unset;
+    min-height: unset;
+    height: unset;
+    line-height: 1em;
+    white-space: nowrap;
+    text-decoration-thickness: .05em !important;
+    text-decoration: underline;
   }
 
   .popup-link__content {
@@ -114,6 +123,9 @@
     },
     {
       "type": "@app"
+    },
+    {
+      "type": "_divider"
     }
   ],
   "tag": null,
