@@ -10,6 +10,10 @@
 {% liquid
   assign block_items = block.settings.items_list
 
+  if block_items == blank
+    break    
+  endif
+
   case block.settings.layout_type
     when 'grid'
       assign classes = 'resource-list--grid'
