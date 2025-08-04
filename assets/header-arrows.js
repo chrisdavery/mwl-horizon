@@ -9,7 +9,7 @@ class HeaderArrows extends HTMLElement {
   connectedCallback() {
     this.prevBtn = this.querySelector('button[ref="previous"]');
     this.nextBtn = this.querySelector('button[ref="next"]');
-    const parentSection = this.closest('.section');
+    const parentSection =  this.closest('.shopify-block') || this.closest('.section');
 
     if (!parentSection) return;
 
@@ -41,6 +41,8 @@ class HeaderArrows extends HTMLElement {
     const builtInControls = this.slideshow.querySelectorAll('slideshow-arrows .slideshow-control');
     builtInControls.forEach(control => {
       control.setAttribute('disabled', '');
+      control.style.opacity = '0'
+      control.style.visibility = 'hidden'
     });
   }
 

@@ -11,8 +11,15 @@
         gap: 1.2rem;
         display: flex;
         align-items: center;
+
+        &:not(.block-resource-list .header-arrows)
         margin-inline-end: calc(-1 * var(--page-margin) / 2);
     }
+
+    .block-resource-list .header-arrows {
+        margin-inline-end: calc(var(--page-margin));
+    }
+
     .header-arrows .slideshow-control {
         line-height: 1em;
     }

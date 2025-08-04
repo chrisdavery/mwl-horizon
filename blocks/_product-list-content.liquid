@@ -1,10 +1,19 @@
-
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+  @param {object} block_settings - The settings of the group block.
+{%- enddoc -%}
 
 {%- capture children -%}
   {%- content_for 'blocks' -%}
 {%- endcapture -%}
 
-{% if section.settings.carousel_on_mobile and section.settings.layout_type != 'carousel' %}
+{% assign settings_config = section.settings %}
+
+{% if block_settings != blank %}
+  {% assign settings_config = block_settings %}
+{% endif %}
+
+{% if settings_config.carousel_on_mobile and settings_config.layout_type != 'carousel' %}
   <div class="flex hidden--desktop justify-between">
     <div>
       {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
@@ -16,13 +25,13 @@
   <div class="hidden--mobile">
     {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
   </div>
-{% elsif section.settings.layout_type == 'carousel' %}
+{% elsif settings_config.settings.layout_type == 'carousel' %}
   <div class="flex justify-between">
     <div>
       {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
     </div>
     <div>
-      {% render 'header-slideshow-arrows', section_id: section.id %}
+      {% render 'header-slideshow-arrows', section_id: settings_config.id %}
     </div>
   </div>
 {% else %}

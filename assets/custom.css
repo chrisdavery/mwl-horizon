@@ -231,11 +231,11 @@ a.link:after {
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 0.6;
-  padding: 0 var(--padding-2xs);
+  aspect-ratio: 1 / 2;
+  padding: 0 var(--padding-3xs);
   background-color: var(--color-primary-button-background);
-  color: var(--color-primary-button-text);
-  --color-primary-button-background: rgb(47 46 46 / 0.3);
+  color: var(--color-primary-button-text) !important;
+  --color-primary-button-background: rgb(47 46 46 / .15);
   --icon-stroke-width: .65px;
 }
 
@@ -284,9 +284,6 @@ button.slideshow-control.button-unstyled--transparent {
   }
   .size-style[style*="--size-aspect-ratio"] {
     aspect-ratio: 1 / 1;
-  }
-  .resource-list__carousel slideshow-arrows .slideshow-control {
-    opacity: 1;
   }
   .spacing-style[style*="--mobile-padding-block-start"] {
     padding-block: calc(var(--mobile-padding-block-start) + var(--section-top-offset, 0px)) var(--mobile-padding-block-end) !important;

@@ -54,8 +54,8 @@
       {{ styles }}
     "
   >
-    <div class="section-resource-list__content">
-      {% content_for 'blocks' %}
+    <div class="section-resource-list__header">
+      {%- content_for 'block', type: '_product-list-content', id: 'static-header', block_settings: block.settings -%}
     </div>
 
     {% capture list_items %}

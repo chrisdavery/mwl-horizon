@@ -289,6 +289,13 @@
     {% endcapture %}
   {% endif %}
 
+  {% if selected_product.media.size > 1 and render_slideshow_arrows == false %}
+    {% capture slideshow_arrows %}
+      {% render 'slideshow-arrows', class: 'desktop:hidden', icon_style: 'chevron', icon_shape: 'rectangle' %}
+    {% endcapture %}
+    {% assign controls = nil %}
+  {% endif %}
+
   {% render 'slideshow',
     ref: 'slideshow',
     class: slideshow_class,
@@ -489,6 +496,11 @@
 {% stylesheet %}
   .dialog-zoomed-gallery {
     cursor: zoom-out;
+  }
+  
+  media-gallery .slideshow-control.slideshow-control--previous,
+  media-gallery .slideshow-control.slideshow-control--next {
+    opacity: 1;
   }
 
   .dialog--preloading {

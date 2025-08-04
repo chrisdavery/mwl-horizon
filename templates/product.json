@@ -91,7 +91,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 9,
+                "gap": 6,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -260,6 +260,70 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "static-header": {
+                  "type": "_product-list-content",
+                  "static": true,
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "text_DY44rt": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "settings": {
+                        "text": "<h5>SPECIAL FEATURES</h5>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_DY44rt"
+                  ]
                 },
                 "static-feature-card": {
                   "type": "_feature-card",
@@ -1006,8 +1070,9 @@
       },
       "custom_css": [
         ".details__header {--summary-font-size: var(--font-h5--size); padding-block: var(--padding-xl);}",
+        ".add-to-cart-text .add-to-cart-icon {display: none;}",
         "@media screen and (min-width: 1200px) {.product-information--media-left {grid-template-columns: auto 440px !important; } .product-information__media {width: 100%; }}",
-        "@media (max-width: 749px) {.product-information__grid {row-gap: calc(var(--gap) / 2); }}"
+        "@media (max-width: 749px) {.product-information__grid {row-gap: calc(var(--gap) / 3); } .product-information {padding-top: 0; }}"
       ],
       "settings": {
         "content_width": "content-center-aligned",
