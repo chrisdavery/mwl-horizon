@@ -16,6 +16,9 @@ class HeaderArrows extends HTMLElement {
     this.slideshow = parentSection.querySelector('slideshow-component');
     if (!this.slideshow) return;
 
+    // Permanently disable built-in slideshow controls
+    this.disableBuiltInControls();
+
     // Initialize button states
     this.updateButtonStates();
 
@@ -27,8 +30,18 @@ class HeaderArrows extends HTMLElement {
       this.nextBtn.addEventListener('click', (e) => this.handleNextClick(e));
     }
 
-    // Update buttons when slideshow changes (optional)
+    // Update buttons when slideshow changes
     this.slideshow.addEventListener('slideshow-select', () => this.updateButtonStates());
+  }
+
+  disableBuiltInControls() {
+    // Disable and hide built-in controls permanently
+    const builtInControls = this.slideshow.querySelectorAll('slideshow-arrows .slideshow-control');
+    builtInControls.forEach(control => {
+      control.setAttribute('disabled', '');
+      control.style.display = 'none'; // Hide them completely
+      control.style.pointerEvents = 'none'; // Make sure they can't be clicked
+    });
   }
 
   handlePrevClick(e) {
@@ -38,7 +51,7 @@ class HeaderArrows extends HTMLElement {
     } else {
       this.slideshow.dispatchEvent(new CustomEvent('previous', { bubbles: true }));
     }
-    this.updateButtonStates(); // Update immediately after click
+    this.updateButtonStates();
   }
 
   handleNextClick(e) {
@@ -48,7 +61,7 @@ class HeaderArrows extends HTMLElement {
     } else {
       this.slideshow.dispatchEvent(new CustomEvent('next', { bubbles: true }));
     }
-    this.updateButtonStates(); // Update immediately after click
+    this.updateButtonStates();
   }
 
   updateButtonStates() {
