@@ -294,6 +294,9 @@ button.slideshow-control.button-unstyled--transparent {
   .facets--horizontal .facets__inputs-wrapper {
     padding: var(--padding-lg) !important;
   }
+  .product-form-buttons {
+    gap: var(--gap-lg) !important;
+  }
 }
 
 @media (max-width: 749px) {
@@ -338,5 +341,8 @@ button.slideshow-control.button-unstyled--transparent {
   }
   .footer-col-1 > .mobile-column {
     --horizontal-alignment: center !important;
+  }
+  .layout-panel-flex--row:not(.mobile-column) .text-block {
+    flex: 0 auto;
   }
 }

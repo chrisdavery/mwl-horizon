@@ -1,0 +1,55 @@
+{%- doc -%}
+  This block is used to display the accelerated checkout button.
+  Intended for product-form.liquid block.
+
+  @param {string} can_add_to_cart - Whether the product can be added to the cart
+
+  @example
+  {% content_for 'block', type: 'retailer-button', id: 'retailer-button', can_add_to_cart: can_add_to_cart %}
+{%- enddoc -%}
+
+
+{% if block.settings.button_text == blank %}
+    {% break %}
+{% endif %}
+
+<div
+  class="retailer-button-block"
+  ref="retailerButtonContainer"
+  {{ block.shopify_attributes }}
+  {% if request.visual_preview_mode %}
+    data-shopify-visual-preview
+  {% endif %}
+>
+    <a href="{{ block.settings.button_url }}" class="button button-secondary button">
+        {{ block.settings.button_text }}
+    </a>
+</div>
+
+{% stylesheet %}
+    .retailer-button-block .button {
+        width: 100%;
+        padding-inline: var(--padding-4xl);
+        padding-block: var(--padding-lg);
+        height: var(--height-buy-buttons);
+    }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Retailer button",
+  "tag": null,
+  "settings": [
+    {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+    },
+    {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button link"
+    }
+  ]
+}
+{% endschema %}
