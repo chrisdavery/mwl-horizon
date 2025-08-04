@@ -342,7 +342,4 @@ button.slideshow-control.button-unstyled--transparent {
   .footer-col-1 > .mobile-column {
     --horizontal-alignment: center !important;
   }
-  .layout-panel-flex--row:not(.mobile-column) .text-block {
-    flex: 0 auto;
-  }
 }
