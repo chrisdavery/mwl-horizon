@@ -307,7 +307,9 @@
       {% for media in sorted_media %}
         <li
           ref="media[]"
-          class="{{ product_media_container_class }} product-media-container--{{ media.media_type }}"
+          class="{{ product_media_container_class }} product-media-container--{{ media.media_type }}
+          {% if block.settings.enable_show_more_images == true and sorted_media.size > 6 and forloop.index  > 6 %}hidden{% endif %}
+          "
           style="{% if block.settings.aspect_ratio == 'adapt' %} --media-preview-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }};{% endif %}"
           {% if settings.transition_to_main_product and forloop.first %}
             data-view-transition-type="product-image-transition"
@@ -334,6 +336,18 @@
         </li>
       {% endfor %}
     </ul>
+    {% if block.settings.enable_show_more_images == true and sorted_media.size > 6 %}
+        <script
+          src="{{ 'imagesload-more.js' | asset_url }}"
+          type="module"
+        ></script>
+      <div class="images-loader-wrapper flex justify-center hidden--mobile">
+        <imagesload-more type="button" data-limit="6" class="button images-loader-button button-secondary">
+          <span class="show-more">{{ block.settings.show_more_state_text }}</span>
+          <span class="show-less hidden">{{ block.settings.show_less_state_text }}</span>
+        </imagesload-more>
+      </div>
+    {% endif %}
   {% endif %}
 
   {%- if block.settings.zoom -%}
@@ -623,6 +637,24 @@
       ],
       "default": "grid",
       "info": "t:info.carousel_layout_on_mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_show_more_images",
+      "label": "Enable Show more images",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "show_more_state_text",
+      "label": "Show more state label",
+      "visible_if": "{{ block.settings.enable_show_more_images == true }}"
+    },
+    {
+      "type": "text",
+      "id": "show_less_state_text",
+      "label": "Show less state label",
+      "visible_if": "{{ block.settings.enable_show_more_images == true }}"
     },
     {
       "type": "header",

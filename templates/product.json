@@ -17,6 +17,9 @@
           "static": true,
           "settings": {
             "media_presentation": "grid",
+            "enable_show_more_images": true,
+            "show_more_state_text": "Load more images",
+            "show_less_state_text": "Show less images",
             "media_columns": "two",
             "image_gap": 8,
             "large_first_image": false,

@@ -207,6 +207,14 @@ a.link:after {
   font-size: var(--font-size--2xs);
 }
 
+.images-loader-button {
+  padding-block: var(--padding-xs) !important;
+}
+
+.images-loader-wrapper {
+  margin-top: var(--margin-4xl);
+}
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
