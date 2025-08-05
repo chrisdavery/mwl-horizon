@@ -40,6 +40,12 @@
       results: collection,
       results_size: collection.products_count
     %}
+    
+    {% content_for 'block',
+      type: '_sub-collections',
+      id: 'subcollections',
+      results: collection
+    %}
 
     {% paginate collection.products by 24 %}
       {% capture children %}

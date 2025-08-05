@@ -11,12 +11,13 @@
   "sections": {
     "custom_liquid_zyBiFR": {
       "type": "custom-liquid",
+      "custom_css": [],
       "name": "t:names.custom_liquid",
       "settings": {
         "custom_liquid": "<div class=\"hidden--desktop\">\n{% render 'breadcrumbs' %}\n</div>",
         "color_scheme": "",
         "section_width": "page-width",
-        "padding-block-start": 0,
+        "padding-block-start": 20,
         "padding-block-end": 0
       }
     },
@@ -149,6 +150,18 @@
             "padding-inline-end": 0,
             "facets_margin_bottom": 8,
             "facets_margin_right": 20
+          },
+          "blocks": {}
+        },
+        "subcollections": {
+          "type": "_sub-collections",
+          "static": true,
+          "settings": {
+            "collection_list": "{{ closest.collection.metafields.custom.sub_collections.value }}",
+            "columns_gap": 16,
+            "color_scheme": "scheme-4",
+            "padding-block-start": 0,
+            "padding-block-end": 16
           },
           "blocks": {}
         },
