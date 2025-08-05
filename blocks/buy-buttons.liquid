@@ -73,7 +73,7 @@
               assign has_rtw = product.tags | where: 'online-rtw'
           %}
 
-          {% unless has_rtw.size == 0 %}
+          {% unless has_rtw.size == 0 and product.gift_card? == false %}
             {% content_for 'block',
               type: 'add-to-cart',
               id: 'add-to-cart',
@@ -95,11 +95,14 @@
             %}
           {% endunless %}
 
-          {% content_for 'block',
-            type: 'retailer-button',
-            id: 'retailer-button',
-            can_add_to_cart: can_add_to_cart
-          %}
+          {% unless product.gift_card? == true %}
+            {% content_for 'block',
+              type: 'retailer-button',
+              id: 'retailer-button',
+              can_add_to_cart: can_add_to_cart
+            %}
+          {% endunless %}
+
         </div>
       {%- endform -%}
     </product-form-component>

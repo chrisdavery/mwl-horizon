@@ -11,6 +11,12 @@
   if collection_list == blank
     break    
   endif
+
+  assign collections_size = 0
+
+  for i in collection_list
+    assign collections_size = collections_size | plus: 1
+  endfor
 %}
 
 {% comment %}
@@ -18,7 +24,7 @@
 {% endcomment %}
 
 <div
-  class="subcollections-block"
+  class="subcollections-block shopify-block"
   data-section-id="{{ section.id }}"
   data-testid="subcollections-block"
   {{ block.shopify_attributes }}
@@ -34,6 +40,15 @@
     "
   >
     {% capture list_items %}
+        {% capture first_child %}
+            <div class="subcollection-wrapper">
+                <a href="/collections/all" title="{{ 'accessibility.all' | t }}" class="button all-button-subcollection">
+                    {{ 'accessibility.all' | t }}
+                </a>
+            </div>
+        {% endcapture %}
+        {% render 'slideshow-slide', index: 0, children: first_child, class: 'subcollection-list__slide' %}
+        <!--@list/split-->
         {% for item in collection_list %}
             {% capture children %}
                 <div class="subcollection-wrapper">
@@ -43,8 +58,8 @@
                 </div>
             {% endcapture %}
 
-            {% render 'slideshow-slide', index: forloop.index0, children: children, class: 'subcollection-list__slide' %}
-            {% unless forloop.last %}
+            {% render 'slideshow-slide', index: forloop.index, children: children, class: 'subcollection-list__slide' %}
+            {% unless forloop.last or collections_size == 1 %}
                 <!--@list/split-->
             {% endunless %}
         {% endfor %}
@@ -57,14 +72,33 @@
         assign slideshow_class = 'subcollections__list subcollections__wrapper list-unstyled'
     %}
 
-    {% render 'slideshow',
-        class: slideshow_class,
-        infinite: false,
-        slides: list_items,
-        slide_count: list_items_array.size,
-        icon_style: 'chevron',
-        slideshow_gutters: 'start end'
-    %}
+    {% capture slideshow %}
+        {% render 'slideshow',
+            class: slideshow_class,
+            infinite: false,
+            slides: list_items,
+            slide_count: list_items_array.size | plus: 1,
+            icon_style: 'chevron',
+            slideshow_gutters: 'start end'
+        %}
+    {% endcapture %}
+
+    {% if list_items_array.size >= 10 %}
+        <div class="flex inline-slider-row hidden--mobile title--aligned-center">
+            <div>
+                {{ slideshow }}
+            </div>
+            <div>
+                {% render 'header-slideshow-arrows', section_id: section.id %}
+            </div>
+        </div>
+        <div class="hidden--desktop">
+            {{ slideshow }}
+        </div>
+    {% else %}
+        {{ slideshow }}
+    {% endif %}
+
   </div>
 </div>
 
@@ -120,7 +154,7 @@
     .subcollections-block {
 
         @media (min-width: 750px) {
-            grid-column: column-1 / span var(--full-width-column-number);
+            grid-column: column-1 / span var(--centered-column-number);
         }
 
         @media (max-width: 749px) {
@@ -136,6 +170,12 @@
             font-size: var(--font-size--xs);
             --button-padding-inline: 16px;
             --button-padding-block: 5px;
+        }
+
+        .all-button-subcollection {
+            --button-color: var(--color-primary-button-hover-text) !important;
+            --button-background-color: var(--color-primary-button-hover-background) !important;
+            --button-border-color: var(--color-primary-button-hover-border) !important;
         }
     }
 {% endstylesheet %}
