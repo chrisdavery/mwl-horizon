@@ -686,6 +686,7 @@
                             "label": "Recipient’s Name",
                             "name": "Recipient name",
                             "type": "text",
+                            "start_date": "",
                             "required": true,
                             "error_message": "Recipient’s Name is required",
                             "width": "custom",
@@ -702,6 +703,7 @@
                             "label": "Recipient’s Email",
                             "name": "Recipient email",
                             "type": "email",
+                            "start_date": "",
                             "required": true,
                             "error_message": "Recipient’s Email is required",
                             "width": "fill",
@@ -770,6 +772,7 @@
                             "label": "Sender’s Name",
                             "name": "Sender name",
                             "type": "text",
+                            "start_date": "",
                             "required": true,
                             "error_message": "Sender’s Name is required",
                             "width": "fill",
@@ -786,6 +789,7 @@
                             "label": "Sender’s Email",
                             "name": "Sender email",
                             "type": "email",
+                            "start_date": "",
                             "required": true,
                             "error_message": "Sender’s Email is required",
                             "width": "fill",
@@ -854,6 +858,7 @@
                             "label": "Gift Message",
                             "name": "Message",
                             "type": "textarea",
+                            "start_date": "",
                             "required": true,
                             "error_message": "Sender’s Email is required",
                             "width": "fill",
@@ -867,12 +872,108 @@
                       "block_order": [
                         "input_field_pHW87D"
                       ]
+                    },
+                    "group_CA6L3b": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "center",
+                        "align_baseline": false,
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "center",
+                        "gap": 12,
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "custom_height": 100,
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "background_media": "none",
+                        "video_position": "cover",
+                        "background_image_position": "cover",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "placeholder": "",
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "custom_mobile_padding": false,
+                        "mobile-padding-block-start": 0,
+                        "mobile-padding-block-end": 0,
+                        "mobile-padding-inline-start": 0,
+                        "mobile-padding-inline-end": 0,
+                        "css_class": ""
+                      },
+                      "blocks": {
+                        "text_yrE696": {
+                          "type": "text",
+                          "name": "t:names.heading",
+                          "settings": {
+                            "text": "<p>When should we send the voucher?</p>",
+                            "width": "fit-content",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "custom",
+                            "font": "var(--font-subheading--family)",
+                            "font_size": "0.875rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "uppercase",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        },
+                        "input_field_N4pJPR": {
+                          "type": "_input-field",
+                          "name": "Input Field",
+                          "settings": {
+                            "label": "dd/mm/yyyy",
+                            "name": "Send on",
+                            "type": "datepicker",
+                            "start_date": "",
+                            "required": false,
+                            "error_message": "",
+                            "width": "fill",
+                            "custom_width": 100,
+                            "width_mobile": "fill",
+                            "custom_width_mobile": 100
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_yrE696",
+                        "input_field_N4pJPR"
+                      ]
                     }
                   },
                   "block_order": [
                     "group_3Yzhg3",
                     "group_DKWNne",
-                    "group_mLMQ8z"
+                    "group_mLMQ8z",
+                    "group_CA6L3b"
                   ]
                 }
               },

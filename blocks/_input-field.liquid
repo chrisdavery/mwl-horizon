@@ -7,41 +7,97 @@
     style="{{ style }}"
     {{ block.shopify_attributes }}
 >
-    <custom-input class="custom-input--field">
         {% case block.settings.type %}
             {% when 'textarea' %}
-                <textarea
-                id="CustomForm-{{ block.settings.label | handleize }}"
-                class="custom-form__input"
-                autocomplete="name"
-                name="properties[{{ block.settings.name }}]"
-                placeholder="{{ block.settings.label }}"
-                rows="5"
-                {% if block.settings.required == true %}
-                    required
-                {% endif %}
-                ></textarea>
-            {% else %}
-                <input
-                    type="{{ block.settings.type }}"
+                <custom-input class="custom-input--field">
+                    <textarea
                     id="CustomForm-{{ block.settings.label | handleize }}"
                     class="custom-form__input"
-                    autocomplete="name"
-                    form="{{ product_form_id }}"
                     name="properties[{{ block.settings.name }}]"
                     placeholder="{{ block.settings.label }}"
+                    rows="5"
                     {% if block.settings.required == true %}
                         required
                     {% endif %}
-                > 
+                    ></textarea>
+
+                    <label
+                        for="CustomForm-{{ block.settings.label | handleize }}"
+                    >
+                        {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
+                    </label>
+                </custom-input>
+            {% when 'datepicker' %}
+                <custom-input class="custom-input--field">
+                    <date-picker>
+                        <input
+                            type="text"
+                            id="CustomForm-{{ block.settings.label | handleize }}"
+                            name="properties[{{ block.settings.name }}]"
+                            class="custom-form__input"
+                            aria-label="dd/mm/yyyy"
+                            placeholder="dd/mm/yyyy"
+                            readonly
+                            autocomplete="off"
+                            data-start-date="{{ block.settings.start_date }}"
+                        >
+                        <label
+                            for="CustomForm-{{ block.settings.label | handleize }}"
+                        >
+                            {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
+                        </label>
+                        <div class="ai-datepicker-calendar">
+                            <div class="ai-datepicker-header">
+                                <button type="button" class="ai-datepicker-nav" data-action="prev-month" aria-label="Previous month">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M10 12L6 8L10 4" />
+                                    </svg>
+                                </button>
+                                <div class="ai-datepicker-month-year h5"></div>
+                        
+                                <button type="button" class="ai-datepicker-nav" data-action="next-month" aria-label="Next month">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 4L10 8L6 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        
+                            <div class="ai-datepicker-grid">
+                                <div class="ai-datepicker-day-header">S</div>
+                                <div class="ai-datepicker-day-header">M</div>
+                                <div class="ai-datepicker-day-header">T</div>
+                                <div class="ai-datepicker-day-header">W</div>
+                                <div class="ai-datepicker-day-header">T</div>
+                                <div class="ai-datepicker-day-header">F</div>
+                                <div class="ai-datepicker-day-header">S</div>
+                            </div>
+                            <div class="ai-datepicker-year-selector hidden"></div>
+                        </div>
+                    </date-picker>
+                </custom-input>
+            {% else %}
+                <custom-input class="custom-input--field">
+                    <input
+                        type="{{ block.settings.type }}"
+                        id="CustomForm-{{ block.settings.label | handleize }}"
+                        class="custom-form__input"
+                        autocomplete="name"
+                        form="{{ product_form_id }}"
+                        name="properties[{{ block.settings.name }}]"
+                        placeholder="{{ block.settings.label }}"
+                        {% if block.settings.required == true %}
+                            required
+                        {% endif %}
+                    >
+
+                    <label
+                        for="CustomForm-{{ block.settings.label | handleize }}"
+                    >
+                        {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
+                    </label>
+                </custom-input> 
         {% endcase %}
 
-        <label
-            for="CustomForm-{{ block.settings.label | handleize }}"
-        >
-            {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
-        </label>
-    </custom-input>
 </div>
 
 {% stylesheet %}
@@ -84,6 +140,129 @@
         top: 6px;
         width: calc(100% - var(--margin-xl));
     }
+    
+    .ai-datepicker-month-year {
+        cursor: pointer;
+    }
+
+    .ai-datepicker-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .ai-datepicker-calendar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-background);
+        border: 1px solid var(--color-border);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        margin-top: var(--margin-xs);
+    }
+
+    .ai-datepicker-calendar.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .ai-datepicker-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .ai-datepicker-nav {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: var(--padding-2xs);
+        transition: background-color 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .ai-datepicker-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: var(--gap-2xs);
+        padding: 16px;
+    }
+
+    .ai-datepicker-day-header {
+        text-align: center;
+        font-family: var(--font-subheading--family);
+        font-style: var(--font-subheading--style);
+        font-weight: var(--font-subheading--weight);
+        font-size: var(--font-size--sm);
+    }
+
+    .ai-datepicker-day {
+        padding: var(--padding-2xs) var(--padding-xs);
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        font-family: var(--font-subheading--family);
+        font-style: var(--font-subheading--style);
+        font-weight: var(--font-subheading--weight);
+        font-size: var(--font-size--sm);
+    }
+
+    .ai-datepicker-day.selected {
+        background-color: var(--color-primary-button-background);
+        color: var(--color-primary-button-text);
+    }
+
+    .ai-datepicker-day.disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+    }
+
+    .ai-datepicker-day.other-month {
+        opacity: 0.3;
+    }
+
+    .ai-datepicker-year-selector {
+        max-height: 300px; /* or any height you want */
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-xs); /* spacing between years */
+        padding: var(--padding-sm);
+    }
+
+    .ai-datepicker-year-selector span {
+        cursor: pointer;
+        padding: var(--padding-2xs);
+        text-align: center;
+        font-family: var(--font-subheading--family);
+        font-style: var(--font-subheading--style);
+        font-weight: var(--font-subheading--weight);
+        font-size: var(--font-size--sm);
+    }
+
+    .ai-datepicker-year-selector span.selected {
+        font-size: var(--font-h3--size);
+    }
+
+    .ai-datepicker-year.disabled {
+        opacity: .3;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+
+    @media screen and (max-width: 749px) {
+        .ai-datepicker-calendar {
+            left: 0;
+            right: 0;
+        }
+    }
 {% endstylesheet %}
 
 {% schema %}
@@ -125,9 +304,20 @@
                 {
                     "value": "textarea",
                     "label": "Textarea"
+                },
+                {
+                    "value": "datepicker",
+                    "label": "Date picker"
                 }
             ],
             "default": "text"
+            },
+            {
+                "type": "text",
+                "id": "start_date",
+                "label": "Start date",
+                "info": "Format: YYYY-MM-DD. Leave empty to use today's date.",
+                "visible_if": "{{ block.settings.type == 'datepicker' }}"
             },
             {
                 "type": "checkbox",
