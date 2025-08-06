@@ -95,13 +95,11 @@
             %}
           {% endunless %}
 
-          {% unless product.gift_card? == true %}
-            {% content_for 'block',
-              type: 'retailer-button',
-              id: 'retailer-button',
-              can_add_to_cart: can_add_to_cart
-            %}
-          {% endunless %}
+          {% content_for 'block',
+            type: 'retailer-button',
+            id: 'retailer-button',
+            can_add_to_cart: can_add_to_cart
+          %}
 
         </div>
       {%- endform -%}

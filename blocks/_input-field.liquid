@@ -1,0 +1,213 @@
+{% capture style %}
+  {% render 'size-style', settings: block.settings %}
+{% endcapture %}
+
+<div
+    class="size-style"
+    style="{{ style }}"
+    {{ block.shopify_attributes }}
+>
+    <custom-input class="custom-input--field">
+        {% case block.settings.type %}
+            {% when 'textarea' %}
+                <textarea
+                id="CustomForm-{{ block.settings.label | handleize }}"
+                class="custom-form__input"
+                autocomplete="name"
+                name="properties[{{ block.settings.name }}]"
+                placeholder="{{ block.settings.label }}"
+                rows="5"
+                {% if block.settings.required == true %}
+                    required
+                {% endif %}
+                ></textarea>
+            {% else %}
+                <input
+                    type="{{ block.settings.type }}"
+                    id="CustomForm-{{ block.settings.label | handleize }}"
+                    class="custom-form__input"
+                    autocomplete="name"
+                    form="{{ product_form_id }}"
+                    name="properties[{{ block.settings.name }}]"
+                    placeholder="{{ block.settings.label }}"
+                    {% if block.settings.required == true %}
+                        required
+                    {% endif %}
+                > 
+        {% endcase %}
+
+        <label
+            for="CustomForm-{{ block.settings.label | handleize }}"
+        >
+            {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
+        </label>
+    </custom-input>
+</div>
+
+{% stylesheet %}
+    .custom-input--field {
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+    .custom-form__input {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--color-foreground);
+        background-color: var(--color-input-background);
+        padding: var(--padding-lg) var(--padding-xl) var(--padding-2xs);
+        border-radius: var(--style-border-radius-inputs);
+        border: var(--style-border-width-inputs) solid var(--color-input-border);
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    .custom-form__input::placeholder {
+        visibility: hidden;
+    }
+
+    .custom-input--field label {
+        position: absolute;
+        top: 1rem;
+        left: var(--margin-xl);
+        pointer-events: none;
+        transition-duration: var(--hover-transition-duration);
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        width: calc(100% - var(--margin-xl));
+        line-height: 1em;
+    }
+
+    .custom-form__input:focus~label,.custom-form__input:not(:placeholder-shown) ~ label {
+        font-size: var(--font-size--xs);
+        letter-spacing: .2px;
+        top: 6px;
+        width: calc(100% - var(--margin-xl));
+    }
+{% endstylesheet %}
+
+{% schema %}
+    {
+        "name": "Input Field",
+        "tag": null,
+        "settings": [
+            {
+                "type": "text",
+                "id": "label",
+                "label": "Label"
+            },
+            {
+                "type": "text",
+                "id": "name",
+                "label": "Name"
+            },
+            {
+            "type": "select",
+            "id": "type",
+            "label": "Field type",
+            "options": [
+                {
+                    "value": "text",
+                    "label": "Text"
+                },
+                {
+                    "value": "email",
+                    "label": "Email"
+                },
+                {
+                    "value": "tel",
+                    "label": "Telephone"
+                },
+                {
+                    "value": "number",
+                    "label": "Number"
+                },
+                {
+                    "value": "textarea",
+                    "label": "Textarea"
+                }
+            ],
+            "default": "text"
+            },
+            {
+                "type": "checkbox",
+                "id": "required",
+                "label": "Required",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "error_message",
+                "label": "Error message"
+            },
+            {
+                "type": "select",
+                "id": "width",
+                "label": "t:settings.width_desktop",
+                "options": [
+                    {
+                    "value": "fit-content",
+                    "label": "t:options.fit_content"
+                    },
+                    {
+                    "value": "fill",
+                    "label": "t:options.fill"
+                    },
+                    {
+                    "value": "custom",
+                    "label": "t:options.custom"
+                    }
+                ],
+                "default": "fill"
+                },
+                {
+                "type": "range",
+                "id": "custom_width",
+                "label": "t:settings.custom_width",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "default": 100,
+                "visible_if": "{{ block.settings.width == 'custom' }}"
+                },
+                {
+                "type": "select",
+                "id": "width_mobile",
+                "label": "t:settings.width_mobile",
+                "options": [
+                    {
+                    "value": "fit-content",
+                    "label": "t:options.fit_content"
+                    },
+                    {
+                    "value": "fill",
+                    "label": "t:options.fill"
+                    },
+                    {
+                    "value": "custom",
+                    "label": "t:options.custom"
+                    }
+                ],
+                "default": "fill"
+                },
+                {
+                "type": "range",
+                "id": "custom_width_mobile",
+                "label": "t:settings.custom_width",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "default": 100,
+                "visible_if": "{{ block.settings.width_mobile == 'custom' }}"
+                }
+        ],
+        "presets": [
+            {
+            "name": "Input Field",
+            "category": "t:categories.forms"
+            }
+        ]
+    }
+{% endschema %}
