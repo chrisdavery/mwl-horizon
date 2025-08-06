@@ -16,6 +16,14 @@ class CustomInput extends HTMLElement {
     if (formId) {
       input.setAttribute('form', formId);
     }
+
+    const errorMessage = this.querySelector('.error-message');
+    if (errorMessage) {
+      const hideError = () => this.classList.remove('has-error');
+      input.addEventListener('input', hideError);
+      input.addEventListener('select', hideError);
+      input.addEventListener('focus', hideError);
+    }
   }
 }
 

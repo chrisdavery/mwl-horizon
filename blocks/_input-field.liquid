@@ -10,91 +10,112 @@
         {% case block.settings.type %}
             {% when 'textarea' %}
                 <custom-input class="custom-input--field">
-                    <textarea
-                    id="CustomForm-{{ block.settings.label | handleize }}"
-                    class="custom-form__input"
-                    name="properties[{{ block.settings.name }}]"
-                    placeholder="{{ block.settings.label }}"
-                    rows="5"
-                    {% if block.settings.required == true %}
-                        required
-                    {% endif %}
-                    ></textarea>
+                    <div class="custom-input-wrapper">
+                        <textarea
+                        id="CustomForm-{{ block.settings.label | handleize }}"
+                        class="custom-form__input"
+                        name="properties[{{ block.settings.name }}]"
+                        placeholder="{{ block.settings.label }}"
+                        rows="5"
+                        {% if block.settings.required == true %}
+                            required
+                        {% endif %}
+                        ></textarea>
 
-                    <label
-                        for="CustomForm-{{ block.settings.label | handleize }}"
-                    >
-                        {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
-                    </label>
-                </custom-input>
-            {% when 'datepicker' %}
-                <custom-input class="custom-input--field">
-                    <date-picker>
-                        <input
-                            type="text"
-                            id="CustomForm-{{ block.settings.label | handleize }}"
-                            name="properties[{{ block.settings.name }}]"
-                            class="custom-form__input"
-                            aria-label="dd/mm/yyyy"
-                            placeholder="dd/mm/yyyy"
-                            readonly
-                            autocomplete="off"
-                            data-start-date="{{ block.settings.start_date }}"
-                        >
                         <label
                             for="CustomForm-{{ block.settings.label | handleize }}"
                         >
                             {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
                         </label>
-
-                        <span class="datepicker-icon">
-                            {{- 'icon-date.svg' | inline_asset_content -}}
-                        </span>
-                        <div class="ai-datepicker-calendar">
-                            <div class="ai-datepicker-header">
-                                <button type="button" class="ai-datepicker-nav" data-action="prev-month" aria-label="Previous month">
-                                    {{- 'icon-caret.svg' | inline_asset_content -}}
-                                </button>
-                                <div class="ai-datepicker-month-year h5"></div>
-                        
-                                <button type="button" class="ai-datepicker-nav" data-action="next-month" aria-label="Next month">
-                                    {{- 'icon-caret.svg' | inline_asset_content -}}
-                                </button>
-                            </div>
-                        
-                            <div class="ai-datepicker-grid">
-                                <div class="ai-datepicker-day-header">S</div>
-                                <div class="ai-datepicker-day-header">M</div>
-                                <div class="ai-datepicker-day-header">T</div>
-                                <div class="ai-datepicker-day-header">W</div>
-                                <div class="ai-datepicker-day-header">T</div>
-                                <div class="ai-datepicker-day-header">F</div>
-                                <div class="ai-datepicker-day-header">S</div>
-                            </div>
-                            <div class="ai-datepicker-year-selector hidden"></div>
+                    </div>
+                    {% if block.settings.error_message != blank %}
+                        <div class="error-message hidden">
+                            {{ block.settings.error_message }}
                         </div>
-                    </date-picker>
+                    {% endif %}
+                </custom-input>
+            {% when 'datepicker' %}
+                <custom-input class="custom-input--field">
+                    <div class="custom-input-wrapper">
+                        <date-picker>
+                            <input
+                                type="text"
+                                id="CustomForm-{{ block.settings.label | handleize }}"
+                                name="properties[{{ block.settings.name }}]"
+                                class="custom-form__input"
+                                aria-label="dd/mm/yyyy"
+                                placeholder="dd/mm/yyyy"
+                                readonly
+                                autocomplete="off"
+                                data-start-date="{{ block.settings.start_date }}"
+                            >
+                            <label
+                                for="CustomForm-{{ block.settings.label | handleize }}"
+                            >
+                                {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
+                            </label>
+
+                            <span class="datepicker-icon">
+                                {{- 'icon-date.svg' | inline_asset_content -}}
+                            </span>
+                            <div class="ai-datepicker-calendar">
+                                <div class="ai-datepicker-header">
+                                    <button type="button" class="ai-datepicker-nav" data-action="prev-month" aria-label="Previous month">
+                                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                                    </button>
+                                    <div class="ai-datepicker-month-year h5"></div>
+                            
+                                    <button type="button" class="ai-datepicker-nav" data-action="next-month" aria-label="Next month">
+                                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                                    </button>
+                                </div>
+                            
+                                <div class="ai-datepicker-grid">
+                                    <div class="ai-datepicker-day-header">S</div>
+                                    <div class="ai-datepicker-day-header">M</div>
+                                    <div class="ai-datepicker-day-header">T</div>
+                                    <div class="ai-datepicker-day-header">W</div>
+                                    <div class="ai-datepicker-day-header">T</div>
+                                    <div class="ai-datepicker-day-header">F</div>
+                                    <div class="ai-datepicker-day-header">S</div>
+                                </div>
+                                <div class="ai-datepicker-year-selector hidden"></div>
+                            </div>
+                        </date-picker>
+                    </div>
+                    {% if block.settings.error_message != blank %}
+                        <div class="error-message hidden">
+                            {{ block.settings.error_message }}
+                        </div>
+                    {% endif %}
                 </custom-input>
             {% else %}
                 <custom-input class="custom-input--field">
-                    <input
-                        type="{{ block.settings.type }}"
-                        id="CustomForm-{{ block.settings.label | handleize }}"
-                        class="custom-form__input"
-                        autocomplete="name"
-                        form="{{ product_form_id }}"
-                        name="properties[{{ block.settings.name }}]"
-                        placeholder="{{ block.settings.label }}"
-                        {% if block.settings.required == true %}
-                            required
-                        {% endif %}
-                    >
+                    <div class="custom-input-wrapper">
+                        <input
+                            type="{{ block.settings.type }}"
+                            id="CustomForm-{{ block.settings.label | handleize }}"
+                            class="custom-form__input"
+                            autocomplete="name"
+                            form="{{ product_form_id }}"
+                            name="properties[{{ block.settings.name }}]"
+                            placeholder="{{ block.settings.label }}"
+                            {% if block.settings.required == true %}
+                                required
+                            {% endif %}
+                        >
 
-                    <label
-                        for="CustomForm-{{ block.settings.label | handleize }}"
-                    >
-                        {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
-                    </label>
+                        <label
+                            for="CustomForm-{{ block.settings.label | handleize }}"
+                        >
+                            {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
+                        </label>
+                    </div>
+                    {% if block.settings.error_message != blank %}
+                        <div class="error-message hidden">
+                            {{ block.settings.error_message }}
+                        </div>
+                    {% endif %}
                 </custom-input> 
         {% endcase %}
 
@@ -104,8 +125,24 @@
     .custom-input--field {
         width: 100%;
         display: block;
+    }
+    .custom-input-wrapper {
         position: relative;
     }
+
+    .error-message {
+        margin-top: var(--margin-2xs);
+        line-height: 1em;
+    }
+
+    .has-error .error-message {
+        display: block !important;
+        color: var(--color-primary-hover);
+    }
+    .custom-input--field.has-error {
+        --color-input-border: var(--color-primary-hover);
+    }
+
     .custom-form__input {
         width: 100%;
         overflow: hidden;
@@ -274,7 +311,7 @@
     .datepicker-icon svg {
         display: block;
     }
-    
+
     @media screen and (max-width: 749px) {
         .ai-datepicker-calendar {
             left: 0;

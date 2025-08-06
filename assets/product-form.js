@@ -54,7 +54,12 @@ export class AddToCartComponent extends Component {
    * Handles the click event for the add to cart button.
    * @param {MouseEvent & {target: HTMLElement}} event - The click event.
    */
+  
   handleClick(event) {
+    const formEl = this.closest('product-form-component');
+    // Ensure formEl is an instance of ProductFormComponent before calling handleErrors
+    if (formEl instanceof ProductFormComponent && !formEl.handleErrors()) return;
+    
     this.animateAddToCart();
 
     if (!event.target.closest('.quick-add-modal')) this.#animateFlyToCart();
@@ -165,6 +170,7 @@ class ProductFormComponent extends Component {
     // Send the add to cart information to the cart
     const form = this.querySelector('form');
 
+    if (!this.handleErrors()) return;
     if (!form) throw new Error('Product form element missing');
 
     const formData = new FormData(form);
@@ -267,6 +273,41 @@ class ProductFormComponent extends Component {
         // add more thing to do in here if needed.
         cartPerformance.measureFromEvent('add:user-action', event);
       });
+  }
+
+  /**
+ * Validates required form inputs.
+ * @returns {boolean} True if all inputs are valid, false otherwise.
+ */
+  handleErrors() {
+    const form = this.querySelector('form');
+    const requiredInputs = document.querySelectorAll(`[form="${form?.getAttribute('id')}"][required]`);
+    let firstError = null;
+
+    for (const input of requiredInputs) {
+      if (!(input instanceof HTMLElement)) continue;
+
+      const invalid = !input.value || (
+        input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)
+      );
+
+      const parent = input.closest('custom-input');
+      const errorMsg = parent?.querySelector('.error-message');
+
+      if (invalid && parent && errorMsg) {
+        parent.classList.add('has-error');
+        if (!firstError) firstError = parent;
+      } else {
+        parent?.classList.remove('has-error');
+      }
+    }
+
+    if (firstError) {
+      firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return false;
+    }
+
+    return true;
   }
 
   /**
