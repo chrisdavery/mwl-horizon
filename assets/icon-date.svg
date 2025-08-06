@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" width="12" height="13" viewBox="0 0 12 13" fill="none">
+    <g id="icon-date">
+    <path d="M9.75 2.375H2.25C2.04289 2.375 1.875 2.54289 1.875 2.75V10.25C1.875 10.4571 2.04289 10.625 2.25 10.625H9.75C9.95711 10.625 10.125 10.4571 10.125 10.25V2.75C10.125 2.54289 9.95711 2.375 9.75 2.375Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.25 1.625V3.125" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3.75 1.625V3.125" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1.875 4.625H10.125" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+</svg>

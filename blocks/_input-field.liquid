@@ -46,19 +46,19 @@
                         >
                             {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
                         </label>
+
+                        <span class="datepicker-icon">
+                            {{- 'icon-date.svg' | inline_asset_content -}}
+                        </span>
                         <div class="ai-datepicker-calendar">
                             <div class="ai-datepicker-header">
                                 <button type="button" class="ai-datepicker-nav" data-action="prev-month" aria-label="Previous month">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M10 12L6 8L10 4" />
-                                    </svg>
+                                    {{- 'icon-caret.svg' | inline_asset_content -}}
                                 </button>
                                 <div class="ai-datepicker-month-year h5"></div>
                         
                                 <button type="button" class="ai-datepicker-nav" data-action="next-month" aria-label="Next month">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M6 4L10 8L6 12" />
-                                    </svg>
+                                    {{- 'icon-caret.svg' | inline_asset_content -}}
                                 </button>
                             </div>
                         
@@ -257,6 +257,24 @@
         cursor: not-allowed;
     }
 
+    .ai-datepicker-nav[data-action="prev-month"] svg {
+        transform: rotate(90deg);
+    }
+
+    .ai-datepicker-nav[data-action="next-month"] svg {
+        transform: rotate(-90deg);
+    }
+
+    .datepicker-icon {
+        position: absolute;
+        right: var(--padding-xl);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .datepicker-icon svg {
+        display: block;
+    }
+    
     @media screen and (max-width: 749px) {
         .ai-datepicker-calendar {
             left: 0;
