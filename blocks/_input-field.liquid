@@ -35,60 +35,70 @@
                     {% endif %}
                 </custom-input>
             {% when 'datepicker' %}
-                <custom-input class="custom-input--field">
-                    <div class="custom-input-wrapper">
-                        <date-picker>
-                            <input
-                                type="text"
-                                id="CustomForm-{{ block.settings.label | handleize }}"
-                                name="properties[{{ block.settings.name }}]"
-                                class="custom-form__input"
-                                aria-label="dd/mm/yyyy"
-                                placeholder="dd/mm/yyyy"
-                                readonly
-                                autocomplete="off"
-                                data-start-date="{{ block.settings.start_date }}"
-                            >
-                            <label
-                                for="CustomForm-{{ block.settings.label | handleize }}"
-                            >
-                                {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
-                            </label>
-
-                            <span class="datepicker-icon">
-                                {{- 'icon-date.svg' | inline_asset_content -}}
-                            </span>
-                            <div class="ai-datepicker-calendar">
-                                <div class="ai-datepicker-header">
-                                    <button type="button" class="ai-datepicker-nav" data-action="prev-month" aria-label="Previous month">
-                                        {{- 'icon-caret.svg' | inline_asset_content -}}
-                                    </button>
-                                    <div class="ai-datepicker-month-year h5"></div>
-                            
-                                    <button type="button" class="ai-datepicker-nav" data-action="next-month" aria-label="Next month">
-                                        {{- 'icon-caret.svg' | inline_asset_content -}}
-                                    </button>
-                                </div>
-                            
-                                <div class="ai-datepicker-grid">
-                                    <div class="ai-datepicker-day-header">S</div>
-                                    <div class="ai-datepicker-day-header">M</div>
-                                    <div class="ai-datepicker-day-header">T</div>
-                                    <div class="ai-datepicker-day-header">W</div>
-                                    <div class="ai-datepicker-day-header">T</div>
-                                    <div class="ai-datepicker-day-header">F</div>
-                                    <div class="ai-datepicker-day-header">S</div>
-                                </div>
-                                <div class="ai-datepicker-year-selector hidden"></div>
-                            </div>
-                        </date-picker>
+                <div class="group-block-content layout-panel-flex layout-panel-flex--column mobile-column"
+                style="--flex-direction: column; --flex-wrap: nowrap; --gap: 12px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center;">
+                    <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                        style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: 0.875rem; --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: var(--max-width--body-normal);">
+                        {{ block.settings.heading }}
                     </div>
-                    {% if block.settings.error_message != blank %}
-                        <div class="error-message hidden">
-                            {{ block.settings.error_message }}
-                        </div>
-                    {% endif %}
-                </custom-input>
+                    <div class="size-style" style="--size-style-width: 100%; --size-style-height: ; --size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;">
+                        <custom-input class="custom-input--field">
+                            <div class="custom-input-wrapper">
+                                <date-picker>
+                                    <input
+                                        type="text"
+                                        id="CustomForm-{{ block.settings.label | handleize }}"
+                                        name="properties[{{ block.settings.name }}]"
+                                        class="custom-form__input"
+                                        aria-label="dd/mm/yyyy"
+                                        placeholder="dd/mm/yyyy"
+                                        readonly
+                                        autocomplete="off"
+                                        data-start-date="{{ block.settings.start_date }}"
+                                    >
+                                    <label
+                                        for="CustomForm-{{ block.settings.label | handleize }}"
+                                    >
+                                        {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
+                                    </label>
+
+                                    <span class="datepicker-icon">
+                                        {{- 'icon-date.svg' | inline_asset_content -}}
+                                    </span>
+                                    <div class="ai-datepicker-calendar">
+                                        <div class="ai-datepicker-header">
+                                            <button type="button" class="ai-datepicker-nav" data-action="prev-month" aria-label="Previous month">
+                                                {{- 'icon-caret.svg' | inline_asset_content -}}
+                                            </button>
+                                            <div class="ai-datepicker-month-year h5"></div>
+                                    
+                                            <button type="button" class="ai-datepicker-nav" data-action="next-month" aria-label="Next month">
+                                                {{- 'icon-caret.svg' | inline_asset_content -}}
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="ai-datepicker-grid">
+                                            <div class="ai-datepicker-day-header">S</div>
+                                            <div class="ai-datepicker-day-header">M</div>
+                                            <div class="ai-datepicker-day-header">T</div>
+                                            <div class="ai-datepicker-day-header">W</div>
+                                            <div class="ai-datepicker-day-header">T</div>
+                                            <div class="ai-datepicker-day-header">F</div>
+                                            <div class="ai-datepicker-day-header">S</div>
+                                        </div>
+                                        <div class="ai-datepicker-year-selector hidden"></div>
+                                    </div>
+                                </date-picker>
+                            </div>
+                            {% if block.settings.error_message != blank %}
+                                <div class="error-message hidden">
+                                    {{ block.settings.error_message }}
+                                </div>
+                            {% endif %}
+                        </custom-input>
+                    </div>
+                </div>
+
             {% else %}
                 <custom-input class="custom-input--field">
                     <div class="custom-input-wrapper">
@@ -378,6 +388,12 @@
                 }
             ],
             "default": "text"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "heading",
+                "label": "Heading",
+                "visible_if": "{{ block.settings.type == 'datepicker' }}"
             },
             {
                 "type": "text",

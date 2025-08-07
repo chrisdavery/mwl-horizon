@@ -716,7 +716,7 @@
                   "settings": {
                     "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" class=\"icon-block__media\" fill=\"none\" viewBox=\"0 0 16 16\">\n  <g id=\"icon-chats\">\n    <path id=\"Vector\" d=\"M4.475 9L2 11V3C2 2.86739 2.05268 2.74021 2.14645 2.64645C2.24021 2.55268 2.36739 2.5 2.5 2.5H10.5C10.6326 2.5 10.7598 2.55268 10.8536 2.64645C10.9473 2.74021 11 2.86739 11 3V8.5C11 8.63261 10.9473 8.75979 10.8536 8.85355C10.7598 8.94732 10.6326 9 10.5 9H4.475Z\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n    <path id=\"Vector_2\" d=\"M5 9V11.5C5 11.6326 5.05268 11.7598 5.14645 11.8536C5.24021 11.9473 5.36739 12 5.5 12H11.525L14 14V6C14 5.86739 13.9473 5.74021 13.8536 5.64645C13.7598 5.55268 13.6326 5.5 13.5 5.5H11\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n  </g>\n</svg>",
                     "icon_size": 16,
-                    "text_content": "Have a question? <a href=\"https://madewithlovebridal.com/pages/contact\">Contact Us</a>",
+                    "text_content": "Have a question? <a href=\"https://madewithlovebridal.com/pages/contact\"><span style=\"text-decoration:underline\">Contact Us</span></a>",
                     "alignment": "center",
                     "gap": 8,
                     "padding": 0
@@ -728,7 +728,7 @@
                   "settings": {
                     "icon_svg": "<svg class=\"icon-block__media\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path id=\"icon-coat-hanger\" d=\"M6 4.5C6 3.96957 6.21071 3.46086 6.58579 3.08579C6.96086 2.71071 7.46957 2.5 8 2.5C8.53043 2.5 9.03914 2.71071 9.41421 3.08579C9.78929 3.46086 10 3.96957 10 4.5L1.2 11.1C1.11605 11.163 1.05403 11.2507 1.02274 11.3509C0.991453 11.4511 0.992473 11.5586 1.02566 11.6581C1.05884 11.7577 1.12251 11.8443 1.20764 11.9056C1.29278 11.967 1.39506 12 1.5 12H14.5C14.6049 12 14.7072 11.967 14.7924 11.9056C14.8775 11.8443 14.9412 11.7577 14.9743 11.6581C15.0075 11.5586 15.0085 11.4511 14.9773 11.3509C14.946 11.2507 14.884 11.163 14.8 11.1L8 6\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
                     "icon_size": 16,
-                    "text_content": "Located in the UK or Europe? <a href=\"https://madewithlovebridal.co.uk/contact-us/\">Enquire now</a>",
+                    "text_content": "Located in the UK or Europe? <a href=\"https://madewithlovebridal.co.uk/contact-us/\"><span style=\"text-decoration:underline\">Enquire now</span></a>",
                     "alignment": "center",
                     "gap": 8,
                     "padding": 0
