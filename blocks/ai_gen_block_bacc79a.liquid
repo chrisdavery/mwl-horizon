@@ -1,0 +1,144 @@
+{% doc %}
+  @prompt
+    create a row icon + inline_richtext. icon settings should have liquid type where I can paster svg code. no need settings for fonts., no need for colors setting
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-icon-text-row-{{ ai_gen_id }} {
+    display: flex;
+    align-items: {{ block.settings.alignment }};
+    gap: {{ block.settings.gap }}px;
+    padding: {{ block.settings.padding }}px;
+  }
+
+  .ai-icon-wrapper-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-icon-wrapper-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;}
+
+  .ai-text-content-{{ ai_gen_id }} {
+    flex-grow: 1;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-icon-text-row-{{ ai_gen_id }} {
+      gap: {{ block.settings.gap | times: 0.75 }}px;
+      padding: {{ block.settings.padding | times: 0.75 }}px;
+    }
+
+    .ai-icon-wrapper-{{ ai_gen_id }} {
+      width: {{ block.settings.icon_size | times: 0.8 }}px;
+      height: {{ block.settings.icon_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-icon-text-row-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.icon_svg != blank %}
+    <div class="ai-icon-wrapper-{{ ai_gen_id }}">
+      {{ block.settings.icon_svg }}
+    </div>
+  {% endif %}
+  {% if block.settings.text_content != blank %}
+    <div class="ai-text-content-{{ ai_gen_id }}">
+      {{ block.settings.text_content }}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Icon Text Row",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Icon"
+    },
+    {
+      "type": "liquid",
+      "id": "icon_svg",
+      "label": "SVG icon code"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text_content",
+      "label": "Text content",
+      "default": "Add your text here"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between icon and text",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon Text Row"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}
