@@ -139,17 +139,20 @@
 </div>
 
 {% stylesheet %}
+    .product-features-wrapper:empty {
+      display: none;
+    }
     .product-features-block .resource-list--grid {
         @media screen and (min-width: 750px) {
             grid-template-columns: var(--resource-list-columns) !important;
         }
     }
-    .block-resource-list {
+    .product-features-block .block-resource-list {
         @media screen and (max-width: 749px) {
             margin-inline-end: calc(-1 * var(--page-margin));
         }
     }
-    .resource-list__carousel slideshow-slides {
+    .product-features-block .resource-list__carousel slideshow-slides {
         @media screen and (max-width: 749px) {
             gap: 1px;
         }
@@ -160,6 +163,7 @@
 {
   "name": "Product Features",
   "class": "product-features-wrapper",
+  "tag": null,
   "blocks": [
     {
       "type": "@theme"

@@ -45,6 +45,10 @@
     display: flex;
     align-self: start;
     justify-content: center;
+
+    &:has(.complementary-card) .divider {
+      display: none;
+    }
   }
 
   @media screen and (min-width: 750px) {

@@ -51,7 +51,7 @@
       {%  render 'gap-style', value: block.settings.gap %}
       --resource-list-column-gap-desktop: {{ block.settings.columns_gap }}px;
       --resource-list-row-gap-desktop: {{ block.settings.rows_gap }}px;
-      --resource-list-columns-mobile: repeat(auto-fill, minmax(9.25rem, 1fr));
+      --resource-list-columns-mobile: 1fr;
     "
   >
     <div class="section-resource-list__content">
@@ -84,7 +84,7 @@
         {% for product in products limit: block.settings.max_products %}
           <div class="resource-list__item">
             {% content_for 'block',
-              type: '_product-card',
+              type: '_product-card-horizontal',
               id: 'static-product-card',
               closest.product: product
             %}
@@ -399,7 +399,7 @@
           }
         },
         "static-product-card": {
-          "type": "_product-card",
+          "type": "_product-card-horizontal",
           "static": true,
           "settings": {
             "product_card_gap": 4

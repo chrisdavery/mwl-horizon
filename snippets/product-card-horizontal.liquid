@@ -1,0 +1,196 @@
+{%- doc -%}
+  This snippet is used to render a product card.
+  It is used in the product block, featured product block, and the product card block.
+  The product object is null or when placeholders are rendered.
+
+  @param {object} product - The product object
+  @param {object} [block] - The block object
+{%- enddoc -%}
+
+{% liquid
+    assign product_card_id = 'product-card-link-' | append: block.id | append: '-' | append: product.id
+    assign product_card_gap_value = product_card_gap | default: block.settings.product_card_gap
+%}
+
+<complementary-card
+  class="complementary-card"
+  data-product-id="{{ product.id }}"
+  data-product-variants-size="{{ product.variants.size }}"
+  id="complementary-card-{{ block.id }}"
+  data-product-transition="{{ settings.transition_to_main_product }}"
+  {{ block.shopify_attributes }}
+>
+  <div
+    class="
+      complementary-card__content
+      layout-panel-flex
+      layout-panel-flex--row
+      product-grid__card-horizontal
+      spacing-style
+      border-style
+      gap-style
+      {% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}
+    "
+    style="
+    --flex-direction: row; --flex-wrap: nowrap;
+    --horizontal-alignment: flex-start;
+    --vertical-alignment: center;
+    --vertical-alignment-mobile: center;
+      {% render 'border-override', settings: block.settings %}
+      {% render 'spacing-style', settings: block.settings %}
+      {% render 'gap-style', value: product_card_gap_value, name: 'complementary-card-gap' %}
+    "
+  >
+    {% capture card_size %}
+        {% render 'util-product-grid-card-size' section: section %}
+    {% endcapture %}
+    {% comment %} {% assign card_size = card_size | strip | replace: 'px', '' | plus: 0 %} {% endcomment %}
+    {% assign card_size = 365 %}
+    {% capture sizes_attribute %}
+        {% render 'util-autofill-img-size-attr' card_size: card_size, card_gap: 10 %}
+    {% endcapture %}
+    {% assign image_sizes = sizes_attribute | strip %}
+    {% liquid
+        assign lazy_image_sizes = 'auto, ' | append: image_sizes
+    %}
+    {% assign loading = 'lazy' %}
+    {% assign sizes = lazy_image_sizes %}
+
+    {% if product.featured_media %}
+        <div class="product-media--wrapper" style="--media-preview-ratio: {{ block.settings.aspect_ratio }};">
+            {%- render 'product-media', media: product.featured_media, sizes: sizes, loading: loading, preview_image_only: true -%}
+        </div>
+    {% endif %}
+
+    <div class="complementary-content">
+        <div class="flex complementary-top-flex justify-between">
+            <div>
+                <div class="flex justify-between">
+                    <div>
+                        <span class="h6">{{ product.title }}</span>
+                    </div>
+                    <div>
+                        <span class="h6">+ {{ product.price | money }}</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    {% capture name %}complete_the_look-{{ product.id }}{% endcapture %}
+                    {% capture input_id %}Complete-{{ product.selected_or_first_available_variant.id }}{% endcapture %}
+                    {% liquid
+                        assign is_disabled = false
+                        if product.available == false
+                            assign is_disabled = true
+                        endif
+                    %}
+                    {% render 'checkbox',
+                        name: name,
+                        value: product.selected_or_first_available_variant.id,
+                        label: product.title,
+                        checked: false,
+                        id: input_id,
+                        disabled: is_disabled,
+                        events: ''
+                    %}
+                </div>
+            </div>
+        </div>
+
+        <div class="complementary-excerpt">
+            <div
+                class="
+                    spacing-style
+                    text-block
+                    custom
+                    text-block--align-left
+                    text-block--full-width
+                    custom-typography
+                    custom-font-size
+                    custom-color
+                "
+                style="
+                    --padding-block-start: 0px;
+                    --padding-block-end: 0px;
+                    --padding-inline-start: 0px;
+                    --padding-inline-end: 0px;
+                    --color: var(--color-foreground);
+                    --font-size: 1rem;
+                    --font-weight: var(--font-body--weight);
+                    --font-family: var(--font-body--family);
+                    --text-transform: none;
+                    --text-wrap: pretty;
+                    --line-height: var(--line-height--body-tight);
+                    --letter-spacing: var(--letter-spacing--body-loose);
+                    --width: 100%;
+                    --max-width: var(--max-width--body-none);
+                    --text-align: left;
+                "
+            >
+                {{ product.description | truncate: 125 }}
+            </div>
+        </div>
+    </div>
+  </div>
+</complementary-card>
+
+
+{% stylesheet %}
+    complementary-card {
+        display: block;
+    }
+    .complementary-excerpt {
+        margin-top: 5px;
+
+        @media (max-width: 749px) {
+            .text-block {
+                --font-size: var(--font-size--sm) !important;
+            }
+        }
+    }
+  .product-media--wrapper {
+    max-width: 3.4rem;
+    aspect-ratio: var(--gallery-aspect-ratio, var(--media-preview-ratio));
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+  .product-media--wrapper img {
+    aspect-ratio: inherit;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .product-media--wrapper .product-media {
+        aspect-ratio: var(--gallery-aspect-ratio, var(--media-preview-ratio));
+        min-height: 0;
+        min-width: 0;
+    }
+  .complementary-content {
+    flex: 1 auto;
+  }
+
+  .complementary-top-flex {
+    align-items: center;
+  }
+
+  .complementary-top-flex > div:first-child {
+    flex: 1 auto;
+  }
+  
+  .product-grid__card-horizontal {
+    flex-flow: row nowrap;
+
+    .checkbox .checkbox__label-text {
+        display: none;
+    }
+
+    .checkbox__label {
+        min-width: unset;
+    }
+  }
+
+  .product-card__placeholder-image svg {
+    height: 100%;
+  }
+{% endstylesheet %}

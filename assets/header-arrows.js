@@ -9,7 +9,7 @@ class HeaderArrows extends HTMLElement {
   connectedCallback() {
     this.prevBtn = this.querySelector('button[ref="previous"]');
     this.nextBtn = this.querySelector('button[ref="next"]');
-    const parentSection =  this.closest('.shopify-block') || this.closest('.section');
+    const parentSection =  this.closest('.product-details') || this.closest('.section');
 
     if (!parentSection) return;
 
