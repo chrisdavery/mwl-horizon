@@ -22,7 +22,7 @@ class CustomInput extends HTMLElement {
       const hideError = () => this.classList.remove('has-error');
       input.addEventListener('input', hideError);
       input.addEventListener('select', hideError);
-      input.addEventListener('focus', hideError);
+      input.addEventListener('focus', hideError); 
     }
   }
 }
