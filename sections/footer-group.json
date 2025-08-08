@@ -764,6 +764,7 @@
               "type": "_footer-copyright",
               "static": true,
               "settings": {
+                "show_powered_by": false,
                 "font_size": "0.75rem",
                 "case": "none"
               },
