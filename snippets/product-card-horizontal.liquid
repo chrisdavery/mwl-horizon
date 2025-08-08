@@ -65,7 +65,7 @@
     <div class="complementary-content">
         <div class="flex complementary-top-flex justify-between">
             <div>
-                <div class="flex justify-between">
+                <div class="flex complementary-top-inner justify-between">
                     <div>
                         <span class="h6">{{ product.title }}</span>
                     </div>
@@ -172,8 +172,19 @@
 
   .complementary-top-flex {
     align-items: center;
+    line-height: 1em;
+
+    @media (max-width: 749px) {
+      gap: var(--gap-sm);
+    }
   }
 
+  .complementary-top-inner {
+    @media (max-width: 749px) {
+      gap: var(--gap-sm);
+    }
+  }
+  
   .complementary-top-flex > div:first-child {
     flex: 1 auto;
   }

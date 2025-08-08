@@ -425,24 +425,6 @@
               },
               "blocks": {}
             },
-            "type_switcher_xk3qkx": {
-              "type": "_type-switcher",
-              "name": "Type Switcher",
-              "settings": {},
-              "blocks": {}
-            },
-            "divider_VJhene": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
             "product_features_8jPULx": {
               "type": "product-features",
               "name": "Product Features",
@@ -500,15 +482,15 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<h5>SPECIAL FEATURES</h5>",
+                        "text": "<p>SPECIAL FEATURES</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
+                        "type_preset": "custom",
+                        "font": "var(--font-subheading--family)",
+                        "font_size": "0.875rem",
                         "line_height": "normal",
-                        "letter_spacing": "normal",
+                        "letter_spacing": "loose",
                         "case": "none",
                         "wrap": "pretty",
                         "color": "var(--color-foreground)",
@@ -586,6 +568,15 @@
               },
               "block_order": []
             },
+            "type_switcher_xk3qkx": {
+              "type": "_type-switcher",
+              "name": "Type Switcher",
+              "settings": {
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-26ed3e62-7da9-457a-940d-928952646049"
+              },
+              "blocks": {}
+            },
             "variant_picker_R3rGDr": {
               "type": "variant-picker",
               "settings": {
@@ -624,11 +615,11 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "0.875rem",
                     "line_height": "normal",
-                    "letter_spacing": "normal",
+                    "letter_spacing": "loose",
                     "case": "none",
                     "wrap": "pretty",
                     "color": "var(--color-foreground)",
@@ -878,9 +869,8 @@
             "custom_liquid_6BFDQc",
             "group_icgrde",
             "product_description_4K6trb",
-            "type_switcher_xk3qkx",
-            "divider_VJhene",
             "product_features_8jPULx",
+            "type_switcher_xk3qkx",
             "variant_picker_R3rGDr",
             "product_recommendations_8Vzc6N",
             "buy_buttons_eYQEYi",
