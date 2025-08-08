@@ -59,6 +59,8 @@
   "actions": {
     "add": "Add",
     "add_to_cart": "Add to bag",
+    "ready_to_wear": "Ready To Wear",
+    "made_to_order": "Made To Order",
     "added": "Added",
     "apply": "Apply",
     "back": "Back",

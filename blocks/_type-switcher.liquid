@@ -1,0 +1,42 @@
+{% if product.metafields.product_content.product_ready_to_wear_url != blank and  product.metafields.product_content.product_made_to_order_url != blank %}
+    <div class="flex switcher-row">
+        <div>
+            <a href="{{ product.metafields.product_content.product_ready_to_wear_url.url }}" class="button button--primary">
+                {{ 'actions.made_to_order' | t }}
+            </a>
+        </div>
+        <div>
+            <a href="{{ product.metafields.product_content.product_ready_to_wear_url.url }}" class="button button--primary">
+                {{ 'actions.ready_to_wear' | t }}
+            </a>
+        </div>
+    </div>
+{% endif %}
+
+{% stylesheet %}
+    .switcher-row {
+        align-items: center;
+        padding: 3px;
+        gap: 0;
+
+        & > div {
+            width: 50%;
+        }
+
+        .button {
+            width: 100%;
+            padding-block: 5px;
+        }
+    }
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Type Switcher",
+  "tag": null,
+  "presets": [
+    {
+        "name": "Type Switcher"
+    }
+  ]
+}
+{% endschema %}

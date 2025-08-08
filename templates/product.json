@@ -425,6 +425,12 @@
               },
               "blocks": {}
             },
+            "type_switcher_xk3qkx": {
+              "type": "_type-switcher",
+              "name": "Type Switcher",
+              "settings": {},
+              "blocks": {}
+            },
             "divider_VJhene": {
               "type": "_divider",
               "name": "t:names.divider",
@@ -872,6 +878,7 @@
             "custom_liquid_6BFDQc",
             "group_icgrde",
             "product_description_4K6trb",
+            "type_switcher_xk3qkx",
             "divider_VJhene",
             "product_features_8jPULx",
             "variant_picker_R3rGDr",
