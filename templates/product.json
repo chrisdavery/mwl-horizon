@@ -657,6 +657,29 @@
                 "text_DcdTkz"
               ]
             },
+            "input_field_4mNRnV": {
+              "type": "_input-field",
+              "name": "Input Field",
+              "settings": {
+                "label": "dd/mm/yyyy",
+                "name": "Wedding Date",
+                "type": "datepicker",
+                "heading": "Your wedding date:",
+                "lead_date": 60,
+                "priority_fees": [
+                  "high-priority-fee",
+                  "priority-fee"
+                ],
+                "required": true,
+                "error_message": "dd/mm/yyyy is required",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "hide_if_tag": "hidden-wedding-date"
+              },
+              "blocks": {}
+            },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
               "settings": {
@@ -873,6 +896,7 @@
             "type_switcher_xk3qkx",
             "variant_picker_R3rGDr",
             "product_recommendations_8Vzc6N",
+            "input_field_4mNRnV",
             "buy_buttons_eYQEYi",
             "group_MFhVLM",
             "accordion_UNzCAY"

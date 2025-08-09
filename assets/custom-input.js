@@ -50,6 +50,12 @@ class DatePicker extends HTMLElement {
     this.input = this.querySelector('.custom-form__input');
     if (!this.input) return;
 
+    const leadDays = parseInt(this.input.dataset.leadDate || "0", 10);
+    this.startDate = new Date(this.today);
+    this.startDate.setDate(this.startDate.getDate() + leadDays);
+    // Set time to end of day to ensure full day is included
+    this.startDate.setHours(23, 59, 59, 999);
+
     this.calendar = this.querySelector('.ai-datepicker-calendar');
     this.monthYearDisplay = this.querySelector('.ai-datepicker-month-year');
     this.grid = this.querySelector('.ai-datepicker-grid');
@@ -60,7 +66,6 @@ class DatePicker extends HTMLElement {
     this.setupEventListeners();
     this.renderCalendar();
 
-    // ✅ Add these lines to ensure clicks outside hide the calendar
     document.addEventListener('click', this.handleDocumentClick);
     document.addEventListener('keydown', this.handleKeyDown);
   }
@@ -69,7 +74,7 @@ class DatePicker extends HTMLElement {
     this.input.addEventListener('focus', () => this.showCalendar());
     this.prevButton.addEventListener('click', () => this.previousMonth());
     this.nextButton.addEventListener('click', () => this.nextMonth());
-    this.monthYearDisplay.addEventListener('click', () => this.toggleYearSelector()); // 👈 Add this
+    this.monthYearDisplay.addEventListener('click', () => this.toggleYearSelector());
   }
 
   disconnectedCallback() {
@@ -82,8 +87,6 @@ class DatePicker extends HTMLElement {
       this.justOpened = false;
       return;
     }
-
-    // ✅ This closes the calendar only if the click was outside the entire <date-picker>
     if (!this.contains(e.target)) {
       this.hideCalendar();
     }
@@ -103,10 +106,13 @@ class DatePicker extends HTMLElement {
   showCalendar() {
     this.justOpened = true;
 
-    // ✅ If input is empty and no selected date, select today
     if (!this.input.value && !this.selectedDate) {
       this.selectedDate = new Date(this.today);
       this.currentDate = new Date(this.today);
+    }
+
+    if (!this.hasAvailableDaysInMonth(this.currentDate)) {
+      this.moveToNextAvailableMonth();
     }
 
     this.calendar.classList.add('active');
@@ -152,6 +158,10 @@ class DatePicker extends HTMLElement {
     for (let i = 0; i < 42; i++) {
       const date = new Date(startDate);
       date.setDate(startDate.getDate() + i);
+      // Create comparison date at midnight
+      const comparisonDate = new Date(date);
+      comparisonDate.setHours(0, 0, 0, 0);
+      
       const dayElement = document.createElement('div');
       dayElement.className = 'ai-datepicker-day';
       dayElement.textContent = date.getDate();
@@ -161,7 +171,8 @@ class DatePicker extends HTMLElement {
         dayElement.classList.add('other-month');
       }
 
-      if (date < this.startDate) {
+      // Compare against normalized dates
+      if (comparisonDate < this.startDate) {
         dayElement.classList.add('disabled');
       }
 
@@ -207,6 +218,31 @@ class DatePicker extends HTMLElement {
     this.prevButton.disabled = !hasValidDateInPrevMonth;
   }
 
+  hasAvailableDaysInMonth(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const checkDate = new Date(year, month, day);
+      if (checkDate >= this.startDate) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  moveToNextAvailableMonth() {
+    let nextMonth = new Date(this.currentDate);
+    for (let i = 0; i < 12; i++) {
+      nextMonth.setMonth(nextMonth.getMonth() + 1);
+      if (this.hasAvailableDaysInMonth(nextMonth)) {
+        this.currentDate = new Date(nextMonth);
+        return;
+      }
+    }
+  }
+
   toggleYearSelector() {
     if (this.yearSelector.classList.contains('hidden')) {
       this.populateYearSelector();
@@ -223,7 +259,7 @@ class DatePicker extends HTMLElement {
     const todayYear = this.today.getFullYear();
     this.yearSelector.innerHTML = '';
 
-    for (let year = todayYear; year <= 2055; year++) { // 👈 starts from todayYear now
+    for (let year = todayYear; year <= 2055; year++) {
       const yearSpan = document.createElement('span');
       yearSpan.textContent = year;
       yearSpan.classList.add('ai-datepicker-year');
@@ -247,6 +283,7 @@ class DatePicker extends HTMLElement {
     this.input.value = this.formatDate(date);
     this.renderCalendar();
     this.hideCalendar();
+    this.updatePriorityFeeItems(date);
   }
 
   formatDate(date) {
@@ -254,6 +291,44 @@ class DatePicker extends HTMLElement {
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
+  }
+
+  updatePriorityFeeItems(selectedDate) {
+      const parentGroup = this.closest('.parent-group-datepicker');
+      if (!parentGroup) return;
+
+      const priorityFeeItems = Array.from(parentGroup.querySelectorAll('.priority-fee-item'));
+      if (!priorityFeeItems.length) return;
+
+      // Calculate days difference
+      const daysDiff = Math.ceil((selectedDate - this.today) / (1000 * 60 * 60 * 24));
+      
+      // Clear all active classes first
+      priorityFeeItems.forEach(item => item.classList.remove('active'));
+
+      // If date is 180+ days away, don't activate any fees
+      if (daysDiff >= 180) {
+          return;
+      }
+
+      // Get sorted thresholds (ascending order)
+      const thresholds = priorityFeeItems
+          .map(item => parseInt(item.dataset.leadDate))
+          .sort((a,b) => a - b);
+
+      // Find applicable fee
+      for (let i = 0; i < thresholds.length; i++) {
+          const minDays = thresholds[i];
+          const maxDays = thresholds[i+1] || Infinity;
+          
+          if (daysDiff >= minDays && daysDiff < maxDays) {
+              const matchingItem = priorityFeeItems.find(
+                  item => parseInt(item.dataset.leadDate) === minDays
+              );
+              matchingItem?.classList.add('active');
+              break;
+          }
+      }
   }
 }
 

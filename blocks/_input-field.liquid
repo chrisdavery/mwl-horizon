@@ -1,3 +1,7 @@
+{% if block.settings.hide_if_tag != blank and product.tags contains block.settings.hide_if_tag %}
+    {% break %}
+{% endif %}
+
 {% capture style %}
   {% render 'size-style', settings: block.settings %}
 {% endcapture %}
@@ -35,7 +39,7 @@
                     {% endif %}
                 </custom-input>
             {% when 'datepicker' %}
-                <div class="group-block-content layout-panel-flex layout-panel-flex--column mobile-column"
+                <div class="group-block-content parent-group-datepicker layout-panel-flex layout-panel-flex--column mobile-column"
                 style="--flex-direction: column; --flex-wrap: nowrap; --gap: 12px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center;">
                     <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
                         style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: 0.875rem; --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: var(--max-width--body-normal);">
@@ -54,7 +58,13 @@
                                         placeholder="dd/mm/yyyy"
                                         readonly
                                         autocomplete="off"
-                                        data-start-date="{{ block.settings.start_date }}"
+                                        data-lead-date="{{ block.settings.lead_date }}"
+                                        {% if block.settings.lead_month %}
+                                            data-lead-month="{{ block.settings.lead_month }}"
+                                        {% endif %}
+                                        {% if block.settings.required == true %}
+                                            required
+                                        {% endif %}
                                     >
                                     <label
                                         for="CustomForm-{{ block.settings.label | handleize }}"
@@ -97,6 +107,35 @@
                             {% endif %}
                         </custom-input>
                     </div>
+
+                    {% for item in block.settings.priority_fees %}
+                        <div class="priority-fee-item" data-lead-date="{{ item.lead_date }}" data-product-id="{{ all_products[item.product].selected_or_first_available_variant.id }}">
+                            <div class="group-block-content layout-panel-flex layout-panel-flex--column mobile-column"
+                                style="--flex-direction: column; --flex-wrap: nowrap; --gap: 8px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center; --width: 100%; --max-width: 100%;">
+                                <div class="group-block-content layout-panel-flex layout-panel-flex--row"
+                                    style="--flex-direction: row; --flex-wrap: nowrap; --gap: 0px; --horizontal-alignment: space-between; --vertical-alignment: center; --vertical-alignment-mobile: center; --width: 100%; --max-width: 100%;">
+                                    {% if item.title != blank %}
+                                        <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                                            style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--xs); --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: fit-content;">
+                                            {{ item.title }}
+                                        </div>
+                                    {% endif %}
+                                    {% if item.product != blank %}
+                                        <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                                        style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--xs); --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: fit-content; flex: 0 auto;">
+                                            + {{ all_products[item.product].price | money }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                {% if item.details != blank %}
+                                    <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                                        style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: 0.875rem; --font-weight: var(--font-body--weight); --font-family: var(--font-body--family); --text-transform: unset; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: 16.5rem;">
+                                        {{ item.details | metafield_tag }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             {% else %}
                 <custom-input class="custom-input--field">
@@ -192,6 +231,15 @@
         width: calc(100% - var(--margin-xl));
     }
     
+    date-picker .custom-form__input {
+        font-size: var(--font-size--xs);
+        font-family: var(--font-h5--family);
+    }
+
+    date-picker .custom-form__input:focus~label,date-picker .custom-form__input:not(:placeholder-shown) ~ label {
+        top: 4px;
+    }
+
     .ai-datepicker-month-year {
         cursor: pointer;
         position: relative;
@@ -333,6 +381,25 @@
     .datepicker-icon svg {
         display: block;
     }
+    .ai-datepicker-header .ai-datepicker-nav[disabled] {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .priority-fee-item {
+        width: 100%;
+        padding: var(--padding-sm);
+        background: rgb(248 246 239 / 1.0);
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .priority-fee-item .metafield-rich_text_field > * {
+        margin: 0;
+    }
 
     @media screen and (max-width: 749px) {
         .ai-datepicker-calendar {
@@ -396,11 +463,18 @@
                 "visible_if": "{{ block.settings.type == 'datepicker' }}"
             },
             {
-                "type": "text",
-                "id": "start_date",
-                "label": "Start date",
-                "info": "Format: YYYY-MM-DD. Leave empty to use today's date.",
+                "type": "number",
+                "id": "lead_date",
+                "label": "Lead date",
+                "info": "Enter the number of days from today before the first selectable date. Example: 2 = two days from now.",
                 "visible_if": "{{ block.settings.type == 'datepicker' }}"
+            },
+            {
+                "type": "metaobject_list",
+                "id": "priority_fees",
+                "label": "Priority Fees",
+                "metaobject_type": "priority_fees",
+                "info": "(Optional) only use for date picker wedding dress"
             },
             {
                 "type": "checkbox",
@@ -474,7 +548,13 @@
                 "unit": "%",
                 "default": 100,
                 "visible_if": "{{ block.settings.width_mobile == 'custom' }}"
-                }
+            },
+            {
+                "type": "text",
+                "id": "hide_if_tag",
+                "label": "Hide if product tag contains",
+                "visible_if": "{{ block.settings.type == 'datepicker' }}"
+            }
         ],
         "presets": [
             {
