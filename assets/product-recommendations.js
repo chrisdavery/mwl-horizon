@@ -142,3 +142,61 @@ class ProductRecommendations extends HTMLElement {
 if (!customElements.get('product-recommendations')) {
   customElements.define('product-recommendations', ProductRecommendations);
 }
+
+
+class ComplementaryCard extends HTMLElement {
+  connectedCallback() {
+    this.addEventListener('click', this.onCardClick.bind(this));
+  }
+
+  /**
+   * @param {MouseEvent} e
+   */
+  onCardClick(e) {
+    // Ignore clicks on checkbox or label
+    if (e.target && (e.target instanceof Element) && e.target.closest('input[type="checkbox"], label')) return;
+
+    /** @type {HTMLInputElement|null} */
+    const checkbox = this.querySelector('input[type="checkbox"]');
+
+    if (checkbox?.disabled == true) return;
+    
+    if (checkbox) {
+      checkbox.checked = !checkbox.checked;
+      checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+
+      // Get product form
+      const productDetails = this.closest('.product-details');
+      /** @type {HTMLFormElement|null} */
+      const productForm = (productDetails?.querySelector('.shopify-product-form') ?? null);
+
+      // Remove any old hidden inputs for this variantId
+
+      if (productForm) {
+        const variantId = this.dataset.variantId;
+        if (variantId) {
+          productForm.querySelectorAll(`input.complete-fee.product-addon[name="addons[${variantId}]"]`).forEach((input) => input.remove());
+        }
+      }
+
+      // Add hidden input if checked
+      if (checkbox.checked && productForm) {
+        const variantId = this.dataset.variantId;
+        if (variantId) {
+          const hiddenInput = document.createElement('input');
+          hiddenInput.type = 'hidden';
+          hiddenInput.name = `addons[${variantId}]`;
+          hiddenInput.value = variantId;
+          hiddenInput.classList.add('product-addon');
+          hiddenInput.classList.add('complete-fee');
+          productForm.appendChild(hiddenInput);
+        }
+      }
+    }
+  }
+}
+
+// Define the custom element if not already defined
+if (!customElements.get('complementary-card')) {
+  customElements.define('complementary-card', ComplementaryCard);
+}

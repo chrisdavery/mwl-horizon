@@ -14,7 +14,7 @@
 
 <complementary-card
   class="complementary-card"
-  data-product-id="{{ product.id }}"
+  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
   data-product-variants-size="{{ product.variants.size }}"
   id="complementary-card-{{ block.id }}"
   data-product-transition="{{ settings.transition_to_main_product }}"
@@ -138,6 +138,11 @@
 {% stylesheet %}
     complementary-card {
         display: block;
+        cursor: pointer;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* IE10+/Edge */
+        user-select: none;         /* Standard */
     }
     .complementary-excerpt {
         margin-top: 5px;

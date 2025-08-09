@@ -1,0 +1,128 @@
+{% liquid
+  assign block_settings = block.settings
+  assign block_items = block_settings.items_list
+
+  if block_items == blank
+    break
+  endif
+%}
+
+<div
+  class="product-custom-details-block"
+  data-section-id="{{ section.id }}"
+  data-testid="product-custom-details-block"
+  {{ block.shopify_attributes }}
+>
+    <div
+        class="
+            group-block
+            spacing-style
+            gap-style
+            group-block-content
+            layout-panel-flex
+            layout-panel-flex--column
+            mobile-column
+        "
+        style="
+        {%  render 'spacing-style', settings: block.settings %}
+        {%  render 'gap-style', value: block.settings.gap %}
+        "
+    >
+        <div class="section-resource-list__header">
+            {%- content_for 'block', type: '_product-list-content', id: 'static-header', block_settings: block.settings -%}
+        </div>
+
+        {% for item in block_items %}
+            {% content_for 'block',
+              type: '_dropdown-details',
+              item: item,
+              id: 'dropdown-details',
+              required: true,
+              loop_index: forloop.index0
+            %}
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Details",
+  "tag": null,
+  "settings": [
+    {
+        "type": "metaobject_list",
+        "id": "items_list",
+        "label": "Custom Details List",
+        "metaobject_type": "size_set",
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Details",
+      "category": "t:categories.product",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Your Dress Details</h5>"
+          }
+        },
+        "dropdown-details": {
+          "type": "_dropdown-details",
+          "name": "dropdown-details",
+          "static": true,
+        }
+      },
+      "block_order": ["heading"]
+    }
+  ]
+}
+{% endschema %}

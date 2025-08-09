@@ -1,8 +1,6 @@
-import { ThemeEvents, CartAddEvent, CartErrorEvent, VariantUpdateEvent } from '@theme/events';
-
 class CustomInput extends HTMLElement {
   connectedCallback() {
-    const input = this.querySelector('input, textarea');
+    const input = this.querySelector('input, textarea, select');
     if (!input) return;
 
     const productDetails = this.closest('.product-details');
@@ -21,6 +19,7 @@ class CustomInput extends HTMLElement {
     if (errorMessage) {
       const hideError = () => this.classList.remove('has-error');
       input.addEventListener('input', hideError);
+      input.addEventListener('change', hideError);
       input.addEventListener('select', hideError);
       input.addEventListener('focus', hideError); 
     }
@@ -300,32 +299,51 @@ class DatePicker extends HTMLElement {
       const priorityFeeItems = Array.from(parentGroup.querySelectorAll('.priority-fee-item'));
       if (!priorityFeeItems.length) return;
 
-      // Calculate days difference
       const daysDiff = Math.ceil((selectedDate - this.today) / (1000 * 60 * 60 * 24));
-      
-      // Clear all active classes first
+
+      // Clear all active classes
       priorityFeeItems.forEach(item => item.classList.remove('active'));
 
-      // If date is 180+ days away, don't activate any fees
-      if (daysDiff >= 180) {
-          return;
+      // Get product form
+      const productDetails = this.closest('.product-details');
+      const productForm = productDetails?.querySelector('.shopify-product-form');
+
+      // Remove any old hidden inputs
+      if (productForm) {
+        productForm.querySelectorAll('.priority-fee').forEach(input => input.remove());
       }
 
-      // Get sorted thresholds (ascending order)
+      // Skip if too far out
+      if (daysDiff >= 180) return;
+
+      // Sort thresholds
       const thresholds = priorityFeeItems
           .map(item => parseInt(item.dataset.leadDate))
-          .sort((a,b) => a - b);
+          .sort((a, b) => a - b);
 
-      // Find applicable fee
       for (let i = 0; i < thresholds.length; i++) {
           const minDays = thresholds[i];
-          const maxDays = thresholds[i+1] || Infinity;
-          
+          const maxDays = thresholds[i + 1] || Infinity;
+
           if (daysDiff >= minDays && daysDiff < maxDays) {
               const matchingItem = priorityFeeItems.find(
                   item => parseInt(item.dataset.leadDate) === minDays
               );
-              matchingItem?.classList.add('active');
+
+              if (matchingItem) {
+                  matchingItem.classList.add('active');
+
+                  const productId = matchingItem.dataset.productId;
+                  if (productId && productForm) {
+                      const hiddenInput = document.createElement('input');
+                      hiddenInput.type = 'hidden';
+                      hiddenInput.name = `addons[${productId}]`;
+                      hiddenInput.value = productId; // ← same as dataset.productId
+                      hiddenInput.classList.add('product-addon');
+                      hiddenInput.classList.add('priority-fee');
+                      productForm.appendChild(hiddenInput);
+                  }
+              }
               break;
           }
       }
@@ -333,3 +351,96 @@ class DatePicker extends HTMLElement {
 }
 
 customElements.define('date-picker', DatePicker);
+
+class CustomSelect extends HTMLElement {
+  connectedCallback() {
+    const select = this.querySelector("select");
+    if (!select) return;
+
+    this.select = select;
+    this.render();
+    this.bindEvents();
+  }
+
+  render() {
+    this.wrapper = document.createElement("div");
+    this.wrapper.className = "custom-select";
+
+    this.display = document.createElement("div");
+    this.display.className = "cs-display";
+    this.display.textContent = ""; // always blank initially
+    this.wrapper.appendChild(this.display);
+
+    this.menu = document.createElement("div");
+    this.menu.className = "cs-menu";
+    this.populateMenu();
+    this.wrapper.appendChild(this.menu);
+
+    this.appendChild(this.wrapper);
+  }
+
+  populateMenu() {
+    this.optionEls = []; // store references
+
+    Array.from(this.select.options)
+      .filter(opt => opt.value.trim() !== "") // skip empty placeholder
+      .forEach(opt => {
+        const optionEl = document.createElement("div");
+        optionEl.className = "cs-option";
+        optionEl.textContent = opt.text;
+
+        optionEl.addEventListener("click", e => {
+          e.stopPropagation(); // prevents wrapper click from firing
+          this.onOptionSelect(opt, optionEl);
+        });
+
+        this.menu.appendChild(optionEl);
+        this.optionEls.push(optionEl);
+      });
+  }
+
+  bindEvents() {
+    // Click anywhere in wrapper to toggle menu
+    this.wrapper.addEventListener("click", () => this.toggleMenu());
+
+    // Close menu when clicking outside
+    document.addEventListener("click", e => {
+      if (!this.wrapper.contains(e.target)) this.closeMenu();
+    });
+  }
+
+  toggleMenu() {
+    this.menu.classList.toggle("open");
+  }
+
+  closeMenu() {
+    this.menu.classList.remove("open");
+  }
+
+  onOptionSelect(opt, optionEl) {
+    // set native select value
+    this.select.value = opt.value;
+
+    // dispatch events
+    this.select.dispatchEvent(new Event("input", { bubbles: true, composed: true }));
+    this.select.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
+
+    // update display text
+    this.display.textContent = opt.text;
+
+    // highlight selected
+    this.optionEls.forEach(el => el.classList.remove("selected"));
+    optionEl.classList.add("selected");
+
+    // toggle has-value on the custom element
+    if (opt.value.trim() !== "") {
+      this.classList.add("has-value");
+    } else {
+      this.classList.remove("has-value");
+    }
+
+    this.closeMenu();
+  }
+}
+
+customElements.define("custom-select", CustomSelect);

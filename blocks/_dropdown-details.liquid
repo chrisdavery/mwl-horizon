@@ -1,0 +1,103 @@
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+  @param {boolean} [required] - required
+  @param {number} loop_index - loop index
+  @param {object} item - The object item
+
+  @example
+  {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
+{%- enddoc -%}
+
+{% assign block_settings = block.settings %}
+
+{% capture style %}
+  {% render 'size-style', settings: block_settings %}
+{% endcapture %}
+
+<div
+    class="size-style"
+    style="{{ style }}"
+    {{ block_settings.shopify_attributes }}
+>
+    {% capture id %}Option-{{ block.id }}-{{ loop_index }}{% endcapture %}
+
+    {% render 'custom-select',
+        id: id,
+        label: item.external_title,
+        options: item.sizes.value,
+        default_empty: true,
+        use_product: false,
+        required: required
+    %}
+</div>
+
+{% schema %}
+    {
+        "name": "Dropdown",
+        "tag": null,
+        "settings": [
+            {
+                "type": "select",
+                "id": "width",
+                "label": "t:settings.width_desktop",
+                "options": [
+                    {
+                    "value": "fit-content",
+                    "label": "t:options.fit_content"
+                    },
+                    {
+                    "value": "fill",
+                    "label": "t:options.fill"
+                    },
+                    {
+                    "value": "custom",
+                    "label": "t:options.custom"
+                    }
+                ],
+                "default": "fill"
+                },
+                {
+                "type": "range",
+                "id": "custom_width",
+                "label": "t:settings.custom_width",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "default": 100,
+                "visible_if": "{{ block.settings.width == 'custom' }}"
+                },
+                {
+                "type": "select",
+                "id": "width_mobile",
+                "label": "t:settings.width_mobile",
+                "options": [
+                    {
+                    "value": "fit-content",
+                    "label": "t:options.fit_content"
+                    },
+                    {
+                    "value": "fill",
+                    "label": "t:options.fill"
+                    },
+                    {
+                    "value": "custom",
+                    "label": "t:options.custom"
+                    }
+                ],
+                "default": "fill"
+                },
+                {
+                "type": "range",
+                "id": "custom_width_mobile",
+                "label": "t:settings.custom_width",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "default": 100,
+                "visible_if": "{{ block.settings.width_mobile == 'custom' }}"
+            }
+        ]
+    }
+{% endschema %}

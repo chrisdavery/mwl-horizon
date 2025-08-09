@@ -1,9 +1,11 @@
-{% if block.settings.hide_if_tag != blank and product.tags contains block.settings.hide_if_tag %}
+{% assign block_settings = block.settings %}
+
+{% if block_settings.hide_if_tag != blank and product.tags contains block_settings.hide_if_tag %}
     {% break %}
 {% endif %}
 
 {% capture style %}
-  {% render 'size-style', settings: block.settings %}
+  {% render 'size-style', settings: block_settings %}
 {% endcapture %}
 
 <div
@@ -11,65 +13,67 @@
     style="{{ style }}"
     {{ block.shopify_attributes }}
 >
-        {% case block.settings.type %}
+        {% case block_settings.type %}
             {% when 'textarea' %}
                 <custom-input class="custom-input--field">
                     <div class="custom-input-wrapper">
                         <textarea
-                        id="CustomForm-{{ block.settings.label | handleize }}"
+                        id="CustomForm-{{ block_settings.label | handleize }}"
                         class="custom-form__input"
-                        name="properties[{{ block.settings.name }}]"
-                        placeholder="{{ block.settings.label }}"
+                        name="properties[{{ block_settings.name }}]"
+                        placeholder="{{ block_settings.label }}"
                         rows="5"
-                        {% if block.settings.required == true %}
+                        {% if block_settings.required == true %}
                             required
                         {% endif %}
                         ></textarea>
 
                         <label
-                            for="CustomForm-{{ block.settings.label | handleize }}"
+                            for="CustomForm-{{ block_settings.label | handleize }}"
                         >
-                            {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
+                            {{ block_settings.label }}{% if block_settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
                         </label>
                     </div>
-                    {% if block.settings.error_message != blank %}
+                    {% if block_settings.error_message != blank %}
                         <div class="error-message hidden">
-                            {{ block.settings.error_message }}
+                            {{ block_settings.error_message }}
                         </div>
                     {% endif %}
                 </custom-input>
             {% when 'datepicker' %}
                 <div class="group-block-content parent-group-datepicker layout-panel-flex layout-panel-flex--column mobile-column"
                 style="--flex-direction: column; --flex-wrap: nowrap; --gap: 12px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center;">
-                    <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
-                        style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: 0.875rem; --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: var(--max-width--body-normal);">
-                        {{ block.settings.heading }}
-                    </div>
+                    {% if block_settings.heading != blank %}
+                        <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                            style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: 0.875rem; --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: var(--max-width--body-normal);">
+                            {{ block_settings.heading }}
+                        </div>
+                    {% endif %}
                     <div class="size-style" style="--size-style-width: 100%; --size-style-height: ; --size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;">
                         <custom-input class="custom-input--field">
                             <div class="custom-input-wrapper">
                                 <date-picker>
                                     <input
                                         type="text"
-                                        id="CustomForm-{{ block.settings.label | handleize }}"
-                                        name="properties[{{ block.settings.name }}]"
+                                        id="CustomForm-{{ block_settings.label | handleize }}"
+                                        name="properties[{{ block_settings.name }}]"
                                         class="custom-form__input"
                                         aria-label="dd/mm/yyyy"
                                         placeholder="dd/mm/yyyy"
                                         readonly
                                         autocomplete="off"
-                                        data-lead-date="{{ block.settings.lead_date }}"
-                                        {% if block.settings.lead_month %}
-                                            data-lead-month="{{ block.settings.lead_month }}"
+                                        data-lead-date="{{ block_settings.lead_date }}"
+                                        {% if block_settings.lead_month %}
+                                            data-lead-month="{{ block_settings.lead_month }}"
                                         {% endif %}
-                                        {% if block.settings.required == true %}
+                                        {% if block_settings.required == true %}
                                             required
                                         {% endif %}
                                     >
                                     <label
-                                        for="CustomForm-{{ block.settings.label | handleize }}"
+                                        for="CustomForm-{{ block_settings.label | handleize }}"
                                     >
-                                        {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
+                                        {{ block_settings.label }}{% if block_settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
                                     </label>
 
                                     <span class="datepicker-icon">
@@ -100,15 +104,15 @@
                                     </div>
                                 </date-picker>
                             </div>
-                            {% if block.settings.error_message != blank %}
+                            {% if block_settings.error_message != blank %}
                                 <div class="error-message hidden">
-                                    {{ block.settings.error_message }}
+                                    {{ block_settings.error_message }}
                                 </div>
                             {% endif %}
                         </custom-input>
                     </div>
 
-                    {% for item in block.settings.priority_fees %}
+                    {% for item in block_settings.priority_fees %}
                         <div class="priority-fee-item" data-lead-date="{{ item.lead_date }}" data-product-id="{{ all_products[item.product].selected_or_first_available_variant.id }}">
                             <div class="group-block-content layout-panel-flex layout-panel-flex--column mobile-column"
                                 style="--flex-direction: column; --flex-wrap: nowrap; --gap: 8px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center; --width: 100%; --max-width: 100%;">
@@ -129,7 +133,7 @@
                                 </div>
                                 {% if item.details != blank %}
                                     <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
-                                        style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: 0.875rem; --font-weight: var(--font-body--weight); --font-family: var(--font-body--family); --text-transform: unset; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: 16.5rem;">
+                                        style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--md); --font-weight: var(--font-body--weight); --font-family: var(--font-body--family); --text-transform: unset; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: 18.5rem;">
                                         {{ item.details | metafield_tag }}
                                     </div>
                                 {% endif %}
@@ -141,32 +145,31 @@
                 <custom-input class="custom-input--field">
                     <div class="custom-input-wrapper">
                         <input
-                            type="{{ block.settings.type }}"
-                            id="CustomForm-{{ block.settings.label | handleize }}"
+                            type="{{ block_settings.type }}"
+                            id="CustomForm-{{ block_settings.label | handleize }}"
                             class="custom-form__input"
                             autocomplete="name"
                             form="{{ product_form_id }}"
-                            name="properties[{{ block.settings.name }}]"
-                            placeholder="{{ block.settings.label }}"
-                            {% if block.settings.required == true %}
+                            name="properties[{{ block_settings.name }}]"
+                            placeholder="{{ block_settings.label }}"
+                            {% if block_settings.required == true %}
                                 required
                             {% endif %}
                         >
 
                         <label
-                            for="CustomForm-{{ block.settings.label | handleize }}"
+                            for="CustomForm-{{ block_settings.label | handleize }}"
                         >
-                            {{ block.settings.label }}{% if block.settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
+                            {{ block_settings.label }}{% if block_settings.required == true %}<span aria-hidden="true">*</span>{% endif %}
                         </label>
                     </div>
-                    {% if block.settings.error_message != blank %}
+                    {% if block_settings.error_message != blank %}
                         <div class="error-message hidden">
-                            {{ block.settings.error_message }}
+                            {{ block_settings.error_message }}
                         </div>
                     {% endif %}
                 </custom-input> 
         {% endcase %}
-
 </div>
 
 {% stylesheet %}
@@ -222,6 +225,7 @@
         transition-timing-function: cubic-bezier(.4,0,.2,1);
         width: calc(100% - var(--margin-xl));
         line-height: 1em;
+        z-index: 1;
     }
 
     .custom-form__input:focus~label,.custom-form__input:not(:placeholder-shown) ~ label {
@@ -234,6 +238,10 @@
     date-picker .custom-form__input {
         font-size: var(--font-size--xs);
         font-family: var(--font-h5--family);
+    }
+
+    .custom-input--field date-picker label {
+        top: .8rem;
     }
 
     date-picker .custom-form__input:focus~label,date-picker .custom-form__input:not(:placeholder-shown) ~ label {

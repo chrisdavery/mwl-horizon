@@ -11,6 +11,7 @@
   "accessibility": {
     "all_rights": " All Rights Reserved.",
     "all": "All",
+    "is_required": "{{value}} is required",
     "account": "Open account menu",
     "home": "Home",
     "cart": "Cart",
