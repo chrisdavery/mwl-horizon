@@ -28,7 +28,7 @@
 {% stylesheet %}
   .cart-drawer {
     --cart-drawer-padding: var(--padding-lg) var(--padding-xl);
-    --cart-drawer-padding-desktop: var(--padding-xl) var(--padding-2xl);
+    --cart-drawer-padding-desktop: var(--padding-xl) var(--padding-lg);
     --cart-font-size--2xs: var(--font-size--2xs);
     --cart-font-size--xs: var(--font-size--xs);
     --cart-font-size--sm: var(--font-size--sm);
@@ -76,6 +76,7 @@
 
   .cart-drawer__close-button {
     margin-right: calc(var(--padding-sm) * -1);
+    top: var(--margin-xs);
   }
 
   .cart-drawer--empty .cart-drawer__content {
@@ -104,16 +105,16 @@
 
   .cart-drawer__summary {
     --cart-drawer-summary-padding: var(--padding-lg);
-
+    border-block-start: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--gap-2xl);
+    gap: var(--gap-lg);
     padding: var(--cart-drawer-summary-padding);
     margin-top: auto;
     background-color: var(--color-background);
     /* stylelint-disable-next-line color-named */
-    mask-image: linear-gradient(to bottom, transparent, black var(--cart-drawer-summary-padding));
+    /* mask-image: linear-gradient(to bottom, transparent, black var(--cart-drawer-summary-padding)); */
 
     @media screen and (min-width: 750px) {
       --cart-drawer-summary-padding: var(--padding-2xl);
@@ -155,8 +156,6 @@
 
   .cart-drawer__items .cart-items__table-row:last-child {
     border-bottom: none;
-    padding-block-end: 0;
-    margin-block-end: 0;
   }
 
   .cart-drawer--empty .cart-drawer__inner {

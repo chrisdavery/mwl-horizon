@@ -377,6 +377,7 @@ class CustomSelect extends HTMLElement {
     this.wrapper.appendChild(this.menu);
 
     this.appendChild(this.wrapper);
+    this.closest('.custom-select-wrapper')?.classList.remove('hidden')
   }
 
   populateMenu() {

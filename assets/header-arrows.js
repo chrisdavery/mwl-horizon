@@ -32,9 +32,11 @@ class HeaderArrows extends HTMLElement {
     });
 
     // Also listen to scroll events in case slides change via dragging
-    this.slideshow.refs.scroller.addEventListener('scroll', () => {
-      this.updateButtonStates();
-    }, { passive: true });
+    if (this.slideshow.refs) {
+      this.slideshow.refs.scroller.addEventListener('scroll', () => {
+        this.updateButtonStates();
+      }, { passive: true });
+    }
   }
 
   disableBuiltInControls() {
@@ -57,6 +59,7 @@ class HeaderArrows extends HTMLElement {
 
   handleNextClick(e) {
     e.preventDefault();
+
     if (this.slideshow.next) {
       this.slideshow.next(e);
     } else {

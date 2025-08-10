@@ -99,7 +99,11 @@
             {% for item in cart.items %}
               <tr
                 role="row"
-                class="cart-items__table-row{% if item.parent_relationship.parent != null %} cart-items__nested-line{% endif %}"
+                class="cart-items__table-row
+                {% if item.product.type == 'FEE' %}
+                 addon-cart-fee
+                {% endif %}
+                {% if item.parent_relationship.parent != null %} cart-items__nested-line{% endif %}"
                 ref="cartItemRows[]"
                 data-parent-key="{{ item.parent_relationship.parent.key }}"
                 data-key="{{ item.key }}"
@@ -220,7 +224,7 @@
                     </ul>
                   {% endif %}
 
-                  <div>
+                  {% comment %} <div>
                     {% if item.original_price != item.final_price %}
                       <span class="visually-hidden">{{ 'content.price_sale' | t }}</span>
                       <span>{{ item.final_price | money }}</span>
@@ -246,7 +250,7 @@
                         <s class="compare-at-price">{{ item.variant.compare_at_price | money }}</s>
                       {% endif %}
                     {% endif %}
-                  </div>
+                  </div> {% endcomment %}
                 </td>
                 <td
                   class="cart-items__quantity"
@@ -265,20 +269,6 @@
                     class: 'cart-primary-typography',
                     can_update_quantity: can_update_quantity
                   %}
-
-                  <button
-                    class="button button--tertiary cart-items__remove"
-                    type="button"
-                    aria-label="{{ 'accessibility.remove_item' | t: title: item.title | escape }}"
-                    on:click="/onLineItemRemove/{{ item.index | plus: 1 }}"
-                    {% assign can_remove = item.instructions.can_remove | default: true, allow_false: true %}
-                    {% if can_remove == false %}
-                      hidden
-                    {% endif %}
-                  >
-                    {{- 'icon-delete.svg' | inline_asset_content -}}
-                    <span class="visually-hidden">Remove</span>
-                  </button>
                 </td>
                 <td
                   class="cart-items__error hidden"
@@ -319,6 +309,21 @@
                       {% render 'unit-price', price: unit_price, measurement: item.unit_price_measurement %}
                     </div>
                   {%- endif -%}
+
+                  <button
+                    class="link cart-items__remove"
+                    type="button"
+                    aria-label="{{ 'accessibility.remove_item' | t: title: item.title | escape }}"
+                    on:click="/onLineItemRemove/{{ item.index | plus: 1 }}"
+                    {% assign can_remove = item.instructions.can_remove | default: true, allow_false: true %}
+                    {% if can_remove == false %}
+                      hidden
+                    {% endif %}
+                  >
+                    {% comment %} {{ 'actions.remove' | t }} {% endcomment %}
+                    {{- 'icon-delete.svg' | inline_asset_content -}}
+                    <span class="visually-hidden">Remove</span>
+                  </button>
                 </td>
               </tr>
             {% endfor %}
@@ -366,10 +371,21 @@
     margin-bottom: var(--margin-lg);
   }
 
-  .cart-items__table-row.cart-items__nested-line td:first-child {
-    width: 60%;
-    justify-self: right;
+  .cart-items__table-row.addon-cart-fee .button {
+    opacity: .3;
+    cursor: not-allowed;
+    pointer-events: none;
   }
+
+  .cart-items__table-row .quantity-selector input[type=number], .cart-items__table-row a {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .cart-items__table-row.cart-items__nested-line td:first-child {
+    width: 72%;
+    justify-self: right;
+  } 
 
   html:active-view-transition-type(page-navigation) .cart-items__table-row {
     view-transition-name: none !important;
@@ -434,7 +450,7 @@
   }
 
   .cart-items__title {
-    font-size: var(--cart-font-size--md);
+    font-size: var(--cart-font-size--sm);
     color: var(--color-foreground);
     text-transform: var(--product-title-case);
   }
@@ -445,7 +461,7 @@
 
   .cart-items__quantity {
     grid-area: quantity;
-    margin-block-start: var(--margin-xs);
+    margin-block-start: var(--margin-2xs);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -459,15 +475,28 @@
     font-size: var(--cart-font-size--sm);
     height: auto;
   }
-
+  .cart-items__table-row.cart-items__nested-line {
+    --minimum-touch-target: 36px;
+  }
   .cart-items__remove {
     background-color: transparent;
     color: var(--color-foreground);
-    width: var(--minimum-touch-target);
-    height: var(--minimum-touch-target);
     justify-content: center;
     box-shadow: none;
     padding: 0;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    margin-top: auto;
+    text-align: right;
+    margin-left: auto;
+    /* 
+    text-decoration: underline;
+    height: var(--minimum-touch-target);
+    font-size: var(--cart-font-size--md);
+    font-family: var(--font-body--family);
+    font-weight: var(--font-body--weight);
+    text-decoration-thickness: 0.03rem; */
   }
 
   .cart-items__media {
@@ -480,8 +509,10 @@
     min-height: unset;
     min-width: var(--cart-item-price-width);
     text-align: end;
-    display: block;
+    display: flex;
     font-size: var(--cart-font-size--md);
+    height: 100%;
+    flex-direction: column;
   }
 
   .cart-items__price-unit {
@@ -614,16 +645,12 @@
     font-size: var(--cart-font-size--sm);
   }
 
-  .cart__total {
-    font-weight: var(--font-weight-bold);
-  }
-
   .cart__total-label {
     font-size: var(--cart-font-size--sm);
   }
 
   .cart__total-value {
-    font-size: var(--cart-font-size--2xl);
+    font-size: var(--cart-font-size--sm);
   }
 
   .cart-primary-typography {
@@ -654,6 +681,7 @@
     width: 100%;
     height: clamp(25px, var(--height-buy-buttons), 55px);
     padding-inline: var(--padding-4xl);
+    letter-spacing: var(--letter-spacing--heading-loose);
   }
 
   shopify-accelerated-checkout-cart {

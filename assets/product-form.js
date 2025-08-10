@@ -183,11 +183,20 @@ class ProductFormComponent extends Component {
     const addon_items = []
 
     if (addons.length > 0) {
+        const properties = {};
+        for (const [key, value] of formData.entries()) {
+          const propMatch = key.match(/^properties\[(.+)]$/);
+          if (propMatch) {
+            const propKey = propMatch[1]; // e.g. 'Size', 'Bust', etc.
+            properties[propKey] = value;
+          }
+        }
 
         // Create items array using formData.get() as requested
         addon_items.push({
           id: Number(formData.get('id')),
-          quantity: Number(formData.get('quantity')) || 1
+          quantity: Number(formData.get('quantity')) || 1,
+          properties: { ...properties }
         });
 
         // Add addons to items array
@@ -195,9 +204,7 @@ class ProductFormComponent extends Component {
           addon_items.push({
               id: Number(addon.value),
               quantity: 1,
-              properties: {
-                _parent: Number(formData.get('id'))
-              }
+              parent_id: Number(formData.get('id'))
           });
         });
 

@@ -1802,6 +1802,37 @@
         "default": true
       },
       {
+        "type": "checkbox",
+        "id": "show_shipping_bar",
+        "label": "Show Shipping bar",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Shipping bar settings"
+      },
+      {
+        "type": "number",
+        "id": "shipping_threshold",
+        "label": "Shipping threshold"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "progress_message",
+        "label": "Progress message",
+      },
+      {
+        "type": "inline_richtext",
+        "id": "success_message",
+        "label": "Success message",
+      },
+      {
+        "type": "color_scheme",
+        "id": "shipping_color_scheme",
+        "label": "t:settings.color_scheme",
+        "default": "scheme-2",
+      },
+      {
         "type": "header",
         "content": "t:content.product_media"
       },
