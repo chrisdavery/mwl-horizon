@@ -56,10 +56,9 @@
   .blog-posts-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
+    gap: .5rem;
     width: 100%;
-    column-gap: var(--columns-gap);
-    row-gap: var(--rows-gap);
+    row-gap: 1.2rem;
   }
 
   /**
@@ -81,41 +80,6 @@
 
       grid-column: span 6;
     }
-  }
-
-  /**
-   * The second row of blog posts has two columns:
-   * +-------------------+-------------------+
-   * |                   |                   |
-   * |  (column span 3)  |  (column span 3)  |
-   * |                   |                   |
-   * +-------------------+-------------------+
-   */
-  .blog-post-item:nth-child(2),
-  .blog-post-item:nth-child(3) {
-    --blog-post-card-scale: 0.8;
-
-    grid-column: span 3;
-
-    @media screen and (max-width: 749px) {
-      --blog-post-card-scale: 0.5;
-
-      grid-column: span 6;
-    }
-  }
-
-  /**
-   * The first row of blog posts has only one column:
-   * +---------------------------------------+
-   * |                                       |
-   * |           (1 column span 6)           |
-   * |                                       |
-   * +---------------------------------------+
-   */
-  .blog-post-item:first-child {
-    --blog-post-card-scale: 1;
-
-    grid-column: span 6;
   }
 
   /**

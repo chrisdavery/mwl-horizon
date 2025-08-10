@@ -10,6 +10,10 @@
     assign use_inverse_logo = true
   elsif section.settings.enable_transparent_header_collection and template.name == 'collection' and section.settings.collection_color_scheme == 'inverse'
     assign use_inverse_logo = true
+  elsif section.settings.enable_transparent_header_blog and template.name == 'blog' and section.settings.blog_color_scheme == 'inverse'
+    assign use_inverse_logo = true
+  elsif section.settings.enable_transparent_header_article and template.name == 'article' and section.settings.article_color_scheme == 'inverse'
+    assign use_inverse_logo = true
   endif
 
   if use_inverse_logo

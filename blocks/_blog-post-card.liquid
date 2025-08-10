@@ -24,7 +24,7 @@
   style="--text-align: {{ block_settings.alignment }}"
 >
   {%- if article.image -%}
-    <div class="blog-post-card__image-container">
+    <div class="blog-post-card__image-container {% if block.settings.zoom_on_hover == true %}zoom-on-hover{% endif %}">
       <a href="{{ article.url }}">
         {% content_for 'block', id: 'image', type: '_blog-post-image', image: article.image %}
       </a>
@@ -50,32 +50,6 @@
   .blog-post-item .blog-post-card__image-container,
   .blog-post-item .blog-post-card__content {
     width: 100%;
-  }
-
-  .blog-post-item:first-child .blog-post-card {
-    flex-direction: row;
-
-    @media screen and (max-width: 749px) {
-      flex-direction: column;
-    }
-  }
-
-  .blog-post-item:first-child .blog-post-card__image-container {
-    width: 70%;
-
-    @media screen and (max-width: 749px) {
-      width: 100%;
-    }
-  }
-
-  .blog-post-item:first-child:has(.blog-post-card__image-container) .blog-post-card__content {
-    padding-inline-start: var(--columns-gap);
-    width: 30%;
-
-    @media screen and (max-width: 749px) {
-      padding-inline-start: 0;
-      width: 100%;
-    }
   }
 
   .blog-post-card__content {
@@ -114,6 +88,12 @@
       "id": "alignment",
       "label": "t:settings.alignment",
       "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "zoom_on_hover",
+      "label": "Scale Image on hover",
+      "default": false
     }
   ]
 }

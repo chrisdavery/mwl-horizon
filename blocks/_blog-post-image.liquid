@@ -35,7 +35,9 @@
     width: 100%;
     object-fit: cover;
     object-position: center center;
-    height: calc(var(--blog-post-card-img-height) * var(--blog-post-card-scale));
+    /* height: calc(var(--blog-post-card-img-height) * var(--blog-post-card-scale)); */
+    height: 100%;
+    aspect-ratio: 4 / 3;
   }
 
   .blog-post-card__image--small {
@@ -56,26 +58,6 @@
   "name": "t:names.image",
   "blocks": [],
   "settings": [
-    {
-      "type": "select",
-      "id": "height",
-      "label": "t:settings.height",
-      "options": [
-        {
-          "value": "small",
-          "label": "t:options.small"
-        },
-        {
-          "value": "medium",
-          "label": "t:options.medium"
-        },
-        {
-          "value": "large",
-          "label": "t:options.large"
-        }
-      ],
-      "default": "large"
-    },
     {
       "type": "select",
       "id": "border",

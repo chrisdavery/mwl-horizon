@@ -340,7 +340,11 @@
         "enable_transparent_header_product": false,
         "product_color_scheme": "default",
         "enable_transparent_header_collection": false,
-        "collection_color_scheme": "default"
+        "collection_color_scheme": "default",
+        "enable_transparent_header_blog": true,
+        "blog_color_scheme": "inverse",
+        "enable_transparent_header_article": true,
+        "article_color_scheme": "inverse"
       }
     }
   },

@@ -23,6 +23,12 @@
   elsif section.settings.enable_transparent_header_collection and template.name == 'collection'
     assign transparent = 'always'
     assign transparent_color_scheme = section.settings.collection_color_scheme
+  elsif section.settings.enable_transparent_header_blog and template.name == 'blog'
+    assign transparent = 'always'
+    assign transparent_color_scheme = section.settings.blog_color_scheme
+  elsif section.settings.enable_transparent_header_article and template.name == 'article'
+    assign transparent = 'always'
+    assign transparent_color_scheme = section.settings.article_color_scheme
   endif
 
   if section.settings.enable_sticky_header == 'always'
@@ -1062,6 +1068,60 @@
       ],
       "default": "default",
       "visible_if": "{{ section.settings.enable_transparent_header_collection }}"
+    },
+    {
+      "type": "header",
+      "content": "Blog page"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_transparent_header_blog",
+      "label": "t:settings.transparent_background",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "blog_color_scheme",
+      "label": "t:settings.color_scheme",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:options.default"
+        },
+        {
+          "value": "inverse",
+          "label": "t:options.inverse"
+        }
+      ],
+      "default": "default",
+      "visible_if": "{{ section.settings.enable_transparent_header_blog }}"
+    },
+    {
+      "type": "header",
+      "content": "Article page"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_transparent_header_article",
+      "label": "t:settings.transparent_background",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "article_color_scheme",
+      "label": "t:settings.color_scheme",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:options.default"
+        },
+        {
+          "value": "inverse",
+          "label": "t:options.inverse"
+        }
+      ],
+      "default": "default",
+      "visible_if": "{{ section.settings.enable_transparent_header_article }}"
     }
   ],
   "presets": []

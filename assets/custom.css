@@ -172,15 +172,21 @@ a.link:after {
 }
 
 
-.image-block,.megamenu-card__media {
+.image-block,.megamenu-card__media,.zoom-on-hover {
   overflow: hidden;
 }
 
-.group-block .background-image-container img,.group-block-content .image-block img, .megamenu-card__media img {
+.group-block .background-image-container img,
+.group-block-content .image-block img,
+.megamenu-card__media img,
+.zoom-on-hover img {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.group-block:hover .background-image-container img, .group-block-content:hover .image-block img, .megamenu-card:hover .megamenu-card__media img {
+.group-block:hover .background-image-container img,
+.group-block-content:hover .image-block img,
+.megamenu-card:hover .megamenu-card__media img,
+.zoom-on-hover:hover img {
   transform: scale(1.03); 
 }
 

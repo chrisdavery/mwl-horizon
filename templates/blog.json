@@ -6,42 +6,80 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
-    "main": {
-      "type": "main-blog",
+    "hero_BjX8zX": {
+      "type": "hero",
       "blocks": {
-        "title": {
+        "text_WHdhXA": {
           "type": "text",
-          "name": "Title",
           "settings": {
-            "text": "<p>{{ closest.blog.title }}</p>",
+            "text": "<h1>MWL JOURNAL</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
+            "type_preset": "h3",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "",
+            "color": "var(--color-foreground)",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
-            "padding-block-start": 48,
-            "padding-block-end": 48,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
+        }
+      },
+      "block_order": [
+        "text_WHdhXA"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/sol-wedding-dress-made-with-love-bridal-4_413a3732-c814-4706-a20d-aab9192c462a.png",
+        "mobile_image_1": "shopify://shop_images/sol-wedding-dress-made-with-love-bridal-4_31671329-f609-4ced-94ff-69f50185ccef.png",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "full-width",
+        "section_height": "adapt_media_height",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000030",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "blocks": {
         "static-blog-post-card": {
           "type": "_blog-post-card",
           "static": true,
           "settings": {
-            "alignment": "left"
+            "alignment": "left",
+            "zoom_on_hover": true
           },
           "blocks": {
             "heading": {
@@ -83,15 +121,32 @@
               },
               "blocks": {}
             },
+            "content": {
+              "type": "_blog-post-description",
+              "disabled": true,
+              "static": true,
+              "settings": {
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 16,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
             "image": {
               "type": "_blog-post-image",
               "static": true,
               "settings": {
-                "height": "large",
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_radius": 4
+                "border_radius": 0
               },
               "blocks": {}
             }
@@ -99,17 +154,15 @@
           "block_order": []
         }
       },
-      "block_order": [
-        "title"
-      ],
       "settings": {
         "color_scheme": "",
-        "padding-block-start": 0,
+        "padding-block-start": 48,
         "padding-block-end": 48
       }
     }
   },
   "order": [
+    "hero_BjX8zX",
     "main"
   ]
 }
