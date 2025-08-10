@@ -1,6 +1,8 @@
 {%- doc -%}
   Renders block content for all blocks that extend the group block.
   @param {object} block_settings - The settings of the group block.
+  @param {object} [columns] - The items limit.
+  @param {object} [items_size] - The items size.
 {%- enddoc -%}
 
 {%- capture children -%}
@@ -25,7 +27,7 @@
   <div class="hidden--mobile">
     {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}
   </div>
-{% elsif settings_config.settings.layout_type == 'carousel' %}
+{% elsif settings_config.layout_type == 'carousel' and columns < items_size %}
   <div class="flex justify-between">
     <div>
       {%- render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes -%}

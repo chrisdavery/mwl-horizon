@@ -52,11 +52,13 @@
       {{ styles }}
     "
   >
-    <div class="section-resource-list__header">
-      {%- content_for 'block', type: '_product-list-content', id: 'static-header' -%}
-    </div>
 
     {%- if recommendations.performed or section.settings.product == blank -%}
+
+      <div class="section-resource-list__header">
+        {%- content_for 'block', type: '_product-list-content', id: 'static-header', columns: section.settings.columns, items_size: recommendations.products_count  -%}
+      </div>
+
       {% liquid
         if section.settings.product == blank
           assign products = null

@@ -37,7 +37,7 @@ class HeaderArrows extends HTMLElement {
         this.updateButtonStates();
       }, { passive: true });
     }
-  }
+  } 
 
   disableBuiltInControls() {
     const builtInControls = this.slideshow.querySelectorAll('slideshow-arrows .slideshow-control');

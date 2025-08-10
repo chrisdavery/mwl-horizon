@@ -14,6 +14,7 @@
   --cart-primary-font-family: var(--font-heading--family) !important;
   --cart-primary-font-style: var(--font-heading--style) !important;
   --cart-primary-font-weight: var(--font-heading--weight) !important;
+  --peek-next-slide-size: 0rem !important;
 }
 
 a {
@@ -376,6 +377,9 @@ td.cart-items__price.cart-secondary-typography {
   }
   .product-form-buttons {
     gap: var(--gap-lg) !important;
+  }
+  .resource-list__carousel .resource-list__slide {
+    --section-slide-width: calc(100% / var(--column-count)) !important;
   }
 }
 
