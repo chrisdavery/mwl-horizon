@@ -8,9 +8,6 @@
 {%- enddoc -%}
 {% liquid
   assign blog_tags = blog.all_tags
-  if blog_tags == blank
-    break    
-  endif
 %}
 
 {% comment %}
@@ -83,6 +80,9 @@
     {% if list_items_array.size >= 10 %}
         <div class="flex inline-slider-row hidden--mobile title--aligned-center">
             <div>
+              {% render 'breadcrumbs' %}
+            </div>
+            <div>
                 {{ slideshow }}
             </div>
             <div>
@@ -93,7 +93,14 @@
             {{ slideshow }}
         </div>
     {% else %}
-        {{ slideshow }}
+      <div class="flex title--aligned-center">
+        <div class="hidden--mobile">
+          {% render 'breadcrumbs', custom_current_title: block.settings.custom_current_title %}
+        </div>
+        <div style="flex: 1 auto;">
+          {{ slideshow }}
+        </div>
+      </div>
     {% endif %}
 
   </div>
@@ -176,6 +183,11 @@
   "class": "blog-tags",
   "tag": null,
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_current_title",
+      "label": "Custom current title"
+    },
     {
       "type": "range",
       "id": "columns_gap",

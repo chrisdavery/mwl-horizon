@@ -12,5 +12,22 @@
   "context": {
     "b2b": true
   },
-  "sections": {}
+  "sections": {
+    "header_section": {
+      "settings": {},
+      "blocks": {
+        "header-menu": {
+          "blocks": {},
+          "block_order": [
+            "megamenu_card_item_rdNF3W",
+            "megamenu_card_item_wV3yAw"
+          ],
+          "settings": {
+            "menu": "horizon-b2b-header-menu",
+            "right_menu": "horizon-b2b-right-menu"
+          }
+        }
+      }
+    }
+  }
 }

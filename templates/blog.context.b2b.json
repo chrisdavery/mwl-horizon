@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "blog.json",
+  "context": {
+    "b2b": true
+  },
+  "sections": {
+    "hero_BjX8zX": {
+      "settings": {
+        "image_1": "shopify://shop_images/Web_Banner_2_9923a4a3-be40-45f6-9aeb-36fa99bd3ce1.png",
+        "mobile_image_1": "shopify://shop_images/Web_Banner_2_2fdc3cd4-b253-4781-8a89-59a05863b019.png",
+        "section_height": "adapt_media_height",
+        "section_height_custom": 70
+      },
+      "blocks": {
+        "text_WHdhXA": {
+          "settings": {
+            "text": "<h1>RETAILER INFORMATION</h1>"
+          }
+        }
+      }
+    },
+    "main": {
+      "custom_css": [
+        "@media (max-width: 749px) {.blog-posts {padding-top: 0; } .blog-post-card {gap: 1rem; align-items: center; } .blog-post-card__content .text-block {padding: 0; } .blog-tags__list {margin-bottom: 5px;} .blog-post-card .text-block {font-size: var(--font-h5--size); }}"
+      ],
+      "settings": {},
+      "blocks": {
+        "static-blog-post-card": {
+          "blocks": {
+            "blog-post-details": {
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "settings": {}
+        }
+      }
+    },
+    "custom_liquid_LEwgwp": {
+      "custom_css": [
+        "@media (max-width: 749px) {.breadcrumbs {margin-top: 12px; }}"
+      ],
+      "settings": {},
+      "blocks": {}
+    }
+  }
+}

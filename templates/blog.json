@@ -92,6 +92,7 @@
           "type": "_blog-tags",
           "static": true,
           "settings": {
+            "custom_current_title": "Stockist Announcements",
             "columns_gap": 16,
             "color_scheme": "scheme-4",
             "padding-block-start": 0,

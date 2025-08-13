@@ -9,7 +9,9 @@
     {%- case t -%}
       {%- when 'page' -%}
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+          <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">
+            {{ page.title }}
+          </a>
         </li>
       {%- when 'product' -%}
         {%- if collection.url -%}
@@ -45,7 +47,13 @@
           </li>
         {%- else -%}
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+            <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">
+              {% if custom_current_title %}
+                {{ custom_current_title }}
+              {% else %}
+                {{ page.title }}
+              {% endif %}
+            </a>
           </li>
         {%- endif -%}
       {%- when 'article' -%}

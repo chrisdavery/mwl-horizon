@@ -182,7 +182,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/mack-lace-wedding-dress-made-with-love-bridal_bb0afc33-c23e-4a53-9202-04c2017089a2.png",
+            "background_image": "shopify://shop_images/MWL_Homepage_Sleeves.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -267,7 +267,7 @@
                 "text_nr94Mb": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>SHOP VEILS</h3>",
+                    "text": "<h3>SHOP SLEEVES</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -293,7 +293,7 @@
                   "type": "button",
                   "settings": {
                     "label": "SEE MORE",
-                    "link": "shopify://collections/veils",
+                    "link": "shopify://collections/wedding-gloves",
                     "open_in_new_tab": false,
                     "style_class": "link",
                     "width": "fit-content",
@@ -338,7 +338,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/celine-mini-wedding-dress-made-with-love-bridal_edb2aa91-66e7-4dd7-9ad5-feceed61c556.png",
+            "background_image": "shopify://shop_images/Anthology_Homepage.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -423,7 +423,7 @@
                 "text_TTdCkJ": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>SHOP MINI DRESSES</h3>",
+                    "text": "<h3>SHOP ANTHOLOGY</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -449,7 +449,7 @@
                   "type": "button",
                   "settings": {
                     "label": "SEE MORE",
-                    "link": "shopify://collections/mini-wedding-dress",
+                    "link": "shopify://collections/anthology",
                     "open_in_new_tab": false,
                     "style_class": "link",
                     "width": "fit-content",
@@ -494,7 +494,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/prim-lace-wedding-cape-made-with-love-bridal-3_ed562d7f-05f0-4849-9c0f-693e25cddf2d.png",
+            "background_image": "shopify://shop_images/MWL_Homepage_Veils.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -579,7 +579,7 @@
                 "text_qKyiFj": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>SHOP ACCESSORIES</h3>",
+                    "text": "<h3>SHOP VEILS</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -605,7 +605,7 @@
                   "type": "button",
                   "settings": {
                     "label": "SEE MORE",
-                    "link": "shopify://collections/accessories",
+                    "link": "shopify://collections/veils",
                     "open_in_new_tab": false,
                     "style_class": "link",
                     "width": "fit-content",
@@ -1137,6 +1137,7 @@
         "group_4tqVgj",
         "group_B3bhXt"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 749px) {.spacing-style {--gap: 1px !important; --padding-block-start: 2px !important; }}"
       ],
@@ -1196,7 +1197,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/winnie-wedding-dress-made-with-love-bridal_b3ef61c0-2d05-483c-93f6-fb0d50495d91.png",
+            "background_image": "shopify://shop_images/Visit_A_MWL_Boutique.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -1352,7 +1353,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/prim-lace-wedding-cape-made-with-love-bridal-6.png",
+            "background_image": "shopify://shop_images/MWL_Read_Our_Journal_Homepage.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -2286,7 +2287,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p><span style=\"text-decoration:underline\">View all</span></p>",
+                    "text": "<p><a href=\"/blogs/all\" title=\"All\"><span style=\"text-decoration:underline\">View all</span></a></p>",
                     "width": "fit-content",
                     "max_width": "none",
                     "alignment": "left",

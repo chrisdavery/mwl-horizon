@@ -1,0 +1,107 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "text_LB74y6": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h3",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_LB74y6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 38,
+        "padding-block-end": 0
+      }
+    },
+    "section_gaLXwr": {
+      "type": "section",
+      "blocks": {
+        "custom_liquid_jMXPfT": {
+          "type": "custom-liquid",
+          "name": "t:names.custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\ntr:first-child {\n    background-color: var(--color-foreground);\n    color: var(--color-background);\n}\ntr:nth-child(2n) {\n    background-color: #F8F6EF;\n}\ntable {\nwidth: 100% !important;\n    border-collapse: collapse;\n}\ntd {\n    border-color: var(--color-border);\n    border-style: solid;\n    border-width: 1px;\n    padding: .625rem .75rem;\n    font-weight: normal;\n    text-transform: uppercase;\n    font-family: var(--font-subheading--family);\nfont-size: var(--font-size--sm);\n}\n@media (max-width: 1023px) {\n.table-overflow {\n        display: block;\n        overflow-x: auto;\n        padding-right: 1.25rem;\n    }\n}\n</style>\n<div class=\"table-overflow\">\n{{ page.content }}\n</div>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "custom_liquid_jMXPfT"
+      ],
+      "custom_css": [
+        ".section-content-wrapper > div {width: 100%;}"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 34,
+        "section_width": "page-width",
+        "full_width_on_mobile": false,
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 24,
+        "padding-block-end": 62
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_gaLXwr"
+  ]
+}
