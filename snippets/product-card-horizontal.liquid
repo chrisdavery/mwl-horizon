@@ -56,7 +56,7 @@
     {% assign loading = 'lazy' %}
     {% assign sizes = lazy_image_sizes %}
 
-    {% if product.featured_media %}
+    {% if product.featured_media and block.settings.hide_image == false %}
         <div class="product-media--wrapper" style="--media-preview-ratio: {{ block.settings.aspect_ratio }};">
             {%- render 'product-media', media: product.featured_media, sizes: sizes, loading: loading, preview_image_only: true -%}
         </div>
@@ -97,39 +97,41 @@
             </div>
         </div>
 
-        <div class="complementary-excerpt">
-            <div
-                class="
-                    spacing-style
-                    text-block
-                    custom
-                    text-block--align-left
-                    text-block--full-width
-                    custom-typography
-                    custom-font-size
-                    custom-color
-                "
-                style="
-                    --padding-block-start: 0px;
-                    --padding-block-end: 0px;
-                    --padding-inline-start: 0px;
-                    --padding-inline-end: 0px;
-                    --color: var(--color-foreground);
-                    --font-size: 1rem;
-                    --font-weight: var(--font-body--weight);
-                    --font-family: var(--font-body--family);
-                    --text-transform: none;
-                    --text-wrap: pretty;
-                    --line-height: var(--line-height--body-tight);
-                    --letter-spacing: var(--letter-spacing--body-loose);
-                    --width: 100%;
-                    --max-width: var(--max-width--body-none);
-                    --text-align: left;
-                "
-            >
-                {{ product.description | truncate: 125 }}
-            </div>
-        </div>
+        {% if product.description and block.settings.hide_excerpt == false %}
+          <div class="complementary-excerpt">
+              <div
+                  class="
+                      spacing-style
+                      text-block
+                      custom
+                      text-block--align-left
+                      text-block--full-width
+                      custom-typography
+                      custom-font-size
+                      custom-color
+                  "
+                  style="
+                      --padding-block-start: 0px;
+                      --padding-block-end: 0px;
+                      --padding-inline-start: 0px;
+                      --padding-inline-end: 0px;
+                      --color: var(--color-foreground);
+                      --font-size: 1rem;
+                      --font-weight: var(--font-body--weight);
+                      --font-family: var(--font-body--family);
+                      --text-transform: none;
+                      --text-wrap: pretty;
+                      --line-height: var(--line-height--body-tight);
+                      --letter-spacing: var(--letter-spacing--body-loose);
+                      --width: 100%;
+                      --max-width: var(--max-width--body-none);
+                      --text-align: left;
+                  "
+              >
+                  {{ product.description | truncate: 125 }}
+              </div>
+          </div>
+        {% endif %}
     </div>
   </div>
 </complementary-card>

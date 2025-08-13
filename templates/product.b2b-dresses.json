@@ -603,6 +603,7 @@
               "blocks": {
                 "static-header": {
                   "type": "_product-list-content",
+                  "disabled": true,
                   "static": true,
                   "settings": {
                     "content_direction": "column",
@@ -700,7 +701,7 @@
                 "text_DcdTkz": {
                   "type": "text",
                   "settings": {
-                    "text": "<h4>COMPLETE THE LOOK</h4>",
+                    "text": "<h4>FURTHER OPTIONS</h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -726,6 +727,8 @@
                   "type": "_product-card-horizontal",
                   "static": true,
                   "settings": {
+                    "hide_image": true,
+                    "hide_excerpt": true,
                     "aspect_ratio": "27/40",
                     "product_card_gap": 4,
                     "inherit_color_scheme": true,
@@ -734,8 +737,8 @@
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
-                    "padding-block-start": 10,
-                    "padding-block-end": 10,
+                    "padding-block-start": 12,
+                    "padding-block-end": 12,
                     "padding-inline-start": 10,
                     "padding-inline-end": 10
                   },
@@ -746,6 +749,26 @@
                 "text_DcdTkz"
               ]
             },
+            "input_field_XGtDRr": {
+              "type": "_input-field",
+              "name": "Input Field",
+              "settings": {
+                "label": "dd/mm/yyyy",
+                "name": "Shipping Date",
+                "type": "datepicker",
+                "heading": "Shipping",
+                "lead_date": 35,
+                "priority_fees": [],
+                "required": true,
+                "error_message": "dd/mm/yyyy is required",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "hide_if_tag": ""
+              },
+              "blocks": {}
+            },
             "input_field_4mNRnV": {
               "type": "_input-field",
               "name": "Input Field",
@@ -753,7 +776,7 @@
                 "label": "dd/mm/yyyy",
                 "name": "Wedding Date",
                 "type": "datepicker",
-                "heading": "Your wedding date:",
+                "heading": "wedding date:",
                 "lead_date": 60,
                 "priority_fees": [
                   "high-priority-fee",
@@ -987,6 +1010,7 @@
             "variant_picker_R3rGDr",
             "custom_details_zP4EUz",
             "product_recommendations_8Vzc6N",
+            "input_field_XGtDRr",
             "input_field_4mNRnV",
             "buy_buttons_eYQEYi",
             "group_MFhVLM",
