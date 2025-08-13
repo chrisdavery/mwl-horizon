@@ -14,8 +14,15 @@
   {% render 'size-style', settings: block_settings %}
 {% endcapture %}
 
+{% assign parent_option = blank %}
+{% for i in item.show_only_if.value %}
+    {% if i != blank %}
+        {% assign parent_option = i %}
+    {% endif %}
+{% endfor %}
+
 <div
-    class="size-style"
+    class="size-style dropdown-details {% if parent_option != blank %}hidden{% endif %}"
     style="{{ style }}"
     {{ block_settings.shopify_attributes }}
 >
@@ -27,7 +34,9 @@
         options: item.sizes.value,
         default_empty: true,
         use_product: false,
-        required: required
+        required: required,
+        parent_option: parent_option,
+        parent_option_class: 'dropdown-details'
     %}
 </div>
 

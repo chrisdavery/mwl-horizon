@@ -11,13 +11,15 @@
   "sections": {
     "custom_liquid_zyBiFR": {
       "type": "custom-liquid",
-      "custom_css": [],
+      "custom_css": [
+        "@media (max-width: 749px) {.breadcrumbs {margin-top: 20px; }}"
+      ],
       "name": "t:names.custom_liquid",
       "settings": {
         "custom_liquid": "<div class=\"hidden--desktop\">\n{% render 'breadcrumbs' %}\n</div>",
         "color_scheme": "",
         "section_width": "page-width",
-        "padding-block-start": 20,
+        "padding-block-start": 0,
         "padding-block-end": 0
       }
     },

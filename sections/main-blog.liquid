@@ -18,6 +18,11 @@
     "
     style="{% render 'spacing-style', settings: section.settings %}"
   >
+    {% content_for 'block',
+      type: '_blog-tags',
+      id: 'main-blog',
+      results: collection
+    %}
     {% content_for 'blocks' %}
 
     {%- paginate blog.articles by 12 -%}
@@ -47,7 +52,7 @@
    * Blog posts page layout
    */
   .blog-posts {
-    --page-content-width: var(--narrow-page-width);
+    --page-content-width: var(--wide-page-width);
     --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
     --columns-gap: 36px;
     --rows-gap: 36px;
@@ -59,6 +64,11 @@
     gap: .5rem;
     width: 100%;
     row-gap: 1.2rem;
+
+    @media (max-width: 749px) {
+      grid-column: 1 / -1;
+      row-gap: .5rem;
+    }
   }
 
   /**
