@@ -51,7 +51,7 @@
         "alignment": "center",
         "color_scheme": "scheme-1",
         "padding-block-start": 32,
-        "padding-block-end": 0
+        "padding-block-end": 24
       }
     },
     "main": {
@@ -180,7 +180,7 @@
         "padding-inline-start": 24,
         "padding-inline-end": 24,
         "color_scheme": "scheme-1",
-        "padding-block-start": 40,
+        "padding-block-start": 0,
         "padding-block-end": 72
       }
     }
