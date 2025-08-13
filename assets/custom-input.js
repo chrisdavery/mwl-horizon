@@ -422,6 +422,7 @@ class CustomSelect extends HTMLElement {
     // set native select value
     this.select.value = opt.value;
 
+    this.showhideOpts(opt)
     // dispatch events
     this.select.dispatchEvent(new Event("input", { bubbles: true, composed: true }));
     this.select.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
@@ -441,6 +442,30 @@ class CustomSelect extends HTMLElement {
     }
 
     this.closeMenu();
+  }
+
+  /**
+   * @param {any} value
+   * @param {any} opt
+   */
+  showhideOpts(opt) {
+    const { optionName } = this.dataset;
+    if (!this.closest('.dropdown-details')) return;
+
+    document.querySelectorAll(`custom-select[data-show-name="${optionName}"]`).forEach(el => {
+      const dropdown = el.closest('.dropdown-details');
+      const select = dropdown?.querySelector('select');
+      const field = el.closest('.custom-dropdown--field');
+
+      const shouldShow = el.dataset.showValue && opt.value === el.dataset.showValue;
+
+      dropdown?.classList.toggle('hidden', !shouldShow);
+      select?.toggleAttribute('required', shouldShow);
+
+      if (shouldShow) {
+        field?.classList.remove('has-error');
+      }
+    });
   }
 }
 

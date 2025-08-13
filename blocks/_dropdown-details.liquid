@@ -14,15 +14,13 @@
   {% render 'size-style', settings: block_settings %}
 {% endcapture %}
 
-{% assign parent_option = blank %}
-{% for i in item.show_only_if.value %}
-    {% if i != blank %}
-        {% assign parent_option = i %}
-    {% endif %}
-{% endfor %}
+{% assign show_only_if = item.show_only_if.value | strip | strip_newlines | split: ' | '%}
+{% assign show_only_name = show_only_if.first %}
+{% assign show_only_value = show_only_if.last %}
 
 <div
-    class="size-style dropdown-details {% if parent_option != blank %}hidden{% endif %}"
+    class="size-style dropdown-details {% if show_only_if != blank %}hidden{% endif %}"
+    data-title="{{ item.external_title | strip }}"
     style="{{ style }}"
     {{ block_settings.shopify_attributes }}
 >
@@ -35,7 +33,8 @@
         default_empty: true,
         use_product: false,
         required: required,
-        parent_option: parent_option,
+        show_only_name: show_only_name,
+        show_only_value: show_only_value,
         parent_option_class: 'dropdown-details'
     %}
 </div>

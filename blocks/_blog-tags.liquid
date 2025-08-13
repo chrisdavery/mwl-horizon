@@ -49,9 +49,9 @@
                 assign current_tag = current_tags | strip | handleize
               %}
                 <div class="blog-tags-wrapper">
-                    <a href="{{ blog.url }}/tagged/{{ item.title | handleize }}" title="{{ item.title }}" class="button {% if item_name == current_tag %} active{% endif %}">
-                        {{ item.title }}
-                    </a>
+                  <a href="{{ blog.url }}/tagged/{{ item.title | handleize }}" title="{{ item.title }}" class="button {% if item_name == current_tag %} active{% endif %}">
+                      {{ item.title }}
+                  </a>
                 </div>
             {% endcapture %}
 
