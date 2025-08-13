@@ -238,7 +238,9 @@ class ProductFormComponent extends Component {
       .then((response) => response.json())
       .then((response) => {
         if (response.status) {
-          window.dispatchEvent(new CartErrorEvent(this.id, response.message));
+          this.dispatchEvent(
+            new CartErrorEvent(form.getAttribute('id') || '', response.message, response.description, response.errors)
+          );
 
           if (!addToCartTextError) return;
           addToCartTextError.classList.remove('hidden');

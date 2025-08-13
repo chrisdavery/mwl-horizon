@@ -1,5 +1,6 @@
-{% assign block_settings = block.settings %}
 
+
+{% assign block_settings = block.settings %}
 
 {%- if block_settings.zoom -%}
   <script
@@ -14,7 +15,7 @@
   assign first_3d_model = selected_product.media | where: 'media_type', 'model' | first
 
   if block_settings.hide_variants
-    assign variant_images = selected_product.media | where: 'attached_to_variant?', true | map: 'src'
+    assign variant_images = selected_product.images | where: 'attached_to_variant?', true | map: 'src'
   endif
 
   if block_settings.slideshow_controls_style == 'thumbnails'
@@ -139,7 +140,7 @@
     .product-media-container {
       --media-preview-ratio: {{ block_settings.aspect_ratio }};
     }
-    
+
     {% if block_settings.constrain_to_viewport %}
       .product-media-container.constrain-height {
         background-color: var(--color-background);
@@ -233,8 +234,8 @@
     }
   {% endunless %}
 
+  /* Add background color so carousel arrows' mix-blend-mode works correctly even on transparent areas. */
   {% if block_settings.media_fit == 'contain' %}
-    /* Add background color so carousel arrows' mix-blend-mode works correctly even on transparent areas. */
     .media-fit-contain :is(img, .deferred-media__poster-image) {
       background-color: var(--color-background);
     }
@@ -252,6 +253,22 @@
     assign product_media_container_class = product_media_container_class | append: ' media-fit-' | append: block_settings.media_fit
   else
     assign product_media_container_class = product_media_container_class | append: ' media-fit-contain'
+  endif
+
+  if block.settings.aspect_ratio == 'adapt'
+    assign lowest_aspect_ratio = 50
+    assign lowest_aspect_ratio_index = 0
+
+    for media in sorted_media
+      # Find the media with the lowest aspect ratio (tallest)
+
+      if media.preview_image and media.preview_image.aspect_ratio
+        if media.preview_image.aspect_ratio < lowest_aspect_ratio
+          assign lowest_aspect_ratio = media.preview_image.aspect_ratio
+          assign lowest_aspect_ratio_index = forloop.index0
+        endif
+      endif
+    endfor
   endif
 %}
 
@@ -271,7 +288,7 @@
       media-gallery--extend
     {% endif %}
   "
-  style="{% render 'spacing-style', settings: block_settings %} --thumbnail-width: {{ block_settings.thumbnail_width }}px; --media-radius: {{ block_settings.media_radius }}px;{% if block_settings.icons_style contains 'large' %} --slideshow-icon-padding: 0px;{% endif %}--image-gap: {{ block_settings.image_gap }}px;"
+  style="{% render 'spacing-style', settings: block_settings %} --thumbnail-width: {{ block_settings.thumbnail_width }}px; --media-radius: {{ block_settings.media_radius }}px;{% if block_settings.icons_style contains 'large' %} --slideshow-icon-padding: 0px;{% endif %}--image-gap: {{ block_settings.image_gap }}px;{% unless block_settings.aspect_ratio == 'adapt' %} --gallery-aspect-ratio: {{ block_settings.aspect_ratio }};{% endunless %}"
   data-presentation="{{ block_settings.media_presentation }}"
   {{ block.shopify_attributes }}
 >
@@ -285,10 +302,16 @@
               assign media_sizes = sizes
             endif
         -%}
-        {%- render 'product-media', media: media, sizes: media_sizes, is_main_product_media: forloop.first -%}
+        {% if block_settings.aspect_ratio != 'adapt' and block_settings.constrain_to_viewport %}
+          <div class="product-media-constraint-wrapper">
+            {%- render 'product-media', media: media, sizes: media_sizes, is_main_product_media: forloop.first -%}
+          </div>
+        {% else %}
+          {%- render 'product-media', media: media, sizes: media_sizes, is_main_product_media: forloop.first -%}
+        {% endif %}
       {% endcapture %}
       {% capture class %}
-        {{ product_media_container_class }} product-media-container--{{ media.media_type }}{% if block_settings.zoom %} product-media-container--zoomable{% endif %}
+        {{ product_media_container_class }} product-media-container--{{ media.media_type }}{% if block.settings.zoom %} product-media-container--zoomable{% endif %}{% if forloop.index0 == lowest_aspect_ratio_index and block.settings.aspect_ratio == 'adapt' %} product-media-container--tallest{% endif %}
       {% endcapture %}
       {% if block_settings.aspect_ratio == 'adapt' %}
         {% capture style %}
@@ -394,7 +417,13 @@
               assign media_sizes = sizes
             endif
           -%}
-          {%- render 'product-media', media: media, sizes: media_sizes, is_main_product_media: forloop.first -%}
+          {% if block_settings.aspect_ratio != 'adapt' and block_settings.constrain_to_viewport %}
+            <div class="product-media-constraint-wrapper">
+              {%- render 'product-media', media: media, sizes: media_sizes, is_main_product_media: forloop.first -%}
+            </div>
+          {% else %}
+            {%- render 'product-media', media: media, sizes: media_sizes, is_main_product_media: forloop.first -%}
+          {% endif %}
         </li>
       {% endfor %}
     </ul>
@@ -415,7 +444,7 @@
   {%- if block_settings.zoom -%}
     <zoom-dialog
       ref="zoomDialogComponent"
-      id="zoom-dialog-{{ block.id }}"
+      id="zoom-dialog-{{ block_id }}"
     >
       <dialog
         ref="dialog"
@@ -461,7 +490,7 @@
                     | image_tag:
                       loading: 'lazy',
                       sizes: 'auto, 110, (min-width: 750px) 160',
-                      widths: '300, 375, 450, 525, 600, 675, 750, 768, 850, 900, 1024',
+                      widths: '240, 352, 832, 1200',
                       alt: media.alt
                     | escape
                   }}
