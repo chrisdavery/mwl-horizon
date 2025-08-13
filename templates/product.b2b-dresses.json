@@ -769,6 +769,25 @@
               },
               "blocks": {}
             },
+            "input_field_gUTxbn": {
+              "type": "_input-field",
+              "name": "Input Field",
+              "settings": {
+                "label": "Brides name / Code / PO etc",
+                "name": "JOB REFERENCE",
+                "type": "text",
+                "heading": "",
+                "priority_fees": [],
+                "required": false,
+                "error_message": "",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "hide_if_tag": ""
+              },
+              "blocks": {}
+            },
             "input_field_4mNRnV": {
               "type": "_input-field",
               "name": "Input Field",
@@ -789,6 +808,25 @@
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "hide_if_tag": "hidden-wedding-date"
+              },
+              "blocks": {}
+            },
+            "input_field_CKLVPh": {
+              "type": "_input-field",
+              "name": "Input Field",
+              "settings": {
+                "label": "ADDITIONAL NOTES",
+                "name": "Message",
+                "type": "textarea",
+                "heading": "",
+                "priority_fees": [],
+                "required": false,
+                "error_message": "",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "hide_if_tag": ""
               },
               "blocks": {}
             },
@@ -828,6 +866,7 @@
                 },
                 "retailer-button": {
                   "type": "retailer-button",
+                  "disabled": true,
                   "static": true,
                   "settings": {
                     "button_text": "FIND YOUR CLOSEST RETAILER",
@@ -926,79 +965,6 @@
                 "ai_gen_block_bacc79a_8ARxhz",
                 "ai_gen_block_bacc79a_P4dEKj"
               ]
-            },
-            "accordion_UNzCAY": {
-              "type": "accordion",
-              "name": "t:names.accordion",
-              "settings": {
-                "icon": "plus",
-                "dividers": true,
-                "type_preset": "h6",
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "accordion_row_dynamic_tjDhkk": {
-                  "type": "_accordion-row-dynamic",
-                  "name": "Accordion row (dynamic)",
-                  "settings": {
-                    "heading": "DETAILS",
-                    "content": "{{ closest.product.metafields.accordion.details | metafield_tag }}",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {}
-                },
-                "accordion_row_dynamic_YEAFhW": {
-                  "type": "_accordion-row-dynamic",
-                  "name": "Accordion row (dynamic)",
-                  "settings": {
-                    "heading": "STYLING & FIT",
-                    "content": "{{ closest.product.metafields.accordion.style_fit | metafield_tag }}",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {}
-                },
-                "accordion_row_reviews_MzGGgp": {
-                  "type": "_accordion-row-reviews",
-                  "name": "Accordion row (reviews)",
-                  "settings": {
-                    "items_list": "{{ closest.product.metafields.product_content.product_reviews.value }}",
-                    "heading": "REVIEWS",
-                    "open_by_default": false
-                  },
-                  "blocks": {}
-                },
-                "accordion_row_dynamic_eY3Ci8": {
-                  "type": "_accordion-row-dynamic",
-                  "name": "Accordion row (dynamic)",
-                  "settings": {
-                    "heading": "SHIPPING",
-                    "content": "{{ closest.product.metafields.accordion.shipping.value.b2c_content | metafield_tag }}",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "accordion_row_dynamic_tjDhkk",
-                "accordion_row_dynamic_YEAFhW",
-                "accordion_row_reviews_MzGGgp",
-                "accordion_row_dynamic_eY3Ci8"
-              ]
             }
           },
           "block_order": [
@@ -1011,10 +977,11 @@
             "custom_details_zP4EUz",
             "product_recommendations_8Vzc6N",
             "input_field_XGtDRr",
+            "input_field_gUTxbn",
             "input_field_4mNRnV",
+            "input_field_CKLVPh",
             "buy_buttons_eYQEYi",
-            "group_MFhVLM",
-            "accordion_UNzCAY"
+            "group_MFhVLM"
           ]
         }
       },

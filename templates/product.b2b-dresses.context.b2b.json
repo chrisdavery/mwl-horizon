@@ -8,7 +8,7 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "article.json",
+  "parent": "product.b2b-dresses.json",
   "context": {
     "b2b": true
   },
