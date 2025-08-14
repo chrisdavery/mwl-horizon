@@ -225,7 +225,7 @@ class ProductFormComponent extends Component {
         // Create new FormData and build it properly
         this.buildFormData(formData, 'items', addon_items);
 
-        console.log(Object.fromEntries(formData.entries()))
+        // console.log(Object.fromEntries(formData.entries()))
     }
  
     const cartItemsComponents = document.querySelectorAll('cart-items-component');
