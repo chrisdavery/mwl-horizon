@@ -7,7 +7,8 @@
   @param {string} [show_only_name] - The parent option
   @param {string} [show_only_value] - The parent option value
   @param {string} [parent_option_class] - The parent option class
-  @param {boolean} use_product - boolean
+  @param {boolean} [use_product] - boolean
+  @param {boolean} [use_variant] - boolean
   @param {string} label - label
   @param {string} id - id
   @param {object} options - The object of options
@@ -32,7 +33,7 @@
                     name="properties[{{ label | escape }}]"
                 {% endif %}
                 id="{{ id }}"
-                class="{{ class }} custom-form__dropdown hidden"
+                class="{{ class }} {% if use_variant == true %} product-addon{% endif %} custom-form__dropdown hidden"
                 {% if required == true %}required{% endif %}
             >
                 {% if default_empty == true %}
@@ -40,7 +41,6 @@
                 {% endif %}
                 {%- for option in options -%}
                     <option
-                        value="{{ option | escape }}"
                         {% if use_product %}
                             data-input-id="{{ product_option.position }}-{{ forloop.index0 }}"
                             data-option-value-id="{{ option.id }}"
@@ -49,8 +49,13 @@
                             {% if option.selected %}
                                 selected="selected"
                             {% endif %}
+                            value="{{ option | escape }}"
+                        {% elsif use_variant == true %}
+                            data-variant-id="{{ option.id | json }}"
+                            value="{{ option.title | escape }}"
                         {% else %}
                             data-input-id="drop-{{ option | handleize }}-{{ forloop.index0 }}"
+                            value="{{ option | escape }}"
                         {% endif %}
                     >
                         {% if use_product %}
@@ -59,6 +64,8 @@
                             {% else %}
                                 {{ option | escape }}
                             {% endif %}
+                        {% elsif use_variant == true %}
+                            {{ option.title }}
                         {% else %}
                             {{ option | escape }}
                         {% endif %}

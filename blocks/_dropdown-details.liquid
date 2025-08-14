@@ -26,12 +26,21 @@
 >
     {% capture id %}Option-{{ block.id }}-{{ loop_index }}{% endcapture %}
 
+    {% assign options = item.sizes.value %}
+    {% assign use_variant = false %}
+
+    {% if item.sizes.value == blank and item.product_variants.value != blank %}
+        {% assign options = item.product_variants.value %}
+        {% assign use_variant = true %}
+    {% endif %}
+
     {% render 'custom-select',
         id: id,
         label: item.external_title,
-        options: item.sizes.value,
+        options: options,
         default_empty: true,
         use_product: false,
+        use_variant: use_variant,
         required: required,
         show_only_name: show_only_name,
         show_only_value: show_only_value,

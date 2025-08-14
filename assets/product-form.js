@@ -176,7 +176,9 @@ class ProductFormComponent extends Component {
     const formData = new FormData(form);
 
     // Handle product addons - this is where we'll fix the items format
-    const addons = form.querySelectorAll('.product-addon');
+    const addons = Array.from(form.elements).filter(el =>
+      el.matches('.product-addon')
+    );
     /**
      * @type {string | any[]}
      */
@@ -201,10 +203,19 @@ class ProductFormComponent extends Component {
 
         // Add addons to items array
         Array.from(addons).forEach(addon => {
+          let id;
+
+          if (addon.tagName.toLowerCase() === 'select') {
+            const selectedOption = addon.options[addon.selectedIndex];
+            id = Number(selectedOption.dataset.variantId);
+          } else {
+            id = Number(addon.value);
+          }
+
           addon_items.push({
-              id: Number(addon.value),
-              quantity: 1,
-              parent_id: Number(formData.get('id'))
+            id: id,
+            quantity: 1,
+            parent_id: Number(formData.get('id'))
           });
         });
 
