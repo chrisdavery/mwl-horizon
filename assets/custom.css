@@ -358,6 +358,11 @@ td.cart-items__price.cart-secondary-typography {
   display: none;
 }
 
+.quantity-selector input[type='number'] {
+  font-weight: var(--font-heading--weight);
+  font-family: var(--font-heading--family);
+} 
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
