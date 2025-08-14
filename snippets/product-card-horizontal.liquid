@@ -15,6 +15,7 @@
 <complementary-card
   class="complementary-card"
   data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+  data-variant-price="{{ product.selected_or_first_available_variant.price }}"
   data-product-variants-size="{{ product.variants.size }}"
   id="complementary-card-{{ block.id }}"
   data-product-transition="{{ settings.transition_to_main_product }}"

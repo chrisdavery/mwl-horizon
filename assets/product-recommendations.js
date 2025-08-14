@@ -1,3 +1,5 @@
+import { PriceChangeEvent } from '@theme/events';
+
 class ProductRecommendations extends HTMLElement {
   /**
    * The observer for the product recommendations
@@ -189,9 +191,16 @@ class ComplementaryCard extends HTMLElement {
           hiddenInput.value = variantId;
           hiddenInput.classList.add('product-addon');
           hiddenInput.classList.add('complete-fee');
+          
+          if (this.dataset.variantPrice) {
+            hiddenInput.setAttribute('data-variant-price', this.dataset.variantPrice)
+          }
+
           productForm.appendChild(hiddenInput);
         }
       }
+
+      document.dispatchEvent(new PriceChangeEvent());
     }
   }
 }

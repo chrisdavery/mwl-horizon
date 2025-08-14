@@ -44,8 +44,8 @@
         {{- add_to_cart_text | default: default_add_to_cart_text -}}
       </span>
       <span class="add-to-cart-separator">-</span>
-      <span class="add-to-cart-price">
-        {{ product.selected_or_first_available_variant.price | money }}
+      <span class="add-to-cart-price" data-symbol="{{ cart.currency.symbol }}" data-currency="{{ localization.country.currency.iso_code }}" data-product-price="{{ product.selected_or_first_available_variant.price }}">
+        {{ product.selected_or_first_available_variant.price | money_with_currency }}
       </span>
     </span>
     <span

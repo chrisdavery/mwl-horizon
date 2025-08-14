@@ -53,6 +53,10 @@
                         {% elsif use_variant == true %}
                             data-variant-id="{{ option.id | json }}"
                             value="{{ option.title | escape }}"
+                            data-variant-price="{{ option.price }}"
+                            {% if option.available == false %}
+                                disabled
+                            {% endif %}
                         {% else %}
                             data-input-id="drop-{{ option | handleize }}-{{ forloop.index0 }}"
                             value="{{ option | escape }}"

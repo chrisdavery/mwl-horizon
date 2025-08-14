@@ -287,3 +287,52 @@ export class FilterUpdateEvent extends Event {
     return [...this.detail.queryParams.entries()].filter(([key]) => key.startsWith('filter.')).length > 0;
   }
 }
+
+/**
+ * Event class for price changes based on .product-addon elements
+ * @extends {Event}
+ */
+export class PriceChangeEvent extends Event {
+  constructor() {
+    super(PriceChangeEvent.eventName, { bubbles: true });
+
+    /** @type {Record<string, number>} */
+    const prices = {};
+    let total = 0;
+
+    // Include base product price if available
+    const basePriceEl = document.querySelector('.add-to-cart-price[data-product-price]');
+    if (basePriceEl && basePriceEl.dataset.productPrice) {
+      const basePrice = Number(basePriceEl.dataset.productPrice) || 0;
+      prices['base_product'] = basePrice;
+      total += basePrice;
+    }
+
+    // Add prices from all product addons
+    document.querySelectorAll('.product-addon').forEach(el => {
+      const htmlEl = /** @type {HTMLElement} */ (el);
+      const name = htmlEl.getAttribute('name') || '';
+      let price = 0;
+
+      if (htmlEl.tagName === 'SELECT') {
+        const selectEl = /** @type {HTMLSelectElement} */ (htmlEl);
+        const selectedOption = selectEl.options[selectEl.selectedIndex];
+        if (selectedOption) {
+          price = Number(selectedOption.dataset.variantPrice) || 0;
+        }
+      } else {
+        price = Number(htmlEl.dataset.variantPrice) || 0;
+      }
+
+      prices[name] = price;
+      total += price;
+    });
+
+    this.detail = {
+      prices,
+      total
+    };
+  }
+
+  static eventName = 'price:change';
+}

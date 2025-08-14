@@ -142,7 +142,7 @@
 
                     {% unless product.tags contains 'no-priority-fee' %}
                         {% for item in block_settings.priority_fees %}
-                            <div class="priority-fee-item" data-lead-date="{{ item.lead_date }}" data-product-id="{{ all_products[item.product].selected_or_first_available_variant.id }}">
+                            <div class="priority-fee-item" data-variant-price="{{ all_products[item.product].selected_or_first_available_variant.price }}" data-lead-date="{{ item.lead_date }}" data-product-id="{{ all_products[item.product].selected_or_first_available_variant.id }}">
                                 <div class="group-block-content layout-panel-flex layout-panel-flex--column mobile-column"
                                     style="--flex-direction: column; --flex-wrap: nowrap; --gap: 8px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center; --width: 100%; --max-width: 100%;">
                                     <div class="group-block-content layout-panel-flex layout-panel-flex--row"
