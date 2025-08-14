@@ -79,10 +79,21 @@
                                         placeholder="dd/mm/yyyy"
                                         readonly
                                         autocomplete="off"
-                                        data-lead-date="{{ block_settings.lead_date }}"
-                                        {% if block_settings.lead_month %}
-                                            data-lead-month="{{ block_settings.lead_month }}"
+                                        {% liquid
+                                            assign tag_lead_date = 0
+                                            for tag in product.tags
+                                                if tag contains 'wedding-date-min-'
+                                                    assign tag_lead_date = tag | replace: 'wedding-date-min-', '' | plus: 0
+                                                endif
+                                            endfor
+                                        %}
+
+                                        {% if tag_lead_date > 0 %}
+                                            data-lead-date="{{ tag_lead_date }}"
+                                        {% else %}
+                                            data-lead-date="{{ block_settings.lead_date }}"
                                         {% endif %}
+
                                         {% if block_settings.required == true %}
                                             required
                                         {% endif %}
@@ -129,34 +140,36 @@
                         </custom-input>
                     </div>
 
-                    {% for item in block_settings.priority_fees %}
-                        <div class="priority-fee-item" data-lead-date="{{ item.lead_date }}" data-product-id="{{ all_products[item.product].selected_or_first_available_variant.id }}">
-                            <div class="group-block-content layout-panel-flex layout-panel-flex--column mobile-column"
-                                style="--flex-direction: column; --flex-wrap: nowrap; --gap: 8px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center; --width: 100%; --max-width: 100%;">
-                                <div class="group-block-content layout-panel-flex layout-panel-flex--row"
-                                    style="--flex-direction: row; --flex-wrap: nowrap; --gap: 0px; --horizontal-alignment: space-between; --vertical-alignment: center; --vertical-alignment-mobile: center; --width: 100%; --max-width: 100%;">
-                                    {% if item.title != blank %}
+                    {% unless product.tags contains 'no-priority-fee' %}
+                        {% for item in block_settings.priority_fees %}
+                            <div class="priority-fee-item" data-lead-date="{{ item.lead_date }}" data-product-id="{{ all_products[item.product].selected_or_first_available_variant.id }}">
+                                <div class="group-block-content layout-panel-flex layout-panel-flex--column mobile-column"
+                                    style="--flex-direction: column; --flex-wrap: nowrap; --gap: 8px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center; --width: 100%; --max-width: 100%;">
+                                    <div class="group-block-content layout-panel-flex layout-panel-flex--row"
+                                        style="--flex-direction: row; --flex-wrap: nowrap; --gap: 0px; --horizontal-alignment: space-between; --vertical-alignment: center; --vertical-alignment-mobile: center; --width: 100%; --max-width: 100%;">
+                                        {% if item.title != blank %}
+                                            <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                                                style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--xs); --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: fit-content;">
+                                                {{ item.title }}
+                                            </div>
+                                        {% endif %}
+                                        {% if item.product != blank %}
+                                            <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                                            style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--xs); --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: fit-content; flex: 0 auto;">
+                                                + {{ all_products[item.product].price | money }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    {% if item.details != blank %}
                                         <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
-                                            style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--xs); --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: fit-content;">
-                                            {{ item.title }}
-                                        </div>
-                                    {% endif %}
-                                    {% if item.product != blank %}
-                                        <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
-                                        style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--xs); --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: fit-content; flex: 0 auto;">
-                                            + {{ all_products[item.product].price | money }}
+                                            style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--md); --font-weight: var(--font-body--weight); --font-family: var(--font-body--family); --text-transform: unset; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: 18.5rem;">
+                                            {{ item.details | metafield_tag }}
                                         </div>
                                     {% endif %}
                                 </div>
-                                {% if item.details != blank %}
-                                    <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
-                                        style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--md); --font-weight: var(--font-body--weight); --font-family: var(--font-body--family); --text-transform: unset; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: 18.5rem;">
-                                        {{ item.details | metafield_tag }}
-                                    </div>
-                                {% endif %}
                             </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    {% endunless %}
                 </div>
             {% else %}
                 {% capture field %}
