@@ -363,7 +363,7 @@
                             "background": false,
                             "background_color": "#00000026",
                             "corner_radius": 0,
-                            "padding-block-start": 0,
+                            "padding-block-start": 12,
                             "padding-block-end": 0,
                             "padding-inline-start": 0,
                             "padding-inline-end": 0
@@ -726,6 +726,8 @@
                   "type": "_product-card-horizontal",
                   "static": true,
                   "settings": {
+                    "hide_image": false,
+                    "hide_excerpt": false,
                     "aspect_ratio": "27/40",
                     "product_card_gap": 4,
                     "inherit_color_scheme": true,
@@ -750,10 +752,11 @@
               "type": "_input-field",
               "name": "Input Field",
               "settings": {
+                "heading": "Your wedding date:",
                 "label": "dd/mm/yyyy",
+                "label_outside": false,
                 "name": "Wedding Date",
                 "type": "datepicker",
-                "heading": "Your wedding date:",
                 "lead_date": 60,
                 "priority_fees": [
                   "high-priority-fee",
