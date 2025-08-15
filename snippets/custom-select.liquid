@@ -9,6 +9,7 @@
   @param {string} [parent_option_class] - The parent option class
   @param {boolean} [use_product] - boolean
   @param {boolean} [use_variant] - boolean
+  @param {boolean} [block_type] - boolean
   @param {string} label - label
   @param {string} id - id
   @param {object} options - The object of options
@@ -50,6 +51,15 @@
                                 selected="selected"
                             {% endif %}
                             value="{{ option | escape }}"
+                        {% elsif block_type == true %}
+                            {% if option.variant.value != blank  %}
+                                data-variant-id="{{ option.variant.value.id }}"
+                                data-variant-price="{{ option.variant.value.price }}"
+                            {% endif %}
+                                value="{{ option.external_title | escape }}"
+                            {% if option.variant.value.available == false %}
+                                disabled
+                            {% endif %}
                         {% elsif use_variant == true %}
                             data-variant-id="{{ option.id | json }}"
                             value="{{ option.title | escape }}"
@@ -68,8 +78,10 @@
                             {% else %}
                                 {{ option | escape }}
                             {% endif %}
+                        {% elsif block_type == true %}
+                            {{ option.external_title }}{% if option.variant.value != blank %} (+ {{ option.variant.value.price | money_without_trailing_zeros }}){% endif %}
                         {% elsif use_variant == true %}
-                            {{ option.title }}
+                            {{ option.title }} (+ {{ option.price | money_without_trailing_zeros }})
                         {% else %}
                             {{ option | escape }}
                         {% endif %}
@@ -175,7 +187,7 @@
         display: flex;
         align-items: center;
         -webkit-tap-highlight-color: transparent;
-        color: rgb(var(--color-foreground));
+        color: var(--color-foreground);
     }
 
     .cs-menu {

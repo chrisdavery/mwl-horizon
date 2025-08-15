@@ -597,6 +597,8 @@
               "name": "Custom Details",
               "settings": {
                 "items_list": "{{ closest.product.metafields.product_options.options_set.value }}",
+                "only_one_required": true,
+                "error_message": "Choose atleast 1 Fabric Details",
                 "gap": 12,
                 "color_scheme": "",
                 "padding-block-start": 0,
@@ -750,24 +752,24 @@
                 "text_DcdTkz"
               ]
             },
-            "input_field_XGtDRr": {
-              "type": "_input-field",
-              "name": "Input Field",
+            "dropdown_field_Ddwin6": {
+              "type": "_dropdown-field",
+              "name": "Dropdown Field",
               "settings": {
+                "shipping_options": [
+                  "next-shipment-b-2-b-fabric-shipping-options",
+                  "with-bride-dress-b-2-b-fabric-shipping-options",
+                  "asap-within-australia-b-2-b-fabric-shipping-options",
+                  "asap-international-b-2-b-fabric-shipping-options"
+                ],
                 "heading": "Shipping",
-                "label": "dd/mm/yyyy",
-                "label_outside": false,
-                "name": "Shipping Date",
-                "type": "datepicker",
-                "lead_date": 35,
-                "priority_fees": [],
-                "required": true,
-                "error_message": "dd/mm/yyyy is required",
+                "label": "Select your shipping",
+                "message_heading": "SHIPPING TIMELINE",
+                "name": "Shipping option",
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "hide_if_tag": ""
+                "custom_width_mobile": 100
               },
               "blocks": {}
             },
@@ -891,7 +893,7 @@
             "variant_picker_R3rGDr",
             "custom_details_zP4EUz",
             "product_recommendations_8Vzc6N",
-            "input_field_XGtDRr",
+            "dropdown_field_Ddwin6",
             "input_field_gUTxbn",
             "input_field_4mNRnV",
             "input_field_CKLVPh",

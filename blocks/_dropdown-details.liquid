@@ -1,6 +1,7 @@
 {%- doc -%}
   Renders block content for all blocks that extend the group block.
   @param {boolean} [required] - required
+  @param {boolean} [only_one_required] - Only one required
   @param {number} loop_index - loop index
   @param {object} item - The object item
 
@@ -34,6 +35,9 @@
         {% assign use_variant = true %}
     {% endif %}
 
+    {% if only_one_required == true %}
+        {% capture class %}only-one-req{% endcapture %}
+    {% endif %}
     {% render 'custom-select',
         id: id,
         label: item.external_title,
@@ -44,9 +48,33 @@
         required: required,
         show_only_name: show_only_name,
         show_only_value: show_only_value,
-        parent_option_class: 'dropdown-details'
+        parent_option_class: 'dropdown-details',
+        class: class
     %}
 </div>
+
+{% stylesheet %}
+    .detail-message {
+        margin-top: var(--margin-sm);
+        line-height: 1em;
+    }
+    .has-detail-error > .detail-message {
+        display: block !important;
+        color: var(--color-primary-hover);
+    }
+
+    .has-detail-error custom-input .error-message {
+        display: none !important;
+    }
+
+    .has-detail-error custom-input label {
+        color: var(--color-foreground) !important;
+    }
+
+    .has-detail-error .custom-input--field {
+        --color-input-border: var(--color-primary-hover);
+    }
+{% endstylesheet %}
 
 {% schema %}
     {

@@ -19,7 +19,19 @@ class CustomInput extends HTMLElement {
 
     const errorMessage = this.querySelector('.error-message');
     if (errorMessage) {
-      const hideError = () => this.classList.remove('has-error');
+      const hideError = () => {
+        this.classList.remove('has-error');
+
+        const detailErrorEl = this.closest('.has-detail-error');
+        if (detailErrorEl && input.classList.contains('only-one-req')) {
+
+          detailErrorEl.querySelectorAll('custom-input').forEach( e => {
+            e.classList.remove('has-error');
+          })
+          detailErrorEl.querySelector('.detail-message')?.classList.add('hidden')
+          detailErrorEl.classList.remove('has-detail-error');
+        }
+      };
       input.addEventListener('input', hideError);
       input.addEventListener('change', hideError);
       input.addEventListener('select', hideError);
@@ -432,6 +444,7 @@ class CustomSelect extends HTMLElement {
     this.select.value = opt.value;
 
     this.showhideOpts(opt)
+    this.showMsg(opt)
     // dispatch events
     this.select.dispatchEvent(new Event("input", { bubbles: true, composed: true }));
     this.select.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
@@ -475,6 +488,21 @@ class CustomSelect extends HTMLElement {
         field?.classList.remove('has-error');
       }
     });
+  }
+
+  showMsg(opt) {
+    const id = opt.value
+      .toLowerCase()                 // lowercase
+      .trim()                         // remove surrounding spaces
+      .replace(/[^a-z0-9\s-]/g, '')   // remove special chars
+      .replace(/\s+/g, '-')           // spaces to dashes
+      .replace(/-+/g, '-');           // collapse multiple dashes
+
+      document.querySelectorAll('.message-fee-item').forEach(e=> {
+        e.classList.remove('active')
+      })
+
+      document.querySelector(`.message-fee-item[data-id="${id}"]`)?.classList.add('active')
   }
 }
 

@@ -1,0 +1,191 @@
+{% assign block_settings = block.settings %}
+{% assign options = block_settings.shipping_options %}
+
+{% if options == blank %}
+    {% break %}
+{% endif %}
+
+{% capture style %}
+  {% render 'size-style', settings: block_settings %}
+{% endcapture %}
+  
+<div {{ block.shopify_attributes }}>
+    <div class="group-block-content layout-panel-flex layout-panel-flex--column mobile-column"
+    style="--flex-direction: column; --flex-wrap: nowrap; --gap: 12px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center;">
+        {% if block_settings.heading != blank %}
+            <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: 0.875rem; --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: var(--max-width--body-normal);">
+                {{ block_settings.heading }}
+            </div>
+        {% endif %}
+        <div
+            class="size-style dropdown-field"
+            data-title="{{ block_settings.label | strip }}"
+            style="{{ style }}"
+            {{ block_settings.shopify_attributes }}
+        >
+            {% capture id %}Option-{{ block.id }}{% endcapture %}
+            {% render 'custom-select',
+                id: id,
+                label: block_settings.label,
+                options: options,
+                default_empty: true,
+                required: false,
+                use_variant: true,
+                block_type: true
+            %}
+        </div>
+        {% for item in options %}
+            <div class="message-fee-item" data-id="{{ item.external_title | handleize }}">
+                <div class="group-block-content layout-panel-flex layout-panel-flex--column mobile-column"
+                    style="--flex-direction: column; --flex-wrap: nowrap; --gap: 8px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center; --width: 100%; --max-width: 100%;">
+                    <div class="group-block-content layout-panel-flex layout-panel-flex--row"
+                        style="--flex-direction: row; --flex-wrap: nowrap; --gap: 0px; --horizontal-alignment: space-between; --vertical-alignment: center; --vertical-alignment-mobile: center; --width: 100%; --max-width: 100%;">
+                        {% if block_settings.message_heading != blank %}
+                            <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                                style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--xs); --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: fit-content;">
+                                {{ block_settings.message_heading }}
+                            </div>
+                        {% endif %}
+                        {% if item.variant.value != blank %}
+                            <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                            style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--xs); --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: fit-content; flex: 0 auto;">
+                                + {{ item.variant.value.price | money }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% if item.message != blank %}
+                        <div class="spacing-style text-block custom custom-typography custom-font-size custom-color"
+                            style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--md); --font-weight: var(--font-body--weight); --font-family: var(--font-body--family); --text-transform: unset; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: 100%;">
+                            {{ item.message | metafield_tag }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% stylesheet %}
+    .message-fee-item {
+        width: 100%;
+        padding: var(--padding-sm);
+        background: rgb(248 246 239 / 1.0);
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .message-fee-item .metafield-rich_text_field > * {
+        margin: 0;
+    }
+{% endstylesheet %}
+
+{% schema %}
+    {
+        "name": "Dropdown Field",
+        "tag": null,
+        "settings": [
+            {
+                "type": "metaobject_list",
+                "id": "shipping_options",
+                "label": "Shipping options",
+                "metaobject_type": "shipping_options",
+            },
+            {
+                "type": "inline_richtext",
+                "id": "heading",
+                "label": "Heading",
+                "info": "Heading above the field"
+            },
+            {
+                "type": "text",
+                "id": "label",
+                "label": "Label",
+                "info": "Label inside the field"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "message_heading",
+                "label": "Message Heading",
+                "info": "Heading inside message box"
+            },
+            {
+                "type": "text",
+                "id": "name",
+                "label": "Name",
+                "info": "Name property in the backend"
+            },
+            {
+                "type": "select",
+                "id": "width",
+                "label": "t:settings.width_desktop",
+                "options": [
+                    {
+                    "value": "fit-content",
+                    "label": "t:options.fit_content"
+                    },
+                    {
+                    "value": "fill",
+                    "label": "t:options.fill"
+                    },
+                    {
+                    "value": "custom",
+                    "label": "t:options.custom"
+                    }
+                ],
+                "default": "fill"
+                },
+                {
+                "type": "range",
+                "id": "custom_width",
+                "label": "t:settings.custom_width",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "default": 100,
+                "visible_if": "{{ block.settings.width == 'custom' }}"
+                },
+                {
+                "type": "select",
+                "id": "width_mobile",
+                "label": "t:settings.width_mobile",
+                "options": [
+                    {
+                    "value": "fit-content",
+                    "label": "t:options.fit_content"
+                    },
+                    {
+                    "value": "fill",
+                    "label": "t:options.fill"
+                    },
+                    {
+                    "value": "custom",
+                    "label": "t:options.custom"
+                    }
+                ],
+                "default": "fill"
+                },
+                {
+                "type": "range",
+                "id": "custom_width_mobile",
+                "label": "t:settings.custom_width",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "default": 100,
+                "visible_if": "{{ block.settings.width_mobile == 'custom' }}"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Dropdown Field",
+                "category": "t:categories.forms"
+            }
+        ]
+    }
+{% endschema %}

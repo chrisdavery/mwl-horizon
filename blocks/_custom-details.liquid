@@ -38,10 +38,17 @@
               item: item,
               id: 'dropdown-details',
               required: true,
-              loop_index: forloop.index0
+              loop_index: forloop.index0,
+              only_one_required: block.settings.only_one_required
             %}
         {% endfor %}
     </div>
+
+    {% if block_settings.error_message != blank %}
+        <div class="detail-message hidden">
+            {{ block_settings.error_message }}
+        </div>
+    {% endif %}
 </div>
 
 {% schema %}
@@ -54,6 +61,17 @@
         "id": "items_list",
         "label": "Custom Details List",
         "metaobject_type": "size_set",
+    },
+    {
+      "type": "checkbox",
+      "id": "only_one_required",
+      "label": "Only one option required",
+      "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "error_message",
+      "label": "Error message"
     },
     {
       "type": "range",

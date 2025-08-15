@@ -317,11 +317,11 @@ export class PriceChangeEvent extends Event {
       if (htmlEl.tagName === 'SELECT') {
         const selectEl = /** @type {HTMLSelectElement} */ (htmlEl);
         const selectedOption = selectEl.options[selectEl.selectedIndex];
-        if (selectedOption) {
-          price = Number(selectedOption.dataset.variantPrice) || 0;
+        if (selectedOption && selectedOption.dataset) {
+          price = Number(selectedOption.dataset.variantPrice ?? 0) || 0;
         }
-      } else {
-        price = Number(htmlEl.dataset.variantPrice) || 0;
+      } else if (htmlEl.dataset) {
+        price = Number(htmlEl.dataset.variantPrice ?? 0) || 0;
       }
 
       prices[name] = price;

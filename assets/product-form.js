@@ -182,6 +182,7 @@ class ProductFormComponent extends Component {
     /**
      * @type {string | any[]}
      */
+    
     const addon_items = []
 
     if (addons.length > 0) {
@@ -205,8 +206,11 @@ class ProductFormComponent extends Component {
         Array.from(addons).forEach(addon => {
           let id;
 
+          if (addon.value == '' || !addon.value) return;
+
           if (addon.tagName.toLowerCase() === 'select') {
             const selectedOption = addon.options[addon.selectedIndex];
+            if (!selectedOption.dataset.variantId) return;
             id = Number(selectedOption.dataset.variantId);
           } else {
             id = Number(addon.value);
@@ -361,9 +365,40 @@ class ProductFormComponent extends Component {
  */
   handleErrors() {
     const form = this.querySelector('form');
-    const requiredInputs = document.querySelectorAll(`[form="${form?.getAttribute('id')}"][required]`);
+    if (!form) return true;
+
+    // Handle 'only-one-req' group
+    const onlyOneReqInputs = Array.from(form.elements).filter(el =>
+      el.matches('.only-one-req')
+    );
+
+    const filledInput = onlyOneReqInputs.find(input => input.value && input.value.trim() !== '');
+
+    if (onlyOneReqInputs.length > 0) {
+      if (filledInput) {
+        // Remove 'required' from all other 'only-one-req' inputs except the one that has a value
+        onlyOneReqInputs.forEach(input => {
+          if (input !== filledInput) input.removeAttribute('required');
+        });
+      } else {
+        form.querySelectorAll('.only-one-req').forEach(input => {
+          input.setAttribute('required','');
+        });
+
+        const detailParent = onlyOneReqInputs[0].closest('.product-custom-details-block')
+
+        if (detailParent) {
+          detailParent.classList.add('has-detail-error')
+          detailParent.querySelector('.details-message')?.classList.remove('hidden')
+        }
+      } 
+    }
+
+    // Get all required inputs associated with this form
+    const requiredInputs = document.querySelectorAll(`[form="${form.getAttribute('id')}"][required]`);
     let firstError = null;
 
+    // Standard validation loop
     for (const input of requiredInputs) {
       if (!(input instanceof HTMLElement)) continue;
 
