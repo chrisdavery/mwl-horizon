@@ -171,6 +171,8 @@
                         {% endfor %}
                     {% endunless %}
                 </div>
+            {% when 'dropdown' %}
+
             {% else %}
                 {% capture field %}
                     <custom-input class="custom-input--field">
