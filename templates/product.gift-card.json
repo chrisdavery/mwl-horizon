@@ -683,17 +683,19 @@
                           "type": "_input-field",
                           "name": "Input Field",
                           "settings": {
+                            "heading": "",
                             "label": "Recipient’s Name",
+                            "label_outside": false,
                             "name": "Recipient name",
                             "type": "text",
-                            "heading": "",
-                            "start_date": "",
+                            "priority_fees": [],
                             "required": true,
                             "error_message": "Recipient’s Name is required",
                             "width": "custom",
                             "custom_width": 100,
                             "width_mobile": "fill",
-                            "custom_width_mobile": 100
+                            "custom_width_mobile": 100,
+                            "hide_if_tag": ""
                           },
                           "blocks": {}
                         },
@@ -701,17 +703,19 @@
                           "type": "_input-field",
                           "name": "Input Field",
                           "settings": {
+                            "heading": "",
                             "label": "Recipient’s Email",
+                            "label_outside": false,
                             "name": "Recipient email",
                             "type": "email",
-                            "heading": "",
-                            "start_date": "",
+                            "priority_fees": [],
                             "required": true,
                             "error_message": "Email is invalid!",
                             "width": "fill",
                             "custom_width": 100,
                             "width_mobile": "fill",
-                            "custom_width_mobile": 100
+                            "custom_width_mobile": 100,
+                            "hide_if_tag": ""
                           },
                           "blocks": {}
                         }
@@ -771,17 +775,19 @@
                           "type": "_input-field",
                           "name": "Input Field",
                           "settings": {
+                            "heading": "",
                             "label": "Sender’s Name",
+                            "label_outside": false,
                             "name": "Sender name",
                             "type": "text",
-                            "heading": "",
-                            "start_date": "",
+                            "priority_fees": [],
                             "required": true,
                             "error_message": "Sender’s Name is required",
                             "width": "fill",
                             "custom_width": 100,
                             "width_mobile": "fill",
-                            "custom_width_mobile": 100
+                            "custom_width_mobile": 100,
+                            "hide_if_tag": ""
                           },
                           "blocks": {}
                         },
@@ -789,17 +795,19 @@
                           "type": "_input-field",
                           "name": "Input Field",
                           "settings": {
+                            "heading": "",
                             "label": "Sender’s Email",
+                            "label_outside": false,
                             "name": "Sender email",
                             "type": "email",
-                            "heading": "",
-                            "start_date": "",
+                            "priority_fees": [],
                             "required": true,
                             "error_message": "Email is invalid!",
                             "width": "fill",
                             "custom_width": 100,
                             "width_mobile": "fill",
-                            "custom_width_mobile": 100
+                            "custom_width_mobile": 100,
+                            "hide_if_tag": ""
                           },
                           "blocks": {}
                         }
@@ -859,17 +867,19 @@
                           "type": "_input-field",
                           "name": "Input Field",
                           "settings": {
+                            "heading": "",
                             "label": "Gift Message",
+                            "label_outside": false,
                             "name": "Message",
                             "type": "textarea",
-                            "heading": "",
-                            "start_date": "",
+                            "priority_fees": [],
                             "required": true,
                             "error_message": "Gift Message is required",
                             "width": "fill",
                             "custom_width": 100,
                             "width_mobile": "fill",
-                            "custom_width_mobile": 100
+                            "custom_width_mobile": 100,
+                            "hide_if_tag": ""
                           },
                           "blocks": {}
                         }
@@ -928,17 +938,19 @@
                           "type": "_input-field",
                           "name": "Input Field",
                           "settings": {
+                            "heading": "When should we send the voucher?",
                             "label": "dd/mm/yyyy",
+                            "label_outside": false,
                             "name": "Send on",
                             "type": "datepicker",
-                            "heading": "When should we send the voucher?",
-                            "start_date": "",
+                            "priority_fees": [],
                             "required": false,
                             "error_message": "",
                             "width": "fill",
                             "custom_width": 100,
                             "width_mobile": "fill",
-                            "custom_width_mobile": 100
+                            "custom_width_mobile": 100,
+                            "hide_if_tag": ""
                           },
                           "blocks": {}
                         }
@@ -967,6 +979,7 @@
               "settings": {
                 "stacking": true,
                 "show_pickup_availability": false,
+                "gift_card_form": false,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
