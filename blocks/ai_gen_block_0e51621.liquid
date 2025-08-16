@@ -1,0 +1,49 @@
+{% doc %}
+  @prompt
+    create a page picker block which has setting to pick a page, and render content no title. the wrapper should have setting for css class. 
+    
+    only need settings
+    - page
+    - text for css classes, block width should be 100%
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-page-content-{{ ai_gen_id }} {
+    width: 100%;
+  }
+{% endstyle %}
+
+<div
+  class="ai-page-content-{{ ai_gen_id }} {{ block.settings.css_classes }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.selected_page %}
+    {{ block.settings.selected_page.content }}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Page content",
+  "settings": [
+    {
+      "type": "page",
+      "id": "selected_page",
+      "label": "Page"
+    },
+    {
+      "type": "text",
+      "id": "css_classes",
+      "label": "CSS classes"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page content"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

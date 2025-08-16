@@ -361,7 +361,7 @@ td.cart-items__price.cart-secondary-typography {
 .quantity-selector input[type='number'] {
   font-weight: var(--font-heading--weight);
   font-family: var(--font-heading--family);
-} 
+}
 
 @media (min-width: 750px) {
   .menu-list__link {
@@ -402,6 +402,14 @@ td.cart-items__price.cart-secondary-typography {
   .product-badges {
     gap: var(--gap-2xs) !important;
     flex-wrap: nowrap;
+  }
+
+  .mobile-column-revese {
+    flex-direction: column-reverse;
+  }
+ 
+  .mobile-group-column-reverse .group-block-content {
+    flex-direction: column-reverse !important;
   }
 
   .product-badges__badge {

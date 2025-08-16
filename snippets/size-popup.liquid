@@ -1,0 +1,233 @@
+{%- doc -%}
+  Renders a wrapper section
+
+  @param {section} section - The section object
+  @param {string} children - The children of the section
+{%- enddoc -%}
+
+
+<script
+  src="{{ 'dialog.js' | asset_url }}"
+  type="module"
+></script>
+
+{% capture additional_classes %}
+    {% if section.settings.mobile_video != blank or section.settings.mobile_background_image != blank %}
+      mobile-min-height
+    {% endif %}
+{% endcapture %}
+
+<script
+  src="{{ 'dialog.js' | asset_url }}"
+  type="module"
+></script>
+
+<dialog-component
+  class="popup-link"
+  {% if section.settings.section_id != blank %}
+    id="{{ section.settings.section_id }}"
+  {% endif %}
+>
+
+  <dialog
+    ref="dialog"
+    class="popup-size__content dialog-modal color-{{ settings.popover_color_scheme }}{% if block_settings.behavior == 'drawer' %} popup-size__content--drawer dialog-drawer{% endif %}"
+    scroll-lock
+  >
+    <div class="popup-link__inner">
+        <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+            <div
+            class="section {{ additional_classes | strip }} {% if section.settings.full_width_on_mobile %}section--mobile-full-width{% endif %} section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+
+            {% if request.visual_preview_mode %}
+                data-shopify-visual-preview
+            {% endif %}
+
+            style="
+                {% if section.settings.section_height == 'custom' %}
+                --section-min-height: {{ section.settings.section_height_custom }}svh;
+                {% elsif section.settings.section_height == 'adapt_media_height' and section.settings.background_media != 'none' %}
+                {% if section.settings.background_media == 'image' %}
+                    --section-min-height: calc(100svw / {{ section.settings.background_image.aspect_ratio }});
+                {% elsif section.settings.background_media == 'video' %}
+                    --section-min-height: calc(100svw / {{ section.settings.video.preview_image.aspect_ratio }});
+                {% endif %}
+                {% elsif section.settings.section_height == 'full-screen' %}
+                --section-min-height: 100svh;
+                {% elsif section.settings.section_height != '' %}
+                --section-min-height: var(--section-height-{{ section.settings.section_height }});
+                {% endif %}
+
+                {% if section.settings.section_height != '' %}
+                --section-preview-height: 600px;
+                {% endif %}
+
+                {% if section.settings.mobile_background_image != blank %}
+                --section-mobile-min-height: calc(100svw / {{ section.settings.mobile_background_image.aspect_ratio }});
+                {% endif %}
+                {% if section.settings.mobile_video != blank %}
+                --section-mobile-min-height: calc(100svw / {{ section.settings.mobile_video.aspect_ratio }});
+                {% endif %}
+            "
+            >
+            <div class="custom-section-background">
+                {% render 'background-media',
+                background_media: section.settings.background_media,
+                background_video: section.settings.video,
+                background_video_position: section.settings.video_position,
+                background_image: section.settings.background_image,
+                background_image_position: section.settings.background_image_position,
+                mobile_background_image: section.settings.mobile_background_image,
+                mobile_background_video: section.settings.mobile_video,
+                %}
+            </div>
+
+            <div
+                class="border-style custom-section-content"
+                style="{% render 'border-override', settings: section.settings %}"
+            >
+                {% if section.settings.toggle_overlay %}
+                {% render 'overlay', settings: section.settings, layer: '0' %}
+                {% endif %}
+
+                <div
+                class="
+                    spacing-style
+                    layout-panel-flex
+                    layout-panel-flex--{{ section.settings.content_direction }}
+                    section-content-wrapper
+                    {% if section.settings.vertical_on_mobile %} mobile-column{% endif %}
+                "
+                style="
+                    {% render 'layout-panel-style', settings: section.settings %}
+                    {% render 'spacing-style', settings: section.settings %}
+                "
+                data-testid="section-content"
+                >
+                {{ children }}
+                </div>
+            </div>
+            </div>
+        </div>
+    <button
+      ref="closeButton"
+      on:click="/closeDialog"
+      class="button button-unstyled close-button popup-link__close"
+      aria-label="{{ 'accessibility.close_dialog' | t }}"
+    >
+      {{- 'icon-close.svg' | inline_asset_content -}}
+    </button>
+  </dialog>
+</dialog-component>
+
+{% stylesheet %}
+    .popup-link table {
+        border-collapse: collapse;
+        text-indent: 0;
+        font-family: var(--font-heading--family);
+        font-weight: var(--font-heading--weight);
+        font-size: var(--font-size--xs);
+    }
+
+    .popup-link .deferred-media__poster-button {
+        outline: none;
+    }
+
+    .popup-link deferred-media:has(:focus-visible) {
+        outline: none !important;
+    }
+
+  .popup-size__content {
+    box-shadow: var(--shadow-popover);
+    border: var(--style-border-popover);
+    border-radius: var(--style-border-radius-popover);
+    background-color: var(--color-background);
+    padding: var(--padding-4xl) 0 var(--padding-xl);
+    max-width: var(--narrow-page-width);
+    max-height: var(--modal-max-height);
+
+    @media screen and (min-width: 750px) {
+      padding: var(--padding-5xl) 0;
+    }
+  }
+
+  .popup-size__content[open] {
+    animation: modalSlideInTop var(--animation-speed) var(--animation-easing) forwards;
+  }
+
+  .popup-size__content.dialog-closing {
+    animation: modalSlideOutTop var(--animation-speed) var(--animation-easing) forwards;
+  }
+
+  .popup-size__content--drawer {
+    position: fixed;
+    border-radius: 0;
+    width: var(--sidebar-width);
+    max-width: 95vw;
+    height: 100%;
+    margin: 0 0 0 auto;
+  }
+
+  /* Needed to ensure the drawer is full height */
+  .popup-size__content--drawer:modal {
+    max-height: 100dvh;
+  }
+
+  .popup-link__close {
+    top: var(--margin-2xs);
+    right: var(--margin-2xs);
+    opacity: 0.8;
+    animation: none;
+  }
+
+  .popup-link__close {
+    background-color: transparent;
+    opacity: 0.8;
+  }
+
+  .popup-link__close svg {
+    width: var(--icon-size-xs);
+    height: var(--icon-size-xs);
+  }
+
+  .section-wrapper {
+    --section-height-offset: 0px;
+  }
+
+  .section[data-shopify-visual-preview] {
+    min-height: var(--section-preview-height);
+    padding-top: 0;
+  }
+
+  .section[data-shopify-visual-preview] .custom-section-background {
+    display: none;
+  }
+
+  body:has(> #header-group > .header-section > #header-component[transparent]):not(
+      :has(> #header-group > .header-section + .shopify-section)
+    )
+    > main
+    > .section-wrapper:first-child {
+    --section-height-offset: var(--header-group-height, 0);
+  }
+
+  .custom-section-background {
+    grid-column: 1 / -1;
+  }
+
+  .custom-section-content {
+    z-index: var(--layer-flat);
+  }
+
+  .mobile-min-height {
+    @media screen and (max-width: 749px) {
+      min-height: var(--section-mobile-min-height);
+    }
+  }
+
+  :is(.section--mobile-full-width) > * {
+    @media screen and (max-width: 749px) {
+      grid-column: 1 / -1;
+    }
+  }
+{% endstylesheet %}

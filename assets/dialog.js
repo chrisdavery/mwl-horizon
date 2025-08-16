@@ -181,3 +181,69 @@ document.addEventListener(
   },
   { capture: true }
 );
+
+
+/**
+ * <popup-link> custom element
+ *
+ * @example
+ * <popup-link on:click="/showDialog" data-id="size-popup">Open</popup-link>
+ * <dialog-component id="size-popup"><dialog>...</dialog></dialog-component>
+ */
+export class PopupLink extends HTMLElement {
+  connectedCallback() {
+    this.addEventListener('click', this.#handleClick);
+    this.style.cursor = this.style.cursor || 'pointer';
+  }
+
+  disconnectedCallback() {
+    this.removeEventListener('click', this.#handleClick);
+  }
+
+  /** @param {MouseEvent} event */
+  #handleClick = (event) => {
+    event.preventDefault();
+
+    const action = this.getAttribute('on:click');
+    const targetId = this.dataset.id;
+    if (!action || !targetId) return;
+
+    /** @type {HTMLElement & { showDialog?: Function, closeDialog?: Function, toggleDialog?: Function }} */
+    const dialogComponent = /** @type {any} */ (
+      document.getElementById(targetId)
+    );
+
+    if (!dialogComponent) return;
+
+    switch (action) {
+      case '/showDialog':
+        if (typeof dialogComponent.showDialog === 'function') {
+          dialogComponent.showDialog();
+        } else if (dialogComponent instanceof HTMLDialogElement) {
+          dialogComponent.showModal();
+        }
+        break;
+
+      case '/closeDialog':
+        if (typeof dialogComponent.closeDialog === 'function') {
+          dialogComponent.closeDialog();
+        } else if (dialogComponent instanceof HTMLDialogElement) {
+          dialogComponent.close();
+        }
+        break;
+
+      case '/toggleDialog':
+        if (typeof dialogComponent.toggleDialog === 'function') {
+          dialogComponent.toggleDialog();
+        }
+        break;
+
+      default:
+        console.warn(`Unknown popup-link action: ${action}`);
+    }
+  };
+}
+
+if (!customElements.get('popup-link')) {
+  customElements.define('popup-link', PopupLink);
+}

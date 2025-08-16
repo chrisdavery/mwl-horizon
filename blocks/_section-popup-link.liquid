@@ -1,0 +1,206 @@
+
+
+{% assign block_settings = block.settings %}
+
+<div {{ block.shopify_attributes }}>
+    <popup-link
+        on:click="/showDialog"
+        data-id="{{ block.settings.section_id }}"
+        class="button button-unstyled popup-link__button spacing-style {{ block_settings.type_preset }}"
+        style="{% render 'spacing-style', settings: block_settings %}"
+    >
+    {{- block_settings.heading }}
+    </popup-link>
+</div>
+
+{% stylesheet %}
+  .popup-link__button svg {
+    display: inline-block;
+    position: relative;
+    top: var(--margin-2xs);
+  }
+  .popup-link__button {
+    text-transform: unset;
+    min-height: unset;
+    height: unset;
+    line-height: 1em;
+    white-space: nowrap;
+    text-decoration-thickness: .05em !important;
+    text-decoration: underline;
+  }
+
+  .popup-link__content {
+    box-shadow: var(--shadow-popover);
+    border: var(--style-border-popover);
+    border-radius: var(--style-border-radius-popover);
+    background-color: var(--color-background);
+    padding: var(--padding-4xl) var(--padding-xl) var(--padding-xl);
+    max-width: var(--normal-content-width);
+    max-height: var(--modal-max-height);
+
+    @media screen and (min-width: 750px) {
+      padding: var(--padding-5xl);
+    }
+  }
+
+  .popup-link__content[open] {
+    animation: modalSlideInTop var(--animation-speed) var(--animation-easing) forwards;
+  }
+
+  .popup-link__content.dialog-closing {
+    animation: modalSlideOutTop var(--animation-speed) var(--animation-easing) forwards;
+  }
+
+  .popup-link__content--drawer {
+    position: fixed;
+    border-radius: 0;
+    width: var(--sidebar-width);
+    max-width: 95vw;
+    height: 100%;
+    margin: 0 0 0 auto;
+  }
+
+  /* Needed to ensure the drawer is full height */
+  .popup-link__content--drawer:modal {
+    max-height: 100dvh;
+  }
+
+  .popup-link__close {
+    top: var(--margin-2xs);
+    right: var(--margin-2xs);
+    opacity: 0.8;
+    animation: none;
+  }
+
+  .popup-link__close {
+    background-color: transparent;
+    opacity: 0.8;
+  }
+
+  .popup-link__close svg {
+    width: var(--icon-size-xs);
+    height: var(--icon-size-xs);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Popup section link",
+  "tag": null,
+  "settings": [
+    {
+        "type": "text",
+        "id": "section_id",
+        "label": "Section ID"
+    },
+    {
+      "type": "header",
+      "content": "t:content.popup"
+    },
+    {
+      "type": "header",
+      "content": "t:content.link"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.text",
+      "default": "t:text_defaults.popup_link"
+    },
+    {
+      "type": "select",
+      "id": "type_preset",
+      "label": "t:settings.preset",
+      "options": [
+        {
+          "value": "",
+          "label": "t:options.default"
+        },
+        {
+          "value": "paragraph",
+          "label": "t:options.paragraph"
+        },
+        {
+          "value": "h1",
+          "label": "t:options.h1"
+        },
+        {
+          "value": "h2",
+          "label": "t:options.h2"
+        },
+        {
+          "value": "h3",
+          "label": "t:options.h3"
+        },
+        {
+          "value": "h4",
+          "label": "t:options.h4"
+        },
+        {
+          "value": "h5",
+          "label": "t:options.h5"
+        },
+        {
+          "value": "h6",
+          "label": "t:options.h6"
+        }
+      ],
+      "default": "",
+      "info": "t:info.edit_presets_in_theme_settings"
+    },
+    {
+      "type": "header",
+      "content": "t:content.link_padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Popup section link",
+      "category": "t:categories.links",
+      "settings": {
+        "heading": "Learn more"
+      }
+    }
+  ]
+}
+{% endschema %}
