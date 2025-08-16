@@ -69,6 +69,7 @@
         "title",
         "content"
       ],
+      "disabled": true,
       "settings": {
         "content_direction": "column",
         "gap": 32,
@@ -77,58 +78,237 @@
         "padding-block-end": 0
       }
     },
-    "form": {
+    "section_ten3Q8": {
       "type": "section",
       "blocks": {
-        "contact_form_UwiCkQ": {
-          "type": "contact-form",
+        "group_XCGn8X": {
+          "type": "group",
+          "name": "t:names.group",
           "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 12,
             "width": "custom",
-            "custom_width": 50,
-            "width_mobile": "custom",
+            "custom_width": 33,
+            "width_mobile": "fill",
             "custom_width_mobile": 100,
+            "height": "fill",
+            "custom_height": 100,
             "inherit_color_scheme": true,
             "color_scheme": "",
-            "padding-block-start": 0,
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "solid",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 52,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": "mobile:hidden subpage-left"
           },
           "blocks": {
-            "submit-button": {
-              "type": "contact-form-submit-button",
-              "static": true,
+            "menu_FmCKAW": {
+              "type": "menu",
+              "name": "t:names.menu",
               "settings": {
-                "label": "Submit",
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
+                "menu": "horizon-subpages-sidebar",
+                "heading": "",
+                "menu_spacing": 24,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h3",
+                "link_preset": "h5",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             }
           },
-          "block_order": []
+          "block_order": [
+            "menu_FmCKAW"
+          ]
+        },
+        "group_TWzWdA": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 16,
+            "width": "custom",
+            "custom_width": 60,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 52,
+            "padding-block-end": 52,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": "subpage-right"
+          },
+          "blocks": {
+            "text_TPGzLK": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h1>Contact Us</h1>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_nyEXmU": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Made with Love Bridal is an online boutique with eight flagship stores located in <a href=\"/pages/mwl-brisbane-boutique\" title=\"MWL Brisbane Boutique\">Brisbane</a>, <a href=\"/pages/mwl-gold-coast-boutique\" title=\"MWL Gold Coast Boutique\">Gold Coast</a>, <a href=\"/pages/mwl-melbourne-boutique\" title=\"MWL Melbourne Boutique\">Melbourne</a>, <a href=\"/pages/mwl-sydney-boutique\" title=\"MWL Sydney Boutique\">Sydney</a>, <a href=\"/pages/mwl-perth-boutique\" title=\"MWL Perth Boutique\">Perth</a>, <a href=\"/pages/london-uk-boutique\" title=\"London, UK boutique\">London</a>, <a href=\"/pages/manchester-uk-boutique\" title=\"Manchester, uk boutique\">Manchester</a>, and <a href=\"/pages/utrecht-boutique\" title=\"Utrecht boutique\">Utrecht</a>, offering brides the opportunity to try on our gowns in person.</p><p>Our collections are also available through over <a href=\"/pages/store-locator\" title=\"Store Locator\">200 retailers worldwide</a>.</p><p>At MWL we pride ourselves on the exceptional service we would want to experience ourselves. Please reach out to us if you have any questions or need any help.</p><p>If you are based in Europe, please email <a href=\"mailto:utrecht@madewithlovebridal.com\" title=\"mailto:utrecht@madewithlovebridal.com\">utrecht@madewithlovebridal.com</a>.</p><p>If you are based in the United Kingdom, please email <a href=\"mailto:london@madewithlovebridal.com\" title=\"mailto:london@madewithlovebridal.com\">london@madewithlovebridal.com.</a></p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "contact_form_pab9nt": {
+              "type": "contact-form",
+              "settings": {
+                "width": "custom",
+                "custom_width": 100,
+                "width_mobile": "custom",
+                "custom_width_mobile": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "padding-block-start": 12,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "submit-button": {
+                  "type": "contact-form-submit-button",
+                  "static": true,
+                  "settings": {
+                    "label": "Submit",
+                    "style_class": "button",
+                    "width": "custom",
+                    "custom_width": 33,
+                    "width_mobile": "custom",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            }
+          },
+          "block_order": [
+            "text_TPGzLK",
+            "text_nyEXmU",
+            "contact_form_pab9nt"
+          ]
         }
       },
       "block_order": [
-        "contact_form_UwiCkQ"
+        "group_XCGn8X",
+        "group_TWzWdA"
       ],
-      "name": "t:names.contact_form",
+      "name": "t:names.custom_section",
       "settings": {
-        "content_direction": "column",
+        "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
+        "vertical_alignment": "flex-start",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
+        "gap": 42,
         "section_width": "page-width",
-        "section_height": "",
+        "full_width_on_mobile": false,
+        "section_height": "small",
         "section_height_custom": 50,
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -140,13 +320,13 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 32,
-        "padding-block-end": 84
+        "padding-block-start": 0,
+        "padding-block-end": 72
       }
     }
   },
   "order": [
     "main",
-    "form"
+    "section_ten3Q8"
   ]
 }

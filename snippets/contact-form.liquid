@@ -50,19 +50,37 @@
     <div class="contact-form__form-row">
       <label
         class="visually-hidden"
-        for="ContactForm-name"
+        for="ContactForm-firstname"
       >
-        {{- 'blocks.contact_form.name' | t -}}
+        {{- 'blocks.contact_form.first_name' | t -}}<span aria-hidden="true">*</span>
       </label>
       <input
         type="text"
-        id="ContactForm-name"
+        id="ContactForm-firstname"
         class="contact-form__input"
         autocomplete="name"
-        name="contact[name]"
+        name="contact[firstname]"
+        required
         value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-        placeholder="{{ 'blocks.contact_form.name' | t }}"
+        placeholder="{{ 'blocks.contact_form.first_name' | t }}*"
       >
+      <label
+        class="visually-hidden"
+        for="ContactForm-lastname"
+      >
+        {{- 'blocks.contact_form.last_name' | t -}}<span aria-hidden="true">*</span>
+      </label>
+      <input
+        type="text"
+        id="ContactForm-lastname"
+        class="contact-form__input"
+        autocomplete="name"
+        name="contact[last_name]"
+        required
+        value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+        placeholder="{{ 'blocks.contact_form.last_name' | t }}*"
+      >
+    </div>
 
       <label
         class="visually-hidden"
@@ -85,10 +103,8 @@
           aria-invalid="true"
           aria-describedby="ContactForm-email-error"
         {% endif %}
-        placeholder="{{ 'blocks.contact_form.email' | t }}"
+        placeholder="{{ 'blocks.contact_form.email' | t }}*"
       >
-    </div>
-
     <label
       class="visually-hidden"
       for="ContactForm-phone"
@@ -106,6 +122,45 @@
       placeholder="{{ 'blocks.contact_form.phone' | t }}"
     >
 
+    <div class="group-block-content parent-group-datepicker layout-panel-flex layout-panel-flex--column mobile-column" style="--flex-direction: column; --flex-wrap: nowrap; --gap: 12px; --horizontal-alignment: flex-start; --vertical-alignment: center; --vertical-alignment-mobile: center;">
+        <div class="spacing-style text-block custom custom-typography custom-font-size custom-color" style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color: var(--color-foreground); --font-size: var(--font-size--xs); --font-weight: var(--font-subheading--weight); --font-family: var(--font-subheading--family); --text-transform: uppercase; --text-wrap: pretty; --line-height: var(--line-height--body-normal); --letter-spacing: var(--letter-spacing--body-normal); --width: fit-content; --max-width: var(--max-width--body-normal);">{{ 'blocks.contact_form.your_wedding_date' | t }}</div>
+        <div class="size-style" style="--size-style-width: 100%; --size-style-height: ; --size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;">
+            <custom-input class="custom-input--field">
+            <div class="custom-input-wrapper">
+                <date-picker>
+                <input type="text" id="CustomForm-dd-mm-yyyy" name="properties[Send on]" class="custom-form__input" aria-label="dd/mm/yyyy" placeholder="dd/mm/yyyy" readonly="" autocomplete="off" data-lead-date="">
+                <label for="CustomForm-dd-mm-yyyy">dd/mm/yyyy</label>
+                <span class="datepicker-icon">
+                    {{- 'icon-date.svg' | inline_asset_content -}}
+                </span>
+                <div class="ai-datepicker-calendar">
+                    <div class="ai-datepicker-header">
+                        <button type="button" class="ai-datepicker-nav" data-action="prev-month" aria-label="Previous month">
+                            {{- 'icon-caret.svg' | inline_asset_content -}}
+                        </button>
+                        <div class="ai-datepicker-month-year h5"></div>
+
+                        <button type="button" class="ai-datepicker-nav" data-action="next-month" aria-label="Next month">
+                            {{- 'icon-caret.svg' | inline_asset_content -}}
+                        </button>
+                    </div>
+                
+                    <div class="ai-datepicker-grid">
+                        <div class="ai-datepicker-day-header">S</div>
+                        <div class="ai-datepicker-day-header">M</div>
+                        <div class="ai-datepicker-day-header">T</div>
+                        <div class="ai-datepicker-day-header">W</div>
+                        <div class="ai-datepicker-day-header">T</div>
+                        <div class="ai-datepicker-day-header">F</div>
+                        <div class="ai-datepicker-day-header">S</div>
+                    </div>
+                    <div class="ai-datepicker-year-selector hidden"></div>
+                </div>
+                </date-picker>
+            </div>
+            </custom-input>
+        </div>
+    </div>
     <label
       class="visually-hidden"
       for="ContactForm-body"
@@ -150,7 +205,7 @@
     text-overflow: ellipsis;
     color: var(--color-foreground);
     background-color: var(--color-input-background);
-    padding: var(--padding-lg) var(--padding-xl);
+    padding: var(--padding-sm) var(--padding-xl);
     border-radius: var(--style-border-radius-inputs);
     border: var(--style-border-width-inputs) solid var(--color-input-border);
     -webkit-font-smoothing: antialiased;

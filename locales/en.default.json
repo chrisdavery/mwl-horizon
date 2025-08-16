@@ -102,9 +102,12 @@
   "blocks": {
     "contact_form": {
       "name": "Name",
+      "first_name": "First Name",
+      "last_name": "Last Name",
       "email": "Email",
       "phone": "Phone",
-      "comment": "Comment",
+      "comment": "Message",
+      "your_wedding_date": "Your Wedding Date:",
       "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
       "error_heading": "Please adjust the following:"
     },

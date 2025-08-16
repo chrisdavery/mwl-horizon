@@ -64,7 +64,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h1>MWL SHIPPING INFORMATION</h1>",
+            "text": "<h1>MWL RETURNS</h1>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -141,7 +141,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Express Shipping Options</h2>",
+            "text": "<h2>VEILS AND ACCESSORIES</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -167,7 +167,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>We offer free shipping within Australia and international for all of our Veils, Accessories and Ready to Wear Collection dresses.<br/>Express shipping with Australia Post is available within Australia at checkout. We prioritise all express shipping orders however please expect up to 3 days business days for dispatch.</p><p><strong>All veils and accessories– $15.00 AUD<br/>All ready to wear collection dresses – $30.00 AUD</strong></p>",
+            "text": "<p>We accept returns on select Veils & Accessories (excluding earrings) as long as they are in their original condition, unworn, unaltered, and unwashed.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -231,7 +231,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>International Shipping</h2>",
+            "text": "<h2>READY TO WEAR / ELOPE STYLES</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -257,7 +257,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>We ship world wide. Import duties, taxes and custom charges are not included in the price and are the responsibility of the buyer. The amount charged is at the discretion of the customs agency within the destination country and is determined, in part, by the value of the item/s. It is illegal to falsify customs declarations. Payment of duties and taxes are due at collection/delivery. Please check with your country’s customs office to determine what additional cost will be added prior to purchase.</p>",
+            "text": "<p>If you placed your RTW or Elope order online without the help of one of our MWL Boutique stylists, you're eligible for a refund (minus shipping costs).</p><p>If you placed your order through one of our MWL Boutiques with the support of a stylist and the item isn’t quite right, we’re happy to offer you an exchange or credit note.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -321,7 +321,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Shipping Times for Veils & Accessories</h2>",
+            "text": "<h2>MADE TO ORDER STYLES</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -347,7 +347,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Most of our veils and accessories remain in stock at our head office. Our veils standardly ship within 5-7 business days of the order being placed. Shipping within Australia is generally 2-5 working days and 7-10 working days for the rest of the world.</p><p>If a veil is on backorder or has a longer shipping timeframe, this will be noted on each product. It is at the responsibility of the buyer to ensure there is enough time between order and wedding date.</p>",
+            "text": "<p>Unfortunately, we are unable to accept a return or exchange on any made-to-order item due to the customised nature of these items. Since these items are specifically crafted to your unique specifications, we cannot offer refunds or exchanges once the order has been processed and completed.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -403,6 +403,186 @@
         "padding-block-start": 24,
         "padding-block-end": 60
       }
+    },
+    "section_cR4CzT": {
+      "type": "section",
+      "blocks": {
+        "text_BWJcHk": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>SAMPLES</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h3",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_B43tLq": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Unfortunately, we are unable to accept a return or exchange on any sample items. All sample items are final sale.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_BWJcHk",
+        "text_B43tLq"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "section_width": "page-width",
+        "full_width_on_mobile": false,
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 24,
+        "padding-block-end": 60
+      }
+    },
+    "section_gXaiB6": {
+      "type": "section",
+      "blocks": {
+        "text_b3rYBc": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>HOW TO INIATE MY RETURN?</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h3",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_KrJUk4": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>To begin your return, please contact us at <a href=\"mailto:hello@madewithlovebridal.com\"><em>hello@madewithlovebridal.com</em></a> within 48 hours of receiving your item. Once your return is approved, we must receive the item within 14 days (for Australian orders) or 21 days (for international orders). The item must be in its original condition—unworn, unaltered, and unwashed.</p><p>Return shipping and any customs/import taxes are the buyer's responsibility. If customs taxes are due, they will be deducted from your refund or credit note.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_b3rYBc",
+        "text_KrJUk4"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "section_width": "page-width",
+        "full_width_on_mobile": false,
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 24,
+        "padding-block-end": 60
+      }
     }
   },
   "order": [
@@ -411,6 +591,8 @@
     "divider_Hj6L8B",
     "section_Wq6WEj",
     "section_kV6Pnn",
-    "section_zxLpjt"
+    "section_zxLpjt",
+    "section_cR4CzT",
+    "section_gXaiB6"
   ]
 }
