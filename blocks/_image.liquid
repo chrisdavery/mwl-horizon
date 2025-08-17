@@ -3,12 +3,18 @@
 {%- doc -%}
   Renders an image block.
 
+  @param {object} [custom_image] - The image block
   @param {string} [loading] - The html loading attribute
   @param {string} [placeholder] - The placeholder image name to use when no image is provided, defaults to 'hero-apparel-2'
 {%- enddoc -%}
 
 {% assign block_settings = block.settings %}
 {% assign image = closest.collection.featured_image | default: closest.product.featured_image %}
+
+{% if custom_image %}
+  {% assign image = custom_image %}
+{% endif %}
+
 {% assign alt = closest.collection.title | default: closest.product.title %}
 
 {% liquid

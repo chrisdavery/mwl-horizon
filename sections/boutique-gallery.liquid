@@ -46,17 +46,34 @@
     {{ styles }}
   "
 >
+  {% liquid
+    assign gallery_size = 0
+
+    for i in metaobject.boutique_gallery.value
+      assign gallery_size = gallery_size | plus: 1
+    endfor
+  %}
+
   <div class="section-resource-list__header">
-    {%- content_for 'block', type: '_product-list-content', id: 'static-header', columns: section.settings.columns, items_size: section.blocks.size -%}
+    {%- content_for 'block', type: '_product-list-content', id: 'static-header', columns: section.settings.columns, items_size: gallery_size -%}
   </div>
 
   {% capture list_items %}
-    {% content_for 'blocks' %}
+    {% for item in metaobject.boutique_gallery.value %}
+      {% content_for 'block',
+        type: '_feature-card-image',
+        id: 'feature-card-image',
+        item_image: item,
+        parent_block_id: block.id %}
+      {% unless forloop.last %}
+        <!--@list/split-->
+      {% endunless %}
+    {% endfor %}
   {% endcapture %}
 
   {% liquid
     # Create an array from the list items to be used for different layout types
-    assign list_items_array = list_items | strip | remove_last: '<!--@list/split-->' | split: '<!--@list/split-->'
+    assign list_items_array = list_items | strip | split: '<!--@list/split-->'
   %}
 
   <div
@@ -118,15 +135,18 @@
   {% endif %}
 </div>
 
+{% stylesheet %}
+  @media (max-width: 749px) {
+    .boutique-gallery .resource-list {
+      --resource-list-column-gap: 1px;
+    }
+  }
+{% endstylesheet %}
+
 {% schema %}
 {
-  "name": "Multicolumn",
-  "class": "ui-test-multicolumn-list",
-  "blocks": [
-    {
-      "type": "_multicolumn-card"
-    }
-  ],
+  "name": "Boutique gallery",
+  "class": "boutique-gallery",
   "disabled_on": {
     "groups": ["header", "footer"]
   },
@@ -377,7 +397,7 @@
   ],
   "presets": [
     {
-      "name": "Multicolumn",
+      "name": "Boutique gallery",
       "category": "t:categories.layout",
       "settings": {
         "layout_type": "carousel",
