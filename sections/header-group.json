@@ -61,11 +61,11 @@
               "name": "Megamenu Card Item",
               "settings": {
                 "assigned_to": "Shop",
-                "image": "shopify://shop_images/avery-made-with-love-bridal.png",
+                "image": "shopify://shop_images/MWL_Shop_Francesca.png",
                 "aspect_ratio": "1 / 1",
                 "overlay": false,
-                "title": "Shop Avery",
-                "link": "shopify://products/avery"
+                "title": "Shop Francesca",
+                "link": "shopify://products/francesca-ready-to-wear"
               },
               "blocks": {}
             },
