@@ -2497,9 +2497,7 @@
         "testimonial_card_AAGRAf",
         "testimonial_card_77T3kx"
       ],
-      "custom_css": [
-        "@media (min-width: 750px) {.resource-list__carousel {max-width: 1240px; margin: auto; } .resource-list__slide {width: calc(25% - var(--gap) * 3 / 4); } .slideshow-control {opacity: 1; } .slideshow-control--previous {margin-left: -3rem; } .slideshow-control--next {margin-right: -3rem; }}"
-      ],
+      "custom_css": [],
       "name": "Testimonials",
       "settings": {
         "alignment": "center",

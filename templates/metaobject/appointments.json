@@ -1052,7 +1052,7 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "content-left-where"
           },
           "blocks": {
             "group_mkHWCD": {
@@ -1234,7 +1234,7 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "image-right-where"
           },
           "blocks": {
             "image_FXyyz4": {
@@ -1271,7 +1271,10 @@
         "group_iPAQLA"
       ],
       "custom_css": [
-        ".where-to-find-content {--size-style-width: 320px !important;}"
+        ".custom-section-content:not(:has(.placeholder-image)) .where-to-find-content {--size-style-width: 320px !important;}",
+        ":has(.placeholder-image) .content-left-where {--padding-block-start: 36px !important; --padding-block-end: 36px !important; --size-style-width: 100% !important;}",
+        ":has(.placeholder-image) .layout-panel-flex--row {justify-content: center;}",
+        ":has(.placeholder-image) .image-right-where {display: none;}"
       ],
       "name": "t:names.custom_section",
       "settings": {
@@ -1303,19 +1306,9 @@
         "padding-block-end": 0
       }
     },
-    "testimonials_qeH3nr": {
-      "type": "testimonials",
+    "dynamic_testimonials_eGb6nL": {
+      "type": "dynamic-testimonials",
       "blocks": {
-        "testimonial_card_DWDgWJ": {
-          "type": "_testimonial-card",
-          "name": "Testimonial Card",
-          "settings": {
-            "star_rating": 5,
-            "testimonial_content": "<p>This product exceeded my expectations. The quality is outstanding and delivery was fast.</p>",
-            "customer_name": "Sarah Johnson"
-          },
-          "blocks": {}
-        },
         "static-header": {
           "type": "_product-list-content",
           "name": "t:names.header",
@@ -1323,7 +1316,7 @@
           "settings": {
             "content_direction": "row",
             "vertical_on_mobile": false,
-            "horizontal_alignment": "center",
+            "horizontal_alignment": "space-between",
             "vertical_alignment": "flex-end",
             "align_baseline": true,
             "horizontal_alignment_flex_direction_column": "flex-start",
@@ -1350,12 +1343,12 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_list_text_MpUEJH": {
+            "product_list_text_NqnNFk": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>{{ closest.metaobject.appointments.reviews_heading.value }}</h3>",
-                "width": "fit-content",
+                "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
                 "type_preset": "rte",
@@ -1378,26 +1371,24 @@
             }
           },
           "block_order": [
-            "product_list_text_MpUEJH"
+            "product_list_text_NqnNFk"
           ]
         }
       },
-      "block_order": [
-        "testimonial_card_DWDgWJ"
-      ],
-      "name": "Testimonials",
+      "custom_css": [],
+      "name": "Dynamic Testimonials",
       "settings": {
         "alignment": "center",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "columns": 4,
         "mobile_columns": "2",
-        "columns_gap": 8,
+        "columns_gap": 26,
         "rows_gap": 8,
-        "icons_style": "arrow",
-        "icons_shape": "circle",
+        "icons_style": "chevron",
+        "icons_shape": "none",
         "section_width": "page-width",
-        "gap": 12,
+        "gap": 20,
         "color_scheme": "scheme-2",
         "padding-block-start": 72,
         "padding-block-end": 72
@@ -1411,6 +1402,6 @@
     "section_7xXm7A",
     "divider_Qki3hU",
     "section_xdrjLL",
-    "testimonials_qeH3nr"
+    "dynamic_testimonials_eGb6nL"
   ]
 }

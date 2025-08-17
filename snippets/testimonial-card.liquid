@@ -1,0 +1,73 @@
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+  @param {string} [customer_name] - the customer name
+  @param {string} [testimonial_content] - the testimonial content
+  @param {object} [settings] - the section settings
+  @param {object} [block_settings] - the block id
+  @param {string} ai_gen_id - the section id
+{%- enddoc -%}
+
+{% assign rating = block_settings.star_rating | default: 5 %}
+
+{% style %}
+  .ai-testimonial-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: {{ settings.alignment }};
+  }
+
+  .ai-testimonial-stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 2px;
+    {% if settings.alignment == 'center' %}
+      justify-content: center;
+    {% elsif settings.alignment == 'right' %}
+      justify-content: flex-end;
+    {% else %}
+      justify-content: flex-start;
+    {% endif %}
+  }
+
+  .ai-testimonial-stars-{{ ai_gen_id }} svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  .ai-testimonial-content-{{ ai_gen_id }} {
+    margin: 0;
+  }
+
+  .ai-testimonial-name-{{ ai_gen_id }} {
+    margin: 0;
+  }
+
+  @media (max-width: 749px) {
+    .ai-testimonial-{{ ai_gen_id }} {
+      max-width: 320px;
+      margin: auto;
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-testimonial-{{ ai_gen_id }}" {{ block_settings.shopify_attributes }}>
+  <div class="ai-testimonial-stars-{{ ai_gen_id }}">
+    {% for i in (1..rating) %}
+      {{ 'icon-star.svg' | inline_asset_content }}
+    {% endfor %}
+  </div>
+
+  {% if testimonial_content != blank %}
+    <div class="ai-testimonial-content-{{ ai_gen_id }}">
+      {{ testimonial_content }}
+    </div>
+  {% endif %}
+
+  {% if customer_name != blank %}
+    <div class="ai-testimonial-name-{{ ai_gen_id }} h5">
+      {{ customer_name }}
+    </div>
+  {% endif %}
+</div>

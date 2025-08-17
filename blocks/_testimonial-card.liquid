@@ -1,67 +1,7 @@
 {% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
+{% assign block_settings = block.settings %}
 
-{% style %}
-  .ai-testimonial-{{ ai_gen_id }} {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    text-align: {{ section.settings.alignment }};
-  }
-
-  .ai-testimonial-stars-{{ ai_gen_id }} {
-    display: flex;
-    gap: 2px;
-    {% if section.settings.alignment == 'center' %}
-      justify-content: center;
-    {% elsif section.settings.alignment == 'right' %}
-      justify-content: flex-end;
-    {% else %}
-      justify-content: flex-start;
-    {% endif %}
-  }
-
-  .ai-testimonial-stars-{{ ai_gen_id }} svg {
-    width: 12px;
-    height: 12px;
-    flex-shrink: 0;
-  }
-
-  .ai-testimonial-content-{{ ai_gen_id }} {
-    margin: 0;
-  }
-
-  .ai-testimonial-name-{{ ai_gen_id }} {
-    margin: 0;
-  }
-
-  @media (max-width: 749px) {
-    .ai-testimonial-{{ ai_gen_id }} {
-      max-width: 320px;
-      margin: auto;
-      width: 100%;
-    }
-  }
-{% endstyle %}
-
-<div class="ai-testimonial-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
-  <div class="ai-testimonial-stars-{{ ai_gen_id }}">
-    {% for i in (1..block.settings.star_rating) %}
-      {{ 'icon-star.svg' | inline_asset_content }}
-    {% endfor %}
-  </div>
-
-  {% if block.settings.testimonial_content != blank %}
-    <div class="ai-testimonial-content-{{ ai_gen_id }}">
-      {{ block.settings.testimonial_content }}
-    </div>
-  {% endif %}
-
-  {% if block.settings.customer_name != blank %}
-    <div class="ai-testimonial-name-{{ ai_gen_id }} h5">
-      {{ block.settings.customer_name }}
-    </div>
-  {% endif %}
-</div>
+{% render 'testimonial-card', ai_gen_id: ai_gen_id, settings: section.settings, customer_name: block_settings.customer_name, testimonial_content: block_settings.testimonial_content, block_settings: block.settings %}
 <!--@list/split-->
  
 {% schema %}

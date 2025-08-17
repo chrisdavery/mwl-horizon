@@ -460,6 +460,10 @@ select.disabled {
   padding-block-end: var(--padding-3xs);
 }
 
+.metafield-rich_text_field > *:last-child {
+  margin-block-end: 0;
+}
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;

@@ -48,13 +48,23 @@
     {%- content_for 'block', type: '_product-list-content', id: 'static-header' -%}
   </div>
 
+  {% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
+
   {% capture list_items %}
-    {% content_for 'blocks' %}
+    {% for item in metaobject.appointment_reviews.value %}
+      {% assign customer_name = item.customer_name %}
+      {% assign content = item.content | metafield_tag %}
+ 
+      {% render 'testimonial-card', ai_gen_id: ai_gen_id, settings: section.settings, customer_name: customer_name, testimonial_content: content %}
+      {% unless forloop.last %}
+        <!--@list/split-->
+      {% endunless %}
+    {% endfor %}
   {% endcapture %}
 
   {% liquid
     # Create an array from the list items to be used for different layout types
-    assign list_items_array = list_items | strip | remove_last: '<!--@list/split-->' | split: '<!--@list/split-->'
+    assign list_items_array = list_items | strip | split: '<!--@list/split-->'
   %}
 
   <div
@@ -123,6 +133,7 @@
   .section-testimonials .resource-list__carousel slideshow-arrows {
     padding-inline: 0;
   }
+
   .section-testimonials button.slideshow-control.button-unstyled--transparent {
     color: rgb(var(--color-foreground));
   }
@@ -165,13 +176,8 @@
 
 {% schema %}
 {
-  "name": "Testimonials",
+  "name": "Dynamic Testimonials",
   "class": "ui-test-collection-list",
-  "blocks": [
-    {
-      "type": "_testimonial-card"
-    }
-  ],
   "disabled_on": {
     "groups": ["header", "footer"]
   },
@@ -390,7 +396,7 @@
   ],
   "presets": [
     {
-      "name": "Testimonials",
+      "name": "Dynamic Testimonials",
       "category": "t:categories.layout",
       "settings": {
         "layout_type": "carousel",
