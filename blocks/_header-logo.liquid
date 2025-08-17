@@ -16,6 +16,8 @@
     assign use_inverse_logo = true
   elsif page.metafields.custom.transparent_header == true
     assign use_inverse_logo = true
+  elsif metaobject.boutique_gallery
+    assign use_inverse_logo = true
   endif
 
   if use_inverse_logo

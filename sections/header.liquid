@@ -32,6 +32,9 @@
   elsif page.metafields.custom.transparent_header == true
     assign transparent = 'always'
     assign transparent_color_scheme = section.settings.home_color_scheme
+  elsif metaobject.boutique_gallery
+    assign transparent = 'always'
+    assign transparent_color_scheme = section.settings.home_color_scheme
   endif
 
   if section.settings.enable_sticky_header == 'always'
