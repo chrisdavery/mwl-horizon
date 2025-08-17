@@ -302,14 +302,13 @@ button.slideshow-control.button-unstyled--transparent {
   display: none;
 }
 
-.cart-bubble__background {
+/* .cart-bubble__background {
   background-color: rgb(248 246 239);
-  /* border: 0.01px solid var(--color-primary-button-background) */
-}
+} */
 
-.cart-bubble {
+/* .cart-bubble {
   color: var(--color-primary-button-background);
-}
+} */
 
 input,textarea {
   outline: none !important;
@@ -397,7 +396,7 @@ td.cart-items__price.cart-secondary-typography {
   opacity: 1;
 }
 
-.menu__item.active-menu-link:before {
+.subpage-left .menu__item.active-menu-link:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -407,6 +406,58 @@ td.cart-items__price.cart-secondary-typography {
   height: .3rem;
   border-radius: 50%;
   background: var(--color-foreground);
+}
+
+select.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.select-option {
+  --options-border-radius: var(--variant-picker-button-radius);
+  --options-border-width: var(--variant-picker-button-border-width);
+  --variant-option-padding-inline: var(--padding-md);
+}
+
+.option__select-wrapper {
+  display: flex;
+  position: relative;
+  border: var(--style-border-width-inputs) solid var(--color-border);
+  border-radius: var(--style-border-radius-inputs);
+  align-items: center;
+  overflow: clip;
+  transition: background-color var(--animation-speed) var(--animation-easing), border-color var(--animation-speed) var(--animation-easing);
+}
+
+.option__select-wrapper label {
+  position: absolute;
+  top: calc(var(--padding-2xs));
+  left: calc(var(--padding-lg));
+  line-height: 1em;
+  font-size: var(--font-size--sm);
+}
+
+.option__select-wrapper .icon {
+  position: absolute;
+  right: var(--padding-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--icon-size-2xs);
+  height: var(--icon-size-2xs);
+  pointer-events: none;
+}
+
+.option__select {
+  padding-block: var(--padding-md);
+  padding-inline: var(--padding-lg) calc(var(--padding-lg) + var(--icon-size-2xs));
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  padding-block-start: var(--padding-md);
+  padding-block-end: var(--padding-3xs);
 }
 
 @media (min-width: 750px) {
@@ -445,6 +496,10 @@ td.cart-items__price.cart-secondary-typography {
     --normal-content-width: 22rem !important;
     --sidebar-width: 20rem !important;
   }
+  .h3, h3 {
+    --font-h3--size: var(--font-size--sm) !important;
+  }
+
   .product-badges {
     gap: var(--gap-2xs) !important;
     flex-wrap: nowrap;

@@ -41,6 +41,9 @@
       "block_order": [
         "text_WHdhXA"
       ],
+      "custom_css": [
+        "@media (max-width: 749px) {.h3 {--font-h3--size: 1rem; }}"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",

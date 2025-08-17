@@ -47,6 +47,35 @@
       </div>
     {%- endif -%}
 
+
+    {% liquid
+      assign countries = settings.countries | newline_to_br | split: '<br />'
+    %}
+
+    {% if countries.size > 0 %}
+      <div class="select-option hidden">
+          <div class="option__select-wrapper">
+              <label for="Option-country">{{- 'blocks.contact_form.country' | t -}}</label>
+              <select id="Option-country" name="contact[country]"
+                  class="option__select">
+                  {% for country in countries %}
+                      <option value="{{ country | strip }}" selected="selected">
+                          {{ country }}
+                      </option>
+                  {% endfor %}
+              </select>
+              <svg
+              aria-hidden="true"
+              focusable="false"
+              class="icon icon-caret"
+              viewBox="0 0 10 6"
+              >
+              {%- render 'icon', icon: 'caret' -%}
+              </svg>
+          </div>
+      </div>
+    {% endif %}
+
     <div class="contact-form__form-row">
       <label
         class="visually-hidden"
@@ -58,7 +87,6 @@
         type="text"
         id="ContactForm-firstname"
         class="contact-form__input"
-        autocomplete="name"
         name="contact[firstname]"
         required
         value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
@@ -74,7 +102,6 @@
         type="text"
         id="ContactForm-lastname"
         class="contact-form__input"
-        autocomplete="name"
         name="contact[last_name]"
         required
         value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
@@ -128,34 +155,34 @@
             <custom-input class="custom-input--field">
             <div class="custom-input-wrapper">
                 <date-picker>
-                <input type="text" id="CustomForm-dd-mm-yyyy" name="properties[Send on]" class="custom-form__input" aria-label="dd/mm/yyyy" placeholder="dd/mm/yyyy" readonly="" autocomplete="off" data-lead-date="">
-                <label for="CustomForm-dd-mm-yyyy">dd/mm/yyyy</label>
-                <span class="datepicker-icon">
-                    {{- 'icon-date.svg' | inline_asset_content -}}
-                </span>
-                <div class="ai-datepicker-calendar">
-                    <div class="ai-datepicker-header">
-                        <button type="button" class="ai-datepicker-nav" data-action="prev-month" aria-label="Previous month">
-                            {{- 'icon-caret.svg' | inline_asset_content -}}
-                        </button>
-                        <div class="ai-datepicker-month-year h5"></div>
+                  <input type="text" id="CustomForm-dd-mm-yyyy" name="contact[{{ 'blocks.contact_form.your_wedding_date' | t }}]" class="custom-form__input" aria-label="dd/mm/yyyy" placeholder="dd/mm/yyyy" readonly="" autocomplete="off" data-lead-date="">
+                  <label for="CustomForm-dd-mm-yyyy">dd/mm/yyyy</label>
+                  <span class="datepicker-icon">
+                      {{- 'icon-date.svg' | inline_asset_content -}}
+                  </span>
+                  <div class="ai-datepicker-calendar">
+                      <div class="ai-datepicker-header">
+                          <button type="button" class="ai-datepicker-nav" data-action="prev-month" aria-label="Previous month">
+                              {{- 'icon-caret.svg' | inline_asset_content -}}
+                          </button>
+                          <div class="ai-datepicker-month-year h5"></div>
 
-                        <button type="button" class="ai-datepicker-nav" data-action="next-month" aria-label="Next month">
-                            {{- 'icon-caret.svg' | inline_asset_content -}}
-                        </button>
-                    </div>
-                
-                    <div class="ai-datepicker-grid">
-                        <div class="ai-datepicker-day-header">S</div>
-                        <div class="ai-datepicker-day-header">M</div>
-                        <div class="ai-datepicker-day-header">T</div>
-                        <div class="ai-datepicker-day-header">W</div>
-                        <div class="ai-datepicker-day-header">T</div>
-                        <div class="ai-datepicker-day-header">F</div>
-                        <div class="ai-datepicker-day-header">S</div>
-                    </div>
-                    <div class="ai-datepicker-year-selector hidden"></div>
-                </div>
+                          <button type="button" class="ai-datepicker-nav" data-action="next-month" aria-label="Next month">
+                              {{- 'icon-caret.svg' | inline_asset_content -}}
+                          </button>
+                      </div>
+                  
+                      <div class="ai-datepicker-grid">
+                          <div class="ai-datepicker-day-header">S</div>
+                          <div class="ai-datepicker-day-header">M</div>
+                          <div class="ai-datepicker-day-header">T</div>
+                          <div class="ai-datepicker-day-header">W</div>
+                          <div class="ai-datepicker-day-header">T</div>
+                          <div class="ai-datepicker-day-header">F</div>
+                          <div class="ai-datepicker-day-header">S</div>
+                      </div>
+                      <div class="ai-datepicker-year-selector hidden"></div>
+                  </div>
                 </date-picker>
             </div>
             </custom-input>
@@ -223,3 +250,47 @@
     gap: var(--gap-xs);
   }
 {% endstylesheet %}
+
+{% if countries.size > 0 %}
+  <script
+  src="{{ 'country-dropdown.js' | asset_url }}"
+  defer
+  type="module"
+></script>
+{% endif %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Target your actual form by ID
+  const form = document.getElementById('{{ form_id }}'); 
+
+  if (!form) return;
+
+  form.addEventListener('submit', function () {
+    // Collect values directly from your form fields
+    const data = {
+      first_name: document.getElementById('ContactForm-firstname')?.value || '',
+      last_name: document.getElementById('ContactForm-lastname')?.value || '',
+      email: document.getElementById('ContactForm-email')?.value || '',
+      phone: document.getElementById('ContactForm-phone')?.value || '',
+      country: document.getElementById('Option-country')?.value || '',
+      date: document.getElementById('CustomForm-dd-mm-yyyy')?.value || '',
+      enquiry: document.getElementById('ContactForm-body')?.value || ''
+    };
+
+    // Send to Zapier
+    fetch('https://hooks.zapier.com/hooks/catch/2280371/uym2c7u/', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    }).then(() => {
+      console.log('Zapier webhook triggered');
+    }).catch(error => {
+      console.error('Zapier webhook error:', error);
+    });
+  });
+});
+</script>

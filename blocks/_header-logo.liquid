@@ -14,6 +14,8 @@
     assign use_inverse_logo = true
   elsif section.settings.enable_transparent_header_article and template.name == 'article' and section.settings.article_color_scheme == 'inverse'
     assign use_inverse_logo = true
+  elsif page.metafields.custom.transparent_header == true
+    assign use_inverse_logo = true
   endif
 
   if use_inverse_logo
