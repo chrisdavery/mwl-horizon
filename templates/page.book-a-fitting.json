@@ -222,7 +222,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "Gold Coast",
-            "link": "shopify://metaobjects/appointments/mwl-gold-coast",
+            "link": "shopify://metaobjects/appointments/mwl-gold-coast-boutique",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
