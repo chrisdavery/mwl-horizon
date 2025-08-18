@@ -63,7 +63,7 @@
         "text_mwDNwc": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ closest.page.title }}</p>",
+            "text": "<p>MWL Cleaning</p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -95,7 +95,7 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/prim-lace-wedding-cape-made-with-love-bridal-2.png",
+        "image_1": "shopify://shop_images/Isla_Sleek_Wedding_Dress_7_Made_With_Love_Bridal.jpg",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -128,7 +128,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>To book a consultation, please select your city below.</h2>",
+            "text": "<h2>POST-WEDDING CLEANING</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -154,7 +154,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Our boutiques are at the heart of the Made with Love brand experience. Each bridal appointment is a personalised one-on-one experience with expert stylists dedicated to helping each bride find their dream dress.</p>",
+            "text": "<p>Please select your location below and carefully follow the instructions provided per location. If your location is not listed below, please reach out to our cleaning team via email at cleaning@madewithlovebridal.com.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -213,180 +213,11 @@
         "padding-block-start": 60,
         "padding-block-end": 45
       }
-    },
-    "section_dBQ8Wd": {
-      "type": "section",
-      "blocks": {
-        "button_wQFYNT": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Gold Coast",
-            "link": "shopify://metaobjects/appointments/mwl-gold-coast-boutique",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        },
-        "button_XeQx7x": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Sydney",
-            "link": "shopify://metaobjects/appointments/mwl-sydney-boutique",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        },
-        "button_Qrcwfp": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Melbourne",
-            "link": "shopify://metaobjects/appointments/mwl-melbourne",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        },
-        "button_FARrqF": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Brisbane",
-            "link": "shopify://metaobjects/appointments/mwl-brisbane",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        },
-        "button_kxxdKE": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "PERTH",
-            "link": "shopify://metaobjects/appointments/mwl-perth-boutique",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        },
-        "button_rM4UK8": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "london, uk",
-            "link": "shopify://metaobjects/appointments/london-uk-boutique",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        },
-        "button_cYczQm": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Manchester, uk",
-            "link": "shopify://metaobjects/appointments/manchester-uk-boutique",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        },
-        "button_JAdrRN": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "UTRECHT, NL",
-            "link": "shopify://metaobjects/appointments/utrecht-boutique",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "button_wQFYNT",
-        "button_XeQx7x",
-        "button_Qrcwfp",
-        "button_FARrqF",
-        "button_kxxdKE",
-        "button_rM4UK8",
-        "button_cYczQm",
-        "button_JAdrRN"
-      ],
-      "custom_css": [
-        ".button {--button-padding-block: 10px;}",
-        "@media (max-width: 749px) {.custom-section-content > .mobile-column {flex-flow: row wrap; } .custom-section-content > .mobile-column .button {width: calc(50% - var(--gap)); --button-padding-inline: 10px; }}"
-      ],
-      "name": "t:names.custom_section",
-      "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "center",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "full_width_on_mobile": false,
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-84ed539a-2fac-4087-aca6-cb2b39431de9",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 30
-      }
     }
   },
   "order": [
     "main",
     "hero_bNLX4M",
-    "section_8kgtYw",
-    "section_dBQ8Wd"
+    "section_8kgtYw"
   ]
 }
