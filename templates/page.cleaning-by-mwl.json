@@ -211,7 +211,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 60,
-        "padding-block-end": 45
+        "padding-block-end": 54
       }
     },
     "multicolumn_list_iy7y6y": {
@@ -352,7 +352,7 @@
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
+                    "gap": 18,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -442,7 +442,7 @@
                       "name": "t:names.button",
                       "settings": {
                         "label": "FIND OUT MORE",
-                        "link": "shopify://collections/all",
+                        "link": "#localization-AU",
                         "open_in_new_tab": false,
                         "style_class": "button-secondary",
                         "width": "fit-content",
@@ -605,7 +605,7 @@
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
+                    "gap": 18,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -858,7 +858,7 @@
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
+                    "gap": 18,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -1111,7 +1111,7 @@
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
+                    "gap": 18,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
