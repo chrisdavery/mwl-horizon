@@ -895,7 +895,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>STEP 1</h3>",
+                        "text": "<h3>IN EUROPE</h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1148,7 +1148,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>STEP 1</h3>",
+                        "text": "<h3>IN NZ, CANADA, ASIA & SOUTH AMERICA</h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
