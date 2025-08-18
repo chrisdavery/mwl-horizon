@@ -389,7 +389,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>STEP 1</h3>",
+                        "text": "<h3>IN AUSTRALIA</h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1318,16 +1318,20 @@
         "multicolumn_card_M8j8W7",
         "multicolumn_card_MYRqBG"
       ],
+      "custom_css": [
+        "@media (min-width: 750px) {.group-block {border-right: 0;}}",
+        "@media (max-width: 749px) {@media (min-width: 750px) {.group-block {border-bottom: 0;}}}"
+      ],
       "name": "Multicolumn",
       "settings": {
         "alignment": "left",
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "columns": 4,
-        "mobile_columns": "2",
+        "mobile_columns": "1",
         "mobile_card_size": "60cqw",
         "columns_gap": 0,
-        "rows_gap": 8,
+        "rows_gap": 0,
         "icons_style": "arrow",
         "icons_shape": "circle",
         "section_width": "full-width",
@@ -1337,12 +1341,672 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "multicolumn_list_f7UYBq": {
+      "type": "multicolumn-list",
+      "blocks": {
+        "multicolumn_card_a38Cqx": {
+          "type": "_multicolumn-card",
+          "name": "Multicolumn Item",
+          "settings": {},
+          "blocks": {
+            "image_kpD6rr": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/cleaning-1.webp",
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_kpD6rr"
+          ]
+        },
+        "multicolumn_card_8z9YeV": {
+          "type": "_multicolumn-card",
+          "name": "Multicolumn Item",
+          "settings": {},
+          "blocks": {
+            "image_j4TW73": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/2_a1f6c153-9022-43ce-a10c-cc35b92486ad.png",
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_j4TW73"
+          ]
+        },
+        "multicolumn_card_HkWU48": {
+          "type": "_multicolumn-card",
+          "name": "Multicolumn Item",
+          "settings": {},
+          "blocks": {
+            "image_TWiznz": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/3_c72cab6d-989d-4931-802a-dd3f49ece0b0.png",
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_TWiznz"
+          ]
+        },
+        "multicolumn_card_93DCkR": {
+          "type": "_multicolumn-card",
+          "name": "Multicolumn Item",
+          "settings": {},
+          "blocks": {
+            "image_AtEEnH": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/4_919db720-2061-43fc-ad92-96484444230c.png",
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_AtEEnH"
+          ]
+        },
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 12,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text_R98NJf": {
+              "type": "_product-list-text",
+              "name": "t:names.collection_title",
+              "settings": {
+                "text": "<h4>OUR RESULTS</h4>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_list_text_R98NJf"
+          ]
+        }
+      },
+      "block_order": [
+        "multicolumn_card_a38Cqx",
+        "multicolumn_card_8z9YeV",
+        "multicolumn_card_HkWU48",
+        "multicolumn_card_93DCkR"
+      ],
+      "name": "Multicolumn",
+      "settings": {
+        "alignment": "left",
+        "layout_type": "carousel",
+        "carousel_on_mobile": false,
+        "columns": 2,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 8,
+        "rows_gap": 8,
+        "icons_style": "arrow",
+        "icons_shape": "circle",
+        "section_width": "page-width",
+        "full_width_on_mobile": false,
+        "gap": 12,
+        "color_scheme": "",
+        "padding-block-start": 24,
+        "padding-block-end": 24
+      }
+    },
+    "testimonials_PLLxM9": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_card_GgKEiX": {
+          "type": "_testimonial-card",
+          "name": "Testimonial Card",
+          "settings": {
+            "star_rating": 5,
+            "testimonial_content": "<p>So happy with how my dress turned out after the MWL cleaning team worked their magic. Now she is ready for safe keeping until I can pass her on to my daughter one day.</p>",
+            "customer_name": "CLAIRE"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_jgHAFJ": {
+          "type": "_testimonial-card",
+          "name": "Testimonial Card",
+          "settings": {
+            "star_rating": 5,
+            "testimonial_content": "<p>My dress had seen better days, after handing it over to the MWL cleaning team I was shocked to see my dress looking brand new again.</p>",
+            "customer_name": "CANDICE"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_XbYHrf": {
+          "type": "_testimonial-card",
+          "name": "Testimonial Card",
+          "settings": {
+            "star_rating": 5,
+            "testimonial_content": "<p>The team at MWL brought my dress back to life. I was nervous to take my dress to a dry cleaner so when I found out MWL did cleaning themselves it was such a relief. The idea of getting my dress cleaned by MWL was a no brainer!</p>",
+            "customer_name": "OLIVIA"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_3XHXGx": {
+          "type": "_testimonial-card",
+          "name": "Testimonial Card",
+          "settings": {
+            "star_rating": 5,
+            "testimonial_content": "<p>Thank you so much for restoring my dress, the whole process was seamless!</p>",
+            "customer_name": "RACHAEL"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_akfftY": {
+          "type": "_testimonial-card",
+          "name": "Testimonial Card",
+          "settings": {
+            "star_rating": 5,
+            "testimonial_content": "<p>I sent my dress in with red wine, grass and mud stains and she came back to me looking just as good as the first day I received her. I couldn’t believe it - I didn’t think my dress could look this new again! Thank you so much MWL!</p>",
+            "customer_name": "LEAH"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_ENKDtm": {
+          "type": "_testimonial-card",
+          "name": "Testimonial Card",
+          "settings": {
+            "star_rating": 5,
+            "testimonial_content": "<p>The MWL Cleaning team did the most amazing job at bringing my dress back to life.</p>",
+            "customer_name": "JOANNE"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_hRwn3q": {
+          "type": "_testimonial-card",
+          "name": "Testimonial Card",
+          "settings": {
+            "star_rating": 5,
+            "testimonial_content": "<p>I was blown away by the cleaning results. My dress is beautiful again! This is such a great service that I highly recommend all brides to jump at.</p>",
+            "customer_name": "JAIMEE"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_Wg93Ft": {
+          "type": "_testimonial-card",
+          "name": "Testimonial Card",
+          "settings": {
+            "star_rating": 5,
+            "testimonial_content": "<p>I could not be happier with how my dress turned out!  She looks brand new again!</p>",
+            "customer_name": "LISA"
+          },
+          "blocks": {}
+        },
+        "static-header": {
+          "type": "_product-list-content",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 15,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_XNDhe6": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<h2>TESTIMONIALS</h2>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_XNDhe6"
+          ]
+        }
+      },
+      "block_order": [
+        "testimonial_card_GgKEiX",
+        "testimonial_card_jgHAFJ",
+        "testimonial_card_XbYHrf",
+        "testimonial_card_3XHXGx",
+        "testimonial_card_akfftY",
+        "testimonial_card_ENKDtm",
+        "testimonial_card_hRwn3q",
+        "testimonial_card_Wg93Ft"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "alignment": "center",
+        "layout_type": "carousel",
+        "carousel_on_mobile": false,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 20,
+        "rows_gap": 8,
+        "icons_style": "chevron",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "gap": 20,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 58,
+        "padding-block-end": 58
+      }
+    },
+    "section_tqVFLf": {
+      "type": "section",
+      "blocks": {
+        "group_UWnYHP": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 12,
+            "width": "custom",
+            "custom_width": 33,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "solid",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 52,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": "mobile:hidden subpage-left"
+          },
+          "blocks": {
+            "menu_fkmV63": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "horizon-subpages-sidebar",
+                "heading": "",
+                "menu_spacing": 24,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h3",
+                "link_preset": "h5",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_fkmV63"
+          ]
+        },
+        "group_qeq6Tf": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 16,
+            "width": "custom",
+            "custom_width": 60,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 52,
+            "padding-block-end": 72,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": true,
+            "mobile-padding-block-start": 12,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": "subpage-right"
+          },
+          "blocks": {
+            "text_YYJEqM": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>CLEANING TERMS AND CONDITIONS</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "accordion_QGKBK6": {
+              "type": "accordion",
+              "name": "t:names.accordion",
+              "settings": {
+                "icon": "plus",
+                "dividers": true,
+                "type_preset": "h5",
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "accordion_row_H6AB8F": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "T&CS",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_za9X6C": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<ul><li>Our cleaning service is available worldwide.</li><li>Standardly, please allow 2-5 weeks for cleaning to be completed to our high standards. </li><li>MWL can only accept MWL and Emmy Mae brand wedding dresses, veils and accessories for cleaning.  Please do not submit any other brands for cleaning as these will be returned without cleaning at the customer’s expense.</li><li>Although all care will be taken to restore your dress, veil and/or accessory to the highest possible standard, we unfortunately cannot guarantee any dress, veil and/or accessory will be able to be returned to its original “as new” condition.  Please bear in mind that there is a fine line between removing the marks and ruining the material, so we will give your dress the complete care it deserves. We recommend returning any items for cleaning earlier rather than later so we have the best possible chance of returning her to her former glory.</li><li>MWL reserves the right to refuse cleaning services if the process will cause further damage to the item and will in this case ensure your dress, veil and/or accessories are returned to you.</li><li>MWL reserves the right to charge an additional fee for cases that are deemed to require an extraordinarily high level of additional attention and product to remove marks and stains. </li><li>It is a requirement of submitting your MWL dress, veil and/or accessories for cleaning that you complete the form and submit it online before your dress arrives with our MWL cleaning team.  This is to ensure when your dress arrives it can be correctly linked with your details and returned to you once cleaned.  If a dress arrives with our cleaning team without an associated submission through our website, we will make every effort to contact the sender, however your dress, veil and/or accessories may be returned to you.</li><li>Any customs/import duties are to be charged to the customer and will not be covered by MWL as the receiver of a return dress.  If customs charges are incurred by MWL to receive your dress those charges will be invoiced to the sender to clear the shipment.  Please note that the customer is also responsible for any and all customs/import duties that may be incurred upon return of the item once cleaned.</li><li>MWL cannot accept any liability for any items lost in transit to or from our cleaning team.</li><li>Upon completion, your dress, veil and/or accessories will be wrapped in acid-free tissue paper and boxed.  MWL will provide tracking information for items once returned to the original sender.</li><li>Additional services such as button repairs, etc. are not included in our cleaning service and are charged at an extra rate to be added to cart with your cleaning order at your discretion.  Our extra care package includes light hand sewing repairs such as replacing buttons, replacement of MWL cups and small, light applique, lace and beading repairs only.  More significant repairs including holes, larges rips or tears and replacing zippers are not covered by this package.  If an extra care package is not added to your cleaning order your dress will simply be cleaned and wrapped.</li></ul>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_za9X6C"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_row_H6AB8F"
+              ]
+            }
+          },
+          "block_order": [
+            "text_YYJEqM",
+            "accordion_QGKBK6"
+          ]
+        }
+      },
+      "block_order": [
+        "group_UWnYHP",
+        "group_qeq6Tf"
+      ],
+      "custom_css": [
+        "summary {padding-block: var(--padding-lg);}"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "flex-start",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 62,
+        "section_width": "page-width",
+        "full_width_on_mobile": false,
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 32,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
     "main",
     "hero_bNLX4M",
     "section_8kgtYw",
-    "multicolumn_list_iy7y6y"
+    "multicolumn_list_iy7y6y",
+    "multicolumn_list_f7UYBq",
+    "testimonials_PLLxM9",
+    "section_tqVFLf"
   ]
 }
