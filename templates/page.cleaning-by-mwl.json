@@ -57,6 +57,17 @@
         "padding-block-end": 80
       }
     },
+    "custom_liquid_8zYA33": {
+      "type": "custom-liquid",
+      "name": "Redirect script (do not remove))",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "hero_bNLX4M": {
       "type": "hero",
       "blocks": {
@@ -2008,6 +2019,7 @@
     "multicolumn_list_iy7y6y",
     "multicolumn_list_f7UYBq",
     "testimonials_PLLxM9",
-    "section_tqVFLf"
+    "section_tqVFLf",
+    "custom_liquid_8zYA33"
   ]
 }
