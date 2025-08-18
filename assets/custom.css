@@ -16,6 +16,7 @@
   --cart-primary-font-weight: var(--font-heading--weight) !important;
   --peek-next-slide-size: 0rem !important;
   --max-width--body-normal: 110ch !important;
+  --button-padding-block: 10px;
 }
 
 a {
