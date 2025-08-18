@@ -442,7 +442,7 @@
                       "name": "t:names.button",
                       "settings": {
                         "label": "FIND OUT MORE",
-                        "link": "shopify://collections/all",
+                        "link": "#localization-AU",
                         "open_in_new_tab": false,
                         "style_class": "button-secondary",
                         "width": "fit-content",
