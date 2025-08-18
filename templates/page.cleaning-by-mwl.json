@@ -211,7 +211,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 60,
-        "padding-block-end": 45
+        "padding-block-end": 54
       }
     },
     "multicolumn_list_iy7y6y": {
@@ -389,7 +389,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>STEP 1</h3>",
+                        "text": "<h3>IN AUSTRALIA</h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
