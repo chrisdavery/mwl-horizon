@@ -199,7 +199,7 @@
               "type": "group",
               "settings": {
                 "link": "",
-                "open_in_new_tab": false,
+                "open_in_new_tab": true,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-start",
@@ -415,7 +415,7 @@
                       "settings": {
                         "label": "SUBMIT YOUR DRESS FOR CLEANING",
                         "link": "https://madewithlovebridal.co.uk/shop/mwl-cleaning/",
-                        "open_in_new_tab": false,
+                        "open_in_new_tab": true,
                         "style_class": "button-secondary",
                         "width": "fit-content",
                         "custom_width": 100,
@@ -667,7 +667,7 @@
                       "settings": {
                         "label": "DOWNLOAD PACKING FORM",
                         "link": "https://mwl.mymedia.delivery/wp-content/uploads/2024/07/RETURNS-SLIP-EU.pdf",
-                        "open_in_new_tab": false,
+                        "open_in_new_tab": true,
                         "style_class": "button-secondary",
                         "width": "fit-content",
                         "custom_width": 100,
