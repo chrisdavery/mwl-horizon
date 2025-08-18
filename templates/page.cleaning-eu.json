@@ -366,9 +366,9 @@
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
-                        "type_preset": "h3",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
+                        "type_preset": "custom",
+                        "font": "var(--font-heading--family)",
+                        "font_size": "1.5rem",
                         "line_height": "normal",
                         "letter_spacing": "normal",
                         "case": "none",
@@ -610,7 +610,7 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_CQQWwR": {
+                    "text_8UPn88": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
@@ -618,9 +618,9 @@
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
-                        "type_preset": "h3",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
+                        "type_preset": "custom",
+                        "font": "var(--font-heading--family)",
+                        "font_size": "1.5rem",
                         "line_height": "normal",
                         "letter_spacing": "normal",
                         "case": "none",
@@ -678,7 +678,7 @@
                     }
                   },
                   "block_order": [
-                    "text_CQQWwR",
+                    "text_8UPn88",
                     "text_jfpGJD",
                     "button_4QbJMK"
                   ]
@@ -862,7 +862,7 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_8K4WRy": {
+                    "text_F6LQKt": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
@@ -870,9 +870,9 @@
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
-                        "type_preset": "h3",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
+                        "type_preset": "custom",
+                        "font": "var(--font-heading--family)",
+                        "font_size": "1.5rem",
                         "line_height": "normal",
                         "letter_spacing": "normal",
                         "case": "none",
@@ -915,7 +915,7 @@
                     }
                   },
                   "block_order": [
-                    "text_8K4WRy",
+                    "text_F6LQKt",
                     "text_4c6rXd"
                   ]
                 }
