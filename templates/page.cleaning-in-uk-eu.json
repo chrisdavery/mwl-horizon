@@ -214,15 +214,15 @@
         "padding-block-end": 54
       }
     },
-    "multicolumn_list_iy7y6y": {
+    "multicolumn_list_pGPCe": {
       "type": "multicolumn-list",
       "blocks": {
-        "multicolumn_card_hacrk9": {
+        "multicolumn_card_DNJcHP": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "group_bkEMtt": {
+            "group_zHTVf4": {
               "type": "group",
               "settings": {
                 "link": "",
@@ -267,7 +267,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "group_mRmedD": {
+                "group_zR6EYd": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -287,8 +287,8 @@
                     "custom_width_mobile": 100,
                     "height": "fit",
                     "custom_height": 100,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
+                    "inherit_color_scheme": false,
+                    "color_scheme": "scheme-2",
                     "background_media": "none",
                     "video_position": "cover",
                     "background_image_position": "cover",
@@ -313,10 +313,10 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "image_ndkViq": {
+                    "image_EmMNLe": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/DSCF9644.jpg",
+                        "image": "shopify://shop_images/Cleaning_Icon-01_57052434-55c8-4856-8181-36b3abbaaf8a.png",
                         "link": "",
                         "image_ratio": "standard",
                         "width": "fill",
@@ -337,10 +337,10 @@
                     }
                   },
                   "block_order": [
-                    "image_ndkViq"
+                    "image_EmMNLe"
                   ]
                 },
-                "group_RnNEzf": {
+                "group_PqfDwV": {
                   "type": "group",
                   "settings": {
                     "link": "",
@@ -352,7 +352,7 @@
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 18,
+                    "gap": 12,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -385,11 +385,11 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_zpFibJ": {
+                    "text_frehtj": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>IN AUSTRALIA</h3>",
+                        "text": "<h3><strong>STEP 1</strong></h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -411,9 +411,8 @@
                       },
                       "blocks": {}
                     },
-                    "text_jVcnnc": {
+                    "text_PjrgD8": {
                       "type": "text",
-                      "disabled": true,
                       "settings": {
                         "text": "<p>Package up your dress and be sure to include a note confirming your name, phone number and email address.</p>",
                         "width": "100%",
@@ -436,50 +435,34 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
-                    },
-                    "button_mTcbec": {
-                      "type": "button",
-                      "name": "t:names.button",
-                      "settings": {
-                        "label": "FIND OUT MORE",
-                        "link": "#localization-AU",
-                        "open_in_new_tab": false,
-                        "style_class": "button-secondary",
-                        "width": "fit-content",
-                        "custom_width": 100,
-                        "width_mobile": "fit-content",
-                        "custom_width_mobile": 100
-                      },
-                      "blocks": {}
                     }
                   },
                   "block_order": [
-                    "text_zpFibJ",
-                    "text_jVcnnc",
-                    "button_mTcbec"
+                    "text_frehtj",
+                    "text_PjrgD8"
                   ]
                 }
               },
               "block_order": [
-                "group_mRmedD",
-                "group_RnNEzf"
+                "group_zR6EYd",
+                "group_PqfDwV"
               ]
             }
           },
           "block_order": [
-            "group_bkEMtt"
+            "group_zHTVf4"
           ]
         },
-        "multicolumn_card_N6jeQU": {
+        "multicolumn_card_WAPm9e": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "group_fhBcBh": {
+            "group_NnzCRA": {
               "type": "group",
               "settings": {
-                "link": "",
-                "open_in_new_tab": false,
+                "link": "https://return.auspost.com.au/MADE_WITH_LOVE_BRIDAL",
+                "open_in_new_tab": true,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-start",
@@ -520,7 +503,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "group_HAHVxi": {
+                "group_MBAHbp": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -540,8 +523,8 @@
                     "custom_width_mobile": 100,
                     "height": "fit",
                     "custom_height": 100,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
+                    "inherit_color_scheme": false,
+                    "color_scheme": "scheme-2",
                     "background_media": "none",
                     "video_position": "cover",
                     "background_image_position": "cover",
@@ -566,10 +549,10 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "image_9NeV9f": {
+                    "image_jiGmXX": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/UK_Cleaning_Sevice.png",
+                        "image": "shopify://shop_images/Cleaning_Icon-02.png",
                         "link": "",
                         "image_ratio": "standard",
                         "width": "fill",
@@ -590,10 +573,10 @@
                     }
                   },
                   "block_order": [
-                    "image_9NeV9f"
+                    "image_jiGmXX"
                   ]
                 },
-                "group_p6hMG6": {
+                "group_yRDrDd": {
                   "type": "group",
                   "settings": {
                     "link": "",
@@ -605,7 +588,7 @@
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 18,
+                    "gap": 12,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -638,11 +621,11 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_R7Hb9T": {
+                    "text_CQQWwR": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>IN THE UK, MIDDLE EAST & SOUTH AFRICA</h3>",
+                        "text": "<h3><strong>STEP 2</strong></h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -664,11 +647,10 @@
                       },
                       "blocks": {}
                     },
-                    "text_dHG4t3": {
+                    "text_jfpGJD": {
                       "type": "text",
-                      "disabled": true,
                       "settings": {
-                        "text": "<p>Package up your dress and be sure to include a note confirming your name, phone number and email address.</p>",
+                        "text": "<p>Click here to create your FREE Australia Post Return Labels and drop your dress to any Post Office or Street Posting Box.</p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
@@ -689,49 +671,33 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
-                    },
-                    "button_C7Yqex": {
-                      "type": "button",
-                      "name": "t:names.button",
-                      "settings": {
-                        "label": "FIND OUT MORE",
-                        "link": "shopify://collections/all",
-                        "open_in_new_tab": false,
-                        "style_class": "button-secondary",
-                        "width": "fit-content",
-                        "custom_width": 100,
-                        "width_mobile": "fit-content",
-                        "custom_width_mobile": 100
-                      },
-                      "blocks": {}
                     }
                   },
                   "block_order": [
-                    "text_R7Hb9T",
-                    "text_dHG4t3",
-                    "button_C7Yqex"
+                    "text_CQQWwR",
+                    "text_jfpGJD"
                   ]
                 }
               },
               "block_order": [
-                "group_HAHVxi",
-                "group_p6hMG6"
+                "group_MBAHbp",
+                "group_yRDrDd"
               ]
             }
           },
           "block_order": [
-            "group_fhBcBh"
+            "group_NnzCRA"
           ]
         },
-        "multicolumn_card_M8j8W7": {
+        "multicolumn_card_BBAMWw": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "group_jwLmjm": {
+            "group_DdTmx6": {
               "type": "group",
               "settings": {
-                "link": "",
+                "link": "shopify://collections/cleaning",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -773,7 +739,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "group_6LDUNn": {
+                "group_wMACYz": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -793,8 +759,8 @@
                     "custom_width_mobile": 100,
                     "height": "fit",
                     "custom_height": 100,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
+                    "inherit_color_scheme": false,
+                    "color_scheme": "scheme-2",
                     "background_media": "none",
                     "video_position": "cover",
                     "background_image_position": "cover",
@@ -819,10 +785,10 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "image_kD6kgh": {
+                    "image_aQLCpg": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/DSCF9715_88b3fa99-6e23-4da1-8b08-75978144df31.jpg",
+                        "image": "shopify://shop_images/Cleaning_Icon-03.png",
                         "link": "",
                         "image_ratio": "standard",
                         "width": "fill",
@@ -843,10 +809,10 @@
                     }
                   },
                   "block_order": [
-                    "image_kD6kgh"
+                    "image_aQLCpg"
                   ]
                 },
-                "group_6gtFYy": {
+                "group_Qr9Gnf": {
                   "type": "group",
                   "settings": {
                     "link": "",
@@ -858,7 +824,7 @@
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 18,
+                    "gap": 12,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -891,11 +857,11 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_iVQFVE": {
+                    "text_8K4WRy": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>IN EUROPE</h3>",
+                        "text": "<h3><strong>STEP 3</strong></h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -917,11 +883,10 @@
                       },
                       "blocks": {}
                     },
-                    "text_gqmPCL": {
+                    "text_4c6rXd": {
                       "type": "text",
-                      "disabled": true,
                       "settings": {
-                        "text": "<p>Package up your dress and be sure to include a note confirming your name, phone number and email address.</p>",
+                        "text": "<p>IMPORTANT FINAL STEP: Once your dress is shipped, please don’t forget to use the submit icon above to submit your dress to our cleaning database and pay online. If you pre-paid for cleaning at the time of your dress order, you will have received a coupon code via email to checkout at no extra cost.</p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
@@ -942,291 +907,22 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
-                    },
-                    "button_QxXmcT": {
-                      "type": "button",
-                      "name": "t:names.button",
-                      "settings": {
-                        "label": "FIND OUT MORE",
-                        "link": "shopify://collections/all",
-                        "open_in_new_tab": false,
-                        "style_class": "button-secondary",
-                        "width": "fit-content",
-                        "custom_width": 100,
-                        "width_mobile": "fit-content",
-                        "custom_width_mobile": 100
-                      },
-                      "blocks": {}
                     }
                   },
                   "block_order": [
-                    "text_iVQFVE",
-                    "text_gqmPCL",
-                    "button_QxXmcT"
+                    "text_8K4WRy",
+                    "text_4c6rXd"
                   ]
                 }
               },
               "block_order": [
-                "group_6LDUNn",
-                "group_6gtFYy"
+                "group_wMACYz",
+                "group_Qr9Gnf"
               ]
             }
           },
           "block_order": [
-            "group_jwLmjm"
-          ]
-        },
-        "multicolumn_card_MYRqBG": {
-          "type": "_multicolumn-card",
-          "name": "Multicolumn Item",
-          "settings": {},
-          "blocks": {
-            "group_YMaUtU": {
-              "type": "group",
-              "settings": {
-                "link": "",
-                "open_in_new_tab": false,
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 18,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fill",
-                "custom_height": 100,
-                "inherit_color_scheme": false,
-                "color_scheme": "scheme-6",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "placeholder": "",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "padding-block-start": 28,
-                "padding-block-end": 28,
-                "padding-inline-start": 28,
-                "padding-inline-end": 28,
-                "custom_mobile_padding": false,
-                "mobile-padding-block-start": 0,
-                "mobile-padding-block-end": 0,
-                "mobile-padding-inline-start": 0,
-                "mobile-padding-inline-end": 0,
-                "css_class": ""
-              },
-              "blocks": {
-                "group_rBXhXy": {
-                  "type": "group",
-                  "name": "t:names.group",
-                  "settings": {
-                    "link": "",
-                    "open_in_new_tab": false,
-                    "content_direction": "column",
-                    "vertical_on_mobile": true,
-                    "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
-                    "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "center",
-                    "gap": 0,
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "custom_height": 100,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
-                    "background_media": "none",
-                    "video_position": "cover",
-                    "background_image_position": "cover",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 12,
-                    "placeholder": "",
-                    "toggle_overlay": false,
-                    "overlay_color": "#00000026",
-                    "overlay_style": "solid",
-                    "gradient_direction": "to top",
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "custom_mobile_padding": false,
-                    "mobile-padding-block-start": 0,
-                    "mobile-padding-block-end": 0,
-                    "mobile-padding-inline-start": 0,
-                    "mobile-padding-inline-end": 0,
-                    "css_class": ""
-                  },
-                  "blocks": {
-                    "image_wrXcRQ": {
-                      "type": "image",
-                      "settings": {
-                        "image": "shopify://shop_images/DSCF9653_2_a9c00ee7-b75f-4760-b4ea-7655bc959bb5.jpg",
-                        "link": "",
-                        "image_ratio": "standard",
-                        "width": "fill",
-                        "custom_width": 100,
-                        "width_mobile": "fill",
-                        "custom_width_mobile": 100,
-                        "height": "fit",
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "image_wrXcRQ"
-                  ]
-                },
-                "group_Pmmajj": {
-                  "type": "group",
-                  "settings": {
-                    "link": "",
-                    "open_in_new_tab": false,
-                    "content_direction": "column",
-                    "vertical_on_mobile": true,
-                    "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
-                    "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "center",
-                    "gap": 18,
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "custom_height": 100,
-                    "inherit_color_scheme": false,
-                    "color_scheme": "",
-                    "background_media": "none",
-                    "video_position": "cover",
-                    "background_image_position": "cover",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "placeholder": "",
-                    "toggle_overlay": false,
-                    "overlay_color": "#00000026",
-                    "overlay_style": "solid",
-                    "gradient_direction": "to top",
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "custom_mobile_padding": false,
-                    "mobile-padding-block-start": 0,
-                    "mobile-padding-block-end": 0,
-                    "mobile-padding-inline-start": 0,
-                    "mobile-padding-inline-end": 0,
-                    "css_class": ""
-                  },
-                  "blocks": {
-                    "text_zTDNqa": {
-                      "type": "text",
-                      "name": "t:names.heading",
-                      "settings": {
-                        "text": "<h3>IN NZ, CANADA, ASIA & SOUTH AMERICA</h3>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "h3",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    },
-                    "text_Nrb4CG": {
-                      "type": "text",
-                      "disabled": true,
-                      "settings": {
-                        "text": "<p>Package up your dress and be sure to include a note confirming your name, phone number and email address.</p>",
-                        "width": "100%",
-                        "max_width": "none",
-                        "alignment": "left",
-                        "type_preset": "custom",
-                        "font": "var(--font-subheading--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    },
-                    "button_M487Xh": {
-                      "type": "button",
-                      "name": "t:names.button",
-                      "settings": {
-                        "label": "FIND OUT MORE",
-                        "link": "shopify://collections/all",
-                        "open_in_new_tab": false,
-                        "style_class": "button-secondary",
-                        "width": "fit-content",
-                        "custom_width": 100,
-                        "width_mobile": "fit-content",
-                        "custom_width_mobile": 100
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_zTDNqa",
-                    "text_Nrb4CG",
-                    "button_M487Xh"
-                  ]
-                }
-              },
-              "block_order": [
-                "group_rBXhXy",
-                "group_Pmmajj"
-              ]
-            }
-          },
-          "block_order": [
-            "group_YMaUtU"
+            "group_DdTmx6"
           ]
         },
         "static-header": {
@@ -1264,7 +960,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_list_text_XpwMY6": {
+            "product_list_text_94qGMB": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
@@ -1290,7 +986,7 @@
               },
               "blocks": {}
             },
-            "button_wKK4ni": {
+            "button_diyxUQ": {
               "type": "button",
               "name": "t:names.product_list_button",
               "settings": {
@@ -1307,27 +1003,27 @@
             }
           },
           "block_order": [
-            "product_list_text_XpwMY6",
-            "button_wKK4ni"
+            "product_list_text_94qGMB",
+            "button_diyxUQ"
           ]
         }
       },
       "block_order": [
-        "multicolumn_card_hacrk9",
-        "multicolumn_card_N6jeQU",
-        "multicolumn_card_M8j8W7",
-        "multicolumn_card_MYRqBG"
+        "multicolumn_card_DNJcHP",
+        "multicolumn_card_WAPm9e",
+        "multicolumn_card_BBAMWw"
       ],
       "custom_css": [
-        "@media (min-width: 750px) {.group-block {border-right: 0;}}",
-        "@media (max-width: 749px) {@media (min-width: 750px) {.group-block {border-bottom: 0;}}}"
+        ".text-block p {font-weight: normal;}",
+        "@media (min-width: 750px) {.group-block {border-right: 0; }}",
+        "@media (max-width: 749px) {@media (min-width: 750px) {.group-block {border-bottom: 0; } }}"
       ],
       "name": "Multicolumn",
       "settings": {
         "alignment": "left",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "columns": 4,
+        "columns": 3,
         "mobile_columns": "1",
         "mobile_card_size": "60cqw",
         "columns_gap": 0,
@@ -2004,7 +1700,7 @@
     "main",
     "hero_bNLX4M",
     "section_8kgtYw",
-    "multicolumn_list_iy7y6y",
+    "multicolumn_list_pGPCe",
     "multicolumn_list_f7UYBq",
     "testimonials_PLLxM9",
     "section_tqVFLf"
