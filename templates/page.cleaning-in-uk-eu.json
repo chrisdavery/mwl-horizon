@@ -1758,7 +1758,8 @@
         "group_qeq6Tf"
       ],
       "custom_css": [
-        "summary {padding-block: var(--padding-lg);}"
+        "summary {padding-block: var(--padding-lg);}",
+        "@media (max-width: 749px) {.layout-panel-flex--row>.group-block--width-custom {flex-basis: 0;}}"
       ],
       "name": "t:names.custom_section",
       "settings": {
