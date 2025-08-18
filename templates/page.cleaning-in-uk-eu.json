@@ -124,37 +124,11 @@
     "section_8kgtYw": {
       "type": "section",
       "blocks": {
-        "text_HcbzMk": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<h2>POST-WEDDING CLEANING</h2>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "1.25rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "uppercase",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
         "text_cxEWhq": {
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Please select your location below and carefully follow the instructions provided per location. If your location is not listed below, please reach out to our cleaning team via email at cleaning@madewithlovebridal.com.</p>",
+            "text": "<p>Our cleaning service will have your dress professionally cleaned, steamed, wrapped in acid-free tissue paper and beautifully boxed for safe keeping. Please carefully follow instructions below to submit your dress for cleaning.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -178,7 +152,6 @@
         }
       },
       "block_order": [
-        "text_HcbzMk",
         "text_cxEWhq"
       ],
       "custom_css": [
@@ -1070,6 +1043,96 @@
         "padding-block-end": 0
       }
     },
+    "section_CWmdg7": {
+      "type": "section",
+      "blocks": {
+        "text_GByz7T": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>CONTACT</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "1.25rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "uppercase",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_TefCzp": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Any questions? Reach out to our cleaning team at europe.cleaning@madewithlovebridal.com</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_GByz7T",
+        "text_TefCzp"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "full_width_on_mobile": false,
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 60,
+        "padding-block-end": 54
+      }
+    },
     "multicolumn_list_f7UYBq": {
       "type": "multicolumn-list",
       "blocks": {
@@ -1733,6 +1796,7 @@
     "hero_TyWymQ",
     "section_8kgtYw",
     "multicolumn_list_pGPCe",
+    "section_CWmdg7",
     "multicolumn_list_f7UYBq",
     "testimonials_PLLxM9",
     "section_tqVFLf"
