@@ -318,7 +318,7 @@
                       "settings": {
                         "image": "shopify://shop_images/DSCF9644.jpg",
                         "link": "",
-                        "image_ratio": "landscape",
+                        "image_ratio": "standard",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -470,12 +470,12 @@
             "group_bkEMtt"
           ]
         },
-        "multicolumn_card_hXNeBY": {
+        "multicolumn_card_N6jeQU": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "group_nyWH76": {
+            "group_fhBcBh": {
               "type": "group",
               "settings": {
                 "link": "",
@@ -520,7 +520,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "group_748T88": {
+                "group_HAHVxi": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -566,12 +566,12 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "image_hCTm6D": {
+                    "image_9NeV9f": {
                       "type": "image",
                       "settings": {
                         "image": "shopify://shop_images/DSCF9644.jpg",
                         "link": "",
-                        "image_ratio": "landscape",
+                        "image_ratio": "standard",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -590,10 +590,10 @@
                     }
                   },
                   "block_order": [
-                    "image_hCTm6D"
+                    "image_9NeV9f"
                   ]
                 },
-                "group_M4Myhh": {
+                "group_p6hMG6": {
                   "type": "group",
                   "settings": {
                     "link": "",
@@ -638,7 +638,7 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_EpkLFn": {
+                    "text_R7Hb9T": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
@@ -664,7 +664,7 @@
                       },
                       "blocks": {}
                     },
-                    "text_jTnXT9": {
+                    "text_dHG4t3": {
                       "type": "text",
                       "disabled": true,
                       "settings": {
@@ -690,7 +690,7 @@
                       },
                       "blocks": {}
                     },
-                    "button_hCN4kQ": {
+                    "button_C7Yqex": {
                       "type": "button",
                       "name": "t:names.button",
                       "settings": {
@@ -707,28 +707,28 @@
                     }
                   },
                   "block_order": [
-                    "text_EpkLFn",
-                    "text_jTnXT9",
-                    "button_hCN4kQ"
+                    "text_R7Hb9T",
+                    "text_dHG4t3",
+                    "button_C7Yqex"
                   ]
                 }
               },
               "block_order": [
-                "group_748T88",
-                "group_M4Myhh"
+                "group_HAHVxi",
+                "group_p6hMG6"
               ]
             }
           },
           "block_order": [
-            "group_nyWH76"
+            "group_fhBcBh"
           ]
         },
-        "multicolumn_card_DPUaxj": {
+        "multicolumn_card_M8j8W7": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "group_4mx34p": {
+            "group_jwLmjm": {
               "type": "group",
               "settings": {
                 "link": "",
@@ -773,7 +773,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "group_wn33kd": {
+                "group_6LDUNn": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -819,12 +819,12 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "image_hbbVGx": {
+                    "image_kD6kgh": {
                       "type": "image",
                       "settings": {
                         "image": "shopify://shop_images/DSCF9644.jpg",
                         "link": "",
-                        "image_ratio": "landscape",
+                        "image_ratio": "standard",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -843,10 +843,10 @@
                     }
                   },
                   "block_order": [
-                    "image_hbbVGx"
+                    "image_kD6kgh"
                   ]
                 },
-                "group_cnGbkq": {
+                "group_6gtFYy": {
                   "type": "group",
                   "settings": {
                     "link": "",
@@ -891,7 +891,7 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_NQijG8": {
+                    "text_iVQFVE": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
@@ -917,7 +917,7 @@
                       },
                       "blocks": {}
                     },
-                    "text_aHBGQJ": {
+                    "text_gqmPCL": {
                       "type": "text",
                       "disabled": true,
                       "settings": {
@@ -943,7 +943,7 @@
                       },
                       "blocks": {}
                     },
-                    "button_DgWb4C": {
+                    "button_QxXmcT": {
                       "type": "button",
                       "name": "t:names.button",
                       "settings": {
@@ -960,28 +960,28 @@
                     }
                   },
                   "block_order": [
-                    "text_NQijG8",
-                    "text_aHBGQJ",
-                    "button_DgWb4C"
+                    "text_iVQFVE",
+                    "text_gqmPCL",
+                    "button_QxXmcT"
                   ]
                 }
               },
               "block_order": [
-                "group_wn33kd",
-                "group_cnGbkq"
+                "group_6LDUNn",
+                "group_6gtFYy"
               ]
             }
           },
           "block_order": [
-            "group_4mx34p"
+            "group_jwLmjm"
           ]
         },
-        "multicolumn_card_zNQR8k": {
+        "multicolumn_card_MYRqBG": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "group_J4pL8N": {
+            "group_YMaUtU": {
               "type": "group",
               "settings": {
                 "link": "",
@@ -1026,7 +1026,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "group_JbMh8p": {
+                "group_rBXhXy": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -1072,12 +1072,12 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "image_qNqD9w": {
+                    "image_wrXcRQ": {
                       "type": "image",
                       "settings": {
                         "image": "shopify://shop_images/DSCF9644.jpg",
                         "link": "",
-                        "image_ratio": "landscape",
+                        "image_ratio": "standard",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -1096,10 +1096,10 @@
                     }
                   },
                   "block_order": [
-                    "image_qNqD9w"
+                    "image_wrXcRQ"
                   ]
                 },
-                "group_BmNAWE": {
+                "group_Pmmajj": {
                   "type": "group",
                   "settings": {
                     "link": "",
@@ -1144,7 +1144,7 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_TfDxMA": {
+                    "text_zTDNqa": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
@@ -1170,7 +1170,7 @@
                       },
                       "blocks": {}
                     },
-                    "text_YGYAaT": {
+                    "text_Nrb4CG": {
                       "type": "text",
                       "disabled": true,
                       "settings": {
@@ -1196,7 +1196,7 @@
                       },
                       "blocks": {}
                     },
-                    "button_Xrwfwa": {
+                    "button_M487Xh": {
                       "type": "button",
                       "name": "t:names.button",
                       "settings": {
@@ -1213,20 +1213,20 @@
                     }
                   },
                   "block_order": [
-                    "text_TfDxMA",
-                    "text_YGYAaT",
-                    "button_Xrwfwa"
+                    "text_zTDNqa",
+                    "text_Nrb4CG",
+                    "button_M487Xh"
                   ]
                 }
               },
               "block_order": [
-                "group_JbMh8p",
-                "group_BmNAWE"
+                "group_rBXhXy",
+                "group_Pmmajj"
               ]
             }
           },
           "block_order": [
-            "group_J4pL8N"
+            "group_YMaUtU"
           ]
         },
         "static-header": {
@@ -1314,9 +1314,9 @@
       },
       "block_order": [
         "multicolumn_card_hacrk9",
-        "multicolumn_card_hXNeBY",
-        "multicolumn_card_DPUaxj",
-        "multicolumn_card_zNQR8k"
+        "multicolumn_card_N6jeQU",
+        "multicolumn_card_M8j8W7",
+        "multicolumn_card_MYRqBG"
       ],
       "name": "Multicolumn",
       "settings": {
