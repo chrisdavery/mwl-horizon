@@ -316,7 +316,7 @@
                     "image_EmMNLe": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Cleaning_Icon-01_57052434-55c8-4856-8181-36b3abbaaf8a.png",
+                        "image": "shopify://shop_images/Cleaning_Icon-03_e0d538af-b67d-4dbb-918c-693f63e84a48.png",
                         "link": "",
                         "image_ratio": "standard",
                         "width": "fill",
@@ -414,7 +414,7 @@
                     "text_PjrgD8": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Package up your dress and be sure to include a note confirming your name, phone number and email address.</p>",
+                        "text": "<p>Place your cleaning order.</p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
@@ -435,11 +435,27 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
+                    },
+                    "button_WxbPkX": {
+                      "type": "button",
+                      "name": "t:names.button",
+                      "settings": {
+                        "label": "SUBMIT YOUR DRESS FOR CLEANING",
+                        "link": "https://madewithlovebridal.co.uk/shop/mwl-cleaning/",
+                        "open_in_new_tab": false,
+                        "style_class": "button-secondary",
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
                     "text_frehtj",
-                    "text_PjrgD8"
+                    "text_PjrgD8",
+                    "button_WxbPkX"
                   ]
                 }
               },
@@ -461,7 +477,7 @@
             "group_NnzCRA": {
               "type": "group",
               "settings": {
-                "link": "https://return.auspost.com.au/MADE_WITH_LOVE_BRIDAL",
+                "link": "https://mwl.mymedia.delivery/wp-content/uploads/2024/07/RETURNS-SLIP-UK.pdf",
                 "open_in_new_tab": true,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -552,7 +568,7 @@
                     "image_jiGmXX": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Cleaning_Icon-02.png",
+                        "image": "shopify://shop_images/Cleaning_Icon-01_57052434-55c8-4856-8181-36b3abbaaf8a_1.png",
                         "link": "",
                         "image_ratio": "standard",
                         "width": "fill",
@@ -650,7 +666,7 @@
                     "text_jfpGJD": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Click here to create your FREE Australia Post Return Labels and drop your dress to any Post Office or Street Posting Box.</p>",
+                        "text": "<p>Pack your dress.</p><p>Please fill out the below form to further include within your return parcel. If you don't own a printer, please follow the below prompts on a piece of paper.</p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
@@ -671,11 +687,27 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
+                    },
+                    "button_4QbJMK": {
+                      "type": "button",
+                      "name": "t:names.button",
+                      "settings": {
+                        "label": "DOWNLOAD PACKING FORM",
+                        "link": "https://mwl.mymedia.delivery/wp-content/uploads/2024/07/RETURNS-SLIP-UK.pdf",
+                        "open_in_new_tab": false,
+                        "style_class": "button-secondary",
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
                     "text_CQQWwR",
-                    "text_jfpGJD"
+                    "text_jfpGJD",
+                    "button_4QbJMK"
                   ]
                 }
               },
@@ -788,7 +820,7 @@
                     "image_aQLCpg": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Cleaning_Icon-03.png",
+                        "image": "shopify://shop_images/Cleaning_Icon-02_3bfe979b-fd0d-45f3-9d39-ef657afabba6.png",
                         "link": "",
                         "image_ratio": "standard",
                         "width": "fill",
@@ -886,7 +918,7 @@
                     "text_4c6rXd": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>IMPORTANT FINAL STEP: Once your dress is shipped, please don’t forget to use the submit icon above to submit your dress to our cleaning database and pay online. If you pre-paid for cleaning at the time of your dress order, you will have received a coupon code via email to checkout at no extra cost.</p>",
+                        "text": "<p>Ship your dress.</p><p>SHIPPING ADDRESS (UK OR OUTSIDE THE EU) <strong>Made with Love Laundry</strong>: Unit 3 Textile Building 29A Chatham Place, London, United Kingdom, E9 6NY.</p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
