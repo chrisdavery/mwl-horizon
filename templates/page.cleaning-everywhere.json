@@ -63,7 +63,7 @@
         "text_tC8YUV": {
           "type": "text",
           "settings": {
-            "text": "<h1>EUROPE | POST-WEDDING CLEANING</h1>",
+            "text": "<h1>NZ, CANADA, ASIA & SOUTH AMERICA | POST-WEDDING CLEANING</h1>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
@@ -95,7 +95,7 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/sol-wedding-dress-made-with-love-bridal-4_47676267-397a-4257-93e5-673e5d46e478.png",
+        "image_1": "shopify://shop_images/prim-wedding-dress-made-with-love-bridal-10.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -289,7 +289,7 @@
                     "image_EmMNLe": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Cleaning_Icon-03_e0d538af-b67d-4dbb-918c-693f63e84a48.png",
+                        "image": "shopify://shop_images/Cleaning_Icon-01_57052434-55c8-4856-8181-36b3abbaaf8a.png",
                         "link": "",
                         "image_ratio": "standard",
                         "width": "fill",
@@ -387,7 +387,7 @@
                     "text_PjrgD8": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Place your cleaning order.</p>",
+                        "text": "<p>Package up your dress and be sure to include a note confirming your name, phone number and email address.</p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
@@ -408,27 +408,11 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
-                    },
-                    "button_WxbPkX": {
-                      "type": "button",
-                      "name": "t:names.button",
-                      "settings": {
-                        "label": "SUBMIT YOUR DRESS FOR CLEANING",
-                        "link": "https://madewithlovebridal.co.uk/shop/mwl-cleaning/",
-                        "open_in_new_tab": false,
-                        "style_class": "button-secondary",
-                        "width": "fit-content",
-                        "custom_width": 100,
-                        "width_mobile": "fit-content",
-                        "custom_width_mobile": 100
-                      },
-                      "blocks": {}
                     }
                   },
                   "block_order": [
                     "text_frehtj",
-                    "text_PjrgD8",
-                    "button_WxbPkX"
+                    "text_PjrgD8"
                   ]
                 }
               },
@@ -541,7 +525,7 @@
                     "image_jiGmXX": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Cleaning_Icon-01_57052434-55c8-4856-8181-36b3abbaaf8a_1.png",
+                        "image": "shopify://shop_images/Cleaning_Icon-02.png",
                         "link": "",
                         "image_ratio": "standard",
                         "width": "fill",
@@ -639,7 +623,7 @@
                     "text_jfpGJD": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Pack your dress.</p><p>Please fill out the below form to further include within your return parcel. If you don't own a printer, please follow the below prompts on a piece of paper.</p>",
+                        "text": "<p>Post your dress back to us at the following address using your most convenient international shipping facilitator. Please note that all customs/import duties are to be charged to you as the shipper and will be invoiced to you if incorrectly charged to MWL in order to clear your shipment into Australia.</p><p>MWL CLEANING<br/>5/314 Burleigh Connection Road, Burleigh Heads, QLD 4220, Australia<br/>Email: cleaning@madewithlovebridal.com<br/>Phone number: +61 407 515 119</p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
@@ -660,27 +644,11 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
-                    },
-                    "button_4QbJMK": {
-                      "type": "button",
-                      "name": "t:names.button",
-                      "settings": {
-                        "label": "DOWNLOAD PACKING FORM",
-                        "link": "https://mwl.mymedia.delivery/wp-content/uploads/2024/07/RETURNS-SLIP-EU.pdf",
-                        "open_in_new_tab": false,
-                        "style_class": "button-secondary",
-                        "width": "fit-content",
-                        "custom_width": 100,
-                        "width_mobile": "fit-content",
-                        "custom_width_mobile": 100
-                      },
-                      "blocks": {}
                     }
                   },
                   "block_order": [
                     "text_8UPn88",
-                    "text_jfpGJD",
-                    "button_4QbJMK"
+                    "text_jfpGJD"
                   ]
                 }
               },
@@ -793,7 +761,7 @@
                     "image_aQLCpg": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Cleaning_Icon-02_3bfe979b-fd0d-45f3-9d39-ef657afabba6.png",
+                        "image": "shopify://shop_images/Cleaning_Icon-03.png",
                         "link": "",
                         "image_ratio": "standard",
                         "width": "fill",
@@ -891,7 +859,7 @@
                     "text_4c6rXd": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Ship your dress.</p><p>SHIPPING ADDRESS (WITHIN THE EU) <strong>Made with Love Europe</strong>: Hooghiemstraplein 85, 3514 AX Utrecht, Netherlands.</p>",
+                        "text": "<p>IMPORTANT FINAL STEP: Once your dress is shipped, please don’t forget to use the submit icon above to submit your dress to our cleaning database and pay online.</p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
