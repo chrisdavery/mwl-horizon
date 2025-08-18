@@ -1759,7 +1759,7 @@
       ],
       "custom_css": [
         "summary {padding-block: var(--padding-lg);}",
-        "@media (max-width: 749px) {.layout-panel-flex--row>.group-block--width-custom {flex-basis: 0;}}"
+        "@media (max-width: 749px) {.layout-panel-flex--row > .group-block--width-custom {flex-basis: unset; }}"
       ],
       "name": "t:names.custom_section",
       "settings": {
