@@ -450,7 +450,7 @@
             "group_NnzCRA": {
               "type": "group",
               "settings": {
-                "link": "https://mwl.mymedia.delivery/wp-content/uploads/2024/07/RETURNS-SLIP-UK.pdf",
+                "link": "https://mwl.mymedia.delivery/wp-content/uploads/2024/07/RETURNS-SLIP-EU.pdf",
                 "open_in_new_tab": true,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -666,7 +666,7 @@
                       "name": "t:names.button",
                       "settings": {
                         "label": "DOWNLOAD PACKING FORM",
-                        "link": "https://mwl.mymedia.delivery/wp-content/uploads/2024/07/RETURNS-SLIP-UK.pdf",
+                        "link": "https://mwl.mymedia.delivery/wp-content/uploads/2024/07/RETURNS-SLIP-EU.pdf",
                         "open_in_new_tab": false,
                         "style_class": "button-secondary",
                         "width": "fit-content",
