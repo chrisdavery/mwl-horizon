@@ -15,15 +15,46 @@
       {% render 'spacing-style', settings: section.settings %}
     "
   >
-    <header>
+    {% comment %} <header>
       {%- content_for 'block', id: 'blog-post-title', type: 'text' %}
       {%- content_for 'block', id: 'blog-post-details', type: '_blog-post-info-text' %}
-    </header>
+    </header> {% endcomment %}
+    {%-  liquid
+      assign blog_post_metaobjects = article.metafields.content.blog_post_metaobjects.value
+    -%}
 
-    {%- if article.image -%}
+    {% for item in blog_post_metaobjects %}
+      {%- case item.system.type -%}
+        {%- when 'blog_post_hero_banner' -%}
+          {%- content_for 'block', id: 'blog-post-image', type: '_article-banner', desktop_image: item.image_desktop.value, mobile_image: item.image_mobile.value %}
+        {%- when 'blog_post_text' -%}
+            {% for content in item.content.value %}
+              {% assign heading = content.heading %}
+              {% assign description = content.description | metafield_tag %}
+
+              {% if heading != blank %}
+                <div class=" spacing-style text-block h4" style="
+                  --padding-block-start: 0px; --padding-block-end:0px; 
+                  --padding-inline-start:0px; --padding-inline-end:0px; 
+                  --color: var(--color-foreground);
+                  --width: fit-content;
+                  --max-width: var(--max-width--body-normal);">
+                  <h3 class="h4">{{ heading }}</h3>
+                </div>
+              {% endif %}
+
+              {% if description %}
+                {%- content_for 'block', id: 'blog-post-content', type: '_blog-post-content', content: description %}
+              {% endif %}
+            {% endfor %}
+        {%- when 'blog_post_images' -%}
+        {%- when 'blog_posts_information' -%}
+        {%- when 'blog_post_related_products' -%}
+      {%- endcase -%}
+    {% endfor %}
+    {% comment %} {%- if article.image -%}
       {%- content_for 'block', id: 'blog-post-image', type: '_blog-post-featured-image', image: article.image %}
-    {%- endif -%}
-    {%- content_for 'block', id: 'blog-post-content', type: '_blog-post-content' %}
+    {%- endif -%} {% endcomment %}
 
     {% if blog.comments_enabled? %}
       <div class="blog-post-comments-container">

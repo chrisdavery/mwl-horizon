@@ -1,8 +1,16 @@
 
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+  @param {string} [content] - Custom content
+{%- enddoc -%}
 
 <div class="blog-post-content rte">
   <rte-formatter>
-    {{ article.content }}
+    {% if content != blank %}
+      {{ content }}
+    {% else %}
+      {{ article.content }}
+    {% endif %}
   </rte-formatter>
 </div>
 

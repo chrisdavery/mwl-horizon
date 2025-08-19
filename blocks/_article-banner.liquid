@@ -1,0 +1,700 @@
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+
+  @param {object} desktop_image - The desktop image
+  @param {object} [mobile_image] - The mobile image
+{%- enddoc -%}
+
+{% liquid
+  assign block_settings = block.settings
+
+  assign media_count = 0
+  if desktop_image != blank
+    assign media_width_desktop = 100 | divided_by: 2 | append: 'vw'
+  else
+    break
+    assign media_width_desktop = '100vw'
+  endif
+
+  assign media_width_mobile = '100vw'
+  assign widths = '832, 1200, 1600, 1920, 2560, 3840'
+
+  assign mobile_media_width_desktop = '1px'
+  
+  assign mobile_sizes = '(min-width: 750px) ' | append: mobile_media_width_desktop | append: ', ' | append: media_width_mobile
+
+  assign has_image_1 = false
+  assign has_mobile_image_1 = false
+  assign has_image = false
+  assign has_media = false
+
+  if desktop_image != blank
+    assign has_image_1 = true
+  endif
+  if mobile_image != blank
+    assign has_mobile_image_1 = true
+  endif
+
+
+  if has_image_1
+    assign has_image = true
+  endif
+
+  if has_image
+    assign has_media = true
+  endif
+
+  if has_mobile_image_1
+    assign media_width_mobile = '1px'
+    assign widths = '300, 832, 1200, 1600, 1920, 2560, 3840'
+  endif
+
+  assign sizes = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
+
+  assign alpha = block_settings.overlay_color.alpha
+  assign is_transparent = true
+  if alpha == 1 and block_settings.toggle_overlay
+    assign is_transparent = false
+  endif
+
+  assign fetch_priority = 'high'
+%}
+
+{% capture media %}
+  {% assign classes = 'hero__image' %}
+  {% if has_mobile_image_1 %}
+    {% assign classes = classes | append: ' hidden--mobile' %}
+  {% endif %}
+  {%- if has_image_1 -%}
+    {% assign media_count = media_count | plus: 1 %}
+    {{
+      desktop_image
+      | image_url: width: 3840
+      | image_tag:
+        width: desktop_image.width,
+        widths: widths,
+        height: desktop_image.height,
+        alt: desktop_image.alt,
+        class: classes,
+        sizes: sizes,
+        fetchpriority: fetch_priority
+    }}
+  {%- endif -%}
+
+  {% if has_mobile_image_1 %}
+    {{
+      mobile_image
+      | image_url: width: 3840
+      | image_tag:
+        width: mobile_image.width,
+        widths: widths,
+        height: mobile_image.height,
+        alt: mobile_image.alt,
+        class: 'hero__image hidden--desktop',
+        sizes: mobile_sizes,
+        fetchpriority: fetch_priority
+    }}
+  {% endif %}
+
+  {% if has_media == false and is_transparent %}
+    {{ 'hero-apparel-1' | placeholder_svg_tag: 'hero__image' }}
+  {%- endif -%}
+{% endcapture %}
+
+{% capture media_blurred %}
+  {% if has_image_1 %}
+    {{
+      desktop_image
+      | image_url: width: 3840
+      | image_tag:
+        width: desktop_image.width,
+        widths: widths,
+        height: desktop_image.height,
+        alt: '',
+        class: 'hero__image',
+        sizes: sizes
+    }}
+  {% endif %}
+
+  {% if has_media == false and is_transparent %}
+    {{ 'hero-apparel-1' | placeholder_svg_tag: 'hero__image' }}
+  {% endif %}
+{% endcapture %}
+
+{% capture additional_classes %}
+  {% if has_mobile_image_1 != blank %}
+    hero-mobile-min-height
+  {% endif %}
+{% endcapture %}
+
+<div class="hero-wrapper hero-block-wrapper section-wrapper" {{ block.shopify_attributes }}>
+  <div
+    id="Hero-{{ block.id }}"
+    class="hero {{ additional_classes | strip }} color-{{ block_settings.color_scheme }}"
+    style="
+      --hero-border-style: {{ block_settings.border }};
+      --hero-border-width: {{ block_settings.border_width }}px;
+      --hero-border-opacity: {{ block_settings.border_opacity }}%;
+      --blur-opacity: {{ block_settings.reflection_opacity | divided_by: 100.0 }};
+      {% if block_settings.section_height == 'custom' %}
+        --hero-min-height: {{ block_settings.section_height_custom }}svh;
+      {% elsif block_settings.section_height == 'adapt_media_height' and has_media %}
+          --hero-min-height: calc(100svw / {{ desktop_image.aspect_ratio }});
+      {% elsif block_settings.section_height == "full-screen" %}
+        --hero-min-height: 100svh;
+      {% else %}
+        --hero-min-height: var(--section-height-{{ block_settings.section_height }});
+      {% endif %}
+
+      {% if has_mobile_image_1 != blank %}
+        --hero-mobile-min-height: calc(100svw / {{ mobile_image.aspect_ratio }});
+      {% endif %}
+    "
+    {% if request.visual_preview_mode %}
+      data-shopify-visual-preview
+    {% endif %}
+    {% if block_settings.blurred_reflection %}
+      data-blur-shadow="true"
+    {% endif %}
+  >
+    {% if block_settings.blurred_reflection %}
+      {% unless is_transparent == false %}
+        <div class="hero__blurred-image">
+          {{ media_blurred }}
+        </div>
+      {% endunless %}
+    {% endif %}
+
+    {% comment %}
+      Hardcoded to section--full-width bc the media has to be full width in all cases.
+      hero__content-wrapper applies section_width.
+    {% endcomment %}
+
+    <div
+      class="hero__container spacing-style section section--full-width"
+      style="{% render 'spacing-style', settings: block_settings %}"
+    >
+      <div
+        class="hero__media-wrapper"
+        {%- if desktop_image != blank -%}
+          style="--hero-media-aspect-ratio: {{ desktop_image.aspect_ratio }}; --hero-media-count: {{ media_count }};"
+        {%- endif -%}
+      >
+        {% liquid
+          if block_settings.toggle_overlay
+            render 'overlay', settings: block_settings
+          endif
+        %}
+        {{ media }}
+      </div>
+      <div
+        class="
+          hero__content-wrapper
+          layout-panel-flex
+          layout-panel-flex--{{ block_settings.content_direction }}
+          {% if block_settings.vertical_on_mobile %}mobile-column{% endif %}
+          section-content-wrapper
+          {{block_settings.section_width}}
+          {% if request.design_mode %}hero__content-wrapper--design-mode{% endif %}
+        "
+        style="{% render 'layout-panel-style', settings: block_settings %}"
+      >
+          <div class="spacing-style text-block text-block--{{ block.id }} h3" style="
+          --padding-block-start: 0px; --padding-block-end:0px; 
+          --padding-inline-start:0px; --padding-inline-end:0px; 
+          --color: var(--color-foreground);
+          --width: fit-content;
+          --max-width: var(--max-width--body-none);
+          ">
+              <h1>{{ article.title }}</h1>
+          </div>
+          <div>
+            <span>{{- article.published_at | date: '%dth %B %Y' | remove_first: '0' -}}</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .hero-wrapper {
+    --hero-height-offset: 0px;
+  }
+  .hero-block-wrapper .spacing-style {
+    --section-top-offset: calc(var(--header-height) * var(--transparent-header-offset-boolean)) !important;
+  }
+  .hero-block-wrapper {
+    margin-inline: calc(-1 * var(--page-margin));
+    margin-top: calc(var(--header-height) * var(--transparent-header-offset-boolean) * -1);
+  }
+
+  body:has(> #header-group > .header-section > #header-component[transparent]):not(
+      :has(> #header-group > .header-section + .shopify-section)
+    )
+    .hero-wrapper:first-child {
+    --hero-height-offset: var(--header-group-height, 0);
+  }
+
+  .hero {
+    position: relative;
+    min-height: calc(var(--hero-min-height) - var(--hero-height-offset));
+
+    
+    &.hero-mobile-min-height {
+      @media screen and (max-width: 749px) {
+        min-height: var(--hero-mobile-min-height) !important;
+      }
+    }
+  }
+
+  .hero[data-shopify-visual-preview] {
+    --hero-min-height: 600px;
+
+    min-height: 600px;
+  }
+
+  .hero__container {
+    position: relative;
+    overflow: hidden;
+    border: var(--hero-border-width) var(--hero-border-style) rgb(var(--color-border-rgb) / var(--hero-border-opacity));
+    min-height: inherit;
+    align-items: var(--vertical-alignment-mobile);
+    justify-content: var(--horizontal-alignment);
+    z-index: var(--layer-base);
+
+    @media screen and (min-width: 750px) {
+      align-items: var(--vertical-alignment);
+    }
+  }
+
+  .hero__content-wrapper.page-width {
+    grid-column: 2 / 3;
+  }
+
+  .hero__content-wrapper {
+    position: relative;
+    inset: 0;
+    z-index: var(--layer-flat);
+  }
+
+  .hero__content-wrapper .group-block-content {
+    position: relative;
+  }
+
+  .hero__media-wrapper {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(var(--hero-media-count, 1), 1fr);
+  }
+
+  .hero--auto .hero__image {
+    aspect-ratio: var(--hero-media-aspect-ratio);
+  }
+
+  .hero--no-blocks-auto-height {
+    :is(.hero__image, .hero__video) {
+      width: 100%;
+      aspect-ratio: auto;
+    }
+
+    .hero__media-wrapper {
+      /* When there are no blocks and the height is auto, allow the image to appear. */
+      position: relative;
+    }
+  }
+
+  .hero__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    overflow: hidden;
+    position: relative;
+    z-index: var(--layer-base);
+  }
+
+  .hero__link {
+    position: absolute;
+    inset: 0;
+    grid-column: 1 / -1;
+  }
+
+  .hero__media-wrapper,
+  .hero__content-wrapper {
+    pointer-events: none;
+
+    :is(a, button, input, textarea, select) {
+      pointer-events: auto;
+    }
+  }
+
+  .hero__content-wrapper--design-mode * {
+    pointer-events: auto;
+  }
+
+  .hero[data-blur-shadow='true'] {
+    --blurred-reflection-filter-saturate: saturate(1.5);
+    --blurred-reflection-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    --blurred-reflection-box-shadow: rgb(0 0 0 / 5%) 0 0 1rem;
+    --blurred-reflection-filter-blur: blur(20px);
+    --blurred-reflection-scale: scale(2, 1.25);
+    --blurred-reflection-padding-block-end: 60px;
+  }
+
+  .hero[data-blur-shadow='true'] .hero__container {
+    overflow: inherit;
+  }
+
+  .hero[data-blur-shadow='true'] .hero__container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: var(--blurred-reflection-box-shadow);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .hero__blurred-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    mask-image: var(--blurred-reflection-mask-image);
+    filter: var(--blurred-reflection-filter-saturate);
+    pointer-events: none;
+    transform: translateY(50%);
+    overflow: hidden;
+  }
+
+  .hero__blurred-image img,
+  .hero__blurred-image svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: var(--blurred-reflection-filter-blur);
+    opacity: var(--blur-opacity);
+    transform: var(--blurred-reflection-scale);
+    padding-block-end: var(--blurred-reflection-padding-block-end);
+
+    &:not(:only-child) {
+      width: 50%;
+
+      &:last-child {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Article Banner",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "t:settings.direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "t:options.vertical"
+        },
+        {
+          "value": "row",
+          "label": "t:options.horizontal"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "checkbox",
+      "id": "vertical_on_mobile",
+      "label": "t:settings.vertical_on_mobile",
+      "default": true,
+      "visible_if": "{{ block.settings.content_direction == 'row' }}"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "flex-end",
+          "label": "t:options.right"
+        },
+        {
+          "value": "space-between",
+          "label": "t:options.space_between"
+        }
+      ],
+      "default": "flex-start",
+      "visible_if": "{{ block.settings.content_direction == 'row' }}"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "t:settings.position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "t:options.top"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "flex-end",
+          "label": "t:options.bottom"
+        }
+      ],
+      "default": "center",
+      "visible_if": "{{ block.settings.content_direction == 'row' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "align_baseline",
+      "label": "t:settings.align_baseline",
+      "default": false,
+      "visible_if": "{{ block.settings.vertical_alignment == 'flex-end' }}"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "flex-end",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "flex-start",
+      "visible_if": "{{ block.settings.content_direction != 'row' }}"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_flex_direction_column",
+      "label": "t:settings.position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "t:options.top"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "flex-end",
+          "label": "t:options.bottom"
+        },
+        {
+          "value": "space-between",
+          "label": "t:options.space_between"
+        }
+      ],
+      "default": "center",
+      "visible_if": "{{ block.settings.content_direction == 'column' }}"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "t:settings.height",
+      "options": [
+        {
+          "value": "adapt_media_height",
+          "label": "Adapt to first media"
+        },
+        {
+          "value": "auto",
+          "label": "t:options.auto"
+        },
+        {
+          "value": "small",
+          "label": "t:options.small"
+        },
+        {
+          "value": "medium",
+          "label": "t:options.medium"
+        },
+        {
+          "value": "large",
+          "label": "t:options.large"
+        },
+        {
+          "value": "full-screen",
+          "label": "t:options.full_screen"
+        },
+        {
+          "value": "custom",
+          "label": "t:options.custom"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "range",
+      "id": "section_height_custom",
+      "label": "t:settings.custom_height",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 50,
+      "unit": "%",
+      "visible_if": "{{ block.settings.section_height == 'custom' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle_overlay",
+      "label": "t:settings.media_overlay"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:settings.overlay_color",
+      "alpha": true,
+      "default": "#00000026",
+      "visible_if": "{{ block.settings.toggle_overlay }}"
+    },
+    {
+      "type": "select",
+      "id": "overlay_style",
+      "label": "t:settings.overlay_style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "t:options.solid"
+        },
+        {
+          "value": "gradient",
+          "label": "t:options.gradient"
+        }
+      ],
+      "default": "solid",
+      "visible_if": "{{ block.settings.toggle_overlay }}"
+    },
+    {
+      "type": "select",
+      "id": "gradient_direction",
+      "label": "t:settings.gradient_direction",
+      "options": [
+        {
+          "value": "to top",
+          "label": "t:options.up"
+        },
+        {
+          "value": "to bottom",
+          "label": "t:options.down"
+        }
+      ],
+      "default": "to top",
+      "visible_if": "{{ block.settings.toggle_overlay and block.settings.overlay_style == 'gradient' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "blurred_reflection",
+      "label": "t:settings.blurred_reflection",
+      "default": false,
+      "info": "t:info.applies_on_image_only"
+    },
+    {
+      "type": "range",
+      "id": "reflection_opacity",
+      "label": "t:settings.reflection_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 75,
+      "visible_if": "{{ block.settings.blurred_reflection }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ]
+}
+{% endschema %}
