@@ -46,7 +46,7 @@
   "
 >
   <div class="section-resource-list__header">
-    {%- content_for 'block', type: '_product-list-content', id: 'static-header' -%}
+    {%- content_for 'block', type: '_product-list-content', id: 'static-header', columns: section.settings.columns, items_size: max_items -%}
   </div>
 
   {% capture list_items %}

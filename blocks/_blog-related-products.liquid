@@ -1,0 +1,293 @@
+
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+  @param {object} products - The products object
+{%- enddoc -%}
+
+{% liquid
+  assign block_settings = block.settings
+  assign max_items = block_settings.max_products
+
+  if products != blank
+    assign section_products = products
+    assign max_items = section_products.count | at_most: block_settings.max_products
+  endif
+
+    assign classes = 'resource-list__carousel'
+    capture styles
+    echo '--resource-list-column-gap-desktop: ' | append: block_settings.columns_gap | append: 'px;'
+    echo '--column-count: ' | append: block_settings.columns | append: ';'
+    echo '--column-count-mobile: ' | append: block_settings.mobile_columns | append: ';'
+    echo '--mobile-card-size: ' | append: block_settings.mobile_card_size | append: ';'
+    endcapture
+%}
+
+<div class="divider spacing-style" style="
+    --divider-justify-content: center;
+    --padding-block-start: 0px;--padding-block-end: 0px;
+  ">
+  <span class="divider__line" style="
+      --divider-border-thickness: 1px;
+      
+      --divider-flex-basis: 100%;
+    "></span>
+</div>
+
+<div class="section-background color-{{ block_settings.color_scheme }}"></div>
+<div
+  class="
+    section
+    color-{{ block_settings.color_scheme }}
+    section-resource-list
+    spacing-style
+    gap-style
+  "
+  style="
+    --column-count-mobile: {{ block_settings.mobile_columns }};
+    {% render 'spacing-style', settings: block_settings %}
+    {% render 'gap-style', value: block_settings.gap %}
+    {{ styles }}
+  "
+>
+
+  <div class="section-resource-list__header">
+    {%- content_for 'block', type: '_product-list-content', id: 'static-header', columns: block_settings.columns, items_size: max_items -%}
+  </div>
+
+  {% capture list_items %}
+    {% for i in (1..max_items) %}
+      {% if section_products.size > 0 %}
+        {% assign index = forloop.index0 %}
+        {% assign product = section_products[index] %}
+      {% else %}
+        {% assign product = null %}
+      {% endif %}
+      <div
+        class="resource-list__item"
+      >
+        {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
+      </div>
+
+      {% unless forloop.last %}
+        <!--@list/split-->
+      {% endunless %}
+
+    {% endfor %}
+  {% endcapture %}
+
+  {% liquid
+    # Create an array from the list items to be used for different layout types
+    assign list_items_array = list_items | strip | split: '<!--@list/split-->'
+  %}
+
+  <div
+    class="
+      resource-list
+        {% comment %} force-full-width {% endcomment %}
+      {{ classes }}
+    "
+    style="{{ styles }}"
+  >
+    {% render 'resource-list-carousel',
+        ref: 'resourceListCarousel',
+        slides: list_items_array,
+        slide_count: max_items,
+        settings: block_settings
+    %}
+  </div>
+
+  <div
+    class="section-resource-list__content"
+    style="--horizontal-alignment: {{ block_settings.horizontal_alignment }};"
+  >
+    {%- content_for 'blocks' -%}
+  </div>
+</div>
+
+{% stylesheet %}
+    .ui-blog-product-list {
+        padding-top: 65px;
+        margin-inline: calc(-1 * var(--page-margin));
+    }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Related Products",
+  "class": "ui-blog-product-list",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    },
+    {
+      "type": "_divider"
+    }
+  ],
+  "settings": [
+    {
+      "type": "range",
+      "id": "max_products",
+      "label": "t:settings.product_count",
+      "min": 1,
+      "max": 16,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:settings.columns",
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "mobile_card_size",
+      "label": "t:settings.mobile_columns",
+      "options": [
+        {
+          "value": "60cqw",
+          "label": "t:options.one_number"
+        },
+        {
+          "value": "44cqw",
+          "label": "t:options.two_number"
+        }
+      ],
+      "default": "60cqw",
+    },
+    {
+      "type": "range",
+      "id": "columns_gap",
+      "label": "t:settings.horizontal_gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8,
+    },
+    {
+      "type": "header",
+      "content": "t:content.carousel_navigation",
+    },
+    {
+      "type": "select",
+      "id": "icons_style",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "arrow",
+          "label": "t:options.arrows"
+        },
+        {
+          "value": "chevron",
+          "label": "t:options.chevrons"
+        },
+        {
+          "value": "arrows_large",
+          "label": "t:options.arrows_large"
+        },
+        {
+          "value": "chevron_large",
+          "label": "t:options.chevron_large"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "arrow",
+    },
+    {
+      "type": "select",
+      "id": "icons_shape",
+      "label": "t:settings.icon_background",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "circle",
+          "label": "t:options.circle"
+        },
+        {
+          "value": "square",
+          "label": "t:options.square"
+        }
+      ],
+      "default": "none",
+      "visible_if": "{{ block.settings.icons_style != 'none' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.section_layout"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "flex-end",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ]
+}
+{% endschema %}

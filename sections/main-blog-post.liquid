@@ -121,6 +121,11 @@
             </div>
           {% endif %}
         {%- when 'blog_post_related_products' -%}
+            {% assign size = item.products.value.count -%}
+
+            {% if size > 0 %}
+              {%- content_for 'block', id: 'blog-related-products', type: '_blog-related-products', products: item.products.value %}
+            {% endif %}
       {%- endcase -%}
     {% endfor %}
     {% comment %} {%- if article.image -%}

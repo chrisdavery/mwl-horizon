@@ -9,15 +9,15 @@
         assign articles = blogs.all.articles
 
         if request.path contains 'blogs/b2b'
-        assign articles = blogs.b2b.articles
+            assign articles = blogs.b2b.articles
         endif
 
         assign primary_tag = article.tags[0]
 
         for art in articles
-        if art.tags contains primary_tag and art.id != article.id and article_count < 7
-            assign article_count = article_count | plus: 1
-        endif
+            if art.tags contains primary_tag and art.id != article.id and article_count < 7
+                assign article_count = article_count | plus: 1
+            endif
         endfor
 
     elsif blog != blank
