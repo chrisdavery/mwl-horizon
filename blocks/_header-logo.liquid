@@ -1,4 +1,9 @@
 
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+
+  @param {boolean} [article_banner] - The article banner if exists
+{%- enddoc -%}
 
 {% liquid
   assign block_settings = block.settings
@@ -12,7 +17,7 @@
     assign use_inverse_logo = true
   elsif section.settings.enable_transparent_header_blog and template.name == 'blog' and section.settings.blog_color_scheme == 'inverse'
     assign use_inverse_logo = true
-  elsif section.settings.enable_transparent_header_article and template.name == 'article' and section.settings.article_color_scheme == 'inverse'
+  elsif section.settings.enable_transparent_header_article and template.name == 'article' and section.settings.article_color_scheme == 'inverse' and article_banner
     assign use_inverse_logo = true
   elsif page.metafields.custom.transparent_header == true
     assign use_inverse_logo = true

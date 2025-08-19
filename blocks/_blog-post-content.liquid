@@ -5,26 +5,58 @@
 {%- enddoc -%}
 
 <div class="blog-post-content rte">
-  <rte-formatter>
-    {% if content != blank %}
-      {{ content }}
-    {% else %}
-      {{ article.content }}
-    {% endif %}
-  </rte-formatter>
+  <div class="spacing-style text-block" style="
+  {% render 'spacing-style', settings: block.settings %}
+  --color: var(--color-foreground);
+  --width: fit-content;
+  --max-width: var(--max-width--body-normal);">
+    <rte-formatter>
+      {% if content != blank %}
+        {{ content }}
+      {% else %}
+        {{ article.content }}
+      {% endif %}
+    </rte-formatter>
+  </div>
 </div>
 
 {% stylesheet %}
   .blog-post-content {
     max-width: var(--normal-content-width);
     margin: 0 auto;
+
+    &:last-of-type .spacing-style {
+      padding-bottom: 0 !important;
+    }
   }
 {% endstylesheet %}
 
 {% schema %}
 {
   "name": "t:names.content",
-  "settings": [],
+  "tag": null,
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
   "presets": [
     {
       "name": "t:names.content"

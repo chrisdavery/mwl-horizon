@@ -28,27 +28,95 @@
         {%- when 'blog_post_hero_banner' -%}
           {%- content_for 'block', id: 'blog-post-image', type: '_article-banner', desktop_image: item.image_desktop.value, mobile_image: item.image_mobile.value %}
         {%- when 'blog_post_text' -%}
-            {% for content in item.content.value %}
-              {% assign heading = content.heading %}
-              {% assign description = content.description | metafield_tag %}
-
-              {% if heading != blank %}
-                <div class=" spacing-style text-block h4" style="
+            {% if item.show_article_title %}
+                <div
+                  class="
+                    hero__content-wrapper
+                    layout-panel-flex
+                    layout-panel-flex--column
+                    mobile-column
+                    section-content-wrapper
+                    spacing-style
+                  "
+                  style="
+                    --flex-direction: column; --flex-wrap: nowrap;
+                    --gap: var(--margin-sm);
+                    --horizontal-alignment: ; --vertical-alignment: ;
+                    --vertical-alignment-mobile: ;
+                    --padding-block-start: max(20px, calc(var(--spacing-scale) * 80px));--padding-block-end: 0px;
+                    width: 100%;
+                    max-width: var(--normal-content-width);
+                    margin: 0 auto;
+                  "
+                >
+                  <div class="spacing-style text-block h3" style="
                   --padding-block-start: 0px; --padding-block-end:0px; 
                   --padding-inline-start:0px; --padding-inline-end:0px; 
                   --color: var(--color-foreground);
                   --width: fit-content;
-                  --max-width: var(--max-width--body-normal);">
-                  <h3 class="h4">{{ heading }}</h3>
+                  --max-width: var(--max-width--body-none);
+                  ">
+                    <h1>{{ article.title }}</h1>
+                  </div>
+                  <div>
+                    <span>{{- article.published_at | date: '%dth %B %Y' | remove_first: '0' -}}</span>
+                  </div>
                 </div>
-              {% endif %}
+            {% endif %}
+            {% if item.show_social_share %}
+            {% endif %}
 
-              {% if description %}
-                {%- content_for 'block', id: 'blog-post-content', type: '_blog-post-content', content: description %}
-              {% endif %}
-            {% endfor %}
+            {% capture nodes_content %}
+
+              <div class="blog-content-loop">
+                {% for content in item.content.value %}
+                  {% assign heading = content.heading %}
+                  {% assign description = content.description | metafield_tag %}
+
+                  <div class="content-loop-item">
+                      {% if heading != blank %}
+                          <h3 class="h4">{{ heading }}</h3>
+                      {% endif %}
+
+                      {% if description %}
+                        {{ content.description | metafield_tag }}
+                      {% endif %}
+                  </div>
+
+                {% endfor %}
+              </div>
+            {% endcapture %}
+            {%- content_for 'block', id: 'blog-post-content', type: '_blog-post-content', content: nodes_content %}
+
         {%- when 'blog_post_images' -%}
+          {% assign size = item.image.value.count -%}
+
+          {% if size > 0 %}
+            {%- content_for 'block', id: 'article-images', type: '_article-images', images: item.image.value %}
+          {% endif %}
         {%- when 'blog_posts_information' -%}
+          {% assign justify = 'justify-center' %}
+          {% if item.venue_link.value != blank and item.model_link.value != blank and item.photographer_link.value != blank and item.makeup_artist_link.value != blank and
+          item.bridesmaid_dresses_link.value != blank and item.jewellery_link.value != blank  %}
+            {% assign justify = 'justify-between' %}
+          {% endif %}
+
+          {% if item.venue_link.value != blank or item.model_link.value != blank or item.photographer_link.value != blank or item.makeup_artist_link.value != blank or
+          item.bridesmaid_dresses_link.value != blank or item.jewellery_link.value != blank or item.flowers_link.value != blank or item.suits_link.value != blank or
+          item.your_mwl_retailer_link.value != blank %}
+
+            <div class="article-information-credits flex {{ justify }}">
+              {% render 'article-information', title: 'Venue', value: item.venue_link.value.text, url: item.venue_link.value.url %}
+              {% render 'article-information', title: 'MODEL', value: item.model_link.value.text, url: item.model_link.value.url %}
+              {% render 'article-information', title: 'Photographer', value: item.photographer_link.value.text, url: item.photographer_link.value.url %}
+              {% render 'article-information', title: 'MAKEUP ARTIST', value: item.makeup_artist_link.value.text, url: item.makeup_artist_link.value.url %}
+              {% render 'article-information', title: 'BRIDESMAID DRESSES', value: item.bridesmaid_dresses_link.value.text, url: item.bridesmaid_dresses_link.value.url %}
+              {% render 'article-information', title: 'Jewellery', value: item.jewellery_link.value.text, url: item.jewellery_link.value.url %}
+              {% render 'article-information', title: 'Flowers', value: item.flowers_link.value.text, url: item.flowers_link.value.url %}
+              {% render 'article-information', title: 'Suits', value: item.suits_link.value.text, url: item.suits_link.value.url %}
+              {% render 'article-information', title: 'Your MWL Retailer', value: item.your_mwl_retailer_link.value.text, url: item.your_mwl_retailer_link.value.url %}
+            </div>
+          {% endif %}
         {%- when 'blog_post_related_products' -%}
       {%- endcase -%}
     {% endfor %}
@@ -98,6 +166,20 @@
     margin: 0 auto;
   }
 
+  .article-information-credits {
+    gap: 6rem;
+
+    @media (max-width: 749px) {
+      gap: 2rem 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      > div {
+        width: calc(50% - 1rem / 2);
+      }
+    }
+  }
+
   .blog-post-comments {
     display: flex;
     flex-direction: column;
@@ -137,6 +219,20 @@
   .blog-post-comments-pagination .current,
   .blog-post-comments-pagination a:hover {
     border-bottom: 1px solid var(--color-foreground);
+  }
+
+  .blog-content-loop {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @media (max-width: 749px) {
+      gap: 2rem;
+    }
+  }
+
+  .content-loop-item h3 {
+    margin-block-end: var(--margin-sm) !important;
   }
 {% endstylesheet %}
 

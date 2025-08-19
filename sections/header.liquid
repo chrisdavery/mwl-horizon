@@ -14,6 +14,19 @@
     assign search_style = 'modal'
   endif
 
+  assign article_banner = false
+
+  if template.name == 'article'
+    assign blog_post_metaobjects = article.metafields.content.blog_post_metaobjects.value
+
+    for item in blog_post_metaobjects
+      case item.system.type
+        when 'blog_post_hero_banner'
+          assign article_banner = true
+      endcase
+    endfor
+  endif
+
   if section.settings.enable_transparent_header_home and template.name == 'index'
     assign transparent = 'always'
     assign transparent_color_scheme = section.settings.home_color_scheme
@@ -26,7 +39,7 @@
   elsif section.settings.enable_transparent_header_blog and template.name == 'blog'
     assign transparent = 'always'
     assign transparent_color_scheme = section.settings.blog_color_scheme
-  elsif section.settings.enable_transparent_header_article and template.name == 'article'
+  elsif section.settings.enable_transparent_header_article and template.name == 'article' and article_banner
     assign transparent = 'always'
     assign transparent_color_scheme = section.settings.article_color_scheme
   elsif page.metafields.custom.transparent_header == true
@@ -56,7 +69,7 @@
   endif
 
   capture logo
-    content_for 'block', type: '_header-logo', id: 'header-logo'
+    content_for 'block', type: '_header-logo', id: 'header-logo', article_banner: article_banner
   endcapture
 
   capture menu
