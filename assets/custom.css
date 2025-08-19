@@ -505,6 +505,23 @@ select.disabled {
     --font-h3--size: var(--font-size--sm) !important;
   }
 
+  /* Font Header sizes */
+  .section-resource-list__header .text-block > *,
+  .parent-group-datepicker.group-block-content > .text-block,
+  .section-resource-list__content > .text-block, .section-resource-list__content > .text-block > *,
+  .dropdown-block > .text-block,
+  .custom-input-block .text-block {
+    font-size: var(--font-size--xs) !important;
+  }
+
+  /* Font Header sizes */
+  .section-resource-list__header .text-block, 
+  .parent-group-datepicker.group-block-content > .text-block,
+  .dropdown-block > .text-block,
+  .custom-input-block .text-block {
+    line-height: var(--line-height--body-tight) !important;
+  }
+
   .product-badges {
     gap: var(--gap-2xs) !important;
     flex-wrap: nowrap;

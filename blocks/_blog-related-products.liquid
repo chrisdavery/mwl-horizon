@@ -13,13 +13,24 @@
     assign max_items = section_products.count | at_most: block_settings.max_products
   endif
 
-    assign classes = 'resource-list__carousel'
-    capture styles
-    echo '--resource-list-column-gap-desktop: ' | append: block_settings.columns_gap | append: 'px;'
-    echo '--column-count: ' | append: block_settings.columns | append: ';'
-    echo '--column-count-mobile: ' | append: block_settings.mobile_columns | append: ';'
-    echo '--mobile-card-size: ' | append: block_settings.mobile_card_size | append: ';'
-    endcapture
+  case block_settings.layout_type
+    when 'grid'
+      assign classes = 'resource-list--grid'
+      capture styles
+        echo '--resource-list-column-gap-desktop: ' | append: block_settings.columns_gap | append: 'px;'
+        echo '--resource-list-row-gap-desktop: ' | append: block_settings.rows_gap | append: 'px;'
+        echo '--resource-list-columns: repeat(' | append: block_settings.columns | append: ', 1fr);'
+        echo '--resource-list-columns-mobile: repeat(' | append: block_settings.mobile_columns | append: ', 1fr);'
+      endcapture
+    when 'carousel'
+      assign classes = 'resource-list__carousel'
+      capture styles
+        echo '--resource-list-column-gap-desktop: ' | append: block_settings.columns_gap | append: 'px;'
+        echo '--column-count: ' | append: block_settings.columns | append: ';'
+        echo '--column-count-mobile: ' | append: block_settings.mobile_columns | append: ';'
+        echo '--mobile-card-size: ' | append: block_settings.mobile_card_size | append: ';'
+      endcapture
+  endcase
 %}
 
 <div class="divider spacing-style" style="
@@ -28,7 +39,6 @@
   ">
   <span class="divider__line" style="
       --divider-border-thickness: 1px;
-      
       --divider-flex-basis: 100%;
     "></span>
 </div>
@@ -37,6 +47,7 @@
 <div
   class="
     section
+    section--{{ block_settings.section_width }}
     color-{{ block_settings.color_scheme }}
     section-resource-list
     spacing-style
@@ -51,27 +62,17 @@
 >
 
   <div class="section-resource-list__header">
-    {%- content_for 'block', type: '_product-list-content', id: 'static-header', columns: block_settings.columns, items_size: max_items -%}
+    {%- content_for 'block', type: '_product-list-content', id: 'static-header', columns: block_settings.columns, items_size: max_items, block_settings: block_settings -%}
   </div>
 
   {% capture list_items %}
-    {% for i in (1..max_items) %}
-      {% if section_products.size > 0 %}
-        {% assign index = forloop.index0 %}
-        {% assign product = section_products[index] %}
-      {% else %}
-        {% assign product = null %}
-      {% endif %}
-      <div
-        class="resource-list__item"
-      >
-        {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
-      </div>
-
-      {% unless forloop.last %}
-        <!--@list/split-->
-      {% endunless %}
-
+    {% for product in products limit: max_items %}
+        <div class="resource-list__item">
+            {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
+        </div>
+        {% unless forloop.last %}
+            <!--@list/split-->
+        {% endunless %}
     {% endfor %}
   {% endcapture %}
 
@@ -83,18 +84,58 @@
   <div
     class="
       resource-list
-        {% comment %} force-full-width {% endcomment %}
+      {% if block_settings.layout_type == 'carousel' %}
+        force-full-width
+      {% endif %}
+      {% if block_settings.carousel_on_mobile and block_settings.layout_type != 'carousel' %}
+        hidden--mobile
+      {% endif %}
       {{ classes }}
     "
     style="{{ styles }}"
+    {% if block_settings.layout_type == 'grid' %}
+      data-testid="resource-list-grid"
+    {% endif %}
   >
-    {% render 'resource-list-carousel',
-        ref: 'resourceListCarousel',
+    {% case block_settings.layout_type %}
+      {% when 'grid' %}
+        {{ list_items }}
+      {% when 'carousel' %}
+        {% render 'resource-list-carousel',
+          ref: 'resourceListCarousel',
+          slides: list_items_array,
+          slide_count: max_items,
+          settings: block_settings
+        %}
+      {% when 'editorial' %}
+        {% render 'editorial-product-grid', items: list_items_array %}
+    {% endcase %}
+  </div>
+
+  {% if block_settings.carousel_on_mobile and block_settings.layout_type != 'carousel' %}
+    {% liquid
+      assign mobile_carousel_gap = block_settings.columns_gap
+    %}
+    <div
+      class="
+        resource-list
+        hidden--desktop
+        force-full-width
+      "
+      style="
+        --resource-list-column-gap-desktop: {{ mobile_carousel_gap }}px;
+        --column-count: {{ block_settings.columns }};
+        --mobile-card-size: {{ block_settings.mobile_card_size }};
+      "
+    >
+      {% render 'resource-list-carousel',
+        ref: 'resourceListCarouselMobile',
         slides: list_items_array,
         slide_count: max_items,
         settings: block_settings
-    %}
-  </div>
+      %}
+    </div>
+  {% endif %}
 
   <div
     class="section-resource-list__content"
@@ -128,6 +169,33 @@
   ],
   "settings": [
     {
+      "type": "select",
+      "id": "layout_type",
+      "label": "t:settings.layout_type",
+      "options": [
+        {
+          "value": "grid",
+          "label": "t:options.grid"
+        },
+        {
+          "value": "carousel",
+          "label": "t:options.carousel"
+        },
+        {
+          "value": "editorial",
+          "label": "t:options.editorial"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "checkbox",
+      "id": "carousel_on_mobile",
+      "label": "t:settings.carousel_on_mobile",
+      "default": false,
+      "visible_if": "{{ block.settings.layout_type != 'carousel' }}"
+    },
+    {
       "type": "range",
       "id": "max_products",
       "label": "t:settings.product_count",
@@ -143,7 +211,25 @@
       "min": 1,
       "max": 8,
       "step": 1,
-      "default": 4
+      "default": 4,
+      "visible_if": "{{ block.settings.layout_type != 'editorial' }}"
+    },
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "t:settings.mobile_columns",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:options.one_number"
+        },
+        {
+          "value": "2",
+          "label": "t:options.two_number"
+        }
+      ],
+      "default": "2",
+      "visible_if": "{{ block.settings.layout_type == 'grid' and block.settings.carousel_on_mobile == false }}"
     },
     {
       "type": "select",
@@ -160,6 +246,7 @@
         }
       ],
       "default": "60cqw",
+      "visible_if": "{{ block.settings.layout_type == 'carousel' or block.settings.carousel_on_mobile == true }}"
     },
     {
       "type": "range",
@@ -170,10 +257,23 @@
       "step": 1,
       "unit": "px",
       "default": 8,
+      "visible_if": "{{ block.settings.layout_type == 'grid' or block.settings.layout_type == 'carousel' }}"
+    },
+    {
+      "type": "range",
+      "id": "rows_gap",
+      "label": "t:settings.vertical_gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8,
+      "visible_if": "{{ block.settings.layout_type == 'grid'}}"
     },
     {
       "type": "header",
       "content": "t:content.carousel_navigation",
+      "visible_if": "{{ block.settings.layout_type == 'carousel' or block.settings.carousel_on_mobile == true }}"
     },
     {
       "type": "select",
@@ -202,6 +302,7 @@
         }
       ],
       "default": "arrow",
+      "visible_if": "{{ block.settings.layout_type == 'carousel' or block.settings.carousel_on_mobile == true }}"
     },
     {
       "type": "select",
@@ -222,7 +323,7 @@
         }
       ],
       "default": "none",
-      "visible_if": "{{ block.settings.icons_style != 'none' }}"
+      "visible_if": "{{ block.settings.icons_style != 'none' and block.settings.layout_type == 'carousel' or block.settings.carousel_on_mobile == true }}"
     },
     {
       "type": "header",
@@ -230,23 +331,19 @@
     },
     {
       "type": "select",
-      "id": "horizontal_alignment",
-      "label": "t:settings.alignment",
+      "id": "section_width",
+      "label": "t:settings.width",
       "options": [
         {
-          "value": "flex-start",
-          "label": "t:options.left"
+          "value": "page-width",
+          "label": "t:options.page"
         },
         {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.right"
+          "value": "full-width",
+          "label": "t:options.full"
         }
       ],
-      "default": "flex-start"
+      "default": "page-width"
     },
     {
       "type": "range",
