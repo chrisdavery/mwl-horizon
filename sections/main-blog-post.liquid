@@ -31,7 +31,6 @@
             {% if item.show_article_title %}
                 <div
                   class="
-                    hero__content-wrapper
                     layout-panel-flex
                     layout-panel-flex--column
                     mobile-column
@@ -59,7 +58,7 @@
                     <h1>{{ article.title }}</h1>
                   </div>
                   <div>
-                    <span>{{- article.published_at | date: '%dth %B %Y' | remove_first: '0' -}}</span>
+                    <span>{{- article.published_at | date: '%dth %B %Y' -}}</span>
                   </div>
                 </div>
             {% endif %}
@@ -74,13 +73,17 @@
                   {% assign description = content.description | metafield_tag %}
 
                   <div class="content-loop-item">
-                      {% if heading != blank %}
-                          <h3 class="h4">{{ heading }}</h3>
-                      {% endif %}
+                    {% if heading != blank %}
+                        <h3 class="h4">{{ heading }}</h3>
+                    {% endif %}
 
-                      {% if description %}
-                        {{ content.description | metafield_tag }}
-                      {% endif %}
+                    {% if description %}
+                      {{ content.description | metafield_tag }}
+                    {% endif %}
+
+                    {% if content.cta_text != blank and content.cta_link != blank %}
+                      <a class="size-style button-secondary" href="{{ content.cta_link }}">{{ content.cta_text }}</a>
+                    {% endif %}
                   </div>
 
                 {% endfor %}
@@ -166,6 +169,9 @@
     margin: 0 auto;
   }
 
+  .blog-post-content + .blog-post-content .spacing-style {
+    padding-top: 0;
+  }
   .article-information-credits {
     gap: 6rem;
 
@@ -232,7 +238,7 @@
   }
 
   .content-loop-item h3 {
-    margin-block-end: var(--margin-sm) !important;
+    margin-block-end: var(--margin-md) !important;
   }
 {% endstylesheet %}
 
