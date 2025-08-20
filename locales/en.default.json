@@ -142,6 +142,9 @@
       "success": "Comment posted"
     }
   },
+  "trunk_shows": {
+    "ends": "Ends: {{ date }}",
+  },
   "content": {
     "discount": "Discount",
     "account_title": "Account",

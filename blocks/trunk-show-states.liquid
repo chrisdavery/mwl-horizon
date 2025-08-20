@@ -1,16 +1,21 @@
 
 
+{%- doc -%}
+  Renders product recommendations.
+  {section.id} - identifies the parent section for the Section Rendering API
+
+  https://shopify.dev/docs/api/section-rendering-api
+{%- enddoc -%}
 {% liquid
-  assign blog_tags = blog.all_tags
+  assign metaobject_object = metaobjects[section.settings.metaobject_type]
+
+  assign states = metaobject_object.values | map: 'state_province'
 %}
 
-{% comment %}
-  [data-section-id] {section.id} - used to fetch the product recommendations from the Section Rendering API
-{% endcomment %}
 <div
-  class="blog-tags-block shopify-block"
+  class="state-tags-block shopify-block"
   data-section-id="{{ section.id }}"
-  data-testid="blog-tags-block"
+  data-testid="state-tags-block"
   {{ block.shopify_attributes }}
 >
   <div
@@ -23,31 +28,28 @@
       {%  render 'spacing-style', settings: block.settings %}
     "
   >
+    
     {% capture list_items %}
         {% capture first_child %}
-            <div class="blog-tags-wrapper">
-                <a href="{{ blog.url }}" title="{{ 'accessibility.all' | t }}" class="button all-button-blog-tags">
+            <div class="state-tags-wrapper ">
+                <a href="#" title="{{ 'accessibility.all' | t }}" data-state-tag="all" class="button button--state-filter active">
                     {{ 'accessibility.all' | t }}
                 </a>
             </div>
         {% endcapture %}
-        {% render 'slideshow-slide', index: 0, children: first_child, class: 'blog-tags-list__slide' %}
+        {% render 'slideshow-slide', index: 0, children: first_child, class: 'state-tags-list__slide' %}
         <!--@list/split-->
-        {% for item in blog_tags %}
+        {% for item in states %}
             {% capture children %}
-              {% liquid
-                assign item_name = item | strip | handleize
-                assign current_tag = current_tags | strip | handleize
-              %}
-                <div class="blog-tags-wrapper">
-                  <a href="{{ blog.url }}/tagged/{{ item.title | handleize }}" title="{{ item.title }}" class="button {% if item_name == current_tag %} active{% endif %}">
-                      {{ item.title }}
+                <div class="state-tags-wrapper ">
+                  <a href="javascript:void(0)" data-state-tag="{{ item | strip | handleize }}" title="{{ item.title }}" class="button button--state-filter">
+                    {{ item | strip }}
                   </a>
                 </div>
             {% endcapture %}
 
-            {% render 'slideshow-slide', index: forloop.index, children: children, class: 'blog-tags-list__slide' %}
-            {% unless forloop.last or blog_tags.size == 1 %}
+            {% render 'slideshow-slide', index: forloop.index, children: children, class: 'state-tags-list__slide' %}
+            {% unless forloop.last or states.size == 1 %}
                 <!--@list/split-->
             {% endunless %}
         {% endfor %}
@@ -57,7 +59,7 @@
         # Create an array from the list items to be used for different layout types
         assign list_items_array = list_items | strip | split: '<!--@list/split-->'
 
-        assign slideshow_class = 'blog-tags__list blog-tags__wrapper list-unstyled'
+        assign slideshow_class = 'state-tags__list list-unstyled'
     %}
 
     {% capture slideshow %}
@@ -74,9 +76,6 @@
     {% if list_items_array.size >= 10 %}
         <div class="flex inline-slider-row hidden--mobile title--aligned-center">
             <div>
-              {% render 'breadcrumbs' %}
-            </div>
-            <div>
                 {{ slideshow }}
             </div>
             <div>
@@ -88,9 +87,6 @@
         </div>
     {% else %}
       <div class="flex title--aligned-center">
-        <div class="hidden--mobile">
-          {% render 'breadcrumbs', custom_current_title: block.settings.custom_current_title %}
-        </div>
         <div style="flex: 1 auto;">
           {{ slideshow }}
         </div>
@@ -101,7 +97,26 @@
 </div>
 
 {% stylesheet %}
-    .blog-tags__list {
+
+    .trunk-show-item {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+    /* your original: 1st + 2nd in every row of 3 */
+    .trunk-show-item:nth-child(even) .trunk-post-card__content {
+      border-left: 0;
+      border-right: 0;
+    }
+
+    /* exception: if it's the last child AND is a 3n+1, reset */
+    .trunk-show-item:last-child:nth-child(3n+1) .trunk-post-card__content {
+      border-right: var(--border-width) var(--border-style) var(--border-color);
+    }
+    
+    .state-tags__list {
       display: flex;
       overflow-x: auto;
       overflow-y: hidden;
@@ -115,7 +130,7 @@
       transition: opacity var(--animation-speed-medium) var(--animation-timing-fade-in);
     }
 
-    .blog-tags-list__slide {
+    .state-tags-list__slide {
         flex: 0 0 auto;
         scroll-snap-align: start;
         width: fit-content;
@@ -123,14 +138,15 @@
         transition: transform var(--animation-speed-medium) var(--animation-timing-default), background-color var(--animation-speed-medium) var(--animation-timing-hover), border-color var(--animation-speed-medium) var(--animation-timing-hover);
     }
 
-    .blog-tags-wrapper {
+    .state-tags-wrapper {
         position: relative;
         transition: transform var(--hover-transition-duration) var(--hover-transition-timing), box-shadow var(--hover-transition-duration) var(--hover-transition-timing);
         will-change: transform, box-shadow;
         z-index: var(--layer-flat);
         content-visibility: visible;
     }
-    .blog-tags__list slideshow-slides {
+
+    .state-tags__list slideshow-slides {
         padding-block: var(--padding-md);
         margin-block: calc(-1 * var(--padding-md));
         gap: var(--gap-sm);
@@ -140,15 +156,16 @@
             padding-inline-start: 0px;
         }
     }
-    .blog-tags-block {
+    .state-tags-block {
+        border-bottom: 1px solid var(--color-border);
+        grid-column: 1 / -1;
 
         @media (min-width: 750px) {
           padding-bottom: 1.5rem;
+          padding-inline: var(--page-margin);
         }
 
         @media (max-width: 749px) {
-            border-bottom: 1px solid var(--color-border);
-            grid-column: 1 / -1;
             
             .spacing-style {
                 --padding-block-end: var(--padding-md) !important;
@@ -163,7 +180,7 @@
           display: block;
         }
 
-        .all-button-blog-tags, .active {
+        .all-trunk-shows, .active {
             --button-color: var(--color-primary-button-hover-text) !important;
             --button-background-color: var(--color-primary-button-hover-background) !important;
             --button-border-color: var(--color-primary-button-hover-border) !important;
@@ -173,15 +190,10 @@
 
 {% schema %}
 {
-  "name": "Blog Tags",
-  "class": "blog-tags",
+  "name": "States Filter",
+  "class": "states-filter",
   "tag": null,
   "settings": [
-    {
-      "type": "text",
-      "id": "custom_current_title",
-      "label": "Custom current title"
-    },
     {
       "type": "range",
       "id": "columns_gap",

@@ -3,6 +3,7 @@
 
   @param {string} link - link to render
   @param {object} [block] - The block
+  @param {boolean} [active_state] - The active state
 
   @example
   {% render 'button', link: '/collections/all' %}
@@ -19,6 +20,9 @@
   {% endif %}
   class="
     size-style
+    {% if active_state and link == request.path %}
+      active-button-state
+    {% endif %}
     {{ block_settings.style_class }}
     {{ block_settings.style_class }}--{{ block.id }}
   "
@@ -41,5 +45,11 @@
       color: var(--color-primary-hover);
       text-decoration-color: transparent;
     }
+  }
+
+  .active-button-state {
+    --button-color: var(--color-primary-button-hover-text);
+    --button-background-color: var(--color-primary-button-hover-background);
+    --button-border-color: var(--color-primary-button-hover-border);
   }
 {% endstylesheet %}

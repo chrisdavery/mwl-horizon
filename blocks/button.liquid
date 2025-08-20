@@ -1,5 +1,5 @@
 
-{% render 'button', link: block.settings.link %}
+{% render 'button', link: block.settings.link, active_state: block.settings.active_state %}
 
 {% schema %}
 {
@@ -21,6 +21,13 @@
       "type": "checkbox",
       "id": "open_in_new_tab",
       "label": "t:settings.open_new_tab",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "active_state",
+      "label": "Active State",
+      "info": "optional (if current page is equal to button link, it will be in hover color state)",
       "default": false
     },
     {

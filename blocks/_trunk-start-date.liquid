@@ -1,0 +1,165 @@
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+  @param {object} start_date - The start date
+{%- enddoc -%}
+
+{%- assign block_settings = block.settings -%}
+
+<div class="start-date-span" {{block.shopify_attributes }}>
+    <div class="
+        layout-panel-flex
+        layout-panel-flex--column
+        spacing-style
+        border-style
+        gap-style
+        {% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}
+    "
+    style="
+        {% render 'border-override', settings: block_settings %}
+        {% render 'layout-panel-style', settings: block_settings %}
+        {% render 'spacing-style', settings: block_settings %}
+        {% render 'gap-style', value: block_settings.product_card_gap %}
+    "
+    >
+        <div>
+            {% assign text = start_date | date: '%d' %}
+            {% content_for 'block', id: 'heading', type: '_heading', text: text %}
+        </div>
+        <div class="text-block custom-typography" style="--line-height: var(--line-height--body-tight);">
+            <p>{{ start_date | date: "%B '%y" }}</p>
+        </div>
+    </div>
+</div>
+
+{% stylesheet %}
+    .start-date-span {
+        max-width: fit-content;
+    }
+{% endstylesheet %}
+
+{% schema %}
+    {
+        "name": "Start Date",
+        "tag": null,
+        "settings": [
+            {
+                "type": "range",
+                "id": "product_card_gap",
+                "label": "t:settings.vertical_gap",
+                "min": 0,
+                "max": 50,
+                "step": 1,
+                "unit": "px",
+                "default": 5
+            },
+            {
+                "type": "checkbox",
+                "id": "inherit_color_scheme",
+                "label": "t:settings.inherit_color_scheme",
+                "default": true
+            },
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "t:settings.color_scheme",
+                "default": "scheme-1",
+                "visible_if": "{{ block.settings.inherit_color_scheme == false }}"
+            },
+            {
+                "type": "header",
+                "content": "t:content.borders"
+            },
+            {
+                "type": "select",
+                "id": "border",
+                "label": "t:settings.style",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "t:options.none"
+                    },
+                    {
+                        "value": "solid",
+                        "label": "t:options.solid"
+                    }
+                ],
+                "default": "none"
+            },
+            {
+                "type": "range",
+                "id": "border_width",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "t:settings.thickness",
+                "default": 1,
+                "visible_if": "{{ block.settings.border != 'none' }}"
+            },
+            {
+                "type": "range",
+                "id": "border_opacity",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "label": "t:settings.opacity",
+                "default": 100,
+                "visible_if": "{{ block.settings.border != 'none' }}"
+            },
+            {
+                "type": "range",
+                "id": "border_radius",
+                "label": "t:settings.border_radius",
+                "min": 0,
+                "max": 32,
+                "step": 1,
+                "default": 0
+            },
+            {
+                "type": "header",
+                "content": "t:content.padding"
+            },
+            {
+                "type": "range",
+                "id": "padding-block-start",
+                "label": "t:settings.top",
+                "min": 0,
+                "max": 50,
+                "step": 1,
+                "unit": "px",
+                "default": 0
+            },
+            {
+                "type": "range",
+                "id": "padding-block-end",
+                "label": "t:settings.bottom",
+                "min": 0,
+                "max": 50,
+                "step": 1,
+                "unit": "px",
+                "default": 0
+            },
+            {
+                "type": "range",
+                "id": "padding-inline-start",
+                "label": "t:settings.left",
+                "min": 0,
+                "max": 50,
+                "step": 1,
+                "unit": "px",
+                "default": 0
+            },
+            {
+                "type": "range",
+                "id": "padding-inline-end",
+                "label": "t:settings.right",
+                "min": 0,
+                "max": 50,
+                "step": 1,
+                "unit": "px",
+                "default": 0
+            }
+        ]
+    }
+{% endschema %}

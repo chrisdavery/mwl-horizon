@@ -1,0 +1,159 @@
+
+{% assign metaobject_object = metaobjects[section.settings.metaobject_type] %}
+
+{% if metaobject_object.values_count == 0 %}
+    {% break %}
+{% endif %}
+
+<script
+  src="{{ 'main-trunk-show.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+<main-trunk-show section-id="{{ section.id }}">
+  <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+  <div
+    class="
+      section
+      color-{{ section.settings.color_scheme }}
+      trunk-show-posts
+      spacing-style
+      size-style
+    "
+    style="{% render 'spacing-style', settings: section.settings %}"
+  >
+    {% content_for 'block',
+      type: 'trunk-show-states',
+      id: 'main-blog'
+    %}
+    {% content_for 'blocks' %}
+
+    {% comment %} {%- paginate blog.articles by 12 -%} {% endcomment %}
+      <div
+        ref="grid"
+        class="trunk-shows-container"
+      >
+        {% assign metaobject_values = metaobject_object.values | sort_natural: 'start_date' %}
+        {% for item in metaobject_values %}
+          <div
+            class="trunk-show-item"
+            data-state="{{ item.state_province | handleize }}"
+            ref="cards[]"
+          >
+            {% content_for 'block', id: 'static-trunk-show-card', type: '_trunk-show-card', item: item %}
+          </div>
+        {% endfor %}
+      </div>
+    {% comment %} {%- endpaginate -%} {% endcomment %}
+  </div>
+</main-trunk-show>
+
+{% stylesheet %}
+    /**
+    * Trunk shows page layout
+    */
+    .trunk-show-posts {
+        --page-content-width: var(--wide-page-width);
+        --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+        --columns-gap: 36px;
+        --rows-gap: 36px;
+    }
+
+    .trunk-shows-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        width: 100%;
+        grid-column: 1 / -1;
+    }
+
+    .trunk-show-item .trunk-post-card__content {
+        border-top: 0;
+    }
+
+  @media (max-width: 749px) {
+    .trunk-show-item {
+        grid-column: span 3;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Main Trunk Show",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "icon"
+    },
+    {
+      "type": "image"
+    },
+    {
+      "type": "button"
+    },
+    {
+      "type": "video"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "_divider"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+        "type": "text",
+        "id": "metaobject_type",
+        "label": "Metaobject Type",
+        "info": "ex. https://prnt.sc/sXnIQzLyG-_4"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ]
+}
+{% endschema %}
