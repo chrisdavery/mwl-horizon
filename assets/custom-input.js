@@ -328,8 +328,10 @@ class DatePicker extends HTMLElement {
       }
 
       // Skip if too far out
-      if (daysDiff >= 180) return;
-
+      console.log('days difference', Number(daysDiff))
+      console.log('standard date', Number(this.dataset.standardDate))
+      if (daysDiff >= Number(this.dataset.standardDate)) return;
+ 
       // Sort thresholds
       const thresholds = priorityFeeItems
           .map(item => parseInt(item.dataset.leadDate))

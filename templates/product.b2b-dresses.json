@@ -776,7 +776,11 @@
                 "name": "Shipping Date",
                 "type": "datepicker",
                 "lead_date": 35,
-                "priority_fees": [],
+                "priority_fees": [
+                  "b-2-b-super-rush-fee",
+                  "b-2-b-rush-fee"
+                ],
+                "standard_lead_date": 113,
                 "required": true,
                 "error_message": "dd/mm/yyyy is required",
                 "width": "fill",
@@ -797,6 +801,7 @@
                 "name": "JOB REFERENCE",
                 "type": "text",
                 "priority_fees": [],
+                "standard_lead_date": 180,
                 "required": false,
                 "error_message": "",
                 "width": "fill",
@@ -816,11 +821,9 @@
                 "label_outside": false,
                 "name": "Wedding Date",
                 "type": "datepicker",
-                "lead_date": 60,
-                "priority_fees": [
-                  "high-priority-fee",
-                  "priority-fee"
-                ],
+                "lead_date": 0,
+                "priority_fees": [],
+                "standard_lead_date": 180,
                 "required": true,
                 "error_message": "dd/mm/yyyy is required",
                 "width": "fill",
@@ -841,6 +844,7 @@
                 "name": "Message",
                 "type": "textarea",
                 "priority_fees": [],
+                "standard_lead_date": 180,
                 "required": false,
                 "error_message": "",
                 "width": "fill",

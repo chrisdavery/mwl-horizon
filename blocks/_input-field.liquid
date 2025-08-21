@@ -69,7 +69,7 @@
                     <div class="size-style" style="--size-style-width: 100%; --size-style-height: ; --size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;">
                         <custom-input class="custom-input--field">
                             <div class="custom-input-wrapper">
-                                <date-picker>
+                                <date-picker data-standard-date="{{ block.settings.standard_lead_date | plus: 0 }}">
                                     <input
                                         type="text"
                                         id="CustomForm-{{ block_settings.label | handleize }}"
@@ -388,7 +388,8 @@
     }
 
     .ai-datepicker-day.other-month {
-        opacity: 0.3;
+        opacity: 0;
+        pointer-events: none;
     }
 
     .ai-datepicker-year-selector {
@@ -542,6 +543,13 @@
                 "label": "Priority Fees",
                 "metaobject_type": "priority_fees",
                 "info": "(Optional) only use for date picker wedding dress"
+            },
+            {
+                "type": "number",
+                "id": "standard_lead_date",
+                "label": "Standard fee lead date",
+                "default": 180,
+                "visible_if": "{{ block.settings.type == 'datepicker' and block.settings.priority_fees != blank }}"
             },
             {
                 "type": "checkbox",
