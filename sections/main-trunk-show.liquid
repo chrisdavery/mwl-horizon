@@ -69,9 +69,19 @@
     }
 
     .trunk-show-item .trunk-post-card__content {
-        border-top: 0;
+      border-top: 0;
     }
-
+    .trunk-show-item:nth-child(even) .trunk-post-card__content {
+      border-left: 0;
+      border-right: 0;
+    }
+    .trunk-show-item:nth-child(3n) .trunk-post-card__content {
+      border-right: 0;
+    }
+    .trunk-show-item:last-child:nth-child(3n+1) .trunk-post-card__content {
+      border-right: var(--border-width) var(--border-style) var(--border-color);
+    }
+    
   @media (max-width: 749px) {
     .trunk-show-item {
         grid-column: span 3;

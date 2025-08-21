@@ -21,7 +21,7 @@
         {% render 'gap-style', value: block_settings.product_card_gap %}
     "
     >
-        <div>
+        <div class="text-center">
             {% assign text = start_date | date: '%d' %}
             {% content_for 'block', id: 'heading', type: '_heading', text: text %}
         </div>

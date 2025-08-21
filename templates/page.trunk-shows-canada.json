@@ -356,7 +356,7 @@
         "@media (max-width: 749px) {.trunk-show-posts {padding-top: 0; }}"
       ],
       "settings": {
-        "metaobject_type": "trunk_shows_united_states",
+        "metaobject_type": "trunk_shows_canada",
         "color_scheme": "",
         "padding-block-start": 24,
         "padding-block-end": 48

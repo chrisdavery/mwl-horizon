@@ -105,16 +105,6 @@
         display: block;
       }
     }
-    /* your original: 1st + 2nd in every row of 3 */
-    .trunk-show-item:nth-child(even) .trunk-post-card__content {
-      border-left: 0;
-      border-right: 0;
-    }
-
-    /* exception: if it's the last child AND is a 3n+1, reset */
-    .trunk-show-item:last-child:nth-child(3n+1) .trunk-post-card__content {
-      border-right: var(--border-width) var(--border-style) var(--border-color);
-    }
     
     .state-tags__list {
       display: flex;
@@ -156,6 +146,19 @@
             padding-inline-start: 0px;
         }
     }
+
+    .state-tags-list__slide {
+      @media (min-width: 750px) {
+        &:first-child {
+          margin-inline-start: auto;
+        }
+        
+        &:last-child {
+          margin-inline-end: auto;
+        }
+      }
+    }
+
     .state-tags-block {
         border-bottom: 1px solid var(--color-border);
         grid-column: 1 / -1;
