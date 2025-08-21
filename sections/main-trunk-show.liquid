@@ -76,7 +76,7 @@
       }
     }
 
-    .trunk-show-item .trunk-post-card__content {
+    /* .trunk-show-item .trunk-post-card__content {
       border-top: 0;
     }
     .trunk-show-item:nth-child(even) .trunk-post-card__content {
@@ -88,6 +88,11 @@
     }
     .trunk-show-item:last-child:nth-child(3n+1) .trunk-post-card__content {
       border-right: var(--border-width) var(--border-style) var(--border-color);
+    } */
+
+    .trunk-show-item .trunk-post-card__content {
+      border: 0.5px var(--border-style) var(--border-color);
+      box-sizing: border-box;
     }
     
   @media (max-width: 749px) {
