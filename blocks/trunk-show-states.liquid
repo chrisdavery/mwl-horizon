@@ -97,14 +97,6 @@
 </div>
 
 {% stylesheet %}
-
-    .trunk-show-item {
-      display: none;
-
-      &.active {
-        display: block;
-      }
-    }
     
     .state-tags__list {
       display: flex;
@@ -152,7 +144,7 @@
         &:first-child {
           margin-inline-start: auto;
         }
-        
+
         &:last-child {
           margin-inline-end: auto;
         }
@@ -184,9 +176,9 @@
         }
 
         .all-trunk-shows, .active {
-            --button-color: var(--color-primary-button-hover-text) !important;
-            --button-background-color: var(--color-primary-button-hover-background) !important;
-            --button-border-color: var(--color-primary-button-hover-border) !important;
+          --button-color: var(--color-primary-button-hover-text) !important;
+          --button-background-color: var(--color-primary-button-hover-background) !important;
+          --button-border-color: var(--color-primary-button-hover-border) !important;
         }
     }
 {% endstylesheet %}
