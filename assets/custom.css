@@ -538,7 +538,7 @@ summary .svg-wrapper {
     flex-direction: column-reverse;
   }
  
-  .mobile-group-column-reverse .group-block-content {
+  .mobile-group-column-reverse > .group-block-content {
     flex-direction: column-reverse !important;
   }
 
