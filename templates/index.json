@@ -341,7 +341,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/Anthology_Homepage.png",
+            "background_image": "shopify://shop_images/MWL-book-appointment.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -426,7 +426,7 @@
                 "text_TTdCkJ": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>SHOP ANTHOLOGY</h3>",
+                    "text": "<h3>VISIT A BOUTIQUE</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -452,7 +452,7 @@
                   "type": "button",
                   "settings": {
                     "label": "SEE MORE",
-                    "link": "shopify://collections/anthology",
+                    "link": "shopify://pages/appointments",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
