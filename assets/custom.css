@@ -507,8 +507,11 @@ summary .svg-wrapper {
   }
   .h3, h3 {
     --font-h3--size: var(--font-size--sm) !important;
+    --font-h4--size: var(--font-size--sm) !important;
   }
-
+  .link {
+    font-size: var(--font-size--xs);
+  }
   /* Font Header sizes */
   .section-resource-list__header .text-block > *,
   .parent-group-datepicker.group-block-content > .text-block,

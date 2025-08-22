@@ -17,6 +17,7 @@
     "icon": "Ícono",
     "logo_and_favicon": "Logo y favicon",
     "overlapping_blocks": "Bloques solapados",
+    "rich_text_section": "Texto enriquecido",
     "product_buy_buttons": "Botones de compra",
     "product_description": "Descripción",
     "product_price": "Precio",
@@ -42,7 +43,7 @@
     "product_cards": "Tarjetas de producto",
     "primary_button": "Botón principal",
     "secondary_button": "Botón secundario",
-    "popovers": "Elementos emergentes",
+    "popovers_and_modals": "Elementos emergentes y modales",
     "buttons": "Botones",
     "inputs": "Entradas",
     "marquee": "Marquesina",
@@ -172,7 +173,8 @@
     "product_inventory": "Inventario de productos",
     "pills": "Cápsulas",
     "description": "Descripción",
-    "featured_image": "Imagen destacada"
+    "featured_image": "Imagen destacada",
+    "multicolumn": "Multicolumna"
   },
   "settings": {
     "alignment": "Alineación",
@@ -501,8 +503,11 @@
     "media": "Elementos multimedia",
     "product_card_carousel": "Mostrar carrusel",
     "media_fit": "Ajuste de elemento multimedia",
-    "scroll_speed": "Desplazarse al siguiente anuncio",
-    "show_powered_by_shopify": "Mostrar \"Con tecnología de Shopify\""
+    "scroll_speed": "Tiempo hasta el siguiente anuncio",
+    "show_powered_by_shopify": "Mostrar \" con Tecnología de Shopify\".",
+    "gift_card_form": "Formulario de tarjeta de regalo",
+    "seller_note_open_by_default": "Abrir nota para el vendedor de forma predeterminada",
+    "add_to_cart_animation": "Agregar al carrito"
   },
   "options": {
     "adapt_to_image": "Adaptar a la imagen",
@@ -846,7 +851,6 @@
     "carousel": "Carrusel",
     "colors": "Colores",
     "collection_page": "Página de colección",
-    "copyright_info": "Descubre cómo [editar tu declaración de derechos de autor](https://help.shopify.com/manual/online-store/themes/customizing-themes/remove-powered-by-shopify-message)",
     "customer_account": "Cuenta de cliente",
     "edit_empty_state_collection_in_theme_settings": "Edita el estado vacío de la colección en [configuración del tema ](/editor?context=theme&category=search)",
     "home_page": "Página de inicio",
@@ -877,7 +881,9 @@
     "resource_reference_product_variant_picker": "Muestra variantes del producto principal",
     "resource_reference_product_media": "Muestra multimedia del producto principal",
     "product_media": "Elementos multimedia del producto",
-    "section_link": "Enlace de la sección"
+    "section_link": "Enlace de la sección",
+    "gift_card_form_description": "Los clientes pueden enviar tarjetas de regalo al correo electrónico del destinatario junto con un mensaje personal. [Más información](https://help.shopify.com/manual/products/gift-card-products)",
+    "heading": "Encabezado"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Comparte información sobre tu marca con los clientes. Describe un producto, comparte anuncios o da la bienvenida a los clientes a tu tienda.</p>"

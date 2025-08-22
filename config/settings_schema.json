@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "theme_name": "Horizon",
-    "theme_version": "2.1.1",
+    "theme_version": "2.1.2",
     "theme_author": "Shopify",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
@@ -1374,6 +1374,12 @@
         "default": true
       },
       {
+        "type": "checkbox",
+        "id": "add_to_cart_animation",
+        "label": "t:settings.add_to_cart_animation",
+        "default": true
+      },
+      {
         "type": "select",
         "id": "card_hover_effect",
         "label": "t:settings.card_hover_effect",
@@ -2032,7 +2038,7 @@
     ]
   },
   {
-    "name": "t:names.popovers",
+    "name": "t:names.popovers_and_modals",
     "settings": [
       {
         "type": "color_scheme",

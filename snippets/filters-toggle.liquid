@@ -15,7 +15,7 @@
   class="facets-toggle{% if block_settings.enable_filtering == false %} facets-toggle--no-filters{% endif %}"
   style="--facets-inner-padding-block: {{ padding-block-start }}px {{ padding-block-end }}px; --facets-inner-padding-inline: var(--padding-lg);"
 >
-  {% if enable_filtering %}
+  {% if block_settings.enable_filtering %}
     <div class="facets-toggle__wrapper">
       <button
         class="button facets-toggle__button button-unstyled button-unstyled--with-icon"
