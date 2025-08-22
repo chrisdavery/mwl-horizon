@@ -365,11 +365,13 @@
         class="mega-menu__content-list mega-menu__content-list--collections list-unstyled"
         style="--menu-content-columns-desktop: 2; --menu-content-columns-tablet: {{ max_featured_cards_tablet }};"
       >
-        {% for item in megamenu_cards %}
-          <li class="mega-menu__content-list-item {% if forloop.index > 2 %} mega-menu__content-list-item--hidden-tablet{% endif %}">
-            {{ item }}
-          </li>
-        {% endfor %}
+        {% if eager_loading %}
+          {% for item in megamenu_cards %}
+            <li class="mega-menu__content-list-item {% if forloop.index > 2 %} mega-menu__content-list-item--hidden-tablet{% endif %}">
+              {{ item }}
+            </li>
+          {% endfor %}
+        {% endif %}
       </ul>
     </span>
 {% endcase %}
