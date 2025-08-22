@@ -1322,7 +1322,7 @@
         "@media (min-width: 750px) {.group-block {border-right: 0; }}",
         "@media (max-width: 749px) {@media (min-width: 750px) {.group-block {border-bottom: 0; } }}"
       ],
-      "name": "Multicolumn",
+      "name": "MWL Carousel",
       "settings": {
         "alignment": "left",
         "layout_type": "grid",
@@ -1549,7 +1549,7 @@
         "multicolumn_card_HkWU48",
         "multicolumn_card_93DCkR"
       ],
-      "name": "Multicolumn",
+      "name": "MWL Carousel",
       "settings": {
         "alignment": "left",
         "layout_type": "carousel",
