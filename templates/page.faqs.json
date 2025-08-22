@@ -324,7 +324,201 @@
                 "border_opacity": 100,
                 "border_radius": 0,
                 "padding-block-start": 0,
+                "padding-block-end": 32,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "accordion-row-dynamic": {
+                  "type": "_accordion-row-dynamic",
+                  "static": true,
+                  "settings": {
+                    "heading": "",
+                    "content": "",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "text_nWCjyr": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>SHIPPING</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h4",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
                 "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "faq_accordion_PJaNmz": {
+              "type": "faq-accordion",
+              "name": "FAQ accordions",
+              "settings": {
+                "items_list": [
+                  "do-you-offer-express-shipping",
+                  "do-you-ship-international",
+                  "how-long-do-veils-and-accessories-take-to-ship"
+                ],
+                "icon": "plus",
+                "dividers": true,
+                "type_preset": "h5",
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 32,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "accordion-row-dynamic": {
+                  "type": "_accordion-row-dynamic",
+                  "static": true,
+                  "settings": {
+                    "heading": "",
+                    "content": "",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "text_e8AK7B": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>RETURNS</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h4",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "faq_accordion_NRQHXL": {
+              "type": "faq-accordion",
+              "name": "FAQ accordions",
+              "settings": {
+                "items_list": [
+                  "do-you-accept-returns-what-is-your-return-policy"
+                ],
+                "icon": "plus",
+                "dividers": true,
+                "type_preset": "h5",
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 32,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "accordion-row-dynamic": {
+                  "type": "_accordion-row-dynamic",
+                  "static": true,
+                  "settings": {
+                    "heading": "",
+                    "content": "",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "text_YeQiTw": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>ELOPE</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h4",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "faq_accordion_fejyLn": {
+              "type": "faq-accordion",
+              "name": "FAQ accordions",
+              "settings": {
+                "items_list": [
+                  "can-i-customise-elope-designs",
+                  "how-does-sizing-for-elope-dresses-work",
+                  "how-long-does-shipping-take",
+                  "what-is-the-return-policy-for-elope-dresses"
+                ],
+                "icon": "plus",
+                "dividers": true,
+                "type_preset": "h5",
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 32,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -348,7 +542,13 @@
           "block_order": [
             "text_YYJEqM",
             "text_X63pNE",
-            "faq_accordion_bwEtHh"
+            "faq_accordion_bwEtHh",
+            "text_nWCjyr",
+            "faq_accordion_PJaNmz",
+            "text_e8AK7B",
+            "faq_accordion_NRQHXL",
+            "text_YeQiTw",
+            "faq_accordion_fejyLn"
           ]
         }
       },
