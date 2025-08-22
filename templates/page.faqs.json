@@ -246,6 +246,32 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
+                "text": "<h2>FAQs about Our Wedding Dresses</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 18,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_X63pNE": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
                 "text": "<h2>GENERAL</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
@@ -268,10 +294,26 @@
               },
               "blocks": {}
             },
-            "accordion_QGKBK6": {
-              "type": "accordion",
-              "name": "t:names.accordion",
+            "faq_accordion_bwEtHh": {
+              "type": "faq-accordion",
+              "name": "FAQ accordions",
               "settings": {
+                "items_list": [
+                  "where-can-i-try-on-mwl-dresses",
+                  "how-do-i-take-my-measurements",
+                  "which-samples-does-my-nearest-mwl-boutique-or-retailer-carry",
+                  "how-do-i-book-an-appointment",
+                  "how-do-i-order-a-dress-if-i-dont-live-near-a-mwl-boutique-or-a-retailer",
+                  "how-quickly-can-i-have-a-dress-made",
+                  "do-you-have-any-dresses-available-to-ship",
+                  "what-is-the-price-of-mwl-dresses",
+                  "what-payment-options-are-available",
+                  "i-am-having-trouble-checking-out",
+                  "do-you-ever-hold-sample-sales",
+                  "whats-the-best-way-to-store-my-dress-before-or-after-my-wedding",
+                  "do-you-have-any-recommendations-for-shapewear",
+                  "do-you-make-any-of-your-dresses-in-white"
+                ],
                 "icon": "plus",
                 "dividers": true,
                 "type_preset": "h5",
@@ -287,54 +329,26 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "accordion_row_H6AB8F": {
-                  "type": "_accordion-row",
+                "accordion-row-dynamic": {
+                  "type": "_accordion-row-dynamic",
+                  "static": true,
                   "settings": {
-                    "heading": "Where Can I Try On Mwl Dresses?",
+                    "heading": "",
+                    "content": "",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
-                  "blocks": {
-                    "text_za9X6C": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<ul><li>Our cleaning service is available worldwide.</li><li>Standardly, please allow 2-5 weeks for cleaning to be completed to our high standards. </li><li>MWL can only accept MWL and Emmy Mae brand wedding dresses, veils and accessories for cleaning.  Please do not submit any other brands for cleaning as these will be returned without cleaning at the customer’s expense.</li><li>Although all care will be taken to restore your dress, veil and/or accessory to the highest possible standard, we unfortunately cannot guarantee any dress, veil and/or accessory will be able to be returned to its original “as new” condition.  Please bear in mind that there is a fine line between removing the marks and ruining the material, so we will give your dress the complete care it deserves. We recommend returning any items for cleaning earlier rather than later so we have the best possible chance of returning her to her former glory.</li><li>MWL reserves the right to refuse cleaning services if the process will cause further damage to the item and will in this case ensure your dress, veil and/or accessories are returned to you.</li><li>MWL reserves the right to charge an additional fee for cases that are deemed to require an extraordinarily high level of additional attention and product to remove marks and stains. </li><li>It is a requirement of submitting your MWL dress, veil and/or accessories for cleaning that you complete the form and submit it online before your dress arrives with our MWL cleaning team.  This is to ensure when your dress arrives it can be correctly linked with your details and returned to you once cleaned.  If a dress arrives with our cleaning team without an associated submission through our website, we will make every effort to contact the sender, however your dress, veil and/or accessories may be returned to you.</li><li>Any customs/import duties are to be charged to the customer and will not be covered by MWL as the receiver of a return dress.  If customs charges are incurred by MWL to receive your dress those charges will be invoiced to the sender to clear the shipment.  Please note that the customer is also responsible for any and all customs/import duties that may be incurred upon return of the item once cleaned.</li><li>MWL cannot accept any liability for any items lost in transit to or from our cleaning team.</li><li>Upon completion, your dress, veil and/or accessories will be wrapped in acid-free tissue paper and boxed.  MWL will provide tracking information for items once returned to the original sender.</li><li>Additional services such as button repairs, etc. are not included in our cleaning service and are charged at an extra rate to be added to cart with your cleaning order at your discretion.  Our extra care package includes light hand sewing repairs such as replacing buttons, replacement of MWL cups and small, light applique, lace and beading repairs only.  More significant repairs including holes, larges rips or tears and replacing zippers are not covered by this package.  If an extra care package is not added to your cleaning order your dress will simply be cleaned and wrapped.</li></ul>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_za9X6C"
-                  ]
+                  "blocks": {}
                 }
               },
-              "block_order": [
-                "accordion_row_H6AB8F"
-              ]
+              "block_order": []
             }
           },
           "block_order": [
             "text_YYJEqM",
-            "accordion_QGKBK6"
+            "text_X63pNE",
+            "faq_accordion_bwEtHh"
           ]
         }
       },
@@ -343,7 +357,7 @@
         "group_qeq6Tf"
       ],
       "custom_css": [
-        "summary {padding-block: var(--padding-lg);}",
+        "summary {padding-block: var(--padding-lg); --summary-font-line-height: 1.6;}",
         "@media (max-width: 749px) {.layout-panel-flex--row > .group-block--width-custom {flex-basis: unset; }}"
       ],
       "name": "t:names.custom_section",

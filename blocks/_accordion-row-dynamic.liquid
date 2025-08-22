@@ -1,4 +1,11 @@
-{% if block.settings.content == blank %}
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+
+  @param {string} [question] - The title
+  @param {string} [content] - The content
+{%- enddoc -%}
+
+{% if block.settings.content == blank and content == blank %}
   {% break %}
 {% endif %}
 
@@ -20,7 +27,11 @@
         width: block.settings.width,
         class_name: 'details__icon'
       %}
-      {{ block.settings.heading }}
+      {% if question %}
+        {{ question }}
+      {% else %}
+        {{ block.settings.heading }}
+      {% endif %}
       <span class="svg-wrapper icon-caret icon-animated">
         {{- 'icon-caret.svg' | inline_asset_content -}}
       </span>
@@ -30,7 +41,11 @@
     </summary>
 
     <div class="details-content">
-      {{ block.settings.content }}
+      {% if content %}
+        {{ content }}
+      {% else %}
+        {{ block.settings.content }}
+      {% endif %}
     </div>
   </details>
 </accordion-custom>
