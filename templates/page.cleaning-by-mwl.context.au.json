@@ -121,7 +121,7 @@
       "name": "t:names.custom_section"
     },
     "multicolumn_list_i9dHFi": {
-      "type": "multicolumn-list",
+      "type": "mwl-carousel",
       "disabled": false,
       "custom_css": [
         ".text-block p {font-weight: normal;}",

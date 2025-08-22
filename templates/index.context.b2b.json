@@ -12,26 +12,5 @@
   "context": {
     "b2b": true
   },
-  "sections": {
-    "multicolumn_list_T3RdEU": {
-      "settings": {},
-      "blocks": {
-        "static-header": {
-          "blocks": {
-            "group_JEzaPD": {
-              "blocks": {
-                "text_XrJQdP": {
-                  "settings": {
-                    "text": "<p><a href=\"/blogs/b2b-dashboard\" title=\"B2B - DASHBOARD\"><span style=\"text-decoration:underline\">View all</span></a></p>"
-                  }
-                }
-              },
-              "settings": {}
-            }
-          },
-          "settings": {}
-        }
-      }
-    }
-  }
+  "sections": {}
 }
