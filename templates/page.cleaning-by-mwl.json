@@ -214,8 +214,8 @@
         "padding-block-end": 54
       }
     },
-    "multicolumn_list_iy7y6y": {
-      "type": "multicolumn-list",
+    "mw_carousel_iy7y6y": {
+      "type": "mwl-carousel",
       "blocks": {
         "multicolumn_card_hacrk9": {
           "type": "_multicolumn-card",
@@ -1342,8 +1342,8 @@
         "padding-block-end": 0
       }
     },
-    "multicolumn_list_f7UYBq": {
-      "type": "multicolumn-list",
+    "mw_carousel_f7UYBq": {
+      "type": "mwl-carousel",
       "blocks": {
         "multicolumn_card_a38Cqx": {
           "type": "_multicolumn-card",
@@ -2016,8 +2016,8 @@
     "main",
     "hero_bNLX4M",
     "section_8kgtYw",
-    "multicolumn_list_iy7y6y",
-    "multicolumn_list_f7UYBq",
+    "mw_carousel_iy7y6y",
+    "mw_carousel_f7UYBq",
     "testimonials_PLLxM9",
     "section_tqVFLf",
     "custom_liquid_8zYA33"
