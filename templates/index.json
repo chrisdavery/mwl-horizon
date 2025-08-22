@@ -91,6 +91,7 @@
                 "label": "SHOP NOW",
                 "link": "shopify://collections/new-releases",
                 "open_in_new_tab": false,
+                "active_state": false,
                 "style_class": "link",
                 "width": "fit-content",
                 "custom_width": 100,
@@ -106,6 +107,7 @@
                 "label": "BOOK NOW",
                 "link": "shopify://pages/appointments",
                 "open_in_new_tab": false,
+                "active_state": false,
                 "style_class": "link",
                 "width": "fit-content",
                 "custom_width": 100,
@@ -295,6 +297,7 @@
                     "label": "SEE MORE",
                     "link": "shopify://collections/wedding-gloves",
                     "open_in_new_tab": false,
+                    "active_state": false,
                     "style_class": "link",
                     "width": "fit-content",
                     "custom_width": 100,
@@ -451,6 +454,7 @@
                     "label": "SEE MORE",
                     "link": "shopify://collections/anthology",
                     "open_in_new_tab": false,
+                    "active_state": false,
                     "style_class": "link",
                     "width": "fit-content",
                     "custom_width": 100,
@@ -607,6 +611,7 @@
                     "label": "SEE MORE",
                     "link": "shopify://collections/veils",
                     "open_in_new_tab": false,
+                    "active_state": false,
                     "style_class": "link",
                     "width": "fit-content",
                     "custom_width": 100,
@@ -956,6 +961,7 @@
                     "label": "DISCOVER NEW",
                     "link": "shopify://collections/all",
                     "open_in_new_tab": false,
+                    "active_state": false,
                     "style_class": "link",
                     "width": "fit-content",
                     "custom_width": 100,
@@ -1112,6 +1118,7 @@
                     "label": "SEE MORE",
                     "link": "shopify://collections/ready-to-wear-wedding-dresses",
                     "open_in_new_tab": false,
+                    "active_state": false,
                     "style_class": "link",
                     "width": "fit-content",
                     "custom_width": 100,
@@ -1310,6 +1317,7 @@
                     "label": "DISCOVER MORE",
                     "link": "shopify://pages/appointments",
                     "open_in_new_tab": false,
+                    "active_state": false,
                     "style_class": "link",
                     "width": "fit-content",
                     "custom_width": 100,
@@ -1466,6 +1474,7 @@
                     "label": "DISCOVER MORE",
                     "link": "shopify://blogs/all",
                     "open_in_new_tab": false,
+                    "active_state": false,
                     "style_class": "link",
                     "width": "fit-content",
                     "custom_width": 100,
@@ -1538,175 +1547,17 @@
         "padding-block-end": 10
       }
     },
-    "multicolumn_list_T3RdEU": {
+    "mwl_carousel_EaJQGc": {
       "type": "mwl-carousel",
       "blocks": {
-        "multicolumn_card_nGLXm4": {
+        "multicolumn_card_4hQrbY": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "group_kPU9AX": {
+            "group_QCkJi6": {
               "type": "group",
-              "settings": {
-                "link": "shopify://blogs/all/madeline-ben",
-                "open_in_new_tab": false,
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": false,
-                "color_scheme": "scheme-6",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "placeholder": "",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "mobile-padding-block-start": 0,
-                "mobile-padding-block-end": 0,
-                "mobile-padding-inline-start": 0,
-                "mobile-padding-inline-end": 0,
-                "css_class": ""
-              },
-              "blocks": {
-                "image_NNwHRx": {
-                  "type": "image",
-                  "settings": {
-                    "image": "shopify://shop_images/THE_WALLMANS.jpg",
-                    "link": "",
-                    "image_ratio": "standard",
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "group_Hj9YMT": {
-                  "type": "group",
-                  "settings": {
-                    "link": "",
-                    "open_in_new_tab": false,
-                    "content_direction": "column",
-                    "vertical_on_mobile": true,
-                    "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
-                    "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "custom_height": 100,
-                    "inherit_color_scheme": false,
-                    "color_scheme": "",
-                    "background_media": "none",
-                    "video_position": "cover",
-                    "background_image_position": "cover",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "placeholder": "",
-                    "toggle_overlay": false,
-                    "overlay_color": "#00000026",
-                    "overlay_style": "solid",
-                    "gradient_direction": "to top",
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "custom_mobile_padding": true,
-                    "mobile-padding-block-start": 0,
-                    "mobile-padding-block-end": 0,
-                    "mobile-padding-inline-start": 15,
-                    "mobile-padding-inline-end": 15,
-                    "css_class": ""
-                  },
-                  "blocks": {
-                    "text_KgJWf6": {
-                      "type": "text",
-                      "name": "t:names.heading",
-                      "settings": {
-                        "text": "<h3>MADELINE + BEN</h3>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "custom",
-                        "font": "var(--font-subheading--family)",
-                        "font_size": "0.875rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_KgJWf6"
-                  ]
-                }
-              },
-              "block_order": [
-                "image_NNwHRx",
-                "group_Hj9YMT"
-              ]
-            }
-          },
-          "block_order": [
-            "group_kPU9AX"
-          ]
-        },
-        "multicolumn_card_yQ9znL": {
-          "type": "_multicolumn-card",
-          "name": "Multicolumn Item",
-          "settings": {},
-          "blocks": {
-            "group_6A6PyD": {
-              "type": "group",
+              "name": "Item Link",
               "settings": {
                 "link": "shopify://blogs/all/welcome-to-our-mwl-perth-boutique",
                 "open_in_new_tab": false,
@@ -1750,7 +1601,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "image_pPJ9Bk": {
+                "image_fijaQh": {
                   "type": "image",
                   "settings": {
                     "image": "shopify://shop_images/MadeWithLove_10_0580c20d-4ce4-43de-b7a0-0ef65916da21.jpg",
@@ -1772,7 +1623,7 @@
                   },
                   "blocks": {}
                 },
-                "group_QVf96a": {
+                "group_4RzDxB": {
                   "type": "group",
                   "settings": {
                     "link": "",
@@ -1817,7 +1668,7 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_TwWkXN": {
+                    "text_f6pKM9": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
@@ -1845,27 +1696,28 @@
                     }
                   },
                   "block_order": [
-                    "text_TwWkXN"
+                    "text_f6pKM9"
                   ]
                 }
               },
               "block_order": [
-                "image_pPJ9Bk",
-                "group_QVf96a"
+                "image_fijaQh",
+                "group_4RzDxB"
               ]
             }
           },
           "block_order": [
-            "group_6A6PyD"
+            "group_QCkJi6"
           ]
         },
-        "multicolumn_card_T94hfF": {
+        "multicolumn_card_cnmjM7": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "group_rbmNHU": {
+            "group_yKmRpa": {
               "type": "group",
+              "name": "Item Link",
               "settings": {
                 "link": "shopify://blogs/all/in-conversation-with-carla-jenkins",
                 "open_in_new_tab": false,
@@ -1909,7 +1761,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "image_iDgknY": {
+                "image_ME4Njb": {
                   "type": "image",
                   "settings": {
                     "image": "shopify://shop_images/ezgif.com-crop_8.jpg",
@@ -1931,7 +1783,7 @@
                   },
                   "blocks": {}
                 },
-                "group_8eeEJA": {
+                "group_irTzDY": {
                   "type": "group",
                   "settings": {
                     "link": "",
@@ -1976,11 +1828,11 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_bWnFUR": {
+                    "text_KiXQPc": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>WELCOME TO OUR MWL PERTH BOUTIQUE</h3>",
+                        "text": "<h3>IN CONVERSATION WITH: CARLA JENKINS</h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2004,27 +1856,188 @@
                     }
                   },
                   "block_order": [
-                    "text_bWnFUR"
+                    "text_KiXQPc"
                   ]
                 }
               },
               "block_order": [
-                "image_iDgknY",
-                "group_8eeEJA"
+                "image_ME4Njb",
+                "group_irTzDY"
               ]
             }
           },
           "block_order": [
-            "group_rbmNHU"
+            "group_yKmRpa"
           ]
         },
-        "multicolumn_card_JLxhXJ": {
+        "multicolumn_card_wPaVdy": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "group_W4Mb47": {
+            "group_NwBapp": {
               "type": "group",
+              "name": "Item Link",
+              "settings": {
+                "link": "shopify://blogs/all/anthology-poems-of-jean-gracie",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-6",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
+              },
+              "blocks": {
+                "image_qMx4iN": {
+                  "type": "image",
+                  "settings": {
+                    "image": "shopify://shop_images/mwl-jean-anthology-blog.png",
+                    "link": "",
+                    "image_ratio": "standard",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "group_6Uw4Fm": {
+                  "type": "group",
+                  "settings": {
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": false,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "placeholder": "",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "custom_mobile_padding": true,
+                    "mobile-padding-block-start": 0,
+                    "mobile-padding-block-end": 0,
+                    "mobile-padding-inline-start": 15,
+                    "mobile-padding-inline-end": 15,
+                    "css_class": ""
+                  },
+                  "blocks": {
+                    "text_H9raPn": {
+                      "type": "text",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h3>ANTHOLOGY - POEMS OF JEAN & GRACIE</h3>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-subheading--family)",
+                        "font_size": "0.875rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_H9raPn"
+                  ]
+                }
+              },
+              "block_order": [
+                "image_qMx4iN",
+                "group_6Uw4Fm"
+              ]
+            }
+          },
+          "block_order": [
+            "group_NwBapp"
+          ]
+        },
+        "multicolumn_card_kWLpKH": {
+          "type": "_multicolumn-card",
+          "name": "Multicolumn Item",
+          "settings": {},
+          "blocks": {
+            "group_E9dci9": {
+              "type": "group",
+              "name": "Item Link",
               "settings": {
                 "link": "shopify://blogs/all/bridal-shapewear-recommendations",
                 "open_in_new_tab": false,
@@ -2068,7 +2081,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "image_wiGhY9": {
+                "image_tzeh64": {
                   "type": "image",
                   "settings": {
                     "image": "shopify://shop_images/ezgif.com-webp-to-jpg-converter_22.jpg",
@@ -2090,7 +2103,7 @@
                   },
                   "blocks": {}
                 },
-                "group_7gVy9K": {
+                "group_y7BGGd": {
                   "type": "group",
                   "settings": {
                     "link": "",
@@ -2135,7 +2148,7 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "text_pmKjwL": {
+                    "text_8cMzkV": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
@@ -2163,18 +2176,18 @@
                     }
                   },
                   "block_order": [
-                    "text_pmKjwL"
+                    "text_8cMzkV"
                   ]
                 }
               },
               "block_order": [
-                "image_wiGhY9",
-                "group_7gVy9K"
+                "image_tzeh64",
+                "group_y7BGGd"
               ]
             }
           },
           "block_order": [
-            "group_W4Mb47"
+            "group_E9dci9"
           ]
         },
         "static-header": {
@@ -2185,11 +2198,11 @@
             "content_direction": "row",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
+            "vertical_alignment": "flex-end",
             "align_baseline": true,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
+            "gap": 12,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -2211,7 +2224,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_list_text_hazkAG": {
+            "product_list_text_XFcPjM": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
@@ -2221,7 +2234,7 @@
                 "alignment": "left",
                 "type_preset": "h4",
                 "font": "var(--font-body--family)",
-                "font_size": "",
+                "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -2237,7 +2250,7 @@
               },
               "blocks": {}
             },
-            "group_JEzaPD": {
+            "group_d3hbi8": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -2283,7 +2296,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "text_XrJQdP": {
+                "text_qGj9Gb": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
@@ -2311,37 +2324,37 @@
                 }
               },
               "block_order": [
-                "text_XrJQdP"
+                "text_qGj9Gb"
               ]
             }
           },
           "block_order": [
-            "product_list_text_hazkAG",
-            "group_JEzaPD"
+            "product_list_text_XFcPjM",
+            "group_d3hbi8"
           ]
         }
       },
       "block_order": [
-        "multicolumn_card_nGLXm4",
-        "multicolumn_card_yQ9znL",
-        "multicolumn_card_T94hfF",
-        "multicolumn_card_JLxhXJ"
+        "multicolumn_card_4hQrbY",
+        "multicolumn_card_cnmjM7",
+        "multicolumn_card_wPaVdy",
+        "multicolumn_card_kWLpKH"
       ],
       "custom_css": [
         "@media (max-width: 749px) {.section-resource-list__header .group-block-content {--gap: 8px !important; }}"
       ],
-      "name": "Multicolumn",
+      "name": "MWL Carousel",
       "settings": {
         "alignment": "left",
-        "layout_type": "carousel",
+        "layout_type": "grid",
         "carousel_on_mobile": true,
         "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "100cqw",
         "columns_gap": 8,
         "rows_gap": 8,
-        "icons_style": "none",
-        "icons_shape": "rectangle",
+        "icons_style": "arrow",
+        "icons_shape": "circle",
         "section_width": "page-width",
         "full_width_on_mobile": true,
         "gap": 24,
@@ -2525,7 +2538,7 @@
     "section_YQ3PNL",
     "section_i3mkk9",
     "divider_c9TGcg",
-    "multicolumn_list_T3RdEU",
+    "mwl_carousel_EaJQGc",
     "testimonials_VrNktw"
   ]
 }

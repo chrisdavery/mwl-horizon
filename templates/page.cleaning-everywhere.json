@@ -188,7 +188,7 @@
       }
     },
     "multicolumn_list_pGPCe": {
-      "type": "mwl-carousel",
+      "type": "multicolumn-list",
       "blocks": {
         "multicolumn_card_DNJcHP": {
           "type": "_multicolumn-card",
@@ -1102,7 +1102,7 @@
       }
     },
     "multicolumn_list_f7UYBq": {
-      "type": "mwl-carousel",
+      "type": "multicolumn-list",
       "blocks": {
         "multicolumn_card_a38Cqx": {
           "type": "_multicolumn-card",
