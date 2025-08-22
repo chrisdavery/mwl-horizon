@@ -246,3 +246,92 @@ class ProductModel extends DeferredMedia {
 if (!customElements.get('product-model')) {
   customElements.define('product-model', ProductModel);
 }
+
+/**
+ * Custom element <video-timestamp>
+ * Displays current video time and provides play/pause toggle button.
+ *
+ * Example structure:
+ * <video-timestamp>
+ *   <span class="timestamp"></span>
+ *   <button class="timestamp-button" data-play="Play" data-pause="Pause"></button>
+ * </video-timestamp>
+ */
+class VideoTimestamp extends HTMLElement {
+  /** @type {HTMLVideoElement | null} */
+  video = null;
+
+  /** @type {HTMLSpanElement | null} */
+  timestampEl = null;
+
+  /** @type {HTMLButtonElement | null} */
+  buttonEl = null;
+
+  /** @type {HTMLElement | null} */
+  deferredMedia = null;
+
+  /**
+   * Called when the element is inserted into the DOM.
+   * Finds the closest <deferred-media> and binds events to its <video>.
+   * @returns {void}
+   */
+  connectedCallback() {
+    this.deferredMedia = this.closest('deferred-media');
+    if (!this.deferredMedia) return;
+
+    this.video = this.deferredMedia.querySelector('video');
+    this.timestampEl = this.querySelector('.timestamp');
+    this.buttonEl = this.querySelector('.timestamp-button');
+
+    if (!this.video || !this.timestampEl || !this.buttonEl) return;
+
+    // Update timestamp while video plays
+    this.video.addEventListener('timeupdate', () => {
+      this.updateTimestamp();
+    });
+
+    // Sync button state initially
+    this.updateButton();
+
+    // Toggle play/pause on click
+    this.buttonEl.addEventListener('click', () => {
+      if (this.video?.paused) {
+        this.video.play();
+      } else {
+        this.video?.pause();
+      }
+    });
+
+    // Update button label when state changes
+    this.video.addEventListener('play', () => this.updateButton());
+    this.video.addEventListener('pause', () => this.updateButton());
+  }
+
+  /**
+   * Updates the displayed timestamp to the current video time.
+   * Always formatted as hh:mm:ss (zero-padded).
+   * @returns {void}
+   */
+  updateTimestamp() {
+    if (!this.video || !this.timestampEl) return;
+    const seconds = Math.floor(this.video.currentTime);
+    const h = String(Math.floor(seconds / 3600)).padStart(2, '0');
+    const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+    const s = String(seconds % 60).padStart(2, '0');
+    this.timestampEl.textContent = `${h}:${m}:${s}`;
+  }
+
+  /**
+   * Updates the play/pause button text based on the video state.
+   * Uses button dataset values: data-play / data-pause.
+   * @returns {void}
+   */
+  updateButton() {
+    if (!this.video || !this.buttonEl) return;
+    this.buttonEl.textContent = this.video.paused
+      ? this.buttonEl.dataset.play || 'Play'
+      : this.buttonEl.dataset.pause || 'Pause';
+  }
+}
+
+customElements.define('video-timestamp', VideoTimestamp);

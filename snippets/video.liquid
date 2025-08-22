@@ -14,6 +14,8 @@
   @param {string} [additional_attributes] - Any additional HTML attributes
   @param {string} [video_type] - 'youtube' or 'vimeo'
   @param {boolean} [disable_controls] - Whether to disable controls. If true, only play/pause will be usable.
+  @param {boolean} [text_bottom] - Text overlay on the bottom of the video
+  @param {boolean} [show_timestamp] - Timestamp of the video
   @param {object} video - The Shopify video object or a string containing a YouTube ID or Vimeo ID
   @param {string} section_id - The section ID
   @param {object} [block] - The block object
@@ -184,6 +186,19 @@
         {{ video_tag }}
       {% endif %}
     {% endif %}
+
+    {% if text_bottom %}
+      <div class="text-bottom-video video-overlay-text text-block rte">
+        <p>{{ text_bottom }}</p>
+      </div>
+    {% endif %}
+
+    {% if show_timestamp %}
+      <video-timestamp class="video-timestamp title--aligned-center">
+        <span class="timestamp video-overlay-text">00:00:00</span>
+        <button class="timestamp-button video-overlay-text" data-play="{{ 'accessibility.play' | t }}" data-pause="{{ 'accessibility.pause' | t }}">{{ 'accessibility.play' | t }}</button>
+      </video-timestamp>
+    {% endif %}
   </deferred-media>
 {% else %}
   <div
@@ -208,6 +223,48 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: var(--layer-flat);
+  }
+
+  .text-bottom-video {
+    top: unset !important;
+    left: 1.5rem !important;
+    right: 1.5rem !important;
+    bottom: 1.5rem !important;
+    z-index: 0;
+    width: auto !important;
+    height: auto !important;
+    font-size: var(--font-size--xs);
+    color: var(--color-background);
+  }
+
+  .video-timestamp {
+    top: 1.5rem !important;
+    left: 1.5rem !important;
+    right: unset !important;
+    bottom: unset !important;
+    z-index: 0;
+    width: auto !important;
+    height: auto !important;
+    font-size: var(--font-size--sm);
+    display: flex !important;
+  }
+
+  .timestamp-button {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: var(--font-size--sm);
+  }
+
+  .video-overlay-text {
+    font-family: var(--font-heading--family);
+    font-style: var(--font-heading--style);
+    line-height: var(--line-height--display-normal);
+    font-weight: var(--font-subheading--weight);
+    color: var(--color-background);
+    letter-spacing: var(--letter-spacing-sm);
   }
 
   .video-interaction-hint:hover {

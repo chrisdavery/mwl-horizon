@@ -9,27 +9,43 @@
    --size-style-aspect-ratio: {% if block_settings.source == 'uploaded' %}{{ block_settings.video.aspect_ratio | default: 'auto' }}{% elsif block_settings.cover_image == blank %}{{ block_settings.aspect_ratio }}{% else %}auto{% endif %};
 {% endcapture %}
 
+{% assign disable_controls = false %}
+
+{% if block_settings.video_autoplay == true %}
+  {% assign disable_controls = true %}
+{% endif %}
+
+{% capture video_class %}
+  spacing-style size-style border-style {% if block_settings.fill_height == true %}h-100{% endif %}
+{% endcapture %}
+
 {% if block_settings.source == 'uploaded' %}
   {% render 'video',
     video: block_settings.video,
-    video_class: 'spacing-style size-style border-style',
+    video_class: video_class,
     video_loop: block_settings.video_loop,
     video_style: video_style,
     video_preview_image: block_settings.video.preview_image,
     additional_attributes: block.shopify_attributes,
-    section_id: section.id
+    section_id: section.id,
+    disable_controls: disable_controls,
+    text_bottom: block_settings.text_bottom,
+    show_timestamp: block_settings.show_timestamp
   %}
 {% else %}
   {% render 'video',
     video_from_url: true,
     video: block_settings.video_url.id,
-    video_class: 'spacing-style size-style border-style',
+    video_class: video_class,
     video_type: block_settings.video_url.type,
     video_style: video_style,
     video_alt: block_settings.alt,
     video_preview_image: block_settings.cover_image,
     additional_attributes: block.shopify_attributes,
-    section_id: section.id
+    section_id: section.id,
+    disable_controls: disable_controls,
+    text_bottom: block_settings.text_bottom,
+    show_timestamp : block_settings.show_timestamp
   %}
 {% endif %}
 
@@ -86,6 +102,32 @@
       "id": "video_loop",
       "label": "t:settings.video_loop",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "fill_height",
+      "label": "Fill section height",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_timestamp",
+      "label": "Show Timestamp",
+      "default": false,
+      "visible_if": "{{ block.settings.video_loop == true and block.settings.video_autoplay == true }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_bottom",
+      "label": "Show Text on bottom",
+      "default": false,
+      "visible_if": "{{ block.settings.video_autoplay == true }}"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text_bottom",
+      "label": "Text on bottom",
+      "visible_if": "{{ block.settings.show_text_bottom == true }}"
     },
     {
       "type": "image_picker",

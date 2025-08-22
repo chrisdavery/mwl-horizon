@@ -21,7 +21,7 @@
 %}
 
 {% capture class %}
-  image-block image-block--{{ block.id }} image-block--height-{{ block_settings.height }} spacing-style size-style
+  image-block image-block--{{ block.id }} image-block--height-{{ block_settings.height }} spacing-style size-style {% if block_settings.zoom_on_hover == true %}zoom-on-hover{% endif %}
 {% endcapture %}
 
 {% capture style %}
@@ -236,6 +236,12 @@
       ],
       "default": "fit",
       "visible_if": "{{ block.settings.image_ratio == 'adapt' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "zoom_on_hover",
+      "label": "Zoom Image on hover",
+      "default": false
     },
     {
       "type": "header",

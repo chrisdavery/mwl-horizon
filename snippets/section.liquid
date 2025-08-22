@@ -72,6 +72,7 @@
         layout-panel-flex
         layout-panel-flex--{{ section.settings.content_direction }}
         section-content-wrapper
+        {% if section.settings.reverse_on_mobile == true %}mobile-section-column-reverse{% endif %}
         {% if section.settings.vertical_on_mobile %} mobile-column{% endif %}
       "
       style="

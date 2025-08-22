@@ -39,6 +39,8 @@
     "pause_video": "Pause video",
     "play_model": "Play 3D model",
     "play_video": "Play video",
+    "play": "Play",
+    "pause": "Pause",
     "loading_product_recommendations": "Loading product recommendations",
     "rating": "Rating of this product is {{ rating }} out of 5",
     "remove_item": "Remove {{ title}}",

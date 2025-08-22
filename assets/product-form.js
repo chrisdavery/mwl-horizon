@@ -62,7 +62,11 @@ export class AddToCartComponent extends Component {
     
     this.animateAddToCart();
 
-    if (!event.target.closest('.quick-add-modal')) this.#animateFlyToCart();
+    const animationEnabled = this.dataset.addToCartAnimation === 'true';
+
+    if (animationEnabled && !event.target.closest('.quick-add-modal')) {
+      this.#animateFlyToCart();
+    }
   }
 
   #preloadImage = () => {
