@@ -188,6 +188,7 @@
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
+        "reverse_on_mobile": false,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
@@ -224,6 +225,7 @@
             "label": "Gold Coast",
             "link": "shopify://metaobjects/appointments/mwl-gold-coast-boutique",
             "open_in_new_tab": false,
+            "active_state": false,
             "style_class": "button",
             "width": "fit-content",
             "custom_width": 100,
@@ -239,6 +241,7 @@
             "label": "Sydney",
             "link": "shopify://metaobjects/appointments/mwl-sydney-boutique",
             "open_in_new_tab": false,
+            "active_state": false,
             "style_class": "button",
             "width": "fit-content",
             "custom_width": 100,
@@ -254,6 +257,7 @@
             "label": "Melbourne",
             "link": "shopify://metaobjects/appointments/mwl-melbourne",
             "open_in_new_tab": false,
+            "active_state": false,
             "style_class": "button",
             "width": "fit-content",
             "custom_width": 100,
@@ -269,6 +273,7 @@
             "label": "Brisbane",
             "link": "shopify://metaobjects/appointments/mwl-brisbane",
             "open_in_new_tab": false,
+            "active_state": false,
             "style_class": "button",
             "width": "fit-content",
             "custom_width": 100,
@@ -284,6 +289,7 @@
             "label": "PERTH",
             "link": "shopify://metaobjects/appointments/mwl-perth-boutique",
             "open_in_new_tab": false,
+            "active_state": false,
             "style_class": "button",
             "width": "fit-content",
             "custom_width": 100,
@@ -299,6 +305,7 @@
             "label": "london, uk",
             "link": "shopify://metaobjects/appointments/london-uk-boutique",
             "open_in_new_tab": false,
+            "active_state": false,
             "style_class": "button",
             "width": "fit-content",
             "custom_width": 100,
@@ -314,6 +321,7 @@
             "label": "Manchester, uk",
             "link": "shopify://metaobjects/appointments/manchester-uk-boutique",
             "open_in_new_tab": false,
+            "active_state": false,
             "style_class": "button",
             "width": "fit-content",
             "custom_width": 100,
@@ -329,6 +337,7 @@
             "label": "UTRECHT, NL",
             "link": "shopify://metaobjects/appointments/utrecht-boutique",
             "open_in_new_tab": false,
+            "active_state": false,
             "style_class": "button",
             "width": "fit-content",
             "custom_width": 100,
@@ -356,6 +365,7 @@
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
+        "reverse_on_mobile": false,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
         "align_baseline": false,
@@ -379,7 +389,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 0,
-        "padding-block-end": 30
+        "padding-block-end": 52
       }
     }
   },
