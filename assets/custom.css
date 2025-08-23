@@ -69,6 +69,12 @@ a.link:after {
   font-weight: var(--font-heading--weight) !important;
 }
 
+.shopify-policy__container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  max-width: 100ch !important;
+}
+
 .menu-list__link {
   letter-spacing: 1px;
 }
