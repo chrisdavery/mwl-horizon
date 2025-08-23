@@ -63,9 +63,9 @@
         "text_FXUhfU": {
           "type": "text",
           "settings": {
-            "text": "<h2>DRESS ALTERATIONS - AUS</h2>",
+            "text": "<h2>DRESS ALTERATIONS - UK</h2>",
             "width": "fit-content",
-            "max_width": "narrow",
+            "max_width": "normal",
             "alignment": "left",
             "type_preset": "h3",
             "font": "var(--font-body--family)",
@@ -357,7 +357,7 @@
                 "accordion_row_yj78wD": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Brisbane - Alter Ego",
+                    "heading": "London - Cherry Williams",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -366,7 +366,7 @@
                     "text_PcEMT3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>07 3358 1930<br/>1/482 Brunswick St, Fortitude Valley, QLD, 4006</p>",
+                        "text": "<p>Email: <a href=\"mailto:cherry@cherrywilliamslondon.com\"><span style=\"text-decoration:underline\">cherry@cherrywilliamslondon.com</span></a></p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -396,7 +396,7 @@
                 "accordion_row_nL9mgY": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Brisbane - Kim Marcel Bridal",
+                    "heading": "London - Roselly",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -405,7 +405,7 @@
                     "text_NTz9y7": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0403 181 397<br/>kim@kimmarcel.com<br/><a href=\"https://www.kimmarcel.com/\">www.kimmarcel.com</a><br/>Wynnum, QLD</p>",
+                        "text": "<p><a href=\"https://www.rosellybridalalterations.co.uk/\"><span style=\"text-decoration:underline\">https://www.rosellybridalalterations.co.uk</span></a><br/>Phone: 07361 678736</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -435,7 +435,7 @@
                 "accordion_row_amkLhB": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Gold Coast - Debbie",
+                    "heading": "London - Fit / Alter",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -444,7 +444,7 @@
                     "text_WLU8Fi": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0414 368 107<br/>24 Avalon Parade<br/>Miami, QLD<br/>Please call for an appointment</p>",
+                        "text": "<p><a href=\"https://fitalter.co.uk/contact/\"><span style=\"text-decoration:underline\">https://fitalter.co.uk/contact/</span></a><br/>Email: info@fitalter.co.uk<br/>Phone: 07462767457</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -474,7 +474,7 @@
                 "accordion_row_N9VTyq": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Gold Coast - Manee Saephimai",
+                    "heading": "London - On Off London",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -483,7 +483,7 @@
                     "text_hWhQxC": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0435850464<br/>6 Waratah Avenue<br/>Biggera Waters, QLD<br/><a href=\"mailto:maneesaephimai1972@hotmail.com\">maneesaephimai1972@hotmail.com</a></p>",
+                        "text": "<p>Email: <a href=\"mailto:hello@oneofflondon.com\"><span style=\"text-decoration:underline\">hello@oneofflondon.com</span></a></p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -513,7 +513,7 @@
                 "accordion_row_gqd7kE": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Sunshine Coast - Lisa Kingsbury Bridal",
+                    "heading": "London - Miki Fukai Studio",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -522,7 +522,7 @@
                     "text_LzGAFQ": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>2A Beachway Parade<br/>Marcoola, QLD 4564<br/>0431881757<br/><a href=\"mailto:info@lisakingsburybridal.com.au\">info@lisakingsburybridal.com.au</a>.<a href=\"http://www.lisakingsburybridal.com.au/\">www.lisakingsburybridal.com.au</a></p>",
+                        "text": "<p>Email: info@studio62workroom.co.uk<br/>Phone: 020 7923 1711</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -552,7 +552,7 @@
                 "accordion_row_GtQ36q": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Melbourne - Nikki From Como Alterations",
+                    "heading": "Manchester - Magic Stitches",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -561,7 +561,7 @@
                     "text_e33ymt": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0420 946 875</p><p>The Como Centre, Ground Floor, South Yarra.</p><p><em>comoalterations@gmail.com</em></p>",
+                        "text": "<p><a href=\"http://www.magicstitches.co.uk/\"><span style=\"text-decoration:underline\">magicstitches.co.uk</span></a><br/>Phone: 01618327990</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -588,19 +588,19 @@
                     "text_e33ymt"
                   ]
                 },
-                "accordion_row_rpPWcN": {
+                "accordion_row_AWFF7x": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Sydney - Nadi’s Bridal Alteration Studio",
+                    "heading": "Manchester - Bronwen Bridge",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
                   "blocks": {
-                    "text_h6MCJD": {
+                    "text_cCYbaq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0433 444 318 | (02) 8018 8399</p><p>Shop 3/210 Pacific Highway, Crows Nest, 2065</p><p><em>nadi_bridalandalterations@outlook.com</em></p>",
+                        "text": "<p><a href=\"https://www.bronwenbridge.com/\"><span style=\"text-decoration:underline\">www.bronwenbridge.com</span></a><br/>Phone: 07393615430</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -624,22 +624,22 @@
                     }
                   },
                   "block_order": [
-                    "text_h6MCJD"
+                    "text_cCYbaq"
                   ]
                 },
-                "accordion_row_6PdLAV": {
+                "accordion_row_kkezkq": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Central Coast - Central Coast Alterations",
+                    "heading": "Midlands - Abigail Westrup Bridal",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
                   "blocks": {
-                    "text_ahaDaY": {
+                    "text_WtrMLE": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Central Coast Alterations</p><p>155 Scenic Hwy, Terrigal NSW 2260</p><p>0424411716</p><p><a href=\"https://centralcoastalterations.com.au/\" title=\"https://centralcoastalterations.com.au/\">https://centralcoastalterations.com.au/</a></p>",
+                        "text": "<p><a href=\"http://www.abigailwestrupbridal.com/\"><span style=\"text-decoration:underline\">www.abigailwestrupbridal.com</span></a><br/>Phone: 07393615430<br/>Locations: Bristol, Glasgow and Warwick</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -663,22 +663,22 @@
                     }
                   },
                   "block_order": [
-                    "text_ahaDaY"
+                    "text_WtrMLE"
                   ]
                 },
-                "accordion_row_Qdq3im": {
+                "accordion_row_fHBkpR": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Perth - I Do Alterations",
+                    "heading": "South England - Buttons & Bows",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
                   "blocks": {
-                    "text_YHK3gw": {
+                    "text_NCGM89": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Kathie</p><p>0417 953 978</p>",
+                        "text": "<p><a href=\"https://www.buttonbowsalteration.com/\" target=\"_blank\" title=\"https://www.buttonbowsalteration.com/\">https://www.buttonbowsalteration.com/</a><br/>Phone: 07772318700</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -702,22 +702,22 @@
                     }
                   },
                   "block_order": [
-                    "text_YHK3gw"
+                    "text_NCGM89"
                   ]
                 },
-                "accordion_row_BJWpwL": {
+                "accordion_row_wEwGGw": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Perth - Chesney's Alterations",
+                    "heading": "South England - The Bridal Atelier",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
                   "blocks": {
-                    "text_DyCAx7": {
+                    "text_fCQNE9": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Chesney</p><p>chesneysalterationsbutler@gmail.com</p><p>0450 512 112</p>",
+                        "text": "<p><a href=\"https://www.thebridalatelier.co.uk/\"><span style=\"text-decoration:underline\">https://www.thebridalatelier.co.uk/</span></a><br/>Email: thebridalatelier@yahoo.com<br/>Phone: 07775258220</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -741,22 +741,22 @@
                     }
                   },
                   "block_order": [
-                    "text_DyCAx7"
+                    "text_fCQNE9"
                   ]
                 },
-                "accordion_row_7FBdEy": {
+                "accordion_row_Pp4jgx": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Adelaide - Laura Searle",
+                    "heading": "Kent - Alexander Sharpe Bridal",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
                   "blocks": {
-                    "text_Uz8CKe": {
+                    "text_zyKRBf": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0411 487 628</p><p>26 Robert Street, Athelstone, 5076</p><p><em>laurasearle@bigpond.com</em></p><p>Please call or email for an appointment</p>",
+                        "text": "<p><a href=\"http://alexandersharpebridal.co.uk/\"><span style=\"text-decoration:underline\">alexandersharpebridal.co.uk</span></a><br/>Phone: 07854 716 348</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -780,7 +780,85 @@
                     }
                   },
                   "block_order": [
-                    "text_Uz8CKe"
+                    "text_zyKRBf"
+                  ]
+                },
+                "accordion_row_jx6kyF": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Norwich - Michel Mulcahy",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_ejHWGV": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Email: michelmulcahy@icloud.com</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_ejHWGV"
+                  ]
+                },
+                "accordion_row_KyxejY": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Yorkshire - The Bobbin Bridal Tailoring",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_wHmfAD": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><a href=\"https://thebobbinbridal.co.uk/\"><span style=\"text-decoration:underline\">https://thebobbinbridal.co.uk</span></a><br/>Email: thebobbinbridal@outlook.com<br/>Phone: +447840363650</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_wHmfAD"
                   ]
                 }
               },
@@ -791,11 +869,13 @@
                 "accordion_row_N9VTyq",
                 "accordion_row_gqd7kE",
                 "accordion_row_GtQ36q",
-                "accordion_row_rpPWcN",
-                "accordion_row_6PdLAV",
-                "accordion_row_Qdq3im",
-                "accordion_row_BJWpwL",
-                "accordion_row_7FBdEy"
+                "accordion_row_AWFF7x",
+                "accordion_row_kkezkq",
+                "accordion_row_fHBkpR",
+                "accordion_row_wEwGGw",
+                "accordion_row_Pp4jgx",
+                "accordion_row_jx6kyF",
+                "accordion_row_KyxejY"
               ]
             }
           },
@@ -843,14 +923,14 @@
         "padding-block-end": 0
       }
     },
-    "section_zmeg4j": {
+    "section_RUfykD": {
       "type": "section",
       "blocks": {
-        "text_HbHyPk": {
+        "text_7qVdE4": {
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>For our recommended seamstresses in the <strong>UK</strong>, please click <a href=\"https://madewithlovebridal.com/pages/the-next-step-uk\" title=\"https://madewithlovebridal.com/pages/the-next-step-uk\"><em>here</em></a><em> & </em>For our recommended seamstresses in the <strong>EU</strong>, please click <a href=\"https://madewithlovebridal.com/pages/the-next-step-eu\" title=\"https://madewithlovebridal.com/pages/the-next-step-eu\"><em>here.</em></a></p>",
+            "text": "<p>For our recommended seamstresses in <strong>AUS</strong>, please click <a href=\"https://madewithlovebridal.com/pages/the-next-step\" title=\"https://madewithlovebridal.com/pages/the-next-step\"><em>here</em></a><em> & f</em>or our recommended seamstresses in the <strong>EU</strong>, please click <a href=\"https://madewithlovebridal.com/pages/the-next-step-eu\" title=\"https://madewithlovebridal.com/pages/the-next-step-eu\"><em>here.</em></a></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -874,7 +954,7 @@
         }
       },
       "block_order": [
-        "text_HbHyPk"
+        "text_7qVdE4"
       ],
       "name": "t:names.rich_text_section",
       "settings": {
@@ -906,17 +986,6 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
-    },
-    "custom_liquid_V67VtJ": {
-      "type": "custom-liquid",
-      "name": "Redirect script (do not remove))",
-      "settings": {
-        "custom_liquid": "{%- if request.design_mode -%}\n  {% break %}\n{% endif %}\n<script>\n(async () => {\n  const EUROPE = new Set([\n    'AL','AD','AT','BY','BE','BA','BG','HR','CY','CZ','DK','EE','FO','FI','FR','DE','GI','GR','GG','HU','IS',\n    'IE','IM','IT','JE','LV','LI','LT','LU','MT','MD','MC','ME','MK','NL','NO','PL','PT','RO','RU','SM','RS',\n    'SK','SI','ES','SE','CH','UA','GB','VA'\n  ]);\n\n  try {\n    const url =\n      `${window.Shopify.routes.root}browsing_context_suggestions.json` +\n      `?country[enabled]=true&country[exclude]=${window.Shopify.country}` +\n      `&language[enabled]=true&language[exclude]=${window.Shopify.language}`;\n\n    const res = await fetch(url);\n    if (!res.ok) throw new Error(`HTTP ${res.status}`);\n    const data = await res.json();\n\n    const c = data?.detected_values?.country;\n    if (!c) return;\n\n    const code = (c.handle || '').toUpperCase();\n    const name = (c.name || '').trim();\n\n    // default target\n    let target = '/pages/the-next-step';\n\n    if (code === 'GB' || name === 'United Kingdom') {\n      target = '/pages/the-next-step-uk';\n    } else if (EUROPE.has(code)) {\n      target = '/pages/the-next-step-eu';\n    }\n\n    // prevent redirect loop\n    if (window.location.pathname !== target) {\n      window.location.href = target;\n    }\n  } catch (err) {\n    console.warn('[country-autoselect] Failed:', err);\n  }\n})();\n</script>",
-        "color_scheme": "",
-        "section_width": "page-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
     }
   },
   "order": [
@@ -924,7 +993,6 @@
     "hero_bNLX4M",
     "section_cgLRmU",
     "section_CakykM",
-    "section_zmeg4j",
-    "custom_liquid_V67VtJ"
+    "section_RUfykD"
   ]
 }
