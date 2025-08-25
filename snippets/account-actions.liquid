@@ -20,7 +20,10 @@
     </header>
 
     {% unless customer %}
-      <div class="account-actions__sign-ins">
+      <div
+        class="account-actions__sign-ins"
+        data-skip-subtree-update="true"
+      >
         <script
           src="{{ 'account-login-actions.js' | asset_url }}"
           type="module"
