@@ -155,7 +155,7 @@
     pointer-events: none;
 
     @media screen and (min-width: 750px) {
-      --quick-add-offset: var(--padding-md);
+      --quick-add-offset: var(--padding-3xl);
 
       display: var(--quick-add-display, flex);
     }
@@ -173,17 +173,17 @@
     display: grid;
     padding: var(--padding-xs);
     align-items: center;
-    background-color: var(--color-background);
+    background-color: rgba(var(--color-background-rgb) / 0.4);
     color: var(--color-foreground);
     border-color: transparent;
-    box-shadow: var(--shadow-popover);
+    /* box-shadow: var(--shadow-popover); */
+    box-shadow: unset;
     pointer-events: all;
     position: relative;
     overflow: hidden;
     border-radius: 100px;
 
     @media screen and (min-width: 750px) {
-      display: none;
       padding: var(--padding-xs) var(--padding-sm);
     }
 
@@ -228,13 +228,12 @@
     will-change: width, opacity, transform;
   }
 
-  @container (min-width: 99px) {
+  /* @container (min-width: 99px) {
     .quick-add[stay-visible] .add-to-cart-text,
     .quick-add__button:is(:focus, :hover) .add-to-cart-text {
       gap: var(--gap-2xs);
 
       @media screen and (min-width: 750px) {
-        /* offset button padding to show a round button in a collapsed state */
         margin-inline: 0;
         padding-inline: 0;
       }
@@ -246,7 +245,7 @@
       opacity: 1;
       transform: translateX(0);
     }
-  }
+  } */
 
   .quick-add__button.atc-added .add-to-cart-text {
     opacity: 0;
@@ -275,7 +274,7 @@
 
   .quick-add__product-form-component .shopify-product-form {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
     container-type: inline-size;
     height: 100%;

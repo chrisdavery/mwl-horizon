@@ -279,7 +279,7 @@ button.slideshow-control.button-unstyled--transparent {
   -webkit-tap-highlight-color: transparent;
 }
 
-.add-to-cart-text {
+.add-to-cart-text:not(quick-add-component .add-to-cart-text) {
   gap: var(--gap-sm) !important;
 }
 
@@ -478,6 +478,10 @@ select.disabled {
 
 summary .svg-wrapper {
   min-width: var(--icon-size-xs);
+}
+
+.quick-add-modal__content .images-loader-wrapper {
+  display: none;
 }
 
 .product-grid-view-zoom-out--details .h4,
