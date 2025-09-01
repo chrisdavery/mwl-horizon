@@ -522,6 +522,23 @@ summary .svg-wrapper {
   text-transform: var(--font-h6--case);
 }
 
+product-card:focus-within .quick-add__button,
+.card-gallery:hover .quick-add__button {
+  will-change: unset;
+  animation: unset;
+}
+
+.menu-drawer__close-button {
+  background: transparent;
+  padding: var(--padding-md);
+  box-shadow: none;
+  border: 0;
+}
+
+.header-drawer-icon--close {
+  color: var(--color-foreground);
+}
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
