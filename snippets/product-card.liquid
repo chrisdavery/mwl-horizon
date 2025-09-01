@@ -23,8 +23,9 @@
 {% liquid
   assign has_quick_add = false
   assign has_mobile_quick_add = false
+  assign has_quick_tag = product.tags | where: 'quick-add'
 
-  if product.tags contains 'quick-add'
+  if has_quick_tag.size > 0
     if settings.quick_add and product.available
       assign has_quick_add = true
     endif

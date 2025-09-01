@@ -274,10 +274,14 @@
 
   .quick-add__product-form-component .shopify-product-form {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
     container-type: inline-size;
     height: 100%;
+
+    @media (min-width: 750px) {
+      justify-content: center;
+    }
   }
 
   .quick-add-modal .product-media {
