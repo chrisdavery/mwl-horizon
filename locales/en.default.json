@@ -305,7 +305,10 @@
       "added_to_cart": "Added to bag",
       "add_to_cart_error": "Error adding to bag",
       "sold_out": "Sold out",
-      "unavailable": "Unavailable"
+      "unavailable": "Unavailable",
+      "low_in_stock": "Low in Stock",
+      "last_remaining": "Last Remaining Unit",
+      "out_of_stock_html": "Out Of Stock <a href=\"#notify\">Notify me when available</a>"
     }
   }
 }

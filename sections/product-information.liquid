@@ -84,6 +84,10 @@
         {{ details }}
       {% endif %}
     {% endfor %}
+
+    {% if settings.use_card_overlay == true and product.options.size > 0 %}
+      {% render 'product-card-overlay', product_resource: product %}
+    {% endif %}
   </div>
 
   {% content_for 'blocks' %}

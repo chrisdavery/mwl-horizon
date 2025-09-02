@@ -34,6 +34,11 @@ declare global {
         schedule: (task: () => void) => void;
       };
     };
+    quick_add: {
+      low_in_stock: string;
+      last_remaining: string;
+      out_of_stock_html: string;
+    },
     template: {
       name: string;
     };

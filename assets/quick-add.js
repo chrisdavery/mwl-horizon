@@ -1,6 +1,6 @@
 import { morph } from '@theme/morph';
 import { Component } from '@theme/component';
-import { CartUpdateEvent, ThemeEvents } from '@theme/events';
+import { CartUpdateEvent, CartAddEvent, CartErrorEvent, ThemeEvents, VariantSelectedEvent, VariantUpdateEvent  } from '@theme/events';
 import { DialogComponent, DialogCloseEvent } from '@theme/dialog';
 import { mediaQueryLarge, isMobileBreakpoint, getIOSVersion } from '@theme/utilities';
 
@@ -61,10 +61,19 @@ export class QuickAddComponent extends Component {
 
     const currentUrl = this.productPageUrl;
 
+    var stopper = 0
+
+    if (this.dataset.cardOverlay != undefined) {
+      this.#cardOverlay(event)
+      stopper = 1
+    }
+    if (stopper == 1) return;
+    
     // Check if we have cached content for this URL
     let productGrid = this.#cachedContent.get(currentUrl);
 
     if (!productGrid) {
+      this.classList.add('loading')
       // Fetch and cache the content
       const html = await this.fetchProductPage(currentUrl);
       if (html) {
@@ -81,10 +90,92 @@ export class QuickAddComponent extends Component {
       // Use a fresh clone from the cache
       const freshContent = /** @type {Element} */ (productGrid.cloneNode(true));
       await this.updateQuickAddModal(freshContent);
+      this.classList.remove('loading')
     }
 
     this.#openQuickAddModal();
   };
+
+  /**
+ * Handles quick add button click
+ * @param {Event} event - The click event
+ */
+  #cardOverlay = async (event) => {
+    const currentUrl = this.productPageUrl;
+
+    // Check if we have cached content for this URL
+    let productGrid = this.#cachedContent.get(currentUrl);
+
+    if (!productGrid) {
+      this.classList.add('loading')
+
+      // Fetch and cache the content
+      const html = await this.fetchProductPage(currentUrl);
+      if (html) {
+        const gridElement = html.querySelector('[data-product-grid-content]');
+        if (gridElement) {
+          // Cache the cloned element to avoid modifying the original
+          productGrid = /** @type {Element} */ (gridElement.cloneNode(true));
+          this.#cachedContent.set(currentUrl, productGrid);
+        }
+      }
+
+    }
+
+    if (productGrid) {
+      const freshContent = /** @type {Element} */ (productGrid.cloneNode(true));
+      await this.injectElement(freshContent);
+      this.classList.remove('loading')
+    }
+  }
+
+  /**
+ * Re-renders the variant picker.
+ * @param {Element} productGrid - The product grid element
+ */
+  async injectElement(productGrid) {
+    const modalContent = document.getElementById('quick-add-modal-content');
+
+    if (!productGrid || !modalContent) return;
+    const productDetails = productGrid.querySelector('.product-details');
+    const productFormComponent = productGrid.querySelector('product-form-component');
+    const productMedia = productGrid.querySelector('.product-information__media');
+    const CardOptions = productGrid.querySelector('quick-overlay')
+
+    if (!CardOptions || !productFormComponent || !productDetails || !productMedia) return;
+
+    CardOptions.removeAttribute('hidden')
+
+    if (isMobileBreakpoint()) {
+      productGrid.appendChild(CardOptions);
+      productGrid.appendChild(productFormComponent);
+      productDetails.remove();
+      productMedia.remove();
+      modalContent.classList.add('mobile-modal-quick')
+      morph(modalContent, productGrid);
+
+      this.#syncVariantSelection(modalContent);
+
+      this.#openQuickAddModal();
+    } else {
+      /** @type {HTMLElement | null} */
+      const btn = this.querySelector('.quick-add__button--choose');
+
+      if (btn) {
+        btn.style.opacity = '0';
+        btn.style.visibility = 'hidden';
+      }
+
+      const productCard = /** @type {import('./product-card').ProductCard | null} */ (
+        this.closest('product-card')
+      );
+
+      if (productCard && productCard.querySelector('quick-add-component')) {
+        productCard.querySelector('quick-add-component')?.insertAdjacentElement('afterend', CardOptions);
+      }
+    }
+
+  }
 
   /** @param {QuickAddDialog} dialogComponent */
   #stayVisibleUntilDialogCloses(dialogComponent) {
@@ -275,4 +366,314 @@ class QuickAddDialog extends DialogComponent {
 
 if (!customElements.get('quick-add-dialog')) {
   customElements.define('quick-add-dialog', QuickAddDialog);
+}
+
+
+/**
+ *
+ * @extends {Component}
+ */
+class QuickOverlay extends Component {
+  #abortController = new AbortController();
+  /** @type {string | undefined} */
+  #pendingRequestUrl;;
+
+  productCard = /** @type {import('./product-card').ProductCard | null} */ (
+    this.closest('product-card')
+  );
+
+  /** @type {HTMLScriptElement | null} */
+  variantData = this.querySelector('script[type="application/json"]');
+
+  /** @type {{ id: string; options: string[]; available: boolean }[]} */
+  variants = this.variantData
+    ? JSON.parse(this.variantData.textContent || '[]')
+    : [];
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.addEventListener('click', this.#handleVariantUpdate);
+    this.#buttonStatus();
+    this.addEventListener('mouseleave', this.statusClose);
+    this.addEventListener(ThemeEvents.cartUpdate, this.handleCartUpdate, { signal: this.#abortController.signal });
+    this.productCard?.addEventListener('mouseleave', this.#closeOverlay);
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+
+    this.#abortController.abort();
+    this.removeEventListener('mouseleave', this.statusClose);
+    this.productCard?.removeEventListener('mouseleave', this.#closeOverlay);
+  }
+
+  
+  /**
+   * Handles the mouseout event.
+   */
+  #closeOverlay = () => {
+    if (this.productCard) {
+      /** @type {HTMLElement | null} */
+      const btn = this.productCard.querySelector('.quick-add__button--choose');
+
+      if (!btn && this.hasAttribute('hidden')) return;
+
+      this.setAttribute('hidden','')
+
+      if (btn) {
+        btn.style.removeProperty('opacity');
+        btn.style.removeProperty('visibility');
+      }
+    }
+  }
+
+  /**
+   * Closes the dialog
+   * @param {CartUpdateEvent} event - The cart update event
+   */
+  handleCartUpdate = (event) => {
+    if (event.detail.data.didError) return;
+    this.#closeOverlay();
+  };
+
+  /**
+   * Handles quick add button click
+   * @param {MouseEvent} event - The click event
+   */
+  #handleVariantUpdate = (event) => {
+    event.preventDefault();
+
+    /** @type {HTMLElement | null} */
+    const target = event.target instanceof HTMLElement ? event.target : null;
+    if (!target) return;
+
+    /** @type {string | undefined} */
+    const optionName = target.dataset?.value;
+    /** @type {string | undefined} */
+    const productId = this.dataset?.productId;
+    if (!optionName) return;
+
+
+    if (!this.variantData?.textContent) return;
+
+
+    /** @type {{ id: string; options: string[]; available: boolean } | undefined} */
+    const variantFound = this.variants.find(
+      (v) => v.options.some((opt) => opt === optionName)
+    );
+
+    if (this.closest('.quick-add-modal') && variantFound) {
+      this.fetchUpdatedSection(this.buildRequestUrl(variantFound.id));
+      this.dispatchEvent(new VariantSelectedEvent({ id: variantFound.id ?? '' }));
+    }
+
+    if (this.closest('.quick-add-modal')) return;
+
+    if (variantFound && variantFound.available) {
+      const formData = new FormData();
+      formData.append('id', variantFound.id);
+      formData.append('quantity', '1');
+
+      // Collect section IDs
+      const cartItemsComponents = document.querySelectorAll('cart-items-component');
+      /** @type {string[]} */
+      const cartItemComponentsSectionIds = [];
+      cartItemsComponents.forEach((item) => {
+        if (item instanceof HTMLElement && item.dataset.sectionId) {
+          cartItemComponentsSectionIds.push(item.dataset.sectionId);
+        }
+      });
+
+      if (cartItemComponentsSectionIds.length > 0) {
+        formData.append('sections', cartItemComponentsSectionIds.join(','));
+      }
+
+      fetch(Theme.routes.cart_add_url, {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          if (response.status) {
+            this.dispatchEvent(
+              new CartErrorEvent(variantFound.id.toString() || '', response.message, response.description, response.errors)
+            );
+            this.dispatchEvent(
+              new CartAddEvent({}, this.id, {
+                didError: true,
+                source: 'product-form-component',
+                itemCount: Number(formData.get('quantity')) || 1,
+                productId: productId,
+              })
+            );
+          } else {
+            
+            this.#closeOverlay();
+
+            this.dispatchEvent(
+              new CartAddEvent({}, variantFound.id.toString(), {
+                source: 'product-form-component',
+                itemCount: Number(formData.get('quantity')) || 1,
+                productId: productId,
+                sections: response.sections,
+              })
+            );
+          }
+        })
+        .catch((error) => {
+          this.dispatchEvent(
+            new CartErrorEvent(
+              productId || '',
+              error?.message || '',
+              error?.description || '',
+              error?.errors || undefined
+            )
+          );
+        });
+    }
+  };
+
+  /**
+   * Fetches the updated section.
+   * @param {string} requestUrl - The request URL.
+   */
+  fetchUpdatedSection(requestUrl) {
+    // We use this to abort the previous fetch request if it's still pending.
+    this.#abortController?.abort();
+    this.#abortController = new AbortController();
+
+    fetch(requestUrl, { signal: this.#abortController.signal })
+      .then((response) => response.text())
+      .then((responseText) => {
+        this.#pendingRequestUrl = undefined;
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+
+        const textContent = html.querySelector(`variant-picker script[type="application/json"]`)?.textContent;
+        if (!textContent) return;
+          // We grab the variant object from the response and dispatch an event with it.
+          this.dispatchEvent(
+            new VariantUpdateEvent(JSON.parse(textContent), this.selectedOptionId, {
+              html,
+              productId: this.dataset.productId ?? '',
+            })
+          );
+      })
+      .catch((error) => {
+        if (error.name === 'AbortError') {
+          console.warn('Fetch aborted by user');
+        } else {
+          console.error(error);
+        }
+      });
+  }
+
+    /**
+   * Builds the request URL.
+   * @param {string} selectedOption - The selected option.
+   * @param {string | null} [source] - The source.
+   * @param {string[]} [sourceSelectedOptionsValues] - The source selected options values.
+   * @returns {string} The request URL.
+   */
+  buildRequestUrl(selectedOption) {
+    // this productUrl and pendingRequestUrl will be useful for the support of combined listing. It is used when a user changes variant quickly and those products are using separate URLs (combined listing).
+    // We create a new URL and abort the previous fetch request if it's still pending.
+    let productUrl = this.dataset.productUrl;
+    this.#pendingRequestUrl = productUrl;
+    const params = [];
+
+    params.push(`variant=${selectedOption}`);
+
+    return `${productUrl}?${params.join('&')}`;
+  }
+
+  #buttonStatus() {
+      if (!this.variantData?.textContent) return;
+
+      this.querySelectorAll('.option-button').forEach(button => {
+        const value = button.dataset.value
+        const variantFound = this.variants.find(
+          (v) => v.options.some((opt) => opt === value)
+        );
+
+        if (variantFound) {
+          if (variantFound.available == false) {
+            button.classList.add('disabled')
+          }
+
+          button.addEventListener('mouseover', () => {
+            this.statusMessage(variantFound);
+          });
+
+          if (this.closest('.option-set-item')) {
+            button.addEventListener('click', () => {
+              this.statusMessageModal(variantFound);
+            });
+          }
+        }
+      })
+  }
+  /**
+   * @param {{ id: string, options: string[], available: boolean } | undefined} variant
+   */
+  statusMessage(variant) {
+    const message = this.querySelector('.message-button-below')
+
+    if (!variant) return;
+
+    if (!variant.available) {
+        if (message) {
+          message.classList.add('active')
+          message.innerHTML = Theme.quick_add.out_of_stock_html
+        }
+    } else {
+      message?.classList.remove('active')
+    }
+  }
+
+  /**
+   * @param {{ id: string, options: string[], available: boolean } | undefined} variant
+   */
+  statusMessageModal(variant) {
+    const parent = this.closest('.option-set-item')
+
+    if (!parent) return;
+
+    const messageInline = parent.querySelector('.message-button-inline')
+
+    if (!messageInline) return;
+    
+    this.querySelectorAll('.message-button-inline').forEach(m => {
+      m.classList.remove('active')
+      m.innerHTML = ''
+    })
+
+    if (!variant) return;
+    if (!variant.available) {
+        if (messageInline) {
+          messageInline.classList.add('active')
+          messageInline.innerHTML = Theme.quick_add.out_of_stock_html
+        } 
+
+    } else {
+      messageInline?.classList.remove('active')
+    }
+  }
+
+  statusClose() {
+    const message = this.querySelector('.message-button-below')
+    if (message) {
+      message.classList.remove('active')
+      message.innerHTML = ''
+    }
+
+    const messageInline = this.querySelectorAll('.message-button-inline')
+    messageInline.forEach(m => {
+      m.classList.remove('active')
+      m.innerHTML = ''
+    })
+  }
+}
+
+if (!customElements.get('quick-overlay')) {
+  customElements.define('quick-overlay', QuickOverlay);
 }

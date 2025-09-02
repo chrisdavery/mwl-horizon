@@ -1,0 +1,30 @@
+{%- doc -%}
+  Renders a quick-add variant picker, used to display the variant picker in the quick-add modal.
+
+  @param {object} product_resource - The product object.
+{%- enddoc -%}
+
+<quick-overlay hidden data-product-id="{{ product_resource.id }}" data-product-url="{{ product_resource.url }}">
+    <div class="product-card-overlay text-center">
+        {% if settings.card_overlay_label %}
+            <span class="h6 uppercase">{{ settings.card_overlay_label }}</span>
+        {% endif %}
+
+        {% assign option_name = settings.card_overlay_option | strip %}
+        {% assign product_option = product_resource.options_by_name[option_name]   %}
+        
+        <div class="options-set flex gap-xs">
+            {% for value in product_option.values %}
+                <div class="option-set-item">
+                    <button type="button" class="option-button" data-value="{{ value }}" id="card-radio-{{ product_resource.id }}-{{ forloop.index }}">{{ value | replace: 'Size:', '' }}</button>
+                    <span class="text-center message-button message-button-inline" data-id="card-radio-{{ product_resource.id }}-{{ forloop.index }}"></span>
+                </div>
+            {% endfor %}
+        </div>
+        <span class="text-center hidden--mobile message-button message-button-below fade"></span>
+    </div>
+    
+    <script type="application/json">
+        {{ product_resource.variants | json }}
+    </script>
+</quick-overlay>

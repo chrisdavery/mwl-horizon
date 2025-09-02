@@ -190,11 +190,12 @@ class ProductFormComponent extends Component {
     const addon_items = []
 
     if (addons.length > 0) {
+      /** @type {Record<string, FormDataEntryValue>} */
         const properties = {};
         for (const [key, value] of formData.entries()) {
           const propMatch = key.match(/^properties\[(.+)]$/);
-          if (propMatch) {
-            const propKey = propMatch[1]; // e.g. 'Size', 'Bust', etc.
+          if (propMatch && propMatch[1]) {
+            const propKey = propMatch[1]; // e.g. 'Size', 'Bust'
             properties[propKey] = value;
           }
         }
