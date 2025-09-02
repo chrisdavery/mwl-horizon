@@ -604,9 +604,9 @@ class QuickOverlay extends Component {
             this.statusMessage(variantFound);
           });
 
-          if (this.closest('.option-set-item')) {
+          if (this.closest('.quick-add-modal')) {
             button.addEventListener('click', () => {
-              this.statusMessageModal(variantFound);
+              this.statusMessageModal(variantFound, button);
             });
           }
         }
@@ -632,9 +632,10 @@ class QuickOverlay extends Component {
 
   /**
    * @param {{ id: string, options: string[], available: boolean } | undefined} variant
+   * @param {HTMLButtonElement} button
    */
-  statusMessageModal(variant) {
-    const parent = this.closest('.option-set-item')
+  statusMessageModal(variant,button) {
+    const parent = button.closest('.option-set-item')
 
     if (!parent) return;
 
@@ -642,10 +643,7 @@ class QuickOverlay extends Component {
 
     if (!messageInline) return;
     
-    this.querySelectorAll('.message-button-inline').forEach(m => {
-      m.classList.remove('active')
-      m.innerHTML = ''
-    })
+    this.statusClose()
 
     if (!variant) return;
     if (!variant.available) {

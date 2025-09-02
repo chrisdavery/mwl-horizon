@@ -186,7 +186,7 @@
       flex-direction: column;
       margin-block-start: var(--margin-xl);
       margin-block-end: var(--margin-2xl);
-      gap: var(--gap-lg);
+      gap: var(--gap-xl);
     }
   }
 
@@ -421,16 +421,18 @@
       font-size: inherit;
       text-decoration: underline;
       font-weight: inherit;
-      text-underline-offset: 0px;
+      text-underline-offset: 1px;
       line-height: inherit;
+      position: relative;
+      top: -0.3px;
     }
   }
 
   .message-button.message-button-inline {
     display: block;
-    font-size: var(--font-size--2xs);
+    font-size: var(--font-size--xs);
     position: absolute;
-    bottom: -0.8rem;
+    bottom: -1rem;
   }
 
   .product-card .message-button {
