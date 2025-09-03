@@ -89,7 +89,7 @@
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "SHOP NOW",
+                "label": "SHOP NEW",
                 "link": "shopify://collections/new-releases",
                 "open_in_new_tab": false,
                 "active_state": false,
