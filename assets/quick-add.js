@@ -626,7 +626,7 @@ class QuickOverlay extends Component {
           message.innerHTML = Theme.quick_add.out_of_stock_html
         }
     } else {
-      message?.classList.remove('active')
+      message.innerHTML = Theme.quick_add.available_now
     }
   }
 
@@ -647,13 +647,10 @@ class QuickOverlay extends Component {
 
     if (!variant) return;
     if (!variant.available) {
-        if (messageInline) {
           messageInline.classList.add('active')
           messageInline.innerHTML = Theme.quick_add.out_of_stock_html
-        } 
-
     } else {
-      messageInline?.classList.remove('active')
+      messageInline.innerHTML = Theme.quick_add.available_now
     }
   }
 
