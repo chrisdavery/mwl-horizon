@@ -54,6 +54,9 @@
         --font-size: {{ settings.font_size }};
       {%- endif -%}
     {%- endif -%}
+    {% if block_settings.enable_mobile_size and block_settings.mobile_font_size != blank %}
+      --mobile-font-size:  {{ settings.mobile_font_size }};
+    {% endif %}
     {%- if settings.weight != blank -%}
       --font-weight: {{ settings.weight }};
     {% else %}
