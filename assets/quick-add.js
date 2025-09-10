@@ -152,7 +152,15 @@ export class QuickAddComponent extends Component {
       productDetails.remove();
       productMedia.remove();
       modalContent.classList.add('mobile-modal-quick')
-      morph(modalContent, productGrid);
+      // morph(modalContent, productGrid);
+      
+      why this freshcontent solved my issue? what was the problem with morph.js
+      const freshContent = document.createDocumentFragment();
+      for (const child of productGrid.children) {
+        freshContent.appendChild(child.cloneNode(true));
+      }
+      modalContent.innerHTML = '';
+      modalContent.appendChild(freshContent);
 
       this.#syncVariantSelection(modalContent);
 
@@ -397,6 +405,7 @@ class QuickOverlay extends Component {
     this.addEventListener('mouseleave', this.statusClose);
     this.addEventListener(ThemeEvents.cartUpdate, this.handleCartUpdate, { signal: this.#abortController.signal });
     this.productCard?.addEventListener('mouseleave', this.#closeOverlay);
+    // this.addEventListener(ThemeEvents.variantUpdate, this.#onVariantUpdate, { signal: this.#abortController.signal });
   }
 
   disconnectedCallback() {
@@ -436,6 +445,14 @@ class QuickOverlay extends Component {
     this.#closeOverlay();
   };
 
+
+  /**
+   * @param {VariantUpdateEvent} event
+   */
+  #onVariantUpdate = (event) => {
+    console.log(event)
+  };
+  
   /**
    * Handles quick add button click
    * @param {MouseEvent} event - The click event
@@ -463,7 +480,7 @@ class QuickOverlay extends Component {
     );
 
     if (this.closest('.quick-add-modal') && variantFound) {
-      this.fetchUpdatedSection(this.buildRequestUrl(variantFound.id));
+      this.fetchUpdatedSection(this.buildRequestUrl(variantFound.id), variantFound.id);
       this.dispatchEvent(new VariantSelectedEvent({ id: variantFound.id ?? '' }));
     }
 
@@ -536,10 +553,11 @@ class QuickOverlay extends Component {
   /**
    * Fetches the updated section.
    * @param {string} requestUrl - The request URL.
+   * @param {number} variantId - The variant id
    */
-  fetchUpdatedSection(requestUrl) {
+  fetchUpdatedSection(requestUrl, variantId) {
     // We use this to abort the previous fetch request if it's still pending.
-    this.#abortController?.abort();
+    this.#abortController?.abort(); 
     this.#abortController = new AbortController();
 
     fetch(requestUrl, { signal: this.#abortController.signal })
@@ -550,28 +568,29 @@ class QuickOverlay extends Component {
 
         const textContent = html.querySelector(`variant-picker script[type="application/json"]`)?.textContent;
         if (!textContent) return;
-          // We grab the variant object from the response and dispatch an event with it.
-          this.dispatchEvent(
-            new VariantUpdateEvent(JSON.parse(textContent), this.selectedOptionId, {
-              html,
-              productId: this.dataset.productId ?? '',
-            })
-          );
+        const target = this.closest('.shopify-section, dialog, product-card');
+
+        // We grab the variant object from the response and dispatch an event with it.
+        this.dispatchEvent(
+          new VariantUpdateEvent(JSON.parse(textContent), variantId.toString(), {
+            html,
+            productId: this.dataset.productId ?? '',
+            newProduct: { id: this.dataset.productId ?? '', url: this.dataset.productUrl ?? '' },
+          })
+        );
       })
       .catch((error) => {
-        if (error.name === 'AbortError') {
-          console.warn('Fetch aborted by user');
-        } else {
-          console.error(error);
-        }
+          if (error.name === 'AbortError') { 
+            console.warn('Fetch aborted by user'); 
+          } else {
+            console.error(error); 
+          }
       });
   }
 
     /**
    * Builds the request URL.
    * @param {string} selectedOption - The selected option.
-   * @param {string | null} [source] - The source.
-   * @param {string[]} [sourceSelectedOptionsValues] - The source selected options values.
    * @returns {string} The request URL.
    */
   buildRequestUrl(selectedOption) {
@@ -598,6 +617,7 @@ class QuickOverlay extends Component {
         if (variantFound) {
           if (variantFound.available == false) {
             button.classList.add('disabled')
+            button.classList.add('oos-button')
           }
 
           button.addEventListener('mouseover', () => {
@@ -632,7 +652,7 @@ class QuickOverlay extends Component {
 
   /**
    * @param {{ id: string, options: string[], available: boolean } | undefined} variant
-   * @param {HTMLButtonElement} button
+   * @param {Element} button
    */
   statusMessageModal(variant,button) {
     const parent = button.closest('.option-set-item')
