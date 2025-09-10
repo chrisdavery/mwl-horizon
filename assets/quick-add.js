@@ -154,7 +154,6 @@ export class QuickAddComponent extends Component {
       modalContent.classList.add('mobile-modal-quick')
       // morph(modalContent, productGrid);
       
-      why this freshcontent solved my issue? what was the problem with morph.js
       const freshContent = document.createDocumentFragment();
       for (const child of productGrid.children) {
         freshContent.appendChild(child.cloneNode(true));
