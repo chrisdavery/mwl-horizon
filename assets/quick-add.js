@@ -545,7 +545,7 @@ class QuickOverlay extends Component {
               error?.errors || undefined
             )
           );
-        });
+        })
     }
   };
 
