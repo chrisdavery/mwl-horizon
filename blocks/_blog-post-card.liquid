@@ -16,7 +16,7 @@
 {% endcapture %}
 
 {% capture description %}
-  {% content_for 'block', id: 'content', type: '_blog-post-description', article: article %}
+  {% content_for 'block', id: 'content', type: '_blog-post-description', article: article, show_read_more: true %}
 {% endcapture %}
 
 <div
