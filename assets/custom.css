@@ -699,8 +699,8 @@ product-card:focus-within .quick-add__button,
   .footer-col-1 > .mobile-column {
     --horizontal-alignment: center !important;
   }
-  .custom--mobile-font-size,
-  .custom--mobile-font-size > * {
-    font-size: var(--mobile-font-size) !important;
+  [style*="--mobile-font-size"],
+  [style*="--mobile-font-size"] > * {
+      font-size: var(--mobile-font-size) !important;
   }
 }
