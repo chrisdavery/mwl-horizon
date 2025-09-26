@@ -21,6 +21,8 @@
             "max_width": "normal",
             "alignment": "left",
             "type_preset": "custom",
+            "enable_mobile_size": false,
+            "mobile_font_size": "1rem",
             "font": "var(--font-body--family)",
             "font_size": "2rem",
             "line_height": "normal",
@@ -162,6 +164,167 @@
     "section_GJFkj8": {
       "type": "section",
       "blocks": {
+        "group_Hajikm": {
+          "type": "group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "reverse_on_mobile": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-end",
+            "gap": 10,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "tall",
+            "custom_height": 100,
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-5",
+            "background_media": "image",
+            "video_position": "cover",
+            "background_image": "shopify://shop_images/MWL_Homepage_Sleeves.png",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000030",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": ""
+          },
+          "blocks": {
+            "group_6xpmcM": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": true,
+                "overlay_color": "#00000030",
+                "overlay_style": "gradient",
+                "gradient_direction": "to top",
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
+              },
+              "blocks": {
+                "spacer_EqWyHE": {
+                  "type": "spacer",
+                  "settings": {
+                    "size": "pixel",
+                    "percent_size": 100,
+                    "pixel_size": 16,
+                    "custom_mobile_size": false,
+                    "size_mobile": "percent",
+                    "percent_size_mobile": 100,
+                    "pixel_size_mobile": 120
+                  },
+                  "blocks": {}
+                },
+                "text_XBQdNW": {
+                  "type": "text",
+                  "settings": {
+                    "text": "",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h4",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "button_BXqJNc": {
+                  "type": "button",
+                  "settings": {
+                    "label": "ISLA",
+                    "link": "shopify://products/isla",
+                    "open_in_new_tab": false,
+                    "active_state": false,
+                    "style_class": "link",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "spacer_EqWyHE",
+                "text_XBQdNW",
+                "button_BXqJNc"
+              ]
+            }
+          },
+          "block_order": [
+            "group_6xpmcM"
+          ]
+        },
         "group_XkcTzj": {
           "type": "group",
           "settings": {
@@ -272,11 +435,13 @@
                 "text_nr94Mb": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>SHOP SLEEVES</h3>",
+                    "text": "",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h4",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -297,8 +462,8 @@
                 "button_bq7icG": {
                   "type": "button",
                   "settings": {
-                    "label": "SEE MORE",
-                    "link": "shopify://collections/wedding-gloves",
+                    "label": "TATE",
+                    "link": "shopify://products/tate",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
@@ -321,7 +486,7 @@
             "group_EdeDmD"
           ]
         },
-        "group_QwPLgw": {
+        "group_zxhVNB": {
           "type": "group",
           "settings": {
             "link": "",
@@ -345,7 +510,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/MWL-book-appointment.png",
+            "background_image": "shopify://shop_images/MWL_Homepage_Sleeves.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -368,7 +533,7 @@
             "css_class": ""
           },
           "blocks": {
-            "group_xEJ3rg": {
+            "group_bf8eWm": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -415,7 +580,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "spacer_WhtnDY": {
+                "spacer_zM3Dtx": {
                   "type": "spacer",
                   "settings": {
                     "size": "pixel",
@@ -428,14 +593,16 @@
                   },
                   "blocks": {}
                 },
-                "text_TTdCkJ": {
+                "text_QtRbX6": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>VISIT A BOUTIQUE</h3>",
+                    "text": "",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h4",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -453,11 +620,11 @@
                   },
                   "blocks": {}
                 },
-                "button_Uh9kEG": {
+                "button_W8KC6B": {
                   "type": "button",
                   "settings": {
-                    "label": "SEE MORE",
-                    "link": "shopify://pages/appointments",
+                    "label": "HELENA",
+                    "link": "shopify://products/helena-veil",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
@@ -470,17 +637,17 @@
                 }
               },
               "block_order": [
-                "spacer_WhtnDY",
-                "text_TTdCkJ",
-                "button_Uh9kEG"
+                "spacer_zM3Dtx",
+                "text_QtRbX6",
+                "button_W8KC6B"
               ]
             }
           },
           "block_order": [
-            "group_xEJ3rg"
+            "group_bf8eWm"
           ]
         },
-        "group_Wtf7Rc": {
+        "group_MLjqDx": {
           "type": "group",
           "settings": {
             "link": "",
@@ -504,7 +671,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/MWL_Homepage_Veils.png",
+            "background_image": "shopify://shop_images/MWL_Homepage_Sleeves.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -527,7 +694,7 @@
             "css_class": ""
           },
           "blocks": {
-            "group_cBYNyQ": {
+            "group_papERY": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -574,7 +741,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "spacer_dczGNR": {
+                "spacer_UcVgjW": {
                   "type": "spacer",
                   "settings": {
                     "size": "pixel",
@@ -587,14 +754,16 @@
                   },
                   "blocks": {}
                 },
-                "text_qKyiFj": {
+                "text_hMQGgW": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>SHOP VEILS</h3>",
+                    "text": "",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h4",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -612,11 +781,11 @@
                   },
                   "blocks": {}
                 },
-                "button_tQDxfQ": {
+                "button_Pi7Hn7": {
                   "type": "button",
                   "settings": {
-                    "label": "SEE MORE",
-                    "link": "shopify://collections/veils",
+                    "label": "GRACIE",
+                    "link": "shopify://products/gracie",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
@@ -629,24 +798,386 @@
                 }
               },
               "block_order": [
-                "spacer_dczGNR",
-                "text_qKyiFj",
-                "button_tQDxfQ"
+                "spacer_UcVgjW",
+                "text_hMQGgW",
+                "button_Pi7Hn7"
               ]
             }
           },
           "block_order": [
-            "group_cBYNyQ"
+            "group_papERY"
           ]
         }
       },
       "block_order": [
+        "group_Hajikm",
         "group_XkcTzj",
-        "group_QwPLgw",
-        "group_Wtf7Rc"
+        "group_zxhVNB",
+        "group_MLjqDx"
       ],
       "custom_css": [
         "@media (max-width: 749px) {.spacing-style {--gap: 1px !important; --padding-block-start: 2px !important; }}"
+      ],
+      "name": "t:names.split_showcase",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "reverse_on_mobile": false,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 8,
+        "section_width": "page-width",
+        "full_width_on_mobile": true,
+        "section_height": "",
+        "section_height_custom": 85,
+        "color_scheme": "scheme-1",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 10,
+        "padding-block-end": 0
+      }
+    },
+    "section_EypKxw": {
+      "type": "section",
+      "blocks": {
+        "group_4RNhLn": {
+          "type": "group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "reverse_on_mobile": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-end",
+            "gap": 10,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "tall",
+            "custom_height": 100,
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-5",
+            "background_media": "image",
+            "video_position": "cover",
+            "background_image": "shopify://shop_images/MWL_Homepage_Sleeves.png",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000030",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": ""
+          },
+          "blocks": {
+            "group_R3REhJ": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": true,
+                "overlay_color": "#00000030",
+                "overlay_style": "gradient",
+                "gradient_direction": "to top",
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
+              },
+              "blocks": {
+                "spacer_Rjp3TV": {
+                  "type": "spacer",
+                  "settings": {
+                    "size": "pixel",
+                    "percent_size": 100,
+                    "pixel_size": 16,
+                    "custom_mobile_size": false,
+                    "size_mobile": "percent",
+                    "percent_size_mobile": 100,
+                    "pixel_size_mobile": 120
+                  },
+                  "blocks": {}
+                },
+                "text_qyhADK": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>SHOP SLEEVES</h3>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h4",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "button_9DK9ai": {
+                  "type": "button",
+                  "settings": {
+                    "label": "SEE MORE",
+                    "link": "shopify://collections/wedding-gloves",
+                    "open_in_new_tab": false,
+                    "active_state": false,
+                    "style_class": "link",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "spacer_Rjp3TV",
+                "text_qyhADK",
+                "button_9DK9ai"
+              ]
+            }
+          },
+          "block_order": [
+            "group_R3REhJ"
+          ]
+        },
+        "group_aikiRw": {
+          "type": "group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "reverse_on_mobile": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-end",
+            "gap": 10,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "tall",
+            "custom_height": 100,
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-5",
+            "background_media": "image",
+            "video_position": "cover",
+            "background_image": "shopify://shop_images/MWL_Homepage_Sleeves.png",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000030",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": ""
+          },
+          "blocks": {
+            "group_ykr3Hd": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": true,
+                "overlay_color": "#00000030",
+                "overlay_style": "gradient",
+                "gradient_direction": "to top",
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
+              },
+              "blocks": {
+                "spacer_zdMxkP": {
+                  "type": "spacer",
+                  "settings": {
+                    "size": "pixel",
+                    "percent_size": 100,
+                    "pixel_size": 16,
+                    "custom_mobile_size": false,
+                    "size_mobile": "percent",
+                    "percent_size_mobile": 100,
+                    "pixel_size_mobile": 120
+                  },
+                  "blocks": {}
+                },
+                "text_jtAYCK": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>SHOP SLEEVES</h3>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h4",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "button_U48tGV": {
+                  "type": "button",
+                  "settings": {
+                    "label": "SEE MORE",
+                    "link": "shopify://collections/wedding-gloves",
+                    "open_in_new_tab": false,
+                    "active_state": false,
+                    "style_class": "link",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "spacer_zdMxkP",
+                "text_jtAYCK",
+                "button_U48tGV"
+              ]
+            }
+          },
+          "block_order": [
+            "group_ykr3Hd"
+          ]
+        }
+      },
+      "block_order": [
+        "group_4RNhLn",
+        "group_aikiRw"
       ],
       "name": "t:names.split_showcase",
       "settings": {
@@ -738,6 +1269,8 @@
                 "max_width": "none",
                 "alignment": "center",
                 "type_preset": "custom",
+                "enable_mobile_size": false,
+                "mobile_font_size": "1rem",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "loose",
@@ -926,6 +1459,8 @@
                     "max_width": "none",
                     "alignment": "center",
                     "type_preset": "custom",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
                     "font": "var(--font-heading--family)",
                     "font_size": "0.75rem",
                     "line_height": "loose",
@@ -1187,6 +1722,8 @@
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h4",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -1346,6 +1883,8 @@
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h4",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -1548,6 +2087,8 @@
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h4",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -1707,6 +2248,8 @@
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h4",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -1937,6 +2480,8 @@
                         "max_width": "normal",
                         "alignment": "left",
                         "type_preset": "custom",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
                         "font": "var(--font-subheading--family)",
                         "font_size": "0.875rem",
                         "line_height": "normal",
@@ -2100,6 +2645,8 @@
                         "max_width": "normal",
                         "alignment": "left",
                         "type_preset": "custom",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
                         "font": "var(--font-subheading--family)",
                         "font_size": "0.875rem",
                         "line_height": "normal",
@@ -2263,6 +2810,8 @@
                         "max_width": "normal",
                         "alignment": "left",
                         "type_preset": "custom",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
                         "font": "var(--font-subheading--family)",
                         "font_size": "0.875rem",
                         "line_height": "normal",
@@ -2426,6 +2975,8 @@
                         "max_width": "normal",
                         "alignment": "left",
                         "type_preset": "custom",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
                         "font": "var(--font-subheading--family)",
                         "font_size": "0.875rem",
                         "line_height": "normal",
@@ -2575,6 +3126,8 @@
                     "max_width": "none",
                     "alignment": "left",
                     "type_preset": "rte",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -2748,6 +3301,8 @@
                 "max_width": "normal",
                 "alignment": "center",
                 "type_preset": "h3",
+                "enable_mobile_size": false,
+                "mobile_font_size": "1rem",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
@@ -2939,6 +3494,7 @@
   "order": [
     "hero_jVaWmY",
     "section_GJFkj8",
+    "section_EypKxw",
     "section_gaE3zx",
     "section_3EijBe",
     "section_xarFFi",
