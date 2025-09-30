@@ -129,7 +129,7 @@
                       --text-align: left;
                   "
               >
-                  {{ product.description | truncate: 125 }}
+                  {{ product.description | strip_html | truncate: 125 }}
               </div>
           </div>
         {% endif %}
