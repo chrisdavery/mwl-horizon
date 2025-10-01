@@ -236,7 +236,7 @@ class ProductFormComponent extends Component {
 
         // console.log(Object.fromEntries(formData.entries()))
     }
- 
+
     const cartItemsComponents = document.querySelectorAll('cart-items-component');
     let cartItemComponentsSectionIds = [];
     cartItemsComponents.forEach((item) => {

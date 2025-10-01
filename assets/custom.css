@@ -19,6 +19,21 @@
   --button-padding-block: 10px !important;
 }
 
+.menu-drawer__menu-item {
+  padding: var(--padding-lg) 0 !important;
+}
+
+.menu-drawer__navigation {
+  --menu-top-level-font-size: var(--menu-font-sm--size) !important;
+  --menu-top-level-font-line-height: var(--menu-font-sm--line-height) !important;
+}
+
+.menu-drawer__back-button {
+  font-family: var(--menu-parent-font-family);
+  font-style: var(--menu-parent-font-style);
+  font-weight: var(--menu-parent-font-weight);
+}
+
 a {
   text-decoration-thickness: .05em;
 }

@@ -9,14 +9,6 @@
 {% liquid
   assign block_settings = block.settings
   assign animation_speed = 200
-
-  if block_settings.menu_style == 'featured_products' and block_settings.product_title_case == 'uppercase'
-    assign title_case_style = ' --title-case: uppercase;'
-  elsif block_settings.menu_style == 'featured_collections' and block_settings.collection_title_case == 'uppercase'
-    assign title_case_style = ' --title-case: uppercase;'
-  elsif block_settings.menu_style == 'collection_images' and block_settings.collection_title_case == 'uppercase'
-    assign title_case_style = ' --title-case: uppercase;'
-  endif
 %}
 {% capture social_icons %}
   {% content_for 'block', type: '_block-social-icons', id: 'header-social_icons' %}
@@ -39,7 +31,6 @@
     <div
       class="header__drawer desktop:hidden"
       ref="headerDrawerContainer"
-      style="{{ title_case_style }}"
       {{ block.shopify_attributes }}
     >
       {% render 'header-drawer',
@@ -57,7 +48,7 @@
     {% if block_settings.navigation_bar == true %}
       <div
         class="menu-list menu-list--mobile{% if transparent == blank %} color-{{ block_settings.color_scheme_navigation_bar }}{% endif %}"
-        style="--menu-horizontal-gap: 15px; --mobile-nav-margin: auto;{{ title_case_style }}"
+        style="--menu-horizontal-gap: 15px; --mobile-nav-margin: auto;"
       >
         <div class="menu-list__scroll-container">
           <ul
@@ -112,7 +103,7 @@
       class="header-menu mobile:hidden"
       data-animation-delay="{{ animation_speed }}"
       {{ block.shopify_attributes }}
-      style="--submenu-animation-speed: {{ animation_speed }}ms;{{ title_case_style }}"
+      style="--submenu-animation-speed: {{ animation_speed }}ms;"
     >
       <div class="header-menu__inner">
         {%- render 'header-menu',
@@ -161,7 +152,7 @@
   .menu-list__scroll-container {
     position: relative;
     overflow-x: auto;
-    mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
     padding-block: var(--padding-2xs);
   }
 
@@ -618,7 +609,7 @@
     grid-column: span 4;
   }
 
-  .mega-menu__column--collection-image {
+  .mega-menu__column--wide-collection-image {
     grid-column: span 1;
 
     @media screen and (min-width: 990px) {
@@ -626,18 +617,8 @@
     }
   }
 
-  .mega-menu__column--collection-image .mega-menu__link {
-    text-transform: var(--title-case);
-  }
-
   .mega-menu__submenu .mega-menu__column--wide-collection-image {
     grid-column: span 1;
-  }
-
-  /* Apply title case to featured products and collections */
-  .mega-menu__content-list--products .resource-card__title,
-  .mega-menu__content-list--collections .resource-card__title {
-    text-transform: var(--title-case);
   }
 
   .mega-menu__content-list {
@@ -1020,10 +1001,6 @@
       "default": "inverse"
     },
     {
-      "type": "header",
-      "content": "t:content.typography_primary"
-    },
-    {
       "type": "select",
       "id": "type_font_primary_link",
       "label": "t:settings.font",
@@ -1049,78 +1026,6 @@
     },
     {
       "type": "select",
-      "id": "type_font_primary_size",
-      "label": "t:settings.size",
-      "options": [
-        {
-          "value": "0.625rem",
-          "label": "10px"
-        },
-        {
-          "value": "0.75rem",
-          "label": "12px"
-        },
-        {
-          "value": "0.875rem",
-          "label": "14px"
-        },
-        {
-          "value": "1rem",
-          "label": "16px"
-        },
-        {
-          "value": "1.125rem",
-          "label": "18px"
-        },
-        {
-          "value": "1.25rem",
-          "label": "20px"
-        },
-        {
-          "value": "1.5rem",
-          "label": "24px"
-        },
-        {
-          "value": "2rem",
-          "label": "32px"
-        },
-        {
-          "value": "2.5rem",
-          "label": "40px"
-        },
-        {
-          "value": "3rem",
-          "label": "48px"
-        },
-        {
-          "value": "3.5rem",
-          "label": "56px"
-        },
-        {
-          "value": "4.5rem",
-          "label": "72px"
-        },
-        {
-          "value": "5.5rem",
-          "label": "88px"
-        },
-        {
-          "value": "7.5rem",
-          "label": "120px"
-        },
-        {
-          "value": "9.5rem",
-          "label": "152px"
-        },
-        {
-          "value": "11.5rem",
-          "label": "184px"
-        }
-      ],
-      "default": "1rem"
-    },
-    {
-      "type": "select",
       "id": "type_case_primary_link",
       "label": "t:settings.text_case",
       "options": [
@@ -1137,7 +1042,7 @@
     },
     {
       "type": "header",
-      "content": "t:content.typography_secondary"
+      "content": "t:content.submenu_feature"
     },
     {
       "type": "select",

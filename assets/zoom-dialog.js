@@ -6,6 +6,7 @@ import {
   prefersReducedMotion,
   debounce,
   preloadImage,
+  isLowPowerDevice,
 } from '@theme/utilities';
 import { scrollIntoView } from '@theme/scrolling';
 import { ZoomMediaSelectedEvent } from '@theme/events';

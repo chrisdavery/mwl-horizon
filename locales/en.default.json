@@ -60,11 +60,14 @@
     "find_country": "Find country"
   },
   "actions": {
+    // Quick add button on product cards, shortened version of add to cart
     "add": "Add",
     "add_to_cart": "Add to bag",
     "ready_to_wear": "Ready To Wear",
     "made_to_order": "Made To Order",
+    // Success message shown after adding item to cart
     "added": "Added",
+    // Button to apply discount code to cart
     "apply": "Apply",
     "back": "Back",
     "choose": "Choose",

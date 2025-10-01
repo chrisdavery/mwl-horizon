@@ -22,7 +22,7 @@
 
     <a
       class="button cart-items__empty-button"
-      href="{{ routes.all_products_collection_url }}"
+      href="{{ settings.empty_cart_button_link | default: routes.all_products_collection_url }}"
     >
       {{ 'actions.continue_shopping' | t }}
     </a>
@@ -395,6 +395,7 @@
   } 
 
   html:active-view-transition-type(page-navigation) .cart-items__table-row {
+    /* stylelint-disable-next-line declaration-no-important */
     view-transition-name: none !important;
   }
 
@@ -694,6 +695,7 @@
   shopify-accelerated-checkout-cart {
     --shopify-accelerated-checkout-inline-alignment: center;
     --shopify-accelerated-checkout-button-border-radius: var(--style-border-radius-buttons-primary);
+    --shopify-accelerated-checkout-row-gap: var(--checkout-button-gap, 10px);
   }
 
   .cart-note {
