@@ -43,7 +43,6 @@
             "color_scheme": "",
             "menu_font_style": "regular",
             "type_font_primary_link": "subheading",
-            "type_font_primary_size": "0.75rem",
             "type_case_primary_link": "uppercase",
             "type_font_secondary_link": "subheading",
             "type_case_secondary_link": "uppercase",
@@ -61,11 +60,11 @@
               "name": "Megamenu Card Item",
               "settings": {
                 "assigned_to": "Shop",
-                "image": "shopify://shop_images/MWL_Shop_Francesca.png",
+                "image": "shopify://shop_images/MWL-GATES-FIRST-LIGHT.png",
                 "aspect_ratio": "1 / 1",
                 "overlay": false,
-                "title": "Shop Francesca",
-                "link": "shopify://products/francesca-ready-to-wear"
+                "title": "Explore New Releases",
+                "link": "shopify://collections/new-releases"
               },
               "blocks": {}
             },
