@@ -187,7 +187,7 @@
             },
             "megamenu_card_item_fpU9XU": {
               "type": "_megamenu-card-item",
-              "name": "Cleaning Service - Image 1 ",
+              "name": "Cleaning Nav - Image 1 ",
               "settings": {
                 "assigned_to": "Cleaning Service",
                 "image": "shopify://shop_images/MWL_Our_Story.png",
@@ -200,7 +200,7 @@
             },
             "megamenu_card_item_97Hybm": {
               "type": "_megamenu-card-item",
-              "name": "Megamenu Card Item",
+              "name": "Cleaning Nav - Image 2 ",
               "settings": {
                 "assigned_to": "Cleaning Service",
                 "image": "shopify://shop_images/New_About_Us.png",
@@ -213,7 +213,7 @@
             },
             "megamenu_card_item_Vn7rLy": {
               "type": "_megamenu-card-item",
-              "name": "Megamenu Card Item",
+              "name": "Our World Nav - Image 1 ",
               "settings": {
                 "assigned_to": "Our World",
                 "image": "shopify://shop_images/meet_our_designer.png",
@@ -226,7 +226,7 @@
             },
             "megamenu_card_item_aKHbfH": {
               "type": "_megamenu-card-item",
-              "name": "Megamenu Card Item",
+              "name": "Our World Nav - Image 2 ",
               "settings": {
                 "assigned_to": "Our World",
                 "image": "shopify://shop_images/New_About_Us.png",
