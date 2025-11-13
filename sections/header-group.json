@@ -73,11 +73,11 @@
               "name": "Shop Nav - Image 2",
               "settings": {
                 "assigned_to": "Shop",
-                "image": "shopify://shop_images/isla-made-with-love-bridal.png",
+                "image": "shopify://shop_images/MWL-SEPARATES-HOME.png",
                 "aspect_ratio": "1 / 1",
                 "overlay": false,
-                "title": "Shop Isla",
-                "link": "shopify://products/isla"
+                "title": "Explore Separates",
+                "link": "shopify://collections/wedding-seperates"
               },
               "blocks": {}
             },
