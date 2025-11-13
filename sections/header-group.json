@@ -57,7 +57,7 @@
           "blocks": {
             "megamenu_card_item_hBn799": {
               "type": "_megamenu-card-item",
-              "name": "Megamenu Card Item",
+              "name": "Shop Nav - Image 1",
               "settings": {
                 "assigned_to": "Shop",
                 "image": "shopify://shop_images/MWL-GATES-FIRST-LIGHT.png",
@@ -70,7 +70,7 @@
             },
             "megamenu_card_item_9PWxUg": {
               "type": "_megamenu-card-item",
-              "name": "Megamenu Card Item",
+              "name": "Shop Nav - Image 2",
               "settings": {
                 "assigned_to": "Shop",
                 "image": "shopify://shop_images/isla-made-with-love-bridal.png",
