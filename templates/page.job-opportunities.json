@@ -21,6 +21,8 @@
             "max_width": "normal",
             "alignment": "left",
             "type_preset": "h2",
+            "enable_mobile_size": false,
+            "mobile_font_size": "1rem",
             "font": "var(--font-primary--family)",
             "font_size": "",
             "line_height": "normal",
@@ -103,6 +105,8 @@
             "max_width": "normal",
             "alignment": "center",
             "type_preset": "h3",
+            "enable_mobile_size": false,
+            "mobile_font_size": "1rem",
             "font": "var(--font-primary--family)",
             "font_size": "",
             "line_height": "normal",
@@ -129,6 +133,8 @@
             "max_width": "normal",
             "alignment": "left",
             "type_preset": "rte",
+            "enable_mobile_size": false,
+            "mobile_font_size": "1rem",
             "font": "var(--font-primary--family)",
             "font_size": "",
             "line_height": "normal",
@@ -327,6 +333,8 @@
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "h3",
+                "enable_mobile_size": false,
+                "mobile_font_size": "1rem",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
@@ -365,6 +373,7 @@
               "blocks": {
                 "accordion_row_yj78wD": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "Content Director | Gold Coast, Australia",
                     "open_by_default": false,
@@ -380,6 +389,8 @@
                         "max_width": "normal",
                         "alignment": "left",
                         "type_preset": "rte",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -404,6 +415,7 @@
                 },
                 "accordion_row_nL9mgY": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "Graphic Designer | Gold Coast, Australia",
                     "open_by_default": false,
@@ -419,6 +431,8 @@
                         "max_width": "normal",
                         "alignment": "left",
                         "type_preset": "rte",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -443,6 +457,7 @@
                 },
                 "accordion_row_amkLhB": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "Bridal Boutique Stylist | Melbourne, Australia",
                     "open_by_default": false,
@@ -458,6 +473,8 @@
                         "max_width": "normal",
                         "alignment": "left",
                         "type_preset": "rte",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -492,11 +509,13 @@
                     "text_hWhQxC": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We are always on the look out for talented individuals to join our team across our nationwide boutiques, please reach out to laura@madewithlovebridal.com today to express your interest.</p>",
+                        "text": "<p>We are always on the look out for talented individuals to join our team across our nationwide boutiques, please reach out to laura@mwlbride.com today to express your interest.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
                         "type_preset": "rte",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
