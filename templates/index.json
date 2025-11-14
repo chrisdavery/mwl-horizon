@@ -3113,7 +3113,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h2>Hear From Our #MWLGIRLS</h2>",
+                "text": "<h2>Hear From Our MWL Brides</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -3153,7 +3153,7 @@
         "testimonial_card_77T3kx"
       ],
       "custom_css": [],
-      "name": "Testimonials",
+      "name": "MWL Reviews ",
       "settings": {
         "alignment": "center",
         "layout_type": "carousel",
