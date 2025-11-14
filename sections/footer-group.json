@@ -685,84 +685,84 @@
                   "block_order": [
                     "menu_KENgqN"
                   ]
+                },
+                "group_brtknf": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "reverse_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "flex-start",
+                    "gap": 12,
+                    "width": "custom",
+                    "custom_width": 30,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "placeholder": "",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "custom_mobile_padding": false,
+                    "mobile-padding-block-start": 0,
+                    "mobile-padding-block-end": 0,
+                    "mobile-padding-inline-start": 0,
+                    "mobile-padding-inline-end": 0,
+                    "css_class": "footer-col-1 footer-col"
+                  },
+                  "blocks": {
+                    "custom_liquid_6eNpUt": {
+                      "type": "custom-liquid",
+                      "name": "t:names.custom_liquid",
+                      "settings": {
+                        "custom_liquid": "<style>\n.klv-footer-wrap:after {\n    content: \"\";\n    display: block;\n    clear: both;\n}\n</style>\n<div class=\"klv-footer-wrap\">\n    <div class=\"klaviyo-form-RCTwBX\"></div>\n</div>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "custom_liquid_6eNpUt"
+                  ]
                 }
               },
               "block_order": [
                 "group_wK8fae",
                 "group_yjUjUV",
                 "group_aUwjF3",
-                "group_83dRwr"
+                "group_83dRwr",
+                "group_brtknf"
               ]
             }
           },
           "block_order": [
             "group_DYWBqi"
           ]
-        },
-        "group_Hxyymt": {
-          "type": "group",
-          "name": "t:names.group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "reverse_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 12,
-            "width": "custom",
-            "custom_width": 30,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
-            "css_class": "footer-col-1 footer-col"
-          },
-          "blocks": {
-            "custom_liquid_6eNpUt": {
-              "type": "custom-liquid",
-              "name": "t:names.custom_liquid",
-              "settings": {
-                "custom_liquid": "<style>\n.klv-footer-wrap:after {\n    content: \"\";\n    display: block;\n    clear: both;\n}\n</style>\n<div class=\"klv-footer-wrap\">\n    <div class=\"klaviyo-form-RCTwBX\"></div>\n</div>"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "custom_liquid_6eNpUt"
-          ]
         }
       },
       "block_order": [
-        "group_9p8C6K",
-        "group_Hxyymt"
+        "group_9p8C6K"
       ],
       "custom_css": [
         "@media (max-width: 1200px) and (min-width: 750px) {.footer-col-1 {--size-style-width: 36% !important; } .footer-col-2 {--size-style-width: 69% !important; }}",
