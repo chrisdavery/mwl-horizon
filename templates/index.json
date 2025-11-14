@@ -2115,7 +2115,7 @@
       "blocks": {
         "multicolumn_card_4hQrbY": {
           "type": "_multicolumn-card",
-          "name": "Multicolumn Item",
+          "name": "Box 1",
           "settings": {},
           "blocks": {
             "group_QCkJi6": {
@@ -2280,7 +2280,7 @@
         },
         "multicolumn_card_cnmjM7": {
           "type": "_multicolumn-card",
-          "name": "Multicolumn Item",
+          "name": "Box 2",
           "settings": {},
           "blocks": {
             "group_yKmRpa": {
@@ -2445,7 +2445,7 @@
         },
         "multicolumn_card_wPaVdy": {
           "type": "_multicolumn-card",
-          "name": "Multicolumn Item",
+          "name": "Box 3",
           "settings": {},
           "blocks": {
             "group_NwBapp": {
@@ -2610,7 +2610,7 @@
         },
         "multicolumn_card_kWLpKH": {
           "type": "_multicolumn-card",
-          "name": "Multicolumn Item",
+          "name": "Box 4 ",
           "settings": {},
           "blocks": {
             "group_E9dci9": {
