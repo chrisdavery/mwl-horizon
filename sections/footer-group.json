@@ -394,9 +394,9 @@
                 "css_class": "footer-col-2 footer-col"
               },
               "blocks": {
-                "group_wK8fae": {
+                "group_aUwjF3": {
                   "type": "group",
-                  "name": "Find Us",
+                  "name": "Customer Care ",
                   "settings": {
                     "link": "",
                     "open_in_new_tab": false,
@@ -441,12 +441,12 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "menu_DCDqkg": {
+                    "menu_UkdLpT": {
                       "type": "menu",
                       "name": "t:names.menu",
                       "settings": {
-                        "menu": "find-us",
-                        "heading": "FIND US",
+                        "menu": "my-account",
+                        "heading": "CUSTOMER CARE",
                         "menu_spacing": 12,
                         "show_as_accordion": true,
                         "accordion_icon": "plus",
@@ -464,7 +464,7 @@
                     }
                   },
                   "block_order": [
-                    "menu_DCDqkg"
+                    "menu_UkdLpT"
                   ]
                 },
                 "group_yjUjUV": {
@@ -540,9 +540,9 @@
                     "menu_yXi4zQ"
                   ]
                 },
-                "group_aUwjF3": {
+                "group_wK8fae": {
                   "type": "group",
-                  "name": "Customer Care ",
+                  "name": "Find Us",
                   "settings": {
                     "link": "",
                     "open_in_new_tab": false,
@@ -587,12 +587,12 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "menu_UkdLpT": {
+                    "menu_DCDqkg": {
                       "type": "menu",
                       "name": "t:names.menu",
                       "settings": {
-                        "menu": "my-account",
-                        "heading": "CUSTOMER CARE",
+                        "menu": "find-us",
+                        "heading": "FIND US",
                         "menu_spacing": 12,
                         "show_as_accordion": true,
                         "accordion_icon": "plus",
@@ -610,7 +610,7 @@
                     }
                   },
                   "block_order": [
-                    "menu_UkdLpT"
+                    "menu_DCDqkg"
                   ]
                 },
                 "group_83dRwr": {
@@ -688,9 +688,9 @@
                 }
               },
               "block_order": [
-                "group_wK8fae",
-                "group_yjUjUV",
                 "group_aUwjF3",
+                "group_yjUjUV",
+                "group_wK8fae",
                 "group_83dRwr"
               ]
             }
@@ -702,6 +702,7 @@
         "group_R4VnV6": {
           "type": "group",
           "name": "Klayvio Form",
+          "disabled": true,
           "settings": {
             "link": "",
             "open_in_new_tab": false,
