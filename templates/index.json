@@ -2949,6 +2949,60 @@
         "padding-block-end": 58
       }
     },
+    "blocks_UUkrkV": {
+      "type": "_blocks",
+      "blocks": {
+        "instafeed_app_block_9ejnbN": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 35,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": "<style>\n#insta-feed h2 {\n    font-family: var(--font-h4--family);\n    font-style: var(--font-h4--style);\n    font-weight: var(--font-h4--weight);\n    font-size: var(--font-h4--size);\n    line-height: var(--font-h4--line-height);\n    letter-spacing: var(--font-h4--letter-spacing);\n    text-transform: unset;\n}\n</style>"
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_9ejnbN"
+      ],
+      "name": "IG WIDGET",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "full-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-1",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 30,
+        "padding-block-end": 0
+      }
+    },
     "testimonials_VrNktw": {
       "type": "testimonials",
       "blocks": {
@@ -3117,60 +3171,6 @@
         "padding-block-end": 58
       }
     },
-    "blocks_UUkrkV": {
-      "type": "_blocks",
-      "blocks": {
-        "instafeed_app_block_9ejnbN": {
-          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "title": "",
-            "title_color": "",
-            "title_size_v2": 0,
-            "alignment": "center",
-            "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 0,
-            "instafeed_margin_sides": 0,
-            "show_instagram_link": false,
-            "link_alignment": "left",
-            "link_color": "#000000",
-            "background_color": "",
-            "feed_id": "",
-            "html_area": "<style>\n#insta-feed h2 {\n    font-family: var(--font-h4--family);\n    font-style: var(--font-h4--style);\n    font-weight: var(--font-h4--weight);\n    font-size: var(--font-h4--size);\n    line-height: var(--font-h4--line-height);\n    letter-spacing: var(--font-h4--letter-spacing);\n    text-transform: unset;\n}\n</style>"
-          }
-        }
-      },
-      "block_order": [
-        "instafeed_app_block_9ejnbN"
-      ],
-      "name": "IG WIDGET",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "full-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-1",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 30,
-        "padding-block-end": 0
-      }
-    },
     "17567008025bcc6662": {
       "type": "_blocks",
       "blocks": {
@@ -3264,8 +3264,8 @@
     "section_i3mkk9",
     "divider_c9TGcg",
     "mwl_carousel_EaJQGc",
-    "testimonials_VrNktw",
     "blocks_UUkrkV",
+    "testimonials_VrNktw",
     "17567008025bcc6662"
   ]
 }
