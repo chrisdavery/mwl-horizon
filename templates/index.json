@@ -3240,8 +3240,8 @@
           "name": "Review 1",
           "settings": {
             "star_rating": 5,
-            "testimonial_content": "<p>Had the most amazing experience at Made With Love. The dresses are stunning and I knew I’d found the one for me instantly. Highly recommend for any future brides.</p>",
-            "customer_name": "KYLIE"
+            "testimonial_content": "<p>I had my very first bridal fitting with made with love and it was such a lovely experience! Ella made me feel so comfortable and was so attentive. Her kindness made the whole appointment so special to me and my guests that came along. The gowns are absolutely stunning and definitely felt like a princess on the day. I can’t recommend them highly enough.</p>",
+            "customer_name": "ABBEY"
           },
           "blocks": {}
         },
@@ -3270,7 +3270,7 @@
           "name": "Review 4",
           "settings": {
             "star_rating": 5,
-            "testimonial_content": "<p>It’s such a great experience working with the mwl team, and everyone has been so lovely to deal with!</p>",
+            "testimonial_content": "<p>It’s such a great experience working with the MWL team, and everyone has been so lovely to deal with!</p>",
             "customer_name": "SHIRALEE"
           },
           "blocks": {}
