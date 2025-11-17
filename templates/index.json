@@ -3161,9 +3161,9 @@
       "name": "Blogs",
       "settings": {
         "alignment": "left",
-        "layout_type": "grid",
+        "layout_type": "carousel",
         "carousel_on_mobile": true,
-        "columns": 4,
+        "columns": 3,
         "mobile_columns": "2",
         "mobile_card_size": "100cqw",
         "columns_gap": 8,
