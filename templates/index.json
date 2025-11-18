@@ -1994,7 +1994,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/Visit_A_MWL_Boutique.png",
+            "background_image": "shopify://shop_images/TANNER-BODICE-MWL-CAMPAIGN-1.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -2080,7 +2080,7 @@
                 "text_YiMW8h": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>VISIT AN MWL boutique</h3>",
+                    "text": "<h3>BOOK APPOINTMENT</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2107,7 +2107,7 @@
                 "button_nJUM8t": {
                   "type": "button",
                   "settings": {
-                    "label": "DISCOVER MORE",
+                    "label": "DISCOVER",
                     "link": "shopify://pages/appointments",
                     "open_in_new_tab": false,
                     "active_state": false,
@@ -2241,7 +2241,7 @@
                 "text_VADCX7": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Read our journal</h3>",
+                    "text": "<h3>FIND A RETAILER</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2268,7 +2268,7 @@
                 "button_m8jbGY": {
                   "type": "button",
                   "settings": {
-                    "label": "DISCOVER MORE",
+                    "label": "EXPLORE",
                     "link": "shopify://blogs/all",
                     "open_in_new_tab": false,
                     "active_state": false,
@@ -2402,7 +2402,7 @@
                 "text_fGyNhP": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Read our journal</h3>",
+                    "text": "<h3>OUR PROCESS</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2429,7 +2429,7 @@
                 "button_zfBBtt": {
                   "type": "button",
                   "settings": {
-                    "label": "DISCOVER MORE",
+                    "label": "READ",
                     "link": "shopify://blogs/all",
                     "open_in_new_tab": false,
                     "active_state": false,
@@ -3208,7 +3208,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>FURTHER READING</h3>",
+                "text": "<h3>EXPLORE MWL JOURNAL</h3>",
                 "width": "fit-content",
                 "max_width": "none",
                 "alignment": "left",
