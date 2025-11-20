@@ -9,40 +9,6 @@
  */
 {
   "sections": {
-    "hero_YWjNNm": {
-      "type": "hero",
-      "name": "First Light Hero Banner",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/MWL-Home-FirstLight.jpg",
-        "mobile_image_1": "shopify://shop_images/MWL-Home-FirstLight-Mobile.png",
-        "video_1": "shopify://files/videos/Story 2 1080x1920 (1).mp4",
-        "mobile_video_1": "shopify://files/videos/Story 2 1080x1080 (1).mp4",
-        "media_type_2": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-end",
-        "align_baseline": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 16,
-        "section_width": "full-width",
-        "section_height": "adapt_media_height",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-5",
-        "toggle_overlay": false,
-        "overlay_color": "#0000006b",
-        "overlay_style": "solid",
-        "gradient_direction": "to bottom",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 100,
-        "padding-block-end": 100
-      }
-    },
     "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
@@ -166,8 +132,7 @@
         "text_YLPk4p",
         "group_6W94iX"
       ],
-      "disabled": true,
-      "name": "Frankie & Francesca - Video ",
+      "name": "Hero Banner",
       "settings": {
         "media_type_1": "video",
         "image_1": "shopify://shop_images/HOMEPAGE_2000X928_03ebfb99-f6b4-499e-9464-695db798e8cc.png",
@@ -187,6 +152,294 @@
         "gap": 16,
         "section_width": "page-width",
         "section_height": "full-screen",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": false,
+        "overlay_color": "#0000006b",
+        "overlay_style": "solid",
+        "gradient_direction": "to bottom",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 100,
+        "padding-block-end": 100
+      }
+    },
+    "ss_hero_14_g9ktR8": {
+      "type": "ss-hero-14",
+      "blocks": {
+        "heading_ytPERt": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Heading</h1>",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_size": 48,
+            "heading_size_mobile": 32,
+            "heading_height": 130,
+            "heading_mt": 0,
+            "heading_mt_mobile": 0,
+            "heading_color": "#FFFFFF"
+          }
+        },
+        "text_JBxXME": {
+          "type": "text",
+          "settings": {
+            "text": "<p>And optional subtext</p>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 20,
+            "text_size_mobile": 20,
+            "text_height": 150,
+            "text_mt": 16,
+            "text_mt_mobile": 8,
+            "text_color": "#FFFFFF"
+          }
+        },
+        "button_mNGyVq": {
+          "type": "button",
+          "settings": {
+            "button": "SHOP NOW",
+            "button_url": "",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 14,
+            "button_size_mobile": 14,
+            "button_height": 100,
+            "button_mt": 24,
+            "button_mt_mobile": 16,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 32,
+            "button_padding_horizontal_mobile": 32,
+            "button_radius": 100,
+            "button_border_thickness": 0,
+            "button_style": "non_outline",
+            "button_color": "#FFFFFF",
+            "button_hover_color": "#FFFFFF",
+            "button_bg_color": "#000000",
+            "button_bg_hover_color": "#555555",
+            "button_border_color": "#B5B5B5",
+            "button_border_hover_color": "#555555"
+          }
+        },
+        "product_NAnKUG": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "product_width": 260,
+            "product_width_mobile": 170,
+            "product_vertical_align": "end",
+            "product_vertical_align_mobile": "end",
+            "product_horizontal_align": "end",
+            "product_horizontal_align_mobile": "center",
+            "product_image_radius": 0,
+            "product_image_ratio": "square",
+            "product_image_ratio_mobile": "square",
+            "use_title_custom": false,
+            "title": "",
+            "title_custom": false,
+            "title_font": "josefin_sans_n4",
+            "title_size": 14,
+            "title_size_mobile": 14,
+            "title_height": 130,
+            "title_mt": 12,
+            "title_mt_mobile": 12,
+            "title_align": "center",
+            "title_align_mobile": "center",
+            "title_color": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ytPERt",
+        "text_JBxXME",
+        "button_mNGyVq",
+        "product_NAnKUG"
+      ],
+      "name": "SS - Hero #14",
+      "settings": {
+        "hero_height": "fixed_height",
+        "hero_fixed_height": 600,
+        "content_use_fixed_height": true,
+        "content_fixed_height": 400,
+        "body_gap": 0,
+        "body_gap_mobile": 0,
+        "content_vertical_align": "end",
+        "content_vertical_align_mobile": "end",
+        "content_horizontal_align": "start",
+        "content_horizontal_align_mobile": "start",
+        "content_padding_vertical": 56,
+        "content_padding_vertical_mobile": 56,
+        "content_padding_horizontal": 56,
+        "content_padding_horizontal_mobile": 28,
+        "content_overlay": 0.1,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_ratio_mobile": "square",
+        "video_bottom_mobile": true,
+        "video_hide_mobile": false,
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0
+      }
+    },
+    "section_gaE3zx": {
+      "type": "section",
+      "blocks": {
+        "group_czLF37": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "reverse_on_mobile": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 0,
+            "enable_mobile_gap": false,
+            "mobile_gap": 12,
+            "width": "fill",
+            "custom_width": 55,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": ""
+          },
+          "blocks": {
+            "text_U9tBYq": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Immerse yourself into the world of MWL. Proudly Australian-designed, we believe every bride deserves a dress that is as unique as her, which is why we offer an extensive size range and bespoke customisation options. Since 2012, we have been devoted to creating effortlessly elegant designs that make every moment - from your first fitting to your walk down the aisle - truly unforgettable.</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "center",
+                "type_preset": "custom",
+                "enable_mobile_size": false,
+                "mobile_font_size": "1rem",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "loose",
+                "letter_spacing": "loose",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_U9tBYq"
+          ]
+        }
+      },
+      "block_order": [
+        "group_czLF37"
+      ],
+      "custom_css": [
+        ".size-style {/* max-width: 840px !important; */ max-width: 850px !important;}"
+      ],
+      "name": "About MWL Text",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "reverse_on_mobile": false,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "enable_mobile_gap": false,
+        "mobile_gap": 12,
+        "section_width": "page-width",
+        "full_width_on_mobile": false,
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-1",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "hero_YWjNNm": {
+      "type": "hero",
+      "name": "Hero Banner",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/MWL-Home-FirstLight.jpg",
+        "video_1": "shopify://files/videos/Story 2 1080x1920 (1).mp4",
+        "mobile_video_1": "shopify://files/videos/Story 2 1080x1080 (1).mp4",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "flex-end",
+        "align_baseline": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 16,
+        "section_width": "full-width",
+        "section_height": "adapt_media_height",
         "section_height_custom": 50,
         "color_scheme": "scheme-5",
         "toggle_overlay": false,
@@ -871,6 +1124,9 @@
         "group_MLjqDx"
       ],
       "disabled": true,
+      "custom_css": [
+        "@media (max-width: 749px) {.spacing-style {--gap: 1px !important; --padding-block-start: 2px !important; }}"
+      ],
       "name": "Product Showcase",
       "settings": {
         "content_direction": "row",
@@ -902,136 +1158,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 20,
         "padding-block-end": 0
-      }
-    },
-    "ss_hero_14_HkNQJx": {
-      "type": "ss-hero-14",
-      "blocks": {
-        "heading_tFceAk": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h1>Heading</h1>",
-            "heading_custom": false,
-            "heading_font": "josefin_sans_n4",
-            "heading_size": 48,
-            "heading_size_mobile": 32,
-            "heading_height": 130,
-            "heading_mt": 0,
-            "heading_mt_mobile": 0,
-            "heading_color": "#FFFFFF"
-          }
-        },
-        "text_DDdryW": {
-          "type": "text",
-          "settings": {
-            "text": "<p>And optional subtext</p>",
-            "text_custom": false,
-            "text_font": "josefin_sans_n4",
-            "text_size": 20,
-            "text_size_mobile": 20,
-            "text_height": 150,
-            "text_mt": 16,
-            "text_mt_mobile": 8,
-            "text_color": "#FFFFFF"
-          }
-        },
-        "button_PqTACX": {
-          "type": "button",
-          "settings": {
-            "button": "SHOP NOW",
-            "button_url": "",
-            "button_custom": false,
-            "button_font": "josefin_sans_n4",
-            "button_size": 14,
-            "button_size_mobile": 14,
-            "button_height": 100,
-            "button_mt": 24,
-            "button_mt_mobile": 16,
-            "button_padding_vertical": 16,
-            "button_padding_vertical_mobile": 16,
-            "button_padding_horizontal": 32,
-            "button_padding_horizontal_mobile": 32,
-            "button_radius": 100,
-            "button_border_thickness": 0,
-            "button_style": "non_outline",
-            "button_color": "#FFFFFF",
-            "button_hover_color": "#FFFFFF",
-            "button_bg_color": "#000000",
-            "button_bg_hover_color": "#555555",
-            "button_border_color": "#B5B5B5",
-            "button_border_hover_color": "#555555"
-          }
-        },
-        "product_7z4KMX": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "product_width": 260,
-            "product_width_mobile": 170,
-            "product_vertical_align": "end",
-            "product_vertical_align_mobile": "end",
-            "product_horizontal_align": "end",
-            "product_horizontal_align_mobile": "center",
-            "product_image_radius": 0,
-            "product_image_ratio": "square",
-            "product_image_ratio_mobile": "square",
-            "use_title_custom": false,
-            "title": "",
-            "title_custom": false,
-            "title_font": "josefin_sans_n4",
-            "title_size": 14,
-            "title_size_mobile": 14,
-            "title_height": 130,
-            "title_mt": 12,
-            "title_mt_mobile": 12,
-            "title_align": "center",
-            "title_align_mobile": "center",
-            "title_color": "#FFFFFF"
-          }
-        }
-      },
-      "block_order": [
-        "heading_tFceAk",
-        "text_DDdryW",
-        "button_PqTACX",
-        "product_7z4KMX"
-      ],
-      "name": "SS - Hero #14",
-      "settings": {
-        "hero_height": "adapt_first",
-        "hero_fixed_height": 600,
-        "content_use_fixed_height": true,
-        "content_fixed_height": 540,
-        "body_gap": 0,
-        "body_gap_mobile": 0,
-        "content_vertical_align": "end",
-        "content_vertical_align_mobile": "end",
-        "content_horizontal_align": "start",
-        "content_horizontal_align_mobile": "start",
-        "content_padding_vertical": 56,
-        "content_padding_vertical_mobile": 56,
-        "content_padding_horizontal": 56,
-        "content_padding_horizontal_mobile": 28,
-        "content_overlay": 0.1,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_ratio_mobile": "square",
-        "video_bottom_mobile": true,
-        "video_hide_mobile": false,
-        "background_color": "#FFFFFF",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_horizontal": 0,
-        "padding_horizontal_mobile": 0,
-        "full_width": true,
-        "content_width": 120,
-        "border_thickness": 0,
-        "section_radius": 0
       }
     },
     "section_EypKxw": {
@@ -1148,14 +1274,14 @@
                   },
                   "blocks": {}
                 },
-                "text_qyhADK": {
+                "text_agn89w": {
                   "type": "text",
                   "settings": {
                     "text": "<h3>DRESSES</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h4",
+                    "type_preset": "h3",
                     "enable_mobile_size": false,
                     "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
@@ -1193,7 +1319,7 @@
               },
               "block_order": [
                 "spacer_Rjp3TV",
-                "text_qyhADK",
+                "text_agn89w",
                 "button_9DK9ai"
               ]
             }
@@ -1320,7 +1446,7 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h4",
+                    "type_preset": "h3",
                     "enable_mobile_size": false,
                     "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
@@ -1372,7 +1498,7 @@
         "group_4RNhLn",
         "group_aikiRw"
       ],
-      "name": "2 product tiles",
+      "name": "Collection Showcase",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
@@ -1526,7 +1652,7 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h4",
+                    "type_preset": "h3",
                     "enable_mobile_size": false,
                     "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
@@ -1599,7 +1725,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/MWL_Homepage_Sleeves.png",
+            "background_image": "shopify://shop_images/MWL-Home-FirstLight-Mobile.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -1691,7 +1817,7 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h4",
+                    "type_preset": "h3",
                     "enable_mobile_size": false,
                     "mobile_font_size": "1rem",
                     "font": "var(--font-body--family)",
@@ -1743,7 +1869,7 @@
         "group_X4QaDn",
         "group_7TCDni"
       ],
-      "name": "2 product tiles",
+      "name": "Collection Showcase",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
@@ -1774,131 +1900,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 8,
         "padding-block-end": 11
-      }
-    },
-    "section_gaE3zx": {
-      "type": "section",
-      "blocks": {
-        "group_czLF37": {
-          "type": "group",
-          "name": "t:names.group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "reverse_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 0,
-            "enable_mobile_gap": false,
-            "mobile_gap": 12,
-            "width": "fill",
-            "custom_width": 55,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
-            "css_class": ""
-          },
-          "blocks": {
-            "text_U9tBYq": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>Immerse yourself into the world of MWL. Proudly Australian-designed, we believe every bride deserves a dress that is as unique as her, which is why we offer an extensive size range and bespoke customisation options. Since 2012, we have been devoted to creating effortlessly elegant designs that make every moment - from your first fitting to your walk down the aisle - truly unforgettable.</p>",
-                "width": "100%",
-                "max_width": "none",
-                "alignment": "center",
-                "type_preset": "custom",
-                "enable_mobile_size": false,
-                "mobile_font_size": "1rem",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "loose",
-                "letter_spacing": "loose",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_U9tBYq"
-          ]
-        }
-      },
-      "block_order": [
-        "group_czLF37"
-      ],
-      "custom_css": [
-        ".size-style {/* max-width: 840px !important; */ max-width: 850px !important;}"
-      ],
-      "name": "About MWL Text",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "reverse_on_mobile": false,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "enable_mobile_gap": false,
-        "mobile_gap": 12,
-        "section_width": "page-width",
-        "full_width_on_mobile": false,
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-1",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 60,
-        "padding-block-end": 60
       }
     },
     "section_3EijBe": {
@@ -3610,13 +3611,13 @@
     }
   },
   "order": [
-    "hero_YWjNNm",
     "hero_jVaWmY",
+    "ss_hero_14_g9ktR8",
+    "section_gaE3zx",
+    "hero_YWjNNm",
     "section_GJFkj8",
-    "ss_hero_14_HkNQJx",
     "section_EypKxw",
     "section_L8p8Vg",
-    "section_gaE3zx",
     "section_3EijBe",
     "section_i3mkk9",
     "divider_c9TGcg",
