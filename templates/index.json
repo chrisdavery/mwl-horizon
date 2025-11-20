@@ -16,7 +16,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>Now Available Worldwide</p>",
+            "text": "<p>Available Worldwide</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -132,7 +132,7 @@
       ],
       "name": "Hero Banner",
       "settings": {
-        "media_type_1": "image",
+        "media_type_1": "video",
         "image_1": "shopify://shop_images/HOMEPAGE_2000X928_03ebfb99-f6b4-499e-9464-695db798e8cc.png",
         "mobile_image_1": "shopify://shop_images/Mobile_MWL_Home_63dbcf92-7289-4f2b-bd9e-5fbd8e3b282c.png",
         "video_1": "shopify://files/videos/Story 2 1080x1920 (1).mp4",
@@ -166,8 +166,9 @@
       "type": "hero",
       "name": "Hero Banner",
       "settings": {
-        "media_type_1": "video",
-        "mobile_image_1": "shopify://shop_images/FrankieWeddingDressMadeWithLoveBridal-Web32.jpg",
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/HOMEPAGE_2000X928_03ebfb99-f6b4-499e-9464-695db798e8cc.png",
+        "mobile_image_1": "shopify://shop_images/Mobile_MWL_Home_63dbcf92-7289-4f2b-bd9e-5fbd8e3b282c.png",
         "video_1": "shopify://files/videos/Story 2 1080x1920 (1).mp4",
         "mobile_video_1": "shopify://files/videos/Story 2 1080x1080 (1).mp4",
         "media_type_2": "image",
