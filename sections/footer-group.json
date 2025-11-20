@@ -224,7 +224,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Worldwide Trunk Shows</p>",
+                    "text": "<p>1 on 1 styling sessions</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
