@@ -158,19 +158,87 @@
                 "css_class": ""
               },
               "blocks": {
-                "icon_C36EzX": {
-                  "type": "icon",
-                  "name": "t:names.icon",
+                "text_4YepEb": {
+                  "type": "text",
+                  "name": "t:names.text",
                   "settings": {
-                    "icon": "none",
-                    "svg_icon": "<svg class=\"icon-block__media\" xmlns=\"http://www.w3.org/2000/svg\" width=\"21\" height=\"20\" viewBox=\"0 0 21 20\" fill=\"none\">\n      <path d=\"M16.9297 2.8046L2.36715 6.90616C2.24319 6.94006 2.13269 7.01134 2.0507 7.1103C1.96871 7.20926 1.91922 7.33109 1.90897 7.4592C1.89872 7.5873 1.92822 7.71545 1.99343 7.82619C2.05864 7.93693 2.15641 8.02487 2.2734 8.07804L8.9609 11.2421C9.09191 11.3028 9.19711 11.408 9.25778 11.539L12.4218 18.2265C12.475 18.3435 12.563 18.4412 12.6737 18.5065C12.7844 18.5717 12.9126 18.6012 13.0407 18.5909C13.1688 18.5807 13.2906 18.5312 13.3896 18.4492C13.4885 18.3672 13.5598 18.2567 13.5937 18.1327L17.6953 3.57023C17.7264 3.46396 17.7283 3.35129 17.7008 3.24402C17.6734 3.13676 17.6176 3.03885 17.5393 2.96056C17.461 2.88226 17.3631 2.82648 17.2559 2.79904C17.1486 2.7716 17.0359 2.77352 16.9297 2.8046V2.8046Z\" stroke=\"#605E5C\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n      <path d=\"M9.16406 11.3359L12.6953 7.80469\" stroke=\"#605E5C\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n    </svg>",
-                    "width": 12,
-                    "link": "",
-                    "open_in_new_tab": false
+                    "text": "<p><span style=\"text-decoration:underline\">MWL Retailers Worldwide</span></p><p></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 50
                   },
                   "blocks": {}
-                },
-                "text_4YepEb": {
+                }
+              },
+              "block_order": [
+                "text_4YepEb"
+              ]
+            },
+            "group_ReYDNV": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "shopify://pages/store-locator",
+                "open_in_new_tab": true,
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 10,
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
+              },
+              "blocks": {
+                "text_n3YwcF": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
@@ -194,19 +262,100 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 50
                   },
                   "blocks": {}
                 }
               },
               "block_order": [
-                "icon_C36EzX",
-                "text_4YepEb"
+                "text_n3YwcF"
+              ]
+            },
+            "group_BpizHp": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "shopify://pages/store-locator",
+                "open_in_new_tab": true,
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 10,
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
+              },
+              "blocks": {
+                "text_7MKQCm": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p><span style=\"text-decoration:underline\">MWL Retailers Worldwide</span></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 50
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_7MKQCm"
               ]
             }
           },
           "block_order": [
-            "group_hGqUaK"
+            "group_hGqUaK",
+            "group_ReYDNV",
+            "group_BpizHp"
           ]
         }
       },
