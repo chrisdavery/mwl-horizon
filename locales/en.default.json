@@ -21,6 +21,7 @@
     "country_results_count": "{{ count }} results",
     "decrease_quantity": "Decrease quantity",
     "discount": "Apply a discount code",
+    "discount_menu": "Discount Codes",
     "discount_applied": "Applied discount code: {{ code }}",
     "filters": "Filters",
     "filter_count": {
@@ -29,7 +30,7 @@
     },
     "increase_quantity": "Increase quantity",
     "inventory_status": "Inventory status",
-    "localization_region_and_language": "Open region and language selector",
+    "localization_region_and_language": "Region and language selector",
     "menu": "Menu",
     "nested_product": "{{ product_title }} for {{ parent_title }}",
     "new_window": "Opens in a new window.",
@@ -212,6 +213,12 @@
     "no_results_found": "No results found",
     "page_placeholder_title": "Page title",
     "page_placeholder_content": "Select a page to display its content.",
+    "pagination": {
+      "nav_label": "Pagination navigation",
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {{ page }}"
+    },
     "pickup_available_at_html": "Pickup available at <b>{{ location }}</b>",
     "pickup_available_in": "Pickup available, {{ pickup_time }}",
     "pickup_not_available": "Pickup currently not available",
@@ -328,12 +335,18 @@
       "adding_to_cart": "Adding...",
       "added_to_cart": "Added to bag",
       "add_to_cart_error": "Error adding to bag",
+      "quantity_error_max": "This item has a maximum of {{ maximum }}",
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
       "available_now": "Available Now",
       "low_in_stock": "Low in Stock",
       "last_remaining": "Last Remaining Unit",
-      "out_of_stock_html": "Out Of Stock <a href=\"#notify\">Notify me when available</a>"
+      "out_of_stock_html": "Out Of Stock <a href=\"#notify\">Notify me when available</a>",
+      "quantity": "Quantity",
+      "quantity_increments": "Increments of {{ increment }}",
+      "quantity_minimum": "Minimum of {{ minimum }}",
+      "quantity_maximum": "Maximum of {{ maximum }}",
+      "in_cart": "in cart"
     }
   }
 }

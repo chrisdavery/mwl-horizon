@@ -51,7 +51,7 @@
       "other": "{{ count }} filtri applicati",
       "many": "{{ count }} filtri applicati"
     },
-    "account": "Apri menu dell'account",
+    "account": "Account",
     "cart": "Carrello",
     "cart_count": "Totale articoli nel carrello",
     "menu": "Menu",
@@ -62,12 +62,10 @@
     "discount": "Applica un codice sconto",
     "discount_menu": "Codici sconto",
     "discount_applied": "Codice sconto applicato: {{ code }}",
-    "open_cart_drawer": "Apri carrello",
     "inventory_status": "Stato delle scorte",
     "pause_video": "Metti video in pausa",
     "find_country": "Trova paese",
-    "localization_region_and_language": "Apri selettore dell'area geografica e della lingua",
-    "open_search_modal": "Apri ricerca",
+    "localization_region_and_language": "Selettore dell'area geografica e della lingua",
     "decrease_quantity": "Diminuisci quantità",
     "increase_quantity": "Aumenta quantità",
     "quantity": "Quantità",
@@ -243,7 +241,13 @@
     "recipient_form_fields_hidden": "I campi del modulo destinatario sono ora nascosti",
     "recipient_form_error": "Si è verificato un errore durante l'invio del modulo",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} caratteri utilizzati",
-    "terms_and_policies": "Termini e informative"
+    "terms_and_policies": "Termini e informative",
+    "pagination": {
+      "nav_label": "Navigazione impaginazione",
+      "previous": "Indietro",
+      "next": "Avanti",
+      "page": "Pagina {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -277,7 +281,13 @@
       "adding_to_cart": "Aggiunta in corso...",
       "add_to_cart_error": "Errore durante l'aggiunta al carrello",
       "sold_out": "Esaurito",
-      "unavailable": "Non disponibile"
+      "unavailable": "Non disponibile",
+      "quantity_error_max": "Questo articolo ha un massimo di {{ maximum }}",
+      "quantity": "Quantità",
+      "quantity_increments": "Incrementi di {{ increment }}",
+      "quantity_minimum": "Minimo di {{ minimum }}",
+      "quantity_maximum": "Massimo di {{ maximum }}",
+      "in_cart": "nel carrello"
     }
   },
   "fields": {

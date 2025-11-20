@@ -46,7 +46,7 @@
     "search_results_count": "找到“{{ query }}”的 {{ count }} 条搜索结果",
     "search_results_no_results": "未找到“{{ query }}”的相关结果",
     "filters": "筛选条件",
-    "account": "打开账户菜单",
+    "account": "账户",
     "cart": "购物车",
     "cart_count": "购物车中的商品总数",
     "filter_count": {
@@ -61,11 +61,9 @@
     "discount": "应用折扣码",
     "discount_menu": "折扣码",
     "discount_applied": "已应用折扣码：{{ code }}",
-    "open_cart_drawer": "打开购物车",
     "inventory_status": "库存状态",
     "pause_video": "暂停视频",
-    "localization_region_and_language": "打开区域和语言选择器",
-    "open_search_modal": "打开搜索",
+    "localization_region_and_language": "区域和语言选择器",
     "find_country": "查找国家/地区",
     "decrease_quantity": "减少数量",
     "increase_quantity": "增加数量",
@@ -238,7 +236,13 @@
     "recipient_form_fields_hidden": "收件人表单字段现已隐藏",
     "recipient_form_error": "提交表单时出现错误",
     "product_custom_property_character_count": "已输入 {{ used_chars }} 个字符，最多 {{ max_chars }} 个",
-    "terms_and_policies": "条款和政策"
+    "terms_and_policies": "条款和政策",
+    "pagination": {
+      "nav_label": "分页导航",
+      "previous": "上一页",
+      "next": "下一页",
+      "page": "第 {{ page }} 页"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -272,7 +276,13 @@
       "adding_to_cart": "正在添加...",
       "add_to_cart_error": "添加到购物车时出错",
       "sold_out": "售罄",
-      "unavailable": "不可售"
+      "unavailable": "不可售",
+      "quantity_error_max": "此商品上限为 {{ maximum }}",
+      "quantity": "数量",
+      "quantity_increments": "增量为 {{ increment }}",
+      "quantity_minimum": "最少 {{ minimum }} 个",
+      "quantity_maximum": "最多 {{ maximum }} 个",
+      "in_cart": "在购物车中"
     }
   },
   "fields": {

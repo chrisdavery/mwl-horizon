@@ -46,7 +46,7 @@
     "search_results_count": "Найдено {{ count }} результата(-ов) по запросу «{{ query }}»",
     "search_results_no_results": "По запросу «{{ query }}» ничего не найдено",
     "filters": "Фильтры",
-    "account": "Скрыть меню учетной записи",
+    "account": "Учетная запись",
     "cart": "Корзина",
     "cart_count": "Всего товаров в корзине",
     "filter_count": {
@@ -62,12 +62,10 @@
     "loading_product_recommendations": "Загрузка рекомендаций товаров",
     "discount": "Применить промокод",
     "discount_applied": "Примененный промокод : {{ code }}",
-    "open_cart_drawer": "Открыть корзину",
     "inventory_status": "Статус ассортимента",
     "pause_video": "Приостановить видео",
     "find_country": "Найти страну",
-    "localization_region_and_language": "Открыть выбор региона и языка",
-    "open_search_modal": "Открыть поиск",
+    "localization_region_and_language": "Выбор региона и языка",
     "decrease_quantity": "Убрать позиции",
     "increase_quantity": "Добавить позиции",
     "quantity": "Количество",
@@ -248,7 +246,13 @@
     "recipient_form_fields_hidden": "Поля формы получателя теперь скрыты",
     "recipient_form_error": "При отправке формы возникла ошибка",
     "product_custom_property_character_count": "Использовано символов: {{ used_chars }}/{{ max_chars }}",
-    "terms_and_policies": "Условия и политики"
+    "terms_and_policies": "Условия и политики",
+    "pagination": {
+      "nav_label": "Постраничная навигация",
+      "previous": "Назад",
+      "next": "Далее",
+      "page": "Страница {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -282,7 +286,13 @@
       "adding_to_cart": "Добавление...",
       "add_to_cart_error": "Возникла ошибка при добавлении в корзину",
       "sold_out": "Продано",
-      "unavailable": "Недоступно"
+      "unavailable": "Недоступно",
+      "quantity_error_max": "Максимальное количество этого товара — {{ maximum }}",
+      "quantity": "Количество",
+      "quantity_increments": "Прирост: {{ increment }}",
+      "quantity_minimum": "Минимум: {{ minimum }}",
+      "quantity_maximum": "Максимум: {{ maximum }}",
+      "in_cart": "в корзине"
     }
   },
   "fields": {

@@ -181,7 +181,9 @@
     "blog_posts_grid": "블로그 게시물: 그리드",
     "blog_posts_carousel": "블로그 게시물: 캐러셀",
     "blog_posts_editorial": "블로그 게시물: 에디토리얼",
-    "excerpt": "요약"
+    "excerpt": "요약",
+    "footer_password": "비밀번호 바닥글",
+    "policies_and_links": "정책 및 링크"
   },
   "settings": {
     "autoplay": "자동 재생",
@@ -494,7 +496,6 @@
     "card_hover_effect": "카드 호버 효과",
     "card_size": "카드 크기",
     "collection_title_case": "컬렉션 제목 케이스",
-    "effects": "효과",
     "inventory_threshold": "재고 부족 임계값",
     "mobile_card_size": "모바일 카드 크기",
     "page": "페이지",
@@ -540,9 +541,16 @@
     },
     "blog": "블로그",
     "post_count": "게시물 수",
+    "animation": "애니메이션",
     "top_level_size": "최상단 크기",
     "submenu_text_style": "하위 메뉴 텍스트 스타일",
-    "empty_cart_button_link": "카트 비우기 버튼 링크"
+    "empty_cart_button_link": "카트 비우기 버튼 링크",
+    "auto_load_products": "스크롤 시 제품 자동 로드",
+    "products_per_page": "페이지당 제품 수",
+    "custom_mobile_media": "사용자 지정 모바일 미디어",
+    "stack_media_on_mobile": "미디어 쌓기",
+    "media_type_1": "미디어 유형",
+    "media_type_2": "미디어 2 유형"
   },
   "options": {
     "adapt_to_image": "이미지에 맞춤",
@@ -923,10 +931,56 @@
     "block_link": "블록 링크",
     "submenu_feature": "하위 메뉴 기능",
     "cart_features": "카트 기능",
-    "email_signup": "이메일 가입"
+    "email_signup": "이메일 가입",
+    "submissions_are_sent_to_store_email_address": "제출 사항은 스토어의 [발신자 이메일 주소](https://admin.shopify.com/settings/notifications)(으)로 전송됩니다.",
+    "mobile_media": "모바일 미디어",
+    "mobile_media_2": "모바일 미디어 2"
   },
   "html_defaults": {
-    "share_information_about_your": "<p>고객과 브랜드 정보를 공유하세요. 제품을 설명하고 공지 사항을 제공하고, 스토어를 방문하는 고객을 환영할 수 있습니다.</p>"
+    "share_information_about_your": "<p>고객과 브랜드 정보를 공유하세요. 제품을 설명하고 공지 사항을 제공하고, 스토어를 방문하는 고객을 환영할 수 있습니다.</p>",
+    "bestseller_h2": "<h2>베스트셀러</h2>",
+    "bestseller_h3": "<h3>베스트셀러</h3>",
+    "bestseller": "<p>베스트셀러</p>",
+    "build_better": "<p>더 나은 제품을 만듭니다</p>",
+    "contact_us": "<h2>문의하기</h2>",
+    "discover_bestsellers": "<p>기능성과 스타일의 완벽한 조화로 고객의 마음을 사로잡은 베스트셀러를 만나보세요.</p>",
+    "everythings_starts_with_why": "<p>우리의 모든 일은 '왜'라는 질문에서 시작됩니다</p>",
+    "explore_latest_products": "<p>최신 제품을 살펴보세요.</p>",
+    "faq": "<h3>자주 묻는 질문</h3>",
+    "first_to_know": "<p>새로운 컬렉션과 특별 할인에 대한 소식을 가장 먼저 받아보세요. </p>",
+    "free_returns": "<p>30일 이내 무료 반품</p>",
+    "free_shipping_over": "<p>$50 이상 구매 시 무료 배송</p>",
+    "goal_for_every_customer": "<p>모든 고객이 구매에 완전히 만족하는 것이 저희의 목표입니다. 그렇지 않은 경우 저희에게 알려주시면 문제를 해결해 드리기 위해 최선을 다하겠습니다.</p>",
+    "home_to_shirts": "<p>홈 → 셔츠</p>",
+    "intentional_design": "<h2>의도적인 디자인</h2>",
+    "introducing_h2": "<h2><em>소개합니다</em></h2>",
+    "latest_products": "<p>이번 시즌을 위해 특별히 제작된 최신 제품을 소개합니다. 품절되기 전에 마음에 드는 제품을 쇼핑하세요!</p>",
+    "made_local_and_global": "<p>저희 제품은 국내 및 해외에서 모두 제조됩니다. 저희는 제품의 우수한 품질과 합리적인 가치를 보장하기 위해 제조 파트너를 신중하게 선택합니다.</p>",
+    "made_with_care_h2": "<h2>정성을 담아 제작</h2>",
+    "made_with_care_extended": "<p>정성을 담아 제작하고 고객들로부터 아낌없는 사랑을 받는 이 시그니처 베스트셀러는 모든 기대를 뛰어넘습니다.</p>",
+    "made_with_care": "<p>정성을 담아 제작하고 고객들로부터 아낌없는 사랑을 받습니다.</p>",
+    "make_things_better_extended": "<p>저희는 더 잘 작동하고 더 오래 지속되는 제품을 만듭니다. 깔끔한 디자인과 정직한 소재로 실질적인 문제를 해결하는 제품입니다.</p>",
+    "make_things_better": "<p>더 잘 작동하고 더 오래 지속되는 제품을 만듭니다.</p>",
+    "may_also_like": "<h4>이런 제품도 좋아하실 거예요</h4>",
+    "new_arrivals_h1": "<h1>신제품</h1>",
+    "new_arrivals_h2": "<h2>신제품</h2>",
+    "new_arrivals_h3": "<h3>신제품</h3>",
+    "product_launch": "<p>최신 제품 출시 비하인드 스토리를 살펴보세요.</p>",
+    "product_story": "<p>모든 제품의 중심에는 품질과 혁신에 대한 저희의 열정으로 탄생한 고유한 스토리가 있습니다. 각 품목은 여러분의 일상을 향상시키고 즐거움을 선사합니다.</p>",
+    "real_people": "<p>훌륭한 제품을 만드는 사람들</p>",
+    "related_product": "<h3>관련 제품</h3>",
+    "return_policy": "<h2>반품 정책은 어떻게 되나요?</h2>",
+    "reviews": "<p>★★★★★ 리뷰 368개</p>",
+    "shipping_based_on_location": "<p>배송비는 고객님의 위치와 주문하신 품목에 따라 계산됩니다. 구매 전에 항상 배송비를 확인하실 수 있습니다.</p>",
+    "shop_by_collection": "<h3>컬렉션별로 쇼핑하기</h3>",
+    "signature_products": "<h2>저희의 시그니처 제품</h2>",
+    "styled_with": "<h3>함께 스타일링한 제품</h3>",
+    "subscribe": "<h2>이메일 구독하기</h2>",
+    "team_with_goal": "<h2>목표를 가진 팀</h2>",
+    "unable_to_accept_returns": "<p>특정 품목은 반품이 불가능합니다. 이러한 품목은 구매 전에 명확하게 표시됩니다.</p>",
+    "work_quickly_to_ship": "<p>주문하신 제품을 최대한 빨리 배송하기 위해 신속하게 처리하겠습니다. 주문이 배송되면 추가 정보가 포함된 이메일을 받게 됩니다. 배송 시간은 고객님의 위치에 따라 다릅니다.</p>",
+    "join_our_email_list": "<h2>이메일 리스트에 가입하세요</h2>",
+    "get_exclusive_deals_and_early_access_to_new_products": "<p>독점 거래 및 신제품 조기 액세스를 받으세요.</p>"
   },
   "text_defaults": {
     "collapsible_row": "축소 가능한 행",
@@ -939,7 +993,27 @@
     "sign_up": "가입하기",
     "welcome_to_our_store": "스토어에 오신 것을 환영합니다",
     "be_bold": "대담하게",
-    "shop_our_latest_arrivals": "최신 상품을 쇼핑하세요!"
+    "shop_our_latest_arrivals": "최신 상품을 쇼핑하세요!",
+    "are_purchases_final_sale": "환불/교환이 불가능한 상품이 있나요?",
+    "care_instructions": "관리 방법",
+    "cart": "카트",
+    "discover_collection": "컬렉션 살펴보기",
+    "fit": "핏",
+    "how_much_for_shipping": "배송비는 얼마인가요?",
+    "learn_more": "자세히 알아보기",
+    "manufacturing": "제조",
+    "materials": "소재",
+    "return_policy": "반품 정책",
+    "shipping": "배송",
+    "shop_now_button_label": "지금 쇼핑하기",
+    "sign_up_button_label": "가입하기",
+    "submit_button_label": "제출",
+    "up_the_ante": "한\n단계\n더",
+    "view_all_button_label": "모두 보기",
+    "what_is_return_policy": "반품 정책은 어떻게 되나요?",
+    "when_will_order_arrive": "주문한 제품은 언제 도착하나요?",
+    "where_are_products_made": "제품은 어디에서 제조되나요?",
+    "faq": "자주 묻는 질문"
   },
   "info": {
     "carousel_layout_on_mobile": "캐러셀은 모바일에서 사용됩니다.",
@@ -965,7 +1039,7 @@
     "pills_usage": "적용된 필터, 할인 코드 및 검색 제안에 사용됩니다",
     "hide_logo_on_home_page_help": "고정 머리글이 활성화되어 있으면 로고가 계속 표시됩니다",
     "media_type_info": "기능은 메뉴 링크에서 채워집니다",
-    "logo_height": "헤더 로고에만 영향을 줍니다"
+    "logo_height": "머리글 로고에만 영향이 있습니다"
   },
   "categories": {
     "basic": "Basic",
@@ -984,6 +1058,7 @@
     "decorative": "장식용",
     "products": "제품",
     "other_sections": "기타",
-    "storytelling": "스토리텔링"
+    "storytelling": "스토리텔링",
+    "text": "텍스트"
   }
 }

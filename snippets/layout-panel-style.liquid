@@ -29,5 +29,9 @@
 
 {% render 'gap-style', value: settings.gap %}
 
+{% if settings.enable_mobile_gap %}
+  --mobile-gap: {{ settings.mobile_gap }}px;
+{% endif %}
+
 --horizontal-alignment: {{ horizontal_alignment }}; --vertical-alignment: {{ vertical_alignment }};
 --vertical-alignment-mobile: {{ vertical_alignment_mobile }};

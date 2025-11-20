@@ -181,7 +181,9 @@
     "blog_posts_grid": "博客文章：网格",
     "blog_posts_carousel": "博客文章：轮播",
     "blog_posts_editorial": "博客文章：编辑精选",
-    "excerpt": "摘录"
+    "excerpt": "摘录",
+    "footer_password": "密码页脚",
+    "policies_and_links": "政策和链接"
   },
   "settings": {
     "alignment": "对齐方式",
@@ -469,7 +471,6 @@
     "default": "默认",
     "default_logo": "默认 logo",
     "divider_width": "分隔线宽度",
-    "effects": "效果",
     "hide_logo_on_home_page": "在主页上隐藏 logo",
     "horizontal_padding": "水平内边距",
     "inventory_threshold": "低库存阈值",
@@ -540,9 +541,16 @@
     },
     "blog": "博客",
     "post_count": "帖子数量",
+    "animation": "动画",
     "top_level_size": "顶层尺寸",
     "submenu_text_style": "子菜单文本样式",
-    "empty_cart_button_link": "“清空购物车”按钮链接"
+    "empty_cart_button_link": "“清空购物车”按钮链接",
+    "auto_load_products": "滚动时自动加载产品",
+    "products_per_page": "每页产品数",
+    "custom_mobile_media": "自定义移动端媒体文件",
+    "stack_media_on_mobile": "堆叠媒体文件",
+    "media_type_1": "媒体文件类型",
+    "media_type_2": "媒体文件 2 类型"
   },
   "options": {
     "adapt_to_image": "适应图片",
@@ -920,13 +928,59 @@
     "gift_card_form_description": "客户可通过私人消息将礼品卡发送至收件人电子邮件。[详细了解](https://help.shopify.com/manual/products/gift-card-products)",
     "heading": "标题",
     "resource_reference_product_custom_property": "添加可自定义输入字段，用于收集海关信息，这些信息会被添加到该订单项目中，稍后可在订单详情中查看。",
-    "block_link": "块链接",
+    "block_link": "区块链接",
     "submenu_feature": "子菜单功能",
     "cart_features": "购物车功能",
-    "email_signup": "电子邮件注册信息"
+    "email_signup": "电子邮件注册信息",
+    "submissions_are_sent_to_store_email_address": "提交内容已发送至您商店的[发件人邮箱](https://admin.shopify.com/settings/notifications)",
+    "mobile_media": "移动端媒体文件",
+    "mobile_media_2": "移动端媒体文件 2"
   },
   "html_defaults": {
-    "share_information_about_your": "<p>与客户分享有关您品牌的信息。描述产品、发布公告或欢迎客户访问您的商店。</p>"
+    "share_information_about_your": "<p>与客户分享有关您品牌的信息。描述产品、发布公告或欢迎客户访问您的商店。</p>",
+    "bestseller_h2": "<h2>热销产品</h2>",
+    "bestseller_h3": "<h3>热销产品</h3>",
+    "bestseller": "<p>热销产品</p>",
+    "build_better": "<p>我们坚信，精益求精</p>",
+    "contact_us": "<h2>联系我们</h2>",
+    "discover_bestsellers": "<p>探索我们的热销产品，它们凭借功能与风格的完美融合，赢得了广大客户的青睐。</p>",
+    "everythings_starts_with_why": "<p>凡事，我们都从“为什么”开始</p>",
+    "explore_latest_products": "<p>探索我们的最新产品。</p>",
+    "faq": "<h3>常见问题</h3>",
+    "first_to_know": "<p>第一时间了解最新产品系列和特别优惠。</p>",
+    "free_returns": "<p>30 天免费退货</p>",
+    "free_shipping_over": "<p>满 50 美元免运费</p>",
+    "goal_for_every_customer": "<p>我们的目标是让每位客户都对所购商品完全满意。如果事与愿违，请告知我们，我们将竭尽所能与您协作，妥善解决问题。</p>",
+    "home_to_shirts": "<p>主页 → 衬衫</p>",
+    "intentional_design": "<h2>匠心设计</h2>",
+    "introducing_h2": "<h2><em>隆重推出</em></h2>",
+    "latest_products": "<p>隆重推出我们的应季新品。在心仪商品售罄前赶紧抢购吧！</p>",
+    "made_local_and_global": "<p>我们的产品在本地和全球均有生产。我们精心挑选制造合作伙伴，以确保我们的产品质优价实。</p>",
+    "made_with_care_h2": "<h2>用心制作</h2>",
+    "made_with_care_extended": "<p>这款招牌热销产品用心制作，深受客户喜爱，其表现超出所有预期。</p>",
+    "made_with_care": "<p>用心制作，深受客户喜爱。</p>",
+    "make_things_better_extended": "<p>我们致力于打造更好用、更耐用的产品。我们的产品采用简约设计和真材实料，旨在解决实际问题。</p>",
+    "make_things_better": "<p>我们致力于打造更好用、更耐用的产品。</p>",
+    "may_also_like": "<h4>您可能还喜欢</h4>",
+    "new_arrivals_h1": "<h1>新品上架</h1>",
+    "new_arrivals_h2": "<h2>新品上架</h2>",
+    "new_arrivals_h3": "<h3>新品上架</h3>",
+    "product_launch": "<p>了解我们最新产品发布背后的故事。</p>",
+    "product_story": "<p>每件产品的核心都蕴藏着一个独特的故事，源于我们对品质和创新的热情。每件商品都能提升您的日常生活品质，点燃生活乐趣。</p>",
+    "real_people": "<p>真实的人，打造出色的产品</p>",
+    "related_product": "<h3>相关产品</h3>",
+    "return_policy": "<h2>退货政策是什么？</h2>",
+    "reviews": "<p>★★★★★ 368 条评论</p>",
+    "shipping_based_on_location": "<p>运费将根据您所在的地点和订单中的商品进行计算。您在购买前总会知道运费价格。</p>",
+    "shop_by_collection": "<h3>按产品系列选购</h3>",
+    "signature_products": "<h2>我们的招牌产品</h2>",
+    "styled_with": "<h3>搭配推荐</h3>",
+    "subscribe": "<h2>订阅我们的电子邮件</h2>",
+    "team_with_goal": "<h2>一个有目标的团队</h2>",
+    "unable_to_accept_returns": "<p>部分商品不支持退货。这些商品在购买前会有明确标注。</p>",
+    "work_quickly_to_ship": "<p>我们会尽快处理并发货您的订单。订单发货后，您将收到一封包含更多信息的电子邮件。配送时间因您所在的地点而异。</p>",
+    "join_our_email_list": "<h2>加入我们的邮件列表</h2>",
+    "get_exclusive_deals_and_early_access_to_new_products": "<p>获取独家优惠和新产品的早期访问权。</p>"
   },
   "text_defaults": {
     "button_label": "立即购买",
@@ -939,7 +993,27 @@
     "sign_up": "注册",
     "welcome_to_our_store": "欢迎访问我们的商店",
     "be_bold": "勇敢。",
-    "shop_our_latest_arrivals": "选购新品！"
+    "shop_our_latest_arrivals": "选购新品！",
+    "are_purchases_final_sale": "是否有不支持退货的商品？",
+    "care_instructions": "护理说明",
+    "cart": "购物车",
+    "discover_collection": "探索该产品系列",
+    "fit": "版型",
+    "how_much_for_shipping": "运费是多少？",
+    "learn_more": "详细了解",
+    "manufacturing": "生产制造",
+    "materials": "材质",
+    "return_policy": "退货政策",
+    "shipping": "发货",
+    "shop_now_button_label": "立即购买",
+    "sign_up_button_label": "注册",
+    "submit_button_label": "提交",
+    "up_the_ante": "更\n进\n一步",
+    "view_all_button_label": "查看全部",
+    "what_is_return_policy": "退货政策是什么？",
+    "when_will_order_arrive": "我的订单什么时候能送达？",
+    "where_are_products_made": "你们的产品在哪里生产？",
+    "faq": "常见问题"
   },
   "info": {
     "video_alt_text": "为辅助技术用户描述视频",
@@ -965,7 +1039,7 @@
     "applies_on_image_only": "仅适用于图像",
     "hide_logo_on_home_page_help": "Logo 将在粘性标头处于激活状态时保持可见",
     "media_type_info": "从您的菜单链接中填充功能",
-    "logo_height": "仅影响标题徽标"
+    "logo_height": "仅影响标头 logo"
   },
   "categories": {
     "basic": "Basic",
@@ -984,6 +1058,7 @@
     "decorative": "装饰",
     "products": "产品",
     "other_sections": "其他",
-    "storytelling": "故事讲述"
+    "storytelling": "故事讲述",
+    "text": "文本"
   }
 }

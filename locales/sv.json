@@ -50,7 +50,7 @@
       "one": "{{ count }} filter tillämpas",
       "other": "{{ count }} filter tillämpas"
     },
-    "account": "Öppna kontomeny",
+    "account": "Konto",
     "cart": "Varukorg",
     "cart_count": "Totalt antal artiklar i varukorgen",
     "menu": "Meny",
@@ -61,12 +61,10 @@
     "discount": "Använd rabattkod",
     "discount_menu": "Rabattkoder",
     "discount_applied": "Tillämpad rabattkod: {{ code }}",
-    "open_cart_drawer": "Öppna varukorg",
     "pause_video": "Pausa video",
     "inventory_status": "Lagerstatus",
     "find_country": "Hitta land",
-    "localization_region_and_language": "Öppna region- och språkväljare",
-    "open_search_modal": "Öppna sök",
+    "localization_region_and_language": "Region- och språkväljare",
     "decrease_quantity": "Minska kvantitet",
     "increase_quantity": "Öka kvantitet",
     "quantity": "Kvantitet",
@@ -238,7 +236,13 @@
     "recipient_form_fields_hidden": "Formulärfälten för mottagare är nu dolda",
     "recipient_form_error": "Ett fel uppstod när formuläret skulle skickas in",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} tecken har använts",
-    "terms_and_policies": "Villkor och policyer"
+    "terms_and_policies": "Villkor och policyer",
+    "pagination": {
+      "nav_label": "Navigering av paginering",
+      "previous": "Föregående",
+      "next": "Nästa",
+      "page": "Sidan {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -272,7 +276,13 @@
       "adding_to_cart": "Lägger till ...",
       "add_to_cart_error": "Det uppstod ett fel när artikeln skulle läggas till i varukorgen",
       "sold_out": "Slutsåld",
-      "unavailable": "Inte tillgängliga"
+      "unavailable": "Inte tillgängliga",
+      "quantity_error_max": "Den här artikeln har max {{ maximum }}",
+      "quantity": "Kvantitet",
+      "quantity_increments": "Ökningar i steg om {{ increment }}",
+      "quantity_minimum": "Minimum {{ minimum }}",
+      "quantity_maximum": "Maximum {{ maximum }}",
+      "in_cart": "i varukorg"
     }
   },
   "fields": {

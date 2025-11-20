@@ -50,7 +50,7 @@
       "one": "{{ count }} szűrő alkalmazva",
       "other": "{{ count }} szűrő alkalmazva"
     },
-    "account": "Fiókmenü megnyitása",
+    "account": "Fiók",
     "cart": "Kosár",
     "cart_count": "Összes termék a kosárban",
     "menu": "Menü",
@@ -60,12 +60,10 @@
     "loading_product_recommendations": "Termékajánlások betöltése",
     "discount": "Kedvezménykód beváltása",
     "discount_applied": "Beváltott kedvezménykód: {{ code }}",
-    "open_cart_drawer": "Kosár megnyitása",
     "inventory_status": "Készlet állapota",
     "pause_video": "Videó szüneteltetése",
     "find_country": "Ország keresése",
-    "localization_region_and_language": "Régió- és nyelvválasztó megnyitása",
-    "open_search_modal": "Keresés megnyitása",
+    "localization_region_and_language": "Régió- és nyelvválasztó",
     "decrease_quantity": "Mennyiség csökkentése",
     "increase_quantity": "Mennyiség növelése",
     "quantity": "Mennyiség",
@@ -238,7 +236,13 @@
     "recipient_form_fields_hidden": "A kedvezményezettre vonatkozó űrlapmezők most el vannak rejtve",
     "recipient_form_error": "Hiba történt az űrlap beküldése során",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} karakter felhasználva",
-    "terms_and_policies": "Feltételek és szabályzatok"
+    "terms_and_policies": "Feltételek és szabályzatok",
+    "pagination": {
+      "nav_label": "Lapozás",
+      "previous": "Előző",
+      "next": "Következő",
+      "page": "{{ page }}. oldal"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -272,7 +276,13 @@
       "adding_to_cart": "Hozzáadás…",
       "add_to_cart_error": "Nem tudtuk hozzáadni a terméket a kosárhoz",
       "sold_out": "Elfogyott",
-      "unavailable": "Nincs készleten"
+      "unavailable": "Nincs készleten",
+      "quantity_error_max": "Ennek a terméknek maximum {{ maximum }} darab",
+      "quantity": "Mennyiség",
+      "quantity_increments": "{{ increment }} egységenként",
+      "quantity_minimum": "Minimum {{ minimum }}",
+      "quantity_maximum": "Maximum {{ maximum }}",
+      "in_cart": "a kosárban"
     }
   },
   "fields": {

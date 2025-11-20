@@ -181,7 +181,9 @@
     "blog_posts_grid": "Articles de blog : grille",
     "blog_posts_carousel": "Articles de blog : carrousel",
     "blog_posts_editorial": "Articles de blog : éditorial",
-    "excerpt": "Extrait"
+    "excerpt": "Extrait",
+    "footer_password": "Pied de page de la page avec mot de passe",
+    "policies_and_links": "Politiques et liens"
   },
   "settings": {
     "autoplay": "Jeu automatique",
@@ -497,7 +499,6 @@
     "blurred_reflection": "Réflexion floutée",
     "card_hover_effect": "Effet de survol des cartes",
     "collection_title_case": "Casse du titre de la collection",
-    "effects": "Effets",
     "inventory_threshold": "Seuil de stock faible",
     "product_and_card_title_case": "Casse du titre de produit et de la carte",
     "product_title_case": "Casse du titre de produit",
@@ -540,9 +541,16 @@
     },
     "blog": "Blog",
     "post_count": "Nombre d’articles",
+    "animation": "Animation",
     "top_level_size": "Taille de premier niveau",
     "submenu_text_style": "Style du texte du sous-menu",
-    "empty_cart_button_link": "Lien du bouton Vider le panier"
+    "empty_cart_button_link": "Lien du bouton Vider le panier",
+    "auto_load_products": "Chargement automatique des produits au défilement",
+    "products_per_page": "Produits par page",
+    "custom_mobile_media": "Support multimédia mobile personnalisé",
+    "stack_media_on_mobile": "Empiler les supports multimédias",
+    "media_type_1": "Type de support multimédia",
+    "media_type_2": "Type de support multimédia 2"
   },
   "options": {
     "adapt_to_image": "Adapter à l’image",
@@ -920,13 +928,59 @@
     "gift_card_form_description": "Les clients peuvent envoyer des cartes-cadeaux à l’adresse e-mail d’un destinataire avec un message personnel. [En savoir plus](https://help.shopify.com/manual/products/gift-card-products)",
     "heading": "En-tête",
     "resource_reference_product_custom_property": "Ajoutez des champs d’entrée personnalisables pour recueillir des informations douanières qui seront ajoutées à cet article du panier de la commande, visibles ultérieurement dans les détails de la commande.",
-    "block_link": "Lien de bloc",
+    "block_link": "Lien du bloc",
     "submenu_feature": "Fonctionnalité du sous-menu",
     "cart_features": "Fonctionnalités du panier",
-    "email_signup": "Inscription à la liste de diffusion"
+    "email_signup": "Inscription à la liste de diffusion",
+    "submissions_are_sent_to_store_email_address": "Les soumissions sont envoyées à l’adresse e-mail de contact votre boutique [sender email address](https://admin.shopify.com/settings/notifications)",
+    "mobile_media": "Support multimédia mobile",
+    "mobile_media_2": "Support multimédia mobile 2"
   },
   "html_defaults": {
-    "share_information_about_your": "<p>Partagez des informations sur votre marque. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue à vos clients dans votre boutique.</p>"
+    "share_information_about_your": "<p>Partagez des informations sur votre marque. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue à vos clients dans votre boutique.</p>",
+    "bestseller_h2": "<h2>Meilleures ventes</h2>",
+    "bestseller_h3": "<h3>Meilleures ventes</h3>",
+    "bestseller": "<p>Meilleure vente</p>",
+    "build_better": "<p>Notre conviction : toujours faire mieux.</p>",
+    "contact_us": "<h2>Nous contacter</h2>",
+    "discover_bestsellers": "<p>Découvrez les meilleures ventes qui ont conquis le cœur de nos clients avec leur mélange parfait de fonctionnalité et de style.</p>",
+    "everythings_starts_with_why": "<p>Le « pourquoi » est au cœur de tout ce que nous faisons</p>",
+    "explore_latest_products": "<p>Découvrez nos derniers produits.</p>",
+    "faq": "<h3>Foire aux questions</h3>",
+    "first_to_know": "<p>Soyez les premiers informés des nouvelles collections et des offres spéciales. </p>",
+    "free_returns": "<p>Retours gratuits sous 30 jours</p>",
+    "free_shipping_over": "<p>Livraison gratuite pour les commandes de plus de 50 $</p>",
+    "goal_for_every_customer": "<p>Notre objectif est que chaque client soit entièrement satisfait de son achat. Si ce n’est pas le cas, faites-le-nous savoir et nous ferons de notre mieux pour trouver une solution avec vous.</p>",
+    "home_to_shirts": "<p>Accueil → Chemises</p>",
+    "intentional_design": "<h2>Conception réfléchie</h2>",
+    "introducing_h2": "<h2><em>Découvrez</em></h2>",
+    "latest_products": "<p>Découvrez nos derniers produits, conçus spécialement pour la saison. Achetez vos articles préférés avant qu’ils ne soient épuisés !</p>",
+    "made_local_and_global": "<p>Nos produits sont fabriqués localement et dans le monde entier. Nous sélectionnons avec soin nos partenaires de fabrication pour garantir que nos produits sont de haute qualité et d’un juste rapport qualité-prix.</p>",
+    "made_with_care_h2": "<h2>Fabriqué avec soin</h2>",
+    "made_with_care_extended": "<p>Fabriquée avec soin et inconditionnellement appréciée par nos clients, cette meilleure vente emblématique dépasse toutes les attentes.</p>",
+    "made_with_care": "<p>Fabriqué avec soin et inconditionnellement apprécié par nos clients.</p>",
+    "make_things_better_extended": "<p>Nous fabriquons des articles qui fonctionnent mieux et durent plus longtemps. Nos produits résolvent de vrais problèmes grâce à un design épuré et à des matériaux authentiques.</p>",
+    "make_things_better": "<p>Nous fabriquons des articles qui fonctionnent mieux et durent plus longtemps.</p>",
+    "may_also_like": "<h4>Vous aimerez peut-être aussi</h4>",
+    "new_arrivals_h1": "<h1>Nouveautés</h1>",
+    "new_arrivals_h2": "<h2>Nouveautés</h2>",
+    "new_arrivals_h3": "<h3>Nouveautés</h3>",
+    "product_launch": "<p>Découvrez les coulisses du lancement de notre dernier produit.</p>",
+    "product_story": "<p>Au cœur de chaque produit se trouve une histoire unique, animée par notre passion pour la qualité et l’innovation. Chaque article améliore votre quotidien et éveille la joie.</p>",
+    "real_people": "<p>De vraies personnes, d’excellents produits</p>",
+    "related_product": "<h3>Produits similaires</h3>",
+    "return_policy": "<h2>Quelle est la politique de retour ?</h2>",
+    "reviews": "<p>★★★★★ 368 avis</p>",
+    "shipping_based_on_location": "<p>L’expédition est calculée en fonction de votre emplacement et des articles de votre commande. Vous connaîtrez toujours le prix de l’expédition avant d’effectuer votre achat.</p>",
+    "shop_by_collection": "<h3>Acheter par collection</h3>",
+    "signature_products": "<h2>Notre produit phare</h2>",
+    "styled_with": "<h3>Associé à</h3>",
+    "subscribe": "<h2>Abonnez-vous à nos e-mails</h2>",
+    "team_with_goal": "<h2>Une équipe, un objectif</h2>",
+    "unable_to_accept_returns": "<p>Nous ne pouvons pas accepter les retours sur certains articles. Ceux-ci seront clairement indiqués avant l’achat.</p>",
+    "work_quickly_to_ship": "<p>Nous nous efforcerons d’expédier votre commande le plus rapidement possible. Une fois votre commande expédiée, vous recevrez un e-mail contenant de plus amples informations. Les délais de livraison varient en fonction de votre emplacement.</p>",
+    "join_our_email_list": "<h2>Rejoignez notre liste de diffusion</h2>",
+    "get_exclusive_deals_and_early_access_to_new_products": "<p>Recevez des offres exclusives et un accès anticipé aux nouveaux produits.</p>"
   },
   "text_defaults": {
     "collapsible_row": "Rangée réductible",
@@ -939,7 +993,27 @@
     "popup_link": "Lien ouvrant une pop-up",
     "sign_up": "S’inscrire",
     "welcome_to_our_store": "Bienvenue dans notre boutique",
-    "shop_our_latest_arrivals": "Achetez nos dernières arrivées !"
+    "shop_our_latest_arrivals": "Achetez nos dernières arrivées !",
+    "are_purchases_final_sale": "Certains achats sont-ils définitifs ?",
+    "care_instructions": "Instructions d’entretien",
+    "cart": "Panier",
+    "discover_collection": "Découvrir la collection",
+    "fit": "Coupe",
+    "how_much_for_shipping": "Quels sont les coûts d’expédition ?",
+    "learn_more": "En savoir plus",
+    "manufacturing": "Fabrication",
+    "materials": "Matériaux",
+    "return_policy": "Politique de retour",
+    "shipping": "Expédition",
+    "shop_now_button_label": "Acheter maintenant",
+    "sign_up_button_label": "S’inscrire",
+    "submit_button_label": "Soumettre",
+    "up_the_ante": "Voir\nplus\ngrand",
+    "view_all_button_label": "Tout voir",
+    "what_is_return_policy": "Quelle est la politique de retour ?",
+    "when_will_order_arrive": "Quand recevrai-je ma commande ?",
+    "where_are_products_made": "Où sont fabriqués vos produits ?",
+    "faq": "FAQ"
   },
   "info": {
     "carousel_layout_on_mobile": "Le carrousel est utilisé sur mobile",
@@ -965,7 +1039,7 @@
     "hover_effects": "S’applique à des cartes de produits et de collections",
     "hide_logo_on_home_page_help": "Le logo reste visible lorsque l’en-tête fixe est activé",
     "media_type_info": "Les fonctionnalités sont renseignées à partir des liens de votre menu",
-    "logo_height": "N'affecte que le logo d'en-tête"
+    "logo_height": "N’affecte que le logo de l’en-tête"
   },
   "categories": {
     "basic": "Basic",
@@ -984,6 +1058,7 @@
     "decorative": "Décoratives",
     "products": "Produits",
     "other_sections": "Autre",
-    "storytelling": "Narration"
+    "storytelling": "Narration",
+    "text": "Texte"
   }
 }

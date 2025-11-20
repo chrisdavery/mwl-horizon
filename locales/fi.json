@@ -50,7 +50,7 @@
       "one": "{{ count }} suodatin käytössä",
       "other": "{{ count }} suodatinta käytössä"
     },
-    "account": "Avaa tilivalikko",
+    "account": "Tili",
     "cart": "Ostoskori",
     "cart_count": "Tuotteita ostoskorissa yhteensä",
     "menu": "Valikko",
@@ -61,12 +61,10 @@
     "discount": "Käytä alennuskoodia",
     "discount_menu": "Alennuskoodit",
     "discount_applied": "Käytetty alennuskoodi: {{ code }}",
-    "open_cart_drawer": "Avaa ostoskori",
     "inventory_status": "Varaston tila",
     "pause_video": "Keskeytä video",
     "find_country": "Etsi maa",
-    "localization_region_and_language": "Avaa alueen ja kielen valitsin",
-    "open_search_modal": "Avaa haku",
+    "localization_region_and_language": "Alue- ja kielivalitsin",
     "decrease_quantity": "Pienennä määrää",
     "increase_quantity": "Suurenna määrää",
     "quantity": "Määrä",
@@ -238,7 +236,13 @@
     "recipient_form_fields_hidden": "Vastaanottajalomakekentät ovat nyt piilotettuja",
     "recipient_form_error": "Lomakkeen lähettämisessä tapahtui virhe",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} merkkiä käytetty",
-    "terms_and_policies": "Ehdot ja käytännöt"
+    "terms_and_policies": "Ehdot ja käytännöt",
+    "pagination": {
+      "nav_label": "Sivunumerointinavigointi",
+      "previous": "Edellinen",
+      "next": "Seuraava",
+      "page": "Sivu {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -272,7 +276,13 @@
       "adding_to_cart": "Lisätään...",
       "add_to_cart_error": "Ostoskoriin lisättäessä tapahtui virhe",
       "sold_out": "Loppuunmyyty",
-      "unavailable": "Ei käytettävissä"
+      "unavailable": "Ei käytettävissä",
+      "quantity_error_max": "Tämän tuotteen enimmäismäärä on {{ maximum }}",
+      "quantity": "Määrä",
+      "quantity_increments": "Lisäysten koko: {{ increment }}",
+      "quantity_minimum": "Vähimmäismäärä {{ minimum }}",
+      "quantity_maximum": "Enimmäismäärä {{ maximum }}",
+      "in_cart": "ostoskorissa"
     }
   },
   "fields": {

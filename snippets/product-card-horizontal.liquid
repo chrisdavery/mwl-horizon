@@ -71,7 +71,7 @@
                         <span class="h6">{{ product.title }}</span>
                     </div>
                     <div>
-                        <span class="h6">+ {{ product.price | money }}</span>
+                        <span class="h6 nowrap">+ {{ product.price | money }}</span>
                     </div>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                       --padding-inline-start: 0px;
                       --padding-inline-end: 0px;
                       --color: var(--color-foreground);
-                      --font-size: 1rem;
+                      --font-size: var(--font-size--xs);
                       --font-weight: var(--font-body--weight);
                       --font-family: var(--font-body--family);
                       --text-transform: none;

@@ -121,13 +121,12 @@
                     assign accordion_state = ''
                     if first_accordion_open == false and block_settings.drawer_accordion_expand_first
                       assign first_accordion_open = true
-                      assign accordion_state = 'open'
+                      assign accordion_state = 'open-by-default-on-mobile'
                     endif
                   %}
-                  <accordion-custom>
+                  <accordion-custom  {{ accordion_state }}>
                     <details
                       id="Details-menu-drawer-{{ link.handle }}"
-                      {{ accordion_state }}
                     >
                       <summary
                         id="HeaderDrawer-{{ link.handle }}"

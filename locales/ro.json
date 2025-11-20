@@ -51,7 +51,7 @@
       "other": "{{ count }} filtre aplicate",
       "few": "{{ count }} filtre aplicate"
     },
-    "account": "Deschide meniul Cont",
+    "account": "Cont",
     "cart": "Coș",
     "cart_count": "Total articole în coș",
     "menu": "Meniu",
@@ -61,12 +61,10 @@
     "loading_product_recommendations": "Se încarcă recomandările de produse",
     "discount": "Aplică un cod de reducere",
     "discount_applied": "Cod de reducere aplicat: {{ code }}",
-    "open_cart_drawer": "Deschide coșul",
     "pause_video": "Pune pe pauză videoclipul",
     "inventory_status": "Stare inventar",
     "find_country": "Găsește țara",
-    "localization_region_and_language": "Deschide instrumentul de selectare a regiunii și limbii",
-    "open_search_modal": "Deschide fereastra de căutare",
+    "localization_region_and_language": "Selectorul de regiune și de limbă",
     "decrease_quantity": "Scade cantitatea",
     "increase_quantity": "Crește cantitatea",
     "quantity": "Cantitate",
@@ -243,7 +241,13 @@
     "recipient_form_fields_hidden": "Câmpurile formularului pentru destinatar sunt acum ascunse",
     "recipient_form_error": "A apărut o eroare la trimiterea formularului",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} caractere folosite",
-    "terms_and_policies": "Termeni și politici"
+    "terms_and_policies": "Termeni și politici",
+    "pagination": {
+      "nav_label": "Navigare în paginare",
+      "previous": "Anteriorul",
+      "next": "Următorul",
+      "page": "Pagina {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -277,7 +281,13 @@
       "adding_to_cart": "Se adaugă...",
       "add_to_cart_error": "Eroare la adăugarea în coș",
       "sold_out": "Stoc epuizat",
-      "unavailable": "Indisponibil"
+      "unavailable": "Indisponibil",
+      "quantity_error_max": "Acest produs are un maxim de {{ maximum }}",
+      "quantity": "Cantitate",
+      "quantity_increments": "Incrementări de {{ increment }}",
+      "quantity_minimum": "Minim {{ minimum }}",
+      "quantity_maximum": "Maxim {{ maximum }}",
+      "in_cart": "în coș"
     }
   },
   "fields": {

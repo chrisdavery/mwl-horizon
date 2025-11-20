@@ -156,6 +156,9 @@ class CartItemsComponent extends Component {
         const newCartHiddenItemCount = newSectionHTML.querySelector('[ref="cartItemCount"]')?.textContent;
         const newCartItemCount = newCartHiddenItemCount ? parseInt(newCartHiddenItemCount, 10) : 0;
 
+        // Update data-cart-quantity for all matching variants
+        this.#updateQuantitySelectors(parsedResponseText);
+
         this.dispatchEvent(
           new CartUpdateEvent({}, this.sectionId, {
             itemCount: newCartItemCount,
@@ -165,6 +168,8 @@ class CartItemsComponent extends Component {
         );
 
         morphSection(this.sectionId, parsedResponseText.sections[this.sectionId]);
+
+        this.#updateCartQuantitySelectorButtonStates();
       })
       .catch((error) => {
         console.error(error);
@@ -222,6 +227,9 @@ class CartItemsComponent extends Component {
     const cartItemsHtml = event.detail.data.sections?.[this.sectionId];
     if (cartItemsHtml) {
       morphSection(this.sectionId, cartItemsHtml);
+
+      // Update button states for all cart quantity selectors after morph
+      this.#updateCartQuantitySelectorButtonStates();
     } else {
       sectionRenderer.renderSection(this.sectionId, { cache: false });
     }
@@ -239,6 +247,46 @@ class CartItemsComponent extends Component {
    */
   #enableCartItems() {
     this.classList.remove('cart-items-disabled');
+  }
+
+  /**
+   * Updates quantity selectors for all matching variants in the cart.
+   * @param {Object} updatedCart - The updated cart object.
+   * @param {Array<{variant_id: number, quantity: number}>} [updatedCart.items] - The cart items.
+   */
+  #updateQuantitySelectors(updatedCart) {
+    if (!updatedCart.items) return;
+
+    for (const item of updatedCart.items) {
+      const variantId = item.variant_id.toString();
+      const selectors = document.querySelectorAll(
+        `quantity-selector-component[data-variant-id="${variantId}"], cart-quantity-selector-component[data-variant-id="${variantId}"]`
+      );
+
+      for (const selector of selectors) {
+        const input = selector.querySelector('input[data-cart-quantity]');
+        if (!input) continue;
+
+        input.setAttribute('data-cart-quantity', item.quantity.toString());
+
+        // Update the quantity selector's internal state
+        if ('updateCartQuantity' in selector && typeof selector.updateCartQuantity === 'function') {
+          selector.updateCartQuantity();
+        }
+      }
+    }
+  }
+
+  /**
+   * Updates button states for all cart quantity selector components.
+   */
+  #updateCartQuantitySelectorButtonStates() {
+    const cartQuantitySelectors = document.querySelectorAll('cart-quantity-selector-component');
+    for (const selector of cartQuantitySelectors) {
+      if ('updateButtonStates' in selector && typeof selector.updateButtonStates === 'function') {
+        selector.updateButtonStates();
+      }
+    }
   }
 
   /**

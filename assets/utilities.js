@@ -587,6 +587,16 @@ export function changeMetaThemeColor(colorSourceElement) {
   if (metaThemeColor) metaThemeColor.setAttribute('content', containerStyle.backgroundColor);
 }
 
+/**
+ * Gets the `view` URL search parameter value, if it exists.
+ * Useful for Section Rendering API calls to get HTML markup for the correct template view.
+ * Primarily used in testing alternative template views.
+ * @returns {string | null} The view parameter value, or null if it doesn't exist
+ */
+export function getViewParameterValue() {
+  return new URLSearchParams(window.location.search).get('view');
+}
+
 class Scheduler {
   /** @type {Set<() => void>} */
   #queue = new Set();

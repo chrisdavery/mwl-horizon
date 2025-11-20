@@ -5,6 +5,11 @@
   type="module"
   fetchpriority="low"
 ></script>
+<script
+  src="{{ 'component-cart-quantity-selector.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
 
 <div
   {{ block.shopify_attributes }}
@@ -263,6 +268,7 @@
                   %}
                   {% render 'quantity-selector',
                     product: item.product,
+                    variant: item.variant,
                     in_cart_quantity: item.quantity,
                     line_index: item.index,
                     min: 0,

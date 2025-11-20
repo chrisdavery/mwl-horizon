@@ -50,7 +50,7 @@
       "one": "Đã áp dụng {{ count }} bộ lọc",
       "other": "Đã áp dụng {{ count }} bộ lọc"
     },
-    "account": "Mở menu tài khoản",
+    "account": "Tài khoản",
     "cart": "Giỏ hàng",
     "cart_count": "Tổng mặt hàng trong giỏ hàng",
     "menu": "Menu",
@@ -60,12 +60,10 @@
     "loading_product_recommendations": "Đang tải đề xuất sản phẩm",
     "discount": "Áp dụng một mã giảm giá",
     "discount_applied": "Đã áp dụng mã giảm giá: {{ code }}",
-    "open_cart_drawer": "Mở giỏ hàng",
     "inventory_status": "Trạng thái hàng trong kho",
     "pause_video": "Tạm dừng video",
     "find_country": "Tìm quốc gia",
-    "localization_region_and_language": "Mở bộ chọn khu vực và ngôn ngữ",
-    "open_search_modal": "Mở công cụ tìm kiếm",
+    "localization_region_and_language": "Bộ chọn vùng và ngôn ngữ",
     "decrease_quantity": "Giảm số lượng",
     "increase_quantity": "Tăng số lượng",
     "rating": "Sản phẩm này được đánh giá {{ rating }}/5",
@@ -238,7 +236,13 @@
     "recipient_form_fields_hidden": "Các trường biểu mẫu cho người nhận hiện đã được ẩn",
     "recipient_form_error": "Đã xảy ra lỗi khi gửi biểu mẫu",
     "product_custom_property_character_count": "Đã sử dụng {{ used_chars }}/{{ max_chars }} ký tự",
-    "terms_and_policies": "Điều khoản và chính sách"
+    "terms_and_policies": "Điều khoản và chính sách",
+    "pagination": {
+      "nav_label": "Điều hướng phân trang",
+      "previous": "Trước",
+      "next": "Tiếp",
+      "page": "Trang {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -272,7 +276,13 @@
       "adding_to_cart": "Đang thêm...",
       "add_to_cart_error": "Lỗi khi thêm vào giỏ hàng",
       "sold_out": "Hết hàng",
-      "unavailable": "Không khả dụng"
+      "unavailable": "Không khả dụng",
+      "quantity_error_max": "Mặt hàng này có tối đa {{ maximum }}",
+      "quantity": "Số lượng",
+      "quantity_increments": "Mức gia tăng {{ increment }}",
+      "quantity_minimum": "Tối thiểu {{ minimum }}",
+      "quantity_maximum": "Tối đa {{ maximum }}",
+      "in_cart": "trong giỏ hàng"
     }
   },
   "fields": {

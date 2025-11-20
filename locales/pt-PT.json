@@ -51,7 +51,7 @@
       "other": "{{ count }} filtros aplicados",
       "many": "{{ count }} filtros aplicados"
     },
-    "account": "Abrir menu da conta",
+    "account": "Conta",
     "cart": "Carrinho",
     "cart_count": "Total de itens no carrinho",
     "menu": "Menu",
@@ -62,11 +62,9 @@
     "discount": "Aplicar um código de desconto",
     "discount_menu": "Códigos de desconto",
     "discount_applied": "Código de desconto aplicado: {{ code }}",
-    "open_cart_drawer": "Abrir carrinho",
     "pause_video": "Colocar vídeo em pausa",
     "inventory_status": "Estado do inventário",
-    "localization_region_and_language": "Abrir seletor de região e idioma",
-    "open_search_modal": "Abrir pesquisa",
+    "localization_region_and_language": "Seletor de região e idioma",
     "find_country": "Localizar país",
     "decrease_quantity": "Diminuir quantidade",
     "increase_quantity": "Aumentar quantidade",
@@ -243,7 +241,13 @@
     "recipient_form_fields_hidden": "Os campos do formulário de destinatário estão agora ocultos",
     "recipient_form_error": "Ocorreu um erro na submissão do formulário",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} caracteres utilizados",
-    "terms_and_policies": "Termos e políticas"
+    "terms_and_policies": "Termos e políticas",
+    "pagination": {
+      "nav_label": "Navegação por paginação",
+      "previous": "Anterior",
+      "next": "Seguinte",
+      "page": "Página {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -277,7 +281,13 @@
       "adding_to_cart": "A adicionar...",
       "add_to_cart_error": "Erro ao adicionar ao carrinho",
       "sold_out": "Esgotado",
-      "unavailable": "Indisponível"
+      "unavailable": "Indisponível",
+      "quantity_error_max": "Este item tem um máximo de {{ maximum }}",
+      "quantity": "Quantidade",
+      "quantity_increments": "Incrementos de {{ increment }}",
+      "quantity_minimum": "Mínimo de {{ minimum }}",
+      "quantity_maximum": "Máximo de {{ maximum }}",
+      "in_cart": "no carrinho"
     }
   },
   "fields": {

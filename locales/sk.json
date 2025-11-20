@@ -52,7 +52,7 @@
       "few": "Použité filtre: {{ count }}",
       "many": "Použité filtre: {{ count }}"
     },
-    "account": "Otvoriť ponuku konta",
+    "account": "Konto",
     "cart": "Košík",
     "cart_count": "Celkový počet položiek v košíku",
     "menu": "Ponuka",
@@ -62,12 +62,10 @@
     "loading_product_recommendations": "Načítavajú sa odporúčané produkty",
     "discount": "Použiť zľavový kód",
     "discount_applied": "Použitý zľavový kód: {{ code }}",
-    "open_cart_drawer": "Otvoriť košík",
     "inventory_status": "Stav zásob",
     "pause_video": "Pozastaviť video",
     "find_country": "Nájsť krajinu",
-    "localization_region_and_language": "Otvoriť výber oblasti a jazyka",
-    "open_search_modal": "Otvoriť vyhľadávanie",
+    "localization_region_and_language": "Výber oblasti a jazyka",
     "decrease_quantity": "Znížiť množstvo",
     "increase_quantity": "Zvýšiť množstvo",
     "rating": "Hodnotenie tohto produktu je {{ rating }} z 5",
@@ -248,7 +246,13 @@
     "recipient_form_fields_hidden": "Polia formulára príjemcu sú teraz skryté",
     "recipient_form_error": "There was an error with the form submission",
     "product_custom_property_character_count": "Počet použitých znakov: {{ used_chars }} z {{ max_chars }}",
-    "terms_and_policies": "Pravidlá a podmienky"
+    "terms_and_policies": "Pravidlá a podmienky",
+    "pagination": {
+      "nav_label": "Navigácia po stránkach",
+      "previous": "Predchádzajúce",
+      "next": "Nasledujúce",
+      "page": "Stránka {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -282,7 +286,13 @@
       "adding_to_cart": "Pridávanie...",
       "add_to_cart_error": "Chyba pri pridávaní do košíka",
       "sold_out": "Vypredané",
-      "unavailable": "Nedostupné"
+      "unavailable": "Nedostupné",
+      "quantity_error_max": "Táto položka má maximum {{ maximum }}",
+      "quantity": "Množstvo",
+      "quantity_increments": "Prírastky po {{ increment }}",
+      "quantity_minimum": "Minimum {{ minimum }}",
+      "quantity_maximum": "Maximum {{ maximum }}",
+      "in_cart": "v košíku"
     }
   },
   "fields": {

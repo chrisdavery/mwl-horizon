@@ -6,7 +6,10 @@
   @param {object} image - The image object from article.image
 {%- enddoc -%}
 
-{%- assign block_settings = block.settings -%}
+{% liquid
+  assign block_settings = block.settings
+  assign image = closest.article.image
+%}
 
 <div
   class="blog-post-featured-image blog-post-featured-image--{{ block.id }} blog-post-featured-image--height-{{ block_settings.height }} spacing-style size-style"

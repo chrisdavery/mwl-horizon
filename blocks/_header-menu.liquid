@@ -860,13 +860,116 @@
       "visible_if": "{{ block.settings.menu != blank }}"
     },
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "primary"
+    },
+    {
+      "type": "header",
+      "content": "t:content.typography"
+    },
+    {
+      "type": "select",
+      "id": "type_font_primary_size",
+      "label": "t:settings.top_level_size",
+      "options": [
+        {
+          "value": "0.625rem",
+          "label": "10px"
+        },
+        {
+          "value": "0.75rem",
+          "label": "12px"
+        },
+        {
+          "value": "0.875rem",
+          "label": "14px"
+        },
+        {
+          "value": "1rem",
+          "label": "16px"
+        },
+        {
+          "value": "1.125rem",
+          "label": "18px"
+        }
+      ],
+      "default": "1rem"
+    },
+    {
+      "type": "select",
+      "id": "menu_font_style",
+      "label": "t:settings.submenu_text_style",
+      "options": [
+        {
+          "value": "regular",
+          "label": "t:options.small"
+        },
+        {
+          "value": "inverse",
+          "label": "t:options.medium"
+        },
+        {
+          "value": "inverse_large",
+          "label": "t:options.large"
+        }
+      ],
+      "default": "inverse"
+    },
+    {
+      "type": "select",
+      "id": "type_font_primary_link",
+      "label": "t:settings.font",
+      "options": [
+        {
+          "value": "body",
+          "label": "t:options.body"
+        },
+        {
+          "value": "subheading",
+          "label": "t:options.subheading"
+        },
+        {
+          "value": "heading",
+          "label": "t:options.heading"
+        },
+        {
+          "value": "accent",
+          "label": "t:options.accent"
+        }
+      ],
+      "default": "heading"
+    },
+    {
+      "type": "select",
+      "id": "type_case_primary_link",
+      "label": "t:settings.text_case",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.default"
+        },
+        {
+          "value": "uppercase",
+          "label": "t:options.uppercase"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "header",
+      "content": "t:content.submenu_feature"
+    },
+    {
       "type": "select",
       "id": "menu_style",
-      "label": "t:settings.style",
+      "label": "t:settings.media_type",
+      "info": "t:info.media_type_info",
       "options": [
         {
           "value": "text",
-          "label": "t:options.text_only"
+          "label": "t:options.none"
         },
         {
           "value": "megamenu_cards",
@@ -939,194 +1042,6 @@
       "unit": "px",
       "default": 0,
       "visible_if": "{{ block.settings.menu_style != 'text' }}"
-    },
-    {
-      "type": "select",
-      "id": "product_title_case",
-      "label": "t:settings.product_title_case",
-      "options": [
-        {
-          "value": "default",
-          "label": "t:options.default"
-        },
-        {
-          "value": "uppercase",
-          "label": "t:options.uppercase"
-        }
-      ],
-      "default": "default",
-      "visible_if": "{{ block.settings.menu_style == 'featured_products' }}"
-    },
-    {
-      "type": "select",
-      "id": "collection_title_case",
-      "label": "t:settings.collection_title_case",
-      "options": [
-        {
-          "value": "default",
-          "label": "t:options.default"
-        },
-        {
-          "value": "uppercase",
-          "label": "t:options.uppercase"
-        }
-      ],
-      "default": "default",
-      "visible_if": "{{ block.settings.menu_style == 'featured_collections' or block.settings.menu_style == 'collection_images' }}"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:settings.color_scheme",
-      "default": "primary"
-    },
-    {
-      "type": "select",
-      "id": "menu_font_style",
-      "label": "t:settings.text_hierarchy",
-      "options": [
-        {
-          "value": "regular",
-          "label": "t:options.classic"
-        },
-        {
-          "value": "inverse",
-          "label": "t:options.inverse"
-        },
-        {
-          "value": "inverse_large",
-          "label": "t:options.inverse_large"
-        }
-      ],
-      "default": "inverse"
-    },
-    {
-      "type": "select",
-      "id": "type_font_primary_link",
-      "label": "t:settings.font",
-      "options": [
-        {
-          "value": "body",
-          "label": "t:options.body"
-        },
-        {
-          "value": "subheading",
-          "label": "t:options.subheading"
-        },
-        {
-          "value": "heading",
-          "label": "t:options.heading"
-        },
-        {
-          "value": "accent",
-          "label": "t:options.accent"
-        }
-      ],
-      "default": "heading"
-    },
-    {
-      "type": "select",
-      "id": "type_case_primary_link",
-      "label": "t:settings.text_case",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:options.default"
-        },
-        {
-          "value": "uppercase",
-          "label": "t:options.uppercase"
-        }
-      ],
-      "default": "none"
-    },
-    {
-      "type": "header",
-      "content": "t:content.submenu_feature"
-    },
-    {
-      "type": "select",
-      "id": "type_font_secondary_link",
-      "label": "t:settings.font",
-      "options": [
-        {
-          "value": "body",
-          "label": "t:options.body"
-        },
-        {
-          "value": "subheading",
-          "label": "t:options.subheading"
-        },
-        {
-          "value": "heading",
-          "label": "t:options.heading"
-        },
-        {
-          "value": "accent",
-          "label": "t:options.accent"
-        }
-      ],
-      "default": "subheading"
-    },
-    {
-      "type": "select",
-      "id": "type_case_secondary_link",
-      "label": "t:settings.text_case",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:options.default"
-        },
-        {
-          "value": "uppercase",
-          "label": "t:options.uppercase"
-        }
-      ],
-      "default": "none"
-    },
-    {
-      "type": "header",
-      "content": "t:content.typography_tertiary"
-    },
-    {
-      "type": "select",
-      "id": "type_font_tertiary_link",
-      "label": "t:settings.font",
-      "options": [
-        {
-          "value": "body",
-          "label": "t:options.body"
-        },
-        {
-          "value": "subheading",
-          "label": "t:options.subheading"
-        },
-        {
-          "value": "heading",
-          "label": "t:options.heading"
-        },
-        {
-          "value": "accent",
-          "label": "t:options.accent"
-        }
-      ],
-      "default": "body"
-    },
-    {
-      "type": "select",
-      "id": "type_case_tertiary_link",
-      "label": "t:settings.text_case",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:options.default"
-        },
-        {
-          "value": "uppercase",
-          "label": "t:options.uppercase"
-        }
-      ],
-      "default": "none"
     },
     {
       "type": "header",

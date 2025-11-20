@@ -26,6 +26,7 @@
 <div
   class="section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} spacing-style"
   style="{% render 'spacing-style', settings: section.settings %}"
+  data-testid="collection-links-{{ section.id }}"
 >
   <collection-links-component
     layout="{{ section.settings.layout }}"
@@ -137,9 +138,11 @@
       grid-template-columns: 1fr var(--template-column-ratio);
       grid-template-areas: 'text image';
 
-      &[reverse] {
-        grid-template-areas: 'image text';
-        grid-template-columns: var(--template-column-ratio) 1fr;
+      @media (min-width: 749px) {
+        &[reverse] {
+          grid-template-areas: 'image text';
+          grid-template-columns: var(--template-column-ratio) 1fr;
+        }
       }
 
       .collection-links__container {

@@ -50,7 +50,7 @@
       "one": "Приложен е {{ count }} филтър",
       "other": "Приложени са {{ count }} филтъра"
     },
-    "account": "Отваряне на менюто на профила",
+    "account": "Профил",
     "cart": "Количка",
     "cart_count": "Общо артикули в количката",
     "menu": "Меню",
@@ -60,12 +60,10 @@
     "loading_product_recommendations": "Зареждане на препоръчани продукти.",
     "discount": "Прилагане на код за отстъпка",
     "discount_applied": "Приложен код за отстъпка: {{ code }}",
-    "open_cart_drawer": "Отваряне на количката",
     "inventory_status": "Статус на стоковите запаси",
     "pause_video": "Пауза на видеоклипа",
     "find_country": "Търсене на държава",
-    "localization_region_and_language": "Отваряне на диалогов прозорец за избор на регион и език",
-    "open_search_modal": "Отваряне на търсенето",
+    "localization_region_and_language": "Инструмент за избор на регион и език",
     "decrease_quantity": "Намаляване на количеството",
     "increase_quantity": "Увеличаване на количеството",
     "quantity": "Количество",
@@ -238,7 +236,13 @@
     "recipient_form_fields_hidden": "Полетата във формуляра за получателя вече са скрити",
     "recipient_form_error": "Възникна грешка при подаването на формуляра",
     "product_custom_property_character_count": "Използвани знаци: {{ used_chars }}/{{ max_chars }}",
-    "terms_and_policies": "Правила и условия"
+    "terms_and_policies": "Правила и условия",
+    "pagination": {
+      "nav_label": "Навигиране в странирането",
+      "previous": "Предишна",
+      "next": "Следваща",
+      "page": "Страница {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -272,7 +276,13 @@
       "added_to_cart": "Добавено в количката",
       "add_to_cart_error": "Грешка при добавянето в количката",
       "sold_out": "Изчерпано",
-      "unavailable": "Неналично"
+      "unavailable": "Неналично",
+      "quantity_error_max": "За този артикул има максимум от {{ maximum }}",
+      "quantity": "Количество",
+      "quantity_increments": "Стъпки от {{ increment }}",
+      "quantity_minimum": "Минимум: {{ minimum }}",
+      "quantity_maximum": "Максимум: {{ maximum }}",
+      "in_cart": "в количката"
     }
   },
   "fields": {

@@ -50,7 +50,7 @@
       "one": "{{ count }} filter brukt",
       "other": "{{ count }} filtre brukt"
     },
-    "account": "Åpne kontomenyen",
+    "account": "Konto",
     "cart": "Handlekurv",
     "cart_count": "Totalt antall varer i handlekurven",
     "menu": "Meny",
@@ -61,12 +61,10 @@
     "discount": "Bruk en rabattkode",
     "discount_menu": "Rabattkoder",
     "discount_applied": "Brukt rabattkode: {{ code }}",
-    "open_cart_drawer": "Åpne handlekurven",
     "pause_video": "Sett videoen på pause",
     "inventory_status": "Lagerstatus",
     "find_country": "Finn land",
-    "localization_region_and_language": "Åpne område- og språkvelgeren",
-    "open_search_modal": "Åpne søk",
+    "localization_region_and_language": "Region- og språkvelger",
     "decrease_quantity": "Reduser antallet",
     "increase_quantity": "Øk antallet",
     "quantity": "Antall",
@@ -238,7 +236,13 @@
     "recipient_form_fields_hidden": "Feltene i mottakerskjemaet er nå skjult",
     "recipient_form_error": "Det oppsto en feil ved innsendingen av skjemaet",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} tegn er brukt",
-    "terms_and_policies": "Vilkår og betingelser"
+    "terms_and_policies": "Vilkår og betingelser",
+    "pagination": {
+      "nav_label": "Sideinndelingsnavigasjon",
+      "previous": "Forrige",
+      "next": "Neste",
+      "page": "Side {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -272,7 +276,13 @@
       "adding_to_cart": "Legger til ...",
       "add_to_cart_error": "Problem med å legge til i handlekurven",
       "sold_out": "Utsolgt",
-      "unavailable": "Utilgjengelig"
+      "unavailable": "Utilgjengelig",
+      "quantity_error_max": "Denne varen har et maksimumsantall på {{ maximum }}",
+      "quantity": "Antall",
+      "quantity_increments": "Økninger på {{ increment }}",
+      "quantity_minimum": "Minimum {{ minimum }}",
+      "quantity_maximum": "Maksimum {{ maximum }}",
+      "in_cart": "i handlekurv"
     }
   },
   "fields": {

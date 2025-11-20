@@ -181,7 +181,9 @@
     "blog_posts_grid": "Blogové příspěvky: Mřížka",
     "blog_posts_carousel": "Blogové příspěvky: Karusel",
     "blog_posts_editorial": "Blogové příspěvky: Úvodník",
-    "excerpt": "Úryvek"
+    "excerpt": "Úryvek",
+    "footer_password": "Zápatí stránky s heslem",
+    "policies_and_links": "Zásady a odkazy"
   },
   "settings": {
     "alignment": "Zarovnání",
@@ -494,7 +496,6 @@
     "card_hover_effect": "Efekt při najetí kurzorem na kartu",
     "card_size": "Velikost karty",
     "collection_title_case": "Interní balení na název kolekce",
-    "effects": "Efekty",
     "inventory_threshold": "Nízký práh skladových zásob",
     "mobile_card_size": "Velikost mobilní karty",
     "page": "Stránka",
@@ -540,9 +541,15 @@
     },
     "blog": "Blog",
     "post_count": "Počet příspěvků",
+    "animation": "Animace",
     "top_level_size": "Velikost nejvyšší úrovně",
     "submenu_text_style": "Styl textu podnabídky",
-    "empty_cart_button_link": "Odkaz na tlačítko vyprázdnit košík"
+    "empty_cart_button_link": "Tlačítkový odkaz prázdného košíku",
+    "auto_load_products": "Automaticky načítat produkty při rolování",
+    "products_per_page": "Produktů na stránku",
+    "block_link": "Odkaz bloku",
+    "custom_mobile_media": "Vlastní mobilní média",
+    "stack_media_on_mobile": "Skládat média"
   },
   "options": {
     "adapt_to_image": "Přizpůsobení obrázku",
@@ -923,10 +930,55 @@
     "block_link": "Odkaz bloku",
     "submenu_feature": "Prvek podnabídky",
     "cart_features": "Funkce košíku",
-    "email_signup": "Přihlášení k odběru e-mailů"
+    "email_signup": "Přihlášení k odběru e-mailů",
+    "mobile_media": "Mobilní média",
+    "mobile_media_2": "Mobilní média 2"
   },
   "html_defaults": {
-    "share_information_about_your": "<p>Informujte zákazníky o své značce. Zároveň můžete popsat některý z produktů, oznámit důležité informace nebo přivítat zákazníky ve svém obchodě.</p>"
+    "share_information_about_your": "<p>Informujte zákazníky o své značce. Zároveň můžete popsat některý z produktů, oznámit důležité informace nebo přivítat zákazníky ve svém obchodě.</p>",
+    "bestseller_h2": "<h2>Nejprodávanější</h2>",
+    "bestseller_h3": "<h3>Nejprodávanější</h3>",
+    "bestseller": "<p>Bestseller</p>",
+    "build_better": "<p>Věříme, že věci lze dělat lépe</p>",
+    "contact_us": "<h2>Kontaktujte nás</h2>",
+    "discover_bestsellers": "<p>Objevte nejprodávanější produkty, které si získaly srdce našich zákazníků díky skvělé kombinaci funkčnosti a stylu.</p>",
+    "everythings_starts_with_why": "<p>U všeho, co děláme, začínáme otázkou „proč“</p>",
+    "explore_latest_products": "<p>Prozkoumejte naše nejnovější produkty.</p>",
+    "faq": "<h3>Časté dotazy</h3>",
+    "first_to_know": "<p>Buďte první, kdo se dozví o nových kolekcích a speciálních nabídkách.</p>",
+    "free_returns": "<p>Bezplatné vrácení do 30 dnů</p>",
+    "free_shipping_over": "<p>Doprava zdarma nad 50 $</p>",
+    "goal_for_every_customer": "<p>Naším cílem je, aby byl každý zákazník se svým nákupem zcela spokojen. Pokud tomu tak není, dejte nám vědět a uděláme vše pro to, abychom to společně dali do pořádku.</p>",
+    "home_to_shirts": "<p>Domů → Košile</p>",
+    "intentional_design": "<h2>Promyšlený design</h2>",
+    "introducing_h2": "<h2><em>Představujeme</em></h2>",
+    "latest_products": "<p>Představujeme naše nejnovější produkty, vytvořené speciálně pro tuto sezónu. Nakupujte své favority dřív, než zmizí!</p>",
+    "made_local_and_global": "<p>Naše produkty vyrábíme lokálně i globálně. Výrobní partnery pečlivě vybíráme, aby byly naše produkty kvalitní a měly férovou cenu.</p>",
+    "made_with_care_h2": "<h2>Vyrobeno s péčí</h2>",
+    "made_with_care_extended": "<p>S péčí vyrobený a bezpodmínečně milovaný našimi zákazníky – tento ikonický bestseller předčí všechna očekávání.</p>",
+    "made_with_care": "<p>Vyrobeno s péčí a bezpodmínečně milováno našimi zákazníky.</p>",
+    "make_things_better_extended": "<p>Vyrábíme věci, které lépe fungují a déle vydrží. Naše produkty řeší skutečné problémy díky čistému designu a poctivým materiálům.</p>",
+    "make_things_better": "<p>Vyrábíme věci, které lépe fungují a déle vydrží.</p>",
+    "may_also_like": "<h4>Mohlo by se vám líbit</h4>",
+    "new_arrivals_h1": "<h1>Novinky</h1>",
+    "new_arrivals_h2": "<h2>Novinky</h2>",
+    "new_arrivals_h3": "<h3>Novinky</h3>",
+    "product_launch": "<p>Nahlédněte do zákulisí našeho nejnovějšího uvedení produktu.</p>",
+    "product_story": "<p>V srdci každého produktu je jedinečný příběh, který vychází z naší vášně pro kvalitu a inovace. Každý produkt zpříjemní váš každodenní život a vykouzlí radost.</p>",
+    "real_people": "<p>Skuteční lidé vyrábějí skvělé produkty</p>",
+    "related_product": "<h3>Související produkty</h3>",
+    "return_policy": "<h2>Jaké jsou podmínky vrácení?</h2>",
+    "reviews": "<p>★★★★★ 368 hodnocení</p>",
+    "shipping_based_on_location": "<p>Dopravu vypočítáváme podle vaší lokality a položek v objednávce. Cenu dopravy vždy uvidíte ještě před nákupem.</p>",
+    "shop_by_collection": "<h3>Nakupujte podle kolekcí</h3>",
+    "signature_products": "<h2>Náš ikonický produkt</h2>",
+    "styled_with": "<h3>Sladěno s</h3>",
+    "subscribe": "<h2>Přihlaste se k odběru našich e‑mailů</h2>",
+    "team_with_goal": "<h2>Tým s jasným cílem</h2>",
+    "unable_to_accept_returns": "<p>U některého zboží nemůžeme vrácení přijmout. Toto zboží bude před nákupem jasně označeno.</p>",
+    "work_quickly_to_ship": "<p>Vaši objednávku se budeme snažit expedovat co nejrychleji. Jakmile bude objednávka odeslána, obdržíte e‑mail s dalšími informacemi. Doba doručení se liší podle vaší lokality.</p>",
+    "join_our_email_list": "<h2>Připojte se k našemu seznamu e-mailů</h2>",
+    "get_exclusive_deals_and_early_access_to_new_products": "<p>Získejte exkluzivní nabídky a včasný přístup k novým produktům.</p>"
   },
   "text_defaults": {
     "button_label": "Nakupovat nyní",
@@ -939,7 +991,27 @@
     "sign_up": "Zaregistrovat se",
     "welcome_to_our_store": "Vítejte v našem obchodě",
     "be_bold": "Tučné.",
-    "shop_our_latest_arrivals": "Vyberte si z novinek v našem obchodě!"
+    "shop_our_latest_arrivals": "Vyberte si z novinek v našem obchodě!",
+    "are_purchases_final_sale": "Jsou některé nákupy bez možnosti vrácení?",
+    "care_instructions": "Pokyny k péči",
+    "cart": "Košík",
+    "discover_collection": "Objevte kolekci",
+    "fit": "střih",
+    "how_much_for_shipping": "Kolik stojí doprava?",
+    "learn_more": "Zjistit více",
+    "manufacturing": "Výroba",
+    "materials": "Materiály",
+    "return_policy": "Podmínky vrácení",
+    "shipping": "Doprava",
+    "shop_now_button_label": "Nakupovat",
+    "sign_up_button_label": "Zaregistrovat se",
+    "submit_button_label": "Odeslat",
+    "up_the_ante": "Zvyšte\nsvé\nnároky",
+    "view_all_button_label": "Zobrazit vše",
+    "what_is_return_policy": "Jaké jsou podmínky vrácení?",
+    "when_will_order_arrive": "Kdy mi dorazí objednávka?",
+    "where_are_products_made": "Kde se vyrábějí vaše produkty?",
+    "faq": "FAQ"
   },
   "info": {
     "video_alt_text": "Popište video pro uživatele asistivních technologií",
@@ -965,7 +1037,7 @@
     "pills_usage": "Používá se pro použité filtry, slevové kódy a návrhy vyhledávání",
     "hide_logo_on_home_page_help": "Pokud je aktivní plovoucí záhlaví, logo zůstane viditelné.",
     "media_type_info": "Prvky se načítají z odkazů v nabídce",
-    "logo_height": "Ovlivňuje pouze logo v hlavičce"
+    "logo_height": "Ovlivňuje pouze logo v záhlaví"
   },
   "categories": {
     "product_list": "Propagovaná kolekce",
@@ -984,6 +1056,7 @@
     "decorative": "Dekorativní",
     "products": "Produkty",
     "other_sections": "Ostatní",
-    "storytelling": "Vyprávění příběhů"
+    "storytelling": "Vyprávění příběhů",
+    "text": "Text"
   }
 }

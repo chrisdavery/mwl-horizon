@@ -51,7 +51,7 @@
       "other": "{{ count }} filtres appliqués",
       "many": "{{ count }} filtres appliqués"
     },
-    "account": "Ouvrir le menu du compte",
+    "account": "Compte",
     "cart": "Panier",
     "cart_count": "Nombre total d’articles dans le panier",
     "menu": "Menu",
@@ -62,12 +62,10 @@
     "discount": "Appliquer un code de réduction",
     "discount_menu": "Codes de réduction",
     "discount_applied": "Code de réduction appliqué : {{ code }}",
-    "open_cart_drawer": "Ouvrir le panier",
     "inventory_status": "Statut du stock",
     "pause_video": "Mettre la vidéo en pause",
     "find_country": "Trouver un pays",
-    "localization_region_and_language": "Ouvrir le sélecteur de région et de langue",
-    "open_search_modal": "Ouvrir la recherche",
+    "localization_region_and_language": "Sélecteur de région et de langue",
     "decrease_quantity": "Diminuer la quantité",
     "increase_quantity": "Augmenter la quantité",
     "quantity": "Quantité",
@@ -243,7 +241,13 @@
     "recipient_form_fields_hidden": "Les champs du formulaire de destinataire sont désormais masqués",
     "recipient_form_error": "La soumission du formulaire présentait une erreur",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} caractères utilisés",
-    "terms_and_policies": "Conditions générales et politiques"
+    "terms_and_policies": "Conditions générales et politiques",
+    "pagination": {
+      "nav_label": "Navigation par pagination",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "page": "Page {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -277,7 +281,13 @@
       "adding_to_cart": "Ajout...",
       "add_to_cart_error": "Erreur lors de l’ajout au panier",
       "sold_out": "Épuisé",
-      "unavailable": "Non disponible(s)"
+      "unavailable": "Non disponible(s)",
+      "quantity_error_max": "Cet article a un maximum de {{ maximum }}",
+      "quantity": "Quantité",
+      "quantity_increments": "Incréments de {{ increment }}",
+      "quantity_minimum": "Minimum de {{ minimum }}",
+      "quantity_maximum": "Maximum de {{ maximum }}",
+      "in_cart": "dans le panier"
     }
   },
   "fields": {

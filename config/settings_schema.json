@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "theme_name": "Horizon",
-    "theme_version": "3.0.0",
+    "theme_version": "3.1.0",
     "theme_author": "Shopify",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
@@ -1785,19 +1785,23 @@
         "label": "t:settings.font_price",
         "options": [
           {
-            "value": "primary",
+            "value": "body",
             "label": "t:options.body"
           },
           {
-            "value": "secondary",
+            "value": "subheading",
             "label": "t:options.subheading"
           },
           {
-            "value": "tertiary",
-            "label": "t:options.tertiary"
+            "value": "heading",
+            "label": "t:options.heading"
+          },
+          {
+            "value": "accent",
+            "label": "t:options.accent"
           }
         ],
-        "default": "secondary"
+        "default": "subheading"
       },
       {
         "type": "checkbox",
@@ -1805,6 +1809,10 @@
         "label": "t:settings.auto_open_cart_drawer",
         "default": false,
         "visible_if": "{{ settings.cart_type == 'drawer' }}"
+      },
+      {
+        "type": "header",
+        "content": "t:content.cart_features"
       },
       {
         "type": "checkbox",

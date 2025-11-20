@@ -103,6 +103,7 @@ class MarqueeComponent extends Component {
     const marqueeRepeatedItemWidth = marqueeItems[0]?.offsetWidth ?? 1;
     const count = marqueeRepeatedItemWidth === 0 ? 1 : Math.ceil(marqueeWidth / marqueeRepeatedItemWidth);
     const speed = Math.sqrt(count) * speedFactor;
+
     return speed;
   }
 
@@ -156,8 +157,11 @@ class MarqueeComponent extends Component {
 
   #removeRepeatedItems(numberOfCopies = this.#calculateNumberOfCopies()) {
     const { content } = this.refs;
+    const children = Array.from(content.children);
 
-    for (let i = 0; i < numberOfCopies; i++) {
+    const itemsToRemove = Math.min(numberOfCopies, children.length - 1);
+
+    for (let i = 0; i < itemsToRemove; i++) {
       content.lastElementChild?.remove();
     }
   }

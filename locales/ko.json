@@ -50,7 +50,7 @@
       "one": "{{ count }}개 필터 적용됨",
       "other": "{{ count }}개 필터 적용됨"
     },
-    "account": "계정 메뉴 열기",
+    "account": "계정",
     "cart": "카트",
     "cart_count": "카트에 있는 총 품목 수",
     "menu": "메뉴",
@@ -61,12 +61,10 @@
     "discount": "할인 코드 적용",
     "discount_menu": "할인 코드",
     "discount_applied": "적용된 할인 코드: {{ code }}",
-    "open_cart_drawer": "카트 열기",
     "pause_video": "동영상 일시 중지",
     "inventory_status": "재고 상태",
     "find_country": "국가 찾기",
-    "localization_region_and_language": "지역 및 언어 선택기 열기",
-    "open_search_modal": "검색 열기",
+    "localization_region_and_language": "지역 및 언어 선택기",
     "decrease_quantity": "수량 감소",
     "increase_quantity": "수량 증가",
     "quantity": "수량",
@@ -238,7 +236,13 @@
     "recipient_form_fields_hidden": "이제 수취인 양식 필드가 숨겨집니다.",
     "recipient_form_error": "양식 제출과 관련하여 오류가 발생했습니다.",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }}자 입력함",
-    "terms_and_policies": "약관 및 정책"
+    "terms_and_policies": "약관 및 정책",
+    "pagination": {
+      "nav_label": "페이지 탐색",
+      "previous": "이전",
+      "next": "다음",
+      "page": "{{ page }}페이지"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -272,7 +276,13 @@
       "adding_to_cart": "추가 중...",
       "add_to_cart_error": "카트에 추가하는 중 오류 발생",
       "sold_out": "품절",
-      "unavailable": "사용할 수 없음"
+      "unavailable": "사용할 수 없음",
+      "quantity_error_max": "이 상품의 최대 수량은 {{ maximum }}개입니다",
+      "quantity": "수량",
+      "quantity_increments": "{{ increment }}씩 증가",
+      "quantity_minimum": "최소 {{ minimum }}개",
+      "quantity_maximum": "최대 {{ maximum }}개",
+      "in_cart": "장바구니에"
     }
   },
   "fields": {

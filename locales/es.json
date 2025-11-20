@@ -51,7 +51,7 @@
       "other": "{{ count }} filtros aplicados",
       "many": "{{ count }} filtros aplicados"
     },
-    "account": "Abrir menú de cuenta",
+    "account": "Cuenta",
     "cart": "Carrito",
     "cart_count": "Total de artículos en el carrito",
     "menu": "Menú",
@@ -62,12 +62,10 @@
     "discount": "Aplicar un código de descuento",
     "discount_menu": "Códigos de descuento",
     "discount_applied": "Aplicar código de descuento: {{ code }}",
-    "open_cart_drawer": "Abrir carrito",
     "pause_video": "Pausar el video",
     "inventory_status": "Estado del inventario",
     "find_country": "Buscar país",
-    "localization_region_and_language": "Abrir selector de región e idioma",
-    "open_search_modal": "Abrir búsqueda",
+    "localization_region_and_language": "Selector de región e idioma",
     "decrease_quantity": "Disminuir cantidad",
     "increase_quantity": "Aumentar cantidad",
     "quantity": "Cantidad",
@@ -243,7 +241,13 @@
     "recipient_form_fields_hidden": "Los campos de destinatario en el formulario ya no son visibles",
     "recipient_form_error": "Hubo un error al enviar el formulario",
     "product_custom_property_character_count": "{{ used_chars }} de {{ max_chars }} caracteres utilizados",
-    "terms_and_policies": "Términos y políticas"
+    "terms_and_policies": "Términos y políticas",
+    "pagination": {
+      "nav_label": "Navegación de paginación",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "page": "Página {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -277,7 +281,13 @@
       "adding_to_cart": "Agregando...",
       "add_to_cart_error": "Error al agregar al carrito",
       "sold_out": "Agotado",
-      "unavailable": "No disponible"
+      "unavailable": "No disponible",
+      "quantity_error_max": "Este artículo tiene un máximo de {{ maximum }}",
+      "quantity": "Cantidad",
+      "quantity_increments": "Incrementos de {{ increment }}",
+      "quantity_minimum": "Mínimo de {{ minimum }}",
+      "quantity_maximum": "Máximo de {{ maximum }}",
+      "in_cart": "en el carrito"
     }
   },
   "fields": {

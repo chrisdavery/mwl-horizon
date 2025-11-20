@@ -50,7 +50,7 @@
       "one": "{{ count }} filter anvendt",
       "other": "{{ count }} filtre anvendt"
     },
-    "account": "Åbn kontomenu",
+    "account": "Konto",
     "cart": "Indkøbskurv",
     "cart_count": "Varer i alt i indkøbskurven",
     "menu": "Menu",
@@ -61,12 +61,10 @@
     "discount": "Anvend en rabatkode",
     "discount_menu": "Rabatkoder",
     "discount_applied": "Anvendt rabatkode: {{ code }}",
-    "open_cart_drawer": "Åbn indkøbskurv",
     "pause_video": "Sæt video på pause",
     "inventory_status": "Lagerstatus",
     "find_country": "Find land",
-    "localization_region_and_language": "Åbn område- og sprogvælger",
-    "open_search_modal": "Åbn søgning",
+    "localization_region_and_language": "Vælger til område og sprog",
     "decrease_quantity": "Reducer antal",
     "increase_quantity": "Øg antal",
     "quantity": "Antal",
@@ -238,7 +236,13 @@
     "recipient_form_fields_hidden": "Modtagerformularfelterne er nu skjulte",
     "recipient_form_error": "Der opstod en fejl ved indsendelsen af formularen",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} tegn brugt",
-    "terms_and_policies": "Vilkår og politikker"
+    "terms_and_policies": "Vilkår og politikker",
+    "pagination": {
+      "nav_label": "Navigation med sideinddeling",
+      "previous": "Forrige",
+      "next": "Næste",
+      "page": "Side {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -272,7 +276,13 @@
       "adding_to_cart": "Tilføjer...",
       "add_to_cart_error": "Der opstod en fejl, da du lagde varen i indkøbskurven",
       "sold_out": "Udsolgt",
-      "unavailable": "Ikke tilgængelig"
+      "unavailable": "Ikke tilgængelig",
+      "quantity_error_max": "Denne vare har en maksimumgrænse på {{ maximum }}",
+      "quantity": "Antal",
+      "quantity_increments": "Intervaller på {{ increment }}",
+      "quantity_minimum": "Minimum på {{ minimum }}",
+      "quantity_maximum": "Maksimum på {{ maximum }}",
+      "in_cart": "i indkøbskurv"
     }
   },
   "fields": {

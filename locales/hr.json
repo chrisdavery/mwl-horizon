@@ -51,7 +51,7 @@
       "other": "Primijenjen je sljedeći broj filtara: {{ count }}",
       "few": "Primijenjen je sljedeći broj filtara: {{ count }}"
     },
-    "account": "Otvori izbornik računa",
+    "account": "Račun",
     "cart": "Košarica",
     "cart_count": "Ukupan broj stavki u košarici",
     "menu": "Izbornik",
@@ -61,11 +61,9 @@
     "loading_product_recommendations": "Učitavanje preporuka proizvoda",
     "discount": "Primijeni kod za popust",
     "discount_applied": "Primijenjeni kod za popust: {{ code }}",
-    "open_cart_drawer": "Otvori košaricu",
     "inventory_status": "Status zaliha",
     "pause_video": "Pauziraj videozapis",
-    "localization_region_and_language": "Otvori izbornik regije i jezika",
-    "open_search_modal": "Otvori pretraživanje",
+    "localization_region_and_language": "Izbornik regije i jezika",
     "find_country": "Pronađi državu",
     "decrease_quantity": "Smanji količinu",
     "increase_quantity": "Povećaj količinu",
@@ -243,7 +241,13 @@
     "recipient_form_fields_hidden": "Polja obrasca primatelja sada su skrivena",
     "recipient_form_error": "Došlo je do pogreške u slanju obrasca",
     "product_custom_property_character_count": "Upotrijebljeno znakova: {{ used_chars }}/{{ max_chars }}",
-    "terms_and_policies": "Uvjeti i pravila"
+    "terms_and_policies": "Uvjeti i pravila",
+    "pagination": {
+      "nav_label": "Kretanje po stranicama",
+      "previous": "Prethodna",
+      "next": "Sljedeća",
+      "page": "Stranica {{ page }}"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -277,7 +281,13 @@
       "adding_to_cart": "Dodavanje...",
       "add_to_cart_error": "Pogreška prilikom dodavanja u košaricu",
       "sold_out": "Rasprodano",
-      "unavailable": "Nedostupno"
+      "unavailable": "Nedostupno",
+      "quantity_error_max": "Maksimum za ovaj artikl iznosi {{ maximum }}",
+      "quantity": "Količina",
+      "quantity_increments": "Povećanje od {{ increment }}",
+      "quantity_minimum": "Minimalno {{ minimum }}",
+      "quantity_maximum": "Maksimalno {{ maximum }}",
+      "in_cart": "u košarici"
     }
   },
   "fields": {

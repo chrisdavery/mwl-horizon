@@ -181,7 +181,9 @@
     "blog_posts_grid": "Blogopslag: Gitter",
     "blog_posts_carousel": "Blogopslag: Karrusel",
     "blog_posts_editorial": "Blogopslag: Redaktionelt",
-    "excerpt": "Uddrag"
+    "excerpt": "Uddrag",
+    "footer_password": "Sidefod til adgangskodeside",
+    "policies_and_links": "Politikker og links"
   },
   "settings": {
     "alignment": "Justering",
@@ -500,7 +502,6 @@
     "animation_repeat": "Gentag animation",
     "blurred_reflection": "Sløret refleksion",
     "card_hover_effect": "Kortsvæveeffekt",
-    "effects": "Effekter",
     "inventory_threshold": "Lav grænse for lagerbeholdning",
     "reflection_opacity": "Refleksionens uigennemsigtighed",
     "show_inventory_quantity": "Vis lav lagermængde",
@@ -540,9 +541,15 @@
     },
     "blog": "Blog",
     "post_count": "Antal opslag",
+    "animation": "Animation",
     "top_level_size": "Størrelse på øverste del",
     "submenu_text_style": "Typografi i undermenu",
-    "empty_cart_button_link": "Link til tøm kurv-knap"
+    "empty_cart_button_link": "Knaplink til tømning af indkøbskurv",
+    "auto_load_products": "Automatisk indlæsning af produkter ved scroll",
+    "products_per_page": "Produkter pr. side",
+    "block_link": "Bloklink",
+    "custom_mobile_media": "Tilpassede mobilmedier",
+    "stack_media_on_mobile": "Stak medier"
   },
   "options": {
     "adapt_to_image": "Tilpas til billede",
@@ -920,13 +927,58 @@
     "gift_card_form_description": "Kunder kan sende gavekort til en modtagers mailadresse med en personlig besked. [Få mere at vide](https://help.shopify.com/manual/products/gift-card-products)",
     "heading": "Overskrift",
     "resource_reference_product_custom_property": "Tilføj tilpassede inputfelter for at indsamle tilpassede oplysninger, der vil blive føjet til denne varelinje og senere være synlige i ordreoplysningerne.",
-    "block_link": "Bloklink",
+    "block_link": "Link til blok",
     "submenu_feature": "Undermenufunktion",
-    "cart_features": "Kurv funktioner",
-    "email_signup": "Tilmelding med mail"
+    "cart_features": "Indkøbskurvfunktioner",
+    "email_signup": "Tilmelding med mail",
+    "mobile_media": "Mobilmedier",
+    "mobile_media_2": "Mobilmedier 2"
   },
   "html_defaults": {
-    "share_information_about_your": "<p>Del oplysninger om dit brand med dine kunder. Beskriv et produkt, del meddelelser, eller byd velkommen til din butik.</p>"
+    "share_information_about_your": "<p>Del oplysninger om dit brand med dine kunder. Beskriv et produkt, del meddelelser, eller byd velkommen til din butik.</p>",
+    "bestseller_h2": "<h2>Bestsellere</h2>",
+    "bestseller_h3": "<h3>Bestsellere</h3>",
+    "bestseller": "<p>Bestseller</p>",
+    "build_better": "<p>Vi tror på at gøre det bedre</p>",
+    "contact_us": "<h2>Kontakt os</h2>",
+    "discover_bestsellers": "<p>Opdag de bestsellere, der har vundet vores kunders hjerter med deres perfekte blanding af funktionalitet og stil.</p>",
+    "everythings_starts_with_why": "<p>Alt, hvad vi gør, starter med hvorfor</p>",
+    "explore_latest_products": "<p>Udforsk vores nyeste produkter.</p>",
+    "faq": "<h3>Ofte stillede spørgsmål</h3>",
+    "first_to_know": "<p>Vær den første til at få besked om nye kollektioner og særlige tilbud. </p>",
+    "free_returns": "<p>Gratis 30 dages returnering</p>",
+    "free_shipping_over": "<p>Gratis levering ved køb over 50 $</p>",
+    "goal_for_every_customer": "<p>Vores mål er, at alle kunder er fuldt ud tilfredse med deres køb. Hvis det ikke er tilfældet, så giv os besked, og vi gør vores bedste for at finde en god løsning sammen med dig.</p>",
+    "home_to_shirts": "<p>Forside → Skjorter</p>",
+    "intentional_design": "<h2>Gennemtænkt design</h2>",
+    "introducing_h2": "<h2><em>Vi præsenterer</em></h2>",
+    "latest_products": "<p>Vi præsenterer vores nyeste produkter, der er skabt specielt til sæsonen. Køb dine favoritter, før de er væk!</p>",
+    "made_local_and_global": "<p>Vores produkter fremstilles både lokalt og globalt. Vi udvælger vores produktionspartnere omhyggeligt for at sikre, at vores produkter er af høj kvalitet og til en fair pris.</p>",
+    "made_with_care_h2": "<h2>Fremstillet med omhu</h2>",
+    "made_with_care_extended": "<p>Fremstillet med omhu og elsket af vores kunder – denne signaturbestseller overgår alle forventninger.</p>",
+    "made_with_care": "<p>Fremstillet med omhu og elsket af vores kunder.</p>",
+    "make_things_better_extended": "<p>Vi laver ting, der fungerer bedre og holder længere. Vores produkter løser reelle problemer med et rent design og ærlige materialer.</p>",
+    "make_things_better": "<p>Vi laver ting, der fungerer bedre og holder længere.</p>",
+    "may_also_like": "<h4>Du vil måske også synes om</h4>",
+    "new_arrivals_h1": "<h1>Nyheder</h1>",
+    "new_arrivals_h2": "<h2>Nyheder</h2>",
+    "new_arrivals_h3": "<h3>Nyheder</h3>",
+    "product_launch": "<p>Tag et kig bag kulisserne på vores seneste produktlancering.</p>",
+    "product_story": "<p>Kernen i hvert produkt er en unik historie, drevet af vores passion for kvalitet og innovation. Hver vare forbedrer din hverdag og skaber glæde.</p>",
+    "real_people": "<p>Rigtige mennesker, der laver fantastiske produkter</p>",
+    "related_product": "<h3>Relaterede produkter</h3>",
+    "return_policy": "<h2>Hvad er jeres returpolitik?</h2>",
+    "reviews": "<p>★★★★★ 368 anmeldelser</p>",
+    "shipping_based_on_location": "<p>Leveringsprisen beregnes ud fra din lokation og varerne i din ordre. Du vil altid kende leveringsprisen, før du gennemfører dit køb.</p>",
+    "shop_by_collection": "<h3>Shop efter kollektion</h3>",
+    "signature_products": "<h2>Vores signaturprodukt</h2>",
+    "styled_with": "<h3>Stylet med</h3>",
+    "subscribe": "<h2>Tilmeld dig vores nyhedsbrev</h2>",
+    "team_with_goal": "<h2>Et team med et mål</h2>",
+    "unable_to_accept_returns": "<p>Vi kan desværre ikke tage imod returneringer af visse varer. Disse vil være tydeligt markeret før køb.</p>",
+    "work_quickly_to_ship": "<p>Vi arbejder hurtigt på at afsende din ordre så hurtigt som muligt. Når din ordre er afsendt, modtager du en mail med yderligere oplysninger. Leveringstiden afhænger af din lokation.</p>",
+    "join_our_email_list": "<h2>Tilmeld dig vores e-mailliste</h2>",
+    "get_exclusive_deals_and_early_access_to_new_products": "<p>Få eksklusive tilbud og tidlig adgang til nye produkter.</p>"
   },
   "text_defaults": {
     "button_label": "Køb nu",
@@ -939,7 +991,27 @@
     "sign_up": "Tilmeld dig",
     "welcome_to_our_store": "Velkommen til vores butik",
     "be_bold": "Vær modig.",
-    "shop_our_latest_arrivals": "Køb vores nyheder!"
+    "shop_our_latest_arrivals": "Køb vores nyheder!",
+    "are_purchases_final_sale": "Kan nogle køb ikke returneres?",
+    "care_instructions": "Plejeanvisning",
+    "cart": "Indkøbskurv",
+    "discover_collection": "Udforsk kollektionen",
+    "fit": "Pasform",
+    "how_much_for_shipping": "Hvad koster levering?",
+    "learn_more": "Få mere at vide",
+    "manufacturing": "Fremstilling",
+    "materials": "Materialer",
+    "return_policy": "Returpolitik",
+    "shipping": "Forsendelse",
+    "shop_now_button_label": "Shop nu",
+    "sign_up_button_label": "Tilmeld",
+    "submit_button_label": "Send",
+    "up_the_ante": "Hæv\nindsatsen",
+    "view_all_button_label": "Se alle",
+    "what_is_return_policy": "Hvad er returpolitikken?",
+    "when_will_order_arrive": "Hvornår modtager jeg min ordre?",
+    "where_are_products_made": "Hvor bliver jeres produkter fremstillet?",
+    "faq": "FAQ"
   },
   "info": {
     "carousel_layout_on_mobile": "Karrusel anvendes på mobil",
@@ -965,7 +1037,7 @@
     "hover_effects": "Gælder for produkter og kollektionskort",
     "hide_logo_on_home_page_help": "Logoet forbliver synligt, når et fastgjort sidehoved er aktiveret",
     "media_type_info": "Funktionerne udfyldes fra dine menulinks",
-    "logo_height": "Påvirker kun header logo"
+    "logo_height": "Påvirker kun logoet i sidehovedet"
   },
   "categories": {
     "basic": "Basic",
@@ -984,6 +1056,7 @@
     "decorative": "Dekorativ",
     "products": "Produkter",
     "other_sections": "Andet",
-    "storytelling": "Storytelling"
+    "storytelling": "Storytelling",
+    "text": "Tekst"
   }
 }
