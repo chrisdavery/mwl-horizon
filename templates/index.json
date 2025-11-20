@@ -3179,7 +3179,7 @@
             "content_direction": "row",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
-            "vertical_alignment": "flex-end",
+            "vertical_alignment": "center",
             "align_baseline": true,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
@@ -3209,7 +3209,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>EXPLORE MWL JOURNAL</h3>",
+                "text": "<h3>MWL JOURNAL</h3>",
                 "width": "fit-content",
                 "max_width": "none",
                 "alignment": "left",
