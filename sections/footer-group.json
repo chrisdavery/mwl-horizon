@@ -439,6 +439,7 @@
       "block_order": [
         "group_wbie3J"
       ],
+      "disabled": true,
       "custom_css": [
         "p > span {text-decoration-thickness: 1px;}"
       ],
