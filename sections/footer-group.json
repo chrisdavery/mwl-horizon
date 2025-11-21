@@ -248,7 +248,7 @@
                   "type": "icon",
                   "name": "t:names.icon",
                   "settings": {
-                    "icon": "chat_bubble",
+                    "icon": "star",
                     "svg_icon": "",
                     "width": 24,
                     "link": "",
@@ -260,7 +260,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Customer Care </p>",
+                    "text": "<p>Private Bridal Consultations</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
