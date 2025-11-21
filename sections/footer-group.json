@@ -164,11 +164,23 @@
                 "css_class": ""
               },
               "blocks": {
+                "icon_DX7nN7": {
+                  "type": "icon",
+                  "name": "t:names.icon",
+                  "settings": {
+                    "icon": "truck",
+                    "svg_icon": "",
+                    "width": 24,
+                    "link": "",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
+                },
                 "text_4YepEb": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Free Standard Domestic Shipping (AU) </p>",
+                    "text": "<p>Free Standard Domestic Shipping </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -222,6 +234,7 @@
                 }
               },
               "block_order": [
+                "icon_DX7nN7",
                 "text_4YepEb",
                 "text_rq8V9a"
               ]
