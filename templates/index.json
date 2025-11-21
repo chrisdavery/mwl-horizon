@@ -3539,7 +3539,7 @@
             "title_size_v2": 0,
             "alignment": "center",
             "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 35,
+            "instafeed_margin_bottom": 0,
             "instafeed_margin_sides": 0,
             "show_instagram_link": false,
             "link_alignment": "left",
@@ -3869,8 +3869,8 @@
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h5",
-                    "enable_mobile_size": false,
-                    "mobile_font_size": "1rem",
+                    "enable_mobile_size": true,
+                    "mobile_font_size": "0.75rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -4043,8 +4043,8 @@
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h5",
-                    "enable_mobile_size": false,
-                    "mobile_font_size": "1rem",
+                    "enable_mobile_size": true,
+                    "mobile_font_size": "0.75rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -4217,8 +4217,8 @@
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h5",
-                    "enable_mobile_size": false,
-                    "mobile_font_size": "1rem",
+                    "enable_mobile_size": true,
+                    "mobile_font_size": "0.75rem",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -4282,7 +4282,7 @@
         "group_7yb74K",
         "group_qTUqkm"
       ],
-      "name": "t:names.icons_with_text",
+      "name": "Shipping Bar ",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
@@ -4311,8 +4311,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 40,
+        "padding-block-end": 56
       }
     }
   },
