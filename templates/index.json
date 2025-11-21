@@ -2843,6 +2843,175 @@
             "group_QCkJi6"
           ]
         },
+        "multicolumn_card_z9HkXe": {
+          "type": "_multicolumn-card",
+          "name": "Blog 4 ",
+          "settings": {},
+          "blocks": {
+            "group_HXVcBi": {
+              "type": "group",
+              "name": "Item Link",
+              "settings": {
+                "link": "https://mwlbride.com/blogs/all/madeline-ben",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "enable_mobile_gap": false,
+                "mobile_gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-6",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
+              },
+              "blocks": {
+                "image_xMQ4ee": {
+                  "type": "image",
+                  "settings": {
+                    "image": "shopify://shop_images/MWL-home-read-our-journal_baadf902-b8d2-4464-8eb9-d4c1212c462e.png",
+                    "link": "",
+                    "image_ratio": "standard",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "zoom_on_hover": true,
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "group_zqM9i9": {
+                  "type": "group",
+                  "settings": {
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "reverse_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "enable_mobile_gap": false,
+                    "mobile_gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": false,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "placeholder": "",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "custom_mobile_padding": true,
+                    "mobile-padding-block-start": 0,
+                    "mobile-padding-block-end": 0,
+                    "mobile-padding-inline-start": 15,
+                    "mobile-padding-inline-end": 15,
+                    "css_class": ""
+                  },
+                  "blocks": {
+                    "text_ELbKYW": {
+                      "type": "text",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h3>ANTHOLOGY - POEMS OF JEAN & GRACIE</h3>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
+                        "font": "var(--font-subheading--family)",
+                        "font_size": "0.875rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_ELbKYW"
+                  ]
+                }
+              },
+              "block_order": [
+                "image_xMQ4ee",
+                "group_zqM9i9"
+              ]
+            }
+          },
+          "block_order": [
+            "group_HXVcBi"
+          ]
+        },
         "multicolumn_card_cnmjM7": {
           "type": "_multicolumn-card",
           "name": "Blog 2",
@@ -2900,7 +3069,7 @@
                 "image_ME4Njb": {
                   "type": "image",
                   "settings": {
-                    "image": "shopify://shop_images/ezgif.com-crop_8.jpg",
+                    "image": "shopify://shop_images/Carla_Jenkins_Homepage.jpg",
                     "link": "",
                     "image_ratio": "standard",
                     "width": "fill",
@@ -3181,175 +3350,6 @@
             "group_NwBapp"
           ]
         },
-        "multicolumn_card_z9HkXe": {
-          "type": "_multicolumn-card",
-          "name": "Blog 4 ",
-          "settings": {},
-          "blocks": {
-            "group_HXVcBi": {
-              "type": "group",
-              "name": "Item Link",
-              "settings": {
-                "link": "shopify://blogs/all/anthology-poems-of-jean-gracie",
-                "open_in_new_tab": false,
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "reverse_on_mobile": false,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "enable_mobile_gap": false,
-                "mobile_gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": false,
-                "color_scheme": "scheme-6",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "placeholder": "",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "mobile-padding-block-start": 0,
-                "mobile-padding-block-end": 0,
-                "mobile-padding-inline-start": 0,
-                "mobile-padding-inline-end": 0,
-                "css_class": ""
-              },
-              "blocks": {
-                "image_xMQ4ee": {
-                  "type": "image",
-                  "settings": {
-                    "image": "shopify://shop_images/mwl-jean-anthology-blog.png",
-                    "link": "",
-                    "image_ratio": "standard",
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "zoom_on_hover": true,
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "group_zqM9i9": {
-                  "type": "group",
-                  "settings": {
-                    "link": "",
-                    "open_in_new_tab": false,
-                    "content_direction": "column",
-                    "vertical_on_mobile": true,
-                    "reverse_on_mobile": false,
-                    "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
-                    "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
-                    "enable_mobile_gap": false,
-                    "mobile_gap": 12,
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "custom_height": 100,
-                    "inherit_color_scheme": false,
-                    "color_scheme": "",
-                    "background_media": "none",
-                    "video_position": "cover",
-                    "background_image_position": "cover",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "placeholder": "",
-                    "toggle_overlay": false,
-                    "overlay_color": "#00000026",
-                    "overlay_style": "solid",
-                    "gradient_direction": "to top",
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "custom_mobile_padding": true,
-                    "mobile-padding-block-start": 0,
-                    "mobile-padding-block-end": 0,
-                    "mobile-padding-inline-start": 15,
-                    "mobile-padding-inline-end": 15,
-                    "css_class": ""
-                  },
-                  "blocks": {
-                    "text_ELbKYW": {
-                      "type": "text",
-                      "name": "t:names.heading",
-                      "settings": {
-                        "text": "<h3>ANTHOLOGY - POEMS OF JEAN & GRACIE</h3>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "custom",
-                        "enable_mobile_size": false,
-                        "mobile_font_size": "1rem",
-                        "font": "var(--font-subheading--family)",
-                        "font_size": "0.875rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_ELbKYW"
-                  ]
-                }
-              },
-              "block_order": [
-                "image_xMQ4ee",
-                "group_zqM9i9"
-              ]
-            }
-          },
-          "block_order": [
-            "group_HXVcBi"
-          ]
-        },
         "static-header": {
           "type": "_product-list-content",
           "name": "t:names.header",
@@ -3501,9 +3501,9 @@
       },
       "block_order": [
         "multicolumn_card_4hQrbY",
+        "multicolumn_card_z9HkXe",
         "multicolumn_card_cnmjM7",
-        "multicolumn_card_wPaVdy",
-        "multicolumn_card_z9HkXe"
+        "multicolumn_card_wPaVdy"
       ],
       "custom_css": [
         "@media (max-width: 749px) {.section-resource-list__header .group-block-content {--gap: 8px !important; }}"
