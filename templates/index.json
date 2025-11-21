@@ -340,15 +340,32 @@
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 0,
+                "padding-block-end": 25,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button_7DKk8i": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "BOOK APPOINTMENT",
+                "link": "shopify://pages/appointments",
+                "open_in_new_tab": false,
+                "active_state": false,
+                "style_class": "button-secondary",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_U9tBYq"
+            "text_U9tBYq",
+            "button_7DKk8i"
           ]
         }
       },
@@ -388,7 +405,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 60,
-        "padding-block-end": 60
+        "padding-block-end": 40
       }
     },
     "hero_YWjNNm": {
