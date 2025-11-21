@@ -418,17 +418,17 @@
             "image_gap": 8,
             "image_aspect_ratio": "4 / 5",
             "image_1": "shopify://shop_images/MWL_Homepage_1.png",
-            "link_1": "",
+            "link_1": "shopify://products/celine-fitted",
             "title_1": "CRUZ",
             "image_2": "shopify://shop_images/MWL_Homepage_2.png",
-            "link_2": "",
-            "title_2": "",
+            "link_2": "shopify://products/helena-veil",
+            "title_2": "Helena Veil",
             "image_3": "shopify://shop_images/MWL_Homepage.png",
-            "link_3": "",
-            "title_3": "",
+            "link_3": "shopify://products/tate",
+            "title_3": "Tate",
             "image_4": "shopify://shop_images/MWL_Homepage_4.png",
-            "link_4": "",
-            "title_4": ""
+            "link_4": "shopify://products/gigi-veil",
+            "title_4": "Gigi Veil"
           },
           "blocks": {}
         }
