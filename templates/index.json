@@ -3238,7 +3238,7 @@
                 "image_qMx4iN": {
                   "type": "image",
                   "settings": {
-                    "image": "shopify://shop_images/mwl-jean-anthology-blog.png",
+                    "image": "shopify://shop_images/Image_18.jpg",
                     "link": "",
                     "image_ratio": "standard",
                     "width": "fill",
@@ -3310,7 +3310,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>UP LATE IN NYC</h3>",
+                        "text": "<h3>UP LATE IN NYC - NYBFW 25'</h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
