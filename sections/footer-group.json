@@ -167,6 +167,7 @@
                 "icon_DX7nN7": {
                   "type": "icon",
                   "name": "t:names.icon",
+                  "disabled": true,
                   "settings": {
                     "icon": "truck",
                     "svg_icon": "",
@@ -247,6 +248,7 @@
                 "icon_mm7PxJ": {
                   "type": "icon",
                   "name": "t:names.icon",
+                  "disabled": true,
                   "settings": {
                     "icon": "star",
                     "svg_icon": "",
@@ -260,7 +262,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Private MWL Bridal Consultations</p>",
+                    "text": "<p>Tailored Bridal Consultations</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
