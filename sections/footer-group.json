@@ -204,6 +204,18 @@
                   },
                   "blocks": {}
                 },
+                "icon_AaMLwg": {
+                  "type": "icon",
+                  "name": "t:names.icon",
+                  "settings": {
+                    "icon": "map_pin",
+                    "svg_icon": "",
+                    "width": 24,
+                    "link": "",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
+                },
                 "text_rq8V9a": {
                   "type": "text",
                   "name": "t:names.text",
@@ -231,12 +243,55 @@
                     "padding-inline-end": 74
                   },
                   "blocks": {}
+                },
+                "icon_mm7PxJ": {
+                  "type": "icon",
+                  "name": "t:names.icon",
+                  "settings": {
+                    "icon": "chat_bubble",
+                    "svg_icon": "",
+                    "width": 24,
+                    "link": "",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
+                },
+                "text_zW4FKU": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Customer Care </p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 74
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "icon_DX7nN7",
                 "text_4YepEb",
-                "text_rq8V9a"
+                "icon_AaMLwg",
+                "text_rq8V9a",
+                "icon_mm7PxJ",
+                "text_zW4FKU"
               ]
             },
             "group_ReYDNV": {
