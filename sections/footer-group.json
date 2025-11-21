@@ -168,7 +168,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Free Domestic Shipping (AU) </p>",
+                    "text": "<p>Free Standard Domestic Shipping (AU) </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -219,40 +219,11 @@
                     "padding-inline-end": 74
                   },
                   "blocks": {}
-                },
-                "text_caxrdm": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>1 on 1 styling sessions</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "enable_mobile_size": false,
-                    "mobile_font_size": "1rem",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 75
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
                 "text_4YepEb",
-                "text_rq8V9a",
-                "text_caxrdm"
+                "text_rq8V9a"
               ]
             },
             "group_ReYDNV": {
