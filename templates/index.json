@@ -416,10 +416,10 @@
           "settings": {
             "section_padding": 40,
             "image_gap": 16,
-            "image_aspect_ratio": "3 / 4",
+            "image_aspect_ratio": "4 / 5",
             "image_1": "shopify://shop_images/MWL_Homepage_1.png",
             "link_1": "",
-            "title_1": "",
+            "title_1": "CRUZ",
             "image_2": "shopify://shop_images/MWL_Homepage_2.png",
             "link_2": "",
             "title_2": "",
