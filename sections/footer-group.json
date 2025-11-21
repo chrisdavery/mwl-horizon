@@ -170,7 +170,7 @@
                   "settings": {
                     "icon": "truck",
                     "svg_icon": "",
-                    "width": 24,
+                    "width": 20,
                     "link": "",
                     "open_in_new_tab": false
                   },
@@ -210,7 +210,7 @@
                   "settings": {
                     "icon": "map_pin",
                     "svg_icon": "",
-                    "width": 24,
+                    "width": 20,
                     "link": "",
                     "open_in_new_tab": false
                   },
@@ -250,7 +250,7 @@
                   "settings": {
                     "icon": "star",
                     "svg_icon": "",
-                    "width": 24,
+                    "width": 20,
                     "link": "",
                     "open_in_new_tab": false
                   },
