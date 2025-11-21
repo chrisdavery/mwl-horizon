@@ -2676,7 +2676,7 @@
       "blocks": {
         "multicolumn_card_4hQrbY": {
           "type": "_multicolumn-card",
-          "name": "Box 1",
+          "name": "Blog 1",
           "settings": {},
           "blocks": {
             "group_QCkJi6": {
@@ -2845,7 +2845,7 @@
         },
         "multicolumn_card_cnmjM7": {
           "type": "_multicolumn-card",
-          "name": "Box 2",
+          "name": "Blog 2",
           "settings": {},
           "blocks": {
             "group_yKmRpa": {
@@ -3014,7 +3014,7 @@
         },
         "multicolumn_card_wPaVdy": {
           "type": "_multicolumn-card",
-          "name": "Box 3",
+          "name": "Blog 3",
           "settings": {},
           "blocks": {
             "group_NwBapp": {
@@ -3183,7 +3183,7 @@
         },
         "multicolumn_card_z9HkXe": {
           "type": "_multicolumn-card",
-          "name": "Box 3",
+          "name": "Blog 4 ",
           "settings": {},
           "blocks": {
             "group_HXVcBi": {
