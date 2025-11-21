@@ -262,7 +262,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Tailored Bridal Consultations</p>",
+                    "text": "<p>Private Bridal Consultations</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
