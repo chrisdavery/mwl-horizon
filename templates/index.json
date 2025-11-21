@@ -3807,7 +3807,7 @@
               "settings": {
                 "icon": "truck",
                 "svg_icon": "",
-                "width": 20,
+                "width": 18,
                 "link": "",
                 "open_in_new_tab": false
               },
@@ -3868,7 +3868,7 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h5",
+                    "type_preset": "h6",
                     "enable_mobile_size": true,
                     "mobile_font_size": "0.75rem",
                     "font": "var(--font-body--family)",
@@ -3981,7 +3981,7 @@
               "settings": {
                 "icon": "map_pin",
                 "svg_icon": "",
-                "width": 20,
+                "width": 18,
                 "link": "",
                 "open_in_new_tab": false
               },
@@ -4042,7 +4042,7 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h5",
+                    "type_preset": "h6",
                     "enable_mobile_size": true,
                     "mobile_font_size": "0.75rem",
                     "font": "var(--font-body--family)",
@@ -4216,7 +4216,7 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h5",
+                    "type_preset": "h6",
                     "enable_mobile_size": true,
                     "mobile_font_size": "0.75rem",
                     "font": "var(--font-body--family)",
