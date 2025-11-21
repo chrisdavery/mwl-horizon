@@ -3864,7 +3864,7 @@
                 "text_JHbbV6": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Free standard shipping</h2>",
+                    "text": "<h2>Free Standard Shipping</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -4212,7 +4212,7 @@
                 "text_AQU7VD": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Private bridal consultations</h2>",
+                    "text": "<h2>Private Bridal Consultations</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
