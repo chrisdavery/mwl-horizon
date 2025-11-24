@@ -1,5 +1,6 @@
 {%- doc -%}
   Renders block content for all blocks that extend the group block.
+
   @param {boolean} [required] - required
   @param {boolean} [default_empty] - required
   @param {string} [class] - Custom classes for the group block.
@@ -17,206 +18,262 @@
   @example
   {% render 'custom-select', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
 {%- enddoc -%}
+{% assign default_selected = options | where: 'selected', true %}
 
 <custom-input class="custom-dropdown--field">
-    <div class="custom-select-wrapper hidden">
-        <custom-select
-            data-option-name="{{ label | escape }}"
-        {% if show_only_name and show_only_value %}
-            data-show-name="{{ show_only_name }}"
-            data-show-value="{{ show_only_value }}"
+  <div class="custom-select-wrapper {% unless use_product %}hidden{% endunless %}">
+    <custom-select
+      {% if default_selected.size > 0 %}class="has-value"{% endif %}
+      data-option-name="{{ label | escape }}"
+      {% if show_only_name and show_only_value %}
+        data-show-name="{{ show_only_name }}"
+        data-show-value="{{ show_only_value }}"
+      {% endif %}
+      {% if use_product %}data-product-widget{% endif %}
+    >
+      <select
+        {% if use_product %}
+          name="options[{{ product_option.name | escape }}]"
+        {% else %}
+          name="properties[{{ label | escape }}]"
         {% endif %}
-        >
-            <select
-                {% if use_product %}
-                    name="options[{{ product_option.name | escape }}]"
-                {% else %}
-                    name="properties[{{ label | escape }}]"
-                {% endif %}
-                id="{{ id }}"
-                class="{{ class }} {% if use_variant == true %} product-addon{% endif %} custom-form__dropdown hidden"
-                {% if required == true %}required{% endif %}
-            >
-                {% if default_empty == true %}
-                    <option selected disabled></option>
-                {% endif %}
-                {%- for option in options -%}
-                    <option
-                        {% if use_product %}
-                            data-input-id="{{ product_option.position }}-{{ forloop.index0 }}"
-                            data-option-value-id="{{ option.id }}"
-                            data-variant-id="{{ option.variant.id }}"
-                            data-connected-product-url="{{ option.product_url }}"
-                            {% if option.selected %}
-                                selected="selected"
-                            {% endif %}
-                            value="{{ option | escape }}"
-                        {% elsif block_type == true %}
-                            {% if option.variant.value != blank  %}
-                                data-variant-id="{{ option.variant.value.id }}"
-                                data-variant-price="{{ option.variant.value.price }}"
-                            {% endif %}
-                                value="{{ option.external_title | escape }}"
-                            {% if option.variant.value.available == false %}
-                                disabled
-                            {% endif %}
-                        {% elsif use_variant == true %}
-                            data-variant-id="{{ option.id | json }}"
-                            value="{{ option.title | escape }}"
-                            data-variant-price="{{ option.price }}"
-                            {% if option.available == false %}
-                                disabled
-                            {% endif %}
-                        {% else %}
-                            data-input-id="drop-{{ option | handleize }}-{{ forloop.index0 }}"
-                            value="{{ option | escape }}"
-                        {% endif %}
-                    >
-                        {% if use_product %}
-                            {% if option.available == false %}
-                                {{ option | escape }} - {{ 'content.unavailable' | t }}
-                            {% else %}
-                                {{ option | escape }}
-                            {% endif %}
-                        {% elsif block_type == true %}
-                            {{ option.external_title }}{% if option.variant.value != blank %} (+ {{ option.variant.value.price | money_without_trailing_zeros }}){% endif %}
-                        {% elsif use_variant == true %}
-                            {{ option.title }} (+ {{ option.price | money_without_trailing_zeros }})
-                        {% else %}
-                            {{ option | escape }}
-                        {% endif %}
-                    </option>
-                {%- endfor -%}
-            </select>
-        </custom-select>
-        <label for="{{ id }}">
-            {{ label | escape }}{% if required %}<span aria-hidden="true">*</span>{% endif %}
-        </label>
+        id="{{ id }}"
+        class="{{ class }} {% if use_variant == true %} product-addon{% endif %} custom-form__dropdown hidden"
         {% if required == true %}
-            <div class="error-message hidden">
-                {{'accessibility.is_required' | t: value: label }}
-            </div>
+          required
         {% endif %}
+      >
+        {% if default_empty == true %}
+          <option selected disabled></option>
+        {% endif %}
+        {%- for option in options -%}
+          <option
+            {% if use_product %}
+              value="{{ option | escape }}"
+              data-input-id="{{ product_option.position }}-{{ forloop.index0 }}"
+              data-option-value-id="{{ option.id }}"
+              data-variant-id="{{ option.variant.id }}"
+              data-connected-product-url="{{ option.product_url }}"
+              {% if option.selected %}
+                selected="selected"
+              {% endif %}
+              {% if option.variant.metafields.custom.shipping_text.value != blank %}
+                data-text="{{ option.variant.metafields.custom.shipping_text.value }}"
+              {% endif %}
+            {% elsif block_type == true %}
+              {% if option.variant.value != blank %}
+                data-variant-id="{{ option.variant.value.id }}"
+                data-variant-price="{{ option.variant.value.price }}"
+              {% endif %}
+              value="{{ option.external_title | escape }}"
+              {% if option.variant.value.available == false %}
+                disabled
+              {% endif %}
+            {% elsif use_variant == true %}
+              data-variant-id="{{ option.id | json }}"
+              value="{{ option.title | escape }}"
+              data-variant-price="{{ option.price }}"
+              {% if option.available == false %}
+                disabled
+              {% endif %}
+            {% else %}
+              data-input-id="drop-{{ option | handleize }}-{{ forloop.index0 }}"
+              value="{{ option | escape }}"
+            {% endif %}
+          >
+            {% if use_product %}
+              {% if option.available == false %}
+                {{ option | escape }} - {{ 'content.unavailable' | t }}
+              {% else %}
+                {{ option | escape }}
+              {% endif %}
+            {% elsif block_type == true %}
+              {{ option.external_title -}}
+              {%- if option.variant.value != blank %}
+                (+ {{ option.variant.value.price | money_without_trailing_zeros }})
+              {%- endif %}
+            {% elsif use_variant == true %}
+              {{ option.title }} (+ {{ option.price | money_without_trailing_zeros }})
+            {% else %}
+              {{ option | escape }}
+            {% endif %}
+          </option>
+        {%- endfor -%}
+      </select>
 
-        <svg
-            aria-hidden="true"
-            focusable="false"
-            class="icon icon-caret"
-            viewBox="0 0 10 6"
-        >
-            {%- render 'icon', icon: 'caret' -%}
-        </svg>
-    </div>
+      <div class="custom-select">
+        <div class="cs-display">{{ default_selected[0] }} {% if default_selected[0].variant.metafields.custom.shipping_text.value != blank %}- {{ default_selected[0].variant.metafields.custom.shipping_text.value }}{% endif %}</div>
+        <div class="cs-menu">
+            {%- for option in options -%}
+                <div class="cs-option flex-option-meta {% if use_product and option.selected %}selected{% endif %}">
+                    {% if use_product %}
+                        {% if option.available == false %}
+                            <span>{{ option | escape }}</span><span>{{ 'content.unavailable' | t }}</span>
+                        {% else %}
+                            <span>{{ option | escape }}</span>
+                            {% if option.variant.metafields.custom.shipping_text.value != blank %}
+                                <span>{{ option.variant.metafields.custom.shipping_text.value }}</span>
+                            {% elsif product.gift_card? == false %}
+                                <span>{{ 'products.product.available_now' | t }}</span>
+                            {% endif %}
+                        {% endif %}
+                    {% elsif block_type == true %}
+                        {{ option.external_title -}}
+                    {%- if option.variant.value != blank %}
+                        (+ {{ option.variant.value.price | money_without_trailing_zeros }})
+                    {%- endif %}
+                    {% elsif use_variant == true %}
+                        {{ option.title }} (+ {{ option.price | money_without_trailing_zeros }})
+                    {% else %}
+                        {{ option | escape }}
+                    {% endif %}
+                </div>
+            {%- endfor -%}
+        </div>
+      </div>
+    </custom-select>
+    <label for="{{ id }}">
+      {{ label | escape -}}
+      {%- if required -%}
+        <span aria-hidden="true">*</span>
+      {%- endif %}
+    </label>
+    {% if required == true %}
+      <div class="error-message hidden">
+        {{ 'accessibility.is_required' | t: value: label }}
+      </div>
+    {% endif %}
+
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      class="icon icon-caret"
+      viewBox="0 0 10 6"
+    >
+      {%- render 'icon', icon: 'caret' -%}
+    </svg>
+  </div>
 </custom-input>
 
 {% stylesheet %}
-    .custom-select-wrapper {
-        position: relative;
-    }
+  .custom-select-wrapper {
+    position: relative;
+  }
 
-    .error-message {
-        margin-top: var(--margin-2xs);
-        line-height: 1em;
-    }
+  .error-message {
+    margin-top: var(--margin-2xs);
+    line-height: 1em;
+  }
 
-    .custom-select-wrapper label {
-        position: absolute;
-        top: 1rem;
-        left: var(--margin-xl);
-        pointer-events: none;
-        transition: all var(--hover-transition-duration) cubic-bezier(.4,0,.2,1);
-        width: calc(100% - var(--margin-xl));
-        line-height: 1em;
-        z-index: 1;
-    }
-    .custom-select-wrapper .icon {
-        position: absolute;
-        right: var(--padding-md);
-        top: 50%;
-        transform: translateY(-50%);
-        width: var(--icon-size-2xs);
-        height: var(--icon-size-2xs);
-        pointer-events: none;
-    }
-    /* When no real selection is made (placeholder is selected) */
-    custom-select.has-value + label {
-        font-size: var(--font-size--xs);
-        letter-spacing: .2px;
-        top: 6px;
-    }
+  .loading-select {
+    opacity: 0.6;
+    pointer-events: none;
+  }
 
-    .custom-select-wrapper .error-message {
-        margin-top: var(--margin-2xs);
-        line-height: 1em;
-    }
+  .flex-option-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .has-error .error-message {
-        display: block !important;
-        color: var(--color-primary-hover);
-    }
+  .custom-select-wrapper label {
+    position: absolute;
+    top: 1rem;
+    left: var(--margin-xl);
+    pointer-events: none;
+    transition: all var(--hover-transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+    width: calc(100% - var(--margin-xl));
+    line-height: 1em;
+    z-index: 1;
+  }
+  .custom-select-wrapper .icon {
+    position: absolute;
+    right: var(--padding-md);
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--icon-size-2xs);
+    height: var(--icon-size-2xs);
+    pointer-events: none;
+  }
+  /* When no real selection is made (placeholder is selected) */
+  custom-select.has-value + label {
+    font-size: var(--font-size--xs);
+    letter-spacing: 0.2px;
+    top: 6px;
+  }
 
-    .custom-dropdown--field.has-error label {
-        color: var(--color-primary-hover);
-    }
+  .custom-select-wrapper .error-message {
+    margin-top: var(--margin-2xs);
+    line-height: 1em;
+  }
 
-    .custom-dropdown--field.has-error {
-        --color-input-border: var(--color-primary-hover);
-    }
-    
-    .custom-select {
-        position: relative;
-        width: 100%;
-        border: .1rem solid var(--color-border);
-        padding: var(--padding-lg) var(--padding-xl) var(--padding-2xs);
-        background-color: var(--color-background);
-        box-sizing: border-box;
-    }
-    
-    .custom-select-wrapper label [aria-hidden="true"] {
-        margin-left: .2rem;
-        line-height: 1em;
-        position: relative;
-        bottom: -.1rem;
-    }
+  .has-error .error-message {
+    display: block !important;
+    color: var(--color-primary-hover);
+  }
 
-    .cs-display {
-        cursor: pointer;
-        font: inherit;
-        min-height: var(--font-size--2xl);
-        line-height: 1em;
-        display: flex;
-        align-items: center;
-        -webkit-tap-highlight-color: transparent;
-        color: var(--color-foreground);
-    }
+  .custom-dropdown--field.has-error label {
+    color: var(--color-primary-hover);
+  }
 
-    .cs-menu {
-        position: absolute;
-        left: 0;
-        right: 0;
-        border: .1rem solid var(--color-border);
-        background-color: var(--color-background);
-        display: none;
-        max-height: 300px;
-        overflow-y: auto;
-        z-index: 2;
-        top: 100%;
-    }
+  .custom-dropdown--field.has-error {
+    --color-input-border: var(--color-primary-hover);
+  }
 
-    .cs-option {
-        padding: var(--padding-sm) var(--padding-lg);
-        cursor: pointer;
-        color: rgb(var(--color-foreground));
-    }
+  .custom-select {
+    position: relative;
+    width: 100%;
+    border: 0.1rem solid var(--color-border);
+    padding: var(--padding-lg) var(--padding-xl) var(--padding-2xs);
+    background-color: var(--color-background);
+    box-sizing: border-box;
+  }
 
-    .cs-option.selected {
-        background: rgb(248 246 239 / 1.0);
-    }
-    .cs-option:hover {
-        background: rgb(248 246 239 / 0.5);
-    }
+  .custom-select-wrapper label [aria-hidden='true'] {
+    margin-left: 0.2rem;
+    line-height: 1em;
+    position: relative;
+    bottom: -0.1rem;
+  }
 
-    .cs-menu.open {
-        display: block;
-    }
+  .cs-display {
+    cursor: pointer;
+    font: inherit;
+    min-height: var(--font-size--2xl);
+    line-height: 1em;
+    display: flex;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    color: var(--color-foreground);
+  }
+
+  .cs-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 0.1rem solid var(--color-border);
+    background-color: var(--color-background);
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 2;
+    top: 100%;
+  }
+
+  .cs-option {
+    padding: var(--padding-sm) var(--padding-lg);
+    cursor: pointer;
+    color: rgb(var(--color-foreground));
+  }
+
+  .cs-option.selected {
+    background: rgb(248 246 239 / 1);
+  }
+  .cs-option:hover {
+    background: rgb(248 246 239 / 0.5);
+  }
+
+  .cs-menu.open {
+    display: block;
+  }
 {% endstylesheet %}

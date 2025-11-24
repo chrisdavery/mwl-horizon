@@ -277,7 +277,7 @@
     "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Taxes included. Shipping is calculated at checkout.",
     "taxes_included_shipping_at_checkout_without_policy": "Taxes included. Discounts and shipping calculated at checkout.",
     "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Taxes included. Shipping is calculated at checkout.",
-    "unavailable": "Unavailable",
+    "unavailable": "Out of Stock",
     "use_fewer_filters_html": "Try using fewer filters, or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all filters</a>.",
     // Link or button to expand additional information
     "view_more_details": "View more details",
@@ -339,6 +339,7 @@
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
       "available_now": "Available Now",
+      "shipping_text": "Shipping",
       "low_in_stock": "Low in Stock",
       "last_remaining": "Last Remaining Unit",
       "out_of_stock_html": "Out Of Stock <a href=\"#notify\">Notify me when available</a>",

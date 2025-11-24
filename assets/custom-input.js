@@ -1,6 +1,7 @@
+import { Component } from '@theme/component';
 import { PriceChangeEvent } from '@theme/events';
 
-class CustomInput extends HTMLElement {
+class CustomInput extends Component {
   connectedCallback() {
     const input = this.querySelector('input, textarea, select');
     if (!input) return;
@@ -45,7 +46,7 @@ if (!customElements.get('custom-input')) {
 }
 
 
-class DatePicker extends HTMLElement {
+class DatePicker extends Component {
   constructor() {
     super();
     this.currentDate = new Date();
@@ -375,52 +376,20 @@ class DatePicker extends HTMLElement {
 
 customElements.define('date-picker', DatePicker);
 
-class CustomSelect extends HTMLElement {
+class CustomSelect extends Component {
   connectedCallback() {
     const select = this.querySelector("select");
     if (!select) return;
 
     this.select = select;
-    this.render();
+    this.wrapper = this.querySelector(".custom-select");
+    this.display = this.querySelector(".cs-display");
+    this.menu = this.querySelector(".cs-menu");
+    this.optionEls = Array.from(this.querySelectorAll(".cs-option"));
+
     this.bindEvents();
-  }
-
-  render() {
-    this.wrapper = document.createElement("div");
-    this.wrapper.className = "custom-select";
-
-    this.display = document.createElement("div");
-    this.display.className = "cs-display";
-    this.display.textContent = ""; // always blank initially
-    this.wrapper.appendChild(this.display);
-
-    this.menu = document.createElement("div");
-    this.menu.className = "cs-menu";
-    this.populateMenu();
-    this.wrapper.appendChild(this.menu);
-
-    this.appendChild(this.wrapper);
-    this.closest('.custom-select-wrapper')?.classList.remove('hidden')
-  }
-
-  populateMenu() {
-    this.optionEls = []; // store references
-
-    Array.from(this.select.options)
-      .filter(opt => opt.value.trim() !== "") // skip empty placeholder
-      .forEach(opt => {
-        const optionEl = document.createElement("div");
-        optionEl.className = "cs-option";
-        optionEl.textContent = opt.text;
-
-        optionEl.addEventListener("click", e => {
-          e.stopPropagation(); // prevents wrapper click from firing
-          this.onOptionSelect(opt, optionEl);
-        });
-
-        this.menu.appendChild(optionEl);
-        this.optionEls.push(optionEl);
-      });
+    this.initializeSelectedOption();
+    this.closest('.custom-select-wrapper')?.classList.remove('hidden');
   }
 
   bindEvents() {
@@ -431,6 +400,46 @@ class CustomSelect extends HTMLElement {
     document.addEventListener("click", e => {
       if (!this.wrapper.contains(e.target)) this.closeMenu();
     });
+
+    // Bind events to existing option elements
+    this.optionEls.forEach((optionEl, index) => {
+      const opt = Array.from(this.select.options)
+        .filter(opt => opt.value.trim() !== "")[index];
+      
+      if (opt) {
+        optionEl.addEventListener("click", e => {
+          e.stopPropagation();
+          this.onOptionSelect(opt, optionEl);
+        });
+      }
+    });
+  }
+
+  initializeSelectedOption() {
+    // Find the initially selected option and update display
+    const selectedOption = Array.from(this.select.options).find(opt => opt.selected);
+    if (selectedOption && selectedOption.value.trim() !== "") {
+
+      if (selectedOption.dataset.text) {
+        this.display.textContent = selectedOption.dataset.text;
+      } else {
+        this.display.textContent = selectedOption.text;
+      }
+
+      this.classList.add("has-value");
+      
+      // Call hiddenProp for the initially selected option
+      this.hiddenProp(selectedOption); // ← ADD THIS LINE
+      
+      // Highlight the corresponding custom option
+      const optionIndex = Array.from(this.select.options)
+        .filter(opt => opt.value.trim() !== "")
+        .indexOf(selectedOption);
+      
+      if (optionIndex >= 0 && this.optionEls[optionIndex]) {
+        this.optionEls[optionIndex].classList.add("selected");
+      }
+    }
   }
 
   toggleMenu() {
@@ -445,14 +454,25 @@ class CustomSelect extends HTMLElement {
     // set native select value
     this.select.value = opt.value;
 
-    this.showhideOpts(opt)
-    this.showMsg(opt)
+    this.showhideOpts(opt);
+    this.showMsg(opt);
+    this.hiddenProp(opt);
+    
+    if (this.dataset.productWidget != undefined) {
+      this.classList.add('loading-select')
+    }
+
     // dispatch events
     this.select.dispatchEvent(new Event("input", { bubbles: true, composed: true }));
     this.select.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
 
     // update display text
-    this.display.textContent = opt.text;
+    // FIX: Also use dataset.text here for consistency
+    if (opt.dataset.text) {
+      this.display.textContent = opt.dataset.text;
+    } else {
+      this.display.textContent = opt.text;
+    }
 
     // highlight selected
     this.optionEls.forEach(el => el.classList.remove("selected"));
@@ -466,6 +486,37 @@ class CustomSelect extends HTMLElement {
     }
 
     this.closeMenu();
+  }
+
+  /**
+   * @param {any} opt
+   */
+  hiddenProp(opt) {
+    const productDetails = this.closest('.product-details');
+
+    if (!productDetails) return;
+
+    const productForm = productDetails.querySelector('.shopify-product-form');
+    if (!productForm) return;
+
+    // Remove any existing hidden inputs first
+    productForm.querySelectorAll('.hidden-prop').forEach(e => {
+      e.remove();
+    });
+
+    // If the selected option has data-text, create hidden input
+    if (opt.dataset.text) {
+      const hiddenInput = document.createElement('input');
+      hiddenInput.type = 'hidden';
+      hiddenInput.classList.add('hidden-prop');
+      hiddenInput.name = `properties[${Theme.quick_add.shipping_text}]`;
+      hiddenInput.value = opt.dataset.text;
+
+      productForm.appendChild(hiddenInput);
+      console.log('Hidden input created:', hiddenInput.name, hiddenInput.value);
+    } else {
+      console.log('No data-text attribute found for selected option');
+    }
   }
 
   /**
@@ -501,10 +552,10 @@ class CustomSelect extends HTMLElement {
       .replace(/-+/g, '-');           // collapse multiple dashes
 
       document.querySelectorAll('.message-fee-item').forEach(e=> {
-        e.classList.remove('active')
-      })
+        e.classList.remove('active');
+      });
 
-      document.querySelector(`.message-fee-item[data-id="${id}"]`)?.classList.add('active')
+      document.querySelector(`.message-fee-item[data-id="${id}"]`)?.classList.add('active');
   }
 }
 

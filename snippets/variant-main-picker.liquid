@@ -148,7 +148,7 @@
           %}
 
           <div class="variant-option variant-option--dropdowns">
-            <div
+            {% comment %} <div
               class="variant-option__select-wrapper"
               style="
                 {%- if property_being_updated  -%}
@@ -189,7 +189,22 @@
               >
                 {%- render 'icon', icon: 'caret' -%}
               </svg>
-            </div>
+            </div> {% endcomment %}
+
+
+            {% capture id %}Option-{{ block.id }}-{{ forloop.index0 }}{% endcapture %}
+            {% render 'custom-select',
+                id: id,
+                product: product,
+                label: product_option.name,
+                product_option: product_option,
+                options: product_option.values,
+                default_empty: false,
+                required: true,
+                use_variant: false,
+                use_product: true,
+                block_type: false
+            %}
           </div>
         {%- endif -%}
       {%- endfor -%}
