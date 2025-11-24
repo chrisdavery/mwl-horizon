@@ -674,7 +674,11 @@ class QuickOverlay extends Component {
           messageInline.classList.add('active')
           messageInline.innerHTML = Theme.quick_add.out_of_stock_html
     } else {
-      messageInline.innerHTML = Theme.quick_add.available_now
+      if (messageInline.dataset.text) {
+        messageInline.innerHTML = messageInline.dataset.text
+      } else {
+        messageInline.innerHTML = Theme.quick_add.available_now
+      }
     }
   }
 
