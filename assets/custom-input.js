@@ -423,7 +423,7 @@ class CustomSelect extends Component {
       if (selectedOption.dataset.text) {
         this.display.textContent = selectedOption.value + ' - ' + selectedOption.dataset.text;
       } else {
-        this.display.textContent = selectedOption.value + ' - ' + selectedOption.text;
+        this.display.textContent = selectedOption.text;
       }
 
       this.classList.add("has-value");
@@ -471,7 +471,7 @@ class CustomSelect extends Component {
     if (opt.dataset.text) {
       this.display.textContent = opt.value + ' - ' + opt.dataset.text;
     } else {
-      this.display.textContent = opt.value + ' - ' + opt.text;
+      this.display.textContent = opt.text;
     }
 
     // highlight selected
