@@ -16,7 +16,11 @@
         <div class="options-set flex gap-xs">
             {% for value in product_option.values %}
                 <div class="option-set-item">
-                    <button type="button" class="option-button" data-value="{{ value }}" id="card-radio-{{ product_resource.id }}-{{ forloop.index }}">{{ value | replace: 'Size:', '' }}</button>
+                    <button type="button" class="option-button" data-value="{{ value }}" id="card-radio-{{ product_resource.id }}-{{ forloop.index }}"
+                    {% if value.variant.metafields.custom.shipping_text.value != blank %}
+                        data-text="{{ value.variant.metafields.custom.shipping_text.value }}"
+                    {% endif %}
+                    >{{ value | replace: 'Size:', '' }}</button>
                     <span class="text-center message-button message-button-inline" 
                     {% if value.variant.metafields.custom.shipping_text.value != blank %}
                         data-text="{{ value.variant.metafields.custom.shipping_text.value }}"
