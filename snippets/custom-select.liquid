@@ -108,7 +108,12 @@
                 <div class="cs-option flex-option-meta {% if use_product and option.selected %}selected{% endif %}">
                     {% if use_product %}
                         {% if option.available == false %}
-                            <span>{{ option | escape }}</span><span>{{ 'content.unavailable' | t }}</span>
+                            <span>{{ option | escape }}</span>
+                            {% if option.variant.metafields.custom.shipping_text.value != blank %}
+                                <span>{{ option.variant.metafields.custom.shipping_text.value }}</span>
+                            {% else %}
+                                <span>{{ 'content.unavailable' | t }}</span>
+                            {% endif %}
                         {% else %}
                             <span>{{ option | escape }}</span>
                             {% if option.variant.metafields.custom.shipping_text.value != blank %}
