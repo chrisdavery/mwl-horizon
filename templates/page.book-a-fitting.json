@@ -9,6 +9,72 @@
  */
 {
   "sections": {
+    "17642085195c54b66d": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ea940c8_h4Bwmp": {
+          "type": "ai_gen_block_ea940c8",
+          "settings": {
+            "section_padding": 60,
+            "grid_gap": 20,
+            "background_color": "#ffffff",
+            "hero_category": "Featured",
+            "hero_title": "The Art of Modern Bridal Design",
+            "hero_excerpt": "Discover the latest trends in contemporary wedding fashion and timeless elegance.",
+            "hero_link": "",
+            "hero_title_size": 48,
+            "hero_text_color": "#ffffff",
+            "overlay_opacity": 60,
+            "card_1_category": "Style",
+            "card_1_title": "Minimalist Elegance",
+            "card_1_excerpt": "Clean lines and sophisticated silhouettes define this season's aesthetic.",
+            "card_1_link": "",
+            "card_2_category": "Trends",
+            "card_2_title": "Vintage Romance",
+            "card_2_excerpt": "Timeless details inspired by classic bridal traditions.",
+            "card_2_link": "",
+            "card_3_category": "Guide",
+            "card_3_title": "Finding Your Perfect Fit",
+            "card_3_excerpt": "Expert advice on choosing the gown that celebrates your unique style.",
+            "card_3_link": "",
+            "card_background": "#ffffff",
+            "text_color": "#2f2e2e",
+            "category_color": "#a52a2a"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ea940c8_h4Bwmp"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "main": {
       "type": "main-page",
       "blocks": {
@@ -604,6 +670,7 @@
     }
   },
   "order": [
+    "17642085195c54b66d",
     "main",
     "hero_bNLX4M",
     "section_8kgtYw",
