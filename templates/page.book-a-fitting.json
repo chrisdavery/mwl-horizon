@@ -793,6 +793,7 @@
         "ai_gen_block_3663124_8B83rm": {
           "type": "ai_gen_block_3663124",
           "settings": {
+            "featured_image": "shopify://shop_images/MWL_Find_A_Retailer_Home.png",
             "featured_category": "Featured",
             "featured_title": "The Art of Timeless Elegance",
             "featured_excerpt": "Discover the latest trends and timeless pieces that define modern sophistication.",
