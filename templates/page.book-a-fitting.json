@@ -413,9 +413,9 @@
           "type": "ai_gen_block_684a66e",
           "settings": {
             "full_width": true,
-            "section_padding": 40,
-            "gap": 30,
-            "card_padding": 30,
+            "section_padding": 20,
+            "gap": 35,
+            "card_padding": 35,
             "spacing": 20,
             "text_alignment": "left",
             "background_color": "#fefefe",
@@ -513,9 +513,9 @@
         "ai_gen_block_684a66e_bNmHrG": {
           "type": "ai_gen_block_684a66e",
           "settings": {
-            "full_width": false,
-            "section_padding": 40,
-            "gap": 30,
+            "full_width": true,
+            "section_padding": 20,
+            "gap": 35,
             "card_padding": 30,
             "spacing": 20,
             "text_alignment": "left",
@@ -615,8 +615,8 @@
           "type": "ai_gen_block_684a66e",
           "settings": {
             "full_width": true,
-            "section_padding": 40,
-            "gap": 30,
+            "section_padding": 20,
+            "gap": 35,
             "card_padding": 30,
             "spacing": 20,
             "text_alignment": "left",
