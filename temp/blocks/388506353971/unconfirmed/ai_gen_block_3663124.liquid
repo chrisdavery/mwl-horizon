@@ -1,6 +1,1025 @@
+{% doc %}
+  @prompt
+    A magazine-style editorial layout, double in length and add an accordion, add option to remove images, change more articles accordion to FAQ accordion, add sizing functionality for FAQ's accordion, undo recent change, make FAQ's accordion smaller, remove articles and replace with just text, add multiple boxes for texts for articles, add 3 more articles boxes
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-editorial-layout-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.spacing_top }}px 0 {{ block.settings.spacing_bottom }}px;
+  }
+
+  .ai-editorial-container-{{ ai_gen_id }} {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-editorial-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+    align-items: start;
+  }
+
+  .ai-editorial-featured-{{ ai_gen_id }} {
+    grid-column: span 7;
+    position: relative;
+  }
+
+  .ai-editorial-featured-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .ai-editorial-featured-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-editorial-featured-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-editorial-featured-content-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: {{ block.settings.content_padding }}px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    color: #ffffff;
+  }
+
+  .ai-editorial-featured-category-{{ ai_gen_id }} {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: {{ block.settings.category_color }};
+  }
+
+  .ai-editorial-featured-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.featured_title_size }}px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .ai-editorial-featured-excerpt-{{ ai_gen_id }} {
+    font-size: {{ block.settings.featured_excerpt_size }}px;
+    line-height: 1.6;
+    margin: 0 0 16px;
+    opacity: 0.95;
+  }
+
+  .ai-editorial-featured-link-{{ ai_gen_id }} {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-editorial-featured-link-{{ ai_gen_id }}:hover {
+    opacity: 0.7;
+  }
+
+  .ai-editorial-sidebar-{{ ai_gen_id }} {
+    grid-column: span 5;
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.sidebar_gap }}px;
+  }
+
+  .ai-editorial-text-box-{{ ai_gen_id }} {
+    padding: {{ block.settings.text_box_padding }}px;
+    background-color: {{ block.settings.text_box_bg }};
+    border: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-editorial-text-box-category-{{ ai_gen_id }} {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: {{ block.settings.text_color }};
+    opacity: 0.7;
+  }
+
+  .ai-editorial-text-box-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_box_title_size }}px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-editorial-text-box-content-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_box_content_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.text_color }};
+    opacity: 0.85;
+  }
+
+  .ai-editorial-text-box-content-{{ ai_gen_id }} p {
+    margin: 0 0 12px;
+  }
+
+  .ai-editorial-text-box-content-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-editorial-faq-section-{{ ai_gen_id }} {
+    grid-column: span 12;
+    margin-top: {{ block.settings.faq_spacing }}px;
+  }
+
+  .ai-editorial-faq-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.faq_section_title_size }}px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 {{ block.settings.faq_title_spacing }}px;
+    color: {{ block.settings.text_color }};
+    text-align: center;
+  }
+
+  .ai-editorial-faq-list-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.faq_item_gap }}px;
+  }
+
+  .ai-editorial-faq-item-{{ ai_gen_id }} {
+    border: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-editorial-faq-question-{{ ai_gen_id }} {
+    background-color: {{ block.settings.faq_question_bg }};
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-editorial-faq-question-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.faq_question_hover_bg }};
+  }
+
+  .ai-editorial-faq-question-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.faq_question_size }}px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: {{ block.settings.text_color }};
+    padding-right: 16px;
+  }
+
+  .ai-editorial-faq-icon-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-editorial-faq-icon-{{ ai_gen_id }}.active {
+    transform: rotate(180deg);
+  }
+
+  .ai-editorial-faq-answer-{{ ai_gen_id }} {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: {{ block.settings.faq_answer_bg }};
+  }
+
+  .ai-editorial-faq-answer-{{ ai_gen_id }}.active {
+    max-height: 1000px;
+  }
+
+  .ai-editorial-faq-answer-inner-{{ ai_gen_id }} {
+    padding: 12px 20px;
+    font-size: {{ block.settings.faq_answer_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.text_color }};
+    opacity: 0.85;
+  }
+
+  .ai-editorial-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-editorial-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    .ai-editorial-featured-{{ ai_gen_id }},
+    .ai-editorial-sidebar-{{ ai_gen_id }},
+    .ai-editorial-faq-section-{{ ai_gen_id }} {
+      grid-column: span 1;
+    }
+
+    .ai-editorial-featured-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.featured_title_size | times: 0.7 }}px;
+    }
+
+    .ai-editorial-featured-excerpt-{{ ai_gen_id }} {
+      font-size: {{ block.settings.featured_excerpt_size | times: 0.9 }}px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-editorial-text-box-{{ ai_gen_id }} {
+      padding: {{ block.settings.text_box_padding | times: 0.8 }}px;
+    }
+
+    .ai-editorial-text-box-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_box_title_size | times: 0.9 }}px;
+    }
+
+    .ai-editorial-text-box-content-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_box_content_size | times: 0.9 }}px;
+    }
+
+    .ai-editorial-faq-question-{{ ai_gen_id }} {
+      padding: 10px 16px;
+    }
+
+    .ai-editorial-faq-answer-inner-{{ ai_gen_id }} {
+      padding: 10px 16px;
+    }
+
+    .ai-editorial-faq-question-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.faq_question_size | times: 0.9 }}px;
+    }
+
+    .ai-editorial-faq-answer-inner-{{ ai_gen_id }} {
+      font-size: {{ block.settings.faq_answer_size | times: 0.9 }}px;
+    }
+
+    .ai-editorial-faq-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.faq_section_title_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-editorial-layout-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-editorial-container-{{ ai_gen_id }}">
+    <div class="ai-editorial-grid-{{ ai_gen_id }}">
+      <div class="ai-editorial-featured-{{ ai_gen_id }}">
+        {% if block.settings.featured_image %}
+          <img
+            src="{{ block.settings.featured_image | image_url: width: 1200 }}"
+            alt="{{ block.settings.featured_image.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.featured_image.width }}"
+            height="{{ block.settings.featured_image.height }}"
+            class="ai-editorial-featured-image-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-editorial-featured-placeholder-{{ ai_gen_id }}">
+            {{ 'hero-apparel-1' | placeholder_svg_tag }}
+            <div class="ai-editorial-empty-state-{{ ai_gen_id }}">
+              Add a featured image
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="ai-editorial-featured-content-{{ ai_gen_id }}">
+          {% if block.settings.featured_category != blank %}
+            <div class="ai-editorial-featured-category-{{ ai_gen_id }}">
+              {{ block.settings.featured_category }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.featured_title != blank %}
+            <h2 class="ai-editorial-featured-title-{{ ai_gen_id }}">
+              {{ block.settings.featured_title }}
+            </h2>
+          {% endif %}
+
+          {% if block.settings.featured_excerpt != blank %}
+            <div class="ai-editorial-featured-excerpt-{{ ai_gen_id }}">
+              {{ block.settings.featured_excerpt }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.featured_link != blank %}
+            <a href="{{ block.settings.featured_link }}" class="ai-editorial-featured-link-{{ ai_gen_id }}">
+              {{ block.settings.featured_link_text }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="ai-editorial-sidebar-{{ ai_gen_id }}">
+        {% for i in (1..7) %}
+          {% liquid
+            assign category_key = 'text_box_' | append: i | append: '_category'
+            assign title_key = 'text_box_' | append: i | append: '_title'
+            assign content_key = 'text_box_' | append: i | append: '_content'
+
+            assign category = block.settings[category_key]
+            assign title = block.settings[title_key]
+            assign content = block.settings[content_key]
+          %}
+
+          {% if title != blank or content != blank %}
+            <div class="ai-editorial-text-box-{{ ai_gen_id }}">
+              {% if category != blank %}
+                <div class="ai-editorial-text-box-category-{{ ai_gen_id }}">
+                  {{ category }}
+                </div>
+              {% endif %}
+
+              {% if title != blank %}
+                <h3 class="ai-editorial-text-box-title-{{ ai_gen_id }}">
+                  {{ title }}
+                </h3>
+              {% endif %}
+
+              {% if content != blank %}
+                <div class="ai-editorial-text-box-content-{{ ai_gen_id }}">
+                  {{ content }}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      {% if block.settings.show_faq %}
+        <editorial-faq-{{ ai_gen_id }} class="ai-editorial-faq-section-{{ ai_gen_id }}">
+          {% if block.settings.faq_section_title != blank %}
+            <h2 class="ai-editorial-faq-title-{{ ai_gen_id }}">
+              {{ block.settings.faq_section_title }}
+            </h2>
+          {% endif %}
+
+          <div class="ai-editorial-faq-list-{{ ai_gen_id }}">
+            {% for i in (1..6) %}
+              {% liquid
+                assign question_key = 'faq_' | append: i | append: '_question'
+                assign answer_key = 'faq_' | append: i | append: '_answer'
+
+                assign question = block.settings[question_key]
+                assign answer = block.settings[answer_key]
+              %}
+
+              {% if question != blank and answer != blank %}
+                <div class="ai-editorial-faq-item-{{ ai_gen_id }}">
+                  <div class="ai-editorial-faq-question-{{ ai_gen_id }}" role="button" aria-expanded="false" tabindex="0" data-faq-index="{{ i }}">
+                    <h3 class="ai-editorial-faq-question-text-{{ ai_gen_id }}">
+                      {{ question }}
+                    </h3>
+                    <svg class="ai-editorial-faq-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+
+                  <div class="ai-editorial-faq-answer-{{ ai_gen_id }}" data-faq-answer="{{ i }}">
+                    <div class="ai-editorial-faq-answer-inner-{{ ai_gen_id }}">
+                      {{ answer }}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </editorial-faq-{{ ai_gen_id }}>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    class EditorialFaq{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.questions = this.querySelectorAll('.ai-editorial-faq-question-{{ ai_gen_id }}');
+        
+        this.questions.forEach((question) => {
+          question.addEventListener('click', this.toggle.bind(this));
+          question.addEventListener('keydown', this.handleKeydown.bind(this));
+        });
+      }
+
+      toggle(event) {
+        const question = event.currentTarget;
+        const index = question.getAttribute('data-faq-index');
+        const answer = this.querySelector('[data-faq-answer="' + index + '"]');
+        const icon = question.querySelector('.ai-editorial-faq-icon-{{ ai_gen_id }}');
+        
+        const isActive = answer.classList.contains('active');
+        
+        if (isActive) {
+          answer.classList.remove('active');
+          icon.classList.remove('active');
+          question.setAttribute('aria-expanded', 'false');
+        } else {
+          answer.classList.add('active');
+          icon.classList.add('active');
+          question.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      handleKeydown(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          this.toggle(event);
+        }
+      }
+    }
+
+    customElements.define('editorial-faq-{{ ai_gen_id }}', EditorialFaq{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Magazine editorial layout",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Featured article"
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "featured_category",
+      "label": "Category",
+      "default": "Featured"
+    },
+    {
+      "type": "text",
+      "id": "featured_title",
+      "label": "Title",
+      "default": "The Art of Timeless Elegance"
+    },
+    {
+      "type": "textarea",
+      "id": "featured_excerpt",
+      "label": "Excerpt",
+      "default": "Discover the latest trends and timeless pieces that define modern sophistication."
+    },
+    {
+      "type": "url",
+      "id": "featured_link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "featured_link_text",
+      "label": "Link text",
+      "default": "Read More"
+    },
+    {
+      "type": "header",
+      "content": "Text box 1"
+    },
+    {
+      "type": "text",
+      "id": "text_box_1_category",
+      "label": "Category",
+      "default": "Style"
+    },
+    {
+      "type": "text",
+      "id": "text_box_1_title",
+      "label": "Title",
+      "default": "Spring Collection"
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_1_content",
+      "label": "Content",
+      "default": "<p>Fresh silhouettes and vibrant colors define our new season collection.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Text box 2"
+    },
+    {
+      "type": "text",
+      "id": "text_box_2_category",
+      "label": "Category",
+      "default": "Trends"
+    },
+    {
+      "type": "text",
+      "id": "text_box_2_title",
+      "label": "Title",
+      "default": "Minimalist Essentials"
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_2_content",
+      "label": "Content",
+      "default": "<p>Build a versatile wardrobe with timeless pieces that never go out of style.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Text box 3"
+    },
+    {
+      "type": "text",
+      "id": "text_box_3_category",
+      "label": "Category",
+      "default": "Guide"
+    },
+    {
+      "type": "text",
+      "id": "text_box_3_title",
+      "label": "Title",
+      "default": "Sustainable Fashion"
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_3_content",
+      "label": "Content",
+      "default": "<p>Making conscious decisions for a better tomorrow through ethical choices.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Text box 4"
+    },
+    {
+      "type": "text",
+      "id": "text_box_4_category",
+      "label": "Category",
+      "default": "Inspiration"
+    },
+    {
+      "type": "text",
+      "id": "text_box_4_title",
+      "label": "Title",
+      "default": "Behind The Scenes"
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_4_content",
+      "label": "Content",
+      "default": "<p>A glimpse into our creative process and the inspiration behind each piece.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Text box 5"
+    },
+    {
+      "type": "text",
+      "id": "text_box_5_category",
+      "label": "Category",
+      "default": "Fashion"
+    },
+    {
+      "type": "text",
+      "id": "text_box_5_title",
+      "label": "Title",
+      "default": "Seasonal Highlights"
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_5_content",
+      "label": "Content",
+      "default": "<p>Explore the standout pieces that define this season's aesthetic.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Text box 6"
+    },
+    {
+      "type": "text",
+      "id": "text_box_6_category",
+      "label": "Category",
+      "default": "Lifestyle"
+    },
+    {
+      "type": "text",
+      "id": "text_box_6_title",
+      "label": "Title",
+      "default": "Personal Style"
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_6_content",
+      "label": "Content",
+      "default": "<p>Tips for developing a signature look that's uniquely yours.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Text box 7"
+    },
+    {
+      "type": "text",
+      "id": "text_box_7_category",
+      "label": "Category",
+      "default": "Editorial"
+    },
+    {
+      "type": "text",
+      "id": "text_box_7_title",
+      "label": "Title",
+      "default": "The Power of Details"
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_7_content",
+      "label": "Content",
+      "default": "<p>How the right details can transform any outfit into something extraordinary.</p>"
+    },
+    {
+      "type": "header",
+      "content": "FAQ section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_faq",
+      "label": "Show FAQ",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "faq_section_title",
+      "label": "Section title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 1"
+    },
+    {
+      "type": "text",
+      "id": "faq_1_question",
+      "label": "Question",
+      "default": "What is your return policy?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_1_answer",
+      "label": "Answer",
+      "default": "We offer a 30-day return policy on all unworn items with original tags attached. Returns are free and easy through our online portal."
+    },
+    {
+      "type": "header",
+      "content": "FAQ 2"
+    },
+    {
+      "type": "text",
+      "id": "faq_2_question",
+      "label": "Question",
+      "default": "How long does shipping take?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_2_answer",
+      "label": "Answer",
+      "default": "Standard shipping takes 5-7 business days. Express shipping is available and typically arrives within 2-3 business days."
+    },
+    {
+      "type": "header",
+      "content": "FAQ 3"
+    },
+    {
+      "type": "text",
+      "id": "faq_3_question",
+      "label": "Question",
+      "default": "Do you offer international shipping?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_3_answer",
+      "label": "Answer",
+      "default": "Yes, we ship to over 50 countries worldwide. International shipping times vary by location but typically take 7-14 business days."
+    },
+    {
+      "type": "header",
+      "content": "FAQ 4"
+    },
+    {
+      "type": "text",
+      "id": "faq_4_question",
+      "label": "Question",
+      "default": "How do I care for my garments?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_4_answer",
+      "label": "Answer",
+      "default": "Care instructions are included on the label of each garment. Generally, we recommend gentle washing in cold water and air drying to maintain quality."
+    },
+    {
+      "type": "header",
+      "content": "FAQ 5"
+    },
+    {
+      "type": "text",
+      "id": "faq_5_question",
+      "label": "Question",
+      "default": "Are your products sustainably made?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_5_answer",
+      "label": "Answer",
+      "default": "Yes, sustainability is at the core of our brand. We use eco-friendly materials and work with ethical manufacturers who share our values."
+    },
+    {
+      "type": "header",
+      "content": "FAQ 6"
+    },
+    {
+      "type": "text",
+      "id": "faq_6_question",
+      "label": "Question",
+      "default": "How do I find my size?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_6_answer",
+      "label": "Answer",
+      "default": "Each product page includes a detailed size guide. If you're between sizes, we recommend sizing up for a more comfortable fit."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Grid gap",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "sidebar_gap",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Sidebar gap",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "text_box_padding",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Text box padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "faq_spacing",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "FAQ top spacing",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "faq_title_spacing",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "FAQ title spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "faq_item_gap",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "FAQ item gap",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile gap",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Content padding",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "featured_title_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Featured title size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "featured_excerpt_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Featured excerpt size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_box_title_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text box title size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_box_content_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Text box content size",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "faq_section_title_size",
+      "min": 20,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "FAQ section title size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "faq_question_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "FAQ question size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "faq_answer_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "FAQ answer size",
+      "default": 13
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#2f2e2e"
+    },
+    {
+      "type": "color",
+      "id": "category_color",
+      "label": "Featured category",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#e6e6e6"
+    },
+    {
+      "type": "color",
+      "id": "text_box_bg",
+      "label": "Text box background",
+      "default": "#f8f6ef"
+    },
+    {
+      "type": "color",
+      "id": "faq_question_bg",
+      "label": "FAQ question background",
+      "default": "#f8f6ef"
+    },
+    {
+      "type": "color",
+      "id": "faq_question_hover_bg",
+      "label": "FAQ question hover",
+      "default": "#f0ece2"
+    },
+    {
+      "type": "color",
+      "id": "faq_answer_bg",
+      "label": "FAQ answer background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom spacing",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Magazine editorial layout"
+    }
+  ]
+}
 {% endschema %}
