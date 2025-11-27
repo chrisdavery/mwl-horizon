@@ -9,6 +9,73 @@
  */
 {
   "sections": {
+    "176421007289ab0e85": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_26c1ec8_F6HHCY": {
+          "type": "ai_gen_block_26c1ec8",
+          "settings": {
+            "heading": "Brisbane Boutique",
+            "address": "123 Queen Street\nBrisbane QLD 4000",
+            "phone": "07 3000 0000",
+            "email": "appointments@mwlbride.com",
+            "button_text": "Book Appointment",
+            "button_link": "",
+            "text_alignment": "center",
+            "padding": 40,
+            "spacing": 16,
+            "border_radius": 0,
+            "background_color": "#f8f6ef",
+            "heading_color": "#2f2e2e",
+            "text_color": "#2f2e2e",
+            "icon_color": "#2f2e2e",
+            "link_hover_color": "#a52a2a",
+            "heading_size": 20,
+            "text_size": 16,
+            "button_background": "#2f2e2e",
+            "button_text_color": "#ffffff",
+            "button_border_color": "#2f2e2e",
+            "button_hover_background": "#a52a2a",
+            "button_hover_text_color": "#ffffff",
+            "button_hover_border_color": "#a52a2a",
+            "button_border_width": 0,
+            "button_border_radius": 0,
+            "button_text_size": 14
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_26c1ec8_F6HHCY"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "main": {
       "type": "main-page",
       "blocks": {
@@ -476,7 +543,7 @@
             "slides_per_view_mobile": 1,
             "gap": 20,
             "image_aspect_ratio": "1/1",
-            "image_border_radius": 8,
+            "image_border_radius": 0,
             "background_color": "#fefefe",
             "text_color": "#2f2e2e",
             "text_hover_color": "#a52a2a",
@@ -485,7 +552,7 @@
             "dot_active_color": "#2f2e2e",
             "text_size": 14,
             "text_alignment": "center",
-            "text_1": "Explore Brisbane Boutique",
+            "text_1": "Explore Perth Boutique",
             "link_1": "shopify://pages/booking-brisbane",
             "text_2": "Explore Gold Coast Boutique",
             "link_2": "",
@@ -493,7 +560,7 @@
             "link_3": "",
             "text_4": "Explore Melbourne Boutique",
             "link_4": "",
-            "text_5": "Explore Perth Boutique",
+            "text_5": "Explore Brisbane Boutique",
             "link_5": "",
             "text_6": "Explore London Boutique",
             "link_6": "",
@@ -538,6 +605,7 @@
     }
   },
   "order": [
+    "176421007289ab0e85",
     "main",
     "hero_bNLX4M",
     "section_8kgtYw",
