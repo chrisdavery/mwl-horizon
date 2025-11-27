@@ -9,73 +9,6 @@
  */
 {
   "sections": {
-    "176421007289ab0e85": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_26c1ec8_F6HHCY": {
-          "type": "ai_gen_block_26c1ec8",
-          "settings": {
-            "heading": "Brisbane Boutique",
-            "address": "123 Queen Street\nBrisbane QLD 4000",
-            "phone": "07 3000 0000",
-            "email": "appointments@mwlbride.com",
-            "button_text": "Book Appointment",
-            "button_link": "",
-            "text_alignment": "center",
-            "padding": 40,
-            "spacing": 16,
-            "border_radius": 0,
-            "background_color": "#f8f6ef",
-            "heading_color": "#2f2e2e",
-            "text_color": "#2f2e2e",
-            "icon_color": "#2f2e2e",
-            "link_hover_color": "#a52a2a",
-            "heading_size": 20,
-            "text_size": 16,
-            "button_background": "#2f2e2e",
-            "button_text_color": "#ffffff",
-            "button_border_color": "#2f2e2e",
-            "button_hover_background": "#a52a2a",
-            "button_hover_text_color": "#ffffff",
-            "button_hover_border_color": "#a52a2a",
-            "button_border_width": 0,
-            "button_border_radius": 0,
-            "button_text_size": 14
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_26c1ec8_F6HHCY"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
     "main": {
       "type": "main-page",
       "blocks": {
@@ -472,11 +405,112 @@
         "padding-block-end": 52
       }
     },
+    "17642101747711ab7d": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_0834408_BNmc8n": {
+          "type": "ai_gen_block_0834408",
+          "settings": {
+            "container_width": "full",
+            "section_padding": 40,
+            "gap": 30,
+            "card_padding": 30,
+            "spacing": 20,
+            "background_color": "#fefefe",
+            "card_background": "#f8f6ef",
+            "heading_color": "#2f2e2e",
+            "text_color": "#2f2e2e",
+            "link_color": "#2f2e2e",
+            "link_hover_color": "#a52a2a",
+            "underline_links": false,
+            "divider_width": 1,
+            "divider_color": "#cfc9c8",
+            "border_radius": 0,
+            "heading_size": 20,
+            "text_size": 16,
+            "button_background": "#2f2e2e",
+            "button_text": "#ffffff",
+            "button_border_color": "#2f2e2e",
+            "button_hover_background": "#a52a2a",
+            "button_hover_text": "#ffffff",
+            "button_hover_border": "#a52a2a",
+            "button_border_radius": 0,
+            "button_border_width": 0,
+            "button_text_size": 14,
+            "button_2_background": "#ffffff",
+            "button_2_text": "#2f2e2e",
+            "button_2_border_color": "#2f2e2e",
+            "button_2_hover_background": "#2f2e2e",
+            "button_2_hover_text": "#ffffff",
+            "button_2_hover_border": "#2f2e2e",
+            "button_2_border_radius": 0,
+            "button_2_border_width": 1,
+            "button_2_text_size": 14,
+            "location_1_heading": "Brisbane",
+            "location_1_address": "123 Queen Street\nBrisbane QLD 4000",
+            "location_1_phone": "(07) 1234 5678",
+            "location_1_email": "brisbane@example.com",
+            "location_1_button_text": "Book Now",
+            "location_1_button_link": "",
+            "location_1_button_2_text": "Contact Us",
+            "location_1_button_2_link": "",
+            "location_2_heading": "Gold Coast",
+            "location_2_address": "456 Surfers Paradise Blvd\nGold Coast QLD 4217",
+            "location_2_phone": "(07) 2345 6789",
+            "location_2_email": "goldcoast@example.com",
+            "location_2_button_text": "Book Now",
+            "location_2_button_link": "",
+            "location_2_button_2_text": "Contact Us",
+            "location_2_button_2_link": "",
+            "location_3_heading": "Sunshine Coast",
+            "location_3_address": "789 Ocean Street\nSunshine Coast QLD 4558",
+            "location_3_phone": "(07) 3456 7890",
+            "location_3_email": "sunshinecoast@example.com",
+            "location_3_button_text": "Book Now",
+            "location_3_button_link": "",
+            "location_3_button_2_text": "Contact Us",
+            "location_3_button_2_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_0834408_BNmc8n"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "full-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "blocks_gRG4V9": {
       "type": "_blocks",
       "blocks": {
         "ai_gen_block_c5f0eec_A4BeXH": {
           "type": "ai_gen_block_c5f0eec",
+          "disabled": true,
           "settings": {
             "heading_1": "GLOBAL STOCKISTS",
             "body_1": "<p>Find your nearest MWL stockist here. </p>",
@@ -542,7 +576,7 @@
             "slides_per_view": 3,
             "slides_per_view_mobile": 1,
             "gap": 20,
-            "image_aspect_ratio": "1/1",
+            "image_aspect_ratio": "3/4",
             "image_border_radius": 0,
             "background_color": "#fefefe",
             "text_color": "#2f2e2e",
@@ -605,11 +639,11 @@
     }
   },
   "order": [
-    "176421007289ab0e85",
     "main",
     "hero_bNLX4M",
     "section_8kgtYw",
     "section_dBQ8Wd",
+    "17642101747711ab7d",
     "blocks_gRG4V9",
     "176420967614dd6780"
   ]
