@@ -479,6 +479,7 @@
       "block_order": [
         "ai_gen_block_684a66e_cTzXYb"
       ],
+      "name": "AU Boutiques",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -515,7 +516,7 @@
           "settings": {
             "full_width": true,
             "section_padding": 20,
-            "gap": 35,
+            "gap": 25,
             "card_padding": 30,
             "spacing": 20,
             "text_alignment": "left",
@@ -580,6 +581,7 @@
       "block_order": [
         "ai_gen_block_684a66e_bNmHrG"
       ],
+      "name": "AU Boutiques",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -681,6 +683,7 @@
       "block_order": [
         "ai_gen_block_684a66e_TT9zYq"
       ],
+      "name": "UK/EU Boutiques",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -691,98 +694,6 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "full-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "blocks_N4WXMp": {
-      "type": "_blocks",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "full-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "blocks_gRG4V9": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_c5f0eec_A4BeXH": {
-          "type": "ai_gen_block_c5f0eec",
-          "disabled": true,
-          "settings": {
-            "heading_1": "GLOBAL STOCKISTS",
-            "body_1": "<p>Find your nearest MWL stockist here. </p>",
-            "heading_2": "WHOLESALE ENQUIRIES",
-            "body_2": "<p>If you would like to become a MWL wholesale partner, please contact us at wholesale@mwlbride.com.</p>",
-            "horizontal_padding": 90,
-            "section_padding": 40,
-            "gap_between_blocks": 60,
-            "mobile_layout": "column",
-            "mobile_gap": 30,
-            "mobile_horizontal_padding": 20,
-            "heading_color": "#2f2e2e",
-            "heading_size": 20,
-            "heading_text_transform": "uppercase",
-            "heading_spacing": 12,
-            "body_color": "#2f2e2e",
-            "body_size": 16,
-            "body_line_height": 1.6,
-            "paragraph_spacing": 12,
-            "background_color": "#fefefe"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_c5f0eec_A4BeXH"
-      ],
-      "name": "Footer text blocks",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "",
@@ -843,7 +754,68 @@
       "block_order": [
         "ai_gen_block_a77d612_mTR9KK"
       ],
-      "disabled": true,
+      "name": "Boutique Gallery",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "blocks_gRG4V9": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c5f0eec_A4BeXH": {
+          "type": "ai_gen_block_c5f0eec",
+          "settings": {
+            "heading_1": "GLOBAL STOCKISTS",
+            "body_1": "<p>Find your nearest MWL stockist here. </p>",
+            "heading_2": "WHOLESALE ENQUIRIES",
+            "body_2": "<p>If you would like to become a MWL wholesale partner, please contact us at wholesale@mwlbride.com.</p>",
+            "horizontal_padding": 90,
+            "section_padding": 40,
+            "gap_between_blocks": 60,
+            "mobile_layout": "column",
+            "mobile_gap": 30,
+            "mobile_horizontal_padding": 20,
+            "heading_color": "#2f2e2e",
+            "heading_size": 20,
+            "heading_text_transform": "uppercase",
+            "heading_spacing": 12,
+            "body_color": "#2f2e2e",
+            "body_size": 16,
+            "body_line_height": 1.6,
+            "paragraph_spacing": 12,
+            "background_color": "#fefefe"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c5f0eec_A4BeXH"
+      ],
+      "name": "Stockists/Wholesale",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -881,8 +853,7 @@
     "17642101747711ab7d",
     "blocks_F7pTpD",
     "blocks_3wdw6f",
-    "blocks_N4WXMp",
-    "blocks_gRG4V9",
-    "176420967614dd6780"
+    "176420967614dd6780",
+    "blocks_gRG4V9"
   ]
 }
