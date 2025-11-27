@@ -513,7 +513,7 @@
         "ai_gen_block_684a66e_bNmHrG": {
           "type": "ai_gen_block_684a66e",
           "settings": {
-            "full_width": true,
+            "full_width": false,
             "section_padding": 40,
             "gap": 30,
             "card_padding": 30,
