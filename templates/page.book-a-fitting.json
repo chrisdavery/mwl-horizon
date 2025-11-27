@@ -410,6 +410,7 @@
       "blocks": {
         "ai_gen_block_684a66e_cTzXYb": {
           "type": "ai_gen_block_684a66e",
+          "disabled": true,
           "settings": {
             "full_width": true,
             "section_padding": 20,
@@ -423,8 +424,8 @@
             "text_color": "#2f2e2e",
             "link_color": "#2f2e2e",
             "link_hover_color": "#2f2e2e",
-            "underline_links": false,
-            "divider_width": 1,
+            "underline_links": true,
+            "divider_width": 0,
             "divider_color": "#2f2e2e",
             "border_radius": 0,
             "heading_size": 20,
@@ -512,6 +513,7 @@
       "blocks": {
         "ai_gen_block_684a66e_bNmHrG": {
           "type": "ai_gen_block_684a66e",
+          "disabled": true,
           "settings": {
             "full_width": true,
             "section_padding": 20,
@@ -682,6 +684,7 @@
       "block_order": [
         "ai_gen_block_684a66e_TT9zYq"
       ],
+      "disabled": true,
       "name": "UK/EU Boutiques",
       "settings": {
         "content_direction": "column",
@@ -754,6 +757,7 @@
       "block_order": [
         "ai_gen_block_a77d612_mTR9KK"
       ],
+      "disabled": true,
       "name": "Boutique Gallery",
       "settings": {
         "content_direction": "column",
