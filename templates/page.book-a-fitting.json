@@ -408,14 +408,15 @@
     "17642101747711ab7d": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_0834408_BNmc8n": {
-          "type": "ai_gen_block_0834408",
+        "ai_gen_block_684a66e_cTzXYb": {
+          "type": "ai_gen_block_684a66e",
           "settings": {
-            "container_width": "full",
+            "full_width": true,
             "section_padding": 40,
             "gap": 30,
             "card_padding": 30,
             "spacing": 20,
+            "text_alignment": "left",
             "background_color": "#fefefe",
             "card_background": "#f8f6ef",
             "heading_color": "#2f2e2e",
@@ -475,10 +476,10 @@
         }
       },
       "block_order": [
-        "ai_gen_block_0834408_BNmc8n"
+        "ai_gen_block_684a66e_cTzXYb"
       ],
       "settings": {
-        "content_direction": "row",
+        "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
