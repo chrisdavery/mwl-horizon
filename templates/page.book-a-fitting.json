@@ -453,15 +453,15 @@
             "location_1_phone": "",
             "location_1_email": "brisbane@mwlbride.com",
             "location_1_button_text": "Book Appointment",
-            "location_1_button_link": "shopify://pages/booking-brisbane",
+            "location_1_button_link": "shopify://pages/brisbane-booking-page",
             "location_1_button_2_text": "",
-            "location_1_button_2_link": "shopify://pages/become-a-stockist",
+            "location_1_button_2_link": "",
             "location_2_heading": "SYDNEY, AU",
             "location_2_address": "Suite 7, 15 – 17 Stanley St, St Ives NSW 2075",
             "location_2_phone": "",
             "location_2_email": "sydney@mwlbride.com",
             "location_2_button_text": "Book Appointment",
-            "location_2_button_link": "shopify://pages/gold-coast-booking-page",
+            "location_2_button_link": "shopify://pages/sydney-booking-page",
             "location_2_button_2_text": "",
             "location_2_button_2_link": "shopify://pages/mwl-gold-coast-boutique",
             "location_3_heading": "MELBOURNE, AU",
@@ -471,7 +471,7 @@
             "location_3_button_text": "Book Appointment",
             "location_3_button_link": "shopify://pages/melbourne-booking-page",
             "location_3_button_2_text": "",
-            "location_3_button_2_link": "shopify://pages/mwl-melbourne-boutique"
+            "location_3_button_2_link": ""
           },
           "blocks": {}
         }
