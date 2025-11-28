@@ -94,6 +94,7 @@
       "block_order": [
         "text_6pK8NY"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -161,14 +162,14 @@
       "block_order": [
         "text_mwDNwc"
       ],
-      "disabled": true,
       "custom_css": [
         "@media (max-width: 749px) {.hero {--hero-min-height: 40svh !important; }}"
       ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/prim-wedding-dress-made-with-love-bridal-9_95f22b62-247d-4c8b-839e-83c2354f0fd4.png",
+        "image_1": "shopify://shop_images/1_19b2e1d8-36ec-4ea5-a8fb-89c27c8dba17.png",
+        "mobile_image_1": "shopify://shop_images/Untitled_design_21.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -181,7 +182,7 @@
         "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 16,
         "section_width": "page-width",
-        "section_height": "custom",
+        "section_height": "small",
         "section_height_custom": 95,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
