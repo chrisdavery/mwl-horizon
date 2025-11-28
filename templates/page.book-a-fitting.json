@@ -856,7 +856,7 @@
             "faq_question_bg": "#ffffff",
             "faq_question_hover_bg": "#ffffff",
             "faq_answer_bg": "#ffffff",
-            "spacing_top": 60,
+            "spacing_top": 30,
             "spacing_bottom": 60
           },
           "blocks": {}
