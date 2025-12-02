@@ -24,6 +24,7 @@
       "blocks": {}
     },
     "17636958692fd1b7da": {
+      "disabled": true,
       "settings": {},
       "blocks": {
         "ai_gen_block_822da33_D3mgmq": {
@@ -35,6 +36,26 @@
           }
         }
       }
+    },
+    "hero_YWjNNm": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "divider_c9TGcg": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "section_cX79zF": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "section_i3mkk9": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     }
   }
 }
