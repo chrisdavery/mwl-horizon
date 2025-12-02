@@ -17,7 +17,12 @@
       "settings": {},
       "blocks": {
         "header-menu": {
-          "blocks": {},
+          "blocks": {
+            "menu-button": {
+              "disabled": true,
+              "settings": {}
+            }
+          },
           "block_order": [
             "megamenu_card_item_rdNF3W",
             "megamenu_card_item_wV3yAw"
