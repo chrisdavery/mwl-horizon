@@ -803,7 +803,7 @@
                   "high-priority-fee",
                   "priority-fee"
                 ],
-                "standard_lead_date": 180,
+                "standard_lead_date": 2,
                 "required": true,
                 "error_message": "dd/mm/yyyy is required",
                 "width": "fill",
