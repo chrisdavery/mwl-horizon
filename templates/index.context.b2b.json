@@ -13,18 +13,6 @@
     "b2b": true
   },
   "sections": {
-    "17636958692fd1b7da": {
-      "settings": {},
-      "blocks": {
-        "ai_gen_block_822da33_D3mgmq": {
-          "settings": {
-            "image_aspect_ratio": "4 / 5",
-            "image_2": "shopify://shop_images/MWL_Homepage_2.png",
-            "image_4": "shopify://shop_images/MWL-GIGI-VEIL-HOME-1.png"
-          }
-        }
-      }
-    },
     "ss_hero_14_g9ktR8": {
       "disabled": true,
       "settings": {},
@@ -34,6 +22,19 @@
       "disabled": true,
       "settings": {},
       "blocks": {}
+    },
+    "17636958692fd1b7da": {
+      "settings": {},
+      "blocks": {
+        "ai_gen_block_822da33_D3mgmq": {
+          "disabled": true,
+          "settings": {
+            "image_aspect_ratio": "4 / 5",
+            "image_2": "shopify://shop_images/MWL_Homepage_2.png",
+            "image_4": "shopify://shop_images/MWL-GIGI-VEIL-HOME-1.png"
+          }
+        }
+      }
     }
   }
 }
