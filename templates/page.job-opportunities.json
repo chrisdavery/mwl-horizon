@@ -377,47 +377,6 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "accordion_row_N9VTyq": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "Looking For A Stylist Role With Mwl?",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_hWhQxC": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>We are always on the look out for talented individuals to join our team across our nationwide boutiques, please reach out to laura@mwlbride.com today to express your interest.</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "enable_mobile_size": false,
-                        "mobile_font_size": "1rem",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_hWhQxC"
-                  ]
-                },
                 "accordion_row_yj78wD": {
                   "type": "_accordion-row",
                   "disabled": true,
@@ -500,12 +459,95 @@
                   "block_order": [
                     "text_cNxmzW"
                   ]
+                },
+                "accordion_row_MNVGwi": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Tiktok Manager | Gold Coast, Australia",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_pwNA4y": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>The Role</strong></p><p>We are seeking a creative and data-driven <strong>TikTok Manager</strong> to lead our TikTok content strategy - driving brand visibility, engagement, and bookings through original, culturally-aware video content.</p><p>This role is perfect for someone who understands the nuance of luxury fashion storytelling and can translate trends into elevated short-form content that brides are excited to engage with.</p><p><strong>Key Responsibilities</strong></p><ul><li>Develop and execute a high-impact TikTok strategy that aligns with brand and commercial goals</li><li>Ideate, script, film, edit, and publish TikTok content that reflects our premium brand aesthetic but keeping it accessible</li><li>Manage the TikTok content calendar - proactively planning ahead of key drops, events, and brand moments</li><li>Grow followers, engagement, reach, and conversions; report results with clear insights and next steps</li><li>Actively identify and leverage relevant trends, audio, effects, and cultural moments</li><li>Film in-store content capturing authentic boutique experiences and the emotional brand story</li><li>Collaborate with marketing, retail, design, and PR teams to ensure cohesive brand messaging</li><li>Work closely with creators, ambassadors, and influencers to produce approved content</li><li>Respond to TikTok community interactions in a welcoming and brand-aligned manner</li><li>Maintain an always-on UGC pipeline - briefing, directing, and repurposing creator content</li><li>Stay informed on TikTok innovations, algorithms, and competitor activity</li></ul><p><strong>Skills & Experience</strong></p><ul><li>Proven experience managing TikTok for a premium lifestyle, fashion, beauty brand or similar</li><li>Strong videography and video editing skills (TikTok native tools or CapCut expertise essential)</li><li>Demonstrated success using TikTok analytics to guide content direction</li><li>Ability to pivot quickly with fast-turnaround content while maintaining high standards</li><li>Genuine passion for bridal fashion, luxury branding, and social media culture</li><li>Confident filming and directing people on camera</li><li>Excellent storytelling and copywriting skills</li><li>Follow a well-organised workflow with impeccable attention to detail</li></ul><p><strong>Who You Are</strong></p><ul><li>A creative thinker with strong brand sensibility</li><li>Obsessed with TikTok - scrolling for insights, not just entertainment</li><li>Highly self-motivated with ownership of performance and results</li><li>Able to work independently and collaboratively in boutique environments</li><li>Comfortable being in-store and customer-facing when required</li><li>Energetic, positive, and passionate about creating content that <em>feels</em> elevated</li></ul><p><strong>Why Join Us</strong></p><ul><li>Work inside a global luxury bridal brand in their change era</li><li>A creative role where your work directly drives brand success</li><li>Grow with a company expanding into new regions and channels</li><li>A supportive, innovative, and fashion-forward culture</li></ul><p><strong>Apply by:</strong><br/><br/><strong>Email</strong> | genea@madewithlovebridal.com</p><p><strong>SEEK </strong>| view listing <a href=\"https://www.seek.com.au/job/89011418?ref=hirer-jobs-list\" target=\"_blank\" title=\"https://www.seek.com.au/job/89011418?ref=hirer-jobs-list\">here</a>. </p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_pwNA4y"
+                  ]
+                },
+                "accordion_row_N9VTyq": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Looking For A Stylist Role With Mwl?",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_hWhQxC": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We are always on the look out for talented individuals to join our team across our nationwide boutiques, please reach out to laura@mwlbride.com today to express your interest.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_hWhQxC"
+                  ]
                 }
               },
               "block_order": [
-                "accordion_row_N9VTyq",
                 "accordion_row_yj78wD",
-                "accordion_row_7YKQf4"
+                "accordion_row_7YKQf4",
+                "accordion_row_MNVGwi",
+                "accordion_row_N9VTyq"
               ]
             }
           },
