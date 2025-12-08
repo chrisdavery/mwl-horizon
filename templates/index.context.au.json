@@ -12,5 +12,12 @@
   "context": {
     "market": "au"
   },
-  "sections": {}
+  "sections": {
+    "ss_hero_14_g9ktR8": {
+      "settings": {
+        "content_overlay": 0
+      },
+      "blocks": {}
+    }
+  }
 }
