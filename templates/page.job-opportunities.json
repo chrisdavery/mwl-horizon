@@ -181,6 +181,8 @@
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
+        "enable_mobile_gap": false,
+        "mobile_gap": 12,
         "section_width": "full-width",
         "full_width_on_mobile": false,
         "section_height": "",
@@ -219,6 +221,8 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
             "gap": 12,
+            "enable_mobile_gap": false,
+            "mobile_gap": 12,
             "width": "custom",
             "custom_width": 33,
             "width_mobile": "fill",
@@ -292,6 +296,8 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
             "gap": 32,
+            "enable_mobile_gap": false,
+            "mobile_gap": 12,
             "width": "custom",
             "custom_width": 60,
             "width_mobile": "fill",
@@ -371,132 +377,6 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "accordion_row_yj78wD": {
-                  "type": "_accordion-row",
-                  "disabled": true,
-                  "settings": {
-                    "heading": "Content Director | Gold Coast, Australia",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_PcEMT3": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p><strong>The Role</strong></p><p>This is not a traditional marketing role. As our Content Director, you will define and drive the visual and editorial voice of Made With Love. You will create the content direction for all digital platforms, assist with concept development for brand campaigns, and direct a cross-functional creative team to deliver bold, emotional, and design-led storytelling.</p><p>This is a rare opportunity to shape the future of a brand that is redefining bridal fashion - blending cinematic beauty with and commercial relevance.</p><p><strong>Key Responsibilities</strong></p><p><strong>Brand Narrative and Creative Direction</strong></p><ul><li>Define and refine the visual identity and tone of voice across all brand channels</li><li>Contribute to concept development for seasonal campaigns, capsule launches, collaborations, and runway moments</li><li>Create all creative output, ensuring it reflects the evolving aesthetic and ambition of the brand</li></ul><p><strong>Content Strategy and Execution</strong></p><ul><li>Develop and own the brand’s content strategy across web, email, social, in-store, and emerging platforms</li><li>Create and contribute to the strategic content calendar that balances brand storytelling with commercial performance</li><li>Ensure all content is elevated, on-brand, and aligned with key business objectives</li></ul><p><strong>Social Media and Digital Content</strong></p><ul><li>Lead the creation, curation of all social content across Instagram, TikTok, Pinterest, and Facebook</li><li>Plan, shoot, and edit compelling, editorially-driven content tailored to each platform – from low-fi to elevated styles</li><li>Identify and leverage trends, sounds, and creative formats that extend reach, deepen engagement, and grow brand equity</li></ul><p><strong>Contribution and Collaboration</strong></p><ul><li>Collaborate with a growing in-house and freelance creative team, including designers, content creators, photographers, stylists, and editors</li><li>Collaborate closely with the design, digital, marketing, e-commerce, and retail teams to ensure seamless brand consistency across touchpoints</li><li>Source and manage external creative collaborators where required</li></ul><p><strong>Trend Leadership and Brand Innovation</strong></p><ul><li>Stay ahead of trends, ensuring the brand remains distinctive and aspirational</li><li>Identify and pitch creative partnerships, shoot concepts, or brand moments that push the brand forward</li></ul><p><strong>You Bring</strong></p><ul><li>Minimum 3 year’s experience in content, brand, or creative direction - ideally within fashion, beauty, lifestyle, or design-led brands</li><li>A strong portfolio showcasing creative leadership, storytelling, and brand development across digital and editorial platforms</li><li>Hands-on experience in shoot production, art direction, content creation, and social media execution</li><li>Proven ability to collaborate with and inspire a creative team in a fast-paced, highly visual business</li><li>A natural balance of conceptual thinking, editorial taste, and commercial awareness</li><li>Passion for high end fashion, and storytelling that resonates with a global audience</li></ul><p><strong>Why Join Us</strong></p><ul><li>Shape the creative direction of a globally recognised brand redefining bridal fashion</li><li>Lead work that is creatively fulfilling and commercially impactful</li><li>Join a collaborative and ambitious team where ideas are welcomed and originality is celebrated</li><li>Enjoy a culture of innovation, kindness, and real creative freedom</li></ul><p><strong>This is a career-defining opportunity for a content creator who wants to be a part of something meaningful and unforgettable.</strong></p><p><strong>Apply by:</strong><br/><br/><strong>Email</strong> | genea@madewithlovebridal.com</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "enable_mobile_size": false,
-                        "mobile_font_size": "1rem",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_PcEMT3"
-                  ]
-                },
-                "accordion_row_nL9mgY": {
-                  "type": "_accordion-row",
-                  "disabled": true,
-                  "settings": {
-                    "heading": "Graphic Designer | Gold Coast, Australia",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_NTz9y7": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p><strong>Brand Experience Designer</strong></p><p>In-house, Burleigh Waters Gold Coast</p><p><strong> Overview</strong></p><p>Made With Love is entering a new era of brand identity - refined, editorial, and globally recognised. We’re seeking a Graphic Designer with senior design expertise to visually elevate our brand across every touchpoint. This is a pivotal role suited to a highly creative and technically graphic or visual designer who can think strategically, execute beautifully, and align with our brand’s new direction.</p><p><strong>Key Responsibilities</strong></p><p>Lead the design of brand decks, look books, and internal presentations to a global standard</p><p>Develop assets for organic and paid campaigns (Meta, Google, Pinterest, TikTok, etc.) with elevated visuals that reflect our brand story</p><p>Create high-quality graphics for web, email, and social using Adobe Suite and Figma</p><p>Collaborate with our Marketing & Ecommerce teams to evolve and refine the visual brand direction</p><p>Translate conceptual briefs into fully designed assets that reflect editorial style and storytelling</p><p>Prepare print-ready artwork for packaging, stationery, boutique materials, and events</p><p>Maintain and evolve the visual brand guidelines and ensure consistency across all global markets and teams</p><p><strong>What We’re Looking For</strong></p><p>5+ years of graphic design experience with strong Adobe Creative Suite (Photoshop, InDesign, Illustrator) expertise</p><p>Proven ability to create visually elevated work for fashion, luxury, lifestyle or beauty brands</p><p>Figma knowledge a major bonus - for collaboration with web and eCom design</p><p>Deep understanding of digital marketing formats and creative best practices</p><p>High attention to detail, with a passion for aesthetics, typography, and layout</p><p>A collaborative mindset - able to take feedback, lead when needed, and thrive in a creative team</p><p>Experience with global brands or multi-market campaigns is a plus</p><p><strong>You’ll Thrive Here If You...</strong></p><p>Love crafting meaningful visuals that emotionally connect with a customer</p><p>Want to help shape a cult-loved brand as we expand globally</p><p>Think strategically, but aren’t afraid to get hands-on with production</p><p>Are excited by the idea of pushing bridal branding into a new era</p><p><strong>Apply by:</strong><br/><br/><strong>Email</strong> | genea@madewithlovebridal.com</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "enable_mobile_size": false,
-                        "mobile_font_size": "1rem",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_NTz9y7"
-                  ]
-                },
-                "accordion_row_amkLhB": {
-                  "type": "_accordion-row",
-                  "disabled": true,
-                  "settings": {
-                    "heading": "Bridal Boutique Stylist | Melbourne, Australia",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_WLU8Fi": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>We’re looking for warm, fashion-loving Bridal Stylist to join our team in either our Melbourne boutique in a part-time or casual capacity. In this role, you'll help brides find their dream dress, creating unforgettable moments in a beautiful, supportive boutique environment. If you have a natural eye for style, love connecting with people, and can work weekends, we’d love to hear from you. No bridal experience needed, just the right energy and passion!</p><p>Apply either by:<br/><br/><strong>Email</strong> | laura@madewithlovebridal.com</p><p><strong>Linkedin</strong> | <a href=\"https://au.linkedin.com/company/made-with-love-bridal\" target=\"_blank\" title=\"https://au.linkedin.com/company/made-with-love-bridal\">Here</a></p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "enable_mobile_size": false,
-                        "mobile_font_size": "1rem",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_WLU8Fi"
-                  ]
-                },
                 "accordion_row_N9VTyq": {
                   "type": "_accordion-row",
                   "settings": {
@@ -537,13 +417,95 @@
                   "block_order": [
                     "text_hWhQxC"
                   ]
+                },
+                "accordion_row_yj78wD": {
+                  "type": "_accordion-row",
+                  "disabled": true,
+                  "settings": {
+                    "heading": "Social Media & PR Manager | Gold Coast, Australia",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_PcEMT3": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>The Role</strong></p><p>MWL is looking for a creative and highly passionate Social Media & PR Manager to lead MWL’s digital presence and drive the next phase of our global brand story.</p><p>This is a hands-on strategic role for someone who’s equally comfortable setting the vision as they are executing it. Driving the visual & influencer strategy, staying ahead of elevated trend forecasting with strong storytelling instincts.</p><p>You’ll be the pulse of the brand: Leading our social media strategy, nurturing influencer and PR relationships, ensuring MWL continues to set the tone in modern bridal.</p><p><strong>What you’ll do:</strong></p><p>• Drive strategy across all channels –Instagram, TikTok, Pinterest & LinkedIn, setting direction, tone, and visual rhythm in line with brand’s aesthetics and goals</p><p>• Oversee day-to-day execution of content scheduling and planning. You'll be supported by a full time in house Content Creator and Graphic Designer</p><p>• Collaborate closely with the TikTok Manager and Content Creator to ensure content output is cohesive, consistent, and aligned with brand strategy</p><p>• Brief content as per strategy working as afar ahead as possible</p><p>• Maintain and update the social media calendar, ensuring all activity is synced with campaigns, launches, and marketing milestones</p><p>• Be the first to spot trends and creators to identify how MWL can authentically join the conversation and collaborate</p><p>• Lead influencer and UGC strategy – from identifying newly engaged brides to securing placements with fashion and lifestyle creators</p><p>• Liaise with creators and influencers to maintain an ongoing stream of content, ensuring MWL remains aspirational and visible across platforms</p><p>• Oversee press & PR outreach for new campaigns and key brand moments - creating and maintaining relationships with bridal directories</p><p>• Support the marketing team in storytelling through key moments – product launches, brand campaigns and international events</p><p><strong>You’ll thrive if you:</strong></p><p>• Have experience in social media, PR or influencer marketing – ideally within fashion, beauty or lifestyle (but not limited to)</p><p>• Ensure creatives are always engaging across all MWL platforms – from Instagram reels to stills, stories and editorial snippets</p><p>• Be obsessed with culture and always two steps ahead of the trend curve</p><p>• Feel confident establishing organic strategy and optimising for maximum growth</p><p>• Understand how to blend data-driven decisions with instinctive creativity</p><p>• Feel confident briefing, directing and collaborating both internally and with external partners</p><p>• Love storytelling, visual strategy, and all things social</p><p><strong>Apply by:</strong><br/><br/><strong>Email</strong> | genea@madewithlovebridal.com</p><p><strong>SEEK</strong> | view listing <a href=\"https://www.seek.com.au/job/89011007?ref=hirer-jobs-list\" target=\"_blank\" title=\"https://www.seek.com.au/job/89011007?ref=hirer-jobs-list\">here</a>. </p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_PcEMT3"
+                  ]
+                },
+                "accordion_row_7YKQf4": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Social Media & PR Manager | Gold Coast, Australia",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_cNxmzW": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>The Role</strong></p><p>This is not a traditional marketing role. As our Content Director, you will define and drive the visual and editorial voice of Made With Love. You will create the content direction for all digital platforms, assist with concept development for brand campaigns, and direct a cross-functional creative team to deliver bold, emotional, and design-led storytelling.</p><p>This is a rare opportunity to shape the future of a brand that is redefining bridal fashion - blending cinematic beauty with and commercial relevance.</p><p><strong>Key Responsibilities</strong></p><p><strong>Brand Narrative and Creative Direction</strong></p><ul><li>Define and refine the visual identity and tone of voice across all brand channels</li><li>Contribute to concept development for seasonal campaigns, capsule launches, collaborations, and runway moments</li><li>Create all creative output, ensuring it reflects the evolving aesthetic and ambition of the brand</li></ul><p><strong>Content Strategy and Execution</strong></p><ul><li>Develop and own the brand’s content strategy across web, email, social, in-store, and emerging platforms</li><li>Create and contribute to the strategic content calendar that balances brand storytelling with commercial performance</li><li>Ensure all content is elevated, on-brand, and aligned with key business objectives</li></ul><p><strong>Social Media and Digital Content</strong></p><ul><li>Lead the creation, curation of all social content across Instagram, TikTok, Pinterest, and Facebook</li><li>Plan, shoot, and edit compelling, editorially-driven content tailored to each platform – from low-fi to elevated styles</li><li>Identify and leverage trends, sounds, and creative formats that extend reach, deepen engagement, and grow brand equity</li></ul><p><strong>Contribution and Collaboration</strong></p><ul><li>Collaborate with a growing in-house and freelance creative team, including designers, content creators, photographers, stylists, and editors</li><li>Collaborate closely with the design, digital, marketing, e-commerce, and retail teams to ensure seamless brand consistency across touchpoints</li><li>Source and manage external creative collaborators where required</li></ul><p><strong>Trend Leadership and Brand Innovation</strong></p><ul><li>Stay ahead of trends, ensuring the brand remains distinctive and aspirational</li><li>Identify and pitch creative partnerships, shoot concepts, or brand moments that push the brand forward</li></ul><p><strong>You Bring</strong></p><ul><li>Minimum 3 year’s experience in content, brand, or creative direction - ideally within fashion, beauty, lifestyle, or design-led brands</li><li>A strong portfolio showcasing creative leadership, storytelling, and brand development across digital and editorial platforms</li><li>Hands-on experience in shoot production, art direction, content creation, and social media execution</li><li>Proven ability to collaborate with and inspire a creative team in a fast-paced, highly visual business</li><li>A natural balance of conceptual thinking, editorial taste, and commercial awareness</li><li>Passion for high end fashion, and storytelling that resonates with a global audience</li></ul><p><strong>Why Join Us</strong></p><ul><li>Shape the creative direction of a globally recognised brand redefining bridal fashion</li><li>Lead work that is creatively fulfilling and commercially impactful</li><li>Join a collaborative and ambitious team where ideas are welcomed and originality is celebrated</li><li>Enjoy a culture of innovation, kindness, and real creative freedom</li></ul><p><strong>This is a career-defining opportunity for a content creator who wants to be a part of something meaningful and unforgettable.</strong></p><p><strong>Apply by:</strong><br/><br/><strong>Email</strong> | genea@madewithlovebridal.com</p><p><strong>SEEK </strong>| view listing <a href=\"https://www.seek.com.au/job/89011007?ref=hirer-jobs-list\" target=\"_blank\" title=\"https://www.seek.com.au/job/89011007?ref=hirer-jobs-list\">here</a>. </p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_cNxmzW"
+                  ]
                 }
               },
               "block_order": [
+                "accordion_row_N9VTyq",
                 "accordion_row_yj78wD",
-                "accordion_row_nL9mgY",
-                "accordion_row_amkLhB",
-                "accordion_row_N9VTyq"
+                "accordion_row_7YKQf4"
               ]
             }
           },
@@ -572,6 +534,8 @@
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 62,
+        "enable_mobile_gap": false,
+        "mobile_gap": 12,
         "section_width": "page-width",
         "full_width_on_mobile": false,
         "section_height": "",
