@@ -503,6 +503,7 @@
                 },
                 "accordion_row_N9VTyq": {
                   "type": "_accordion-row",
+                  "name": "Stylist Position - Continous",
                   "settings": {
                     "heading": "Looking For A Stylist Role With Mwl?",
                     "open_by_default": false,
