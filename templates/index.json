@@ -164,110 +164,6 @@
         "padding-block-end": 100
       }
     },
-    "ss_hero_14_g9ktR8": {
-      "type": "ss-hero-14",
-      "blocks": {
-        "heading_ytPERt": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_custom": false,
-            "heading_font": "josefin_sans_n4",
-            "heading_size": 48,
-            "heading_size_mobile": 32,
-            "heading_height": 130,
-            "heading_mt": 0,
-            "heading_mt_mobile": 0,
-            "heading_color": "#ffffff"
-          }
-        },
-        "text_JBxXME": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_custom": false,
-            "text_font": "josefin_sans_n4",
-            "text_size": 20,
-            "text_size_mobile": 20,
-            "text_height": 150,
-            "text_mt": 16,
-            "text_mt_mobile": 8,
-            "text_color": "#ffffff"
-          }
-        },
-        "product_NAnKUG": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "product_width": 260,
-            "product_width_mobile": 170,
-            "product_vertical_align": "end",
-            "product_vertical_align_mobile": "end",
-            "product_horizontal_align": "end",
-            "product_horizontal_align_mobile": "center",
-            "product_image_radius": 0,
-            "product_image_ratio": "square",
-            "product_image_ratio_mobile": "square",
-            "use_title_custom": false,
-            "title": "",
-            "title_custom": false,
-            "title_font": "josefin_sans_n4",
-            "title_size": 14,
-            "title_size_mobile": 14,
-            "title_height": 130,
-            "title_mt": 12,
-            "title_mt_mobile": 12,
-            "title_align": "center",
-            "title_align_mobile": "center",
-            "title_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "heading_ytPERt",
-        "text_JBxXME",
-        "product_NAnKUG"
-      ],
-      "name": "SS - Hero #14",
-      "settings": {
-        "hero_height": "fixed_height",
-        "hero_fixed_height": 600,
-        "content_use_fixed_height": true,
-        "content_fixed_height": 400,
-        "body_gap": 0,
-        "body_gap_mobile": 0,
-        "content_image": "shopify://shop_images/Untitled_design_10_7b7ca5cb-046b-44c9-a418-6bed663bcb50.png",
-        "content_vertical_align": "end",
-        "content_vertical_align_mobile": "end",
-        "content_horizontal_align": "start",
-        "content_horizontal_align_mobile": "start",
-        "content_padding_vertical": 56,
-        "content_padding_vertical_mobile": 56,
-        "content_padding_horizontal": 56,
-        "content_padding_horizontal_mobile": 28,
-        "content_overlay": 0.1,
-        "video": "shopify://files/videos/MWL By You Home Video.mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_ratio_mobile": "square",
-        "video_bottom_mobile": true,
-        "video_hide_mobile": false,
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_horizontal": 0,
-        "padding_horizontal_mobile": 0,
-        "full_width": true,
-        "content_width": 120,
-        "border_thickness": 0,
-        "section_radius": 0
-      }
-    },
     "section_gaE3zx": {
       "type": "section",
       "blocks": {
@@ -408,6 +304,110 @@
         "gradient_direction": "to top",
         "padding-block-start": 60,
         "padding-block-end": 40
+      }
+    },
+    "ss_hero_14_g9ktR8": {
+      "type": "ss-hero-14",
+      "blocks": {
+        "heading_ytPERt": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_size": 48,
+            "heading_size_mobile": 32,
+            "heading_height": 130,
+            "heading_mt": 0,
+            "heading_mt_mobile": 0,
+            "heading_color": "#ffffff"
+          }
+        },
+        "text_JBxXME": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 20,
+            "text_size_mobile": 20,
+            "text_height": 150,
+            "text_mt": 16,
+            "text_mt_mobile": 8,
+            "text_color": "#ffffff"
+          }
+        },
+        "product_NAnKUG": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "product_width": 260,
+            "product_width_mobile": 170,
+            "product_vertical_align": "end",
+            "product_vertical_align_mobile": "end",
+            "product_horizontal_align": "end",
+            "product_horizontal_align_mobile": "center",
+            "product_image_radius": 0,
+            "product_image_ratio": "square",
+            "product_image_ratio_mobile": "square",
+            "use_title_custom": false,
+            "title": "",
+            "title_custom": false,
+            "title_font": "josefin_sans_n4",
+            "title_size": 14,
+            "title_size_mobile": 14,
+            "title_height": 130,
+            "title_mt": 12,
+            "title_mt_mobile": 12,
+            "title_align": "center",
+            "title_align_mobile": "center",
+            "title_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ytPERt",
+        "text_JBxXME",
+        "product_NAnKUG"
+      ],
+      "name": "SS - Hero #14",
+      "settings": {
+        "hero_height": "fixed_height",
+        "hero_fixed_height": 600,
+        "content_use_fixed_height": true,
+        "content_fixed_height": 400,
+        "body_gap": 0,
+        "body_gap_mobile": 0,
+        "content_image": "shopify://shop_images/Untitled_design_10_7b7ca5cb-046b-44c9-a418-6bed663bcb50.png",
+        "content_vertical_align": "end",
+        "content_vertical_align_mobile": "end",
+        "content_horizontal_align": "start",
+        "content_horizontal_align_mobile": "start",
+        "content_padding_vertical": 56,
+        "content_padding_vertical_mobile": 56,
+        "content_padding_horizontal": 56,
+        "content_padding_horizontal_mobile": 28,
+        "content_overlay": 0.1,
+        "video": "shopify://files/videos/MWL By You Home Video.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_ratio_mobile": "square",
+        "video_bottom_mobile": true,
+        "video_hide_mobile": false,
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0
       }
     },
     "17636958692fd1b7da": {
@@ -4588,8 +4588,8 @@
   },
   "order": [
     "hero_jVaWmY",
-    "ss_hero_14_g9ktR8",
     "section_gaE3zx",
+    "ss_hero_14_g9ktR8",
     "17636958692fd1b7da",
     "product_list_Ne89Nn",
     "hero_YWjNNm",
