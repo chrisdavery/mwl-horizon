@@ -245,7 +245,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>READY TO WEAR / ELOPE STYLES</h2>",
+            "text": "<h2>READY TO WEAR</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -273,7 +273,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>If you placed your RTW or Elope order online without the help of one of our MWL Boutique stylists, you're eligible for a refund (minus shipping costs).</p><p>If you placed your order through one of our MWL Boutiques with the support of a stylist and the item isn’t quite right, we’re happy to offer you an exchange or credit note.</p>",
+            "text": "<p>If you placed your RTW order online without the help of one of our MWL Boutique stylists, you're eligible for a refund (minus shipping costs).</p><p>If you placed your order through one of our MWL Boutiques with the support of a stylist and the item isn’t quite right, we’re happy to offer you an exchange or credit note.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
