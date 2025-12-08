@@ -246,6 +246,7 @@
         "content_padding_horizontal": 56,
         "content_padding_horizontal_mobile": 28,
         "content_overlay": 0.1,
+        "video": "shopify://files/videos/MWL By You Home Video.mp4",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_ratio_mobile": "square",
         "video_bottom_mobile": true,
