@@ -227,7 +227,10 @@
       "blocks": {
         "ai_gen_block_3f421c3_cRdhAh": {
           "type": "ai_gen_block_3f421c3",
-          "settings": {},
+          "settings": {
+            "desktop_image": "shopify://shop_images/16_2.png",
+            "mobile_image": "shopify://shop_images/5_deaf8b9f-1f2b-49b3-8723-d210dac52222.png"
+          },
           "blocks": {}
         }
       },
