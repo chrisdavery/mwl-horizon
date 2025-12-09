@@ -735,4 +735,8 @@ media-gallery slideshow-arrows .slideshow-control {
   [style*="--mobile-font-size"] > * {
       font-size: var(--mobile-font-size) !important;
   }
+
+  .section-resource-list__header a.link:after {
+    bottom: 0 !important;
+  }
 }
