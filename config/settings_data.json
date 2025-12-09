@@ -151,6 +151,16 @@
           "button_vertical_position": "lowest",
           "greeting_message": "Speak to a MWL customer care representative below."
         }
+      },
+      "1967102994182284862": {
+        "type": "shopify://apps/paypal-pay-later-messaging/blocks/messaging/7f4cb7b9-066b-479a-a35c-56c0fddabee5",
+        "disabled": true,
+        "settings": {
+          "advanced_settings": false,
+          "product_locator": "600",
+          "cart_locator": "",
+          "cart_drawer_locator": ""
+        }
       }
     },
     "color_schemes": {
