@@ -412,7 +412,7 @@
             "image_nPnLai": {
               "type": "image",
               "settings": {
-                "image": "shopify://shop_images/size-guide-page.png",
+                "image": "shopify://shop_images/16_2.png",
                 "link": "",
                 "image_ratio": "adapt",
                 "width": "fill",
