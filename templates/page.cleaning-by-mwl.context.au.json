@@ -1495,6 +1495,12 @@
           }
         }
       }
+    },
+    "section_tqVFLf": {
+      "settings": {
+        "padding-block-end": 31
+      },
+      "blocks": {}
     }
   },
   "order": [
