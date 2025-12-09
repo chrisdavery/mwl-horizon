@@ -12,5 +12,31 @@
   "context": {
     "market": "eu-uk"
   },
-  "sections": {}
+  "sections": {
+    "mw_carousel_iy7y6y": {
+      "settings": {},
+      "blocks": {
+        "multicolumn_card_N6jeQU": {
+          "blocks": {
+            "group_fhBcBh": {
+              "blocks": {
+                "group_p6hMG6": {
+                  "blocks": {
+                    "button_C7Yqex": {
+                      "settings": {
+                        "link": "shopify://pages/cleaning-uk"
+                      }
+                    }
+                  },
+                  "settings": {}
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
+        }
+      }
+    }
+  }
 }
