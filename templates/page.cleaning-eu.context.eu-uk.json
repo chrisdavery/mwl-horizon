@@ -12,5 +12,28 @@
   "context": {
     "market": "eu-uk"
   },
-  "sections": {}
+  "sections": {
+    "section_CWmdg7": {
+      "settings": {},
+      "blocks": {
+        "text_TefCzp": {
+          "settings": {
+            "text": "<p>Any questions? Reach out to our cleaning team at europe.cleaning@mwlbride.com</p>"
+          }
+        }
+      }
+    },
+    "testimonials_PLLxM9": {
+      "settings": {
+        "color_scheme": "scheme-996cfa08-aaa5-4209-80de-70911c1a02b9"
+      },
+      "blocks": {}
+    },
+    "section_tqVFLf": {
+      "settings": {
+        "padding-block-end": 32
+      },
+      "blocks": {}
+    }
+  }
 }
