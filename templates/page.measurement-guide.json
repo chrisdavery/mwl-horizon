@@ -1551,7 +1551,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3><strong>HOLLOW TO HEM (H2H)</strong></h3>",
+                        "text": "<h3><strong>HOLLOW TO HEM </strong></h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
