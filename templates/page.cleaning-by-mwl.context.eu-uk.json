@@ -35,6 +35,46 @@
             }
           },
           "settings": {}
+        },
+        "multicolumn_card_M8j8W7": {
+          "blocks": {
+            "group_jwLmjm": {
+              "blocks": {
+                "group_6gtFYy": {
+                  "blocks": {
+                    "button_QxXmcT": {
+                      "settings": {
+                        "link": "shopify://pages/cleaning-europe"
+                      }
+                    }
+                  },
+                  "settings": {}
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
+        },
+        "multicolumn_card_MYRqBG": {
+          "blocks": {
+            "group_YMaUtU": {
+              "blocks": {
+                "group_Pmmajj": {
+                  "blocks": {
+                    "button_M487Xh": {
+                      "settings": {
+                        "link": "shopify://pages/cleaning-everywhere"
+                      }
+                    }
+                  },
+                  "settings": {}
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
         }
       }
     }
