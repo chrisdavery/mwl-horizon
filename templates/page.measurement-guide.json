@@ -503,6 +503,7 @@
         "group_qpf4TV",
         "group_ktGnMd"
       ],
+      "disabled": true,
       "name": "t:names.image_with_text",
       "settings": {
         "content_direction": "row",
