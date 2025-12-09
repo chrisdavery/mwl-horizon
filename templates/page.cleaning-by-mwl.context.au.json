@@ -1170,7 +1170,7 @@
           "name": "t:names.text",
           "disabled": false,
           "settings": {
-            "text": "<p>You will receive an email from Australia Post to let you know when your dress arrives with us safely.  Once your dress is restored to her former glory she will be carefully wrapped in acid-free tissue paper and beautifully boxed for storage.  We will be in touch again when she is ready to make her way home to you. If you would prefer to drop your dress off to our MWL Head Office in Burleigh Heads, QLD instead of posting her, please reach out to our team to arrange a drop off time by emailing cleaning@madewithlovebridal.com.</p>",
+            "text": "<p>You will receive an email from Australia Post to let you know when your dress arrives with us safely.  Once your dress is restored to her former glory she will be carefully wrapped in acid-free tissue paper and beautifully boxed for storage.  We will be in touch again when she is ready to make her way home to you. If you would prefer to drop your dress off to our MWL Head Office in Burleigh Heads, QLD instead of posting her, please reach out to our team to arrange a drop off time by emailing cleaning@mwlbride.com.</p>",
             "header-dc5cc18378e7f2bd4ab0652ad38418e5": null,
             "width": "100%",
             "max_width": "normal",
@@ -1484,14 +1484,14 @@
     "section_8kgtYw": {
       "settings": {},
       "blocks": {
-        "text_cxEWhq": {
-          "settings": {
-            "text": "<p>Our cleaning service will have your dress professionally cleaned, steamed, wrapped in acid-free tissue paper and beautifully boxed for safe keeping. Please carefully follow instructions below to submit your dress for cleaning.</p>"
-          }
-        },
         "text_HcbzMk": {
           "settings": {
             "text": "<h2>POST - WEDDING CLEANING</h2>"
+          }
+        },
+        "text_cxEWhq": {
+          "settings": {
+            "text": "<p>Our cleaning service will have your dress professionally cleaned, steamed, wrapped in acid-free tissue paper and beautifully boxed for safe keeping. Please carefully follow instructions below to submit your dress for cleaning.</p>"
           }
         }
       }
