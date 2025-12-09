@@ -206,7 +206,7 @@
     display: grid;
     padding: var(--padding-xs);
     align-items: center;
-    background-color: rgba(var(--color-background-rgb) / 0.85);
+    background-color: rgba(var(--color-background-rgb) / 0.6);
     color: var(--color-foreground);
     border-color: transparent;
     /* box-shadow: var(--shadow-popover); */
@@ -215,9 +215,13 @@
     position: relative;
     overflow: hidden;
     border-radius: 100px;
+    width: 2rem;
+    height: 2rem;
 
     @media screen and (min-width: 750px) {
       padding: var(--padding-xs) var(--padding-sm);
+      width: 2.3rem;
+      height: 2.3rem;
     }
 
     &:hover {
@@ -226,6 +230,11 @@
 
     .quick-add[stay-visible] & {
       display: grid;
+    }
+
+    .svg-wrapper {
+      width: var(--icon-size-xs);
+      height: var(--icon-size-xs);
     }
   }
 
