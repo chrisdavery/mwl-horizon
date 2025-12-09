@@ -1826,7 +1826,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>At MWL, every bride deserves to feel incredible in the wedding dress of her dreams.<br/>Our boutiques carry a curated range of sample gowns in sizes 0-18 for you to explore in person.<br/>For brides requiring extended sizing, orders up to size 30 are available upon request. </p><p>If you have an extended sizing request, please email us <a href=\"mailto:hello@mwlbride.com\">hello@mwlbride.com</a> - we will be happy to assist you.</p><p>All our made to order pieces are individually crafted for a flawless fit - Your dress is made just for you.</p>",
+            "text": "<p>At MWL, every bride deserves to feel incredible in the wedding dress of her dreams.<br/>Our boutiques carry a curated range of sample gowns in sizes 0-18 for you to explore in person.<br/>For brides requiring extended sizing, orders up to size 30 are available upon request. </p><p>If you have an extended sizing request or general sizing query, please email us <a href=\"mailto:hello@mwlbride.com\">hello@mwlbride.com</a> - we will be happy to assist you.</p><p>All our made to order pieces are individually crafted for a flawless fit - Your dress is made just for you.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
