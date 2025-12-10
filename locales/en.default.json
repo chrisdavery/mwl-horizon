@@ -342,6 +342,7 @@
       "shipping_text": "Shipping",
       "low_in_stock": "Low in Stock",
       "last_remaining": "Last Remaining Unit",
+      "quick_option_label": "Add {{ option_name }} (AU)",
       "out_of_stock_html": "Out Of Stock <a href=\"#notify\">Notify me when available</a>",
       "quantity": "Quantity",
       "quantity_increments": "Increments of {{ increment }}",

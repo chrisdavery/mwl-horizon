@@ -85,7 +85,7 @@
       {% endif %}
     {% endfor %}
 
-    {% if settings.use_card_overlay == true and product.options.size > 0 %}
+    {% if settings.use_card_overlay == true and product.options_with_values.size == 1 %}
       {% render 'product-card-overlay', product_resource: product %}
     {% endif %}
   </div>
