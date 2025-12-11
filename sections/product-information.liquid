@@ -95,7 +95,7 @@
       endif
     %}
 
-    {% if hide_add == true and settings.use_card_overlay == true and closest.product.options_with_values.size == 1 %}
+    {% if hide_add == false and settings.use_card_overlay == true and closest.product.options_with_values.size == 1 %}
       {% render 'product-card-overlay', product_resource: closest.product %}
     {% endif %}
   </div>
