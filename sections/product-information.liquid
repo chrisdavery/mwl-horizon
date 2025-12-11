@@ -85,8 +85,18 @@
       {% endif %}
     {% endfor %}
 
-    {% if settings.use_card_overlay == true and product.options_with_values.size == 1 %}
-      {% render 'product-card-overlay', product_resource: product %}
+    {% liquid
+      assign hide_add = false
+      assign has_hide_add_tag = closest.product.tags | where: 'hide-add-to-bag'
+      assign in_primary = localization.market.metafields.custom.is_primary
+
+      if has_hide_add_tag.size > 0 and in_primary != true
+        assign hide_add = true
+      endif
+    %}
+
+    {% if hide_add == true and settings.use_card_overlay == true and closest.product.options_with_values.size == 1 %}
+      {% render 'product-card-overlay', product_resource: closest.product %}
     {% endif %}
   </div>
 

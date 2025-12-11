@@ -2204,18 +2204,6 @@
         "visible_if": "{{ settings.quick_add == true }}"
       },
       {
-        "type": "text",
-        "id": "card_overlay_label",
-        "label": "Card overlay label",
-        "visible_if": "{{ settings.use_card_overlay == true }}"
-      },
-      {
-        "type": "text",
-        "id": "card_overlay_option",
-        "label": "Card overlay option",
-        "visible_if": "{{ settings.use_card_overlay == true }}"
-      },
-      {
         "type": "color_scheme",
         "id": "quick_add_color_scheme",
         "label": "t:settings.quick_add_colors",

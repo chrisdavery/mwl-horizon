@@ -119,10 +119,16 @@
           {%- endif -%}
 
           {% liquid 
-              assign hide_to_bag = product.tags | where: 'hide-add-to-bag'
+            assign hide_add = false
+            assign has_hide_add_tag = closest.product.tags | where: 'hide-add-to-bag'
+            assign in_primary = localization.market.metafields.custom.is_primary
+
+            if has_hide_add_tag.size > 0 and in_primary != true
+              assign hide_add = true
+            endif
           %}
 
-          {% unless hide_to_bag.size > 0 %}
+          {% unless hide_add == true %}
             
           {% content_for 'block',
             type: 'add-to-cart',
