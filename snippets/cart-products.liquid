@@ -105,9 +105,11 @@
               <tr
                 role="row"
                 class="cart-items__table-row
-                {% if item.product.type == 'FEE' %}
-                 addon-cart-fee
-                {% endif %}
+                {% unless item.product.tags contains 'cleaning' %}
+                  {% if item.product.type == 'FEE' %}
+                  addon-cart-fee
+                  {% endif %}
+                {% endunless %}
                 {% if item.parent_relationship.parent != null %} cart-items__nested-line{% endif %}"
                 ref="cartItemRows[]"
                 data-parent-key="{{ item.parent_relationship.parent.key }}"
