@@ -209,7 +209,7 @@
                         "show_sale_price_first": false,
                         "show_installments": false,
                         "show_tax_info": false,
-                        "type_preset": "h6",
+                        "type_preset": "h5",
                         "width": "fit-content",
                         "alignment": "left",
                         "font": "var(--font-accent--family)",
@@ -690,7 +690,7 @@
                       "settings": {
                         "section_id": "size-popup",
                         "heading": "View Size Guide",
-                        "type_preset": "",
+                        "type_preset": "h6",
                         "padding-block-start": 0,
                         "padding-block-end": 0,
                         "padding-inline-start": 0,
