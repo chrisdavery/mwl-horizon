@@ -231,7 +231,7 @@
                       "settings": {
                         "behavior": "default",
                         "heading": "View Payment Options",
-                        "type_preset": "paragraph",
+                        "type_preset": "h6",
                         "padding-block-start": 0,
                         "padding-block-end": 0,
                         "padding-inline-start": 0,
