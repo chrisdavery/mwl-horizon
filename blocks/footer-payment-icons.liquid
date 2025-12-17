@@ -5,6 +5,9 @@
     <ul class="list-unstyled flex list-payment" style="--icon-size: {{ block.settings.width }}px;" role="list">
         {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
 
+        <li class="list-payment__item">
+          <img src=" {{ 'paypal-icon.png' | asset_img_url: 'master' }}" alt="Paypal in 4" loading="lazy">
+        </li>
         {%- for type in shop.enabled_payment_types -%}
             <li class="list-payment__item">
                 {{ type | payment_type_svg_tag: class: icon_block_class }}
@@ -24,8 +27,9 @@
       justify-content: flex-end;
     }
 
-    svg {
+    svg, img {
         width: var(--icon-size);
+        display: block;
     }
   }
 {% endstylesheet %}
