@@ -166,7 +166,7 @@
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
-            "type_preset": "rte",
+            "type_preset": "custom",
             "enable_mobile_size": false,
             "mobile_font_size": "1rem",
             "font": "var(--font-body--family)",
