@@ -959,7 +959,7 @@
         "@media (max-width: 989px) and (min-width: 750px) {.footer-row > .layout-panel-flex {--flex-direction: column !important; } .footer-col {--size-style-width: 100% !important; }}",
         "@media (max-width: 749px) {.footer-row > .mobile-column {flex-direction: column-reverse !important; } .footer-col-2 .group-block-content {--gap: 0px !important; } summary {padding-block: var(--padding-lg); }}"
       ],
-      "name": "Footer",
+      "name": "Footer Links",
       "settings": {
         "section_width": "page-width",
         "gap": 48,
