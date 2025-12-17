@@ -23,7 +23,7 @@
             "type_preset": "custom",
             "enable_mobile_size": false,
             "mobile_font_size": "1rem",
-            "font": "var(--font-accent--family)",
+            "font": "var(--font-heading--family)",
             "font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "loose",
