@@ -367,7 +367,7 @@
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "rte",
+                            "type_preset": "h6",
                             "enable_mobile_size": false,
                             "mobile_font_size": "1rem",
                             "font": "var(--font-body--family)",
