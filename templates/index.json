@@ -378,6 +378,7 @@
         "content_fixed_height": 400,
         "body_gap": 0,
         "body_gap_mobile": 0,
+        "content_image": "shopify://shop_images/MWL_Blair_Homepage.png",
         "content_vertical_align": "end",
         "content_vertical_align_mobile": "end",
         "content_horizontal_align": "start",
