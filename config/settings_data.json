@@ -12,7 +12,7 @@
     "logo": "shopify://shop_images/logo-made-with-love.svg",
     "logo_inverse": "shopify://shop_images/logo-made-with-love-white.svg",
     "favicon": "shopify://shop_images/favicon-02.png",
-    "type_body_font": "montserrat_n4",
+    "type_body_font": "jost_n4",
     "type_subheading_font": "cormorant_n4",
     "type_heading_font": "cormorant_n4",
     "type_accent_font": "cormorant_n4",
