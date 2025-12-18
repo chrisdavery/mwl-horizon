@@ -230,7 +230,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>Available Worldwide</p>",
+            "text": "",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -307,7 +307,7 @@
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "Discover",
+                "label": "Book Now",
                 "link": "shopify://collections/new-releases",
                 "open_in_new_tab": false,
                 "active_state": false,
@@ -323,7 +323,7 @@
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "Book Now",
+                "label": "Shop Now",
                 "link": "shopify://pages/appointments",
                 "open_in_new_tab": false,
                 "active_state": false,
@@ -339,7 +339,7 @@
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "Book Now",
+                "label": "Find Us",
                 "link": "shopify://pages/appointments",
                 "open_in_new_tab": false,
                 "active_state": false,
@@ -502,6 +502,7 @@
       "block_order": [
         "group_czLF37"
       ],
+      "disabled": true,
       "custom_css": [
         ".size-style {/* max-width: 840px !important; */ max-width: 850px !important;}"
       ],
