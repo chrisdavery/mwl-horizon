@@ -429,7 +429,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>OUR BEGINNINGS</h2>",
+                "text": "<h2>OUR <em>BEGINNINGS</em></h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -787,7 +787,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>OUR MISSION</h2>",
+                "text": "<h2>OUR <em>MISSION</em></h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -943,7 +943,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h3>OUR COMMITMENT</h3>",
+            "text": "<h3>OUR <em>COMMITMENT</em></h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
