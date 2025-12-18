@@ -144,7 +144,7 @@
               "settings": {
                 "show_date": true,
                 "show_author": false,
-                "type_preset": "",
+                "type_preset": "h6",
                 "alignment": "left",
                 "show_alignment": false,
                 "padding-block-start": 0,
