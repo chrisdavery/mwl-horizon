@@ -737,47 +737,6 @@
                     "text_YHK3gw"
                   ]
                 },
-                "accordion_row_BJWpwL": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "Perth - Chesney's Alterations",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_DyCAx7": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Chesney</p><p>chesneysalterationsbutler@gmail.com</p><p>0450 512 112</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "enable_mobile_size": false,
-                        "mobile_font_size": "1rem",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_DyCAx7"
-                  ]
-                },
                 "accordion_row_7FBdEy": {
                   "type": "_accordion-row",
                   "settings": {
@@ -830,7 +789,6 @@
                 "accordion_row_rpPWcN",
                 "accordion_row_6PdLAV",
                 "accordion_row_Qdq3im",
-                "accordion_row_BJWpwL",
                 "accordion_row_7FBdEy"
               ]
             }
