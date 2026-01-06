@@ -164,7 +164,6 @@
         },
         "subcollections": {
           "type": "_sub-collections",
-          "disabled": true,
           "static": true,
           "settings": {
             "collection_list": "{{ closest.collection.metafields.custom.sub_collections.value }}",
