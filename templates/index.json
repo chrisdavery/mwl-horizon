@@ -451,7 +451,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Since 2012, we have been devoted to creating effortlessly elegant designs that make every moment - from your first fitting to your walk down the aisle - truly unforgettable.</p>",
+                "text": "<p>Since 2012, we have been devoted to creating effortlessly elegant designs that make every moment,  from your first fitting to your walk down the aisle - truly unforgettable.</p>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "center",
