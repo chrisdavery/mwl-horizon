@@ -603,6 +603,7 @@
         "text_JBxXME",
         "product_NAnKUG"
       ],
+      "disabled": true,
       "name": "SS - Hero #14",
       "settings": {
         "hero_height": "fixed_height",
