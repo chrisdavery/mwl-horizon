@@ -28,6 +28,7 @@
 
   .ai-text-content-{{ ai_gen_id }} {
     flex-grow: 1;
+    font-size: {{ block.settings.font_size }}px;
   }
 
   @media screen and (max-width: 749px) {
@@ -40,6 +41,12 @@
       width: {{ block.settings.icon_size | times: 0.8 }}px;
       height: {{ block.settings.icon_size | times: 0.8 }}px;
     }
+
+    {% if block.settings.enable_mobile_font_size == true %}
+      .ai-text-content-{{ ai_gen_id }} {
+        font-size: {{ block.settings.mobile_font_size }}px;
+      }
+    {% endif %}
   }
 {% endstyle %}
 
@@ -88,6 +95,33 @@
       "id": "text_content",
       "label": "Text content",
       "default": "Add your text here"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_font_size",
+      "label": "Enable mobile font size",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "mobile_font_size",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile font size",
+      "default": 12,
+      "visible_if": "{{ block.settings.enable_mobile_font_size == true }}"
     },
     {
       "type": "header",
