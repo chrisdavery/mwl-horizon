@@ -2417,7 +2417,7 @@
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "padding-block-start": 52,
+            "padding-block-start": 66,
             "padding-block-end": 52,
             "padding-inline-start": 0,
             "padding-inline-end": 0,
@@ -2589,7 +2589,6 @@
         "group_9t4qpM",
         "video_KyycCP"
       ],
-      "disabled": true,
       "name": "MWL By You Spotlight",
       "settings": {
         "content_direction": "row",
@@ -2619,7 +2618,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 0,
+        "padding-block-start": 15,
         "padding-block-end": 10
       }
     },
