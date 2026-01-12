@@ -2124,7 +2124,7 @@
                 "text_8dKiRk": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>VEILS</h3>",
+                    "text": "<h3>ACCESSORIES</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2152,7 +2152,7 @@
                   "type": "button",
                   "settings": {
                     "label": "SHOP NOW",
-                    "link": "shopify://collections/wedding-gloves",
+                    "link": "shopify://collections/accessories",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
