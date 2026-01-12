@@ -65,7 +65,7 @@
         "text_FXUhfU": {
           "type": "text",
           "settings": {
-            "text": "<h2>DRESS ALTERATIONS - AUS</h2>",
+            "text": "<p>{{ closest.page.title }}</p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -99,7 +99,7 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/prim-wedding-dress-made-with-love-bridal-14_ebcc9f68-9e3a-4cfa-b8ad-775044967e4d.png",
+        "image_1": "shopify://shop_images/prim-wedding-dress-made-with-love-bridal-15.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -189,6 +189,7 @@
         "text_YxptEz",
         "text_x8gz7e"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -349,6 +350,34 @@
             "css_class": "subpage-right"
           },
           "blocks": {
+            "text_fr4DDx": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>OUR PROCESS & PLACING YOUR ORDER</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h4",
+                "enable_mobile_size": false,
+                "mobile_font_size": "1rem",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "accordion_ikEnk3": {
               "type": "accordion",
               "name": "t:names.accordion",
@@ -371,7 +400,7 @@
                 "accordion_row_yj78wD": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Brisbane - Alter Ego",
+                    "heading": "Mwl Design",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -380,7 +409,7 @@
                     "text_PcEMT3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>07 3358 1930<br/>1/482 Brunswick St, Fortitude Valley, QLD, 4006</p>",
+                        "text": "<p>Each MWL dress is designed in our Gold Coast head office by Carla and our expert team of designers, pattern makers and seamstresses.  Each piece is dreamt up, developed, and tested over a period of months to perfect every aspect of the fit and design before being released to our brides and retailers.  We listen and intuitively adapt each design to the feedback we receive with each release, keeping the MWL brand ever up-to-date and responsive to our brides’ needs. This process is unique to the MWL brand and keeps us at the forefront of luxury bridal design.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -412,7 +441,7 @@
                 "accordion_row_nL9mgY": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Brisbane - Kim Marcel Bridal",
+                    "heading": "Made To Order",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -421,7 +450,7 @@
                     "text_NTz9y7": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0403 181 397<br/>kim@kimmarcel.com<br/><a href=\"https://www.kimmarcel.com/\">www.kimmarcel.com</a><br/>Wynnum, QLD</p>",
+                        "text": "<p>We welcome our brides into our MWL boutiques for a personalised one-on-one appointment with a professional stylist to begin her bridal journey. The appointment is an opportunity for our brides to discover and experience the MWL collection firsthand in a down to earth and supportive atmosphere surrounded by loved ones. Once a piece is selected, each bride is expertly measured and accurately matched to our standard size chart before her dress is made to order by our production team. Each order undergoes rigorous quality checks before lovingly making its way into the hands and hearts of our brides. This process eliminates the need for a follow-up fitting, allowing an overall seamless and easy experience for our brides.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -453,7 +482,7 @@
                 "accordion_row_amkLhB": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Gold Coast - Debbie",
+                    "heading": "How Do We Work?",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -462,7 +491,7 @@
                     "text_WLU8Fi": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0414 368 107<br/>24 Avalon Parade<br/>Miami, QLD<br/>Please call for an appointment</p>",
+                        "text": "<p>We do things differently to other bridal labels, so we thought we’d give you a heads up on our process. Our trained stylists will help you to decide on the best size during your appointment. We feel that this allows you to be a part of the process and gives you the opportunity have more control over the entire process. When you are ready to place your order, your stylist will record your agreed size on your file. We also offer split sizes if your measurements do not match one standard size between bust, waist and hip.  If you are ordering your dress online, we highly recommend having your measurements professionally taken.</p><p>Each MWL dress is made to your most accurate size on our standard size chart, based on the size you have chosen, measurements and notes from our professional stylists from your appointment; however, since we do not offer couture/made-to-measure dresses, some alterations will likely be required when you receive your dress for a perfect, tailored fit. While we take your hollow to hem and heel height into account when selecting your size, the length of your dress may need to be hemmed and straps taken up according to your personal preference. We recommend affordable seamstresses local to our boutiques who you are welcome to contact once you have received your dress. Please take additional alterations into account when budgeting for your dress.</p><p>Unlike some other boutiques, we do not offer multiple fittings throughout the production of your dress.  If you expect your measurements may change between ordering and receiving your dress, please discuss this with our team or your stylist before placing your order as we can make allowances for measurements to be resubmitted after your order has been placed for standard timelines.  We find that the combination of notes on fit from our professional stylists, sizing by our experienced team and the expectation of minor alterations with one of our recommended seamstresses eliminates the need for multiple fittings, allowing us to save on time and keep prices as low as possible for our brides. Win win!</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -494,7 +523,7 @@
                 "accordion_row_N9VTyq": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Gold Coast - Manee Saephimai",
+                    "heading": "How To Place Your Order?",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -503,7 +532,7 @@
                     "text_hWhQxC": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0435850464<br/>6 Waratah Avenue<br/>Biggera Waters, QLD<br/><a href=\"mailto:maneesaephimai1972@hotmail.com\">maneesaephimai1972@hotmail.com</a></p>",
+                        "text": "<p>Found your dream dress? The next step is simple.<br/><br/>If you visited one of our flagship boutiques in Sydney, Melbourne, Brisbane, Perth, Gold Coast London, Manchester, or Utrecht, just reach out to our team - they’ll guide you through placing your order with care.<br/><br/>If you fell in love with your dress at one of our retailers, get in touch with them directly to complete your purchase.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -535,7 +564,7 @@
                 "accordion_row_gqd7kE": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Sunshine Coast - Lisa Kingsbury Bridal",
+                    "heading": "Payment",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -544,7 +573,7 @@
                     "text_LzGAFQ": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>2A Beachway Parade<br/>Marcoola, QLD 4564<br/>0431881757<br/><a href=\"mailto:info@lisakingsburybridal.com.au\">info@lisakingsburybridal.com.au</a>.<a href=\"http://www.lisakingsburybridal.com.au/\">www.lisakingsburybridal.com.au</a></p>",
+                        "text": "<p>Full payment is required upfront at the time of placing your order. Alternatively, we also offer flexible payment options on orders through our all of MWL Boutiques. For more information on our payment plans, please speak with your stylist in your appointment, or contact us directly at <a href=\"mailto:hello@madewithlovebridal.com\"><span style=\"text-decoration:underline\"><em>hello@mwlbride.com.</em></span></a></p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -576,7 +605,7 @@
                 "accordion_row_GtQ36q": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Melbourne - Nikki From Como Alterations",
+                    "heading": "Timing And Delivery",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -585,7 +614,7 @@
                     "text_e33ymt": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0420 946 875</p><p>The Como Centre, Ground Floor, South Yarra.</p><p><em>comoalterations@gmail.com</em></p>",
+                        "text": "<p>We like our MWL Boutique brides to receive their dress at least two months before their wedding day, to allow plenty of time for alterations, styling decisions and final tweaks. We have standard and priority order options available, depending on how far out your order is placed from your wedding date.  We pride ourselves on being able to accommodate orders for all brides, so we recommend discussing timelines with your stylist in your appointment as they will be able to assist you with placing the correct order type for your wedding date.  As with most things, the more time you allow to place your order ahead of your wedding date, the better. If you are an international bride, please contact your local stockist for more information on accurate local timelines and rush options.</p><p>If you have ordered directly through one of our MWL Boutiques, we will email your tracking number when your dress is being dispatched from our Gold Coast head office. Your signature will be required on delivery.</p><p>Once you receive your dress, please try it on as soon as possible without make-up, lotions or fake tan. On the rare occasion you think we have made a mistake with the measurements; please contact us at <a href=\"mailto:hello@madewithlovebridal.com\">hello@mwlbride.com </a>including a few photos of your concerns and we’ll happily work with you to reach a solution so you can feel your most confident and beautiful self on your wedding day. Unfortunately, we can only cover costs if any concerns are brought to our attention within 24 hours of delivery.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -617,7 +646,7 @@
                 "accordion_row_rpPWcN": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Sydney - Nadi’s Bridal Alteration Studio",
+                    "heading": "Shipping",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -626,7 +655,7 @@
                     "text_h6MCJD": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0433 444 318 | (02) 8018 8399</p><p>Shop 3/210 Pacific Highway, Crows Nest, 2065</p><p><em>nadi_bridalandalterations@outlook.com</em></p>",
+                        "text": "<p>We ship world wide for all of our Veils, Accessories and Ready to Wear Collection dresses.</p><p>For orders over $220 we offer FREE SHIPPING. If the cart is under $220 shipping, shipping fees apply. STANDARD SHIPPING fees: Australia – $10 & International – $20. We also offer EXPRESS shipping for Australian Orders via Australia Post for a fee (All veils and accessories – $15.00AUD & All ready to wear collection dresses – $30.00AUD) . If you require express shipping, please select this option at checkout. We prioritise all express shipping orders, however please expect up to 3 days business days for dispatch from our Australian HQ.</p><p>For orders outside of Australia, import duties, taxes and custom charges are not included in the price and are the responsibility of the buyer. The amount charged is at the discretion of the customs agency within the destination country and is determined, in part, by the value of the item/s. It is illegal to falsify customs declarations. Payment of duties and taxes are due at collection/delivery. Please check with your country’s customs office to determine what additional cost will be added prior to purchase.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -658,7 +687,7 @@
                 "accordion_row_6PdLAV": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Central Coast - Central Coast Alterations",
+                    "heading": "Returns",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -667,7 +696,7 @@
                     "text_ahaDaY": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Central Coast Alterations</p><p>155 Scenic Hwy, Terrigal NSW 2260</p><p>0424411716</p><p><a href=\"https://centralcoastalterations.com.au/\" title=\"https://centralcoastalterations.com.au/\">https://centralcoastalterations.com.au/</a></p>",
+                        "text": "<p>Your dress is made to order specifically for you, so unfortunately we cannot accept returns for a full refund or an exchange.</p><p>If, before you order, you would like to see more photos of your dress, we are happy to send you more images from our photo shoots and behind the scenes so you can feel most confident in your dream dress selection.</p><p>Our sample sale dresses and imperfect Veils and Accessories are final sale only, we can not accept returns or exchanges. Please ensure you have your measurements taken to ensure fit of each dress. Any faults will be as described.</p><p>We can accept returns for accessories if you contact us within 48 hours of receiving your order. Return postage is at the expense of the buyer. However, we cannot accept any returns for earrings or any headbands for hygiene reasons.</p><p>For Ready to Wear items: </p><ul><li>An exchange or credit note is available to you if you placed your RTW order with one of out MWL Boutique teams and the item is not quite right for you.</li><li>If you placed your RTW order online only, without the assistance of one of our MWL Boutique stylists, we are able to offer you a refund, less shipping. </li></ul><p>Please contact us at <a href=\"mailto:hello@madewithlovebridal.com\">hello@mwlbride.com</a> within 48 hours of receiving your item to initiate your Ready to Wear return. Once your return has been confirmed, we must receive your item within 14 days if located in Australia or 21 days if located overseas. Items must be in their original condition and must not be worn, altered or washed. </p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -699,7 +728,7 @@
                 "accordion_row_Qdq3im": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Perth - I Do Alterations",
+                    "heading": "Change Of Mind",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -708,7 +737,7 @@
                     "text_YHK3gw": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Kathie</p><p>0417 953 978</p>",
+                        "text": "<p>Unfortunately, we cannot offer a return or refund of a made to order dress due to change of mind, if circumstances change or if your wedding is cancelled. If we haven’t started your dress, you are more than welcome to change your order, but we cannot refund. We cannot refund you if you feel that your dress does not suit you, as this dress was made specifically for you.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -740,7 +769,7 @@
                 "accordion_row_7FBdEy": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Adelaide - Laura Searle",
+                    "heading": "Contacting Us",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -749,7 +778,7 @@
                     "text_Uz8CKe": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>0411 487 628</p><p>26 Robert Street, Athelstone, 5076</p><p><em>laurasearle@bigpond.com</em></p><p>Please call or email for an appointment</p>",
+                        "text": "<p>We can be contacted via email at hello@mwlbride.com or on social media at @mwlbride.</p><p>Please allow 24-48 hours for our team to respond to your enquiry. Please note office staff do not work on the weekends, so all emails and DMs sent on the weekend or after 2pm AEST on Fridays will receive a reply the following 1-2 business days. We are based in Queensland, Australia and follow all Public Holidays for the state.</p><p>If you need to cancel your boutique appointment and it is the weekend, we recommend replying to your confirmation text as our emails aren’t monitored on weekends.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -777,6 +806,47 @@
                   "block_order": [
                     "text_Uz8CKe"
                   ]
+                },
+                "accordion_row_UUQEKk": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "How To Measure",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_LTENA3": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>See our instructions <a href=\"https://mwlbride.com/pages/measurement-guide\" title=\"/pages/measurement-guide\"><span style=\"text-decoration:underline\"><em>here</em></span></a> on how to measure yourself. Please reach out to<span style=\"text-decoration:underline\"><em>hello@mwlbride.com</em></span> if you have any further questions.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
+                        "font": "var(--font-accent--family)",
+                        "font_size": "0.75rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_LTENA3"
+                  ]
                 }
               },
               "block_order": [
@@ -789,11 +859,13 @@
                 "accordion_row_rpPWcN",
                 "accordion_row_6PdLAV",
                 "accordion_row_Qdq3im",
-                "accordion_row_7FBdEy"
+                "accordion_row_7FBdEy",
+                "accordion_row_UUQEKk"
               ]
             }
           },
           "block_order": [
+            "text_fr4DDx",
             "accordion_ikEnk3"
           ]
         }
@@ -874,6 +946,7 @@
       "block_order": [
         "text_HbHyPk"
       ],
+      "disabled": true,
       "name": "t:names.rich_text_section",
       "settings": {
         "content_direction": "column",
@@ -909,6 +982,7 @@
     },
     "custom_liquid_V67VtJ": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Redirect script (do not remove))",
       "settings": {
         "custom_liquid": "{%- if request.design_mode -%}\n  {% break %}\n{% endif %}\n<script>\n(async () => {\n  const EUROPE = new Set([\n    'AL','AD','AT','BY','BE','BA','BG','HR','CY','CZ','DK','EE','FO','FI','FR','DE','GI','GR','GG','HU','IS',\n    'IE','IM','IT','JE','LV','LI','LT','LU','MT','MD','MC','ME','MK','NL','NO','PL','PT','RO','RU','SM','RS',\n    'SK','SI','ES','SE','CH','UA','GB','VA'\n  ]);\n\n  try {\n    const url =\n      `${window.Shopify.routes.root}browsing_context_suggestions.json` +\n      `?country[enabled]=true&country[exclude]=${window.Shopify.country}` +\n      `&language[enabled]=true&language[exclude]=${window.Shopify.language}`;\n\n    const res = await fetch(url);\n    if (!res.ok) throw new Error(`HTTP ${res.status}`);\n    const data = await res.json();\n\n    const c = data?.detected_values?.country;\n    if (!c) return;\n\n    const code = (c.handle || '').toUpperCase();\n    const name = (c.name || '').trim();\n\n    // default target\n    let target = '/pages/the-next-step';\n\n    if (code === 'GB' || name === 'United Kingdom') {\n      target = '/pages/the-next-step-uk';\n    } else if (EUROPE.has(code)) {\n      target = '/pages/the-next-step-eu';\n    }\n\n    // prevent redirect loop\n    if (window.location.pathname !== target) {\n      window.location.href = target;\n    }\n  } catch (err) {\n    console.warn('[country-autoselect] Failed:', err);\n  }\n})();\n</script>",
