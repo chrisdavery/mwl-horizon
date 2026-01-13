@@ -584,7 +584,7 @@
             "name_label": "Name",
             "name_placeholder": "",
             "name_required": false,
-            "button_text": "Submit feedback",
+            "button_text": "Submit",
             "button_color": "#2f2e2e",
             "button_text_color": "#ffffff",
             "button_hover_color": "#1a1a1a",
