@@ -581,13 +581,12 @@
             "button_7DKk8i": {
               "type": "button",
               "name": "t:names.button",
-              "disabled": true,
               "settings": {
-                "label": "BOOK APPOINTMENT",
-                "link": "shopify://pages/appointments",
+                "label": "OUR WORLD",
+                "link": "",
                 "open_in_new_tab": false,
                 "active_state": false,
-                "style_class": "button-secondary",
+                "style_class": "link",
                 "width": "fit-content",
                 "custom_width": 100,
                 "width_mobile": "fit-content",
@@ -638,7 +637,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 30,
-        "padding-block-end": 0
+        "padding-block-end": 20
       }
     },
     "ss_hero_14_g9ktR8": {
