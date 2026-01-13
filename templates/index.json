@@ -316,7 +316,7 @@
             "enable_mobile_size": false,
             "mobile_font_size": "1rem",
             "font": "var(--font-accent--family)",
-            "font_size": "1.25rem",
+            "font_size": "1.125rem",
             "line_height": "normal",
             "letter_spacing": "loose",
             "case": "none",
