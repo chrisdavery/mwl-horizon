@@ -99,6 +99,21 @@
     "section_EypKxw": {
       "settings": {},
       "blocks": {
+        "group_4RNhLn": {
+          "blocks": {
+            "group_R3REhJ": {
+              "blocks": {
+                "button_9DK9ai": {
+                  "settings": {
+                    "link": "shopify://collections/stockist"
+                  }
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
+        },
         "group_aikiRw": {
           "blocks": {
             "group_ykr3Hd": {
@@ -118,23 +133,13 @@
             }
           },
           "settings": {}
-        },
-        "group_4RNhLn": {
-          "blocks": {
-            "group_R3REhJ": {
-              "blocks": {
-                "button_9DK9ai": {
-                  "settings": {
-                    "link": "shopify://collections/stockist"
-                  }
-                }
-              },
-              "settings": {}
-            }
-          },
-          "settings": {}
         }
       }
+    },
+    "section_L8p8Vg": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     }
   }
 }
