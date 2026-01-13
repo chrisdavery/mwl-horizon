@@ -13,12 +13,35 @@
     "b2b": true
   },
   "sections": {
-    "ss_hero_14_g9ktR8": {
-      "disabled": true,
+    "hero_jVaWmY": {
       "settings": {},
-      "blocks": {}
+      "blocks": {
+        "text_YLPk4p": {
+          "settings": {
+            "text": "<p>Welcome MWL Partner</p>"
+          }
+        },
+        "group_6W94iX": {
+          "blocks": {
+            "button_gr6eHq": {
+              "settings": {
+                "label": "SHOP DRESSES",
+                "link": "shopify://collections/stockist"
+              }
+            },
+            "button_LNpjAL": {
+              "disabled": false,
+              "settings": {
+                "label": "SHOP ACCESSORIES",
+                "link": "shopify://collections/veils-accessories-stockist"
+              }
+            }
+          },
+          "settings": {}
+        }
+      }
     },
-    "section_gaE3zx": {
+    "ss_hero_14_g9ktR8": {
       "disabled": true,
       "settings": {},
       "blocks": {}
@@ -42,6 +65,16 @@
       "settings": {},
       "blocks": {}
     },
+    "section_gaE3zx": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "section_i3mkk9": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
     "divider_c9TGcg": {
       "disabled": false,
       "settings": {},
@@ -52,38 +85,10 @@
       "settings": {},
       "blocks": {}
     },
-    "section_i3mkk9": {
+    "hero_kY9bLm": {
       "disabled": true,
       "settings": {},
       "blocks": {}
-    },
-    "hero_jVaWmY": {
-      "settings": {},
-      "blocks": {
-        "group_6W94iX": {
-          "blocks": {
-            "button_LNpjAL": {
-              "disabled": false,
-              "settings": {
-                "label": "SHOP ACCESSORIES",
-                "link": "shopify://collections/veils-accessories-stockist"
-              }
-            },
-            "button_gr6eHq": {
-              "settings": {
-                "label": "SHOP DRESSES",
-                "link": "shopify://collections/stockist"
-              }
-            }
-          },
-          "settings": {}
-        },
-        "text_YLPk4p": {
-          "settings": {
-            "text": "<p>Welcome MWL Partner</p>"
-          }
-        }
-      }
     }
   }
 }
