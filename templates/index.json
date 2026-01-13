@@ -2728,6 +2728,7 @@
     },
     "divider_rQGEbq": {
       "type": "divider",
+      "disabled": true,
       "name": "t:names.divider_section",
       "settings": {
         "color_scheme": "",
