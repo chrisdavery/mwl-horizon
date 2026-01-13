@@ -686,7 +686,7 @@
                         "menu": "my-account",
                         "heading": "CUSTOMER CARE",
                         "menu_spacing": 12,
-                        "show_as_accordion": true,
+                        "show_as_accordion": false,
                         "accordion_icon": "plus",
                         "accordion_dividers": true,
                         "inherit_color_scheme": true,
