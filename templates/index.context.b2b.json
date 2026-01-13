@@ -90,6 +90,51 @@
       "disabled": true,
       "settings": {},
       "blocks": {}
+    },
+    "testimonials_VrNktw": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "section_EypKxw": {
+      "settings": {},
+      "blocks": {
+        "group_aikiRw": {
+          "blocks": {
+            "group_ykr3Hd": {
+              "blocks": {
+                "text_jtAYCK": {
+                  "settings": {
+                    "text": "<h3>Accessories</h3>"
+                  }
+                },
+                "button_U48tGV": {
+                  "settings": {
+                    "link": "shopify://collections/veils-accessories-stockist"
+                  }
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
+        },
+        "group_4RNhLn": {
+          "blocks": {
+            "group_R3REhJ": {
+              "blocks": {
+                "button_9DK9ai": {
+                  "settings": {
+                    "link": "shopify://collections/stockist"
+                  }
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
+        }
+      }
     }
   }
 }
