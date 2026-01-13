@@ -24,6 +24,7 @@
         "group_6W94iX": {
           "blocks": {
             "button_gr6eHq": {
+              "disabled": false,
               "settings": {
                 "label": "SHOP DRESSES",
                 "link": "shopify://collections/stockist"
