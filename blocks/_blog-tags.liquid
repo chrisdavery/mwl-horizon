@@ -74,7 +74,7 @@
     {% if list_items_array.size >= 10 %}
         <div class="flex inline-slider-row hidden--mobile title--aligned-center">
             <div>
-              {% render 'breadcrumbs' %}
+              {% render 'breadcrumbs', custom_current_title: block.settings.custom_current_title %}
             </div>
             <div>
                 {{ slideshow }}
