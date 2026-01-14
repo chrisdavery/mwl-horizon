@@ -126,21 +126,9 @@
             <p>{{ item.title }}</p>
           </{{ element }}>
 
-          <rte-formatter
-            class="spacing-style text-block custom custom-typography custom-font-size"
-            style="
-              --padding-block-start: 0px; --padding-block-end:0px;
-              --padding-inline-start:0px; --padding-inline-end:0px;
-              --width: fit-content;
-              --max-width: var(--max-width--body-normal);
-              --font-size: 1rem;
-              --font-weight: var(--font-body--weight);
-              --font-family: var(--font-body--family);
-              --line-height: 1;
-            "
-          >
+          <{{ element }} {{ attributes }}>
             <p>{{ item.content }}</p>
-          </rte-formatter>
+          </{{ element }}>
 
           <rte-formatter
             class="spacing-style text-block review-author custom custom-typography custom-font-size custom-color"
