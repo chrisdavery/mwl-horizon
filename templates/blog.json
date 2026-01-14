@@ -83,7 +83,7 @@
       ],
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<div class=\"hidden--desktop\">\n{% render 'breadcrumbs' %}\n</div>",
+        "custom_liquid": "<div class=\"hidden--desktop\">\n{% render 'breadcrumbs',custom_current_title: 'Explore MWL Journals' %}\n</div>",
         "color_scheme": "",
         "section_width": "page-width",
         "padding-block-start": 0,
