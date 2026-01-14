@@ -1,3 +1,9 @@
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+
+  @param {string} [custom_current_title] - Custom title
+{%- enddoc -%}
+
 {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
 {%- assign t = template | split: '.' | first -%}
 
@@ -48,7 +54,7 @@
         {%- else -%}
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">
-              {% if custom_current_title %}
+              {% if custom_current_title != blank %}
                 {{ custom_current_title }}
               {% else %}
                 {{ page.title }}
