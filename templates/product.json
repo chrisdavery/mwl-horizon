@@ -1028,6 +1028,15 @@
                   "settings": {
                     "items_list": "{{ closest.product.metafields.product_content.product_reviews.value }}",
                     "heading": "REVIEWS",
+                    "type_preset": "custom",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.75rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
                     "open_by_default": false
                   },
                   "blocks": {}
