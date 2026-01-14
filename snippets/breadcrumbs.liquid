@@ -44,9 +44,9 @@
         {%- endif -%}
       {%- when 'blog' -%}
         {%- if current_tags -%}
-          <li class="breadcrumbs__item">
+          {% comment %} <li class="breadcrumbs__item">
             {{ blog.title | link_to: blog.url }}
-          </li>
+          </li> {% endcomment %}
           <li class="breadcrumbs__item">
             {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
             <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
