@@ -132,7 +132,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Now that you have your dress</h2>",
+            "text": "<h2>MWL alteration partners</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -160,7 +160,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Alterations are often needed for the perfect fit. To help you look and feel your best, we've listed recommended seamstresses near our MWL boutiques. While they don’t work for us directly, they’re experienced with our dresses. If you choose someone else, we suggest getting quotes first. Please note, as these seamstresses are independent, MWL is not responsible for their work.</p>",
+            "text": "<p>If you require additional alternations, you can visit one of our trusted alterations partners listed below</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -874,6 +874,7 @@
       "block_order": [
         "text_HbHyPk"
       ],
+      "disabled": true,
       "name": "t:names.rich_text_section",
       "settings": {
         "content_direction": "column",
