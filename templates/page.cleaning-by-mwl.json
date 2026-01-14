@@ -1805,6 +1805,7 @@
         "testimonial_card_hRwn3q",
         "testimonial_card_Wg93Ft"
       ],
+      "disabled": true,
       "name": "Testimonials",
       "settings": {
         "alignment": "center",
@@ -2088,7 +2089,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 32,
-        "padding-block-end": 0
+        "padding-block-end": 30
       }
     },
     "custom_liquid_8zYA33": {
