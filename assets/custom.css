@@ -611,7 +611,7 @@ media-gallery slideshow-arrows .slideshow-control {
 
 .contact-form__input,
 .select-option,
-.custom-form__input,.custom-select,.custom-select-wrapper label,
+.custom-form__input,.custom-select,.custom-select-wrapper > *, .custom-select-wrapper label,
 .custom-input--field date-picker label,
 .ai-datepicker-calendar,.custom-input--field > * {
   font-size: var(--font-size--sm);
