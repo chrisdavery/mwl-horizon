@@ -163,7 +163,7 @@
           display: block;
         }
 
-        .all-button-blog-tags, .active {
+        .all-button-blog-tags:not(.blog-tags__wrapper:has(.active) .all-button-blog-tags), .active {
             --button-color: var(--color-primary-button-hover-text) !important;
             --button-background-color: var(--color-primary-button-hover-background) !important;
             --button-border-color: var(--color-primary-button-hover-border) !important;
