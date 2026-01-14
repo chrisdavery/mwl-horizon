@@ -613,7 +613,7 @@ media-gallery slideshow-arrows .slideshow-control {
 .select-option,
 .custom-form__input,.custom-select,.custom-select-wrapper label,
 .custom-input--field date-picker label,
-.ai-datepicker-calendar {
+.ai-datepicker-calendar,.custom-input--field > * {
   font-size: var(--font-size--sm);
 }
 
