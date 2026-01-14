@@ -162,7 +162,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Our boutiques are at the heart of the MWL brand experience. Each bridal appointment is a personalised one on one experience with expert stylists.</p>",
+            "text": "<p>Experience a personalised one-on-one bridal styling appointment. </p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
