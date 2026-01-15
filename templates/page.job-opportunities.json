@@ -377,6 +377,47 @@
                 "padding-inline-end": 0
               },
               "blocks": {
+                "accordion_row_fzwYhJ": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Dispatch Coordinator | London, UK",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_bY3Ypf": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>The Role</strong></p><p>MWL is seeking a full-time Dispatch Coordinator to join our Logistics team based in London, UK.This role is ideal for a highly organised, proactive individual who thrives in a fast-paced environment and takes pride in precision, care, and teamwork. You will play a pivotal role in the final stage of each bride’s journey, ensuring every gown leaves our warehouse packed beautifully, accurately, and on time.Working on-site, you will collaborate closely with the wider MWL team, supporting daily logistics operations while contributing to a smooth, efficient, and detail-driven dispatch process.</p><p><strong>Role Responsibilities:</strong></p><ul><li>Carefully pack and dispatch wedding dresses, ensuring each piece is prepared with care, precision, and attention to detail</li><li>Ensure all shipments are packed securely so dresses arrive in pristine condition</li><li>Update backend systems to maintain accurate and up-to-date logistics and stock records</li><li>Create and manage labels, documentation, and shipment paperwork</li><li>Support stock management and general warehouse organisation</li><li>Carry out administrative tasks including reporting, database entry, and printing</li><li>Provide additional operational support as directed by the Operations Manager</li></ul><p><strong>Skills & Experience:</strong></p><ul><li>Exceptional attention to detail with a strong commitment to accuracy and quality</li><li>Ability to manage multiple tasks simultaneously while maintaining organisation and efficiency</li><li>Strong organisational and administrative skills</li><li>Comfortable working under pressure in a fast-paced, hands-on environment</li><li>Collaborative team player who enjoys supporting others and contributing to shared goals</li><li>An appreciation for fashion and bridal, with an understanding of the importance of a wedding dress in a bride’s journey</li></ul><p><strong>About You:</strong></p><ul><li>You are meticulous and detail-oriented in everything you do</li><li>You are highly organised and proactive by nature</li><li>You have a genuine passion for fashion and bridal</li><li>You enjoy working as part of a team and take pride in doing things properly </li></ul><p><strong>Apply by:<br/><br/>Email</strong> | <a href=\"mailto:tove@mwlbride.com\">tove@mwlbride.com</a></p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
+                        "font": "var(--font-body--family)",
+                        "font_size": "0.75rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_bY3Ypf"
+                  ]
+                },
                 "accordion_row_yj78wD": {
                   "type": "_accordion-row",
                   "settings": {
@@ -546,6 +587,7 @@
                 }
               },
               "block_order": [
+                "accordion_row_fzwYhJ",
                 "accordion_row_yj78wD",
                 "accordion_row_MNVGwi",
                 "accordion_row_hL8m6D",
