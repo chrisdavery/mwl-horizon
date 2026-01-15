@@ -160,7 +160,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Bridal sizing is very different to everyday fashion, which is why we kindly recommend providing your bust, waist and hip measurements ahead of your appointment. This allows our stylists to ensure we can accommodate your requested styles, as we do not carry every design in each size.</p><p>Everybody is unique. That’s why all MWL designs can be ordered with bespoke split sizing, tailored to your natural proportions. Each bodice, skirt and dress is custom made to your individual measurements for your special day.</p><p>Visit our bridal and global comparison size chart below</p>",
+            "text": "<p>Bridal sizing is very different to everyday fashion, which is why we kindly recommend providing your bust, waist and hip measurements ahead of your appointment. This allows our stylists to ensure we can accommodate your requested styles, as we do not carry every design in each size.</p><p>Everybody is unique. That’s why all MWL designs can be ordered with bespoke split sizing, tailored to your natural proportions. Each bodice, skirt and dress is custom made to your individual measurements for your special day.</p><p>Visit our bridal and global comparison size chart below.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
