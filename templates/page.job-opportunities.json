@@ -460,48 +460,6 @@
                     "text_pwNA4y"
                   ]
                 },
-                "accordion_row_CmqCNy": {
-                  "type": "_accordion-row",
-                  "name": "Tiktok Manager",
-                  "settings": {
-                    "heading": "Marketing Assistant | Gold Coast, Australia",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_YURNn8": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p><strong>The Role:</strong></p><p>MWL is looking an energetic, detail-driven and creative go-getter to join our growing marketing team. This is a rare opportunity to get your foot in the door with a globally recognised fashion brand and work alongside an experienced team shaping the future of modern bridal.</p><p>Your day-to-day could include:</p><p>• Support the marketing team across all channels, projects, and launches</p><p>• Assist in developing and coordinating paid media strategies – researching competitors, identifying opportunities, and briefing our content creators / performance partners</p><p>• Monitor what other brands are doing across digital, social, and campaign spaces, bringing fresh insights and ideas to the table</p><p>• Assisting to manage influencer and UGC coordination, from outreach and gifting to content collection and tracking</p><p>• Maintain and update the marketing calendar, ensuring all campaigns, key dates, and deliverables are on track</p><p>• Community management in the form of commenting, engaging on socials channels. </p><p>• Coordinate logistics for campaign and in house ecommerce shoots – booking props, talent, liaising with agencies, sourcing locations and assisting on set.</p><p>• Provide general marketing and project coordination support across campaigns, product launches and collaborations</p><p>• Identify gaps, ideas, and trends to keep MWL at the forefront of the industry</p><p>You’ll thrive if you:</p><p>• Are highly organised, proactive, and thrive in a fast-moving creative environment</p><p>• Have strong communication skills and love working collaboratively across teams</p><p>• Have a keen eye for aesthetics and understand the tone and pace of bridal/ fashion marketing</p><p>• Are confident managing multiple projects and have a can-do, solutions-focused attitude</p><p>• Are eager to learn from an experienced team and build a career in fashion marketing</p><p><strong>Apply by:</strong><br/><br/><strong>Email</strong> | genea@mwlbride.com</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "custom",
-                        "enable_mobile_size": false,
-                        "mobile_font_size": "1rem",
-                        "font": "var(--font-body--family)",
-                        "font_size": "0.75rem",
-                        "line_height": "loose",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_YURNn8"
-                  ]
-                },
                 "accordion_row_hL8m6D": {
                   "type": "_accordion-row",
                   "name": "Tiktok Manager",
@@ -590,7 +548,6 @@
               "block_order": [
                 "accordion_row_yj78wD",
                 "accordion_row_MNVGwi",
-                "accordion_row_CmqCNy",
                 "accordion_row_hL8m6D",
                 "accordion_row_N9VTyq"
               ]
