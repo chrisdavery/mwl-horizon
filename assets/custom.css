@@ -430,7 +430,18 @@ input,textarea {
 .price-0 .line-item-price {
   display: none;
 }
+.cart__original-total-container,
+.cart__original-total-container * {
+  font-size: var(--cart-font-size--xs) !important;
+}
 
+.cart__total-label {
+  font-size: var(--cart-font-size--xs) !important;
+}
+
+.cart__total-value {
+  font-size: var(--cart-font-size--xs) !important;
+}
 td.cart-items__price.cart-secondary-typography {
   font-family: var(--cart-primary-font-family);
   font-style: var(--cart-primary-font-style);
