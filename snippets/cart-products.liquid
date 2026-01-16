@@ -298,7 +298,9 @@
                   </div>
                 </td>
                 <td
-                  class="cart-items__price cart-secondary-typography"
+                  class="cart-items__price cart-secondary-typography
+                  {% if item.final_line_price == 0 and item.discount_allocations == blank %}price-0{% endif %}
+                  "
                   role="cell"
                   headers="productTotal"
                 >
