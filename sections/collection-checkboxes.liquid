@@ -1,18 +1,18 @@
-<div style="text-align:center;">
-  <div class="product-grid">
+<div class="acuity-wrapper" style="text-align:center;">
+  <div class="acuity-product-grid">
     {% if section.settings.collection != blank %}
       {% for product in section.settings.collection.products %}
         {% assign first_image = product.featured_image | img_url: '308x486' %}
 
-        <div class="label-input-group" data-f-price="{{ product.price }}">
+        <div class="acuity-item" data-f-price="{{ product.price }}">
           <input
-            id="{{ product.handle }}"
+            id="acuity-{{ product.handle }}"
             name="field:7618076"
             type="checkbox"
             value="{{ product.title }}"
           >
 
-          <label for="{{ product.handle }}">
+          <label for="acuity-{{ product.handle }}">
             <img
               loading="lazy"
               src="{{ first_image | prepend: 'https:' }}"
@@ -21,11 +21,11 @@
               height="243"
             >
 
-            <span class="appointment-pd-title">
+            <span class="acuity-pd-title">
               {{ product.title }}
             </span>
 
-            <div class="appointment-pd-price">
+            <div class="acuity-pd-price">
               {{ product.price | money_with_currency }}
             </div>
           </label>
@@ -36,17 +36,17 @@
     {% endif %}
   </div>
 
-  <div class="button-container-cont">
+  <div class="acuity-button-container">
     <button
-      id="continueBtn"
-      class="btn-continue"
+      id="acuityContinueBtn"
+      class="acuity-btn-continue"
       style="margin-top:20px;padding:10px 20px;"
     >
       Continue
     </button>
   </div>
 
-  <div class="booking-frame-container" style="display:none;">
+  <div class="acuity-booking-frame" style="display:none;">
     <iframe
       id="acuityIframe"
       src="https://app.acuityscheduling.com/schedule/6f1d26e5/appointment/64465322/calendar/any"
@@ -63,16 +63,19 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const checkboxes = document.querySelectorAll('.label-input-group input[type="checkbox"]');
+  const wrapper = document.querySelector('.acuity-wrapper');
+  if (!wrapper) return;
+
+  const checkboxes = wrapper.querySelectorAll('.acuity-item input[type="checkbox"]');
   const maxSelections = 5;
-  const continueBtn = document.getElementById('continueBtn');
+  const continueBtn = document.getElementById('acuityContinueBtn');
   const iframe = document.getElementById('acuityIframe');
-  const productGrid = document.querySelector('.product-grid');
-  const bookingFrame = document.querySelector('.booking-frame-container');
+  const productGrid = wrapper.querySelector('.acuity-product-grid');
+  const bookingFrame = wrapper.querySelector('.acuity-booking-frame');
 
   function updateSelectedClasses() {
     checkboxes.forEach(cb => {
-      cb.closest('.label-input-group')
+      cb.closest('.acuity-item')
         .classList.toggle('selected', cb.checked);
     });
   }
