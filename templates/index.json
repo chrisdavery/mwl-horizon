@@ -3859,6 +3859,7 @@
                 "image_ME4Njb": {
                   "type": "image",
                   "settings": {
+                    "image": "shopify://shop_images/Untitled_design_34.png",
                     "link": "",
                     "image_ratio": "standard",
                     "width": "fill",
