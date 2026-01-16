@@ -112,7 +112,7 @@
         "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 16,
         "section_width": "page-width",
-        "section_height": "custom",
+        "section_height": "medium",
         "section_height_custom": 95,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
@@ -571,9 +571,9 @@
                     "image_jiGmXX": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Untitled_design_31.png",
+                        "image": "shopify://shop_images/Screenshot_2026-01-16_at_10.25.57_am.png",
                         "link": "",
-                        "image_ratio": "standard",
+                        "image_ratio": "adapt",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
