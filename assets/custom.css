@@ -423,6 +423,10 @@ input,textarea {
   margin: 0;
 }
 
+.cart-items__table-row.addon-cart-fee .cart-items__quantity {
+  display: none;
+}
+
 td.cart-items__price.cart-secondary-typography {
   font-family: var(--cart-primary-font-family);
   font-style: var(--cart-primary-font-style);
