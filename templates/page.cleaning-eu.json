@@ -304,9 +304,9 @@
                     "image_EmMNLe": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Untitled_design_33.png",
+                        "image": "shopify://shop_images/Screenshot_2026-01-16_at_6.06.20_pm.png",
                         "link": "",
-                        "image_ratio": "standard",
+                        "image_ratio": "adapt",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -838,9 +838,9 @@
                     "image_aQLCpg": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Untitled_design_32.png",
+                        "image": "shopify://shop_images/Screenshot_2026-01-16_at_6.06.11_pm.png",
                         "link": "",
-                        "image_ratio": "standard",
+                        "image_ratio": "adapt",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
