@@ -106,11 +106,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const encoded = encodeURIComponent(selectedItems.join(', '));
-    const appointmentTypeId = selectedAppointment.value;
     iframe.src =
-      `https://app.acuityscheduling.com/schedule/48e54992/appointment/${appointmentTypeId}` +
-      `?ref=embedded_csp` +
-      `&field:15513744=${encoded}`;
+      `https://app.acuityscheduling.com/schedule/6f1d26e5/appointment/64465322/calendar/any` +
+      `?appointmentType=68112711&field:15103364=${encoded}`;
 
     productGrid.style.display = 'none';
     continueBtn.style.display = 'none';
