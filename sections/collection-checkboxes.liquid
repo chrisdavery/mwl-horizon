@@ -49,7 +49,7 @@
   <div class="acuity-booking-frame" style="display:none;">
     <iframe
       id="acuityIframe"
-      src="https://app.acuityscheduling.com/schedule/6f1d26e5"
+      src="https://app.acuityscheduling.com/schedule/6f1d26e5/appointment/64465322/calendar/any"
       title="Schedule Appointment"
       width="100%"
       height="800"
@@ -107,7 +107,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const encoded = encodeURIComponent(selectedItems.join(', '));
     iframe.src =
-      `https://app.acuityscheduling.com/schedule/6f1d26e5&field:15103364=${encoded}`;
+      `https://app.acuityscheduling.com/schedule/6f1d26e5/appointment/64465322/calendar/any` +
+      `?appointmentType=68112711&field:15103364=${encoded}`;
 
     productGrid.style.display = 'none';
     continueBtn.style.display = 'none';
