@@ -427,6 +427,10 @@ input,textarea {
   display: none;
 }
 
+.price-0 .line-item-price {
+  display: none;
+}
+
 td.cart-items__price.cart-secondary-typography {
   font-family: var(--cart-primary-font-family);
   font-style: var(--cart-primary-font-style);

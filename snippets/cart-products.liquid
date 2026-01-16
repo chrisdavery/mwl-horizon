@@ -313,7 +313,7 @@
                       assign unit_price = item.unit_price | money
                     endif
                   -%}
-                  <text-component value="{{ price | strip_html }}">{{ price }}</text-component>
+                  <text-component value="{{ price | strip_html }}" class="line-item-price">{{ price }}</text-component>
                   {%- if item.unit_price_measurement -%}
                     <div class="cart-items__price-unit cart-secondary-typography">
                       {% render 'unit-price', price: unit_price, measurement: item.unit_price_measurement %}
