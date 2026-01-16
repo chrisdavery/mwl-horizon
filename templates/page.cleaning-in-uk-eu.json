@@ -304,9 +304,9 @@
                     "image_EmMNLe": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Untitled_design_33.png",
+                        "image": "shopify://shop_images/Screenshot_2026-01-16_at_6.06.20_pm.png",
                         "link": "",
-                        "image_ratio": "standard",
+                        "image_ratio": "adapt",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -571,9 +571,9 @@
                     "image_jiGmXX": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Untitled_design_31.png",
+                        "image": "shopify://shop_images/Screenshot_2026-01-16_at_10.25.57_am.png",
                         "link": "",
-                        "image_ratio": "standard",
+                        "image_ratio": "adapt",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -838,9 +838,9 @@
                     "image_aQLCpg": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Untitled_design_32.png",
+                        "image": "shopify://shop_images/Screenshot_2026-01-16_at_6.06.11_pm.png",
                         "link": "",
-                        "image_ratio": "standard",
+                        "image_ratio": "adapt",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -1112,7 +1112,7 @@
             "enable_mobile_size": false,
             "mobile_font_size": "1rem",
             "font": "var(--font-heading--family)",
-            "font_size": "1.25rem",
+            "font_size": "1.125rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "uppercase",
@@ -1139,8 +1139,8 @@
             "type_preset": "custom",
             "enable_mobile_size": false,
             "mobile_font_size": "1rem",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -1405,6 +1405,7 @@
         "multicolumn_card_HkWU48",
         "multicolumn_card_93DCkR"
       ],
+      "disabled": true,
       "name": "MWL Carousel",
       "settings": {
         "alignment": "left",
@@ -1585,6 +1586,7 @@
         "testimonial_card_hRwn3q",
         "testimonial_card_Wg93Ft"
       ],
+      "disabled": true,
       "name": "Testimonials",
       "settings": {
         "alignment": "center",
