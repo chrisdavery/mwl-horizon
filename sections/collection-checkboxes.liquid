@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const encoded = encodeURIComponent(selectedItems.join(', '));
     iframe.src =
-      `https://app.acuityscheduling.com/schedule/6f1d26e5?ref=embedded_csp&field:15103364=${encoded}`;
+      `https://app.acuityscheduling.com/schedule/6f1d26e5?ref=embedded_csp&field:15103364=${encoded}&field:15103601=${encoded}&field:15103364=${encoded}`;
 
     productGrid.style.display = 'none';
     continueBtn.style.display = 'none';
