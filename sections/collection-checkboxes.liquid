@@ -1,0 +1,137 @@
+<div class="acuity-wrapper" style="text-align:center;">
+  <div class="acuity-product-grid">
+    {% if section.settings.collection != blank %}
+      {% for product in section.settings.collection.products %}
+        {% assign first_image = product.featured_image | img_url: '308x486' %}
+
+        <div class="acuity-item" data-f-price="{{ product.price }}">
+          <input
+            id="acuity-{{ product.handle }}"
+            name="field:7618076"
+            type="checkbox"
+            value="{{ product.title }}"
+          >
+
+          <label for="acuity-{{ product.handle }}">
+            <img
+              loading="lazy"
+              src="{{ first_image | prepend: 'https:' }}"
+              alt="{{ product.title }}"
+              width="154"
+              height="243"
+            >
+
+            <span class="acuity-pd-title">
+              {{ product.title }}
+            </span>
+
+            <div class="acuity-pd-price">
+              {{ product.price | money_with_currency }}
+            </div>
+          </label>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>Please select a collection in the section settings.</p>
+    {% endif %}
+  </div>
+
+  <div class="acuity-button-container">
+    <button
+      id="acuityContinueBtn"
+      class="acuity-btn-continue"
+      style="margin-top:20px;padding:10px 20px;"
+    >
+      Continue
+    </button>
+  </div>
+
+  <div class="acuity-booking-frame" style="display:none;">
+    <iframe
+      id="acuityIframe"
+      src="https://app.acuityscheduling.com/schedule/6f1d26e5/"
+      title="Schedule Appointment"
+      width="100%"
+      height="800"
+      frameborder="0"
+      style="margin-top:70px;"
+    ></iframe>
+  </div>
+</div>
+
+<script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const wrapper = document.querySelector('.acuity-wrapper');
+  if (!wrapper) return;
+
+  const checkboxes = wrapper.querySelectorAll('.acuity-item input[type="checkbox"]');
+  const maxSelections = 5;
+  const continueBtn = document.getElementById('acuityContinueBtn');
+  const iframe = document.getElementById('acuityIframe');
+  const productGrid = wrapper.querySelector('.acuity-product-grid');
+  const bookingFrame = wrapper.querySelector('.acuity-booking-frame');
+
+  function updateSelectedClasses() {
+    checkboxes.forEach(cb => {
+      cb.closest('.acuity-item')
+        .classList.toggle('selected', cb.checked);
+    });
+  }
+
+  function getSelectedItems() {
+    return Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+  }
+
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', function () {
+      if (getSelectedItems().length > maxSelections) {
+        this.checked = false;
+        alert('You can select up to ' + maxSelections + ' options only.');
+      }
+      updateSelectedClasses();
+    });
+  });
+
+  continueBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const selectedItems = getSelectedItems();
+    if (!selectedItems.length) {
+      alert('Please select at least one item.');
+      return;
+    }
+
+    const encoded = encodeURIComponent(selectedItems.join(', '));
+    iframe.src =
+      `https://app.acuityscheduling.com/schedule/6f1d26e5?ref=embedded_csp&field:15103364=${encoded}&field:15103601=${encoded}&field:15103364=${encoded}`;
+
+    productGrid.style.display = 'none';
+    continueBtn.style.display = 'none';
+    bookingFrame.style.display = 'block';
+  });
+
+  updateSelectedClasses();
+});
+</script>
+
+{% schema %}
+{
+  "name": "Collection Checkboxes",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Choose collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Checkboxes"
+    }
+  ]
+}
+{% endschema %}
