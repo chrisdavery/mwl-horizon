@@ -407,6 +407,7 @@ input,textarea {
 }
 
 .cart-items__title {
+  font-size: var(--cart-font-size--sm);
   letter-spacing: var(--letter-spacing--heading-loose);
 }
 
