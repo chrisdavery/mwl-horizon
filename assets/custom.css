@@ -415,6 +415,10 @@ input,textarea {
   font-size: 0.75rem !important;
 }
 
+.cart-items__details * {
+  font-size: var(--cart-font-size--xs) !important;
+}
+
 td.cart-items__price.cart-secondary-typography {
   font-family: var(--cart-primary-font-family);
   font-style: var(--cart-primary-font-style);
