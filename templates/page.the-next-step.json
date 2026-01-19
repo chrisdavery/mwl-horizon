@@ -99,7 +99,8 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/prim-wedding-dress-made-with-love-bridal-14_ebcc9f68-9e3a-4cfa-b8ad-775044967e4d.png",
+        "image_1": "shopify://shop_images/1_2000x500_3e8568bf-0353-4520-91bc-406d11bf5f78.png",
+        "mobile_image_1": "shopify://shop_images/1_2000x500_3e8568bf-0353-4520-91bc-406d11bf5f78.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
