@@ -154,7 +154,8 @@
                 },
                 "button_RiwjNG": {
                   "settings": {
-                    "label": "READ"
+                    "label": "READ",
+                    "link": "shopify://blogs/b2b-dashboard"
                   }
                 }
               },
