@@ -171,10 +171,10 @@
                       "type": "image",
                       "disabled": false,
                       "settings": {
-                        "image": "shopify://shop_images/Cleaning_Icon-01_57052434-55c8-4856-8181-36b3abbaaf8a.png",
+                        "image": "shopify://shop_images/MWL_Cleaning_1.png",
                         "link": "",
                         "header-84f10904b876e2cadd99b501d4922667": null,
-                        "image_ratio": "standard",
+                        "image_ratio": "square",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -460,10 +460,10 @@
                       "type": "image",
                       "disabled": false,
                       "settings": {
-                        "image": "shopify://shop_images/Cleaning_Icon-02.png",
+                        "image": "shopify://shop_images/MWL_Cleaning_2.png",
                         "link": "",
                         "header-f08370cb8af0976aa5aa9fd7c2042c00": null,
-                        "image_ratio": "standard",
+                        "image_ratio": "square",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -749,10 +749,10 @@
                       "type": "image",
                       "disabled": false,
                       "settings": {
-                        "image": "shopify://shop_images/Cleaning_Icon-03.png",
+                        "image": "shopify://shop_images/MWL_Cleaning_3_441fcd06-9834-4913-92ae-d3d178a5a1e4.png",
                         "link": "",
                         "header-ef9e940f148f537160c0ece97af498a3": null,
-                        "image_ratio": "standard",
+                        "image_ratio": "square",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -1469,10 +1469,10 @@
     "hero_bNLX4M": {
       "settings": {
         "image_1": "shopify://shop_images/8_2000x500_1b29bab1-89cb-4c9c-a7d6-94c8cd93f352.png",
+        "mobile_image_1": "shopify://shop_images/8_2000x500_1b29bab1-89cb-4c9c-a7d6-94c8cd93f352.png",
         "vertical_alignment_flex_direction_column": "flex-end",
         "padding-block-start": 32,
-        "padding-block-end": 52,
-        "mobile_image_1": "shopify://shop_images/8_2000x500_1b29bab1-89cb-4c9c-a7d6-94c8cd93f352.png"
+        "padding-block-end": 52
       },
       "blocks": {
         "text_mwDNwc": {
