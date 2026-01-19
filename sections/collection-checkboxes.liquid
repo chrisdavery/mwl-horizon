@@ -49,7 +49,7 @@
       class="acuity-btn-continue"
       style="margin-top:20px;padding:10px 20px;border:0;margin-bottom:3em;"
     >
-      Continue
+      CONTINUE
     </button>
   </div>
 
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!wrapper) return;
 
   const checkboxes = wrapper.querySelectorAll('.acuity-item input[type="checkbox"]');
-  const maxSelections = 1;
+  const maxSelections = 1000;
   const continueBtn = document.getElementById('acuityContinueBtn');
   const iframe = document.getElementById('acuityIframe');
   const productGrid = wrapper.querySelector('.acuity-product-grid');
@@ -119,6 +119,16 @@ document.addEventListener('DOMContentLoaded', function () {
     productGrid.style.display = 'none';
     continueBtn.style.display = 'none';
     bookingFrame.style.display = 'block';
+
+    const instructionSection = document.querySelector('#shopify-section-section_rrEHMb, [id^="shopify-section-"][id*="section_rrEHMb"]');
+
+  if (instructionSection) {
+    instructionSection.style.display = 'none';
+  } else {
+    console.warn('Instruction section not found!');
+  }
+
+
   });
 
   updateSelectedClasses();
