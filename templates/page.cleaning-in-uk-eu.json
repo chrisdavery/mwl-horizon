@@ -139,8 +139,8 @@
             "type_preset": "custom",
             "enable_mobile_size": false,
             "mobile_font_size": "1rem",
-            "font": "var(--font-accent--family)",
-            "font_size": "0.875rem",
+            "font": "var(--font-body--family)",
+            "font_size": "0.75rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -304,7 +304,7 @@
                     "image_EmMNLe": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Screenshot_2026-01-16_at_6.06.20_pm.png",
+                        "image": "shopify://shop_images/MWL_Cleaning_3_441fcd06-9834-4913-92ae-d3d178a5a1e4.png",
                         "link": "",
                         "image_ratio": "adapt",
                         "width": "fill",
@@ -571,7 +571,7 @@
                     "image_jiGmXX": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Screenshot_2026-01-16_at_10.25.57_am.png",
+                        "image": "shopify://shop_images/MWL_Cleaning_1.png",
                         "link": "",
                         "image_ratio": "adapt",
                         "width": "fill",
@@ -838,7 +838,7 @@
                     "image_aQLCpg": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/Screenshot_2026-01-16_at_6.06.11_pm.png",
+                        "image": "shopify://shop_images/MWL_Cleaning_2.png",
                         "link": "",
                         "image_ratio": "adapt",
                         "width": "fill",
@@ -1132,7 +1132,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Any questions? Reach out to our cleaning team at europe.cleaning@madewithlovebridal.com</p>",
+            "text": "<p>Any questions? Reach out to our cleaning team at europe.cleaning@madewithlovebridal.com.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
