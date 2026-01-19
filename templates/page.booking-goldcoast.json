@@ -80,7 +80,7 @@
     "main": {
       "type": "collection-checkboxes",
       "settings": {
-        "collection": "made-to-order"
+        "collection": "dress-selection"
       }
     }
   },
