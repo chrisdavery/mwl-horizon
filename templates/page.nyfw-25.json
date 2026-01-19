@@ -541,6 +541,234 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "ss_masonry_mXzzNY": {
+      "type": "ss-masonry",
+      "blocks": {
+        "item_ttcb3R": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_jWDFyn": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_FTRC4U": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_xhmL9j": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_9qx7Vc": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_Bjx3z8": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_afnQ7Q": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_zkdCzC": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_wkiDBC": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_x6QX74": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_QEaqA4": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_jHNKFW": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_grx4Lf": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        },
+        "item_UVkPzn": {
+          "type": "item",
+          "settings": {
+            "url": "",
+            "use_style": "link",
+            "popup_title": "",
+            "popup_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_ttcb3R",
+        "item_jWDFyn",
+        "item_FTRC4U",
+        "item_xhmL9j",
+        "item_9qx7Vc",
+        "item_Bjx3z8",
+        "item_afnQ7Q",
+        "item_zkdCzC",
+        "item_wkiDBC",
+        "item_x6QX74",
+        "item_QEaqA4",
+        "item_jHNKFW",
+        "item_grx4Lf",
+        "item_UVkPzn"
+      ],
+      "name": "SS - Masonry",
+      "settings": {
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 22,
+        "heading_size_mobile": 18,
+        "heading_height": 130,
+        "heading_align": "center",
+        "sub_heading": "",
+        "sub_heading_custom": false,
+        "sub_heading_font": "josefin_sans_n4",
+        "sub_heading_size": 16,
+        "sub_heading_size_mobile": 14,
+        "sub_heading_height": 130,
+        "sub_heading_mt": 20,
+        "sub_heading_align": "center",
+        "items_mt": 20,
+        "items_row": 5,
+        "items_row_mobile": 2,
+        "items_gap": 12,
+        "items_gap_mobile": 12,
+        "items_style": "load",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "initial_quality": 10,
+        "load_quality": 3,
+        "load": "Show More",
+        "load_custom": false,
+        "load_font": "josefin_sans_n4",
+        "load_size": 16,
+        "load_size_mobile": 14,
+        "load_height": 100,
+        "load_align": "center",
+        "load_mt": 32,
+        "modal_padding_vertical": 30,
+        "modal_padding_vertical_mobile": 20,
+        "modal_padding_horizontal": 30,
+        "modal_padding_horizontal_mobile": 20,
+        "modal_width": 70,
+        "modal_width_mobile": 100,
+        "modal_radius": 0,
+        "modal_border_thickness": 0,
+        "modal_overlay": 50,
+        "modal_content_align": "center",
+        "modal_content_align_mobile": "center",
+        "popup_title_custom": false,
+        "popup_title_font": "josefin_sans_n4",
+        "popup_title_size": 22,
+        "popup_title_size_mobile": 18,
+        "popup_title_height": 130,
+        "popup_text_custom": false,
+        "popup_text_font": "josefin_sans_n4",
+        "popup_text_size": 16,
+        "popup_text_size_mobile": 14,
+        "popup_text_height": 150,
+        "popup_text_mt": 20,
+        "modal_bg_color": "#FFFFFF",
+        "modal_border_color": "#000000",
+        "close_color": "#FFFFFF",
+        "popup_title_color": "#000000",
+        "popup_text_color": "#000000",
+        "heading_color": "#000000",
+        "sub_heading_color": "#000000",
+        "image_border_color": "#000000",
+        "load_color": "#000000",
+        "load_hover_color": "#c16452",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
     }
   },
   "order": [
@@ -548,6 +776,7 @@
     "hero_WHfCEr",
     "section_6eKB8U",
     "hero_BcUJLE",
-    "1763690343ae568810"
+    "1763690343ae568810",
+    "ss_masonry_mXzzNY"
   ]
 }
