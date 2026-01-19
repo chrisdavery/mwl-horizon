@@ -2887,7 +2887,7 @@
                   "type": "button",
                   "settings": {
                     "label": "DISCOVER",
-                    "link": "shopify://blogs/all",
+                    "link": "shopify://pages/appointments",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
@@ -3053,7 +3053,7 @@
                   "type": "button",
                   "settings": {
                     "label": "READ",
-                    "link": "shopify://blogs/all",
+                    "link": "shopify://pages/our-process",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
@@ -3218,7 +3218,7 @@
                   "type": "button",
                   "settings": {
                     "label": "EXPLORE",
-                    "link": "shopify://pages/appointments",
+                    "link": "shopify://pages/store-locator",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
