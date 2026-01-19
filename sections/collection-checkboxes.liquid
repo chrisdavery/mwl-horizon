@@ -1,44 +1,46 @@
 <div class="acuity-wrapper" style="text-align:center;">
   <div class="acuity-product-grid">
-    {% if section.settings.collection != blank %}
-      {% paginate section.settings.collection.products by 100 %}
-        {% for product in section.settings.collection.products %}
-          {% if product.collections contains collections['dress-selection'] %}
-            {% assign first_image = product.featured_image | img_url: '308x486' %}
 
-            <div class="acuity-item" data-f-price="{{ product.price }}">
-              <input
-                id="acuity-{{ product.handle }}"
-                name="field:7618076"
-                type="checkbox"
-                value="{{ product.title }}"
+    {% assign target_collection = collections['dress-selection'] %}
+
+    {% if target_collection != blank %}
+      {% paginate target_collection.products by 100 %}
+        {% for product in target_collection.products %}
+          {% assign first_image = product.featured_image | img_url: '308x486' %}
+
+          <div class="acuity-item" data-f-price="{{ product.price }}">
+            <input
+              id="acuity-{{ product.handle }}"
+              name="field:7618076"
+              type="checkbox"
+              value="{{ product.title }}"
+            >
+
+            <label for="acuity-{{ product.handle }}">
+              <img
+                loading="lazy"
+                src="{{ first_image | prepend: 'https:' }}"
+                alt="{{ product.title }}"
+                width="154"
+                height="243"
               >
 
-              <label for="acuity-{{ product.handle }}">
-                <img
-                  loading="lazy"
-                  src="{{ first_image | prepend: 'https:' }}"
-                  alt="{{ product.title }}"
-                  width="154"
-                  height="243"
-                >
+              <span class="acuity-pd-title">
+                {{ product.title }}
+              </span>
 
-                <span class="acuity-pd-title">
-                  {{ product.title }}
-                </span>
+              <div class="acuity-pd-price">
+                {{ product.price | money_with_currency }}
+              </div>
+            </label>
+          </div>
 
-                <div class="acuity-pd-price">
-                  {{ product.price | money_with_currency }}
-                </div>
-              </label>
-            </div>
-
-          {% endif %}
         {% endfor %}
       {% endpaginate %}
     {% else %}
-      <p>Please select a collection in the section settings.</p>
+      <p>Dress Selection collection not found.</p>
     {% endif %}
+
   </div>
 
   <div class="acuity-button-container">
