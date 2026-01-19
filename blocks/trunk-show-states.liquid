@@ -29,6 +29,8 @@
     "
   >
     
+    {% assign unique_states = states | map: 'strip' | uniq %}
+
     {% capture list_items %}
         {% capture first_child %}
             <div class="state-tags-wrapper ">
@@ -39,26 +41,22 @@
         {% endcapture %}
         {% render 'slideshow-slide', index: 0, children: first_child, class: 'state-tags-list__slide' %}
         <!--@list/split-->
-        {% assign previous_state = '' %}
-        {% for item in states %}
-            {% assign current_state = item | strip %}
-            {% if current_state != previous_state %}
-                {% capture children %}
-                    <div class="state-tags-wrapper ">
-                        <a href="javascript:void(0)" data-state-tag="{{ current_state | handleize }}" title="{{ current_state }}" class="button button--state-filter">
-                            {{ current_state }}
-                        </a>
-                    </div>
-                {% endcapture %}
 
-                {% render 'slideshow-slide', index: forloop.index, children: children, class: 'state-tags-list__slide' %}
-                
-                {% unless forloop.last or states.size == 1 %}
-                    <!--@list/split-->
-                {% endunless %}
+        {% for item in unique_states %}
+            {% assign current_state = item %}
+            {% capture children %}
+                <div class="state-tags-wrapper ">
+                    <a href="javascript:void(0)" data-state-tag="{{ current_state | handleize }}" title="{{ current_state }}" class="button button--state-filter">
+                        {{ current_state }}
+                    </a>
+                </div>
+            {% endcapture %}
 
-                {% assign previous_state = current_state %}
-            {% endif %}
+            {% render 'slideshow-slide', index: forloop.index, children: children, class: 'state-tags-list__slide' %}
+            
+            {% unless forloop.last or unique_states.size == 1 %}
+                <!--@list/split-->
+            {% endunless %}
         {% endfor %}
     {% endcapture %}
 
