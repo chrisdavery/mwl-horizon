@@ -2,34 +2,37 @@
   <div class="acuity-product-grid">
     {% if section.settings.collection != blank %}
       {% for product in section.settings.collection.products %}
-        {% assign first_image = product.featured_image | img_url: '308x486' %}
+        {% if product.collections contains collections['made-to-order'] %}
+          {% assign first_image = product.featured_image | img_url: '308x486' %}
 
-        <div class="acuity-item" data-f-price="{{ product.price }}">
-          <input
-            id="acuity-{{ product.handle }}"
-            name="field:7618076"
-            type="checkbox"
-            value="{{ product.title }}"
-          >
-
-          <label for="acuity-{{ product.handle }}">
-            <img
-              loading="lazy"
-              src="{{ first_image | prepend: 'https:' }}"
-              alt="{{ product.title }}"
-              width="154"
-              height="243"
+          <div class="acuity-item" data-f-price="{{ product.price }}">
+            <input
+              id="acuity-{{ product.handle }}"
+              name="field:7618076"
+              type="checkbox"
+              value="{{ product.title }}"
             >
 
-            <span class="acuity-pd-title">
-              {{ product.title }}
-            </span>
+            <label for="acuity-{{ product.handle }}">
+              <img
+                loading="lazy"
+                src="{{ first_image | prepend: 'https:' }}"
+                alt="{{ product.title }}"
+                width="154"
+                height="243"
+              >
 
-            <div class="acuity-pd-price">
-              {{ product.price | money_with_currency }}
-            </div>
-          </label>
-        </div>
+              <span class="acuity-pd-title">
+                {{ product.title }}
+              </span>
+
+              <div class="acuity-pd-price">
+                {{ product.price | money_with_currency }}
+              </div>
+            </label>
+          </div>
+
+        {% endif %}
       {% endfor %}
     {% else %}
       <p>Please select a collection in the section settings.</p>
