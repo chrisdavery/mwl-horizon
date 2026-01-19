@@ -1205,7 +1205,7 @@
     },
     "mwl_carousel_7GQfRy": {
       "type": "mwl-carousel",
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "header-a7501e590e193788d8567e7fcade2679": null,
         "alignment": "left",
