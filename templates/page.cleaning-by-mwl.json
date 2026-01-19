@@ -160,7 +160,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Please select your location below and carefully follow the instructions provided per location. If your location is not listed below, please reach out to our cleaning team via email at cleaning@mwlbride.com</p>",
+            "text": "<p>Please select your location below and carefully follow the instructions provided per location. If your location is not listed below, please reach out to our cleaning team via email at cleaning@mwlbride.com.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
