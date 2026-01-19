@@ -120,9 +120,12 @@ document.addEventListener('DOMContentLoaded', function () {
     continueBtn.style.display = 'none';
     bookingFrame.style.display = 'block';
 
-    const instructionSection = document.getElementById('shopify-section-section_rrEHMb');
+    const instructionSection = document.querySelector('#shopify-section-section_rrEHMb, [id^="shopify-section-"][id*="section_rrEHMb"]');
+
   if (instructionSection) {
     instructionSection.style.display = 'none';
+  } else {
+    console.warn('Instruction section not found!');
   }
 
 
