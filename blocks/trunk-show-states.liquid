@@ -39,19 +39,26 @@
         {% endcapture %}
         {% render 'slideshow-slide', index: 0, children: first_child, class: 'state-tags-list__slide' %}
         <!--@list/split-->
+        {% assign previous_state = '' %}
         {% for item in states %}
-            {% capture children %}
-                <div class="state-tags-wrapper ">
-                  <a href="javascript:void(0)" data-state-tag="{{ item | strip | handleize }}" title="{{ item.title }}" class="button button--state-filter">
-                    {{ item | strip }}
-                  </a>
-                </div>
-            {% endcapture %}
+            {% assign current_state = item | strip %}
+            {% if current_state != previous_state %}
+                {% capture children %}
+                    <div class="state-tags-wrapper ">
+                        <a href="javascript:void(0)" data-state-tag="{{ current_state | handleize }}" title="{{ current_state }}" class="button button--state-filter">
+                            {{ current_state }}
+                        </a>
+                    </div>
+                {% endcapture %}
 
-            {% render 'slideshow-slide', index: forloop.index, children: children, class: 'state-tags-list__slide' %}
-            {% unless forloop.last or states.size == 1 %}
-                <!--@list/split-->
-            {% endunless %}
+                {% render 'slideshow-slide', index: forloop.index, children: children, class: 'state-tags-list__slide' %}
+                
+                {% unless forloop.last or states.size == 1 %}
+                    <!--@list/split-->
+                {% endunless %}
+
+                {% assign previous_state = current_state %}
+            {% endif %}
         {% endfor %}
     {% endcapture %}
 
