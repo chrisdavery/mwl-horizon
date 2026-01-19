@@ -312,7 +312,7 @@
           {{
             block.settings.featured_image
             | image_url: width: 2560
-            | image_tag: width: width, widths: widths, sizes: sizes, loading: 'lazy', alt: block.settings.featured_image.alt, class: image_class
+            | image_tag: width: width, height: block.settings.featured_image.height, widths: widths, sizes: sizes, loading: 'lazy', alt: block.settings.featured_image.alt, class: image_class
           }}
         {% else %}
           <div class="ai-editorial-featured-placeholder-{{ ai_gen_id }}">
