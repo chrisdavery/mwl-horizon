@@ -21,6 +21,14 @@
             "text": "<p>Welcome <em>MWL Partner</em></p>"
           }
         },
+        "group_Ywxd9f": {
+          "disabled": true,
+          "settings": {}
+        },
+        "text_cTdzxX": {
+          "disabled": true,
+          "settings": {}
+        },
         "group_6W94iX": {
           "blocks": {
             "button_gr6eHq": {
@@ -38,14 +46,6 @@
               }
             }
           },
-          "settings": {}
-        },
-        "group_Ywxd9f": {
-          "disabled": true,
-          "settings": {}
-        },
-        "text_cTdzxX": {
-          "disabled": true,
           "settings": {}
         }
       }
@@ -120,9 +120,45 @@
       }
     },
     "section_L8p8Vg": {
-      "disabled": true,
+      "disabled": false,
       "settings": {},
-      "blocks": {}
+      "blocks": {
+        "group_X4QaDn": {
+          "blocks": {
+            "group_VNA7mY": {
+              "blocks": {
+                "text_8dKiRk": {
+                  "settings": {
+                    "text": "<h3>SEPERATES</h3>"
+                  }
+                },
+                "button_NDTmxi": {
+                  "settings": {
+                    "link": "shopify://collections/separates-stockist"
+                  }
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
+        },
+        "group_7TCDni": {
+          "blocks": {
+            "group_GGweQU": {
+              "blocks": {
+                "text_Wp9PLj": {
+                  "settings": {
+                    "text": "<h3>NEWS & UPDATES</h3>"
+                  }
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
+        }
+      }
     },
     "section_gaE3zx": {
       "disabled": true,
