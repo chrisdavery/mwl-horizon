@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     cb.addEventListener('change', function () {
       if (getSelectedItems().length > maxSelections) {
         this.checked = false;
-        alert('You can select up to ' + maxSelections + ' options only.');
+        alert('You can select up to ' + maxSelections + ' option only.');
       }
       updateSelectedClasses();
     });
