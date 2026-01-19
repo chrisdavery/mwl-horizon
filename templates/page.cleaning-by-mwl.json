@@ -1625,6 +1625,7 @@
         "multicolumn_card_HkWU48",
         "multicolumn_card_93DCkR"
       ],
+      "disabled": true,
       "name": "MWL Carousel",
       "settings": {
         "alignment": "left",
