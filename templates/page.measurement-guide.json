@@ -99,7 +99,8 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/MWL_Size_Guide_Hero.png",
+        "image_1": "shopify://shop_images/1_2000x500_3e8568bf-0353-4520-91bc-406d11bf5f78.png",
+        "mobile_image_1": "shopify://shop_images/1_2000x500_3e8568bf-0353-4520-91bc-406d11bf5f78.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
