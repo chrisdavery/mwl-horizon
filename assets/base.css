@@ -4364,8 +4364,13 @@ text-component {
   width: 41%;
 }
 
+button#acuityContinueBtn:hover {
+    cursor: pointer;
+    background: #282828;
+}
+
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .acuity-product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -4373,7 +4378,13 @@ text-component {
 
 @media (max-width: 600px) {
   .acuity-product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .acuity-product-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
