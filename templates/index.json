@@ -1789,7 +1789,7 @@
             "custom_height": 100,
             "inherit_color_scheme": false,
             "color_scheme": "scheme-5",
-            "background_media": "video",
+            "background_media": "image",
             "video": "shopify://files/videos/MiniBlair_Homepagevideo.mp4",
             "video_position": "cover",
             "background_image": "shopify://shop_images/MWL_Find_A.png",
