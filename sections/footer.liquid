@@ -1,5 +1,3 @@
-
-
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <div
   class="section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
@@ -43,27 +41,7 @@
       --tablet-last-row-count: {{ tablet_last_row_count }};
     "
   >
-
-    <footer class="footer border-t border-solid border-default py-6 md:py-14 px-6 md-max:px-4 pt-1" style="width: 100%;">
-      <div class="flex flex-col md:flex-row md:justify-between">
-        <div
-          class="flex flex-col w-full max-w-none lg:flex-row lg:gap-44 xl-max:gap-20 lg-max:!gap-0"
-          style="width: 100%;"
-        >
-          <!-- Footer blocks (LEFT) -->
-          <div class="footer-blocks-content flex flex-col md:flex-row md:gap-8 w-full order-1 lg:order-1 md-max:py-0" style="width:100%;">
-            {% content_for 'blocks' %}
-          </div>
-
-          <!-- Klaviyo form (RIGHT) -->
-          <div class="newsletter-content w-full lg:w-auto order-2 lg:order-2 lg:flex lg:justify-end lg:text-right md-max:pt-5">
-            <div class="klaviyo-form-RCTwBX"></div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    
+    {% content_for 'blocks' %}
   </div>
 </div>
 
@@ -74,17 +52,6 @@
     grid-template-columns: 1fr;
     gap: var(--footer-gap);
   }
-
-  /* L Updates */
-  .footer-blocks-content.flex.flex-col.md\:flex-row.md\:gap-8.w-full.order-1.lg\:order-2.md-max\:py-0 {
-    width: 100%;
-    flex: none;
-  }
-  .group-block.group-block--height-fit.group-block--width-custom.border-style.spacing-style.size-style.footer-col-2.footer-col {
-    --size-style-width: 100% !important;
-    margin-left: 1em;
-  }
-  /* End of L Updates */
 
   @media screen and (min-width: 750px) and (max-width: 989px) {
     .footer-content {

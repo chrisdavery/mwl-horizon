@@ -599,7 +599,7 @@
                 "enable_mobile_gap": false,
                 "mobile_gap": 12,
                 "width": "custom",
-                "custom_width": 75,
+                "custom_width": 44,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
@@ -937,27 +937,81 @@
                 "group_wK8fae",
                 "group_83dRwr"
               ]
+            },
+            "group_PYqbpC": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-end",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 0,
+                "enable_mobile_gap": false,
+                "mobile_gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
+              },
+              "blocks": {
+                "klaviyo_email_marketing_sms_form_embed_block_twgzka": {
+                  "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+                  "settings": {
+                    "formId": "RCTwBX"
+                  }
+                }
+              },
+              "block_order": [
+                "klaviyo_email_marketing_sms_form_embed_block_twgzka"
+              ]
             }
           },
           "block_order": [
-            "group_DYWBqi"
+            "group_DYWBqi",
+            "group_PYqbpC"
           ]
-        },
-        "klaviyo_email_marketing_sms_form_embed_block_CeDRpA": {
-          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
-          "settings": {
-            "formId": "RTCwBX"
-          }
         }
       },
       "block_order": [
-        "group_9p8C6K",
-        "klaviyo_email_marketing_sms_form_embed_block_CeDRpA"
+        "group_9p8C6K"
       ],
       "custom_css": [
         "@media (max-width: 1200px) and (min-width: 750px) {.footer-col-1 {--size-style-width: 36% !important; } .footer-col-2 {--size-style-width: 69% !important; }}",
         "@media (max-width: 989px) and (min-width: 750px) {.footer-row > .layout-panel-flex {--flex-direction: column !important; } .footer-col {--size-style-width: 100% !important; }}",
-        "@media (max-width: 749px) {.footer-row > .mobile-column {flex-direction: column-reverse !important; } .footer-col-2 .group-block-content {--gap: 0px !important; } summary {padding-block: var(--padding-lg); }}"
+        "@media (max-width: 749px) {.footer-row > .mobile-column {flex-direction: column !important; } .footer-col-2 .group-block-content {--gap: 0px !important; } summary {padding-block: var(--padding-lg); }}"
       ],
       "name": "Footer Links",
       "settings": {
