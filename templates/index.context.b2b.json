@@ -149,7 +149,12 @@
               "blocks": {
                 "text_Wp9PLj": {
                   "settings": {
-                    "text": "<h3>NEWS & UPDATES</h3>"
+                    "text": "<h3>ANNOUNCEMENTS</h3>"
+                  }
+                },
+                "button_RiwjNG": {
+                  "settings": {
+                    "label": "READ"
                   }
                 }
               },
