@@ -1,7 +1,7 @@
 <div class="account-link account-actions">
 <a 
   class="account-button header-actions__action"
-  href="{% if request.design_mode %}{{ routes.account_url }}{% else %}{{ routes.storefront_login_url }}{% endif %}">
+  href="{{ routes.account_url }}">
   {%- if customer.has_avatar? -%}
     {{ customer | avatar }}
   {%- elsif customer.first_name or customer.email -%}
