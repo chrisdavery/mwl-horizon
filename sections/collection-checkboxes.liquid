@@ -80,6 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const productGrid = wrapper.querySelector('.acuity-product-grid');
   const bookingFrame = wrapper.querySelector('.acuity-booking-frame');
 
+  const instructionSection = document.getElementById('shopify-section-section_rrEHMb');
+
   function updateSelectedClasses() {
     checkboxes.forEach(cb => {
       cb.closest('.acuity-item')
@@ -120,10 +122,10 @@ document.addEventListener('DOMContentLoaded', function () {
     continueBtn.style.display = 'none';
     bookingFrame.style.display = 'block';
 
-    const instructionSection = document.getElementById('shopify-section-section_rrEHMb');
-    if (instructionSection) {
+
+    
     instructionSection.style.display = 'none';
-  }
+  
 
   });
 
