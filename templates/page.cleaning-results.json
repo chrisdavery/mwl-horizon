@@ -65,7 +65,7 @@
         "text_tC8YUV": {
           "type": "text",
           "settings": {
-            "text": "<h1>EUROPE | POST-WEDDING CLEANING</h1>",
+            "text": "<h1>OUR RESULTS </h1>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
@@ -96,10 +96,10 @@
       "custom_css": [
         "@media (max-width: 749px) {.hero {--hero-min-height: 40svh !important; }}"
       ],
-      "name": "t:names.hero",
+      "name": "Top Banner ",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/sol-wedding-dress-made-with-love-bridal-4_47676267-397a-4257-93e5-673e5d46e478.png",
+        "image_1": "shopify://shop_images/4_2000x500_34eff4c4-5101-496f-a1c7-c85ea33ff792.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -116,6 +116,40 @@
         "section_height_custom": 25,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
+        "overlay_color": "#00000030",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 32,
+        "padding-block-end": 52
+      }
+    },
+    "hero_erNC4p": {
+      "type": "hero",
+      "custom_css": [
+        "@media (max-width: 749px) {.hero {--hero-min-height: 40svh !important; }}"
+      ],
+      "name": "Results - Images",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/4_886a86e7-8522-4b6a-ae49-fdc3eb3e9835.png",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "medium",
+        "section_height_custom": 25,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": false,
         "overlay_color": "#00000030",
         "overlay_style": "solid",
         "gradient_direction": "to top",
@@ -1072,6 +1106,7 @@
         "multicolumn_card_WAPm9e",
         "multicolumn_card_BBAMWw"
       ],
+      "disabled": true,
       "custom_css": [
         ".text-block p {font-weight: normal;}",
         "@media (min-width: 750px) {.group-block {border-right: 0; }}",
@@ -1161,6 +1196,7 @@
         "text_GByz7T",
         "text_TefCzp"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -1877,6 +1913,7 @@
   "order": [
     "main",
     "hero_TyWymQ",
+    "hero_erNC4p",
     "section_8kgtYw",
     "mwl_carousel_pGPCe",
     "section_CWmdg7",
