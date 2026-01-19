@@ -129,7 +129,8 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/250922_MWL_JALEECE_03_0314_2.jpg",
+        "image_1": "shopify://shop_images/4_2000x500_34eff4c4-5101-496f-a1c7-c85ea33ff792.png",
+        "mobile_image_1": "shopify://shop_images/4_2000x500_34eff4c4-5101-496f-a1c7-c85ea33ff792.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
