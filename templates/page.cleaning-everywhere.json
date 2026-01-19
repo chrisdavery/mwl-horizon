@@ -100,6 +100,7 @@
       "settings": {
         "media_type_1": "image",
         "image_1": "shopify://shop_images/8_2000x500_1b29bab1-89cb-4c9c-a7d6-94c8cd93f352.png",
+        "mobile_image_1": "shopify://shop_images/8_2000x500_1b29bab1-89cb-4c9c-a7d6-94c8cd93f352.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
