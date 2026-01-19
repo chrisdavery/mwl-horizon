@@ -29,7 +29,7 @@
     "
   >
     
-    {% assign unique_states = states | map: 'strip' | uniq %}
+    {% assign unique_states = states | uniq %}
 
     {% capture list_items %}
         {% capture first_child %}
