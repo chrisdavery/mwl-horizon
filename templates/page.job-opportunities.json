@@ -67,7 +67,8 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/haven-wedding-dress-made-with-love-bridal-3.png",
+        "image_1": "shopify://shop_images/9_2000x500_1e4caa1a-a206-4803-8d72-adf5c3245836.png",
+        "mobile_image_1": "shopify://shop_images/9_2000x500_1e4caa1a-a206-4803-8d72-adf5c3245836.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -81,7 +82,7 @@
         "gap": 16,
         "section_width": "page-width",
         "section_height": "custom",
-        "section_height_custom": 75,
+        "section_height_custom": 25,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
         "overlay_color": "#00000030",
