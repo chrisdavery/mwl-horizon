@@ -4364,6 +4364,11 @@ text-component {
   width: 41%;
 }
 
+button#acuityContinueBtn:hover {
+    cursor: pointer;
+    background: #282828;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .acuity-product-grid {
