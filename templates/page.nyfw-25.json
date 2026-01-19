@@ -548,6 +548,7 @@
         "item_ttcb3R": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/Untitled_design_41.png",
             "url": "",
             "use_style": "link",
             "popup_title": "",
@@ -557,6 +558,7 @@
         "item_jWDFyn": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/Untitled_design_42.png",
             "url": "",
             "use_style": "link",
             "popup_title": "",
@@ -566,6 +568,7 @@
         "item_FTRC4U": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/Untitled_design_43_3a98db77-8497-46da-875c-9a4a3cd9ac61.png",
             "url": "",
             "use_style": "link",
             "popup_title": "",
@@ -745,9 +748,9 @@
         "popup_text_size_mobile": 14,
         "popup_text_height": 150,
         "popup_text_mt": 20,
-        "modal_bg_color": "#FFFFFF",
+        "modal_bg_color": "#ffffff",
         "modal_border_color": "#000000",
-        "close_color": "#FFFFFF",
+        "close_color": "#ffffff",
         "popup_title_color": "#000000",
         "popup_text_color": "#000000",
         "heading_color": "#000000",
@@ -755,7 +758,7 @@
         "image_border_color": "#000000",
         "load_color": "#000000",
         "load_hover_color": "#c16452",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#000000",
         "margin_top": 0,
