@@ -20,6 +20,36 @@
           "settings": {
             "text": "<p>Welcome <em>MWL Partner</em></p>"
           }
+        },
+        "group_cNjmDc": {
+          "blocks": {
+            "group_PdewUV": {
+              "blocks": {
+                "button_BqGW7q": {
+                  "disabled": true,
+                  "settings": {}
+                },
+                "button_EFdF4H": {
+                  "settings": {
+                    "label": "Shop Dresses",
+                    "link": "shopify://collections/stockist"
+                  }
+                },
+                "button_MKCEG7": {
+                  "settings": {
+                    "label": "Shop Accessories",
+                    "link": "shopify://collections/veils-accessories-stockist"
+                  }
+                }
+              },
+              "settings": {}
+            },
+            "text_Pz8dBK": {
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "settings": {}
         }
       }
     },
