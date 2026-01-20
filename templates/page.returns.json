@@ -176,7 +176,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>We accept returns on select Veils & Accessories (excluding earrings) as long as they are in their original condition, unworn, unaltered, and unwashed.</p>",
+            "text": "<p>We accept returns on select Veils & Accessories as long as they are in their original condition, unworn, unaltered, and unwashed.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
