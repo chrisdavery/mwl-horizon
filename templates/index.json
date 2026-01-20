@@ -175,7 +175,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Find Us",
-                    "link": "shopify://pages/appointments",
+                    "link": "shopify://pages/store-locator",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
