@@ -334,9 +334,9 @@
                     "image_ndkViq": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/DSCF9644.jpg",
+                        "image": "shopify://shop_images/Screenshot_2026-01-20_at_4.01.01_pm.png",
                         "link": "",
-                        "image_ratio": "standard",
+                        "image_ratio": "square",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -602,9 +602,9 @@
                     "image_9NeV9f": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/UK_Cleaning_Sevice.png",
+                        "image": "shopify://shop_images/Screenshot_2026-01-20_at_4.01.45_pm.png",
                         "link": "",
-                        "image_ratio": "standard",
+                        "image_ratio": "square",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -870,9 +870,9 @@
                     "image_kD6kgh": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/DSCF9715_88b3fa99-6e23-4da1-8b08-75978144df31.jpg",
+                        "image": "shopify://shop_images/Screenshot_2026-01-20_at_4.02.48_pm.png",
                         "link": "",
-                        "image_ratio": "standard",
+                        "image_ratio": "square",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -1138,9 +1138,9 @@
                     "image_wrXcRQ": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/DSCF9653_2_a9c00ee7-b75f-4760-b4ea-7655bc959bb5.jpg",
+                        "image": "shopify://shop_images/DSCF9644_8ef3d474-84e4-4cb3-9cdd-90175f6c8db5.jpg",
                         "link": "",
-                        "image_ratio": "standard",
+                        "image_ratio": "square",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
