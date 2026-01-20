@@ -215,7 +215,7 @@
             "slide_1_button_link": "",
             "slide_2_image": "shopify://shop_images/1_19d1f7fc-13d0-45db-a3d4-150981afd71c.png",
             "slide_2_mobile_image": "shopify://shop_images/2_f91ef166-6047-408b-b65d-89f82acbfdf8.png",
-            "slide_2_heading": "New arrivals",
+            "slide_2_heading": "",
             "slide_2_text": "",
             "slide_2_button_text": "",
             "slide_2_button_link": "",
@@ -246,7 +246,7 @@
             "show_dots": true,
             "dot_color": "#ffffff",
             "autoplay": true,
-            "autoplay_speed": 5
+            "autoplay_speed": 7
           },
           "blocks": {}
         }
