@@ -370,7 +370,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Unfortunately, we are unable to accept a return or exchange on any made-to-order item due to the customised nature of these items. Since these items are specifically crafted to your unique specifications, we cannot offer refunds or exchanges once the order has been processed and completed.</p>",
+            "text": "<p>Unfortunately, we are unable to accept a return or exchange on any made-to-order item due to customisations. Please be sure to review the T&C's provided in your appointment. </p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
