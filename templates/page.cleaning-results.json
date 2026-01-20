@@ -197,38 +197,89 @@
         "padding-block-end": 54
       }
     },
-    "hero_erNC4p": {
-      "type": "hero",
-      "custom_css": [
-        "@media (max-width: 749px) {.hero {--hero-min-height: 40svh !important; }}"
+    "1768874806ace27b9e": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_dd151d9_zHzk3i": {
+          "type": "ai_gen_block_dd151d9",
+          "settings": {
+            "desktop_height": 600,
+            "mobile_height": 400,
+            "content_max_width": 600,
+            "text_alignment": "center",
+            "slide_1_image": "shopify://shop_images/3_c5ae170c-2fe2-4d03-95ee-e1ee8c1f7953.png",
+            "slide_1_mobile_image": "shopify://shop_images/3_a2824e21-16cd-4009-9179-f334ed7d3d92.png",
+            "slide_1_heading": "",
+            "slide_1_text": "",
+            "slide_1_button_text": "",
+            "slide_1_button_link": "",
+            "slide_2_image": "shopify://shop_images/1_19d1f7fc-13d0-45db-a3d4-150981afd71c.png",
+            "slide_2_mobile_image": "shopify://shop_images/2_f91ef166-6047-408b-b65d-89f82acbfdf8.png",
+            "slide_2_heading": "New arrivals",
+            "slide_2_text": "",
+            "slide_2_button_text": "",
+            "slide_2_button_link": "",
+            "slide_3_image": "shopify://shop_images/2_38e18e12-d059-4e3c-bc4f-ba15e7c57ca0.png",
+            "slide_3_mobile_image": "shopify://shop_images/1_4bc6bd55-8907-4372-ba43-ed1e7c9b0add.png",
+            "slide_3_heading": "",
+            "slide_3_text": "",
+            "slide_3_button_text": "",
+            "slide_3_button_link": "",
+            "heading_size": 48,
+            "heading_case": "uppercase",
+            "text_size": 16,
+            "text_color": "#ffffff",
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "button_background": "#2f2e2e",
+            "button_text_color": "#ffffff",
+            "button_hover_background": "#ffffff",
+            "button_hover_text_color": "#2f2e2e",
+            "button_border_radius": 2,
+            "button_text_size": 14,
+            "button_text_case": "uppercase",
+            "show_arrows": false,
+            "arrow_background": "#ffffff",
+            "arrow_color": "#2f2e2e",
+            "arrow_hover_background": "#2f2e2e",
+            "show_dots": true,
+            "dot_color": "#ffffff",
+            "autoplay": true,
+            "autoplay_speed": 5
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_dd151d9_zHzk3i"
       ],
-      "name": "Results - Images",
       "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/4_886a86e7-8522-4b6a-ae49-fdc3eb3e9835.png",
-        "media_type_2": "image",
-        "link": "",
-        "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 16,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
         "section_width": "page-width",
-        "section_height": "adapt_media_height",
-        "section_height_custom": 25,
-        "color_scheme": "scheme-5",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
         "toggle_overlay": false,
-        "overlay_color": "#00000030",
+        "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 32,
-        "padding-block-end": 52
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     },
     "product_list_rmQgMe": {
@@ -1431,6 +1482,7 @@
         "multicolumn_card_a38Cqx": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
+          "disabled": true,
           "settings": {},
           "blocks": {
             "image_kpD6rr": {
@@ -1465,6 +1517,7 @@
         "multicolumn_card_8z9YeV": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
+          "disabled": true,
           "settings": {},
           "blocks": {
             "image_j4TW73": {
@@ -1535,6 +1588,33 @@
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
+            "ai_gen_block_d53e85f_bJETGk": {
+              "type": "ai_gen_block_d53e85f",
+              "name": "Image showcase",
+              "settings": {
+                "image_height": 500,
+                "image_fit": "cover",
+                "border_radius": 0,
+                "show_overlay": false,
+                "overlay_color": "#000000",
+                "overlay_opacity": 30,
+                "show_content": false,
+                "heading": "",
+                "heading_size": 48,
+                "text": "",
+                "text_size": 16,
+                "text_color": "#ffffff",
+                "button_label": "",
+                "button_link": "",
+                "button_text_size": 16,
+                "button_background": "#2f2e2e",
+                "button_text_color": "#ffffff",
+                "button_hover_background": "#000000",
+                "button_hover_text_color": "#ffffff",
+                "button_border_radius": 0
+              },
+              "blocks": {}
+            },
             "image_AtEEnH": {
               "type": "image",
               "name": "t:names.image",
@@ -1561,6 +1641,7 @@
             }
           },
           "block_order": [
+            "ai_gen_block_d53e85f_bJETGk",
             "image_AtEEnH"
           ]
         },
@@ -2109,7 +2190,7 @@
     "main",
     "hero_TyWymQ",
     "section_8kgtYw",
-    "hero_erNC4p",
+    "1768874806ace27b9e",
     "product_list_rmQgMe",
     "mwl_carousel_pGPCe",
     "section_CWmdg7",
