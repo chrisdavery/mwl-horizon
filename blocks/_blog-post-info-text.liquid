@@ -24,9 +24,21 @@
     style="{% render 'spacing-style', settings: block_settings %}"
   >
     {%- if block_settings.show_date -%}
+      {%- assign day = display_date | date: '%-d' | plus: 0 -%}
+      {%- assign suffix = 'th' -%}
+      {%- if day == 1 or day == 21 or day == 31 -%}
+        {%- assign suffix = 'st' -%}
+      {%- elsif day == 2 or day == 22 -%}
+        {%- assign suffix = 'nd' -%}
+      {%- elsif day == 3 or day == 23 -%}
+        {%- assign suffix = 'rd' -%}
+      {%- endif -%}
+      <span>{{ day }}{{ suffix }} {{ display_date | date: '%B %Y' }}</span>
+    {%- endif -%}
+    {% comment %} {%- if block_settings.show_date -%}
       <span>{{- display_date | date: '%dth %B %Y' | remove_first: '0' -}}</span>
       {% comment %} <span>{{- article.published_at | time_tag: format: 'date' -}}</span> {% endcomment %}
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
 
     {%- if block_settings.show_date and block_settings.show_author -%}
       <span>{{ 'content.blog_details_separator' | t }}</span>
