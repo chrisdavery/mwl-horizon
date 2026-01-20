@@ -574,7 +574,7 @@
                     "text_LzGAFQ": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>For orders placed through our MWL boutiques, we offer a range of flexible payment options to choose from. For further information on our payment plans, please speak with your stylist during your appointment or contact us directly at hello@mwlbride.com. </p><p>For orders placed online, purchases must be either paid in full or may be completed using PayPal Pay in 4 for orders under AUD $2,000.</p>",
+                        "text": "<p>For orders placed through our MWL boutiques, we offer a range of flexible payment options to choose from. For further information on our payment plans, please speak with your stylist during your appointment or contact us directly at hello@mwlbride.com. </p><p>For online orders, payment can be made in full or via PayPal Pay in 4 for purchases under $2,000 AU.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
