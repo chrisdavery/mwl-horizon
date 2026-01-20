@@ -820,7 +820,7 @@
                     "text_LTENA3": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>See our instructions <a href=\"https://mwlbride.com/pages/measurement-guide\" title=\"/pages/measurement-guide\"><span style=\"text-decoration:underline\"><em>here</em></span></a> on how to measure yourself. Please reach out to<span style=\"text-decoration:underline\"><em>hello@mwlbride.com</em></span> if you have any further questions.</p>",
+                        "text": "<p>See our instructions <a href=\"https://mwlbride.com/pages/measurement-guide\" title=\"/pages/measurement-guide\"><span style=\"text-decoration:underline\"><em>here</em></span></a> on how to measure yourself. Please reach out to <span style=\"text-decoration:underline\">hello@mwlbride.com</span> if you have any further questions.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
