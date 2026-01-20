@@ -1326,6 +1326,40 @@
             "image_NCiq6G"
           ]
         },
+        "multicolumn_card_X6jBrM": {
+          "type": "_multicolumn-card",
+          "name": "Multicolumn Item",
+          "settings": {},
+          "blocks": {
+            "image_ymH3V9": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/MWL_Our_Story_13d38092-d32f-4f9d-931d-fbc76737090f.png",
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "zoom_on_hover": false,
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_ymH3V9"
+          ]
+        },
         "static-header": {
           "type": "_product-list-content",
           "name": "t:names.header",
@@ -1400,7 +1434,8 @@
         "multicolumn_card_QMLVQQ",
         "multicolumn_card_Jqd39p",
         "multicolumn_card_Ym6AeT",
-        "multicolumn_card_wREDM9"
+        "multicolumn_card_wREDM9",
+        "multicolumn_card_X6jBrM"
       ],
       "name": "MWL Carousel",
       "settings": {
