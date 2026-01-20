@@ -161,7 +161,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>If you require additional alternations, you can visit one of our trusted alterations partners listed below</p>",
+            "text": "<p>If you require additional alternations, you can visit one of our trusted alterations partners listed below.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
