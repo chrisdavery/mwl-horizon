@@ -159,7 +159,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Shop Now",
-                    "link": "shopify://pages/appointments",
+                    "link": "shopify://collections/wedding-dresses",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
