@@ -548,7 +548,7 @@
         "ai_gen_block_a0fe330_XRQ3m9": {
           "type": "ai_gen_block_a0fe330",
           "settings": {
-            "heading": "At MWL, we take pride in offering our brides an exceptional experience and would value your feedback to ensure we stay on track.",
+            "heading": "at mwl, we take pride in offering our brides an exceptional experience and would value your feedback to ensure we stay on track.",
             "dropdown_label": "Which boutique did you visit?",
             "dropdown_placeholder": "",
             "dropdown_option_1": "Brisbane",
@@ -558,8 +558,8 @@
             "dropdown_option_5": "Perth",
             "rating_label": "Rating (out of 10)",
             "star_size": 32,
-            "star_active_color": "#FFD700",
-            "star_inactive_color": "#E0E0E0",
+            "star_active_color": "#ffd700",
+            "star_inactive_color": "#e0e0e0",
             "textarea_label": "Additional comments",
             "textarea_placeholder": "",
             "text_field_1_label": "How was the experience booking your appointment?",
