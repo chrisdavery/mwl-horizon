@@ -1137,7 +1137,7 @@
                     "text_WLU8Fi": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>MWL By You custom dresses have the same production & lead times as all MWL styles. Consult with one of our bridal stylists today to query your bridal timelines or contact our Customer Care team <a href=\"https://madewithlovebridal.com/pages/contact\" target=\"_blank\" title=\"https://madewithlovebridal.com/pages/contact\">here</a>.</p>",
+                        "text": "<p>MWL By You custom dresses have the same production & lead times as all MWL styles. Consult with one of our bridal stylists today to query your bridal timelines or contact our Customer Care team <a href=\"/pages/contact\" target=\"_blank\" title=\"Contact\">here</a>.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1178,7 +1178,7 @@
                     "text_hWhQxC": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our MWL By You custom service is available across all exclusive boutiques, we welcome you to book an appointment <a href=\"https://madewithlovebridal.com/pages/appointments\" target=\"_blank\" title=\"https://madewithlovebridal.com/pages/appointments\">here</a>.</p><p>The MWL By You service is also available at our respected partners. Explore worldwide retailers <a href=\"https://madewithlovebridal.com/pages/store-locator\" target=\"_blank\" title=\"https://madewithlovebridal.com/pages/store-locator\">here</a>.</p>",
+                        "text": "<p>Our MWL By You custom service is available across all exclusive boutiques, we welcome you to book an appointment <a href=\"/pages/appointments\" target=\"_blank\" title=\"Book MWL Appointment\">here</a>.</p><p>The MWL By You service is also available at our respected partners. Explore worldwide retailers <a href=\"https://madewithlovebridal.com/pages/store-locator\" target=\"_blank\" title=\"https://madewithlovebridal.com/pages/store-locator\">here</a>.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
