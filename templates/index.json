@@ -143,7 +143,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Book Now",
-                    "link": "shopify://collections/new-releases",
+                    "link": "shopify://pages/appointments",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
