@@ -564,7 +564,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>To begin your return, please contact us at <a href=\"mailto:hello@mwlbride.com\" target=\"_blank\" title=\"mailto:hello@mwlbride.com\">hello@mwlbride.com</a> within 48 hours of receiving your item. The item must be in its original condition—unworn, unaltered, and unwashed.</p><p>Return shipping and any customs/import taxes are the buyer's responsibility. If customs taxes are due, they will be deducted from your refund or credit note.</p>",
+            "text": "<p>To begin your return, please contact us at <a href=\"mailto:hello@mwlbride.com\" target=\"_blank\" title=\"mailto:hello@mwlbride.com\">hello@mwlbride.com</a> within 7 days of receiving your item. The item must be in its original condition—unworn, unaltered, and unwashed.</p><p>Return shipping and any customs/import taxes are the buyer's responsibility. If customs taxes are due, they will be deducted from your refund or credit note.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
