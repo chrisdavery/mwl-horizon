@@ -1233,7 +1233,6 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
-                "image": "shopify://shop_images/h8a1284_e8071fe9-0047-4fb6-bfcc-df7827f865d8.jpg",
                 "link": "",
                 "image_ratio": "square",
                 "width": "fill",
@@ -1334,7 +1333,6 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
-                "image": "shopify://shop_images/Mikaela__mikaelajcoffey.jpg",
                 "link": "",
                 "image_ratio": "square",
                 "width": "fill",
