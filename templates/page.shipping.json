@@ -176,7 +176,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>We offer free shipping within Australia and international for all of our Veils, Accessories and Ready to Wear Collection dresses.<br/>Express shipping with Australia Post is available within Australia at checkout. We prioritise all express shipping orders however please expect up to 3 days business days for dispatch.</p><p><strong>All veils and accessories– $15.00 AUD<br/>All ready to wear collection dresses – $30.00 AUD</strong></p>",
+            "text": "<p>We offer free standard shipping within Australia and international for all of our Veils, Accessories and Ready to Wear items. <br/>Express shipping with Australia Post is available within Australia at checkout. We prioritise all express shipping orders however please expect up to 3 days business days for dispatch.</p><p><strong>All veils and accessories– $15.00 AUD<br/>All ready to wear collection dresses – $30.00 AUD</strong></p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -370,7 +370,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Most of our veils and accessories remain in stock at our head office. Our veils standardly ship within 5-7 business days of the order being placed. Shipping within Australia is generally 2-5 working days and 7-10 working days for the rest of the world.</p><p>If a veil is on backorder or has a longer shipping timeframe, this will be noted on each product. It is at the responsibility of the buyer to ensure there is enough time between order and wedding date.</p>",
+            "text": "<p>Most of our veils and accessories remain in stock at our head office. Our veils standardly ship within 5-7 business days of the order being placed. Shipping within Australia is generally 2-5 working days and 7-10 working days for the rest of the world.</p><p>If a veil is on backorder or has a longer shipping timeframe, this will be noted on each product. It is at the responsibility of the buyer to ensure there is enough time between the order being place and the event date. </p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
