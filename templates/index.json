@@ -1797,7 +1797,7 @@
                   "type": "button",
                   "settings": {
                     "label": "SHOP NOW",
-                    "link": "shopify://collections/wedding-gloves",
+                    "link": "shopify://collections/wedding-dresses",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
