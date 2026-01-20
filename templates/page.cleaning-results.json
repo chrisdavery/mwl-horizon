@@ -203,9 +203,9 @@
         "ai_gen_block_dd151d9_zHzk3i": {
           "type": "ai_gen_block_dd151d9",
           "settings": {
-            "desktop_height": 700,
+            "desktop_height": 800,
             "mobile_height": 400,
-            "content_max_width": 700,
+            "content_max_width": 800,
             "text_alignment": "center",
             "slide_1_image": "shopify://shop_images/3_c5ae170c-2fe2-4d03-95ee-e1ee8c1f7953.png",
             "slide_1_mobile_image": "shopify://shop_images/3_a2824e21-16cd-4009-9179-f334ed7d3d92.png",
