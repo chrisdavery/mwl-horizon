@@ -419,6 +419,47 @@
                     "text_bY3Ypf"
                   ]
                 },
+                "accordion_row_qLUawU": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Bridal Stylist | London, UK",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_bzbddC": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>The Role</strong></p><p>MWL is seeking a <strong>Saturday</strong> Bridal Stylist to join our London Flagship Boutique. This role is ideal for a passionate, warm, and highly organised individual who thrives in a fast-paced, client-focused environment and takes pride in delivering an exceptional bridal experience.</p><p>As a Bridal Stylist, you will play a key role in guiding brides through one of the most meaningful moments of their journey. You’ll work one-on-one with brides, offering personalised, thoughtful service while contributing to the overall performance, presentation, and success of the boutique.</p><p>This is a <strong>1-day-per-week role (Saturdays)</strong>, offering a competitive salary plus commission for the right candidate. </p><p><strong>Role Responsibilities:</strong></p><ul><li>Deliver one-on-one bridal appointments, providing a personalised, elevated, and memorable experience</li><li>Build genuine, trusting relationships with brides and guide them confidently through their bridal journey</li><li>Deliver strong sales results while maintaining a warm, authentic approach</li><li>Support overall boutique sales performance and team targets</li><li>Maintain the boutique to the highest visual and operational standards</li><li>Assist the wider team as needed to ensure smooth day-to-day boutique operations</li></ul><p><strong>Skills & Experience:</strong></p><ul><li>Strong attention to detail and a natural sense of organisation</li><li>Passion for fashion and bridal, with an understanding of the emotional significance of a wedding dress</li><li>Retail experience preferred (luxury or bridal experience is a plus)</li><li>Confidence working in a fast-paced, client-facing environment</li><li>Ability to work well under pressure while remaining calm, polished, and professional</li></ul><p><strong>About You</strong></p><ul><li>You are meticulous, motivated, and take pride in doing things properly</li><li>You are naturally warm, personable, and love working with people</li><li>You thrive in a team environment and enjoy contributing to shared goals</li><li>You are passionate about creating meaningful, memorable experiences for brides</li></ul><p><strong>The Important Bits: </strong></p><ul><li><strong>1 day per week:</strong> Saturdays</li><li><strong>Location:</strong> Silk District, London, UK</li><li><strong>Salary:</strong> Competitive salary + generous commission</li><li><strong>The team:</strong> Join a passionate team within a growing international bridal brand</li></ul><p><strong>Apply by:<br/><br/>Email</strong> | <a href=\"mailto:tove@mwlbride.com\">paula@mwlbride.com</a></p><p></p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
+                        "font": "var(--font-accent--family)",
+                        "font_size": "0.75rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_bzbddC"
+                  ]
+                },
                 "accordion_row_yj78wD": {
                   "type": "_accordion-row",
                   "settings": {
@@ -589,6 +630,7 @@
               },
               "block_order": [
                 "accordion_row_fzwYhJ",
+                "accordion_row_qLUawU",
                 "accordion_row_yj78wD",
                 "accordion_row_MNVGwi",
                 "accordion_row_hL8m6D",
