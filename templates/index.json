@@ -40,156 +40,24 @@
           },
           "blocks": {}
         },
-        "group_Ywxd9f": {
+        "group_cNjmDc": {
           "type": "group",
-          "name": "t:names.group",
+          "name": "Buttons wrapper",
           "settings": {
             "link": "",
             "open_in_new_tab": false,
-            "content_direction": "row",
-            "vertical_on_mobile": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
             "reverse_on_mobile": false,
-            "horizontal_alignment": "center",
+            "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 100,
+            "gap": 16,
             "enable_mobile_gap": false,
             "mobile_gap": 12,
             "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "custom",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
-            "css_class": ""
-          },
-          "blocks": {
-            "button_qTXQkD": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Book Now",
-                "link": "shopify://collections/new-releases",
-                "open_in_new_tab": false,
-                "active_state": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            },
-            "button_jNcJqq": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Shop Now",
-                "link": "shopify://pages/appointments",
-                "open_in_new_tab": false,
-                "active_state": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            },
-            "button_44TnrE": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Find Us",
-                "link": "shopify://pages/appointments",
-                "open_in_new_tab": false,
-                "active_state": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "button_qTXQkD",
-            "button_jNcJqq",
-            "button_44TnrE"
-          ]
-        },
-        "text_cTdzxX": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<p>Available Worldwide</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "enable_mobile_size": false,
-            "mobile_font_size": "1rem",
-            "font": "var(--font-heading--family)",
-            "font_size": "0.75rem",
-            "line_height": "normal",
-            "letter_spacing": "loose",
-            "case": "none",
-            "wrap": "nowrap",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 11,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_6W94iX": {
-          "type": "group",
-          "name": "t:names.group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "row",
-            "vertical_on_mobile": false,
-            "reverse_on_mobile": false,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 100,
-            "enable_mobile_gap": false,
-            "mobile_gap": 12,
-            "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
@@ -221,52 +89,239 @@
             "css_class": ""
           },
           "blocks": {
-            "button_gr6eHq": {
-              "type": "button",
-              "name": "t:names.button",
-              "disabled": true,
+            "group_PdewUV": {
+              "type": "group",
+              "name": "t:names.group",
               "settings": {
-                "label": "Discover",
-                "link": "shopify://collections/new-releases",
+                "link": "",
                 "open_in_new_tab": false,
-                "active_state": false,
-                "style_class": "link",
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 100,
+                "enable_mobile_gap": false,
+                "mobile_gap": 12,
                 "width": "fit-content",
                 "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
+                "width_mobile": "custom",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
               },
-              "blocks": {}
+              "blocks": {
+                "button_EFdF4H": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Book Now",
+                    "link": "shopify://collections/new-releases",
+                    "open_in_new_tab": false,
+                    "active_state": false,
+                    "style_class": "link",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
+                "button_MKCEG7": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Shop Now",
+                    "link": "shopify://pages/appointments",
+                    "open_in_new_tab": false,
+                    "active_state": false,
+                    "style_class": "link",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
+                "button_BqGW7q": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Find Us",
+                    "link": "shopify://pages/appointments",
+                    "open_in_new_tab": false,
+                    "active_state": false,
+                    "style_class": "link",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_EFdF4H",
+                "button_MKCEG7",
+                "button_BqGW7q"
+              ]
             },
-            "button_LNpjAL": {
-              "type": "button",
-              "name": "t:names.button",
+            "group_Q4EhYQ": {
+              "type": "group",
+              "name": "t:names.group",
               "disabled": true,
               "settings": {
-                "label": "Book Now",
-                "link": "shopify://pages/appointments",
+                "link": "",
                 "open_in_new_tab": false,
-                "active_state": false,
-                "style_class": "link",
-                "width": "fit-content",
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 100,
+                "enable_mobile_gap": false,
+                "mobile_gap": 12,
+                "width": "fill",
                 "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
+              },
+              "blocks": {
+                "button_9EVKkd": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "disabled": true,
+                  "settings": {
+                    "label": "Discover",
+                    "link": "shopify://collections/new-releases",
+                    "open_in_new_tab": false,
+                    "active_state": false,
+                    "style_class": "link",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
+                "button_FGaPkF": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "disabled": true,
+                  "settings": {
+                    "label": "Book Now",
+                    "link": "shopify://pages/appointments",
+                    "open_in_new_tab": false,
+                    "active_state": false,
+                    "style_class": "link",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_9EVKkd",
+                "button_FGaPkF"
+              ]
+            },
+            "text_Pz8dBK": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<p>Available Worldwide</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "custom",
+                "enable_mobile_size": false,
+                "mobile_font_size": "1rem",
+                "font": "var(--font-heading--family)",
+                "font_size": "0.75rem",
+                "line_height": "normal",
+                "letter_spacing": "loose",
+                "case": "none",
+                "wrap": "nowrap",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 11,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "button_gr6eHq",
-            "button_LNpjAL"
+            "group_PdewUV",
+            "group_Q4EhYQ",
+            "text_Pz8dBK"
           ]
         }
       },
       "block_order": [
         "text_YLPk4p",
-        "group_Ywxd9f",
-        "text_cTdzxX",
-        "group_6W94iX"
+        "group_cNjmDc"
       ],
       "name": "Hero Banner",
       "settings": {
