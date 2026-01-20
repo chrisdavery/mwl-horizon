@@ -273,7 +273,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>If you placed your RTW order online without the help of one of our MWL Boutique stylists, you're eligible for a refund within 14 days of receiving your item (less shipping costs). </p><p>If you placed your order through one of our MWL Boutiques with the support of a stylist and the item isn’t quite right, you're eligible for an exchange or credit note.</p>",
+            "text": "<p>If you placed your RTW order online without the help of one of our MWL Boutique stylists, you're eligible for a refund within 14 days of receiving your item (less shipping costs). </p><p>If you placed your order through one of our MWL Boutiques with the support of a stylist and the item isn’t quite right, you're eligible for a credit note or exchange. </p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
