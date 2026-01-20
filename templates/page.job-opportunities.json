@@ -543,48 +543,6 @@
                     "text_pwNA4y"
                   ]
                 },
-                "accordion_row_hL8m6D": {
-                  "type": "_accordion-row",
-                  "name": "Tiktok Manager",
-                  "settings": {
-                    "heading": "USA SALES REPRESENTATIVE | USA BASED",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_Q6zrVA": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p><strong>The Role:</strong></p><p>MWL is seeking an experienced, relationship-driven Sales Representative to join our global team and lead the expansion of our wholesale and retail presence across the United States.</p><p>This newly created role is designed for someone deeply connected within the fashion, bridal, and/or luxury retail landscape - an individual who thrives on building relationships, opening doors, and driving meaningful sales growth.</p><p>As the face of MWL in the US market, you will be responsible for identifying and nurturing partnerships with boutiques, key retailers, and strategic stockists, while ensuring our brand is represented with excellence at every touchpoint.</p><p><strong>Role Responsibilities:</strong></p><ul><li>Develop and execute MWL’s US wholesale and retail growth strategy working with our Global Partnerships Manager</li><li>Identify, pitch, and onboard new retail partners, stockists, and key accounts</li><li>Manage ongoing relationships with current and future US partners, ensuring exceptional service and brand alignment</li><li>Conduct regular market research to uncover trends, competitor activity, and new opportunities</li><li>Represent MWL at tradeshows, market appointments, and industry events</li><li>Support sell-through with partners by providing product knowledge, training, and seasonal insights</li><li>Collaborate closely with MWL HQ to ensure alignment on inventory planning, campaign timing, collection launches</li><li>Track sales performance across accounts and report on KPIs, growth patterns, targets, and opportunities</li><li>Support the rollout of new collections in the US, coordinating samples, swatching, and showroom/partner presentations</li><li>Provide in-market insights to shape future product development and category expansion</li><li>Maintain accurate CRM data and pipelines to forecast growth and manage relationships</li></ul><p><strong>Skills & Experience:</strong></p><ul><li>3+ years experience in wholesale sales, brand management, or account management within fashion, bridal, luxury, or contemporary retail</li><li>Strong network within the US boutique, retailer, and buying landscape is highly advantageous</li><li>Proven track record of opening new accounts and driving sales growth</li><li>Excellent communication, negotiation, and relationship-building skills</li><li>Confident presenting product and brand stories to partners, buyers, and stakeholders</li><li>Ability to work autonomously while remaining deeply connected to a global HQ</li><li>Comfortable travelling for meetings, showroom appointments, and events as required</li><li>Highly organised with strong pipeline, forecasting, and CRM management skills</li><li>Passionate about modern bridal, fashion, and premium brand experiences</li></ul><p><strong>Apply by:</strong><br/><br/><strong>Email</strong> | genea@mwlbride.com</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "custom",
-                        "enable_mobile_size": false,
-                        "mobile_font_size": "1rem",
-                        "font": "var(--font-accent--family)",
-                        "font_size": "0.75rem",
-                        "line_height": "loose",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_Q6zrVA"
-                  ]
-                },
                 "accordion_row_N9VTyq": {
                   "type": "_accordion-row",
                   "name": "Stylist Position - Continous",
@@ -626,6 +584,48 @@
                   "block_order": [
                     "text_hWhQxC"
                   ]
+                },
+                "accordion_row_hL8m6D": {
+                  "type": "_accordion-row",
+                  "name": "USA",
+                  "settings": {
+                    "heading": "USA SALES REPRESENTATIVE | USA BASED",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_Q6zrVA": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>The Role:</strong></p><p>MWL is seeking an experienced, relationship-driven Sales Representative to join our global team and lead the expansion of our wholesale and retail presence across the United States.</p><p>This newly created role is designed for someone deeply connected within the fashion, bridal, and/or luxury retail landscape - an individual who thrives on building relationships, opening doors, and driving meaningful sales growth.</p><p>As the face of MWL in the US market, you will be responsible for identifying and nurturing partnerships with boutiques, key retailers, and strategic stockists, while ensuring our brand is represented with excellence at every touchpoint.</p><p><strong>Role Responsibilities:</strong></p><ul><li>Develop and execute MWL’s US wholesale and retail growth strategy working with our Global Partnerships Manager</li><li>Identify, pitch, and onboard new retail partners, stockists, and key accounts</li><li>Manage ongoing relationships with current and future US partners, ensuring exceptional service and brand alignment</li><li>Conduct regular market research to uncover trends, competitor activity, and new opportunities</li><li>Represent MWL at tradeshows, market appointments, and industry events</li><li>Support sell-through with partners by providing product knowledge, training, and seasonal insights</li><li>Collaborate closely with MWL HQ to ensure alignment on inventory planning, campaign timing, collection launches</li><li>Track sales performance across accounts and report on KPIs, growth patterns, targets, and opportunities</li><li>Support the rollout of new collections in the US, coordinating samples, swatching, and showroom/partner presentations</li><li>Provide in-market insights to shape future product development and category expansion</li><li>Maintain accurate CRM data and pipelines to forecast growth and manage relationships</li></ul><p><strong>Skills & Experience:</strong></p><ul><li>3+ years experience in wholesale sales, brand management, or account management within fashion, bridal, luxury, or contemporary retail</li><li>Strong network within the US boutique, retailer, and buying landscape is highly advantageous</li><li>Proven track record of opening new accounts and driving sales growth</li><li>Excellent communication, negotiation, and relationship-building skills</li><li>Confident presenting product and brand stories to partners, buyers, and stakeholders</li><li>Ability to work autonomously while remaining deeply connected to a global HQ</li><li>Comfortable travelling for meetings, showroom appointments, and events as required</li><li>Highly organised with strong pipeline, forecasting, and CRM management skills</li><li>Passionate about modern bridal, fashion, and premium brand experiences</li></ul><p><strong>Apply by:</strong><br/><br/><strong>Email</strong> | genea@mwlbride.com</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
+                        "font": "var(--font-accent--family)",
+                        "font_size": "0.75rem",
+                        "line_height": "loose",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_Q6zrVA"
+                  ]
                 }
               },
               "block_order": [
@@ -633,8 +633,8 @@
                 "accordion_row_qLUawU",
                 "accordion_row_yj78wD",
                 "accordion_row_MNVGwi",
-                "accordion_row_hL8m6D",
-                "accordion_row_N9VTyq"
+                "accordion_row_N9VTyq",
+                "accordion_row_hL8m6D"
               ]
             }
           },
