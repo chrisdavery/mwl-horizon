@@ -1229,73 +1229,7 @@
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "image_Y4pwWg": {
-              "type": "image",
-              "name": "t:names.image",
-              "settings": {
-                "link": "",
-                "image_ratio": "square",
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "zoom_on_hover": false,
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image_Y4pwWg"
-          ]
-        },
-        "multicolumn_card_Ym6AeT": {
-          "type": "_multicolumn-card",
-          "name": "Multicolumn Item",
-          "settings": {},
-          "blocks": {
-            "image_i664Mm": {
-              "type": "image",
-              "name": "t:names.image",
-              "settings": {
-                "link": "",
-                "image_ratio": "square",
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "zoom_on_hover": false,
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image_i664Mm"
-          ]
-        },
-        "multicolumn_card_LkxKzd": {
-          "type": "_multicolumn-card",
-          "name": "Multicolumn Item",
-          "settings": {},
-          "blocks": {
-            "image_eTQdh9": {
+            "image_4UEYrN": {
               "type": "image",
               "name": "t:names.image",
               "settings": {
@@ -1321,48 +1255,15 @@
             }
           },
           "block_order": [
-            "image_eTQdh9"
+            "image_4UEYrN"
           ]
         },
-        "multicolumn_card_wREDM9": {
+        "multicolumn_card_Ym6AeT": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "image_LANPdC": {
-              "type": "image",
-              "name": "t:names.image",
-              "settings": {
-                "link": "",
-                "image_ratio": "square",
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "zoom_on_hover": false,
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image_LANPdC"
-          ]
-        },
-        "multicolumn_card_ADXW8y": {
-          "type": "_multicolumn-card",
-          "name": "Multicolumn Item",
-          "settings": {},
-          "blocks": {
-            "image_JGWytx": {
+            "image_N74h6j": {
               "type": "image",
               "name": "t:names.image",
               "settings": {
@@ -1388,15 +1289,15 @@
             }
           },
           "block_order": [
-            "image_JGWytx"
+            "image_N74h6j"
           ]
         },
-        "multicolumn_card_WAQ4EU": {
+        "multicolumn_card_wREDM9": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
           "settings": {},
           "blocks": {
-            "image_Wniqw6": {
+            "image_NCiq6G": {
               "type": "image",
               "name": "t:names.image",
               "settings": {
@@ -1422,7 +1323,7 @@
             }
           },
           "block_order": [
-            "image_Wniqw6"
+            "image_NCiq6G"
           ]
         },
         "static-header": {
@@ -1499,10 +1400,7 @@
         "multicolumn_card_QMLVQQ",
         "multicolumn_card_Jqd39p",
         "multicolumn_card_Ym6AeT",
-        "multicolumn_card_LkxKzd",
-        "multicolumn_card_wREDM9",
-        "multicolumn_card_ADXW8y",
-        "multicolumn_card_WAQ4EU"
+        "multicolumn_card_wREDM9"
       ],
       "name": "MWL Carousel",
       "settings": {
