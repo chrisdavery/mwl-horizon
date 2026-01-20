@@ -908,7 +908,7 @@
             "box_background_color": "#fefefe",
             "box_border_color": "#cfc9c8",
             "box_border_width": 1,
-            "box_border_radius": 0,
+            "box_border_radius": 2,
             "block_padding": 40,
             "heading_1": "MWL GLOBAL PARTNERS",
             "body_1": "<p>Find your nearest MWL retailer.</p>",
