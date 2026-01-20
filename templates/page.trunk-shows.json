@@ -161,7 +161,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>A trunk show is an exclusive event where a bridal boutique showcases MWL's latest collection for a limited time, these featured styles are not yet available in stores.</p><p>Don’t miss your chance to try on the latest MWL styles at a trunk show near you. </p>",
+            "text": "<p>A trunk show is an exclusive event where a bridal boutique showcases MWL's latest collection for a limited time.</p><p>Don’t miss your chance to try on the latest MWL styles at a trunk show near you. </p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
