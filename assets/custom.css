@@ -653,6 +653,10 @@ summary:hover {
   color: rgba(var(--color-foreground-rgb) / .8) !important;
 }
 
+.menu-drawer__menu-item--parent[href="#"] {
+  font-weight: var(--font-body--weight);
+}
+
 @media (min-width: 750px) {
   .menu-list__link {
     min-height: unset !important;
