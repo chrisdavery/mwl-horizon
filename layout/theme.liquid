@@ -215,6 +215,43 @@
   </script>
 {% endif %}
 
+{% if page.handle == 'be-featured' %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('Zapier snippet loaded');
+
+      const form = document.querySelector(
+        '#ContactForm-Ad2Fnd2pLUjFMMjlLK__contact_form_V6JArK'
+      );
+
+      if (!form) {
+        console.warn('Contact form not found');
+        return;
+      }
+
+      console.log('Contact form found');
+
+      let sent = false;
+
+      form.addEventListener('submit', function () {
+        if (sent) return;
+        sent = true;
+
+        console.log('Form submitted – sending to Zapier');
+
+        const formData = new FormData(form);
+
+        fetch('https://hooks.zapier.com/hooks/catch/2280371/uqbl477/', {
+          method: 'POST',
+          body: formData
+        })
+          .then(() => console.log('Zapier webhook sent successfully'))
+          .catch(err => console.error('Zapier webhook failed', err));
+      });
+    });
+  </script>
+{% endif %}
+
 
   </head>
 
