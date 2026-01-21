@@ -2696,9 +2696,9 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Devoted since 2012 to creating effortlessly elegant designs. Making every moment, </p><p>from  your first fitting to your walk down the aisle - truly unforgettable.</p>",
+                "text": "<p>Devoted since 2012 to creating effortlessly elegant designs. Making every moment, from  your first fitting to your walk down the aisle - truly unforgettable.</p>",
                 "width": "100%",
-                "max_width": "none",
+                "max_width": "normal",
                 "alignment": "center",
                 "type_preset": "custom",
                 "enable_mobile_size": false,
