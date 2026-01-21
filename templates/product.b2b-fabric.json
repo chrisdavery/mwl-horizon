@@ -846,7 +846,7 @@
                 "heading": "Additional Notes",
                 "label": "Message",
                 "label_outside": false,
-                "name": "Message",
+                "name": "Additional notes",
                 "type": "textarea",
                 "priority_fees": [],
                 "standard_lead_date": 180,
