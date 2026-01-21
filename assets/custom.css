@@ -790,4 +790,8 @@ summary:hover {
   .footer-content summary {
     font-size: var(--font-h5--size);
   }
+  .footer-content .menu__details .details-content {
+    padding-block-end: var(--padding-lg);
+    margin-block-start: 0 !important;
+  }
 }
