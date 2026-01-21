@@ -167,6 +167,55 @@
 
     {% endif %}
 
+
+    {% if page.handle == 'feedback' %}
+  <!-- Zapier webhook for AI feedback form -->
+  <script>
+    console.log('Zapier snippet loaded');
+
+    function attachToAIForm() {
+      // Get the AI feedback web component
+      const feedbackEl = document.querySelector('feedback-form-azm5cnkdvn09rnmhukaigenblocka0fe330xrq3m9');
+      if (!feedbackEl) {
+        console.log('Waiting for AI feedback component...');
+        setTimeout(attachToAIForm, 500);
+        return;
+      }
+
+      console.log('AI feedback component found');
+
+      // Use MutationObserver to detect when internal form is added
+      const observer = new MutationObserver((mutations, obs) => {
+        const form = feedbackEl.querySelector('#contact_form');
+        if (form) {
+          console.log('Feedback form inside AI component found');
+
+          // Attach submit listener
+          form.addEventListener('submit', function(e) {
+            console.log('Form submitted! Sending data to Zapier...');
+            const formData = new FormData(form);
+
+            fetch('https://hooks.zapier.com/hooks/catch/2280371/ugmebc1/', {
+              method: 'POST',
+              body: formData
+            }).then(() => console.log('Request sent to Zapier'))
+              .catch(err => console.error('Zapier webhook failed', err));
+          });
+
+          // Stop observing once form is found
+          obs.disconnect();
+        }
+      });
+
+      observer.observe(feedbackEl, { childList: true, subtree: true });
+    }
+
+    // Start the process
+    attachToAIForm();
+  </script>
+{% endif %}
+
+
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
