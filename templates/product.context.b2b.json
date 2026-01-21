@@ -8,9 +8,30 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "product.json",
+  "parent": "product.b2b-dresses.json",
   "context": {
     "b2b": true
   },
-  "sections": {}
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "product-details": {
+          "blocks": {
+            "input_field_4mNRnV": {
+              "settings": {
+                "lead_date": 34,
+                "priority_fees": [
+                  "b-2-b-super-rush-fee",
+                  "b-2-b-rush-fee"
+                ],
+                "standard_lead_date": 112
+              }
+            }
+          },
+          "settings": {}
+        }
+      }
+    }
+  }
 }
