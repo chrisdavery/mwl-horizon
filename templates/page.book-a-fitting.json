@@ -315,7 +315,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "london, uk",
-            "link": "shopify://pages/london-booking-page",
+            "link": "shopify://metaobjects/appointments/london-uk-boutique",
             "open_in_new_tab": false,
             "active_state": false,
             "style_class": "button-secondary",
@@ -331,7 +331,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "Manchester, uk",
-            "link": "shopify://pages/manchester-booking-page",
+            "link": "shopify://metaobjects/appointments/manchester-uk-boutique",
             "open_in_new_tab": false,
             "active_state": false,
             "style_class": "button-secondary",
@@ -347,7 +347,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "UTRECHT, NL",
-            "link": "shopify://pages/utrecht-booking-page",
+            "link": "shopify://metaobjects/appointments/utrecht-boutique",
             "open_in_new_tab": false,
             "active_state": false,
             "style_class": "button-secondary",
