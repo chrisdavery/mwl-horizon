@@ -229,7 +229,7 @@
         "ai_gen_block_3f421c3_cRdhAh": {
           "type": "ai_gen_block_3f421c3",
           "settings": {
-            "desktop_image": "shopify://shop_images/MWL_Size_Guide_Desktop.png",
+            "desktop_image": "shopify://shop_images/MWL_international_size_guide_desktop.png",
             "mobile_image": "shopify://shop_images/MWL_Size_Guide_16af8086-f7f9-4295-a09b-c0bea48be6e5.png"
           },
           "blocks": {}
