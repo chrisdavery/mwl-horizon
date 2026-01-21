@@ -659,7 +659,7 @@
             "location_1_phone": "",
             "location_1_email": "london@mwlbride.com",
             "location_1_button_text": "Book Appointment",
-            "location_1_button_link": "shopify://pages/london-booking-page",
+            "location_1_button_link": "shopify://metaobjects/appointments/london-uk-boutique",
             "location_1_button_2_text": "",
             "location_1_button_2_link": "",
             "location_2_heading": "MANCHESTER, UK",

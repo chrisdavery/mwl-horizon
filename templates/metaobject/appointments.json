@@ -390,7 +390,6 @@
           "blocks": {}
         }
       },
-      "disabled": true,
       "name": "Boutique gallery",
       "settings": {
         "alignment": "left",
@@ -1117,7 +1116,6 @@
         "group_KtwcTw",
         "group_arRVcM"
       ],
-      "disabled": true,
       "custom_css": [
         "summary {padding-block: var(--padding-lg);}",
         "@media (max-width: 749px) {.layout-panel-flex--row > .group-block--width-custom {flex-basis: unset; }}"
@@ -1557,7 +1555,6 @@
           ]
         }
       },
-      "disabled": true,
       "custom_css": [],
       "name": "Dynamic Testimonials",
       "settings": {
