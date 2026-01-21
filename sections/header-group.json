@@ -303,9 +303,7 @@
           ]
         }
       },
-      "custom_css": [
-        ".menu-drawer__utility-links {background-color: #FEFEFE;}"
-      ],
+      "custom_css": [],
       "settings": {
         "logo_position": "center",
         "menu_position": "left",
