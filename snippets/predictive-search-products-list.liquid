@@ -95,7 +95,7 @@
         assign limit = limit | default: 8
       %}
       {% for product in products limit: limit %}
-        {% unless product.metafields.custom.seo.hidden == 1 %}
+        {% unless product.metafields.seo.hidden == 1 %}
           <li
             class="predictive-search-results__card predictive-search-results__card--product"
             ref="resultsItems[]"
