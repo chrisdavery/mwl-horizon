@@ -820,6 +820,7 @@
             "input_field_4mNRnV": {
               "type": "_input-field",
               "name": "Input Field",
+              "disabled": true,
               "settings": {
                 "heading": "wedding date:",
                 "label": "dd/mm/yyyy",
