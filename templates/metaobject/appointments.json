@@ -1009,6 +1009,7 @@
                 },
                 "accordion_row_b7V4Gq": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "Terms And Conditions Of Order",
                     "open_by_default": false,
