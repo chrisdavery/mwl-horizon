@@ -650,7 +650,7 @@
                     "text_xec4dm": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We recommend 1-4 guests per bride in our bridal boutiques. You are welcome to video call any family and friends who can’t be with you on the day. Unfortunately, we do not allow children, but babies in prams are welcome.</p>",
+                        "text": "<p>We recommend 1-3 guests per bride in our bridal boutiques. You are welcome to video call any family and friends who can’t be with you on the day. Unfortunately, we do not allow children, but babies in prams are welcome.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1009,6 +1009,7 @@
                 },
                 "accordion_row_b7V4Gq": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "Terms And Conditions Of Order",
                     "open_by_default": false,
