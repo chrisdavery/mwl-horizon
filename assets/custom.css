@@ -787,4 +787,7 @@ summary:hover {
   .section-resource-list__header a.link:after {
     bottom: 0 !important;
   }
+  .footer-content summary {
+    font-size: var(--font-h5--size);
+  }
 }
