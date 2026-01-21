@@ -8,7 +8,7 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "product.b2b-dresses.json",
+  "parent": "product.json",
   "context": {
     "b2b": true
   },
@@ -20,7 +20,7 @@
           "blocks": {
             "input_field_4mNRnV": {
               "settings": {
-                "lead_date": 34,
+                "lead_date": 33,
                 "priority_fees": [
                   "b-2-b-super-rush-fee",
                   "b-2-b-rush-fee"
