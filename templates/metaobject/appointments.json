@@ -1019,7 +1019,7 @@
                     "text_pzdxmG": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Please see our Terms and Conditions <a href=\"https://mwlbride.com/pages/terms-and-conditions\" target=\"_blank\" title=\"https://mwlbride.com/pages/terms-and-conditions\">here.</a> </p>",
+                        "text": "<p>Please see our Terms and Conditions <a href=\"/policies/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">here.</a> </p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
