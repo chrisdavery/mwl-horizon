@@ -95,18 +95,20 @@
         assign limit = limit | default: 8
       %}
       {% for product in products limit: limit %}
-        <li
-          class="predictive-search-results__card predictive-search-results__card--product"
-          ref="resultsItems[]"
-        >
-          {% render 'resource-card',
-            resource_type: 'product',
-            resource: product,
-            image_width: 500,
-            image_hover: true,
-            image_aspect_ratio: '4 / 5'
-          %}
-        </li>
+        {% unless product.metafields.custom.seo.hidden == 1 %}
+          <li
+            class="predictive-search-results__card predictive-search-results__card--product"
+            ref="resultsItems[]"
+          >
+            {% render 'resource-card',
+              resource_type: 'product',
+              resource: product,
+              image_width: 500,
+              image_hover: true,
+              image_aspect_ratio: '4 / 5'
+            %}
+          </li>
+        {% endunless %}
       {% endfor %}
     </ul>
   {% endif %}
