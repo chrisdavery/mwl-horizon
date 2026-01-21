@@ -685,7 +685,7 @@
                       "settings": {
                         "menu": "my-account",
                         "heading": "CUSTOMER CARE",
-                        "menu_spacing": 12,
+                        "menu_spacing": 16,
                         "show_as_accordion": true,
                         "accordion_icon": "plus",
                         "accordion_dividers": true,
@@ -760,7 +760,7 @@
                       "settings": {
                         "menu": "about-us",
                         "heading": "OUR WORLD",
-                        "menu_spacing": 12,
+                        "menu_spacing": 16,
                         "show_as_accordion": true,
                         "accordion_icon": "plus",
                         "accordion_dividers": true,
@@ -835,7 +835,7 @@
                       "settings": {
                         "menu": "find-us",
                         "heading": "FIND US",
-                        "menu_spacing": 12,
+                        "menu_spacing": 16,
                         "show_as_accordion": true,
                         "accordion_icon": "plus",
                         "accordion_dividers": true,
@@ -910,7 +910,7 @@
                       "settings": {
                         "menu": "collections",
                         "heading": "JOIN US",
-                        "menu_spacing": 12,
+                        "menu_spacing": 16,
                         "show_as_accordion": true,
                         "accordion_icon": "plus",
                         "accordion_dividers": true,
