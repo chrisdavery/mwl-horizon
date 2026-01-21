@@ -537,9 +537,54 @@
             "css_class": "subpage-right"
           },
           "blocks": {
+            "appointment_faq_accordion_G6r83m": {
+              "type": "appointment-faq-accordion",
+              "name": "Appointment FAQs",
+              "settings": {
+                "items_list": "{{ closest.metaobject.appointments.faqs.value }}",
+                "icon": "plus",
+                "dividers": true,
+                "type_preset": "h5",
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "accordion-row-dynamic": {
+                  "type": "_accordion-row-dynamic",
+                  "static": true,
+                  "settings": {
+                    "heading": "",
+                    "content": "",
+                    "open_by_default": false,
+                    "type_preset": "custom",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "font": "var(--font-accent--family)",
+                    "font_size": "0.75rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
             "accordion_YyJW3P": {
               "type": "accordion",
               "name": "t:names.accordion",
+              "disabled": true,
               "settings": {
                 "icon": "plus",
                 "dividers": true,
@@ -1109,6 +1154,7 @@
             }
           },
           "block_order": [
+            "appointment_faq_accordion_G6r83m",
             "accordion_YyJW3P"
           ]
         }
