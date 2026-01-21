@@ -32,6 +32,156 @@
     {% endif %}
 
     {{ content_for_header }}
+
+    <script
+      async
+      type="text/javascript"
+      src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=X5XzHB"
+    ></script>
+    <!-- TikTok Pixel Code Start -->
+    <script>
+      !(function (w, d, t) {
+        w.TiktokAnalyticsObject = t;
+        var ttq = (w[t] = w[t] || []);
+        (ttq.methods = [
+          'page',
+          'track',
+          'identify',
+          'instances',
+          'debug',
+          'on',
+          'off',
+          'once',
+          'ready',
+          'alias',
+          'group',
+          'enableCookie',
+          ' disableCookie',
+          'holdConsent',
+          'revokeConsent',
+          'grantConsent',
+        ]),
+          (ttq.setAndDefer = function (t, e) {
+            t[e] = function () {
+              t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+            };
+          });
+        for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+        (ttq.instance = function (t) {
+          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
+          return e;
+        }),
+          (ttq.load = function (e, n) {
+            var r = 'https://analytics.tiktok.com/i18n/pixel/events.js',
+              o = n && n.partner;
+            (ttq._i = ttq._i || {}),
+              (ttq._i[e] = []),
+              (ttq._i[e]._u = r),
+              (ttq._t = ttq._t || {}),
+              (ttq._t[e] = +new Date()),
+              (ttq._o = ttq._o || {}),
+              (ttq._o[e] = n || {});
+            n = document.createElement('script');
+            (n.type = 'text/javascript'), (n.async = !0), (n.src = r + '?sdkid=' + e + ' &lib=' + t);
+            e = document.getElementsByTagName('script')[0];
+            e.parentNode.insertBefore(n, e);
+          });
+
+        ttq.load('CKFK243C77U2JMMIUQR0');
+
+        ttq.page();
+      })(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+
+
+      {% if template == 'index' or template == 'page.mwl-by-you' or template == 'page.book-a-fitting' %}
+
+      <!-- Google tag (gtag.js) event - delayed navigation helper -->
+      <script>
+        // Helper function to delay opening a URL until a gtag event is sent.
+        // Call it in response to an action that should navigate to a URL.
+        function gtagSendEvent(url) {
+          var callback = function () {
+            if (typeof url === 'string') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion_event_book_appointment', {
+            'event_callback': callback,
+            'event_timeout': 2000,
+            // <event_parameters>
+          });
+          return false;
+        }
+      </script>
+
+      {% endif %}
+
+
+    {% if template == 'page.mwl-by-you' or template == 'page.booking-nyc' or template == 'page.booking-melbourne' or template == 'page.booking-brisbane' or template == 'page.booking-goldcoast' or template == 'page.booking-perth' or template == 'page.booking-sydney' or template == 'page.booking-london' or template == 'page.booking-utrecht' %}
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '427555964758952');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=427555964758952&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Pinterest Tag -->
+    <script>
+    !function(e){if(!window.pintrk){window.pintrk = function () {
+    window.pintrk.queue.push(Array.prototype.slice.call(arguments))};
+    var n=window.pintrk;n.queue=[],n.version="3.0";
+    var t=document.createElement("script");
+    t.async=!0,t.src=e;
+    var r=document.getElementsByTagName("script")[0];
+    r.parentNode.insertBefore(t,r)}}
+    ("https://s.pinimg.com/ct/core.js");
+
+    pintrk('load', '2612974962234');
+    pintrk('page');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/v3/?event=init&tid=2612974962234&noscript=1" />
+    </noscript>
+    <!-- End Pinterest Tag -->
+
+    {% endif %}
+
+    {% if template == 'page.booking-manchester' %}
+
+    <!-- Pinterest Tag -->
+    <script>
+    !function(e){if(!window.pintrk){window.pintrk = function () {
+    window.pintrk.queue.push(Array.prototype.slice.call(arguments))};
+    var n=window.pintrk;n.queue=[],n.version="3.0";
+    var t=document.createElement("script");
+    t.async=!0,t.src=e;
+    var r=document.getElementsByTagName("script")[0];
+    r.parentNode.insertBefore(t,r)}}
+    ("https://s.pinimg.com/ct/core.js");
+
+    pintrk('load', '2612974962234');
+    pintrk('page');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/v3/?event=init&tid=2612974962234&noscript=1" />
+    </noscript>
+    <!-- End Pinterest Tag -->
+
+    {% endif %}
+
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
