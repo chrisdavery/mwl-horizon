@@ -25,10 +25,6 @@
           "blocks": {
             "group_PdewUV": {
               "blocks": {
-                "button_BqGW7q": {
-                  "disabled": true,
-                  "settings": {}
-                },
                 "button_EFdF4H": {
                   "settings": {
                     "label": "Shop Dresses",
@@ -40,6 +36,10 @@
                     "label": "Shop Accessories",
                     "link": "shopify://collections/veils-accessories-stockist"
                   }
+                },
+                "button_BqGW7q": {
+                  "disabled": true,
+                  "settings": {}
                 }
               },
               "settings": {}
@@ -165,7 +165,9 @@
               "settings": {}
             }
           },
-          "settings": {}
+          "settings": {
+            "background_image": "shopify://shop_images/MWL_B2B_Home.png"
+          }
         }
       }
     },
