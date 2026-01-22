@@ -438,6 +438,7 @@
         "image_HmtFMq",
         "group_qajMEt"
       ],
+      "disabled": true,
       "name": "Image Text Collection",
       "settings": {
         "object": "{{ collection.metafields.custom.image_text.value }}",
