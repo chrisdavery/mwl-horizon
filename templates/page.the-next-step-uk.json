@@ -1000,6 +1000,7 @@
       "block_order": [
         "text_7qVdE4"
       ],
+      "disabled": true,
       "name": "t:names.rich_text_section",
       "settings": {
         "content_direction": "column",
