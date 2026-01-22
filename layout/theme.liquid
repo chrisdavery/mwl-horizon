@@ -286,5 +286,10 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+
+    {% if template.name == 'page' and page and page.handle == 'appointments' %}
+      {% render 'capture-source' %}
+    {% endif %}
+
   </body>
 </html>
