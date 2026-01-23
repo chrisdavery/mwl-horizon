@@ -114,8 +114,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const encoded = encodeURIComponent(selectedItems.join(', '));
+    var match = document.cookie.match(/(?:^|; )booking_source=([^;]+)/);
+    var source = match ? decodeURIComponent(match[1]) : "direct";
+
     iframe.src =
-      `https://app.acuityscheduling.com/schedule/c644ccfc?ref=embedded_csp&field:16037038=${encoded}&field:16037038=${encoded}&field:17435814=${encoded}&field:17283102=${encoded}`;
+      `https://app.acuityscheduling.com/schedule/c644ccfc` +
+      `?ref=embedded_csp` +
+      `&field:16037038=${encoded}` +
+      `&field:16037038=${encoded}` +
+      `&field:17435814=${encoded}` +
+      `&field:17283102=${encoded}` +
+      `&field:17899542=${encodeURIComponent(source)}` +
+      `&field:17899552=${encodeURIComponent(source)}` +
+      `&field:17899557=${encodeURIComponent(source)}` +
+      `&field:17899562=${encodeURIComponent(source)}`;
 
     productGrid.style.display = 'none';
     continueBtn.style.display = 'none';
