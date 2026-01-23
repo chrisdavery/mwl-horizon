@@ -272,7 +272,7 @@
               "type": "_menu-button",
               "static": true,
               "settings": {
-                "label": "Book an Appointment",
+                "label": "Book AN Appointment",
                 "link": "shopify://pages/appointments",
                 "open_in_new_tab": false,
                 "style_class": "button-secondary",
