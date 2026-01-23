@@ -1,0 +1,44 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "product-details": {
+          "blocks": {
+            "custom_details_zP4EUz": {
+              "disabled": true,
+              "settings": {}
+            },
+            "product_recommendations_8Vzc6N": {
+              "disabled": true,
+              "settings": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "blocks": {
+                "add-to-cart": {
+                  "disabled": true,
+                  "settings": {}
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
+        }
+      }
+    }
+  },
+  "context": {
+    "market": "united-states"
+  },
+  "parent": "product.uk-market.json"
+}
