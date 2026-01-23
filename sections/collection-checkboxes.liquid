@@ -114,8 +114,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const encoded = encodeURIComponent(selectedItems.join(', '));
+    var match = document.cookie.match(/(?:^|; )booking_source=([^;]+)/);
+    var source = match ? decodeURIComponent(match[1]) : "direct";
+
     iframe.src =
-      `https://app.acuityscheduling.com/schedule/6f1d26e5?ref=embedded_csp&field:15103364=${encoded}&field:15103601=${encoded}&field:15103364=${encoded}`;
+      `https://app.acuityscheduling.com/schedule/6f1d26e5` +
+      `?ref=embedded_csp` +
+      `&field:15103364=${encoded}` +
+      `&field:15103601=${encoded}` +
+      `&field:17797660=${encodeURIComponent(source)}`;
 
     productGrid.style.display = 'none';
     continueBtn.style.display = 'none';
