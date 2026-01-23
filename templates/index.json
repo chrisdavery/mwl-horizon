@@ -2914,7 +2914,7 @@
                 "text_VADCX7": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>BOOK APPOINTMENT</h3>",
+                    "text": "<h3>BOOK AN APPOINTMENT</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
