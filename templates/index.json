@@ -2169,7 +2169,7 @@
                   "type": "button",
                   "settings": {
                     "label": "SHOP NOW",
-                    "link": "shopify://collections/accessories",
+                    "link": "shopify://collections/veils-accessories",
                     "open_in_new_tab": false,
                     "active_state": false,
                     "style_class": "link",
