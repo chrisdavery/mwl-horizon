@@ -62,7 +62,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 16,
         "section_width": "page-width",
-        "section_height": "medium",
+        "section_height": "custom",
         "section_height_custom": 75,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
@@ -82,7 +82,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>Visit the MWL Boutique in Manchester</p>",
+            "text": "<p>{{ closest.metaobject.appointments.cta_title.value }}</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -110,7 +110,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Our London flagship bridal boutique offers a calm, considered space to try on the entire MWL wedding dress collection, along with selected additional styles exclusive to our flagship store. During your wedding dress appointment in London, our experienced stylists will guide you through every MWL design, helping you find a dress that feels effortless, confident, and unmistakably you.<br/><br/>All MWL dresses are made to order, and our London flagship boutique showcases the complete MWL collection, making it the perfect place to experience the entire range in person.</p>",
+            "text": "{{ closest.metaobject.appointments.cta_content | metafield_tag }}",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
