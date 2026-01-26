@@ -1,0 +1,33 @@
+<script>
+(function () {
+  try {
+    var match = document.cookie.match(/(?:^|; )booking_source=([^;]+)/);
+    var source = match ? decodeURIComponent(match[1]) : "direct";
+
+    console.log("Booking source from cookie:", source);
+
+    function updateIframe() {
+      var iframe = document.querySelector("iframe[src*='acuityscheduling.com']");
+      if (!iframe) {
+        setTimeout(updateIframe, 300);
+        return;
+      }
+
+      var url = new URL(iframe.src);
+
+        url.searchParams.set("field:17900480", source);
+        url.searchParams.set("field:17900509", source);
+        url.searchParams.set("field:17900491", source);
+        url.searchParams.set("field:17900493", source);
+
+      iframe.src = url.toString();
+
+      console.log("Acuity iframe updated with booking source:", source);
+    }
+
+    updateIframe();
+  } catch (e) {
+    console.error("Acuity iframe source error:", e);
+  }
+})();
+</script>
