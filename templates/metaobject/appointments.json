@@ -82,7 +82,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>Visit the MWL Boutique in London</p>",
+            "text": "<p>Visit the MWL Boutique in Manchester</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
