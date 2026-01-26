@@ -3,6 +3,9 @@
   <div class="booking-embed-container py-8 px-4 md:px-8 max-w-screen-lg mx-auto">
     {{ section.settings.embed_code}}
   </div>
+
+  {% render 'booking-source-to-acuity-brisbane' %}
+
 {% else %}
   <div class="text-center py-8 text-gray-500">
     No embed code provided. Please add your booking iframe in the section settings.
