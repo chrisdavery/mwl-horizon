@@ -1,43 +1,30 @@
 <script>
 try {
   var urlParams = new URLSearchParams(window.location.search);
-  var src = urlParams.get('source') || urlParams.get('platform'); // check both source and platform
-  var ref = document.referrer.toLowerCase();
+  var src = urlParams.get('source');
 
-  // 1️⃣ Detect platform if no source/platform param
   if (!src) {
-    if (ref.includes('instagram.com')) src = 'instagram';
-    else if (ref.includes('tiktok.com')) src = 'tiktok';
-    else if (ref.includes('facebook.com')) src = 'facebook';
-    else if (ref.includes('pinterest.com')) src = 'pinterest';
-    else src = 'direct';
+    var m = document.cookie.match(/(?:^|; )booking_source=([^;]+)/);
+    src = m ? decodeURIComponent(m[1]) : "direct";
+  } else {
+    var d = new Date();
+    d.setTime(d.getTime() + 24*60*60*1000);
+    document.cookie = "booking_source=" + encodeURIComponent(src) + "; path=/; expires=" + d.toUTCString();
   }
-
-  // 2️⃣ Save cookie for 24 hours
-  var d = new Date();
-  d.setTime(d.getTime() + 24 * 60 * 60 * 1000);
-  document.cookie =
-    "booking_source=" + encodeURIComponent(src) +
-    "; path=/; expires=" + d.toUTCString();
 
   console.log("Booking source captured on appointment page:", src);
 
-  // 3️⃣ Append source to internal page links
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('a[href*="/pages/"]').forEach(function (link) {
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('a[href*="/pages/"]').forEach(function(link) {
       var href = link.getAttribute('href') || '';
       if (!href || href.indexOf('source=') !== -1) return;
 
-      link.href =
-        href +
-        (href.indexOf('?') === -1
-          ? '?source=' + encodeURIComponent(src)
-          : '&source=' + encodeURIComponent(src));
+      link.href = href + (href.indexOf('?') === -1 ? '?source=' + encodeURIComponent(src) : '&source=' + encodeURIComponent(src));
     });
     console.log("Boutique links updated with source:", src);
   });
 
-} catch (err) {
+} catch(err) {
   console.error("capture-source error:", err);
 }
 </script>
