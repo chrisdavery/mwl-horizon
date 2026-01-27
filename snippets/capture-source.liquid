@@ -5,23 +5,12 @@ try {
 
   if (!src) {
     var m = document.cookie.match(/(?:^|; )booking_source=([^;]+)/);
-    src = m ? decodeURIComponent(m[1]) : null;
+    src = m ? decodeURIComponent(m[1]) : "direct";
+  } else {
+    var d = new Date();
+    d.setTime(d.getTime() + 24*60*60*1000);
+    document.cookie = "booking_source=" + encodeURIComponent(src) + "; path=/; expires=" + d.toUTCString();
   }
-
-  if (!src) {
-    var ref = document.referrer.toLowerCase();
-    if (ref.includes('instagram.com')) src = 'instagram';
-    else if (ref.includes('tiktok.com')) src = 'tiktok';
-    else if (ref.includes('facebook.com')) src = 'facebook';
-    else if (ref.includes('pinterest.com')) src = 'pinterest';
-    else src = 'direct';
-  }
-
-  var d = new Date();
-  d.setTime(d.getTime() + 24 * 60 * 60 * 1000);
-  document.cookie =
-    "booking_source=" + encodeURIComponent(src) +
-    "; path=/; expires=" + d.toUTCString();
 
   console.log("Booking source captured on appointment page:", src);
 
@@ -30,17 +19,12 @@ try {
       var href = link.getAttribute('href') || '';
       if (!href || href.indexOf('source=') !== -1) return;
 
-      link.href =
-        href +
-        (href.indexOf('?') === -1
-          ? '?source=' + encodeURIComponent(src)
-          : '&source=' + encodeURIComponent(src));
+      link.href = href + (href.indexOf('?') === -1 ? '?source=' + encodeURIComponent(src) : '&source=' + encodeURIComponent(src));
     });
-
     console.log("Boutique links updated with source:", src);
   });
 
-} catch (err) {
+} catch(err) {
   console.error("capture-source error:", err);
 }
 </script>
