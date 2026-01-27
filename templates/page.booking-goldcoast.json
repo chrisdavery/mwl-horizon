@@ -16,7 +16,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>To continue with your booking, please select your top 3 dresses below:</p>",
+            "text": "<p>To continue with your booking, please select your top 3-4 dresses below:</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
