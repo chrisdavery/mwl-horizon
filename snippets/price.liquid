@@ -42,7 +42,7 @@
 -%}
 
 <div ref="priceContainer">
-  {% if product_resource.price_varies and template.name != 'product' %}
+  {% if product_resource.price_varies %}
       {% liquid
         if settings.currency_code_enabled_product_cards
           assign price_min = product_resource.price_min | money_with_currency
@@ -64,10 +64,10 @@
     {% if show_compare_price %}
       <span role="group">
         <span class="visually-hidden">{{ 'content.price_sale' | t }}&nbsp;</span>
-        <span class="price">{{ price | default: '&nbsp;' }}</span>
+        <span class="price">{{ 'content.price_from' | t: price: price | default: '&nbsp;' }}</span>
       </span>
     {% else %}
-      <span class="price">{{ price | default: '&nbsp;' }}</span>
+      <span class="price">{{ 'content.price_from' | t: price: price | default: '&nbsp;' }}</span>
     {% endif %}
 
     {% if show_sale_price_first == true and show_compare_price %}
