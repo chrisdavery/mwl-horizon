@@ -503,6 +503,7 @@
                 },
                 "accordion_row_yj78wD": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "Social Media & PR Manager | Gold Coast, Australia",
                     "open_by_default": false,
