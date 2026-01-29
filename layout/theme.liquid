@@ -121,6 +121,19 @@
 {% endif %}
 
 
+  {% if request.path == '/pages/feedback' %}
+  <script>
+    (function () {
+      const url = new URL(window.location.href);
+      if (url.searchParams.has('_kx')) {
+        url.searchParams.delete('_kx');
+        window.history.replaceState({}, document.title, url.pathname + url.search);
+      }
+    })();
+  </script>
+  {% endif %}
+
+
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
