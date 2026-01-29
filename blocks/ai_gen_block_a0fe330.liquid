@@ -232,6 +232,7 @@
             name="contact[{{ block.settings.text_field_1_label }}]"
             class="ai-feedback-form__input-{{ ai_gen_id }}"
             placeholder="{{ block.settings.text_field_1_placeholder }}"
+            required
           >
         </div>
       {%- endif -%}
@@ -247,6 +248,7 @@
             name="contact[{{ block.settings.text_field_2_label }}]"
             class="ai-feedback-form__input-{{ ai_gen_id }}"
             placeholder="{{ block.settings.text_field_2_placeholder }}"
+            required
           >
         </div>
       {%- endif -%}
@@ -262,6 +264,7 @@
             name="contact[{{ block.settings.text_field_3_label }}]"
             class="ai-feedback-form__input-{{ ai_gen_id }}"
             placeholder="{{ block.settings.text_field_3_placeholder }}"
+            required
           >
         </div>
       {%- endif -%}
@@ -277,6 +280,7 @@
             name="contact[{{ block.settings.text_field_4_label }}]"
             class="ai-feedback-form__input-{{ ai_gen_id }}"
             placeholder="{{ block.settings.text_field_4_placeholder }}"
+            required
           >
         </div>
       {%- endif -%}
@@ -292,6 +296,7 @@
             name="contact[{{ block.settings.text_field_5_label }}]"
             class="ai-feedback-form__input-{{ ai_gen_id }}"
             placeholder="{{ block.settings.text_field_5_placeholder }}"
+            required
           >
         </div>
       {%- endif -%}
@@ -307,6 +312,7 @@
             name="contact[{{ block.settings.text_field_6_label }}]"
             class="ai-feedback-form__input-{{ ai_gen_id }}"
             placeholder="{{ block.settings.text_field_6_placeholder }}"
+            required
           >
         </div>
       {%- endif -%}
@@ -319,6 +325,7 @@
           id="feedback-bottom-dropdown-{{ ai_gen_id }}"
           name="contact[{{ block.settings.bottom_dropdown_label }}]"
           class="ai-feedback-form__select-{{ ai_gen_id }}"
+          required
         >
           <option value="">{{ block.settings.bottom_dropdown_placeholder }}</option>
           {%- if block.settings.bottom_dropdown_option_1 != blank -%}
@@ -363,6 +370,7 @@
           class="ai-feedback-form__textarea-{{ ai_gen_id }}"
           placeholder="{{ block.settings.textarea_placeholder }}"
           rows="5"
+          required
         ></textarea>
       </div>
 
