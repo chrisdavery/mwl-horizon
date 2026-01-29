@@ -223,13 +223,17 @@
 
       {%- if block.settings.text_field_1_label != blank -%}
         <div class="ai-feedback-form__field-{{ ai_gen_id }}">
-          <label for="feedback-field-1-{{ ai_gen_id }}" class="ai-feedback-form__label-{{ ai_gen_id }}">
+          <label
+            for="feedback-field-1-{{ ai_gen_id }}"
+            class="ai-feedback-form__label-{{ ai_gen_id }}"
+          >
             {{ block.settings.text_field_1_label }}
           </label>
+
           <input
-            type="text"
+            type="email"
             id="feedback-field-1-{{ ai_gen_id }}"
-            name="contact[{{ block.settings.text_field_1_label }}]"
+            name="contact[email]"
             class="ai-feedback-form__input-{{ ai_gen_id }}"
             placeholder="{{ block.settings.text_field_1_placeholder }}"
             required
