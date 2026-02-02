@@ -800,7 +800,8 @@
                 "type": "datepicker",
                 "lead_date": 35,
                 "priority_fees": [
-                  "b-2-b-rush-fee"
+                  "b-2-b-rush-fee",
+                  "b-2-b-super-rush-fee"
                 ],
                 "standard_lead_date": 113,
                 "required": true,
