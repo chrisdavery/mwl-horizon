@@ -500,10 +500,52 @@ class CustomSelect extends Component {
   handleTriggerOption(opt) {
     const triggerValue = opt.dataset.triggerOption;
     
+    // First, uncheck any previously checked trigger option checkboxes
+    this.uncheckPreviousTriggerOptions();
+    
+    // If no trigger option for current selection, stop here
     if (!triggerValue) return;
     
-    // Try to find and check the checkbox immediately
+    // Check the new checkbox
     this.findAndCheckCheckbox(triggerValue);
+  }
+
+  /**
+   * Uncheck any previously checked trigger option checkboxes
+   */
+  uncheckPreviousTriggerOptions() {
+    // Get all options that have trigger options
+    const triggerOptions = Array.from(this.select.options).filter(
+      option => option.dataset.triggerOption
+    );
+    
+    // Get all unique trigger values from previous options
+    const triggerValues = triggerOptions.map(option => option.dataset.triggerOption);
+    
+    // Uncheck checkboxes for all trigger values
+    triggerValues.forEach(value => {
+      const checkbox = document.querySelector(`.checkbox__input[data-label="${value}"]`);
+      if (checkbox && checkbox.checked) {
+        checkbox.checked = false;
+        
+        // Trigger events for unchecking
+        const clickEvent = new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+          view: window
+        });
+        
+        checkbox.dispatchEvent(clickEvent);
+        
+        const changeEvent = new Event('change', { bubbles: true });
+        checkbox.dispatchEvent(changeEvent);
+        
+        const checkboxWrapper = checkbox.closest('.checkbox, label');
+        if (checkboxWrapper) {
+          checkboxWrapper.dispatchEvent(clickEvent);
+        }
+      }
+    });
   }
 
   /**
@@ -511,14 +553,11 @@ class CustomSelect extends Component {
    * @param {string} triggerValue - The value to match against data-label
    */
   findAndCheckCheckbox(triggerValue) {
-    // Look for the checkbox anywhere in the document
     const checkbox = document.querySelector(`.checkbox__input[data-label="${triggerValue}"]`);
     
     if (checkbox) {
-      // Check the checkbox
       checkbox.checked = true;
       
-      // Trigger events
       const clickEvent = new MouseEvent('click', {
         bubbles: true,
         cancelable: true,
@@ -530,7 +569,6 @@ class CustomSelect extends Component {
       const changeEvent = new Event('change', { bubbles: true });
       checkbox.dispatchEvent(changeEvent);
       
-      // Also trigger on parent elements if needed
       const checkboxWrapper = checkbox.closest('.checkbox, label');
       if (checkboxWrapper) {
         checkboxWrapper.dispatchEvent(clickEvent);
