@@ -4,6 +4,7 @@
   @param {boolean} [only_one_required] - Only one required
   @param {number} loop_index - loop index
   @param {object} item - The object item
+  @param {object} [trigger_configs] - The trigger configs
 
   @example
   {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
@@ -42,6 +43,7 @@
         id: id,
         label: item.external_title,
         options: options,
+        trigger_configs: trigger_configs,
         default_empty: true,
         use_product: false,
         use_variant: use_variant,

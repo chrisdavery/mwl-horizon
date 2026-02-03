@@ -429,7 +429,10 @@ class CustomSelect extends Component {
       this.classList.add("has-value");
       
       // Call hiddenProp for the initially selected option
-      this.hiddenProp(selectedOption); // ← ADD THIS LINE
+      this.hiddenProp(selectedOption);
+      
+      // Handle trigger option for initial selection if it exists
+      this.handleTriggerOption(selectedOption);
       
       // Highlight the corresponding custom option
       const optionIndex = Array.from(this.select.options)
@@ -458,6 +461,9 @@ class CustomSelect extends Component {
     this.showMsg(opt);
     this.hiddenProp(opt);
     
+    // Handle data-trigger-option if it exists
+    this.handleTriggerOption(opt);
+    
     if (this.dataset.productWidget != undefined) {
       this.classList.add('loading-select')
     }
@@ -467,7 +473,6 @@ class CustomSelect extends Component {
     this.select.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
 
     // update display text
-    // FIX: Also use dataset.text here for consistency
     if (opt.dataset.text) {
       this.display.textContent = opt.value + ' - ' + opt.dataset.text;
     } else {
@@ -486,6 +491,51 @@ class CustomSelect extends Component {
     }
 
     this.closeMenu();
+  }
+
+  /**
+   * Handle the data-trigger-option attribute
+   * @param {HTMLOptionElement} opt - The selected option element
+   */
+  handleTriggerOption(opt) {
+    const triggerValue = opt.dataset.triggerOption;
+    
+    if (!triggerValue) return;
+    
+    // Try to find and check the checkbox immediately
+    this.findAndCheckCheckbox(triggerValue);
+  }
+
+  /**
+   * Find and check the checkbox with matching data-label
+   * @param {string} triggerValue - The value to match against data-label
+   */
+  findAndCheckCheckbox(triggerValue) {
+    // Look for the checkbox anywhere in the document
+    const checkbox = document.querySelector(`.checkbox__input[data-label="${triggerValue}"]`);
+    
+    if (checkbox) {
+      // Check the checkbox
+      checkbox.checked = true;
+      
+      // Trigger events
+      const clickEvent = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+      });
+      
+      checkbox.dispatchEvent(clickEvent);
+      
+      const changeEvent = new Event('change', { bubbles: true });
+      checkbox.dispatchEvent(changeEvent);
+      
+      // Also trigger on parent elements if needed
+      const checkboxWrapper = checkbox.closest('.checkbox, label');
+      if (checkboxWrapper) {
+        checkboxWrapper.dispatchEvent(clickEvent);
+      }
+    }
   }
 
   /**

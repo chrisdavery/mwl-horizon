@@ -616,6 +616,7 @@
                 "items_list": "{{ closest.product.metafields.product_options.options_set.value }}",
                 "only_one_required": false,
                 "error_message": "",
+                "trigger_configs": "Split Size | SPLIT SIZE FEE",
                 "gap": 12,
                 "color_scheme": "",
                 "padding-block-start": 0,
