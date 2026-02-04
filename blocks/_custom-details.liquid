@@ -7,12 +7,9 @@
   endif
 %}
 
-{% liquid 
-  assign trigger_configs = block_settings.trigger_configs | newline_to_br | split: '<br />'
-%}
 
 <div
-  class="product-custom-details-block {% if trigger_configs.size > 0 %}has-trigger-connect{% endif %}"
+  class="product-custom-details-block"
   data-section-id="{{ section.id }}"
   data-testid="product-custom-details-block"
   {{ block.shopify_attributes }}
@@ -42,7 +39,6 @@
               item: item,
               id: 'dropdown-details',
               required: true,
-              trigger_configs: trigger_configs,
               loop_index: forloop.index0,
               only_one_required: block.settings.only_one_required
             %}
@@ -77,12 +73,6 @@
       "type": "inline_richtext",
       "id": "error_message",
       "label": "Error message"
-    },
-    {
-      "type": "textarea",
-      "id": "trigger_configs",
-      "label": "Trigger configs",
-      "info": "New line break per item, Option name | Option name"
     },
     {
       "type": "range",

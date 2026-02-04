@@ -4,7 +4,6 @@
   @param {boolean} [only_one_required] - Only one required
   @param {number} loop_index - loop index
   @param {object} item - The object item
-  @param {object} [trigger_configs] - The trigger configs
 
   @example
   {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
@@ -41,9 +40,9 @@
     {% endif %}
     {% render 'custom-select',
         id: id,
+        trigger_other_option: item.trigger_other_option,
         label: item.external_title,
         options: options,
-        trigger_configs: trigger_configs,
         default_empty: true,
         use_product: false,
         use_variant: use_variant,
