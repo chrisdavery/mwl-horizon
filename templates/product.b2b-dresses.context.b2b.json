@@ -12,5 +12,28 @@
   "context": {
     "b2b": true
   },
-  "sections": {}
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "product-details": {
+          "blocks": {
+            "input_field_XGtDRr": {
+              "settings": {
+                "lead_date": 34
+              }
+            },
+            "input_field_4mNRnV": {
+              "settings": {
+                "standard_lead_date": 0,
+                "lead_date": 0,
+                "priority_fees": []
+              }
+            }
+          },
+          "settings": {}
+        }
+      }
+    }
+  }
 }
