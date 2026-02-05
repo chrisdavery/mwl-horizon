@@ -97,7 +97,7 @@
                 </span>
               </button>
             </div>
-            {% if settings.show_shipping_bar == true %}
+            {% if settings.show_shipping_bar == true and customer.b2b? == false %}
               {% render 'cart-shipping-bar' %}
             {% endif %}
           </div>
