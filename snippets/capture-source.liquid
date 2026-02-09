@@ -12,7 +12,7 @@ try {
     document.cookie = "booking_source=" + encodeURIComponent(src) + "; path=/; expires=" + d.toUTCString();
   }
 
-  console.log("Booking source captured on appointment page:", src);
+  //console.log("Booking source captured on appointment page:", src);
 
   document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('a[href*="/pages/"]').forEach(function(link) {
@@ -21,10 +21,10 @@ try {
 
       link.href = href + (href.indexOf('?') === -1 ? '?source=' + encodeURIComponent(src) : '&source=' + encodeURIComponent(src));
     });
-    console.log("Boutique links updated with source:", src);
+    //console.log("Boutique links updated with source:", src);
   });
 
 } catch(err) {
-  console.error("capture-source error:", err);
+  //console.error("capture-source error:", err);
 }
 </script>
