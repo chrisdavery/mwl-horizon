@@ -105,6 +105,55 @@
     "variant_button_width": "equal-width-buttons",
     "card_overlay_label": "Add Size (AU)",
     "card_overlay_option": "Details",
+    "content_for_index": [],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "1232542678405107163": {
+        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
+        "disabled": false,
+        "settings": {}
+      },
+      "7079518687644006178": {
+        "type": "shopify://apps/checkout-blocks/blocks/app-embed/b0024ca5-9de8-4bf0-a92f-cd0783877ae2",
+        "disabled": true,
+        "settings": {
+          "utm_id": true,
+          "utm_source": true,
+          "utm_medium": true,
+          "utm_campaign": true,
+          "utm_term": true,
+          "ref": true
+        }
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#605e5c",
+          "secondary_color": "#ffffff",
+          "ternary_color": "#605e5c",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": "Speak to a MWL customer care representative below."
+        }
+      },
+      "1967102994182284862": {
+        "type": "shopify://apps/paypal-pay-later-messaging/blocks/messaging/7f4cb7b9-066b-479a-a35c-56c0fddabee5",
+        "disabled": false,
+        "settings": {
+          "advanced_settings": false,
+          "product_locator": "600",
+          "cart_locator": "",
+          "cart_drawer_locator": ""
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -494,55 +543,6 @@
           "selected_variant_hover_background_color": "#2f2e2e",
           "selected_variant_hover_text_color": "#ffffff",
           "selected_variant_hover_border_color": "#2f2e2e"
-        }
-      }
-    },
-    "content_for_index": [],
-    "blocks": {
-      "855628211100114053": {
-        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {}
-      },
-      "1232542678405107163": {
-        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
-        "disabled": false,
-        "settings": {}
-      },
-      "7079518687644006178": {
-        "type": "shopify://apps/checkout-blocks/blocks/app-embed/b0024ca5-9de8-4bf0-a92f-cd0783877ae2",
-        "disabled": true,
-        "settings": {
-          "utm_id": true,
-          "utm_source": true,
-          "utm_medium": true,
-          "utm_campaign": true,
-          "utm_term": true,
-          "ref": true
-        }
-      },
-      "15683396631634586217": {
-        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": false,
-        "settings": {
-          "button_color": "#605e5c",
-          "secondary_color": "#ffffff",
-          "ternary_color": "#605e5c",
-          "button_icon": "chat_bubble",
-          "button_text": "no_text",
-          "button_horizontal_position": "bottom_right",
-          "button_vertical_position": "lowest",
-          "greeting_message": "Speak to a MWL customer care representative below."
-        }
-      },
-      "1967102994182284862": {
-        "type": "shopify://apps/paypal-pay-later-messaging/blocks/messaging/7f4cb7b9-066b-479a-a35c-56c0fddabee5",
-        "disabled": true,
-        "settings": {
-          "advanced_settings": false,
-          "product_locator": "600",
-          "cart_locator": "",
-          "cart_drawer_locator": ""
         }
       }
     }
