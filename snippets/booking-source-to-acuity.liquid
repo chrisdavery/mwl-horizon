@@ -4,7 +4,7 @@
     var match = document.cookie.match(/(?:^|; )booking_source=([^;]+)/);
     var source = match ? decodeURIComponent(match[1]) : "direct";
 
-    console.log("Booking source from cookie:", source);
+    //console.log("Booking source from cookie:", source);
 
     function updateIframe() {
       var iframe = document.querySelector("iframe[src*='acuityscheduling.com']");
@@ -19,12 +19,12 @@
 
       iframe.src = url.toString();
 
-      console.log("Acuity iframe updated with booking source:", source);
+      //console.log("Acuity iframe updated with booking source:", source);
     }
 
     updateIframe();
   } catch (e) {
-    console.error("Acuity iframe source error:", e);
+    //console.error("Acuity iframe source error:", e);
   }
 })();
 </script>
