@@ -55,7 +55,7 @@
               assign trigger_option = nil
               assign item_split = trigger_other_option | split: ' | '
               assign split_first = item_split.first | handleize
-              assign split_last = item_split.last
+              assign split_last = item_split.last | strip
               assign option_handle = option | handleize
 
               if split_first == option_handle
