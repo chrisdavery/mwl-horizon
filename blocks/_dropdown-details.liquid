@@ -38,9 +38,10 @@
     {% if only_one_required == true %}
         {% capture class %}only-one-req{% endcapture %}
     {% endif %}
+
     {% render 'custom-select',
         id: id,
-        trigger_other_option: item.trigger_other_option,
+        trigger_other_option_list: item.trigger_other_option_list.value,
         label: item.external_title,
         options: options,
         default_empty: true,

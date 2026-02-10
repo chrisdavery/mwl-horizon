@@ -8,7 +8,7 @@
   @param {string} [show_only_name] - The parent option
   @param {string} [show_only_value] - The parent option value
   @param {string} [parent_option_class] - The parent option class
-  @param {string} [trigger_other_option] - The trigger configs
+  @param {object} [trigger_other_option_list] - The trigger configs
   @param {boolean} [use_product] - boolean
   @param {boolean} [use_variant] - boolean
   @param {boolean} [block_type] - boolean
@@ -50,17 +50,21 @@
         {%- for option in options -%}
 
           {%- liquid 
+            assign trigger_option = nil
 
-            if trigger_other_option != blank
-              assign trigger_option = nil
-              assign item_split = trigger_other_option | split: ' | '
-              assign split_first = item_split.first | handleize
-              assign split_last = item_split.last | strip
-              assign option_handle = option | handleize
+            if trigger_other_option_list != blank
 
-              if split_first == option_handle
-                assign trigger_option = split_last
-              endif
+              for value_item in trigger_other_option_list
+                assign item_split = value_item | split: ' | '
+                assign split_first = item_split.first | handleize
+                assign split_last = item_split.last | strip
+                assign option_handle = option | handleize
+
+                if split_first == option_handle
+                  assign trigger_option = split_last
+                  break
+                endif
+              endfor
             endif
           -%}
           <option
