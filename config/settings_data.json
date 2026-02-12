@@ -147,10 +147,10 @@
         "type": "shopify://apps/paypal-pay-later-messaging/blocks/messaging/7f4cb7b9-066b-479a-a35c-56c0fddabee5",
         "disabled": false,
         "settings": {
-          "advanced_settings": false,
+          "advanced_settings": true,
           "product_locator": "600",
-          "cart_locator": "",
-          "cart_drawer_locator": ""
+          "cart_locator": "150",
+          "cart_drawer_locator": "150"
         }
       }
     },
