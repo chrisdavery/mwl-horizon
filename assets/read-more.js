@@ -16,8 +16,7 @@ class ReadMore extends HTMLElement {
 
     // Text container
     const textSpan = document.createElement("span");
-    //textSpan.textContent = truncatedText + " ";
-    textSpan.innerHTML = truncatedText + " ";
+    textSpan.textContent = truncatedText + " ";
     this.appendChild(textSpan);
 
     // Link
