@@ -315,7 +315,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "london, uk",
-            "link": "shopify://metaobjects/appointments/london-uk-boutique",
+            "link": "shopify://pages/london-booking-page",
             "open_in_new_tab": false,
             "active_state": false,
             "style_class": "button-secondary",
