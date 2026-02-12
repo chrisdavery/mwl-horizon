@@ -149,8 +149,8 @@
         "settings": {
           "advanced_settings": false,
           "product_locator": "600",
-          "cart_locator": "",
-          "cart_drawer_locator": ""
+          "cart_locator": "150",
+          "cart_drawer_locator": "150"
         }
       }
     },
