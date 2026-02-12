@@ -294,58 +294,113 @@ class ProductFormComponent extends Component {
     const addons = Array.from(form.elements).filter(el =>
       el.matches('.product-addon')
     );
+
+    // Check if this is a B2B bundle
+    const isB2BBundle = this.dataset.b2bBundle !== undefined;
+    // Generate a timestamp for the bundle
+    const timestamp = isB2BBundle ? Date.now().toString() : null;
+
     /**
-     * @type {string | any[]}
+     * @type {Array<{
+     *   id: number,
+     *   quantity: number,
+     *   properties?: Record<string, string>,
+     *   parent_id?: number
+     * }>}
      */
-    
-    const addon_items = []
+    const addon_items = [];
 
     if (addons.length > 0) {
-      /** @type {Record<string, FormDataEntryValue>} */
+      /** @type {Record<string, string>} */
+      const properties = {};
+      for (const [key, value] of formData.entries()) {
+        const propMatch = key.match(/^properties\[(.+)]$/);
+        if (propMatch && propMatch[1]) {
+          const propKey = propMatch[1]; // e.g. 'Size', 'Bust'
+          properties[propKey] = value.toString();
+        }
+      }
+
+      // Add B2B bundle properties to the main product
+      if (isB2BBundle && timestamp) {
+        properties._timestamp = timestamp;
+        properties._isbundle = 'true';
+      }
+
+      // Create items array using formData.get() as requested
+      addon_items.push({
+        id: Number(formData.get('id')),
+        quantity: Number(formData.get('quantity')) || 1,
+        properties: { ...properties }
+      });
+
+      // Add addons to items array
+      Array.from(addons).forEach(addon => {
+        let id;
+
+        if (addon.value == '' || !addon.value) return;
+
+        if (addon.tagName.toLowerCase() === 'select') {
+          const selectedOption = addon.options[addon.selectedIndex];
+          if (!selectedOption.dataset.variantId) return;
+          id = Number(selectedOption.dataset.variantId);
+        } else {
+          id = Number(addon.value);
+        }
+
+        // Create properties object for addon with timestamp only (no _isbundle)
+        const addonItem = {
+          id: id,
+          quantity: 1,
+          parent_id: Number(formData.get('id'))
+        };
+
+        // Add timestamp to addon if this is a B2B bundle
+        if (isB2BBundle && timestamp) {
+          addonItem.properties = {
+            _timestamp: timestamp
+          };
+        }
+
+        addon_items.push(addonItem);
+      });
+
+      formData.delete('id');
+      formData.delete('quantity');
+
+      // Create new FormData and build it properly
+      this.buildFormData(formData, 'items', addon_items);
+    } else {
+      // Handle case with no addons but still need B2B bundle properties
+      if (isB2BBundle && timestamp) {
+        /** @type {Record<string, string>} */
         const properties = {};
+        
+        // Collect any existing properties
         for (const [key, value] of formData.entries()) {
           const propMatch = key.match(/^properties\[(.+)]$/);
           if (propMatch && propMatch[1]) {
-            const propKey = propMatch[1]; // e.g. 'Size', 'Bust'
-            properties[propKey] = value;
+            const propKey = propMatch[1];
+            properties[propKey] = value.toString();
           }
         }
 
-        // Create items array using formData.get() as requested
-        addon_items.push({
-          id: Number(formData.get('id')),
-          quantity: Number(formData.get('quantity')) || 1,
-          properties: { ...properties }
-        });
+        // Add B2B bundle properties
+        properties._timestamp = timestamp;
+        properties._isbundle = 'true';
 
-        // Add addons to items array
-        Array.from(addons).forEach(addon => {
-          let id;
-
-          if (addon.value == '' || !addon.value) return;
-
-          if (addon.tagName.toLowerCase() === 'select') {
-            const selectedOption = addon.options[addon.selectedIndex];
-            if (!selectedOption.dataset.variantId) return;
-            id = Number(selectedOption.dataset.variantId);
-          } else {
-            id = Number(addon.value);
+        // Remove existing properties from formData
+        for (const key of formData.keys()) {
+          if (key.startsWith('properties[')) {
+            formData.delete(key);
           }
+        }
 
-          addon_items.push({
-            id: id,
-            quantity: 1,
-            parent_id: Number(formData.get('id'))
-          });
-        });
-
-        formData.delete('id');
-        formData.delete('quantity');
-
-        // Create new FormData and build it properly
-        this.buildFormData(formData, 'items', addon_items);
-
-        // console.log(Object.fromEntries(formData.entries()))
+        // Add updated properties back
+        for (const [propKey, propValue] of Object.entries(properties)) {
+          formData.append(`properties[${propKey}]`, propValue);
+        }
+      }
     }
 
     const cartItemsComponents = document.querySelectorAll('cart-items-component');
@@ -412,9 +467,9 @@ class ProductFormComponent extends Component {
           var id = 0;
 
           if (addon_items.length > 0) {
-            id = addon_items[0].id.toString()
+            id = addon_items[0].id.toString();
           } else {
-            const idFromFormData = formData.get('id');  // string | null
+            const idFromFormData = formData.get('id'); // string | null
 
             // Convert to string, fallback to "0" if null, then to number
             id = idFromFormData !== null ? Number(idFromFormData) : 0;
