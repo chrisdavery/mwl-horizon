@@ -347,7 +347,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "UTRECHT, NL",
-            "link": "shopify://metaobjects/appointments/utrecht-boutique",
+            "link": "shopify://pages/utrecht-booking-page",
             "open_in_new_tab": false,
             "active_state": false,
             "style_class": "button-secondary",
