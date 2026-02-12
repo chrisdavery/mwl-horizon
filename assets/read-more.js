@@ -16,14 +16,7 @@ class ReadMore extends HTMLElement {
 
     // Text container
     const textSpan = document.createElement("span");
-    // Check if B2B user via data attribute
-    const isB2B = this.dataset.b2b === "true";
-
-    if (isB2B) {
-      textSpan.innerHTML = truncatedText + " "; // preserve HTML
-    } else {
-      textSpan.textContent = truncatedText + " ";
-    }
+    textSpan.textContent = truncatedText + " ";
     this.appendChild(textSpan);
 
     // Link
