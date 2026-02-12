@@ -75,11 +75,15 @@
   {{ block.shopify_attributes }}
 {% endcapture %}
 
-   <read-more {{ attributes }} data-more-label="{{ 'content.read_more_description' | t }}" data-less-label="{{ 'content.read_less_description' | t }}" data-limit="200">
-      {% render 'text', fallback_text: text, block: block %}
-  </read-more>
+<read-more {{ attributes }} data-more-label="{{ 'content.read_more_description' | t }}" data-less-label="{{ 'content.read_less_description' | t }}" data-limit="200">
+    <div class="{{ text_block_classes }}">
+      {{ block.settings.text }}
+    </div>
+</read-more>
 {% else %}
-  {% render 'text', fallback_text: text, block: block %}
+    <div class="{{ text_block_classes }}">
+      {{ block.settings.text }}
+    </div>
 {% endif %}
 
 {% stylesheet %}
