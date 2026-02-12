@@ -16,7 +16,7 @@ class ReadMore extends HTMLElement {
 
     // Text container
     const textSpan = document.createElement("span");
-    textSpan.textContent = truncatedText + " ";
+    textSpan.innerHTML = truncatedText + " ";
     this.appendChild(textSpan);
 
     // Link
@@ -32,8 +32,8 @@ class ReadMore extends HTMLElement {
       expanded = !expanded;
 
       if (expanded) {
-        textSpan.textContent = fullText + " ";
-        link.textContent = this.dataset.lessLabel || "Read less";
+        textSpan.innerHTML = fullText + " ";
+        link.innerHTML = this.dataset.lessLabel || "Read less";
         link.style.display = "block"; // add display block again
       } else {
         textSpan.textContent = truncatedText + " ";
