@@ -21,6 +21,13 @@
             "menu-button": {
               "disabled": true,
               "settings": {}
+            },
+            "megamenu_card_item_rdNF3W": {
+              "settings": {
+                "assigned_to": "Helpful Resources",
+                "title": "Helpful Resources",
+                "link": "shopify://blogs/b2b-resources"
+              }
             }
           },
           "block_order": [
