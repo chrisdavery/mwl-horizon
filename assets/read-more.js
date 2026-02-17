@@ -32,8 +32,8 @@ class ReadMore extends HTMLElement {
       expanded = !expanded;
 
       if (expanded) {
-        textSpan.innerHTML = fullText + " ";
-        link.innerHTML = this.dataset.lessLabel || "Read less";
+        textSpan.textContent = fullText + " ";
+        link.textContent = this.dataset.lessLabel || "Read less";
         link.style.display = "block"; // add display block again
       } else {
         textSpan.textContent = truncatedText + " ";
