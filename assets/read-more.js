@@ -4,7 +4,7 @@ class ReadMore extends HTMLElement {
     this.classList.remove("hidden");
 
     const limit = parseInt(this.dataset.limit ?? "185");
-    const text = (this.innerHTML ?? "").trim();
+    const text = (this.textContent ?? "").trim();
 
     if (text.length <= limit || text.length - limit < 20) return;
 
@@ -16,7 +16,7 @@ class ReadMore extends HTMLElement {
 
     // Text container
     const textSpan = document.createElement("span");
-    textSpan.innerHTML = truncatedText + " ";
+    textSpan.textContent = truncatedText + " ";
     this.appendChild(textSpan);
 
     // Link
