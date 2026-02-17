@@ -419,7 +419,7 @@
               "type": "product-description",
               "name": "t:names.product_description",
               "settings": {
-                "text": "{{ closest.product.description }}",
+                "text": "<p>{{ closest.product.description }}</p>",
                 "enable_read_more": true,
                 "width": "100%",
                 "max_width": "normal",
