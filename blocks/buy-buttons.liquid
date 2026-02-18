@@ -50,7 +50,6 @@
       on:submit="/handleSubmit"
       data-quantity-default="{% if product.selected_or_first_available_variant.quantity_rule.min %}{{ product.selected_or_first_available_variant.quantity_rule.min }}{% else %}1{% endif %}"
       data-quantity-error-max="{{ 'products.product.quantity_error_max' | t }}"
-      {% if product.template_suffix contains 'b2b-dresses' %}data-b2b-bundle{% endif %}
     >
       <div
         class="visually-hidden"
