@@ -357,6 +357,22 @@
             "custom_width_mobile": 100
           },
           "blocks": {}
+        },
+        "button_pWQ9Mt": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "UNITED STATES",
+            "link": "shopify://pages/store-locator",
+            "open_in_new_tab": false,
+            "active_state": false,
+            "style_class": "button-secondary",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -367,7 +383,8 @@
         "button_kxxdKE",
         "button_rM4UK8",
         "button_cYczQm",
-        "button_JAdrRN"
+        "button_JAdrRN",
+        "button_pWQ9Mt"
       ],
       "custom_css": [
         ".button {--button-padding-block: 10px;}",
