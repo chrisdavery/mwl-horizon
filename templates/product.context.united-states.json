@@ -38,7 +38,7 @@
               "disabled": false,
               "blocks": {
                 "add-to-cart": {
-                  "disabled": false,
+                  "disabled": true,
                   "settings": {}
                 }
               },
