@@ -26,6 +26,10 @@
               "disabled": true,
               "settings": {}
             },
+            "product_recommendations_8Vzc6N": {
+              "disabled": true,
+              "settings": {}
+            },
             "input_field_4mNRnV": {
               "disabled": true,
               "settings": {}
@@ -34,14 +38,10 @@
               "disabled": false,
               "blocks": {
                 "add-to-cart": {
-                  "disabled": true,
+                  "disabled": false,
                   "settings": {}
                 }
               },
-              "settings": {}
-            },
-            "product_recommendations_8Vzc6N": {
-              "disabled": true,
               "settings": {}
             }
           },
