@@ -793,10 +793,10 @@
               "type": "_input-field",
               "name": "Input Field",
               "settings": {
-                "heading": "Your wedding date:",
+                "heading": "Your event date:",
                 "label": "dd/mm/yyyy",
                 "label_outside": false,
-                "name": "Wedding Date",
+                "name": "Event Date",
                 "type": "datepicker",
                 "lead_date": 54,
                 "priority_fees": [],
