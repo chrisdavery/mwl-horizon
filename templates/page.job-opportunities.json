@@ -546,6 +546,7 @@
                 "accordion_row_MNVGwi": {
                   "type": "_accordion-row",
                   "name": "Tiktok Manager",
+                  "disabled": true,
                   "settings": {
                     "heading": "Tiktok Manager | Gold Coast, Australia",
                     "open_by_default": false,
@@ -630,6 +631,7 @@
                 "accordion_row_hL8m6D": {
                   "type": "_accordion-row",
                   "name": "USA",
+                  "disabled": true,
                   "settings": {
                     "heading": "USA SALES REPRESENTATIVE | USA BASED",
                     "open_by_default": false,
