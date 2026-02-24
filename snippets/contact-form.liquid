@@ -53,20 +53,17 @@
     %}
 
     {% if countries.size > 0 %}
-      <div class="select-option"> {%- comment -%} Removed 'hidden' class if you want it visible {%- endcomment -%}
+      <div class="select-option hidden">
           <div class="option__select-wrapper">
               <label for="Option-country">{{- 'blocks.contact_form.country' | t -}}</label>
-              
-              <select id="Option-country" name="contact[Country Name]"
+              <select id="Option-country" name="contact[country]"
                   class="option__select">
                   {% for country in countries %}
-                      {%- assign country_clean = country | strip -%}
-                      <option value="{{ country_clean }}">
-                          {{ country_clean }}
+                      <option value="{{ country | strip }}" selected="selected">
+                          {{ country }}
                       </option>
                   {% endfor %}
               </select>
-              
               <svg
               aria-hidden="true"
               focusable="false"
