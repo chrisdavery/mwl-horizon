@@ -74,6 +74,7 @@ if (!countrySelect) {
         ZA: 'South Africa',
         CH: 'Switzerland',
         NO: 'Norway',
+        NL: 'Netherlands',
         // Name-based fallbacks
         'United Kingdom': 'UK',
         'United States': 'USA',
@@ -82,7 +83,8 @@ if (!countrySelect) {
         Canada: 'Canada',
         'South Africa': 'South Africa',
         Switzerland: 'Switzerland',
-        Norway: 'Norway'
+        Norway: 'Norway',
+        Netherlands: 'Netherlands'
       };
 
       let target =
