@@ -268,7 +268,7 @@
             "contact_form_pab9nt": {
               "type": "contact-form",
               "settings": {
-                "countries": "Australia\nNew Zealand\nUK\nEurope\nUSA\nCanada\nSouth America\nAsia\nAfrica\nMiddle East\nSouth Africa\nSwitzerland\nNorway",
+                "countries": "Australia\nNew Zealand\nUK\nEurope\nUSA\nCanada\nSouth America\nAsia\nAfrica\nMiddle East\nSouth Africa\nSwitzerland\nNorway\nNetherlands",
                 "width": "custom",
                 "custom_width": 100,
                 "width_mobile": "custom",
