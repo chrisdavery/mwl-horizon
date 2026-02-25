@@ -262,24 +262,47 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  // Target your actual form by ID
   const form = document.getElementById('{{ form_id }}'); 
-
   if (!form) return;
 
+  // ===== REGION SETS =====
+  const ASIA = new Set([
+    'PH','CN','HK','MO','TW','JP','KR','KP','VN','TH','MY','SG','ID','BN','KH','LA','MM','TL','IN','PK','BD',
+    'LK','NP','BT','MV','KZ','KG','TJ','TM','UZ','AM','AZ','GE','MN'
+  ]);
+
+  const EUROPE = new Set([
+    'GB','FR','DE','IT','ES','NL','BE','CH','AT','SE','NO','DK','FI','IE','PT','PL','CZ','HU','RO','BG',
+    'HR','RS','SI','SK','UA','GR','IS','LU','MT','CY','EE','LV','LT'
+  ]);
+
+  const AFRICA = new Set([
+    'ZA','NG','KE','EG','MA','GH','TZ','UG','DZ','AO','ET'
+  ]);
+
   form.addEventListener('submit', function () {
-    // Collect values directly from your form fields
+
+    const countryCode = window.Shopify?.country || '';
+
+    let region = null;
+
+    if (ASIA.has(countryCode)) region = 'Asia';
+    else if (EUROPE.has(countryCode)) region = 'Europe';
+    else if (AFRICA.has(countryCode)) region = 'Africa';
+    else region = 'Other';
+
     const data = {
       first_name: document.getElementById('ContactForm-firstname')?.value || '',
       last_name: document.getElementById('ContactForm-lastname')?.value || '',
       email: document.getElementById('ContactForm-email')?.value || '',
       phone: document.getElementById('ContactForm-phone')?.value || '',
       country: document.getElementById('Option-country')?.value || '',
+      country_code: countryCode,
+      region: region,
       date: document.getElementById('CustomForm-dd-mm-yyyy')?.value || '',
       enquiry: document.getElementById('ContactForm-body')?.value || ''
     };
 
-    // Send to Zapier
     fetch('https://hooks.zapier.com/hooks/catch/2280371/uym2c7u/', {
       method: 'POST',
       mode: 'no-cors',
