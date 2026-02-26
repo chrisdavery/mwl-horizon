@@ -1036,10 +1036,12 @@
         "multicolumn_card_MYRqBG": {
           "type": "_multicolumn-card",
           "name": "Multicolumn Item",
+          "disabled": true,
           "settings": {},
           "blocks": {
             "group_YMaUtU": {
               "type": "group",
+              "disabled": true,
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
@@ -1400,7 +1402,7 @@
         "alignment": "left",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "columns": 4,
+        "columns": 3,
         "mobile_columns": "1",
         "mobile_card_size": "60cqw",
         "columns_gap": 0,
