@@ -55,8 +55,15 @@
     {% endif %}
 
     {% paginate collection.products by products_per_page %}
+
       {% capture children %}
         {% for product in collection.products %}
+          {% content_for 'block',
+            type: '_catalog-cards',
+            id: 'collection-cards',
+            pagination: paginate,
+            main_loop: forloop.index
+          %}
           <li
             id="{{ section.id }}-{{ product.id }}"
             class="product-grid__item product-grid__item--{{ forloop.index0 }}"

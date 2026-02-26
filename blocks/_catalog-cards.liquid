@@ -1,0 +1,220 @@
+{%- doc -%}
+  Renders block content for all blocks that extend the group block.
+
+  @param {object} pagination
+  @param {number} main_loop
+{%- enddoc -%}
+
+{% assign block_settings = block.settings %}
+
+{% for item in block_settings.items_list %}
+    {% if item.page_number == pagination.current_page and main_loop == item.item_order %}
+      {% if item.card_image != blank %}
+        {% capture card_image %}
+          {% content_for 'block',
+            type: '_catalog-card-image',
+            id: 'catalog-card-image',
+            item: item,
+            parent_block_id: block.id %}
+        {% endcapture %}
+      {% endif %}
+
+      {% capture children %}
+          {% if item.heading != blank %}
+            {% content_for 'block',
+              type: '_catalog-title',
+              id: 'catalog-title',
+              text: item.heading %}
+          {% endif %}
+
+          {% if item.link != blank %}
+            <a
+              {% if item.link.value.url == blank %}
+                role="link"
+                aria-disabled="true"
+              {% else %}
+                href="{{ item.link.value.url }}"
+              {% endif %}
+              class="
+                size-style
+                link
+                link--{{ block.id }}
+              "
+              style="{% render 'size-style', settings: block_settings %}"
+              {{ block.shopify_attributes }}
+            >
+              {{ item.link.value.text }}
+            </a>
+          {% endif %}
+      {% endcapture %}
+
+        <li
+            id="{{ section.id }}-{{ item.system.id }}"
+            class="product-grid__item product-grid__item--{{ forloop.index0 }}"
+            data-page="{{ pagination.current_page }}"
+            ref="cards[]"
+            data-block="{{ item.system.id }}"
+            {{ block.shopify_attributes }}
+        >
+          {% render 'catalog-card',
+            item: item,
+            card_image: card_image,
+            children: children,
+            block: block,
+            block_settings: block_settings,
+            section: section
+           %}
+        </li>
+    {% endif %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Catalog cards",
+  "class": "catalog-cards",
+  "tag": null,
+    "settings": [
+      {
+        "type": "metaobject_list",
+        "id": "items_list",
+        "label": "Items List",
+        "metaobject_type": "collection_cards"
+      },
+      {
+        "type": "header",
+        "content": "t:content.text"
+      },
+      {
+        "type": "select",
+        "id": "placement",
+        "label": "t:settings.placement",
+        "options": [
+          {
+            "value": "on_image",
+            "label": "t:options.on_image"
+          },
+          {
+            "value": "below_image",
+            "label": "t:options.below_image"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "horizontal_alignment",
+        "label": "t:settings.alignment",
+        "options": [
+          {
+            "value": "flex-start",
+            "label": "t:options.left"
+          },
+          {
+            "value": "center",
+            "label": "t:options.center"
+          },
+          {
+            "value": "flex-end",
+            "label": "t:options.right"
+          }
+        ],
+        "default": "flex-start"
+      },
+      {
+        "type": "select",
+        "id": "vertical_alignment",
+        "label": "t:settings.position",
+        "options": [
+          {
+            "value": "flex-start",
+            "label": "t:options.top"
+          },
+          {
+            "value": "center",
+            "label": "t:options.center"
+          },
+          {
+            "value": "flex-end",
+            "label": "t:options.bottom"
+          }
+        ],
+        "default": "center",
+        "visible_if": "{{ block.settings.placement == \"on_image\" }}"
+      },
+      {
+        "type": "range",
+        "id": "collection_card_gap",
+        "label": "t:settings.vertical_gap",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 8
+      },
+      {
+        "type": "header",
+        "content": "t:content.appearance"
+      },
+      {
+        "type": "checkbox",
+        "id": "inherit_color_scheme",
+        "label": "t:settings.inherit_color_scheme",
+        "default": true
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:settings.color_scheme",
+        "default": "scheme-1",
+        "visible_if": "{{ block.settings.inherit_color_scheme == false }}"
+      },
+      {
+        "type": "select",
+        "id": "border",
+        "label": "t:settings.borders",
+        "options": [
+          {
+            "value": "none",
+            "label": "t:options.none"
+          },
+          {
+            "value": "solid",
+            "label": "t:options.solid"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "range",
+        "id": "border_width",
+        "min": 0,
+        "max": 10,
+        "step": 0.5,
+        "unit": "px",
+        "label": "t:settings.border_width",
+        "default": 1,
+        "visible_if": "{{ block.settings.border != 'none' }}"
+      },
+      {
+        "type": "range",
+        "id": "border_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "t:settings.border_opacity",
+        "default": 100,
+        "visible_if": "{{ block.settings.border != 'none' }}"
+      },
+      {
+        "type": "range",
+        "id": "border_radius",
+        "label": "t:settings.border_radius",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+      }
+  ]
+}
+{% endschema %}

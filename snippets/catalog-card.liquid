@@ -1,0 +1,185 @@
+{%- doc -%}
+  This snippet is used to render a collection card.
+  To be used inside a block to inherit the block object settings.
+  @param {object} item - The block object
+  @param {string} card_image - The image to display in the catalog card
+  @param {string} children - The content to render inside the collection card
+  @param {object} block - The block object
+  @param {object} block_settings - The block object
+  @param {object} section - The section object
+{%- enddoc -%}
+
+{% assign block_settings = block.settings %}
+
+<div
+  class="
+    catalog-card
+    border-style
+    {% if block_settings.placement == 'on_image' %}catalog-card--image-bg{% endif %}
+    {% if section.settings.layout_type == 'bento' %}catalog-card--image-height-fixed{% endif %}
+    {% if section.settings.layout_type == 'editorial' %}catalog-card--flexible-aspect-ratio{% endif %}
+    {% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}
+  "
+  data-block-id="{{ block.id }}"
+  style="
+    {% render 'border-override', settings: block_settings %}
+    --horizontal-alignment: {{ block_settings.horizontal_alignment }};
+    --vertical-alignment: {{ block_settings.vertical_alignment }};
+    --background-overlay-color: {{ block_settings.overlay_color }};
+    --catalog-card-gap: {{ block_settings.collection_card_gap }}px;
+  "
+  {{- block.shopify_attributes -}}
+>
+  <a
+    class="catalog-card__link"
+    href="{{ item.link.value.url }}"
+  >
+    <span class="visually-hidden">{{ item.heading }}</span>
+  </a>
+  <div class="catalog-card__inner">
+    {{ card_image }}
+    <div class="catalog-card__content layout-panel-flex--column">
+      {{ children }}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .catalog-card {
+    --fixed-card-height: var(--height-small);
+    flex: 1 1 var(--card-width-small);
+    width: 100%;
+    position: relative;
+
+    .link {
+      text-decoration: none;
+      text-decoration-color: currentcolor;
+
+      &:hover {
+        color: var(--color-primary-hover);
+        text-decoration-color: transparent;
+      }
+    }
+
+  }
+
+  .catalog-card > svg {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: var(--ratio);
+  }
+
+  .catalog-card__inner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    gap: var(--catalog-card-gap);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .catalog-card--image-bg .catalog-card__inner {
+    height: 100%;
+  }
+
+  .catalog-card__inner {
+    z-index: var(--layer-flat);
+    pointer-events: none;
+
+    a,
+    button {
+      /* only allow interactive elements to be clickable separate from .catalog-card__link */
+      pointer-events: auto;
+    }
+  }
+
+  /* allow all blocks to be selectable in editor preview */
+  .shopify-design-mode .catalog-card__content * {
+    pointer-events: auto;
+  }
+
+  .catalog-card__content {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    gap: var(--catalog-card-gap);
+    flex-direction: column;
+    align-items: var(--horizontal-alignment);
+    justify-content: var(--vertical-alignment);
+  }
+
+  .catalog-card__link {
+    position: absolute;
+    inset: 0;
+
+    /* allows focus outline to have radius in supported browsers */
+    border-radius: var(--border-radius);
+  }
+
+  /* Nested image block rules */
+
+  .catalog-card.catalog-card--image-bg {
+    aspect-ratio: var(--ratio);
+  }
+
+  .catalog-card.catalog-card--image-bg .catalog-card__content {
+    padding: var(--padding-lg);
+  }
+
+  /* Bento layout rules */
+  .catalog-card--image-height-fixed .catalog-card__image {
+    height: var(--fixed-card-height);
+    width: 100%;
+  }
+
+  .catalog-card--image-height-fixed.catalog-card--image-bg {
+    height: var(--fixed-card-height);
+    aspect-ratio: unset;
+  }
+
+  .catalog-card__image .image-block__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .catalog-card--image-bg .catalog-card__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .catalog-card__image svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  .resource-list:not(.hidden--desktop) .catalog-card--flexible-aspect-ratio {
+    &.catalog-card.catalog-card--image-bg,
+    &.catalog-card .placeholder-svg {
+      aspect-ratio: 99;
+    }
+
+    .catalog-card__image {
+      aspect-ratio: 99;
+      height: 100%;
+    }
+
+    .catalog-card__inner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .catalog-card__content {
+      flex-shrink: 0;
+    }
+
+    &:not(.catalog-card--image-bg) .catalog-card__content {
+      height: auto;
+    }
+  }
+{% endstylesheet %}

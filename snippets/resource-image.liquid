@@ -61,6 +61,8 @@
   # Calculate aspect ratio
   assign ratio = 1
   case block_settings.image_ratio
+    when 'tall'
+      assign ratio = '2 / 3'
     when 'landscape'
       assign ratio = '16 / 9'
     when 'portrait'
@@ -123,6 +125,10 @@
     .collection-card[data-block-id="{{ parent_block_id }}"] {
       --ratio: {{ ratio }};
     }
+  {% elsif content_type == 'catalog_cards' %}
+    .catalog-card[data-block-id="{{ parent_block_id }}"] {
+      --ratio: {{ ratio }};
+    }
   {% endif %}
 {% endstyle %}
 
@@ -135,6 +141,8 @@
         featured-blog-posts-card__image
       {% elsif content_type == 'collections' %}
         collection-card__image
+      {% elsif content_type == 'catalog_cards' %}
+        catalog-card__image
       {% endif %}
       spacing-style border-style
       {% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}
