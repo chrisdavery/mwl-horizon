@@ -462,6 +462,7 @@
                 },
                 "accordion_row_R9wkkD": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "Bridal Stylist  | UTRECHT, NL",
                     "open_by_default": false,
