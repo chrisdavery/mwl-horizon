@@ -305,7 +305,7 @@
                     "image_EmMNLe": {
                       "type": "image",
                       "settings": {
-                        "image": "shopify://shop_images/MWL_Cleaning_1.png",
+                        "image": "shopify://shop_images/Cleaning.png",
                         "link": "",
                         "image_ratio": "adapt",
                         "width": "fill",
