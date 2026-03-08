@@ -69,7 +69,11 @@
                     <div class="size-style" style="--size-style-width: 100%; --size-style-height: ; --size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;">
                         <custom-input class="custom-input--field">
                             <div class="custom-input-wrapper">
-                                <date-picker data-standard-date="{{ block.settings.standard_lead_date | plus: 0 }}">
+                                <date-picker
+                                    {% if block.settings.allow_previous_date == true and block.settings.previous_days != blank %}
+                                        data-previous="{{ block.settings.previous_days }}"
+                                    {% endif %}
+                                    data-standard-date="{{ block.settings.standard_lead_date | plus: 0 }}">
                                     <input
                                         type="text"
                                         id="CustomForm-{{ block_settings.label | handleize }}"
@@ -529,6 +533,20 @@
                 }
             ],
             "default": "text"
+            },
+            {
+                "type": "checkbox",
+                "id": "allow_previous_date",
+                "label": "Allow previous date",
+                "default": false,
+                "visible_if": "{{ block.settings.type == 'datepicker' }}"
+            },
+            {
+                "type": "number",
+                "id": "previous_days",
+                "label": "Previous Days",
+                "default": 365,
+                "visible_if": "{{ block.settings.type == 'datepicker' and block.settings.allow_previous_date == true }}"
             },
             {
                 "type": "number",

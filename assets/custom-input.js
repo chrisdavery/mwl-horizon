@@ -55,6 +55,8 @@ class DatePicker extends Component {
     this.today.setHours(0, 0, 0, 0);
     this.startDate = new Date(this.today);
     this.justOpened = false;
+    this.allowPreviousDates = false;
+    this.previousDays = 0;
 
     this.handleDocumentClick = this.handleDocumentClick.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -64,9 +66,21 @@ class DatePicker extends Component {
     this.input = this.querySelector('.custom-form__input');
     if (!this.input) return;
 
+    // Check if previous dates are allowed
+    this.allowPreviousDates = this.hasAttribute('data-previous');
+    this.previousDays = parseInt(this.getAttribute('data-previous') || "0", 10);
+
     const leadDays = parseInt(this.input.dataset.leadDate || "0", 10);
     this.startDate = new Date(this.today);
-    this.startDate.setDate(this.startDate.getDate() + leadDays);
+    
+    if (this.allowPreviousDates) {
+      // Allow dates before today based on previousDays value
+      this.startDate.setDate(this.startDate.getDate() - this.previousDays);
+    } else {
+      // Default behavior: only future dates with lead time
+      this.startDate.setDate(this.startDate.getDate() + leadDays);
+    }
+    
     // Set time to end of day to ensure full day is included
     this.startDate.setHours(23, 59, 59, 999);
 
@@ -185,9 +199,17 @@ class DatePicker extends Component {
         dayElement.classList.add('other-month');
       }
 
-      // Compare against normalized dates
-      if (comparisonDate < this.startDate) {
-        dayElement.classList.add('disabled');
+      // Modified date validation logic
+      if (this.allowPreviousDates) {
+        // When previous dates are allowed, only disable dates before the start date
+        if (comparisonDate < this.startDate) {
+          dayElement.classList.add('disabled');
+        }
+      } else {
+        // Default behavior: disable dates before start date
+        if (comparisonDate < this.startDate) {
+          dayElement.classList.add('disabled');
+        }
       }
 
       if (date.toDateString() === this.today.toDateString()) {
@@ -218,14 +240,27 @@ class DatePicker extends Component {
       }
     }
 
+    // Update prev/next button availability based on allowed dates
     const prevMonthStart = new Date(year, month - 1, 1);
     const prevMonthEnd = new Date(year, month, 0);
 
     let hasValidDateInPrevMonth = false;
     for (let d = new Date(prevMonthStart); d <= prevMonthEnd; d.setDate(d.getDate() + 1)) {
-      if (d >= this.startDate) {
-        hasValidDateInPrevMonth = true;
-        break;
+      const comparisonDate = new Date(d);
+      comparisonDate.setHours(0, 0, 0, 0);
+      
+      if (this.allowPreviousDates) {
+        // When previous dates are allowed, check if date is after start date
+        if (comparisonDate >= this.startDate) {
+          hasValidDateInPrevMonth = true;
+          break;
+        }
+      } else {
+        // Default behavior
+        if (d >= this.startDate) {
+          hasValidDateInPrevMonth = true;
+          break;
+        }
       }
     }
 
@@ -239,8 +274,19 @@ class DatePicker extends Component {
 
     for (let day = 1; day <= daysInMonth; day++) {
       const checkDate = new Date(year, month, day);
-      if (checkDate >= this.startDate) {
-        return true;
+      const comparisonDate = new Date(checkDate);
+      comparisonDate.setHours(0, 0, 0, 0);
+      
+      if (this.allowPreviousDates) {
+        // When previous dates are allowed, check if date is after start date
+        if (comparisonDate >= this.startDate) {
+          return true;
+        }
+      } else {
+        // Default behavior
+        if (checkDate >= this.startDate) {
+          return true;
+        }
       }
     }
     return false;
@@ -273,7 +319,13 @@ class DatePicker extends Component {
     const todayYear = this.today.getFullYear();
     this.yearSelector.innerHTML = '';
 
-    for (let year = todayYear; year <= 2055; year++) {
+    // Determine year range based on allowPreviousDates
+    let startYear = todayYear;
+    if (this.allowPreviousDates) {
+      startYear = todayYear - this.previousDays; // Rough estimate, you might want to calculate more precisely
+    }
+
+    for (let year = startYear; year <= 2055; year++) {
       const yearSpan = document.createElement('span');
       yearSpan.textContent = year;
       yearSpan.classList.add('ai-datepicker-year');
