@@ -6,9 +6,10 @@
         {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
 
         <li class="list-payment__item">
-          <img src=" {{ 'paypal-icon.png' | asset_img_url: 'master' }}" alt="Paypal in 4" loading="lazy">
+          <img src=" {{ 'paypal-icon.png' | asset_img_url: '90x' }}" alt="Paypal in 4" loading="lazy">
         </li>
-        {%- for type in shop.enabled_payment_types -%}
+        {% assign enabled_payment_types = "afterpay" | concat: shop.enabled_payment_types %}
+        {%- for type in enabled_payment_types -%}
             <li class="list-payment__item">
                 {{ type | payment_type_svg_tag: class: icon_block_class }}
             </li>
