@@ -81,6 +81,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const productGrid = wrapper.querySelector('.acuity-product-grid');
   const bookingFrame = wrapper.querySelector('.acuity-booking-frame');
 
+  // Get tracking ID from your attribution cookie
+  const getTrackingId = () => {
+    try {
+      const match = document.cookie.match(/(?:^|; )mwl_attribution=([^;]+)/);
+      if (!match) return '';
+      const data = JSON.parse(decodeURIComponent(match[1]));
+      return data.tracking_id || '';
+    } catch (err) {
+      console.warn('Error reading tracking ID from cookie', err);
+      return '';
+    }
+  };
+
   function updateSelectedClasses() {
     checkboxes.forEach(cb => {
       cb.closest('.acuity-item')
@@ -117,6 +130,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var match = document.cookie.match(/(?:^|; )booking_source=([^;]+)/);
     var source = match ? decodeURIComponent(match[1]) : "direct";
 
+    // Get tracking ID
+    const trackingId = getTrackingId();
+
     iframe.src =
       `https://app.acuityscheduling.com/schedule/6f1d26e5` +
       `?ref=embedded_csp` +
@@ -124,7 +140,8 @@ document.addEventListener('DOMContentLoaded', function () {
       `&field:15103601=${encoded}` +
       `&field:17797660=${encodeURIComponent(source)}` +
       `&field:17899599=${encodeURIComponent(source)}` +
-      `&field:17899423=${encodeURIComponent(source)}`;
+      `&field:17899423=${encodeURIComponent(source)}` +
+      `&fields[field-18156998]=${encodeURIComponent(trackingId)}`; 
 
     productGrid.style.display = 'none';
     continueBtn.style.display = 'none';
