@@ -1,0 +1,77 @@
+<script>
+// Function to get URL parameter
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+// Generate a unique tracking ID
+function generateTrackingId() {
+  return 'mwltrk_' + Math.floor(Math.random() * 1e9);
+}
+
+// Get UTMs
+const utm_source = getQueryParam('source');
+const utm_medium = getQueryParam('utm_medium');
+const utm_campaign = getQueryParam('utm_campaign');
+const utm_content = getQueryParam('utm_content');
+const utm_term = getQueryParam('utm_term');
+
+// Get Ad Click IDs
+const gclid = getQueryParam('gclid');
+const ttclid = getQueryParam('ttclid');
+const epik = getQueryParam('epik');
+const fbclid = getQueryParam('fbclid');
+const fbp = getQueryParam('_fbp');
+
+// Read existing cookie
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? JSON.parse(decodeURIComponent(match[2])) : null;
+}
+
+// Set cookie
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
+  document.cookie = name + '=' + encodeURIComponent(JSON.stringify(value)) + '; path=/; expires=' + expires + '; SameSite=Lax';
+}
+
+// Check for existing tracking ID
+let attribution = getCookie('mwl_attribution') || {};
+if(!attribution.tracking_id) {
+  attribution.tracking_id = generateTrackingId();
+  console.log('Generated new tracking ID:', attribution.tracking_id);
+} else {
+  console.log('Existing tracking ID found:', attribution.tracking_id);
+}
+
+// Update cookie with UTM & click IDs if available
+if(utm_source) attribution.utm_source = utm_source;
+if(utm_medium) attribution.utm_medium = utm_medium;
+if(utm_campaign) attribution.utm_campaign = utm_campaign;
+if(utm_content) attribution.utm_content = utm_content;
+if(utm_term) attribution.utm_term = utm_term;
+if(gclid) attribution.gclid = gclid;
+if(ttclid) attribution.ttclid = ttclid;
+if(epik) attribution.epik = epik;
+if(fbclid) attribution.fbc = fbclid;
+if(fbp) attribution.fbp = fbp;
+
+// Log attribution object for testing
+console.log('Attribution data:', attribution);
+
+// Store cookie 7 days
+setCookie('mwl_attribution', attribution, 7);
+console.log('Cookie set/updated:', document.cookie);
+
+// Optional: pass tracking_id to Acuity form hidden field
+document.addEventListener('DOMContentLoaded', function() {
+  const trackingInput = document.querySelector('input[name="tracking_id"]');
+  if(trackingInput) {
+    trackingInput.value = attribution.tracking_id;
+    console.log('Tracking ID set in form field:', trackingInput.value);
+  } else {
+    console.log('No tracking_id input field found on page.');
+  }
+});
+</script>
