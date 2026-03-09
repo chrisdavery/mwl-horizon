@@ -81,32 +81,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const productGrid = wrapper.querySelector('.acuity-product-grid');
   const bookingFrame = wrapper.querySelector('.acuity-booking-frame');
 
-  // Read attribution cookie and get all values
-const getAttributionData = () => {
-  try {
-    const match = document.cookie.match(/(?:^|; )mwl_attribution=([^;]+)/);
-    if (!match) return {};
-
-    const data = JSON.parse(decodeURIComponent(match[1]));
-
-    return {
-      tracking_id: data.tracking_id || '',
-      utm_source: data.utm_source || '',
-      utm_medium: data.utm_medium || '',
-      utm_campaign: data.utm_campaign || '',
-      utm_content: data.utm_content || '',
-      utm_term: data.utm_term || '',
-      gclid: data.gclid || '',
-      ttclid: data.ttclid || '',
-      epik: data.epik || '',
-      fbc: data.fbc || '',
-      fbp: data.fbp || ''
-    };
-  } catch (err) {
-    console.warn('Error reading mwl_attribution cookie', err);
-    return {};
-  }
-};
+  // Get tracking ID from your attribution cookie
+  const getTrackingId = () => {
+    try {
+      const match = document.cookie.match(/(?:^|; )mwl_attribution=([^;]+)/);
+      if (!match) return '';
+      const data = JSON.parse(decodeURIComponent(match[1]));
+      return data.tracking_id || '';
+    } catch (err) {
+      console.warn('Error reading tracking ID from cookie', err);
+      return '';
+    }
+  };
 
   function updateSelectedClasses() {
     checkboxes.forEach(cb => {
@@ -155,14 +141,7 @@ const getAttributionData = () => {
       `&field:17797660=${encodeURIComponent(source)}` +
       `&field:17899599=${encodeURIComponent(source)}` +
       `&field:17899423=${encodeURIComponent(source)}` +
-      `&field:18156998=${encodeURIComponent(attribution.tracking_id)}` +
-      `&field:NEW_FIELD_UTM_SOURCE=${encodeURIComponent(attribution.utm_source)}` +
-      `&field:NEW_FIELD_UTM_TERM=${encodeURIComponent(attribution.utm_term)}` +
-      `&field:NEW_FIELD_GCLID=${encodeURIComponent(attribution.gclid)}` +
-      `&field:NEW_FIELD_TTCLID=${encodeURIComponent(attribution.ttclid)}` +
-      `&field:NEW_FIELD_EPIK=${encodeURIComponent(attribution.epik)}` +
-      `&field:NEW_FIELD_FBC=${encodeURIComponent(attribution.fbc)}` +
-      `&field:NEW_FIELD_FBP=${encodeURIComponent(attribution.fbp)}`;
+      `&field:18156998=${encodeURIComponent(trackingId)}`; 
 
     productGrid.style.display = 'none';
     continueBtn.style.display = 'none';
