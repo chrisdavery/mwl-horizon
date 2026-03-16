@@ -81,18 +81,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const productGrid = wrapper.querySelector('.acuity-product-grid');
   const bookingFrame = wrapper.querySelector('.acuity-booking-frame');
 
-  // Get tracking ID from your attribution cookie
-  const getTrackingId = () => {
+  // Get attribution cookie data
+  const getAttributionValue = (key) => {
     try {
       const match = document.cookie.match(/(?:^|; )mwl_attribution=([^;]+)/);
       if (!match) return '';
       const data = JSON.parse(decodeURIComponent(match[1]));
-      return data.tracking_id || '';
+      return data[key] || '';
     } catch (err) {
-      console.warn('Error reading tracking ID from cookie', err);
+      console.warn(`Error reading ${key} from cookie`, err);
       return '';
     }
   };
+
 
   function updateSelectedClasses() {
     checkboxes.forEach(cb => {
@@ -130,8 +131,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var match = document.cookie.match(/(?:^|; )booking_source=([^;]+)/);
     var source = match ? decodeURIComponent(match[1]) : "direct";
 
-    // Get tracking ID
-    const trackingId = getTrackingId();
+   // Get all attribution values including tracking ID
+    const trackingId   = getAttributionValue('tracking_id');
+    const utm_source   = getAttributionValue('utm_source');
+    const utm_medium   = getAttributionValue('utm_medium');
+    const utm_campaign = getAttributionValue('utm_campaign');
+    const utm_content  = getAttributionValue('utm_content');
+    const utm_term     = getAttributionValue('utm_term');
+    const gclid        = getAttributionValue('gclid');
+    const fbclid       = getAttributionValue('fbclid');
+    const ttclid       = getAttributionValue('ttclid');
+    const epik         = getAttributionValue('epik');
 
     iframe.src =
       `https://app.acuityscheduling.com/schedule/6f1d26e5` +
@@ -141,7 +151,16 @@ document.addEventListener('DOMContentLoaded', function () {
       `&field:17797660=${encodeURIComponent(source)}` +
       `&field:17899599=${encodeURIComponent(source)}` +
       `&field:17899423=${encodeURIComponent(source)}` +
-      `&field:18156998=${encodeURIComponent(trackingId)}`; 
+      `&field:18195589=${encodeURIComponent(trackingId)}` + 
+      `&field:18195304=${encodeURIComponent(utm_source)}` +
+      `&field:18195411=${encodeURIComponent(utm_medium)}` +
+      `&field:18195412=${encodeURIComponent(utm_campaign)}` +
+      `&field:18195413=${encodeURIComponent(utm_content)}` +
+      `&field:18195414=${encodeURIComponent(utm_term)}` +
+      `&field:18195415=${encodeURIComponent(gclid)}` +
+      `&field:18195418=${encodeURIComponent(fbclid)}` +
+      `&field:18195416=${encodeURIComponent(ttclid)}` +
+      `&field:18195417=${encodeURIComponent(epik)}`;
 
     productGrid.style.display = 'none';
     continueBtn.style.display = 'none';
