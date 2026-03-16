@@ -94,6 +94,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
+  // Helper to read normal cookies like _fbp and _fbc
+  const getCookie = (name) => {
+    const match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : '';
+  };
+
 
   function updateSelectedClasses() {
     checkboxes.forEach(cb => {
@@ -139,9 +145,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const utm_content  = getAttributionValue('utm_content');
     const utm_term     = getAttributionValue('utm_term');
     const gclid        = getAttributionValue('gclid');
-    const fbc = getAttributionValue('fbc');
+    //const fbc = getAttributionValue('fbc');
     const ttclid       = getAttributionValue('ttclid');
     const epik         = getAttributionValue('epik');
+
+    // Meta identifiers
+    const fbc = getCookie('_fbc'); 
+    const fbp = getCookie('_fbp');
 
     iframe.src =
       `https://app.acuityscheduling.com/schedule/6f1d26e5` +
@@ -159,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
       `&field:18195414=${encodeURIComponent(utm_term)}` +
       `&field:18195415=${encodeURIComponent(gclid)}` +
       `&field:18195418=${encodeURIComponent(fbc)}` +
+      `&field:18195710=${encodeURIComponent(fbp)}` +
       `&field:18195416=${encodeURIComponent(ttclid)}` +
       `&field:18195417=${encodeURIComponent(epik)}`;
 
