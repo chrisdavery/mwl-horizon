@@ -377,7 +377,7 @@
       "custom_css": [
         ".layout-panel-flex:not(:has(.text-block)) {display: none;}"
       ],
-      "name": "t:names.rich_text_section",
+      "name": "Collection Description",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
