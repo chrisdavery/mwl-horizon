@@ -375,7 +375,7 @@
         "text_BRk9qi"
       ],
       "custom_css": [
-        ":has(.layout-panel-flex:empty){display: none;}"
+        ".layout-panel-flex:empty {display: none;}"
       ],
       "name": "t:names.rich_text_section",
       "settings": {
