@@ -346,7 +346,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "{{ closest.collection.description }}",
+            "text": "{{ closest.collection.metafields.custom.seo_text.value.content | metafield_tag }}",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -377,7 +377,7 @@
       "custom_css": [
         ".layout-panel-flex:not(:has(.text-block)) {display: none;}"
       ],
-      "name": "Collection Description",
+      "name": "SEO Bottom Text",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
