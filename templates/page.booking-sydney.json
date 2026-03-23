@@ -26,10 +26,38 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
+            "type_preset": "h5",
+            "enable_mobile_size": false,
+            "mobile_font_size": "1rem",
+            "font": "var(--font-heading--family)",
+            "font_size": "0.75rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_qAqd9Y": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Explore MWL’s collection of wedding gowns and bridal dresses in Sydney, Australia by booking your boutique appointment. Our team will guide you through the styles and help you find the dress that suits your vision for your wedding day.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "custom",
             "enable_mobile_size": false,
             "mobile_font_size": "1rem",
-            "font": "var(--font-accent--family)",
+            "font": "var(--font-body--family)",
             "font_size": "0.75rem",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -48,7 +76,8 @@
         }
       },
       "block_order": [
-        "text_UkJFz4"
+        "text_UkJFz4",
+        "text_qAqd9Y"
       ],
       "name": "t:names.rich_text_section",
       "settings": {
