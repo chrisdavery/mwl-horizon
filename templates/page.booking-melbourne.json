@@ -90,7 +90,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Discover Wedding Gowns & Bridal Dresses in Melbourne, Australia at MWL – Book Your Visit</p>",
+            "text": "<h5>Discover Wedding Gowns & Bridal Dresses in Melbourne, Australia at MWL – Book Your Visit</h5>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
