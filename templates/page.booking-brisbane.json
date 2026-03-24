@@ -26,7 +26,7 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h5",
+            "type_preset": "h1",
             "enable_mobile_size": false,
             "mobile_font_size": "1rem",
             "font": "var(--font-accent--family)",
