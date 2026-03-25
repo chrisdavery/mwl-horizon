@@ -22,7 +22,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Browse Wedding Gowns & Bridal Dresses in Perth, Australia at MWL – Book Your Appointment</p>",
+            "text": "<h1>Browse Wedding Gowns & Bridal Dresses in Perth, Australia at MWL – Book Your Appointment</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
