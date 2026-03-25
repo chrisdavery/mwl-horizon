@@ -22,7 +22,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<h5>Find Wedding Gowns & Bridal Dresses in Sydney, Australia at MWL – Book Your Visit </h5>",
+            "text": "<p>Find Wedding Gowns & Bridal Dresses in Sydney, Australia at MWL – Book Your Visit </p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
