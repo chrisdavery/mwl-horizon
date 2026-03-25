@@ -90,7 +90,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>View Wedding Gowns & Bridal Dresses on the Gold Coast, Australia at MWL – Book Your Visit</p>",
+            "text": "<h1>View Wedding Gowns & Bridal Dresses on the Gold Coast, Australia at MWL – Book Your Visit</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
