@@ -22,7 +22,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<h5>Explore Wedding Gowns & Bridal Dresses in Brisbane, Australia at MWL – Book Your Appointment</h5>",
+            "text": "<p>Explore Wedding Gowns & Bridal Dresses in Brisbane, Australia at MWL – Book Your Appointment</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
