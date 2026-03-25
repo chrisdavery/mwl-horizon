@@ -380,6 +380,7 @@
               "blocks": {
                 "accordion_row_fzwYhJ": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "Dispatch Coordinator | London, UK",
                     "open_by_default": false,
