@@ -541,6 +541,17 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "custom_liquid_Kxwc93": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-WTStJ9\"></div>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
@@ -548,6 +559,7 @@
     "hero_WHfCEr",
     "section_6eKB8U",
     "hero_BcUJLE",
-    "1763690343ae568810"
+    "1763690343ae568810",
+    "custom_liquid_Kxwc93"
   ]
 }
