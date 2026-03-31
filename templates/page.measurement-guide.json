@@ -65,7 +65,7 @@
         "text_mwDNwc": {
           "type": "text",
           "settings": {
-            "text": "<p>MWL Size Guide</p>",
+            "text": "<h1>MWL Size Guide</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
