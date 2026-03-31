@@ -355,7 +355,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>OUR PROCESS & PLACING YOUR ORDER</h2>",
+                "text": "<h1>OUR PROCESS & PLACING YOUR ORDER</h1>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
