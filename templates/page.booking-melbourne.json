@@ -44,6 +44,7 @@
       "block_order": [
         "text_ByKtUT"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -90,7 +91,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<h5>Discover Wedding Gowns & Bridal Dresses in Melbourne, Australia at MWL – Book Your Visit</h5>",
+            "text": "<h1>Discover Wedding Gowns & Bridal Dresses in Melbourne, Australia at MWL – Book Your Visit</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
