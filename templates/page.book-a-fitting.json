@@ -230,6 +230,22 @@
     "section_dBQ8Wd": {
       "type": "section",
       "blocks": {
+        "button_FARrqF": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Brisbane",
+            "link": "shopify://pages/brisbane-booking-page",
+            "open_in_new_tab": false,
+            "active_state": false,
+            "style_class": "button-secondary",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        },
         "button_wQFYNT": {
           "type": "button",
           "name": "t:names.button",
@@ -278,12 +294,12 @@
           },
           "blocks": {}
         },
-        "button_FARrqF": {
+        "button_Gh7R97": {
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Brisbane",
-            "link": "shopify://pages/brisbane-booking-page",
+            "label": "ADELAIDE",
+            "link": "https://mwlbride.com/pages/adelaide-booking-page",
             "open_in_new_tab": false,
             "active_state": false,
             "style_class": "button-secondary",
@@ -376,10 +392,11 @@
         }
       },
       "block_order": [
+        "button_FARrqF",
         "button_wQFYNT",
         "button_XeQx7x",
         "button_Qrcwfp",
-        "button_FARrqF",
+        "button_Gh7R97",
         "button_kxxdKE",
         "button_rM4UK8",
         "button_cYczQm",
