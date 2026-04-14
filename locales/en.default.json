@@ -332,5 +332,14 @@
       "quantity_maximum": "Maximum of {{ maximum }}",
       "in_cart": "in cart"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "payment": {
+        "purchase_order_number": {
+          "label": "PO number NOT REQUIRED"
+        }
+      }
+    }
   }
 }
