@@ -20,14 +20,18 @@
           "blocks": {
             "input_field_XGtDRr": {
               "settings": {
-                "lead_date": 34
+                "lead_date": 34,
+                "priority_fees": [
+                  "high-priority-fee",
+                  "priority-fee"
+                ]
               }
             },
             "input_field_4mNRnV": {
               "settings": {
-                "standard_lead_date": 0,
                 "lead_date": 0,
-                "priority_fees": []
+                "priority_fees": [],
+                "standard_lead_date": 0
               }
             }
           },
