@@ -581,7 +581,7 @@
             "bottom_dropdown_option_3": "Friend/Family",
             "bottom_dropdown_option_4": "Facebook",
             "bottom_dropdown_option_5": "Tiktok",
-            "name_label": "First & Last Name",
+            "name_label": "Full Name",
             "name_placeholder": "",
             "name_required": true,
             "button_text": "Submit",
