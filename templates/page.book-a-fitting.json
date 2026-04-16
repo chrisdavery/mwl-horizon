@@ -297,7 +297,6 @@
         "button_Gh7R97": {
           "type": "button",
           "name": "t:names.button",
-          "disabled": true,
           "settings": {
             "label": "ADELAIDE",
             "link": "https://mwlbride.com/pages/adelaide-booking-page",
