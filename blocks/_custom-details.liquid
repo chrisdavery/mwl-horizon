@@ -34,6 +34,7 @@
         </div>
 
         {% for item in block_items %}
+          {% unless item.hide_in_web == true %}
             {% content_for 'block',
               type: '_dropdown-details',
               item: item,
@@ -42,6 +43,7 @@
               loop_index: forloop.index0,
               only_one_required: block.settings.only_one_required
             %}
+          {% endunless %}
         {% endfor %}
     </div>
 
