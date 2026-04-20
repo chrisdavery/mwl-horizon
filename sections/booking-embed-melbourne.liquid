@@ -2,7 +2,7 @@
   {% render 'booking-source-to-acuity' %}
   
   <div class="acuity-product-grid">
-    <p>To continue with your booking, please select your top 3-4 dresses below:</p>
+    
     {% assign target_collection = collections['dress-selection'] %}
 
     {% if target_collection != blank %}
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
     continueBtn.style.display = 'none';
     bookingFrame.style.display = 'block';
 
-    const instructionSection = document.querySelector('#shopify-section-section_rrEHMb, [id^="shopify-section-"][id*="section_rrEHMb"]');
+    const instructionSection = document.querySelector('#shopify-section-section_eXrFGW, [id^="shopify-section-"][id*="section_eXrFGW"]');
 
   if (instructionSection) {
     instructionSection.style.display = 'none';
