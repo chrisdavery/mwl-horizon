@@ -22,8 +22,8 @@
               "settings": {
                 "lead_date": 34,
                 "priority_fees": [
-                  "high-priority-fee",
-                  "priority-fee"
+                  "b-2-b-super-rush-fee",
+                  "b-2-b-rush-fee"
                 ]
               }
             },
