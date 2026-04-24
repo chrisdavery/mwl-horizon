@@ -10,6 +10,7 @@
   @param {object} block_settings - Block settings object
   @param {object} [section_settings] - Section settings for layout-aware sizing
   @param {string} [block_attributes] - Block shopify attributes for theme editor
+  @param {string} [item_id] - Metaobject entry id; required for `catalog_cards` to scope --ratio per card
 
   @example
   {% render 'resource-image',
@@ -38,6 +39,7 @@
   assign block_settings = block_settings | default: empty
   assign section_settings = section_settings | default: empty
   assign block_attributes = block_attributes | default: ''
+  assign item_id = item_id | default: ''
 
   # Early return if required parameters missing
   unless parent_block_id != blank and block_settings != empty
@@ -126,9 +128,15 @@
       --ratio: {{ ratio }};
     }
   {% elsif content_type == 'catalog_cards' %}
-    .catalog-card[data-block-id="{{ parent_block_id }}"] {
-      --ratio: {{ ratio }};
-    }
+    {% if item_id != blank %}
+      .catalog-card[data-item-id="{{ item_id }}"] {
+        --ratio: {{ ratio }};
+      }
+    {% else %}
+      .catalog-card[data-block-id="{{ parent_block_id }}"] {
+        --ratio: {{ ratio }};
+      }
+    {% endif %}
   {% endif %}
 {% endstyle %}
 

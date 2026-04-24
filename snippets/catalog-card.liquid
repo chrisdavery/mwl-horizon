@@ -21,6 +21,7 @@
     {% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}
   "
   data-block-id="{{ block.id }}"
+  data-item-id="{{ item.system.id }}"
   style="
     {% render 'border-override', settings: block_settings %}
     --horizontal-alignment: {{ block_settings.horizontal_alignment }};
@@ -181,5 +182,20 @@
     &:not(.catalog-card--image-bg) .catalog-card__content {
       height: auto;
     }
+  }
+
+  /* product grid: same-row height as product cards (base.css only sets height:100% on .product-card) */
+  .product-grid__item:has(> .catalog-card.catalog-card--image-bg) {
+    height: 100%;
+  }
+
+  .product-grid__item > .catalog-card.catalog-card--image-bg {
+    min-height: 100%;
+    height: 100%;
+    aspect-ratio: unset;
+  }
+
+  .product-grid__item .catalog-card--image-bg .catalog-card__image.resource-image {
+    aspect-ratio: unset;
   }
 {% endstylesheet %}
