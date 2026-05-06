@@ -6,7 +6,7 @@
   @param {string} [widths] - Image widths for responsive images.
   @param {string} [sizes] - Image sizes for responsive images.
   @param {string} [loading] - The loading attribute for the image.
-  @param {object} [block] - The block object (e.g. media gallery; `video_loop` enables loop + autoplay for product videos).
+  @param {boolean} [card_gallery_video] - Collection/search card: autoplay + loop muted video (enables full video, not poster only).
   @param {object} [section] - The section object.
   @param {object} [selected_product] - The currently selected product.
   @param {boolean} [first_3d_model] - Indicates if this is the first 3D model.
@@ -18,6 +18,7 @@
 
 {% liquid
   assign widths = widths | default: '240, 352, 832, 1200, 1600, 1920, 2560, 3840'
+  assign card_gallery_video = card_gallery_video | default: false
 %}
 
 <div
@@ -122,14 +123,19 @@
       {% when 'video', 'external_video' %}
         {% liquid
           assign pm_video_loop = false
-          if block.settings.video_loop
+          assign pm_video_autoplay = false
+          if card_gallery_video
             assign pm_video_loop = true
+            assign pm_video_autoplay = true
+          elsif block.settings.video_loop
+            assign pm_video_loop = true
+            assign pm_video_autoplay = true
           endif
         %}
         {%- render 'video',
           video: media,
           video_loop: pm_video_loop,
-          video_autoplay: pm_video_loop,
+          video_autoplay: pm_video_autoplay,
           widths: widths,
           sizes: sizes,
           loading: loading,
