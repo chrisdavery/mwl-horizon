@@ -6,7 +6,7 @@
   @param {string} [widths] - Image widths for responsive images.
   @param {string} [sizes] - Image sizes for responsive images.
   @param {string} [loading] - The loading attribute for the image.
-  @param {object} [block] - The block object.
+  @param {object} [block] - The block object (e.g. media gallery; `video_loop` enables loop + autoplay for product videos).
   @param {object} [section] - The section object.
   @param {object} [selected_product] - The currently selected product.
   @param {boolean} [first_3d_model] - Indicates if this is the first 3D model.
@@ -120,14 +120,22 @@
           </script>
         {%- endif -%}
       {% when 'video', 'external_video' %}
+        {% liquid
+          assign pm_video_loop = false
+          if block.settings.video_loop
+            assign pm_video_loop = true
+          endif
+        %}
         {%- render 'video',
           video: media,
-          video_loop: block.settings.video_loop,
+          video_loop: pm_video_loop,
+          video_autoplay: pm_video_loop,
           widths: widths,
           sizes: sizes,
           loading: loading,
           disable_controls: true,
-          section_id: section.id
+          section_id: section.id,
+          block: block
         -%}
     {% endcase %}
   {% endunless %}
