@@ -935,6 +935,51 @@
                 }
               },
               "block_order": []
+            },
+            "accordion_3TyTbC": {
+              "type": "accordion",
+              "name": "t:names.accordion",
+              "settings": {
+                "icon": "plus",
+                "dividers": true,
+                "type_preset": "h6",
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "accordion_row_dynamic_87BT8n": {
+                  "type": "_accordion-row-dynamic",
+                  "name": "Accordion row (dynamic)",
+                  "settings": {
+                    "heading": "CUSTOMISATIONS",
+                    "content": "<p>{{ closest.product.metafields.custom.customisations_read_more | metafield_tag }}</p>",
+                    "open_by_default": false,
+                    "type_preset": "custom",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "font": "var(--font-accent--family)",
+                    "font_size": "0.75rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "accordion_row_dynamic_87BT8n"
+              ]
             }
           },
           "block_order": [
@@ -950,7 +995,8 @@
             "input_field_gUTxbn",
             "input_field_4mNRnV",
             "input_field_CKLVPh",
-            "buy_buttons_eYQEYi"
+            "buy_buttons_eYQEYi",
+            "accordion_3TyTbC"
           ]
         }
       },
