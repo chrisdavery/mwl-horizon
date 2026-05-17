@@ -960,7 +960,7 @@
                   "name": "Accordion row (dynamic)",
                   "settings": {
                     "heading": "CUSTOMISATIONS",
-                    "content": "<p>{{ closest.product.metafields.custom.customisations_read_more | metafield_tag }}</p>",
+                    "content": "{{ closest.product.metafields.custom.customisations_read_more_rich | metafield_tag }}",
                     "open_by_default": false,
                     "type_preset": "custom",
                     "enable_mobile_size": false,
